@@ -5930,7 +5930,7 @@
               "name": "static",
               "persistentUuid": "3ec70930-11db-4655-8eee-fa02928fe45e",
               "type": "boolean",
-              "value": true
+              "value": false
             },
             {
               "name": "Variable",
@@ -5940,14 +5940,7 @@
             }
           ],
           "effects": [],
-          "behaviors": [
-            {
-              "name": "Sticker",
-              "type": "Sticker::Sticker",
-              "OnlyFollowPosition": true,
-              "IsDestroyedWithParent": false
-            }
-          ],
+          "behaviors": [],
           "string": "\n",
           "font": "Name Smile.otf",
           "textAlignment": "left",
@@ -7934,7 +7927,7 @@
             {
               "name": "static",
               "type": "boolean",
-              "value": true
+              "value": false
             },
             {
               "name": "Variable",
@@ -19449,17 +19442,6 @@
                 },
                 {
                   "type": {
-                    "value": "Sticker::Sticker::Stick"
-                  },
-                  "parameters": [
-                    "dano_feedback",
-                    "Sticker",
-                    "Personagem",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
@@ -19576,7 +19558,34 @@
                     "Feedback",
                     "Opacity",
                     "*",
-                    "pow(0.99, TimeDelta() * 60)"
+                    "pow(0.95, TimeDelta() * 60)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::Value"
+                  },
+                  "parameters": [
+                    "Feedback",
+                    "Opacity",
+                    "<",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Feedback",
+                    ""
                   ]
                 }
               ]
