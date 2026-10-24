@@ -26,7 +26,7 @@
     "windowWidth": 1920,
     "windowHeight": 1080,
     "latestCompilationDirectory": "",
-    "maxFPS": 160,
+    "maxFPS": 60,
     "minFPS": 60,
     "verticalSync": false,
     "platformSpecificAssets": {
@@ -7043,7 +7043,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.01,
+              "FireCooldown": 0.06,
               "HasJustFired": false,
               "RotateBullet": true,
               "FiringArc": 45,
@@ -17981,7 +17981,7 @@
                   "parameters": [
                     "recuo",
                     "*",
-                    ".98"
+                    "pow(0.98, TimeDelta() * 60)"
                   ]
                 },
                 {
@@ -19174,7 +19174,7 @@
                   "parameters": [
                     "Feedback",
                     "-",
-                    "4"
+                    "240 * TimeDelta()"
                   ]
                 },
                 {
@@ -19185,7 +19185,7 @@
                     "Feedback",
                     "Scale",
                     "*",
-                    ".993"
+                    "pow(0.993, TimeDelta() * 60)"
                   ]
                 },
                 {
@@ -19196,7 +19196,7 @@
                     "Feedback",
                     "Opacity",
                     "*",
-                    ".99"
+                    "pow(0.99, TimeDelta() * 60)"
                   ]
                 }
               ]
