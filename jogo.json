@@ -7756,8 +7756,8 @@
               "bottomEdgeAnchor": 2,
               "relativeToOriginalWindowSize": true,
               "topEdgeAnchor": 2,
-              "leftEdgeAnchor": 0,
-              "rightEdgeAnchor": 2,
+              "leftEdgeAnchor": 1,
+              "rightEdgeAnchor": 1,
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -7811,8 +7811,8 @@
               "bottomEdgeAnchor": 2,
               "relativeToOriginalWindowSize": true,
               "topEdgeAnchor": 2,
-              "leftEdgeAnchor": 0,
-              "rightEdgeAnchor": 2,
+              "leftEdgeAnchor": 1,
+              "rightEdgeAnchor": 1,
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -7866,8 +7866,8 @@
               "bottomEdgeAnchor": 2,
               "relativeToOriginalWindowSize": true,
               "topEdgeAnchor": 2,
-              "leftEdgeAnchor": 0,
-              "rightEdgeAnchor": 2,
+              "leftEdgeAnchor": 1,
+              "rightEdgeAnchor": 1,
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -19107,8 +19107,8 @@
                       "parameters": [
                         "",
                         "reload_feedback",
-                        "ScreenWidth()/2",
-                        "ScreenHeight()/2",
+                        "CameraX(\"HUD\")",
+                        "CameraY(\"HUD\")",
                         "\"HUD\""
                       ]
                     },
