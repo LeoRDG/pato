@@ -4078,6 +4078,11 @@
       "persistentUuid": "a3293e67-321f-475f-8825-857595ab416a",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "arma_atual",
+      "type": "string",
+      "value": "pistola"
     }
   ],
   "layouts": [
@@ -17818,6 +17823,119 @@
                         "Arma"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"pistola\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pistola",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "pistola",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"doze\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "doze",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "doze",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "minigun",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "minigun",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -18701,6 +18819,16 @@
                     "pistola",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "arma_atual",
+                    "=",
+                    "\"pistola\""
+                  ]
                 }
               ]
             },
@@ -18756,6 +18884,16 @@
                     "doze",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "arma_atual",
+                    "=",
+                    "\"doze\""
+                  ]
                 }
               ]
             },
@@ -18810,6 +18948,16 @@
                   "parameters": [
                     "minigun",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "arma_atual",
+                    "=",
+                    "\"minigun\""
                   ]
                 }
               ]
