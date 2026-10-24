@@ -6423,7 +6423,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
+                  "looping": false,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -12588,7 +12588,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
+                  "looping": false,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -19636,9 +19636,20 @@
               ]
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "zumbi",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -19651,7 +19662,26 @@
                     "pato.X()",
                     "pato.Y()"
                   ]
-                },
+                }
+              ],
+              "disabled": true
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "voador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "PathfindingBehavior::SetDestination"
@@ -19663,7 +19693,26 @@
                     "pato.X()",
                     "pato.Y()-200"
                   ]
-                },
+                }
+              ],
+              "disabled": true
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "atirador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "PathfindingBehavior::SetDestination"
@@ -19676,7 +19725,8 @@
                     "pato.Y()"
                   ]
                 }
-              ]
+              ],
+              "disabled": true
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19701,6 +19751,17 @@
                     "andando",
                     "=",
                     "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "boss",
+                    "morto",
+                    "False",
+                    ""
                   ]
                 }
               ],
@@ -19801,7 +19862,19 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "atirador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -19888,6 +19961,17 @@
                     "Inimigo",
                     "",
                     "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "morto",
+                    "False",
                     ""
                   ]
                 }
@@ -20058,12 +20142,54 @@
                       "parameters": [
                         "Inimigo",
                         "morto",
-                        "<=",
-                        "0"
+                        "False",
+                        ""
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"morte\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Animation",
+                        "=",
+                        "\"morte\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Pathfinding",
+                        ""
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -20081,85 +20207,171 @@
                         }
                       ],
                       "actions": []
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "morto",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "\"morte\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "Animation",
-                            "=",
-                            "\"morte\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ActivateBehavior"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "Pathfinding",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "boss",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "boss",
+                        "TweenPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "True",
+                        ""
                       ]
                     },
                     {
-                      "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "Animation"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Animation",
+                        "=",
+                        "\"morte\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Opacity",
+                        "=",
+                        "max(0, 255 * (1 - Inimigo.ObjectTimerElapsedTime(\"morte\")))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Animation",
+                        "=",
+                        "\"morte\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Animation"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "Animation",
+                        "=",
+                        "\"morte\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"morte\"",
+                        ">",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        ""
                       ]
                     }
                   ]
