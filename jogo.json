@@ -6883,6 +6883,12 @@
           ],
           "behaviors": [
             {
+              "name": "DestruirFora",
+              "type": "DestroyOutsideBehavior::DestroyOutside",
+              "extraBorder": 800,
+              "unseenGraceDistance": 10000
+            },
+            {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
               "FireCooldown": 0.1,
