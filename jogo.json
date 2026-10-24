@@ -4471,7 +4471,7 @@
               "name": "vida",
               "persistentUuid": "a7dde4d8-945f-455a-9c0e-bf89060a5ab0",
               "type": "number",
-              "value": 1000
+              "value": 100
             },
             {
               "name": "municao",
@@ -4495,13 +4495,18 @@
               "name": "max_vida",
               "persistentUuid": "e3f489e2-03d9-43a0-86c0-71a8fe653854",
               "type": "number",
-              "value": 1000
+              "value": 100
             },
             {
               "name": "moedas",
               "persistentUuid": "ba718790-41e6-4365-8595-6cc833c97626",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "invencivel",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -5123,7 +5128,7 @@
               "name": "dano",
               "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
               "type": "number",
-              "value": 1
+              "value": 10
             },
             {
               "name": "tem_barra_de_vida",
@@ -6099,7 +6104,7 @@
               "name": "dano",
               "persistentUuid": "f5047a77-32c0-479b-ad49-bd0c8957d1fa",
               "type": "number",
-              "value": 3
+              "value": 10
             },
             {
               "name": "tem_barra_de_vida",
@@ -8121,7 +8126,7 @@
               "name": "dano",
               "persistentUuid": "6f6657c8-3506-421f-b81b-2266f4e1cac5",
               "type": "number",
-              "value": 1
+              "value": 15
             },
             {
               "name": "tem_barra_de_vida",
@@ -11072,7 +11077,7 @@
               "name": "dano",
               "persistentUuid": "b4c4d990-0b2b-4280-af11-3b9dd56b0d16",
               "type": "number",
-              "value": 1
+              "value": 10
             },
             {
               "name": "tem_barra_de_vida",
@@ -13601,7 +13606,7 @@
               "name": "dano",
               "persistentUuid": "4acb8e8c-b58b-44e3-bad5-d9944876764d",
               "type": "number",
-              "value": 1
+              "value": 10
             },
             {
               "name": "tem_barra_de_vida",
@@ -18281,6 +18286,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -18293,6 +18309,46 @@
                     "vida",
                     "-",
                     "Inimigo.dano"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "sign(pato.CenterX() - Inimigo.CenterX()) * 600"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
                   ]
                 }
               ]
@@ -18311,6 +18367,17 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -18327,11 +18394,170 @@
                 },
                 {
                   "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "sign(pato.CenterX() - projetil_inimigo.CenterX()) * 600"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
                     "projetil_inimigo",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "projetil_inimigo",
+                    "pato",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "projetil_inimigo",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "pato",
+                    "Opacity",
+                    "=",
+                    "160 + 95 * sin(TimeFromStart() * 40)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\"",
+                    ">",
+                    "0.75"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "pato",
+                    "Opacity",
+                    "=",
+                    "255"
                   ]
                 }
               ]
