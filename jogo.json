@@ -17801,14 +17801,14 @@
       "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
-      "emitterAngleA": 0,
-      "emitterAngleB": 90,
-      "emitterForceMax": 85,
-      "emitterForceMin": 90,
-      "flow": 90,
+      "emitterAngleA": -90,
+      "emitterAngleB": 160,
+      "emitterForceMax": 220,
+      "emitterForceMin": 80,
+      "flow": 600,
       "jumpForwardInTimeOnCreation": 0,
-      "maxParticleNb": 600,
-      "name": "NewParticlesEmitter",
+      "maxParticleNb": 60,
+      "name": "poeira",
       "particleAlpha1": 218,
       "particleAlpha2": 0,
       "particleAlphaRandomness1": 0,
@@ -17822,11 +17822,11 @@
       "particleColor1": "82;42;18",
       "particleColor2": "107;81;28",
       "particleGravityX": 0,
-      "particleGravityY": 0,
+      "particleGravityY": 150,
       "particleGreen1": 42,
       "particleGreen2": 81,
-      "particleLifeTimeMax": 2.5,
-      "particleLifeTimeMin": 0.5,
+      "particleLifeTimeMax": 0.7,
+      "particleLifeTimeMin": 0.3,
       "particleRed1": 82,
       "particleRed2": 107,
       "particleSize1": 100,
@@ -17837,10 +17837,10 @@
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": -1,
+      "tank": 24,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 3,
+      "zoneRadius": 15,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -19878,7 +19878,7 @@
             "objectName": "laser"
           },
           {
-            "objectName": "NewParticlesEmitter"
+            "objectName": "poeira"
           }
         ]
       },
@@ -20831,22 +20831,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewParticlesEmitter",
-          "persistentUuid": "927193fa-93db-4bd4-8eaa-82b3dbcf1097",
-          "width": 0,
-          "x": 261,
-          "y": 508,
-          "zOrder": 27,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "height": 1080,
           "keepRatio": true,
@@ -21719,22 +21703,6 @@
           "x": 1802,
           "y": 962,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewParticlesEmitter",
-          "persistentUuid": "6ea0e045-be4b-4d29-9cc9-319f14ce9624",
-          "width": 0,
-          "x": 261,
-          "y": 508,
-          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -22641,22 +22609,6 @@
           "x": 1802,
           "y": 962,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewParticlesEmitter",
-          "persistentUuid": "2d5e6498-15c7-45b5-853a-7f063052809e",
-          "width": 0,
-          "x": 261,
-          "y": 508,
-          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23688,22 +23640,6 @@
           "x": 1802,
           "y": 962,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewParticlesEmitter",
-          "persistentUuid": "d150564a-59ae-4eb4-841d-902ca2b26c27",
-          "width": 0,
-          "x": 261,
-          "y": 508,
-          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -25065,7 +25001,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "A/D andam, Shift dá dash, Espaço pula. Giro de 360° no pulo, que volta a 0 ao pousar."
+                  "comment": "A/D andam, Shift dá dash, Espaço pula. Giro de 360° no pulo, que volta a 0 ao pousar. Pulo e dash soltam poeira nos pés."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -25106,27 +25042,6 @@
                             "pato",
                             "PlatformerObject"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "NewParticlesEmitter",
-                            "=",
-                            "pato.X()+50",
-                            "=",
-                            "pato.Y()+ pato.Height()-20"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "NewParticlesEmitter",
-                            ""
-                          ]
                         }
                       ]
                     },
@@ -25151,27 +25066,6 @@
                           "parameters": [
                             "pato",
                             "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "NewParticlesEmitter",
-                            "=",
-                            "pato.X()+50",
-                            "=",
-                            "pato.Y()+ pato.Height()-20"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "NewParticlesEmitter",
-                            ""
                           ]
                         }
                       ]
@@ -25321,6 +25215,78 @@
                           "parameters": [
                             "pato",
                             "PlatformerObject"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CanJump"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "poeira",
+                            "pato.CenterX()",
+                            "pato.Y() + pato.Height() - 10",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AdvancedJump::HorizontalDash::IsDashing"
+                          },
+                          "parameters": [
+                            "pato",
+                            "HorizontalDash",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "poeira",
+                            "pato.CenterX()",
+                            "pato.Y() + pato.Height() - 10",
+                            ""
                           ]
                         }
                       ]
