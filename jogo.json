@@ -19698,6 +19698,16 @@
           "name": "jaGirou",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "laser_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "laser_y",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -20788,19 +20798,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PrimitiveDrawing::LineV2"
-                  },
-                  "parameters": [
-                    "laser",
-                    "Arma.CenterX()",
-                    "Arma.CenterY()",
-                    "Arma.CenterX() + cos(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000",
-                    "Arma.CenterY() + sin(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetXY"
                   },
                   "parameters": [
@@ -20838,6 +20835,67 @@
                     "Opacity",
                     "=",
                     "250"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "laser_x",
+                    "=",
+                    "Arma.CenterX() + cos(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "laser_y",
+                    "=",
+                    "Arma.CenterY() + sin(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "RaycastToPosition"
+                      },
+                      "parameters": [
+                        "chao",
+                        "Arma.CenterX()",
+                        "Arma.CenterY()",
+                        "laser_x",
+                        "laser_y",
+                        "laser_x",
+                        "laser_y"
+                      ]
+                    }
+                  ],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::LineV2"
+                      },
+                      "parameters": [
+                        "laser",
+                        "Arma.CenterX()",
+                        "Arma.CenterY()",
+                        "laser_x",
+                        "laser_y",
+                        "2"
+                      ]
+                    }
                   ]
                 }
               ]
