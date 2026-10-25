@@ -19338,7 +19338,161 @@
     "folderName": "__ROOT",
     "children": [
       {
-        "folderName": "hud",
+        "folderName": "jogador",
+        "children": [
+          {
+            "objectName": "pato"
+          },
+          {
+            "objectName": "alvo"
+          },
+          {
+            "objectName": "laser"
+          },
+          {
+            "objectName": "NewParticlesEmitter"
+          }
+        ]
+      },
+      {
+        "folderName": "armas",
+        "children": [
+          {
+            "objectName": "pistola"
+          },
+          {
+            "objectName": "doze"
+          },
+          {
+            "objectName": "minigun"
+          },
+          {
+            "folderName": "projeteis",
+            "children": [
+              {
+                "objectName": "projetil"
+              },
+              {
+                "objectName": "rastro"
+              }
+            ]
+          },
+          {
+            "folderName": "upgrades",
+            "children": []
+          }
+        ]
+      },
+      {
+        "folderName": "inimigos",
+        "children": [
+          {
+            "folderName": "terra",
+            "children": [
+              {
+                "objectName": "zumbi"
+              },
+              {
+                "objectName": "voador"
+              },
+              {
+                "objectName": "atirador"
+              },
+              {
+                "objectName": "pigman"
+              },
+              {
+                "objectName": "sapo"
+              },
+              {
+                "objectName": "cutulu"
+              }
+            ]
+          },
+          {
+            "folderName": "inferno",
+            "children": []
+          },
+          {
+            "folderName": "ceu",
+            "children": []
+          },
+          {
+            "folderName": "projeteis",
+            "children": [
+              {
+                "objectName": "projetil_inimigo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "folderName": "boss",
+        "children": [
+          {
+            "objectName": "boss"
+          }
+        ]
+      },
+      {
+        "folderName": "npcs",
+        "children": [
+          {
+            "objectName": "trader"
+          },
+          {
+            "folderName": "caronte",
+            "children": []
+          }
+        ]
+      },
+      {
+        "folderName": "cenario",
+        "children": [
+          {
+            "folderName": "comum",
+            "children": [
+              {
+                "objectName": "chao"
+              },
+              {
+                "objectName": "bg"
+              }
+            ]
+          },
+          {
+            "folderName": "inferno",
+            "children": []
+          },
+          {
+            "folderName": "terra",
+            "children": []
+          },
+          {
+            "folderName": "ceu",
+            "children": []
+          },
+          {
+            "folderName": "hub",
+            "children": []
+          },
+          {
+            "folderName": "perigos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "folderName": "coletaveis",
+        "children": [
+          {
+            "objectName": "moeda"
+          }
+        ]
+      },
+      {
+        "folderName": "efeitos",
         "children": [
           {
             "objectName": "hit"
@@ -19351,174 +19505,170 @@
           },
           {
             "objectName": "barra_de_vida"
-          },
-          {
-            "objectName": "moedas"
-          },
-          {
-            "objectName": "municao"
-          },
-          {
-            "objectName": "max_municao"
-          },
-          {
-            "objectName": "hud_vida_trilho"
-          },
-          {
-            "objectName": "hud_vida_rastro"
-          },
-          {
-            "objectName": "hud_vida_fill"
-          },
-          {
-            "objectName": "hud_vida_txt"
-          },
-          {
-            "objectName": "hud_moeda"
-          },
-          {
-            "objectName": "hud_moeda_pop"
-          },
-          {
-            "objectName": "hud_slot1"
-          },
-          {
-            "objectName": "hud_slot2"
-          },
-          {
-            "objectName": "hud_slot3"
-          },
-          {
-            "objectName": "hud_arma"
-          },
-          {
-            "objectName": "hud_arma_icone"
-          },
-          {
-            "objectName": "hud_arma_nome"
-          },
-          {
-            "objectName": "hud_pips_pistola"
-          },
-          {
-            "objectName": "hud_pips_doze"
-          },
-          {
-            "objectName": "hud_pips_minigun"
-          },
-          {
-            "objectName": "hud_recarga_trilho"
-          },
-          {
-            "objectName": "hud_recarga_fill"
-          },
-          {
-            "objectName": "hud_calor_trilho"
-          },
-          {
-            "objectName": "hud_calor_fill"
-          },
-          {
-            "objectName": "hud_r_hint"
-          },
-          {
-            "objectName": "hud_boss_trilho"
-          },
-          {
-            "objectName": "hud_boss_rastro"
-          },
-          {
-            "objectName": "hud_boss_fill"
-          },
-          {
-            "objectName": "hud_boss_nome"
-          },
-          {
-            "objectName": "hud_vinheta"
-          },
-          {
-            "objectName": "hud_anel"
           }
         ]
       },
       {
-        "folderName": "armas",
+        "folderName": "hud",
         "children": [
           {
-            "objectName": "minigun"
+            "folderName": "vida",
+            "children": [
+              {
+                "objectName": "hud_vida_trilho"
+              },
+              {
+                "objectName": "hud_vida_rastro"
+              },
+              {
+                "objectName": "hud_vida_fill"
+              },
+              {
+                "objectName": "hud_vida_txt"
+              },
+              {
+                "objectName": "hud_vinheta"
+              }
+            ]
           },
           {
-            "objectName": "pistola"
+            "folderName": "moedas",
+            "children": [
+              {
+                "objectName": "hud_moeda"
+              },
+              {
+                "objectName": "hud_moeda_pop"
+              },
+              {
+                "objectName": "moedas"
+              }
+            ]
           },
           {
-            "objectName": "doze"
+            "folderName": "arma",
+            "children": [
+              {
+                "objectName": "hud_arma"
+              },
+              {
+                "objectName": "hud_arma_icone"
+              },
+              {
+                "objectName": "hud_arma_nome"
+              },
+              {
+                "objectName": "hud_slot1"
+              },
+              {
+                "objectName": "hud_slot2"
+              },
+              {
+                "objectName": "hud_slot3"
+              },
+              {
+                "objectName": "municao"
+              },
+              {
+                "objectName": "max_municao"
+              },
+              {
+                "folderName": "municao_pips",
+                "children": [
+                  {
+                    "objectName": "hud_pips_pistola"
+                  },
+                  {
+                    "objectName": "hud_pips_doze"
+                  },
+                  {
+                    "objectName": "hud_pips_minigun"
+                  }
+                ]
+              },
+              {
+                "folderName": "recarga_e_calor",
+                "children": [
+                  {
+                    "objectName": "hud_recarga_trilho"
+                  },
+                  {
+                    "objectName": "hud_recarga_fill"
+                  },
+                  {
+                    "objectName": "hud_anel"
+                  },
+                  {
+                    "objectName": "hud_r_hint"
+                  },
+                  {
+                    "objectName": "hud_calor_trilho"
+                  },
+                  {
+                    "objectName": "hud_calor_fill"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "objectName": "laser"
-          },
-          {
-            "objectName": "rastro"
+            "folderName": "boss",
+            "children": [
+              {
+                "objectName": "hud_boss_trilho"
+              },
+              {
+                "objectName": "hud_boss_rastro"
+              },
+              {
+                "objectName": "hud_boss_fill"
+              },
+              {
+                "objectName": "hud_boss_nome"
+              }
+            ]
           }
         ]
       },
       {
-        "folderName": "inimigos",
+        "folderName": "interface",
         "children": [
           {
-            "objectName": "voador"
+            "folderName": "dialogos",
+            "children": [
+              {
+                "objectName": "SkullGameOverDialog"
+              },
+              {
+                "objectName": "GreyAndPurpleLeaderboardDialog"
+              }
+            ]
           },
           {
-            "objectName": "zumbi"
+            "folderName": "menu",
+            "children": []
           },
           {
-            "objectName": "trader"
+            "folderName": "pausa",
+            "children": []
           },
           {
-            "objectName": "pigman"
+            "folderName": "loja",
+            "children": []
           },
           {
-            "objectName": "cutulu"
+            "folderName": "resumo_morte",
+            "children": []
           },
           {
-            "objectName": "sapo"
-          },
-          {
-            "objectName": "boss"
-          },
-          {
-            "objectName": "atirador"
+            "folderName": "vitoria",
+            "children": []
           }
         ]
       },
       {
-        "objectName": "pato"
-      },
-      {
-        "objectName": "projetil"
-      },
-      {
-        "objectName": "projetil_inimigo"
-      },
-      {
-        "objectName": "chao"
-      },
-      {
-        "objectName": "alvo"
-      },
-      {
-        "objectName": "bg"
-      },
-      {
-        "objectName": "moeda"
-      },
-      {
-        "objectName": "SkullGameOverDialog"
-      },
-      {
-        "objectName": "GreyAndPurpleLeaderboardDialog"
-      },
-      {
-        "objectName": "NewParticlesEmitter"
+        "folderName": "gatilhos",
+        "children": []
       }
     ]
   },
