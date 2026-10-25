@@ -23684,7 +23684,105 @@
       "persistentUuid": "6b62bfd8-e8ad-4970-915a-e8030c2fe535",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -24681,7 +24779,105 @@
       "persistentUuid": "6dd0ad77-b3a6-4ee6-a671-4e53ad1a1719",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -25678,7 +25874,105 @@
       "persistentUuid": "c6633091-3c20-4c3d-9730-ef7a05e92278",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -26675,7 +26969,105 @@
       "persistentUuid": "93d230c6-5669-41a3-8052-93d600ad1bb1",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -27672,7 +28064,105 @@
       "persistentUuid": "7fd9a032-ac46-4b6d-abbf-0b505e98c52b",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -28169,7 +28659,7 @@
           ]
         },
         {
-          "name": "explosao",
+          "name": "morte",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -28405,7 +28895,105 @@
       "persistentUuid": "7201f0cd-7e1b-42c7-b5c7-6f3a8a376d3c",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -29042,7 +29630,105 @@
       "persistentUuid": "ba08ec76-0ebb-47ab-b4ae-9f2a9717a3b0",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -29511,7 +30197,105 @@
       "persistentUuid": "30dfb30b-a088-417c-bb03-29f320cf02e9",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -29872,7 +30656,105 @@
       "persistentUuid": "3fd65729-5887-480a-b545-f06ed16ff444",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -30377,7 +31259,105 @@
       "persistentUuid": "e2af402f-6a47-42f4-9673-113a604b1da9",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -30882,7 +31862,105 @@
       "persistentUuid": "bab66a51-2052-4543-b95f-08347a6845ac",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -31315,7 +32393,105 @@
       "persistentUuid": "8d051ae8-6ac9-428e-bc48-2a1f224d838a",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 220
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -32612,7 +33788,105 @@
       "persistentUuid": "ce92c4c6-00bc-4ae1-b746-f4e4e9030436",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "87ad06c9-97e2-4aa7-9b88-385d8579730f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -42120,6 +43394,45 @@
         },
         {
           "name": "trader"
+        },
+        {
+          "name": "condenado"
+        },
+        {
+          "name": "condenada"
+        },
+        {
+          "name": "condenado_torto"
+        },
+        {
+          "name": "condenado_azul"
+        },
+        {
+          "name": "condenado_inchado"
+        },
+        {
+          "name": "arvore_condenada"
+        },
+        {
+          "name": "caveira_azul"
+        },
+        {
+          "name": "moscas"
+        },
+        {
+          "name": "olho_demoniaco"
+        },
+        {
+          "name": "mina_demoniaca"
+        },
+        {
+          "name": "cabeca_voadora"
+        },
+        {
+          "name": "diabinho"
+        },
+        {
+          "name": "caveira_gigante"
         }
       ]
     },
@@ -42152,6 +43465,45 @@
         },
         {
           "name": "pigman"
+        },
+        {
+          "name": "condenado"
+        },
+        {
+          "name": "condenada"
+        },
+        {
+          "name": "condenado_torto"
+        },
+        {
+          "name": "condenado_azul"
+        },
+        {
+          "name": "condenado_inchado"
+        },
+        {
+          "name": "arvore_condenada"
+        },
+        {
+          "name": "caveira_azul"
+        },
+        {
+          "name": "moscas"
+        },
+        {
+          "name": "olho_demoniaco"
+        },
+        {
+          "name": "mina_demoniaca"
+        },
+        {
+          "name": "cabeca_voadora"
+        },
+        {
+          "name": "diabinho"
+        },
+        {
+          "name": "caveira_gigante"
         }
       ]
     },
@@ -44378,7 +45730,7 @@
           "layer": "",
           "name": "chao",
           "persistentUuid": "2ca76bec-ddaa-4b45-976d-605441e74e27",
-          "width": 12000,
+          "width": 20000,
           "x": -2000,
           "y": 577,
           "zOrder": 2,
@@ -45064,9 +46416,230 @@
           "name": "safezone",
           "persistentUuid": "201fcd64-1a12-4ad9-be9b-5e34506ed35d",
           "width": 0,
-          "x": 9800,
+          "x": 17800,
           "y": 400,
           "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 140,
+          "keepRatio": true,
+          "layer": "",
+          "name": "condenado",
+          "persistentUuid": "f43713f2-eb2a-46e0-947d-b4e2d83cc361",
+          "width": 140,
+          "x": 9200,
+          "y": 437,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 140,
+          "keepRatio": true,
+          "layer": "",
+          "name": "condenada",
+          "persistentUuid": "a5453463-d124-4741-b61c-9a412d030159",
+          "width": 140,
+          "x": 9850,
+          "y": 437,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 140,
+          "keepRatio": true,
+          "layer": "",
+          "name": "condenado_torto",
+          "persistentUuid": "d7ee348a-dafa-4ef2-a1f5-a98ef19e2c4c",
+          "width": 140,
+          "x": 10500,
+          "y": 437,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 140,
+          "keepRatio": true,
+          "layer": "",
+          "name": "condenado_azul",
+          "persistentUuid": "56bbede7-d587-4322-9491-34a1186d28c5",
+          "width": 140,
+          "x": 11150,
+          "y": 437,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "condenado_inchado",
+          "persistentUuid": "e857087f-99cb-4ab1-8f38-6d23809ed982",
+          "width": 150,
+          "x": 11800,
+          "y": 427,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "arvore_condenada",
+          "persistentUuid": "6c7c1baf-b6a2-4959-b910-082da268c649",
+          "width": 150,
+          "x": 12450,
+          "y": 427,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "",
+          "name": "caveira_azul",
+          "persistentUuid": "e77fbcd1-cc22-465a-96ee-5cba6940804a",
+          "width": 120,
+          "x": 13100,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 80,
+          "keepRatio": true,
+          "layer": "",
+          "name": "moscas",
+          "persistentUuid": "e0227301-f3da-4730-b9cf-9f985a083a7d",
+          "width": 80,
+          "x": 13750,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 130,
+          "keepRatio": true,
+          "layer": "",
+          "name": "olho_demoniaco",
+          "persistentUuid": "1e414318-479f-4d36-9d39-a0df276ffbc4",
+          "width": 130,
+          "x": 14400,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 110,
+          "keepRatio": true,
+          "layer": "",
+          "name": "mina_demoniaca",
+          "persistentUuid": "74718e3d-01ac-4a93-b12a-f8d002c06732",
+          "width": 110,
+          "x": 15050,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 130,
+          "keepRatio": true,
+          "layer": "",
+          "name": "cabeca_voadora",
+          "persistentUuid": "f751293f-ea1d-4f90-9286-b8e11eb8ef32",
+          "width": 130,
+          "x": 15700,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 130,
+          "keepRatio": true,
+          "layer": "",
+          "name": "diabinho",
+          "persistentUuid": "e83a7e0a-492e-4824-a6e7-1e704068488b",
+          "width": 130,
+          "x": 16350,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 280,
+          "keepRatio": true,
+          "layer": "",
+          "name": "caveira_gigante",
+          "persistentUuid": "c8a1864e-5cbd-4cef-bd9d-6acf2c77b0d5",
+          "width": 280,
+          "x": 17000,
+          "y": 297,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -45088,7 +46661,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28). Por enquanto tem um de cada inimigo em fila para testar a IA (KAN-29)."
+          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28). Por enquanto tem os inimigos em fila para testar: primeiro os que têm IA (KAN-29), depois os novos do GandalfHardcore, ainda parados."
         },
         {
           "type": "BuiltinCommonInstructions::Link",
