@@ -4488,6 +4488,11 @@
           "value": true
         }
       ]
+    },
+    {
+      "name": "moedas_total",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -5974,6 +5979,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 2
             }
           ],
           "effects": [],
@@ -6942,6 +6952,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 1
             }
           ],
           "effects": [],
@@ -7535,6 +7550,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 3
             }
           ],
           "effects": [],
@@ -8001,6 +8021,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 50
             }
           ],
           "effects": [],
@@ -8474,6 +8499,21 @@
               "persistentUuid": "05c783d2-f812-4f57-8daf-6c6be9c075c7",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "vx",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vy",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "parada",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -8874,6 +8914,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 3
             }
           ],
           "effects": [],
@@ -11825,6 +11870,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 10
             }
           ],
           "effects": [],
@@ -14354,6 +14404,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 4
             }
           ],
           "effects": [],
@@ -16863,6 +16918,11 @@
               "name": "morto",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "qtd_moedas",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -22797,6 +22857,88 @@
                         }
                       ],
                       "actions": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Inimigo",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "Inimigo.qtd_moedas",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "moeda",
+                                "Inimigo.CenterX()",
+                                "Inimigo.CenterY()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "Scale",
+                                "=",
+                                "0.02"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetXY"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "=",
+                                "Inimigo.CenterX() - moeda.Width() / 2",
+                                "=",
+                                "Inimigo.CenterY() - moeda.Height() / 2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "vx",
+                                "=",
+                                "RandomInRange(-250, 250)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "vy",
+                                "=",
+                                "RandomInRange(-700, -400)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "\"vida\""
+                              ]
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -23104,6 +23246,264 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "parada",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vy",
+                    "+",
+                    "1800 * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "+",
+                    "moeda.vx * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "+",
+                    "moeda.vy * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "parada",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vy",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "chao",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "chao",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vy",
+                    "*",
+                    "-0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vx",
+                    "*",
+                    "0.7"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "vy",
+                        ">",
+                        "-120"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "parada",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "pato",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "parada",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "+",
+                    "(pato.CenterX() - moeda.CenterX()) * 10 * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "+",
+                    "(pato.CenterY() - moeda.CenterY()) * 10 * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "\"vida\"",
+                    ">",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "Opacity",
+                    "=",
+                    "128 + 127 * sign(sin(TimeFromStart() * 20))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "\"vida\"",
+                    ">",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "moeda",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -23129,13 +23529,12 @@
                 },
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "moedas",
-                    "Text",
-                    "=",
-                    "pato.moedas"
+                    "moedas_total",
+                    "+",
+                    "moeda.valor"
                   ]
                 },
                 {
@@ -23522,7 +23921,7 @@
                     "moedas",
                     "Text",
                     "=",
-                    "ToString(pato.moedas)"
+                    "ToString(GlobalVariable(moedas_total))"
                   ]
                 }
               ],
