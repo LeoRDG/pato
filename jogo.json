@@ -6027,6 +6027,16 @@
           "persistentUuid": "ac823edb-fc6e-4a4d-a23d-4b93e19d9aa0",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -7161,6 +7171,16 @@
           "persistentUuid": "9b865457-adef-46c6-809a-c535335bfd4e",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.06
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 3
         }
       ],
       "effects": [],
@@ -7630,6 +7650,16 @@
           "persistentUuid": "40b8e680-89b6-4aba-991d-7806eaaf0f5f",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [],
@@ -20282,27 +20312,6 @@
       "value": "pistola"
     },
     {
-      "name": "desbloqueadas",
-      "type": "structure",
-      "children": [
-        {
-          "name": "doze",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "minigun",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "pistola",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
       "name": "moedas_total",
       "type": "number",
       "value": 0
@@ -20343,6 +20352,58 @@
           "value": 0
         }
       ]
+    },
+    {
+      "name": "upgrades",
+      "type": "structure",
+      "children": [
+        {
+          "name": "cadencia",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dano",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "recarga",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vida",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "armas",
+      "type": "structure",
+      "children": [
+        {
+          "name": "doze",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "minigun",
+          "type": "boolean",
+          "value": false
+        }
+      ]
+    },
+    {
+      "name": "mult_dano",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -22109,6 +22170,13 @@
           "include": {
             "includeConfig": 0
           },
+          "target": "AplicarUpgrades"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "Combate"
         },
         {
@@ -23177,6 +23245,13 @@
           "include": {
             "includeConfig": 0
           },
+          "target": "AplicarUpgrades"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "Inimigos"
         },
         {
@@ -24058,6 +24133,13 @@
             "includeConfig": 0
           },
           "target": "Jogador"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "AplicarUpgrades"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -25807,7 +25889,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Teclas 1/2/3 equipam pistola, doze e minigun (só se estiverem desbloqueadas) e guardam a escolha em arma_atual."
+              "comment": "Teclas 1/2/3 equipam pistola, doze e minigun (doze e minigun só se compradas, global armas) e guardam a escolha em arma_atual."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -25891,7 +25973,7 @@
                     "value": "BooleanVariable"
                   },
                   "parameters": [
-                    "desbloqueadas.doze",
+                    "armas.doze",
                     "True",
                     ""
                   ]
@@ -25966,7 +26048,7 @@
                     "value": "BooleanVariable"
                   },
                   "parameters": [
-                    "desbloqueadas.minigun",
+                    "armas.minigun",
                     "True",
                     ""
                   ]
@@ -31403,7 +31485,7 @@
                     "Inimigo",
                     "vida",
                     "-",
-                    "projetil.dano + Random(38)"
+                    "(projetil.dano + Random(38)) * GlobalVariable(mult_dano)"
                   ]
                 },
                 {
@@ -34146,7 +34228,7 @@
                         "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "desbloqueadas.doze",
+                        "armas.doze",
                         "False",
                         ""
                       ]
@@ -34174,7 +34256,7 @@
                         "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "desbloqueadas.minigun",
+                        "armas.minigun",
                         "False",
                         ""
                       ]
@@ -34394,6 +34476,191 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "principal",
+      "name": "AplicarUpgrades",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Upgrades permanentes (KAN-25): níveis de 0 a 5 na global upgrades; armas compradas na global armas."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Aplicar upgrades",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "No início da cena (depois de criar as armas): cadência -15% de cooldown por nível, recarga -20% de tempo, dano +20% (mult_dano), velocidade +10% e vida +25. Sempre a partir dos valores base, então reiniciar a cena não acumula. Custo de cada nível (loja, KAN-26): round(50 * pow(1.6, nivel)) → 50, 80, 128, 205, 328."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::SetCooldown"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "FireBullet",
+                    "Arma.cooldown_base * pow(0.85, GlobalVariable(upgrades.cadencia))",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::SetReloadDuration"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "FireBullet",
+                    "Arma.recarga_base * pow(0.8, GlobalVariable(upgrades.recarga))",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mult_dano",
+                    "=",
+                    "1 + 0.2 * GlobalVariable(upgrades.dano)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::MaxSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "max_vida",
+                    "=",
+                    "100 + 25 * GlobalVariable(upgrades.vida)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "=",
+                    "pato.max_vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida_controle",
+                    "=",
+                    "pato.vida"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Debug (remover antes da entrega)",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "F1 dá +500 moedas para testar a loja e os upgrades."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"F1\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "moedas_total",
+                    "+",
+                    "500"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
