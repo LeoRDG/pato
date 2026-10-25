@@ -9021,6 +9021,11 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -10042,6 +10047,11 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -10678,6 +10688,11 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -11196,6 +11211,11 @@
         },
         {
           "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
         }
@@ -12115,6 +12135,11 @@
         },
         {
           "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
         }
@@ -15111,6 +15136,11 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -17681,6 +17711,11 @@
         },
         {
           "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
         }
@@ -20264,6 +20299,11 @@
         },
         {
           "name": "quer_andar",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
         }
@@ -23719,7 +23759,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 90
+          "value": 100
         },
         {
           "name": "animacao_temp",
@@ -23781,10 +23821,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -24814,7 +24896,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 90
+          "value": 110
         },
         {
           "name": "animacao_temp",
@@ -24876,10 +24958,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -25909,7 +26033,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 80
+          "value": 140
         },
         {
           "name": "animacao_temp",
@@ -25971,10 +26095,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -27004,7 +27170,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 100
+          "value": 90
         },
         {
           "name": "animacao_temp",
@@ -27066,10 +27232,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -28099,7 +28307,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 70
+          "value": 120
         },
         {
           "name": "animacao_temp",
@@ -28161,10 +28369,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -28992,9 +29242,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -29665,7 +29930,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 200
+          "value": 220
         },
         {
           "name": "animacao_temp",
@@ -29727,9 +29992,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -30232,7 +30512,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 250
+          "value": 230
         },
         {
           "name": "animacao_temp",
@@ -30294,9 +30574,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -30753,10 +31048,57 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "isFolded": true,
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 1,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 0,
+          "BulletSpeedVariance": 3,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 0,
+          "ReloadDuration": 5,
+          "MaxAmmo": 6,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 0,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": true,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -31294,7 +31636,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 0
+          "value": 70
         },
         {
           "name": "animacao_temp",
@@ -31356,9 +31698,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -31897,7 +32254,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 180
+          "value": 200
         },
         {
           "name": "animacao_temp",
@@ -31959,9 +32316,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -32428,7 +32800,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 220
+          "value": 260
         },
         {
           "name": "animacao_temp",
@@ -32490,9 +32862,24 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -33885,10 +34272,52 @@
           "name": "quer_andar",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "idle",
@@ -43552,6 +43981,72 @@
         },
         {
           "name": "atirador"
+        },
+        {
+          "name": "condenado"
+        },
+        {
+          "name": "condenada"
+        },
+        {
+          "name": "condenado_torto"
+        },
+        {
+          "name": "condenado_azul"
+        },
+        {
+          "name": "condenado_inchado"
+        },
+        {
+          "name": "caveira_gigante"
+        }
+      ]
+    },
+    {
+      "name": "CorpoACorpo",
+      "objects": [
+        {
+          "name": "condenado"
+        },
+        {
+          "name": "condenada"
+        },
+        {
+          "name": "condenado_torto"
+        },
+        {
+          "name": "condenado_azul"
+        }
+      ]
+    },
+    {
+      "name": "Mergulhador",
+      "objects": [
+        {
+          "name": "voador"
+        },
+        {
+          "name": "caveira_azul"
+        },
+        {
+          "name": "cabeca_voadora"
+        },
+        {
+          "name": "diabinho"
+        }
+      ]
+    },
+    {
+      "name": "Flutuante",
+      "objects": [
+        {
+          "name": "moscas"
+        },
+        {
+          "name": "olho_demoniaco"
+        },
+        {
+          "name": "mina_demoniaca"
         }
       ]
     }
@@ -46661,7 +47156,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28). Por enquanto tem os inimigos em fila para testar: primeiro os que têm IA (KAN-29), depois os novos do GandalfHardcore, ainda parados."
+          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28). Por enquanto tem um de cada inimigo em fila para testar a IA."
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -50011,7 +50506,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "IA dos inimigos (KAN-29): estados comuns dos que andam, um grupo para cada papel e a separação. Os que andam usam o comportamento de plataforma (grupo Terrestre); o voador se move pelos eventos."
+          "comment": "IA dos inimigos (KAN-29): estados comuns dos que andam, um grupo para cada papel e a separação. Os que andam usam o comportamento de plataforma (grupo Terrestre); o voador se move pelos eventos. Os inimigos do GandalfHardcore usam os mesmos estados (grupos Terrestre, Mergulhador e Flutuante)."
         },
         {
           "colorB": 228,
@@ -50140,7 +50635,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (pato a menos de 800 px; desiste a mais de 1000) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Os sprites olham para a direita: viram para o lado do pato (na investida mantêm o lado)."
+              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (pato a menos de 800 px; desiste a mais de 1000) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Viram para o lado do pato (na investida mantêm o lado) (sprite_esquerda = desenhado olhando para a esquerda)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -50696,6 +51191,17 @@
                         "<",
                         "Terrestre.X()"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "sprite_esquerda",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -50734,6 +51240,17 @@
                         ">",
                         "Terrestre.X()"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "sprite_esquerda",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -50745,6 +51262,104 @@
                         "Terrestre",
                         "Flippable",
                         "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        "<",
+                        "Terrestre.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        ">",
+                        "Terrestre.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Flippable",
+                        "yes"
                       ]
                     }
                   ]
@@ -53474,7 +54089,7 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "parameters": [],
-          "name": "Voador",
+          "name": "Mergulhadores",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -53486,7 +54101,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Voa em onda (base + sin(tempo × 3) × 60). Perseguindo, fica 250 px acima do pato; quando está em cima dele, avisa, mergulha e volta a subir."
+              "comment": "Voador, caveira azul, cabeça voadora e diabinho: voam em onda (base + sin(tempo × 3) × 60). Perseguindo, ficam 250 px acima do pato; quando estão em cima dele, avisam, mergulham e voltam a subir."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -53496,7 +54111,7 @@
                     "value": "BooleanObjectVariable"
                   },
                   "parameters": [
-                    "voador",
+                    "Mergulhador",
                     "morto",
                     "False",
                     ""
@@ -53513,7 +54128,7 @@
                         "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "acertado",
                         "True",
                         ""
@@ -53526,7 +54141,7 @@
                         "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "acertado",
                         "False",
                         ""
@@ -53537,9 +54152,9 @@
                         "value": "SetX"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "+",
-                        "voador.kb_dir * 40"
+                        "Mergulhador.kb_dir * 40"
                       ]
                     }
                   ],
@@ -53552,7 +54167,7 @@
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "estado",
                             "!=",
                             "\"preparar\""
@@ -53563,7 +54178,7 @@
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "estado",
                             "!=",
                             "\"atacar\""
@@ -53576,7 +54191,7 @@
                             "value": "SetStringObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "estado",
                             "=",
                             "\"dano\""
@@ -53587,7 +54202,7 @@
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "\"estado\""
                           ]
                         }
@@ -53603,7 +54218,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"dano\""
@@ -53614,7 +54229,7 @@
                         "value": "CompareObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\"",
                         ">",
                         "0.2"
@@ -53627,7 +54242,7 @@
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"perseguir\""
@@ -53638,7 +54253,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\""
                       ]
                     }
@@ -53652,7 +54267,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"patrulha\""
@@ -53665,7 +54280,7 @@
                         "value": "SetX"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "+",
                         "cos(TimeFromStart() * 1.2) * 180 * TimeDelta()"
                       ]
@@ -53680,7 +54295,7 @@
                             "value": "Distance"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "pato",
                             "800",
                             ""
@@ -53693,7 +54308,7 @@
                             "value": "SetStringObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "estado",
                             "=",
                             "\"perseguir\""
@@ -53704,7 +54319,7 @@
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "\"estado\""
                           ]
                         }
@@ -53720,7 +54335,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"perseguir\""
@@ -53733,7 +54348,7 @@
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "base_y",
                         "=",
                         "pato.Y() - 250"
@@ -53749,7 +54364,7 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "abs(pato.CenterX() - voador.CenterX())",
+                            "abs(pato.CenterX() - Mergulhador.CenterX())",
                             ">",
                             "20"
                           ]
@@ -53761,9 +54376,9 @@
                             "value": "SetX"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "+",
-                            "sign(pato.CenterX() - voador.CenterX()) * voador.velocidade * TimeDelta()"
+                            "sign(pato.CenterX() - Mergulhador.CenterX()) * Mergulhador.velocidade * TimeDelta()"
                           ]
                         }
                       ]
@@ -53777,7 +54392,7 @@
                             "inverted": true
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "pato",
                             "1000",
                             ""
@@ -53790,7 +54405,7 @@
                             "value": "SetStringObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "estado",
                             "=",
                             "\"patrulha\""
@@ -53801,7 +54416,7 @@
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "\"estado\""
                           ]
                         },
@@ -53810,10 +54425,10 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "base_x",
                             "=",
-                            "voador.X()"
+                            "Mergulhador.X()"
                           ]
                         },
                         {
@@ -53821,10 +54436,10 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "voador",
+                            "Mergulhador",
                             "base_y",
                             "=",
-                            "voador.Y()"
+                            "Mergulhador.Y()"
                           ]
                         }
                       ]
@@ -53839,7 +54454,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "!=",
                         "\"atacar\""
@@ -53850,7 +54465,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "!=",
                         "\"preparar\""
@@ -53863,9 +54478,9 @@
                         "value": "SetY"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "+",
-                        "(voador.base_y + sin(TimeFromStart() * 3) * 60 - voador.Y()) * min(1, 4 * TimeDelta())"
+                        "(Mergulhador.base_y + sin(TimeFromStart() * 3) * 60 - Mergulhador.Y()) * min(1, 4 * TimeDelta())"
                       ]
                     }
                   ]
@@ -53878,7 +54493,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"perseguir\""
@@ -53889,7 +54504,7 @@
                         "value": "CompareObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"ataque\"",
                         ">",
                         "2.5"
@@ -53900,7 +54515,7 @@
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "abs(pato.CenterX() - voador.CenterX())",
+                        "abs(pato.CenterX() - Mergulhador.CenterX())",
                         "<",
                         "80"
                       ]
@@ -53912,7 +54527,7 @@
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"preparar\""
@@ -53923,7 +54538,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\""
                       ]
                     },
@@ -53932,10 +54547,10 @@
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "direcao",
                         "=",
-                        "sign(pato.CenterX() - voador.CenterX())"
+                        "sign(pato.CenterX() - Mergulhador.CenterX())"
                       ]
                     },
                     {
@@ -53943,7 +54558,7 @@
                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "Animation",
                         "=",
                         "\"ataque_1\""
@@ -53971,7 +54586,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"preparar\""
@@ -53984,7 +54599,7 @@
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "Effect",
                         "\"Brilho\"",
                         "\"brightness\"",
@@ -54001,7 +54616,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "!=",
                         "\"preparar\""
@@ -54014,7 +54629,7 @@
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "Effect",
                         "\"Brilho\"",
                         "\"brightness\"",
@@ -54031,7 +54646,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"preparar\""
@@ -54042,7 +54657,7 @@
                         "value": "CompareObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\"",
                         ">",
                         "0.5"
@@ -54055,7 +54670,7 @@
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"atacar\""
@@ -54066,7 +54681,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\""
                       ]
                     }
@@ -54080,7 +54695,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"atacar\""
@@ -54093,7 +54708,7 @@
                         "value": "SetY"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "+",
                         "900 * TimeDelta()"
                       ]
@@ -54108,7 +54723,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"atacar\""
@@ -54119,7 +54734,7 @@
                         "value": "CompareObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\"",
                         ">",
                         "0.45"
@@ -54132,7 +54747,7 @@
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"perseguir\""
@@ -54143,7 +54758,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\""
                       ]
                     },
@@ -54152,7 +54767,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"ataque\""
                       ]
                     }
@@ -54166,7 +54781,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"atacar\""
@@ -54177,7 +54792,7 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "chao",
                         "",
                         "",
@@ -54191,7 +54806,7 @@
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "estado",
                         "=",
                         "\"perseguir\""
@@ -54202,7 +54817,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"estado\""
                       ]
                     },
@@ -54211,8 +54826,3037 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "voador",
+                        "Mergulhador",
                         "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Mergulhador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Mergulhador",
+                        "estado",
+                        "!=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Mergulhador",
+                        "Animation",
+                        "=",
+                        "\"voando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "diabinho",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "diabinho",
+                        "Animation",
+                        "=",
+                        "\"loop\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "diabinho",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "diabinho",
+                        "Animation",
+                        "=",
+                        "\"roendo_osso\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Condenados",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Condenado, condenada, torto e azul: andam até o pato; a menos de 150 px avisam (0,45 s) e dão um bote curto com o golpe (0,35 s). O torto é o mais rápido, o azul o mais forte."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "CorpoACorpo",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - CorpoACorpo.CenterX())",
+                            ">",
+                            "40"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - CorpoACorpo.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "CorpoACorpo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "CorpoACorpo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - CorpoACorpo.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "CorpoACorpo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "CorpoACorpo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "pato",
+                        "150",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - CorpoACorpo.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"estado\"",
+                        ">",
+                        "0.45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "PlatformerObject",
+                        "=",
+                        "CorpoACorpo.velocidade * 4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "Animation",
+                        "=",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "CorpoACorpo.direcao",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "CorpoACorpo",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "CorpoACorpo",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "CorpoACorpo.direcao",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "CorpoACorpo",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "CorpoACorpo",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"estado\"",
+                        ">",
+                        "0.35"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "CorpoACorpo",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Condenado inchado",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Kamikaze: anda até o pato e, a menos de 160 px, pisca por 0,6 s e explode (dano em 230 px). Morto a tiro, explode sem machucar."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "condenado_inchado",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - condenado_inchado.CenterX())",
+                            ">",
+                            "40"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - condenado_inchado.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "condenado_inchado",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "condenado_inchado",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - condenado_inchado.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "condenado_inchado",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "condenado_inchado",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "pato",
+                        "160",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - condenado_inchado.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "\"estado\"",
+                        ">",
+                        "0.6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "vida",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "condenado_inchado",
+                            "pato",
+                            "230",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida",
+                            "-",
+                            "condenado_inchado.dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"iframes\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CurrentSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "sign(pato.CenterX() - condenado_inchado.CenterX()) * 600"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateJumpKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Caveira gigante",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Mini-boss lento. A cada 4 s, se o pato está a menos de 350 px: avisa por 0,6 s e solta uma explosão de fogo em volta (1,6 s; machuca a menos de 260 px entre 0,4 s e 1,4 s)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "caveira_gigante",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - caveira_gigante.CenterX())",
+                            ">",
+                            "40"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - caveira_gigante.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - caveira_gigante.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "pato",
+                        "350",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"ataque\"",
+                        ">",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - caveira_gigante.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\"",
+                        ">",
+                        "0.6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "Animation",
+                        "=",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\"",
+                        ">",
+                        "0.4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\"",
+                        "<",
+                        "1.4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "pato",
+                        "260",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "invencivel",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida",
+                        "-",
+                        "caveira_gigante.dano"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "invencivel",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"iframes\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::CurrentSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "sign(pato.CenterX() - caveira_gigante.CenterX()) * 600"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateJumpKey"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\"",
+                        ">",
+                        "1.6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Árvore condenada",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Parada no lugar: só machuca no contato. Cada uma sorteia um dos dois desenhos ao entrar na cena."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "escolha",
+                    "=",
+                    "RandomInRange(1, 2)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "arvore_condenada",
+                        "escolha",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "arvore_condenada",
+                        "Animation",
+                        "=",
+                        "\"idle_2\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "escolha",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "Animation",
+                    "=",
+                    "\"morte\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "Animation",
+                    "=",
+                    "\"morte_2\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Flutuantes",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Moscas, olho e mina: flutuam em onda; perseguem a menos de 700 px e desistem a mais de 1000. Levar tiro fora de um ataque: dano por 0,2 s e são empurrados."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Flutuante",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "acertado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "acertado",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "+",
+                        "Flutuante.kb_dir * 40"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Flutuante",
+                            "estado",
+                            "!=",
+                            "\"preparar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Flutuante",
+                            "estado",
+                            "!=",
+                            "\"atacar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Flutuante",
+                            "estado",
+                            "=",
+                            "\"dano\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Flutuante",
+                            "\"estado\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"dano\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "\"estado\"",
+                        ">",
+                        "0.2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "pato",
+                        "700",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "pato",
+                        "1000",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "base_x",
+                        "=",
+                        "Flutuante.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "base_y",
+                        "=",
+                        "Flutuante.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1.6 + 0.9 * sin(TimeFromStart() * 40)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "estado",
+                        "!=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        ">",
+                        "Flutuante.X()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "Flippable",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        "<",
+                        "Flutuante.X()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Flutuante",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Moscas",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Enxame: voam direto no pato, rápidas e tremidas. Não atacam, só machucam no contato."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moscas",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "moscas",
+                    "Animation",
+                    "=",
+                    "\"voando\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "moscas",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "moscas",
+                        "+",
+                        "(moscas.base_y + sin(TimeFromStart() * 6) * 20 - moscas.Y()) * min(1, 4 * TimeDelta())"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "moscas",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "moscas",
+                        "+",
+                        "sign(pato.CenterX() - moscas.CenterX()) * moscas.velocidade * TimeDelta() + sin(TimeFromStart() * 13 + moscas.base_x) * 3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "moscas",
+                        "+",
+                        "sign(pato.CenterY() - moscas.CenterY()) * moscas.velocidade * 0.7 * TimeDelta() + cos(TimeFromStart() * 11) * 3"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Olho demoníaco",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Torre voadora: fica 200 px acima do pato, a 350–550 px de distância. Avisa e atira um projétil a cada 2,5 s."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "olho_demoniaco",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "olho_demoniaco",
+                    "Animation",
+                    "=",
+                    "\"idle\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "+",
+                        "(olho_demoniaco.base_y + sin(TimeFromStart() * 2) * 40 - olho_demoniaco.Y()) * min(1, 4 * TimeDelta())"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "base_y",
+                        "=",
+                        "pato.Y() - 200"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - olho_demoniaco.CenterX())",
+                            ">",
+                            "550"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "olho_demoniaco",
+                            "+",
+                            "sign(pato.CenterX() - olho_demoniaco.CenterX()) * olho_demoniaco.velocidade * TimeDelta()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - olho_demoniaco.CenterX())",
+                            "<",
+                            "350"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "olho_demoniaco",
+                            "-",
+                            "sign(pato.CenterX() - olho_demoniaco.CenterX()) * olho_demoniaco.velocidade * TimeDelta()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "pato",
+                        "700",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - olho_demoniaco.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardObject"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "FireBullet",
+                        "olho_demoniaco.CenterX()",
+                        "olho_demoniaco.CenterY()",
+                        "projetil_inimigo",
+                        "pato",
+                        "650",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"estado\"",
+                        ">",
+                        "0.3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "olho_demoniaco",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Mina demoníaca",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Fica parada flutuando; com o pato a menos de 400 px vai devagar até ele. A menos de 140 px pisca por 0,5 s e explode (dano em 200 px)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "mina_demoniaca",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "mina_demoniaca",
+                    "Animation",
+                    "=",
+                    "\"idle\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "mina_demoniaca",
+                    "+",
+                    "(mina_demoniaca.base_y + sin(TimeFromStart() * 2) * 15 - mina_demoniaca.Y()) * min(1, 4 * TimeDelta())"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "pato",
+                        "400",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "+",
+                        "sign(pato.CenterX() - mina_demoniaca.CenterX()) * mina_demoniaca.velocidade * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "base_y",
+                        "+",
+                        "sign(pato.CenterY() - mina_demoniaca.CenterY()) * mina_demoniaca.velocidade * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "pato",
+                        "140",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "mina_demoniaca",
+                        "vida",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "mina_demoniaca",
+                            "pato",
+                            "200",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida",
+                            "-",
+                            "mina_demoniaca.dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"iframes\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CurrentSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "sign(pato.CenterX() - mina_demoniaca.CenterX()) * 600"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateJumpKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
                       ]
                     }
                   ]
