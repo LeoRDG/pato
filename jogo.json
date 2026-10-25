@@ -4428,6 +4428,14 @@
         "name": "hud/vinheta.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/hud/moeda.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/moeda.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -18403,7 +18411,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "bitcoin.png",
+                      "image": "hud/moeda.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
