@@ -20794,8 +20794,8 @@
                     "laser",
                     "Arma.CenterX()",
                     "Arma.CenterY()",
-                    "alvo.CenterX()",
-                    "alvo.CenterY()",
+                    "Arma.CenterX() + cos(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000",
+                    "Arma.CenterY() + sin(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000",
                     "2"
                   ]
                 },
