@@ -5133,7 +5133,7 @@
           "name": "velocidade",
           "persistentUuid": "5117bd85-477b-4bb1-9e99-35c32aa7770a",
           "type": "number",
-          "value": 100
+          "value": 90
         },
         {
           "name": "animacao_temp",
@@ -5150,27 +5150,65 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 2
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [
+      "effects": [
         {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "rotateObject": false,
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "smoothingMaxCellGap": 1
-        },
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
         {
           "name": "PlatformerConfigurationStack",
           "type": "AdvancedJump::PlatformerConfigurationStack",
@@ -5179,8 +5217,8 @@
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 2000,
-          "jumpSustainTime": 3.2,
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -6077,7 +6115,7 @@
           "name": "vida",
           "persistentUuid": "53b39dec-3a02-48d1-90e1-395b46f96f1b",
           "type": "number",
-          "value": 100
+          "value": 60
         },
         {
           "name": "dano",
@@ -6095,7 +6133,7 @@
           "name": "max_vida",
           "persistentUuid": "63bd82f9-6737-4c44-abdf-5a84133e4cde",
           "type": "number",
-          "value": 100
+          "value": 60
         },
         {
           "name": "vida_controle",
@@ -6107,7 +6145,7 @@
           "name": "velocidade",
           "persistentUuid": "f2b21024-df52-4ee9-b9ee-fa8ba2d7efdf",
           "type": "number",
-          "value": 400
+          "value": 220
         },
         {
           "name": "animacao_temp",
@@ -6123,27 +6161,65 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 1
-        }
-      ],
-      "effects": [],
-      "behaviors": [
+        },
         {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 0,
-          "maxSpeed": 200,
-          "rotateObject": false,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "smoothingMaxCellGap": 1
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "",
@@ -6675,7 +6751,7 @@
           "name": "vida",
           "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
           "type": "number",
-          "value": 100
+          "value": 80
         },
         {
           "name": "dano",
@@ -6693,7 +6769,7 @@
           "name": "max_vida",
           "persistentUuid": "6f68783a-5be3-4c78-930b-1b78e19f2b01",
           "type": "number",
-          "value": 100
+          "value": 80
         },
         {
           "name": "vida_controle",
@@ -6705,7 +6781,7 @@
           "name": "velocidade",
           "persistentUuid": "fab580be-7348-47f2-809c-896e598e60ac",
           "type": "number",
-          "value": 1000
+          "value": 140
         },
         {
           "name": "animacao_temp",
@@ -6721,23 +6797,78 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 3
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [
         {
           "isFolded": true,
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.1,
+          "FireCooldown": 0.18,
           "HasJustFired": false,
           "RotateBullet": true,
           "FiringArc": 45,
           "BulletQuantity": 1,
-          "AngleVariance": 6,
+          "AngleVariance": 3,
           "BulletSpeedVariance": 3,
           "AmmoQuantity": 0,
-          "ShotsPerReload": 6,
+          "ShotsPerReload": 0,
           "ReloadDuration": 5,
           "MaxAmmo": 6,
           "ShotsBeforeNextReload": 0,
@@ -6755,22 +6886,6 @@
           "ExponentialCoolingRate": 0.3,
           "BulletLayer": "",
           "RandomizedAngle": 0
-        },
-        {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "rotateObject": false,
-          "smoothingMaxCellGap": 1
         },
         {
           "isFolded": true,
@@ -7192,6 +7307,51 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 50
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -8038,7 +8198,7 @@
           "name": "vida",
           "persistentUuid": "b39fd189-d053-4ca2-8f9e-f3adf8c34f4f",
           "type": "number",
-          "value": 100
+          "value": 120
         },
         {
           "name": "dano",
@@ -8056,7 +8216,7 @@
           "name": "max_vida",
           "persistentUuid": "8844ee99-1fd2-4019-a87f-23ea5fef712f",
           "type": "number",
-          "value": 100
+          "value": 120
         },
         {
           "name": "vida_controle",
@@ -8068,7 +8228,7 @@
           "name": "velocidade",
           "persistentUuid": "c09d07b4-51f5-402a-b7e1-c69f6ddfb8ef",
           "type": "number",
-          "value": 100
+          "value": 130
         },
         {
           "name": "animacao_temp",
@@ -8085,27 +8245,65 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 3
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [
+      "effects": [
         {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "rotateObject": false,
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "smoothingMaxCellGap": 1
-        },
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
         {
           "isFolded": true,
           "name": "PlatformerConfigurationStack",
@@ -8116,8 +8314,8 @@
           "isFolded": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 2000,
-          "jumpSustainTime": 3.2,
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -10994,13 +11192,13 @@
           "name": "vida",
           "persistentUuid": "27c5fe63-3358-466a-8659-c5fdbe3365d0",
           "type": "number",
-          "value": 100
+          "value": 300
         },
         {
           "name": "dano",
           "persistentUuid": "b4c4d990-0b2b-4280-af11-3b9dd56b0d16",
           "type": "number",
-          "value": 10
+          "value": 20
         },
         {
           "name": "tem_barra_de_vida",
@@ -11012,7 +11210,7 @@
           "name": "max_vida",
           "persistentUuid": "7339535f-9da6-46db-ac7a-6bba0edeb2b6",
           "type": "number",
-          "value": 100
+          "value": 300
         },
         {
           "name": "vida_controle",
@@ -11024,7 +11222,7 @@
           "name": "velocidade",
           "persistentUuid": "0ef08c78-9d5b-494b-ab1f-3ce6a079c714",
           "type": "number",
-          "value": 100
+          "value": 150
         },
         {
           "name": "animacao_temp",
@@ -11041,27 +11239,65 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 10
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [
+      "effects": [
         {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "rotateObject": false,
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "smoothingMaxCellGap": 1
-        },
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
         {
           "name": "PlatformerConfigurationStack",
           "type": "AdvancedJump::PlatformerConfigurationStack",
@@ -11070,8 +11306,8 @@
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 2000,
-          "jumpSustainTime": 3.2,
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -13528,7 +13764,7 @@
           "name": "vida",
           "persistentUuid": "30b01702-0fec-4b17-9698-0a80e3f3d652",
           "type": "number",
-          "value": 100
+          "value": 90
         },
         {
           "name": "dano",
@@ -13546,7 +13782,7 @@
           "name": "max_vida",
           "persistentUuid": "bd39189c-5960-4816-9052-9aa2a3117ee8",
           "type": "number",
-          "value": 100
+          "value": 90
         },
         {
           "name": "vida_controle",
@@ -13558,7 +13794,7 @@
           "name": "velocidade",
           "persistentUuid": "8c303eac-36b7-4b92-a9f7-5b9910d5aeb0",
           "type": "number",
-          "value": 100
+          "value": 80
         },
         {
           "name": "animacao_temp",
@@ -13575,27 +13811,65 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 4
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
-      "behaviors": [
+      "effects": [
         {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "rotateObject": false,
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "smoothingMaxCellGap": 1
-        },
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
         {
           "name": "PlatformerConfigurationStack",
           "type": "AdvancedJump::PlatformerConfigurationStack",
@@ -13604,8 +13878,8 @@
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 2000,
-          "jumpSustainTime": 3.2,
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -13621,6 +13895,37 @@
           "useRepeatedJump": false,
           "xGrabTolerance": 10,
           "yGrabOffset": 0
+        },
+        {
+          "isFolded": true,
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 1,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 0,
+          "BulletSpeedVariance": 3,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 0,
+          "ReloadDuration": 5,
+          "MaxAmmo": 6,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 0,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": true,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
         }
       ],
       "animations": [
@@ -16089,6 +16394,51 @@
           "name": "qtd_moedas",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "patrulha"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -19739,6 +20089,26 @@
           "name": "hud_moeda_pop"
         }
       ]
+    },
+    {
+      "name": "Terrestre",
+      "objects": [
+        {
+          "name": "zumbi"
+        },
+        {
+          "name": "pigman"
+        },
+        {
+          "name": "sapo"
+        },
+        {
+          "name": "cutulu"
+        },
+        {
+          "name": "atirador"
+        }
+      ]
     }
   ],
   "variables": [
@@ -21872,7 +22242,7 @@
           "layer": "",
           "name": "chao",
           "persistentUuid": "2ca76bec-ddaa-4b45-976d-605441e74e27",
-          "width": 7000,
+          "width": 12000,
           "x": -2000,
           "y": 577,
           "zOrder": 2,
@@ -22427,6 +22797,125 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 130,
+          "keepRatio": false,
+          "layer": "",
+          "name": "zumbi",
+          "persistentUuid": "4be16d45-ce26-4631-b4af-b2e225275f6a",
+          "width": 130,
+          "x": 1400,
+          "y": 447,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 170,
+          "keepRatio": false,
+          "layer": "",
+          "name": "pigman",
+          "persistentUuid": "d2522ee4-6386-4e86-9b58-327b58296f64",
+          "width": 170,
+          "x": 2700,
+          "y": 407,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 160,
+          "keepRatio": false,
+          "layer": "",
+          "name": "atirador",
+          "persistentUuid": "e6eff9a4-8cf3-449d-a069-e43ef551196e",
+          "width": 160,
+          "x": 4000,
+          "y": 417,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 80,
+          "keepRatio": false,
+          "layer": "",
+          "name": "sapo",
+          "persistentUuid": "7f946908-0206-4d1e-8c95-8dacb52f4fb5",
+          "width": 240,
+          "x": 5300,
+          "y": 497,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 130,
+          "keepRatio": false,
+          "layer": "",
+          "name": "zumbi",
+          "persistentUuid": "6f81e370-b928-41e7-acc2-a37143773251",
+          "width": 130,
+          "x": 5550,
+          "y": 447,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 100,
+          "keepRatio": false,
+          "layer": "",
+          "name": "voador",
+          "persistentUuid": "14c55898-160a-4837-b8e8-b175b29517bf",
+          "width": 100,
+          "x": 6800,
+          "y": 250,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 175,
+          "keepRatio": false,
+          "layer": "",
+          "name": "cutulu",
+          "persistentUuid": "436454bc-986d-492e-bf1c-9ddaddbde690",
+          "width": 300,
+          "x": 8300,
+          "y": 402,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -22445,7 +22934,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28)."
+          "comment": "Fase única: um inferno grande, dividido em áreas (level design na KAN-28). Por enquanto tem um de cada inimigo em fila para testar a IA (KAN-29)."
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -25270,7 +25759,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Comportamento comum dos inimigos nas fases: preparar ao entrar na cena, separar uns dos outros, perseguir e atirar."
+          "comment": "IA dos inimigos (KAN-29): estados comuns dos que andam, um grupo para cada papel e a separação. Os que andam usam o comportamento de plataforma (grupo Terrestre); o voador se move pelos eventos."
         },
         {
           "colorB": 228,
@@ -25293,7 +25782,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Ao entrar na cena: zera o cronômetro do som de acerto e aplica a velocidade de cada inimigo."
+              "comment": "Ao entrar na cena: zera os cronômetros e guarda a posição inicial de cada inimigo (centro da patrulha)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -25325,13 +25814,51 @@
                     },
                     {
                       "type": {
-                        "value": "PathfindingBehavior::MaxSpeed"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
                         "Inimigo",
-                        "Pathfinding",
+                        "base_x",
                         "=",
-                        "Inimigo.velocidade"
+                        "Inimigo.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "base_y",
+                        "=",
+                        "Inimigo.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"ataque\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"cura\""
                       ]
                     }
                   ]
@@ -25345,7 +25872,4313 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "IA e ataques",
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Estados (terrestres)",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (pato a menos de 800 px; desiste a mais de 1000) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Os sprites olham para a direita: viram para o lado do pato (na investida mantêm o lado)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "quer_andar",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "acertado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "acertado",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "!=",
+                            "\"preparar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "!=",
+                            "\"atacar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "=",
+                            "\"dano\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject",
+                            "=",
+                            "250"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CurrentSpeed"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject",
+                            "=",
+                            "Terrestre.kb_dir * 250"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "Animation",
+                            "=",
+                            "\"tomou_dano\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "=",
+                        "\"dano\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "\"estado\"",
+                        ">",
+                        "0.2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "PlatformerObject",
+                        "=",
+                        "Terrestre.velocidade * 0.5"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            ">",
+                            "Terrestre.base_x + 200"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "direcao",
+                            "=",
+                            "-1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "<",
+                            "Terrestre.base_x - 200"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "direcao",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Terrestre.direcao",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Terrestre.direcao",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "pato",
+                            "800",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "\"estado\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "PlatformerObject",
+                        "=",
+                        "Terrestre.velocidade"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "pato",
+                            "1000",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "=",
+                            "\"patrulha\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "base_x",
+                            "=",
+                            "Terrestre.X()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1.6 + 0.9 * sin(TimeFromStart() * 40)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "!=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        "<",
+                        "Terrestre.X()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Flippable",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "pato",
+                        ">",
+                        "Terrestre.X()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Zumbi",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Tanque lento: só anda até o pato e machuca no contato."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "zumbi",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "zumbi",
+                    "estado",
+                    "=",
+                    "\"perseguir\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.CenterX() - zumbi.CenterX())",
+                        ">",
+                        "40"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.CenterX() - zumbi.CenterX())",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "zumbi",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "zumbi",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.CenterX() - zumbi.CenterX())",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "zumbi",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "zumbi",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Pigman",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Para, pisca por 0,5 s e investe rápido em linha reta por 0,8 s."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pigman",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "Animation",
+                        "=",
+                        "\"caminhando\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - pigman.CenterX())",
+                            ">",
+                            "40"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - pigman.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "pigman",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pigman",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - pigman.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "pigman",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pigman",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "Animation",
+                        "=",
+                        "\"caminhando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "pato",
+                        "450",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.CenterY() - pigman.CenterY())",
+                        "<",
+                        "200"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - pigman.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "PlatformerObject",
+                        "=",
+                        "650"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "Animation",
+                        "=",
+                        "\"ataque_2\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pigman.direcao",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "pigman",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pigman",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pigman.direcao",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "pigman",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pigman",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"estado\"",
+                        ">",
+                        "0.8"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pigman",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Atirador",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Fica a uns 500 px do pato. Perto o bastante (menos de 800 px): avisa e dispara uma rajada de 3 tiros."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "atirador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - atirador.CenterX())",
+                            ">",
+                            "600"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - atirador.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - atirador.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - atirador.CenterX())",
+                            "<",
+                            "400"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "-(pato.CenterX() - atirador.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "-(pato.CenterX() - atirador.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "atirador",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "pato",
+                        "800",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - atirador.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "tiros",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardObject"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "FireBullet",
+                        "atirador.CenterX()",
+                        "atirador.CenterY()",
+                        "projetil_inimigo",
+                        "pato",
+                        "900",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::HasJustFired"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "tiros",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "tiros",
+                        ">=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "atirador",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Sapo",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Cospe de longe (fica a 300–500 px). A cada 4 s para e cura em +20 os inimigos a menos de 300 px (brilho verde)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "sapo",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - sapo.CenterX())",
+                            ">",
+                            "500"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - sapo.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - sapo.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - sapo.CenterX())",
+                            "<",
+                            "300"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "-(pato.CenterX() - sapo.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "-(pato.CenterX() - sapo.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sapo",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Animation",
+                        "=",
+                        "\"andando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "pato",
+                        "700",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - sapo.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Animation",
+                        "=",
+                        "\"spit\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardObject"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "FireBullet",
+                        "sapo.CenterX()",
+                        "sapo.CenterY()",
+                        "projetil_inimigo",
+                        "pato",
+                        "700",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\"",
+                        ">",
+                        "0.4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"cura\"",
+                        ">",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"curar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"cura\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Animation",
+                        "=",
+                        "\"cura\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"curar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\"",
+                        ">",
+                        "0.8"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "sapo",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "sapo",
+                    "estado",
+                    "=",
+                    "\"curar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "sapo",
+                    "\"estado\"",
+                    "<",
+                    "0.05"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "sapo",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sapo",
+                        "300",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "vida",
+                        "=",
+                        "min(Inimigo.max_vida, Inimigo.vida + 20)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "vida_controle",
+                        "=",
+                        "Inimigo.vida"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"120;255;120\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"curado\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "\"curado\"",
+                    ">",
+                    "0.4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveObjectTimer"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "\"curado\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Cutulu",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Elite (300 de vida). Anda até o pato e alterna dois ataques, os dois com aviso: 1) investida curta; 2) salto voando por cima do pato."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "cutulu",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "Animation",
+                        "=",
+                        "\"caminhando\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - cutulu.CenterX())",
+                            ">",
+                            "40"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - cutulu.CenterX())",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateLeftKey"
+                              },
+                              "parameters": [
+                                "cutulu",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "cutulu",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.CenterX() - cutulu.CenterX())",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateRightKey"
+                              },
+                              "parameters": [
+                                "cutulu",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "cutulu",
+                                "quer_andar",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "Animation",
+                        "=",
+                        "\"caminhando\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "pato",
+                        "500",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - cutulu.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "escolha",
+                        "=",
+                        "3 - cutulu.escolha"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "escolha",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "Animation",
+                        "=",
+                        "\"ataque_2\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "escolha",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject",
+                            "=",
+                            "550"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "escolha",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject",
+                            "=",
+                            "380"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::JumpSpeed"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject",
+                            "=",
+                            "900"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateJumpKey"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "Animation",
+                            "=",
+                            "\"voando\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "cutulu.direcao",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "cutulu.direcao",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "escolha",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\"",
+                        ">",
+                        "0.4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "escolha",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\"",
+                        ">",
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "\"ataque\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::JumpSpeed"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "PlatformerObject",
+                        "=",
+                        "600"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Voador",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Voa em onda (base + sin(tempo × 3) × 60). Perseguindo, fica 250 px acima do pato; quando está em cima dele, avisa, mergulha e volta a subir."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "voador",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "acertado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "acertado",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "voador",
+                        "+",
+                        "voador.kb_dir * 40"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "estado",
+                            "!=",
+                            "\"preparar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "estado",
+                            "!=",
+                            "\"atacar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "estado",
+                            "=",
+                            "\"dano\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "voador",
+                            "\"estado\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"dano\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\"",
+                        ">",
+                        "0.2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"patrulha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "voador",
+                        "+",
+                        "cos(TimeFromStart() * 1.2) * 180 * TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "voador",
+                            "pato",
+                            "800",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "voador",
+                            "\"estado\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "base_y",
+                        "=",
+                        "pato.Y() - 250"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - voador.CenterX())",
+                            ">",
+                            "20"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "voador",
+                            "+",
+                            "sign(pato.CenterX() - voador.CenterX()) * voador.velocidade * TimeDelta()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "voador",
+                            "pato",
+                            "1000",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "estado",
+                            "=",
+                            "\"patrulha\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "voador",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "base_x",
+                            "=",
+                            "voador.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "voador",
+                            "base_y",
+                            "=",
+                            "voador.Y()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "!=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "voador",
+                        "+",
+                        "(voador.base_y + sin(TimeFromStart() * 3) * 60 - voador.Y()) * min(1, 4 * TimeDelta())"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"ataque\"",
+                        ">",
+                        "2.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.CenterX() - voador.CenterX())",
+                        "<",
+                        "80"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - voador.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "voador",
+                        "Animation",
+                        "=",
+                        "\"ataque_1\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "test.wav",
+                        "",
+                        "60",
+                        "0.6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "voador",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1.6 + 0.9 * sin(TimeFromStart() * 40)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "!=",
+                        "\"preparar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "voador",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"preparar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\"",
+                        ">",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "voador",
+                        "+",
+                        "900 * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\"",
+                        ">",
+                        "0.45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "voador",
+                        "chao",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "voador",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "voador",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "name": "Paredes",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Encostado numa parede: pula se está perseguindo, dá meia-volta se está patrulhando."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "quer_andar",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsMoving"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "PlatformerObject"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\"",
+                    ">",
+                    "0.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "estado",
+                    "!=",
+                    "\"patrulha\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\"",
+                    ">",
+                    "0.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "estado",
+                    "=",
+                    "\"patrulha\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "direcao",
+                    "*",
+                    "-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Terrestre",
+                    "\"travado\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Separação",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "parameters": [],
@@ -25360,7 +30193,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Inimigos não se sobrepõem; perseguição ao pato (desativada); pulo do boss quando o pato chega perto; tiro do atirador."
+              "comment": "Inimigos encostados uns nos outros se afastam."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -25386,144 +30219,6 @@
                   "parameters": [
                     "Inimigo",
                     "Inimigo",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "desativado para testar as animacoes"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "zumbi",
-                    "morto",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PathfindingBehavior::SetDestination"
-                  },
-                  "parameters": [
-                    "zumbi",
-                    "Pathfinding",
-                    "",
-                    "pato.X()",
-                    "pato.Y()"
-                  ]
-                }
-              ],
-              "disabled": true
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "voador",
-                    "morto",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PathfindingBehavior::SetDestination"
-                  },
-                  "parameters": [
-                    "voador",
-                    "Pathfinding",
-                    "",
-                    "pato.X()",
-                    "pato.Y()-200"
-                  ]
-                }
-              ],
-              "disabled": true
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "atirador",
-                    "morto",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PathfindingBehavior::SetDestination"
-                  },
-                  "parameters": [
-                    "atirador",
-                    "Pathfinding",
-                    "",
-                    "pato.X() + 1000",
-                    "pato.Y()"
-                  ]
-                }
-              ],
-              "disabled": true
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "atirador",
-                    "morto",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FireBullet::FireBullet::FireTowardObject"
-                  },
-                  "parameters": [
-                    "atirador",
-                    "FireBullet",
-                    "atirador.X()",
-                    "atirador.Y()",
-                    "projetil_inimigo",
-                    "pato",
-                    "1000",
                     ""
                   ]
                 }
@@ -25995,6 +30690,28 @@
                 },
                 {
                   "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "acertado",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "kb_dir",
+                    "=",
+                    "sign(Inimigo.CenterX() - projetil.CenterX())"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -26428,16 +31145,6 @@
                     "Animation",
                     "=",
                     "\"morte\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Inimigo",
-                    "Pathfinding",
-                    ""
                   ]
                 }
               ],
