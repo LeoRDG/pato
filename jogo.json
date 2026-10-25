@@ -17801,14 +17801,14 @@
       "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
-      "emitterAngleA": -90,
-      "emitterAngleB": 160,
-      "emitterForceMax": 220,
-      "emitterForceMin": 80,
-      "flow": 600,
+      "emitterAngleA": 0,
+      "emitterAngleB": 18,
+      "emitterForceMax": 900,
+      "emitterForceMin": 600,
+      "flow": 300,
       "jumpForwardInTimeOnCreation": 0,
       "maxParticleNb": 60,
-      "name": "poeira",
+      "name": "propulsor",
       "particleAlpha1": 218,
       "particleAlpha2": 0,
       "particleAlphaRandomness1": 0,
@@ -17822,25 +17822,25 @@
       "particleColor1": "82;42;18",
       "particleColor2": "107;81;28",
       "particleGravityX": 0,
-      "particleGravityY": 150,
+      "particleGravityY": 0,
       "particleGreen1": 42,
       "particleGreen2": 81,
-      "particleLifeTimeMax": 0.7,
-      "particleLifeTimeMin": 0.3,
+      "particleLifeTimeMax": 0.3,
+      "particleLifeTimeMin": 0.12,
       "particleRed1": 82,
       "particleRed2": 107,
       "particleSize1": 100,
-      "particleSize2": 150,
+      "particleSize2": 30,
       "particleSizeRandomness1": 0,
       "particleSizeRandomness2": 0,
       "persistentUuid": "01c10d2c-8ccd-458b-b5b1-083122321af8",
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 24,
+      "tank": 30,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 15,
+      "zoneRadius": 4,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -19878,7 +19878,7 @@
             "objectName": "laser"
           },
           {
-            "objectName": "poeira"
+            "objectName": "propulsor"
           }
         ]
       },
@@ -25001,7 +25001,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "A/D andam, Shift dá dash, Espaço pula. Giro de 360° no pulo, que volta a 0 ao pousar. Pulo e dash soltam poeira nos pés."
+                  "comment": "A/D andam, Shift dá dash, Espaço pula. Giro de 360° no pulo, que volta a 0 ao pousar. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -25248,10 +25248,20 @@
                           },
                           "parameters": [
                             "",
-                            "poeira",
+                            "propulsor",
                             "pato.CenterX()",
                             "pato.Y() + pato.Height() - 10",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "=",
+                            "90"
                           ]
                         }
                       ]
@@ -25283,10 +25293,20 @@
                           },
                           "parameters": [
                             "",
-                            "poeira",
+                            "propulsor",
                             "pato.CenterX()",
-                            "pato.Y() + pato.Height() - 10",
+                            "pato.CenterY()",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "=",
+                            "90 + 90 * sign(pato.PlatformerObject::CurrentSpeed())"
                           ]
                         }
                       ]
