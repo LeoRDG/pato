@@ -4488,6 +4488,16 @@
           "name": "invencivel",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "resumo",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -8116,35 +8126,6 @@
         "characterSize": 40,
         "lineHeight": 0,
         "color": "255;199;47"
-      }
-    },
-    {
-      "assetStoreId": "b654e184e2272c75af1bc34b0a20d87d0ea436e7d5e1a4cec8b4ce7d02ef9e8e",
-      "name": "SkullGameOverDialog",
-      "persistentUuid": "9d7c1511-47f4-46a5-82bd-e72be903f253",
-      "type": "LeaderboardDialog::LeaderboardDialog",
-      "variant": "Skull game over dialog",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "Prefix": ""
-      }
-    },
-    {
-      "assetStoreId": "8796a5aeb2fe35a1775d0168a3d324cb6c95fe10e6c25a615c31623d8720a25c",
-      "name": "GreyAndPurpleLeaderboardDialog",
-      "persistentUuid": "9b2df295-ed9d-4db2-8bf2-571d07c2ea9a",
-      "type": "LeaderboardDialog::LeaderboardDialog",
-      "variant": "Grey and purple leaderboard dialog",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "DefaultPlayerName": "",
-        "ScoreLabelText": "Score",
-        "NumberDecimalPoint": 3,
-        "Prefix": ""
       }
     },
     {
@@ -19682,6 +19663,173 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "inicio",
+      "persistentUuid": "c4473fe3-a5b6-4a93-a0d4-9dba471f93de",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 0,
+      "outlineOpacity": 0,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "outlineColor": {
+        "r": 253,
+        "g": 65,
+        "b": 65
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "safezone",
+      "persistentUuid": "3e4da97a-7d6b-491b-9f89-71fbdc933552",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 0,
+      "outlineOpacity": 0,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "outlineColor": {
+        "r": 253,
+        "g": 65,
+        "b": 65
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "resumo_fundo",
+      "persistentUuid": "31a3e485-ff26-47d8-b73a-39c1c496fa2d",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 190,
+      "outlineSize": 0,
+      "outlineOpacity": 0,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "outlineColor": {
+        "r": 253,
+        "g": 65,
+        "b": 65
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "resumo_txt",
+      "persistentUuid": "2e3a0e60-160d-4b04-ae40-1aa135839064",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "center",
+      "characterSize": 44,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 44,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -90,
+      "emitterAngleB": 120,
+      "emitterForceMax": 320,
+      "emitterForceMin": 120,
+      "flow": 400,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 200,
+      "name": "demonio_fumaca",
+      "particleAlpha1": 230,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 20,
+      "particleBlue2": 10,
+      "particleColor1": "180;20;20",
+      "particleColor2": "20;10;10",
+      "particleGravityX": 0,
+      "particleGravityY": -200,
+      "particleGreen1": 20,
+      "particleGreen2": 10,
+      "particleLifeTimeMax": 1.4,
+      "particleLifeTimeMin": 0.6,
+      "particleRed1": 180,
+      "particleRed2": 20,
+      "particleSize1": 100,
+      "particleSize2": 150,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "994c4c19-f348-4dfd-8518-f57f48509a9c",
+      "rendererParam1": 14,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 80,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 20,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -19833,6 +19981,9 @@
           },
           {
             "objectName": "barra_de_vida"
+          },
+          {
+            "objectName": "demonio_fumaca"
           }
         ]
       },
@@ -19963,14 +20114,7 @@
         "children": [
           {
             "folderName": "dialogos",
-            "children": [
-              {
-                "objectName": "SkullGameOverDialog"
-              },
-              {
-                "objectName": "GreyAndPurpleLeaderboardDialog"
-              }
-            ]
+            "children": []
           },
           {
             "folderName": "menu",
@@ -19986,7 +20130,14 @@
           },
           {
             "folderName": "resumo_morte",
-            "children": []
+            "children": [
+              {
+                "objectName": "resumo_fundo"
+              },
+              {
+                "objectName": "resumo_txt"
+              }
+            ]
           },
           {
             "folderName": "vitoria",
@@ -19996,7 +20147,14 @@
       },
       {
         "folderName": "gatilhos",
-        "children": []
+        "children": [
+          {
+            "objectName": "inicio"
+          },
+          {
+            "objectName": "safezone"
+          }
+        ]
       }
     ]
   },
@@ -20148,6 +20306,43 @@
       "name": "moedas_total",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "mortes",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ultima_run",
+      "type": "structure",
+      "children": [
+        {
+          "name": "moedas",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "progresso",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "boss_vida",
+          "type": "number",
+          "value": -1
+        }
+      ]
+    },
+    {
+      "name": "recorde",
+      "type": "structure",
+      "children": [
+        {
+          "name": "progresso",
+          "type": "number",
+          "value": 0
+        }
+      ]
     }
   ],
   "layouts": [
@@ -22916,6 +23111,40 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "inicio",
+          "persistentUuid": "36404a20-aeeb-4af2-a9b7-2e2ee6edbe03",
+          "width": 0,
+          "x": 66,
+          "y": 400,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "safezone",
+          "persistentUuid": "201fcd64-1a12-4ad9-be9b-5e34506ed35d",
+          "width": 0,
+          "x": 9800,
+          "y": 400,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -24732,7 +24961,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tudo do jogador: movimento, dano recebido e morte."
+              "comment": "Tudo do jogador: movimento, dano recebido e morte. Com o pato morto, os controles param."
             },
             {
               "colorB": 228,
@@ -24761,238 +24990,257 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"a\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateLeftKey"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "pato",
-                        "PlatformerObject"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "NewParticlesEmitter",
-                        "=",
-                        "pato.X()+50",
-                        "=",
-                        "pato.Y()+ pato.Height()-20"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "NewParticlesEmitter",
+                        "morto",
+                        "False",
                         ""
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"d\""
-                      ]
-                    }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateRightKey"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"a\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "NewParticlesEmitter",
+                            "=",
+                            "pato.X()+50",
+                            "=",
+                            "pato.Y()+ pato.Height()-20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "NewParticlesEmitter",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "NewParticlesEmitter",
-                        "=",
-                        "pato.X()+50",
-                        "=",
-                        "pato.Y()+ pato.Height()-20"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"d\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "NewParticlesEmitter",
+                            "=",
+                            "pato.X()+50",
+                            "=",
+                            "pato.Y()+ pato.Height()-20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "NewParticlesEmitter",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "NewParticlesEmitter",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"LShift\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
-                      },
-                      "parameters": [
-                        "pato",
-                        "HorizontalDash",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::IsJumping"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"LShift\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "HorizontalDash",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "jaGirou",
-                        "=",
-                        "0"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsJumping"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "jaGirou",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "pato",
+                            "Tween",
+                            "\"giroPuloDuplo\"",
+                            "360",
+                            "\"linear\"",
+                            "0.35",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "jaGirou",
+                            "=",
+                            "1"
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                      },
-                      "parameters": [
-                        "pato",
-                        "Tween",
-                        "\"giroPuloDuplo\"",
-                        "360",
-                        "\"linear\"",
-                        "0.35",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "pato",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "jaGirou",
+                            "=",
+                            "0"
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "jaGirou",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::IsOnFloor"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "pato",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "jaGirou",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Space\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateJumpKey"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateJumpKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -25020,7 +25268,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Vida zerada apaga o pato e mostra o game over; o botão de reiniciar recomeça a cena."
+                  "comment": "Vida zerada: o demônio sai do pato (fumaça), o pato cai parado como um brinquedo e o tempo fica lento por 0,5 s. Guarda a run (moedas, % até a safezone, recorde, mortes) e mostra o resumo; qualquer tecla volta para o Hub. Na cena Boss o resumo mostra a % de vida que sobrou no boss."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -25035,16 +25283,38 @@
                         "<=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
                         "pato",
-                        "720"
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"morte\""
                       ]
                     },
                     {
@@ -25058,14 +25328,206 @@
                     },
                     {
                       "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "laser",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "alvo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "pato",
+                        "=",
+                        "90"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"150;150;150\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Create"
                       },
                       "parameters": [
-                        "SkullGameOverDialog",
-                        "SkullGameOverDialog",
+                        "",
+                        "demonio_fumaca",
                         "pato.CenterX()",
-                        "pato.CenterY() - 100",
+                        "pato.CenterY()",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeTimeScale"
+                      },
+                      "parameters": [
+                        "",
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "mortes",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ultima_run.moedas",
+                        "=",
+                        "pato.moedas"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ultima_run.progresso",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ultima_run.boss_vida",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "inicio",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "safezone",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "ultima_run.progresso",
+                            "=",
+                            "clamp((pato.X() - inicio.X()) / (safezone.X() - inicio.X()) * 100, 0, 100)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ultima_run.progresso",
+                            ">",
+                            "GlobalVariable(recorde.progresso)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "recorde.progresso",
+                            "=",
+                            "GlobalVariable(ultima_run.progresso)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "CurrentSceneName()",
+                            "=",
+                            "\"Boss\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "boss",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "ultima_run.boss_vida",
+                            "=",
+                            "round(clamp(boss.vida / boss.max_vida, 0, 1) * 100)"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -25075,10 +25537,233 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "LeaderboardDialog::LeaderboardDialog::IsRestartClicked"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "SkullGameOverDialog",
+                        "pato",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "resumo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"morte\"",
+                        ">",
+                        "0.15"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeTimeScale"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "resumo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"resumo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "resumo_fundo",
+                        "0",
+                        "0",
+                        "\"HUD\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "resumo_fundo",
+                        "=",
+                        "900"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "resumo_txt",
+                        "0",
+                        "0",
+                        "\"HUD\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "resumo_txt",
+                        "=",
+                        "1000"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "resumo_txt",
+                        "Text",
+                        "=",
+                        "\"O demônio foi expulso do pato\" + NewLine() + NewLine() + \"Moedas: +\" + ToString(GlobalVariable(ultima_run.moedas)) + \"   ·   Chegou a \" + ToString(round(GlobalVariable(ultima_run.progresso))) + \"% (recorde: \" + ToString(round(GlobalVariable(recorde.progresso))) + \"%)\" + NewLine() + NewLine() + \"Pressione qualquer tecla\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ultima_run.boss_vida",
+                            ">=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "resumo_txt",
+                            "Text",
+                            "=",
+                            "\"O demônio foi expulso do pato\" + NewLine() + NewLine() + \"Moedas: +\" + ToString(GlobalVariable(ultima_run.moedas)) + \"   ·   O boss ainda tinha \" + ToString(GlobalVariable(ultima_run.boss_vida)) + \"% de vida\" + NewLine() + NewLine() + \"Pressione qualquer tecla\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "resumo_txt",
+                            "=",
+                            "CameraCenterX(\"HUD\") - resumo_txt.Width() / 2",
+                            "=",
+                            "CameraCenterY(\"HUD\") - resumo_txt.Height() / 2"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "resumo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Rectangle"
+                      },
+                      "parameters": [
+                        "resumo_fundo",
+                        "-2000",
+                        "-2000",
+                        "6000",
+                        "4000"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "resumo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"resumo\"",
+                        ">",
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnyKeyReleased"
+                      },
+                      "parameters": [
                         ""
                       ]
                     }
@@ -25090,7 +25775,7 @@
                       },
                       "parameters": [
                         "",
-                        "CurrentSceneName()",
+                        "\"Hub\"",
                         ""
                       ]
                     }
@@ -25375,6 +26060,17 @@
                     "Arma",
                     "equipada",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
                     ""
                   ]
                 }
@@ -30303,6 +30999,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -30381,6 +31088,17 @@
                   "parameters": [
                     "pato",
                     "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
                     "False",
                     ""
                   ]
