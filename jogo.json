@@ -6020,7 +6020,7 @@
           "name": "recuo",
           "persistentUuid": "3d39e539-b593-40cd-abb9-cca9210b265a",
           "type": "number",
-          "value": 80
+          "value": 6
         },
         {
           "name": "equipada",
@@ -7164,7 +7164,7 @@
           "name": "recuo",
           "persistentUuid": "8b33bdf4-0244-473d-8627-1d75793d74d2",
           "type": "number",
-          "value": 34
+          "value": 1.5
         },
         {
           "name": "equipada",
@@ -7643,7 +7643,7 @@
           "name": "recuo",
           "persistentUuid": "478b362d-4247-437d-aff4-88942b7d4f52",
           "type": "number",
-          "value": 150
+          "value": 12
         },
         {
           "name": "equipada",
@@ -24924,9 +24924,9 @@
                   "parameters": [
                     "alvo",
                     "=",
-                    "MouseX()-alvo.Width()*.5",
+                    "Arma.CenterX() + cos((atan2(MouseY() - Arma.CenterY(), MouseX() - Arma.CenterX()) - sign(MouseX() - Arma.CenterX()) * ToRad(recuo))) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Width() * .5",
                     "=",
-                    "MouseY()-alvo.Height()*.5-recuo"
+                    "Arma.CenterY() + sin((atan2(MouseY() - Arma.CenterY(), MouseX() - Arma.CenterX()) - sign(MouseX() - Arma.CenterX()) * ToRad(recuo))) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Height() * .5"
                   ]
                 },
                 {
@@ -26321,7 +26321,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Cada tiro empurra a mira para cima e toca o som da arma com pitch aleatório."
+                      "comment": "Cada tiro gira a mira para cima (recuo em graus, igual a qualquer distância do mouse, no máximo 35°) e toca o som da arma com pitch aleatório."
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -26346,6 +26346,16 @@
                             "recuo",
                             "+",
                             "Arma.recuo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "recuo",
+                            "=",
+                            "min(recuo, 35)"
                           ]
                         }
                       ]
