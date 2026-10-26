@@ -58568,7 +58568,7 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
               "conditions": [
                 {
                   "type": {
@@ -58722,7 +58722,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "object": "projetil"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
