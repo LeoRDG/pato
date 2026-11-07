@@ -23,4 +23,5 @@ def test_giro_so_no_pulo_no_ar():
 def test_propulsor_segue_o_vetor_de_movimento():
     angulos = [a['parameters'][2] for e in eventos() for a in e.get('actions', [])
                if a['type']['value'] == 'SetAngle' and a['parameters'][0] == 'propulsor']
-    assert len(angulos) == 2 and all(x.startswith('AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed()') for x in angulos)
+    assert len(angulos) == 3  # pulo, dash e o acompanhamento a cada quadro
+    assert all(x.startswith('AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed()') and x.endswith('+ 180') for x in angulos)
