@@ -49609,7 +49609,16 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "PlatformBehavior::IsJumping"
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CanJump"
                           },
                           "parameters": [
                             "pato",
@@ -49618,19 +49627,13 @@
                         },
                         {
                           "type": {
-                            "value": "NumberVariable"
+                            "value": "PlatformBehavior::IsOnFloor",
+                            "inverted": true
                           },
                           "parameters": [
-                            "jaGirou",
-                            "=",
-                            "0"
+                            "pato",
+                            "PlatformerObject"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -49642,20 +49645,10 @@
                             "pato",
                             "Tween",
                             "\"giroPuloDuplo\"",
-                            "360",
+                            "360 * (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001))",
                             "\"linear\"",
                             "0.35",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "jaGirou",
-                            "=",
-                            "1"
                           ]
                         }
                       ]
@@ -49769,7 +49762,7 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "90"
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), -pato.PlatformerObject::JumpSpeed())"
                           ]
                         }
                       ]
@@ -49814,7 +49807,7 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "90 + 90 * sign(pato.PlatformerObject::CurrentSpeed())"
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed())"
                           ]
                         }
                       ]
