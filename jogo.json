@@ -8314,6 +8314,54 @@
           "name": "resumo",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "larg0",
+          "persistentUuid": "e0fe1b06-1224-436e-a491-f090a785a37f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alt0",
+          "persistentUuid": "0e9fb59f-b7aa-49a3-a4b7-721b9351602f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "imp",
+          "persistentUuid": "870c3937-1eb5-408d-a28f-55df5d4847ed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ar",
+          "persistentUuid": "a8cfaac2-6ccc-43a2-90a4-0968255f581e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_vy",
+          "persistentUuid": "8c1b1049-d33c-43bb-9e48-ea022dfc31e1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pe_y",
+          "persistentUuid": "572ab9d7-0e4d-4eba-9432-6b6ec67b109e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "cx",
+          "persistentUuid": "6266ae6c-e129-4fb6-b9b9-ca1f56d75940",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "buf_ativo",
+          "persistentUuid": "25ebcc74-aaf8-4e99-8976-9bcc4d7479a1",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -8406,7 +8454,7 @@
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "acceleration": 3000,
+          "acceleration": 4200,
           "gravity": 2000,
           "jumpSpeed": 800,
           "jumpSustainTime": 0.3,
@@ -8414,7 +8462,7 @@
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
           "canGrabWithoutMoving": true,
-          "deceleration": 1500,
+          "deceleration": 2600,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 700,
           "maxSpeed": 289,
@@ -21963,7 +22011,7 @@
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 30,
+      "tank": 60,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 4,
@@ -43699,6 +43747,54 @@
         "tileSize": 32,
         "tilesWithHitBox": ""
       }
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -25,
+      "emitterAngleB": 25,
+      "emitterForceMax": 280,
+      "emitterForceMin": 120,
+      "flow": 250,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 60,
+      "name": "poeira",
+      "particleAlpha1": 170,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 150,
+      "particleBlue2": 110,
+      "particleColor1": "190;175;150",
+      "particleColor2": "140;130;110",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 175,
+      "particleGreen2": 130,
+      "particleLifeTimeMax": 0.4,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 190,
+      "particleRed2": 140,
+      "particleSize1": 100,
+      "particleSize2": 40,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "5337e4dc-1c05-48ce-b299-a276e1ecb29a",
+      "rendererParam1": 10,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 10,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 8,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -43718,6 +43814,9 @@
           },
           {
             "objectName": "propulsor"
+          },
+          {
+            "objectName": "poeira"
           }
         ]
       },
@@ -49655,12 +49754,23 @@
                         },
                         {
                           "type": {
-                            "inverted": true,
-                            "value": "PlatformBehavior::IsOnFloor"
+                            "value": "PlatformBehavior::IsOnFloor",
+                            "inverted": true
                           },
                           "parameters": [
                             "pato",
                             "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "AdvancedJump",
+                            ""
                           ]
                         }
                       ],
@@ -49674,7 +49784,7 @@
                             "Tween",
                             "\"giroPuloDuplo\"",
                             "360 * (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001))",
-                            "\"easeInOutQuad\"",
+                            "\"linear\"",
                             "0.35",
                             ""
                           ]
@@ -49845,17 +49955,19 @@
                   ]
                 },
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
+                  "type": "BuiltinCommonInstructions::Group",
                   "name": "Propulsor acompanha o pato",
                   "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
+                  "creationTime": 0,
+                  "colorR": 74,
+                  "colorG": 176,
+                  "colorB": 228,
+                  "parameters": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
+                      "events": [],
                       "actions": [
                         {
                           "type": {
@@ -49876,13 +49988,12 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "AngleBetweenPositions(pato.PlatformerObject::CurrentSpeed(), 0, 0,  pato.PlatformerObject::CurrentFallSpeed() - 0.001)"
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
                           ]
                         }
                       ]
                     }
-                  ],
-                  "parameters": []
+                  ]
                 }
               ],
               "parameters": []
@@ -50422,6 +50533,701 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Sensação do pato",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Pulo e queda: buffer de pulo (apertou até 0,12 s antes de pousar e o pulo sai no pouso), pulo curto ao soltar o Espaço subindo e queda mais pesada (gravidade extra descendo, fora do dash).",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::CanJump",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "buf_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"bufpulo\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "buf_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"bufpulo\"",
+                        ">",
+                        "0.12"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "buf_ativo",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "buf_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateJumpKey"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "buf_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "imp",
+                        "=",
+                        "-0.2"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.PlatformerObject::CurrentFallSpeed()",
+                        "<",
+                        "-250"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SetCurrentFallSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "pato.PlatformerObject::CurrentFallSpeed() * 0.45"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsFalling"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SetCurrentFallSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "min(700, pato.PlatformerObject::CurrentFallSpeed() + 1400 * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Squash & stretch pelo tamanho do pato, ancorado nos pés: estica ao decolar e caindo rápido, achata ao pousar. larg0/alt0 guardam o tamanho original; imp é o impulso (decai sozinho), ar o esticado do ar.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneJustBegins"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "larg0",
+                        "=",
+                        "pato.Width()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "alt0",
+                        "=",
+                        "pato.Height()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "queda_vy",
+                        "=",
+                        "pato.PlatformerObject::CurrentFallSpeed()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "ar",
+                        "=",
+                        "-0.1 * clamp(abs(pato.PlatformerObject::CurrentFallSpeed()) / 800, 0, 1)"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "ar",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::CanJump"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "imp",
+                        "=",
+                        "-0.2"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "poeira",
+                            "pato.CenterX()",
+                            "pato.Y() + pato.Height()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "poeira",
+                            "=",
+                            "270"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "queda_vy",
+                        ">",
+                        "250"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "imp",
+                        "=",
+                        "clamp(pato.queda_vy / 800, 0.3, 1) * 0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "poeira",
+                        "pato.CenterX()",
+                        "pato.Y() + pato.Height()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "poeira",
+                        "=",
+                        "200"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "poeira",
+                        "pato.CenterX()",
+                        "pato.Y() + pato.Height()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "poeira",
+                        "=",
+                        "340"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "queda_vy",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "poeira",
+                        "pato.CenterX()",
+                        "pato.Y() + pato.Height()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "poeira",
+                        "=",
+                        "90 + 90 * sign(pato.PlatformerObject::CurrentSpeed())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "imp",
+                        "=",
+                        "pato.imp * pow(0.00005, TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "cx",
+                        "=",
+                        "pato.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "pe_y",
+                        "=",
+                        "pato.Y() + pato.Height()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Resizable",
+                        "=",
+                        "pato.alt0 * (1 - clamp(pato.imp + pato.ar, -0.3, 0.35))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Resizable",
+                        "=",
+                        "pato.larg0 * (1 + 0.8 * clamp(pato.imp + pato.ar, -0.3, 0.35))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "pato",
+                        "=",
+                        "pato.cx - pato.Width() / 2",
+                        "=",
+                        "pato.pe_y - pato.Height()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
