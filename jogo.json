@@ -22011,7 +22011,7 @@
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 60,
+      "tank": 30,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 4,
@@ -49988,7 +49988,7 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
+                            "AngleBetweenPositions(pato.PlatformerObject::CurrentSpeed(), 0, 0,  pato.PlatformerObject::CurrentFallSpeed() - 0.001)"
                           ]
                         }
                       ]

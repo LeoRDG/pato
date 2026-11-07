@@ -20,8 +20,7 @@ def test_giro_so_no_pulo_no_ar():
     assert 'alvo.CenterX()' in giros[0]['actions'][0]['parameters'][3]
 
 
-def test_propulsor_segue_o_vetor_de_movimento():
+def test_propulsor_segue_o_pato():
     angulos = [a['parameters'][2] for e in eventos() for a in e.get('actions', [])
                if a['type']['value'] == 'SetAngle' and a['parameters'][0] == 'propulsor']
-    assert len(angulos) == 3  # pulo, dash e o acompanhamento a cada quadro
-    assert all(x.startswith('AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed()') and x.endswith('+ 180') for x in angulos)
+    assert len(angulos) == 1 and angulos[0].startswith('AngleBetweenPositions(')  # só o evento que acompanha o pato

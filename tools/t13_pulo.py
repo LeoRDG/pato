@@ -14,6 +14,8 @@ VY_PULO = '-pato.PlatformerObject::JumpSpeed()'
 VY = 'pato.PlatformerObject::CurrentFallSpeed()'
 # o -0.001 faz o vetor parado apontar para cima (e o jato para baixo) em vez de 0 graus
 ang = lambda vy: f'AngleBetweenPositions(0, 0, {VX}, {vy} - 0.001)' + ('' if SENTIDO == 1 else ' + 180')
+# ângulo do jato (versão ajustada à mão no GDevelop): vetor (-vx, vy) do pato
+ANGULO = f'AngleBetweenPositions({VX}, 0, 0,  {VY} - 0.001)'
 # sentido do giro: o do movimento; parado, o lado para onde o pato olha (a mira)
 MOVENDO = f'min(1, floor(abs({VX}) / 20))'  # 1 se anda (>= 20 px/s), 0 se parado; o GDevelop não tem ?: nem comparação em expressão
 SENT_GIRO = f'({MOVENDO} * sign({VX}) + (1 - {MOVENDO}) * sign(alvo.CenterX() - pato.CenterX() + 0.001))'
@@ -46,17 +48,17 @@ def main():
                                cond('AdvancedJump::AdvancedJump::CanCoyoteJump', 'pato', 'AdvancedJump', '', inv=True)]  # pulo de coiote não gira
             e['actions'] = [{'type': {'value': 'Tween::TweenBehavior::AddObjectAngleTween2'},
                              'parameters': ['pato', 'Tween', '"giroPuloDuplo"', f'360 * {SENT_GIRO}', '"linear"', '0.35', '']}]
-        # propulsor: ângulo do vetor de movimento (no pulo, o vetor do impulso do pulo)
-        for a in acts:
-            if a['type']['value'] == 'SetAngle' and a['parameters'][0] == 'propulsor':
-                no_dash = 'KeyFromTextJustPressed' in conds
-                a['parameters'][2] = ang(VY_PULO if no_dash else VY)
-                e['actions'] = [x for x in e['actions'] if x['parameters'][:2] != ['propulsor', 'dash']]
-                e['actions'].append({'type': {'value': 'SetNumberObjectVariable'},
-                                     'parameters': ['propulsor', 'dash', '=', '0' if no_dash else '1']})
+        # propulsor: o ângulo vem só do evento que acompanha o pato (editado à mão no GDevelop); aqui só marca pulo/dash
+        if any(x['type']['value'] == 'SetAngle' and x['parameters'][0] == 'propulsor' for x in acts) or \
+                any(x['parameters'][:2] == ['', 'propulsor'] for x in acts):
+            no_dash = 'KeyFromTextJustPressed' in conds
+            e['actions'] = [x for x in e['actions'] if not (x['type']['value'] == 'SetAngle' and x['parameters'][0] == 'propulsor')
+                            and x['parameters'][:2] != ['propulsor', 'dash']]
+            e['actions'].append({'type': {'value': 'SetNumberObjectVariable'},
+                                 'parameters': ['propulsor', 'dash', '=', '0' if no_dash else '1']})
     # o jato dura mais (partículas vivem mais e o tanque esvazia em ~0,3 s) e o emissor acompanha o pato, sempre contra o movimento
     prop = [o for o in d['objects'] if o['name'] == 'propulsor'][0]
-    prop.update(particleLifeTimeMin=0.3, particleLifeTimeMax=0.55, tank=60, flow=200)
+    prop.update(particleLifeTimeMin=0.3, particleLifeTimeMax=0.55, tank=30, flow=200, emitterAngleB=25)
     if not any(v['name'] == 'dash' for v in prop['variables']):
         prop['variables'].append({'name': 'dash', 'persistentUuid': str(uuid.uuid4()), 'type': 'number', 'value': 0})
     mov = [e for e in walk(jog['events']) if e.get('name') == 'Movimento'][0]
@@ -67,7 +69,7 @@ def main():
             'type': 'BuiltinCommonInstructions::Standard', 'conditions': [], 'events': [], 'actions': [
                 {'type': {'value': 'SetXY'}, 'parameters': ['propulsor', '=', 'pato.CenterX()', '=',
                                                             'pato.CenterY() + (1 - propulsor.dash) * (pato.Height() / 2 - 10)']},
-                {'type': {'value': 'SetAngle'}, 'parameters': ['propulsor', '=', ang(VY)]}]}]})
+                {'type': {'value': 'SetAngle'}, 'parameters': ['propulsor', '=', ANGULO]}]}]})
     with open(PATH, 'w', encoding='utf-8') as f:
         f.write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
