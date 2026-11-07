@@ -42,7 +42,8 @@ def main():
         if any(a['type']['value'] == 'Tween::TweenBehavior::AddObjectAngleTween2' for a in acts):
             e['conditions'] = [cond('KeyFromTextJustPressed', '', '"Space"'),
                                cond('PlatformBehavior::CanJump', 'pato', 'PlatformerObject'),
-                               cond('PlatformBehavior::IsOnFloor', 'pato', 'PlatformerObject', inv=True)]
+                               cond('PlatformBehavior::IsOnFloor', 'pato', 'PlatformerObject', inv=True),
+                               cond('AdvancedJump::AdvancedJump::CanCoyoteJump', 'pato', 'AdvancedJump', '', inv=True)]  # pulo de coiote não gira
             e['actions'] = [{'type': {'value': 'Tween::TweenBehavior::AddObjectAngleTween2'},
                              'parameters': ['pato', 'Tween', '"giroPuloDuplo"', f'360 * {SENT_GIRO}', '"linear"', '0.35', '']}]
         # propulsor: ângulo do vetor de movimento (no pulo, o vetor do impulso do pulo)
