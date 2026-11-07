@@ -8697,6 +8697,66 @@
           "persistentUuid": "ff2df5a2-fa19-49c0-b839-a10d96cb6833",
           "type": "number",
           "value": 12
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "7ed5acf6-fbbe-4f02-9cf9-b3a9d8c5831a",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "d49c9cc7-cf17-486d-baa0-528f38c1f1a3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "c86eda9f-d543-46ee-b84e-70fe1c8f3981",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "7ae8123b-4781-4322-a613-1f7b0a9c8fe2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "1760a6bf-aba4-4727-88f5-b7f10522b846",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "ox",
+          "persistentUuid": "a345ae73-5164-433d-993e-a2841cac7550",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "oy",
+          "persistentUuid": "3b64fbed-a898-4242-b424-b75ccbbc874a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "serie",
+          "persistentUuid": "ff8cdcef-1dcb-40ca-8ef1-f7173c351f64",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fator",
+          "persistentUuid": "61e1f2cd-e4da-4eaa-ba95-4db6ee4d4c2c",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "iniciado",
+          "persistentUuid": "f8fdd290-d1d3-4143-bd7f-f2802083e987",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -9026,6 +9086,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "3576b443-eb42-4652-b471-1bd25e60b6a4",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -9852,10 +9918,64 @@
         {
           "name": "cooldown_base",
           "type": "number",
-          "value": 0.3
+          "value": 0.25
         },
         {
           "name": "recarga_base",
+          "type": "number",
+          "value": 1.0
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "ba8a98a2-98a3-42c6-b7e7-042544aff832",
+          "type": "number",
+          "value": 26
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "a8eb4584-1479-4b82-bc9e-6982ab290f0f",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "677fb2f1-395c-4675-a9ff-9be0e0b5ffff",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "e28df2d3-2d0a-465d-8281-664ba479b743",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "929e601f-7fb3-4f13-a4cb-ee74bbdd75e8",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "b2f22953-2776-4406-9de5-887cebac17bf",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "be0a0b0e-3902-4622-8573-cd5859994d5e",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "c7162e7f-24b7-4822-97d9-2df7868acac4",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "391619e2-0795-43bd-9383-3a5a6d853cd9",
           "type": "number",
           "value": 1
         }
@@ -9865,7 +9985,7 @@
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.3,
+          "FireCooldown": 0.25,
           "HasJustFired": false,
           "RotateBullet": true,
           "FiringArc": 45,
@@ -9873,13 +9993,13 @@
           "AngleVariance": 3,
           "BulletSpeedVariance": 0.54,
           "AmmoQuantity": 0,
-          "ShotsPerReload": 16,
-          "ReloadDuration": 1,
-          "MaxAmmo": 120,
+          "ShotsPerReload": 12,
+          "ReloadDuration": 1.0,
+          "MaxAmmo": 108,
           "ShotsBeforeNextReload": 0,
           "TotalShotsFired": 0,
           "TotalBulletsCreated": 0,
-          "StartingAmmo": 120,
+          "StartingAmmo": 108,
           "TotalReloadsCompleted": 0,
           "UnlimitedAmmo": false,
           "ReloadInProgress": false,
@@ -10052,6 +10172,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "555f0cd0-4369-4097-99e4-f235904ffe77",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -10693,6 +10819,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "359d32a4-f3e7-4643-86e9-b6214bbe5d9b",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -11006,12 +11138,66 @@
         {
           "name": "cooldown_base",
           "type": "number",
-          "value": 0.06
+          "value": 0.08
         },
         {
           "name": "recarga_base",
           "type": "number",
-          "value": 3
+          "value": 2.5
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "e00ed6ce-6217-46e5-a479-5e2a6578470c",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "2e35b1fd-a81d-401c-9fb5-226b8f6f641c",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "f81e99c8-3550-4b8c-846e-17d3c2de9efb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "b4829b28-9892-4e5b-a50b-0d62b3306b29",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "5c72af93-b65a-444c-b5cc-eac022dca670",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "e35d4708-a84a-4493-8285-45fcd76ceab3",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "3804f82e-6386-4898-ac83-f6457adfa80a",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "6675d54e-32ff-44d0-98e9-646b230eb68b",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "fae583aa-4e1e-4d28-8a27-ce3a0af4dfab",
+          "type": "number",
+          "value": 0.65
         }
       ],
       "effects": [],
@@ -11019,21 +11205,21 @@
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.06,
+          "FireCooldown": 0.08,
           "HasJustFired": false,
           "RotateBullet": true,
           "FiringArc": 45,
           "BulletQuantity": 1,
-          "AngleVariance": 4,
+          "AngleVariance": 2,
           "BulletSpeedVariance": 100,
           "AmmoQuantity": 0,
-          "ShotsPerReload": 150,
-          "ReloadDuration": 3,
-          "MaxAmmo": 2500,
+          "ShotsPerReload": 100,
+          "ReloadDuration": 2.5,
+          "MaxAmmo": 350,
           "ShotsBeforeNextReload": 0,
           "TotalShotsFired": 0,
           "TotalBulletsCreated": 0,
-          "StartingAmmo": 2500,
+          "StartingAmmo": 350,
           "TotalReloadsCompleted": 0,
           "UnlimitedAmmo": false,
           "ReloadInProgress": false,
@@ -11218,6 +11404,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "f7bb3ed0-3857-4052-9dfd-b30e6c94217e",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -11490,12 +11682,66 @@
         {
           "name": "cooldown_base",
           "type": "number",
-          "value": 0.6
+          "value": 0.7
         },
         {
           "name": "recarga_base",
           "type": "number",
+          "value": 2.2
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "faffb8a1-7781-4ebf-8d28-7bce4655efef",
+          "type": "number",
+          "value": 11
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "a4821214-02e9-4dab-bea1-983b1b5ebfb5",
+          "type": "number",
+          "value": 450
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "65830b4c-d103-4f78-ad43-8cc9b7faff13",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "3389e469-3306-4d44-932a-a28f5b78c8e6",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "20992821-3267-429b-9d25-956b7026b9ea",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "0116bfec-97b6-445d-876f-62cea7271082",
+          "type": "number",
           "value": 2
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "df64b5bf-96fa-4e6c-9282-f91bc203dce1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "954b8fdd-3076-4dea-a346-4ae067c0d579",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "502847af-8c58-4cc5-877d-1abeca7d9bf1",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -11503,21 +11749,21 @@
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.6,
+          "FireCooldown": 0.7,
           "HasJustFired": false,
           "RotateBullet": true,
           "FiringArc": 30,
-          "BulletQuantity": 12,
+          "BulletQuantity": 8,
           "AngleVariance": 0,
           "BulletSpeedVariance": 103,
           "AmmoQuantity": 0,
           "ShotsPerReload": 6,
-          "ReloadDuration": 2,
-          "MaxAmmo": 48,
+          "ReloadDuration": 2.2,
+          "MaxAmmo": 32,
           "ShotsBeforeNextReload": 0,
           "TotalShotsFired": 0,
           "TotalBulletsCreated": 0,
-          "StartingAmmo": 48,
+          "StartingAmmo": 32,
           "TotalReloadsCompleted": 0,
           "UnlimitedAmmo": false,
           "ReloadInProgress": false,
@@ -12142,6 +12388,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "18a2d2a3-45ac-4a3d-bfbc-783bcd6ae4f6",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -15141,6 +15393,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "c565defb-e36e-479b-ae48-6494daf980ca",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -17718,6 +17976,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "b45c111b-1e63-493a-979d-9d749949b011",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -20306,6 +20570,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "6b3495a2-2cb5-4d96-a35f-95fef412f438",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -23826,6 +24096,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "2853ccab-3442-4ef5-b185-f351d9cfe392",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -24963,6 +25239,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "230016da-cb91-4298-8fee-aabf0ab4bc7f",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -26100,6 +26382,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "6cf45376-c367-4cc8-aea1-a8a181cdaa05",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -27237,6 +27525,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "687e689e-cf8f-443d-9c12-e2b0f0a03822",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -28374,6 +28668,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "ca1e3e18-004e-4cda-9b09-482904ab9623",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -29247,6 +29547,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "14faef77-af31-4d5a-84ef-4366e14cf2e3",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -29997,6 +30303,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "42f00ee6-ae46-4204-bfdf-7d16fb6480cc",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -30579,6 +30891,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "8508e3db-7f6a-4ac9-bb5d-4ccc360388d6",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -31053,6 +31371,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "539608a3-8c5a-4f75-b39a-5007402215b9",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -31703,6 +32027,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "51934b30-83d2-47f0-8099-8f1d0d052f05",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -32321,6 +32651,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "fd4d172d-d314-47b7-95b8-c4a9401496eb",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -32867,6 +33203,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "6fbc9f49-b337-4e1b-89a3-1d7b70c6603d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -34277,6 +34619,12 @@
           "name": "sprite_esquerda",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "fb345ddf-3d41-4f53-bff2-2c6a092df9ee",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -44143,12 +44491,12 @@
         {
           "name": "doze",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "minigun",
           "type": "boolean",
-          "value": false
+          "value": true
         }
       ]
     },
@@ -44156,6 +44504,12 @@
       "name": "mult_dano",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "serie_bala",
+      "persistentUuid": "cbbe2567-763e-4222-b3cd-df0c735406c1",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -50484,6 +50838,172 @@
                     }
                   ],
                   "folded": true
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Group",
+                  "name": "Dispersão e lentidão",
+                  "source": "",
+                  "creationTime": 0,
+                  "colorR": 74,
+                  "colorG": 176,
+                  "colorB": 228,
+                  "parameters": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda na velocidade vel_mov da arma.",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      }
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"fogo\""
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetAngleVariance"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "FireBullet",
+                            "Arma.disp_min + (Arma.disp_max - Arma.disp_min) * min(1, TimerElapsedTime(\"fogo\") / 2.5)",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::IsReloadInProgress",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "Arma",
+                            "FireBullet",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::IsReloadInProgress"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "FireBullet",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ]
             }
@@ -58512,6 +59032,240 @@
               "comment": "Balas somem ao bater no chão. Bala do jogador tira vida do inimigo, com efeito e som de acerto."
             },
             {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Balas (alcance, queda e perfuração)",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Quando a bala nasce, copia os valores da arma equipada (dano, alcance, queda, perfuração, repulsão) e o ponto de partida. Depois a queda de dano depende da distância percorrida e a bala some ao passar do alcance.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Arma",
+                        "equipada",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "serie_bala",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "serie",
+                        "=",
+                        "GlobalVariable(serie_bala)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "dano",
+                        "=",
+                        "Arma.dano"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "alcance",
+                        "=",
+                        "Arma.alcance"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "queda_ini",
+                        "=",
+                        "Arma.queda_ini"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "queda_min",
+                        "=",
+                        "Arma.queda_min"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "furos",
+                        "=",
+                        "Arma.furos"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "repulsao",
+                        "=",
+                        "Arma.repulsao"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "ox",
+                        "=",
+                        "projetil.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "oy",
+                        "=",
+                        "projetil.CenterY()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [],
+                  "object": "projetil"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "fator",
+                        "=",
+                        "1 - (1 - projetil.queda_min) * clamp((DistanceBetweenPositions(projetil.CenterX(), projetil.CenterY(), projetil.ox, projetil.oy) - projetil.queda_ini) / max(1, projetil.alcance - projetil.queda_ini), 0, 1)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(projetil.CenterX(), projetil.CenterY(), projetil.ox, projetil.oy)",
+                            ">",
+                            "projetil.alcance"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "projetil",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ],
+                  "object": "projetil"
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -58592,6 +59346,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "bala_serie",
+                    "!=",
+                    "projetil.serie"
+                  ]
                 }
               ],
               "actions": [
@@ -58603,7 +59368,7 @@
                     "Inimigo",
                     "vida",
                     "-",
-                    "(projetil.dano + Random(38)) * GlobalVariable(mult_dano)"
+                    "projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)"
                   ]
                 },
                 {
@@ -58625,16 +59390,18 @@
                     "Inimigo",
                     "kb_dir",
                     "=",
-                    "sign(Inimigo.CenterX() - projetil.CenterX())"
+                    "sign(Inimigo.CenterX() - projetil.CenterX()) * projetil.repulsao * projetil.fator"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
-                    "projetil",
-                    ""
+                    "Inimigo",
+                    "bala_serie",
+                    "=",
+                    "projetil.serie"
                   ]
                 },
                 {
@@ -58721,6 +59488,64 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "furos",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "projetil",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "furos",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "furos",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": []
                 }
               ],
               "object": "projetil"
@@ -58888,7 +59713,7 @@
                         "dano_feedback",
                         "valor_feedback",
                         "<",
-                        "(projetil.dano + 10)"
+                        "(projetil.dano * 1.05)"
                       ]
                     }
                   ],
