@@ -9923,7 +9923,7 @@
         {
           "name": "recarga_base",
           "type": "number",
-          "value": 1.0
+          "value": 1
         },
         {
           "name": "dano",
@@ -9994,7 +9994,7 @@
           "BulletSpeedVariance": 0.54,
           "AmmoQuantity": 0,
           "ShotsPerReload": 12,
-          "ReloadDuration": 1.0,
+          "ReloadDuration": 1,
           "MaxAmmo": 108,
           "ShotsBeforeNextReload": 0,
           "TotalShotsFired": 0,
@@ -12059,9 +12059,9 @@
       "textAlignment": "left",
       "characterSize": 28,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -12103,9 +12103,9 @@
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -12147,9 +12147,9 @@
       "textAlignment": "left",
       "characterSize": 26,
       "color": {
-        "r": 170,
+        "b": 170,
         "g": 170,
-        "b": 170
+        "r": 170
       },
       "content": {
         "bold": false,
@@ -17997,32 +17997,6 @@
       ],
       "behaviors": [
         {
-          "name": "PlatformerConfigurationStack",
-          "type": "AdvancedJump::PlatformerConfigurationStack",
-          "PlatformerCharacter": "PlatformerObject"
-        },
-        {
-          "name": "PlatformerObject",
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 600,
-          "jumpSustainTime": 0.2,
-          "acceleration": 1500,
-          "canGoDownFromJumpthru": true,
-          "canGrabPlatforms": false,
-          "canGrabWithoutMoving": true,
-          "deceleration": 1500,
-          "gravity": 1000,
-          "ignoreDefaultControls": true,
-          "ladderClimbingSpeed": 150,
-          "maxFallingSpeed": 700,
-          "maxSpeed": 250,
-          "slopeMaxAngle": 60,
-          "useLegacyTrajectory": false,
-          "useRepeatedJump": false,
-          "xGrabTolerance": 10,
-          "yGrabOffset": 0
-        },
-        {
           "isFolded": true,
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
@@ -18052,6 +18026,32 @@
           "ExponentialCoolingRate": 0.3,
           "BulletLayer": "",
           "RandomizedAngle": 0
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
         }
       ],
       "animations": [
@@ -22026,24 +22026,24 @@
     },
     {
       "assetStoreId": "",
+      "height": 10,
       "name": "hud_vida_rastro",
       "persistentUuid": "86875bd2-683e-4add-968e-5f76f612d4b5",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_vermelho.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 360,
-      "height": 10,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 10,
       "name": "hud_vida_fill",
       "persistentUuid": "8b83ed2b-bf5e-4527-b3fd-4bac89adc36b",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_branco.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 360,
-      "height": 10,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -22065,9 +22065,9 @@
       "textAlignment": "left",
       "characterSize": 30,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -22163,21 +22163,21 @@
         },
         {
           "name": "ttl",
+          "persistentUuid": "0e83df72-e4b3-4276-ada6-4c30e5909d45",
           "type": "number",
-          "value": 1,
-          "persistentUuid": "0e83df72-e4b3-4276-ada6-4c30e5909d45"
+          "value": 1
         },
         {
           "name": "static",
+          "persistentUuid": "2b416094-d179-42af-b36d-efb9ee495287",
           "type": "boolean",
-          "value": false,
-          "persistentUuid": "2b416094-d179-42af-b36d-efb9ee495287"
+          "value": false
         },
         {
           "name": "Variable",
+          "persistentUuid": "49270829-62da-47e3-9024-5b4144da8d49",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "49270829-62da-47e3-9024-5b4144da8d49"
+          "value": 0
         }
       ],
       "effects": [],
@@ -22187,9 +22187,9 @@
       "textAlignment": "left",
       "characterSize": 24,
       "color": {
-        "r": 255,
+        "b": 94,
         "g": 214,
-        "b": 94
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -22693,9 +22693,9 @@
       "textAlignment": "left",
       "characterSize": 16,
       "color": {
-        "r": 170,
+        "b": 170,
         "g": 170,
-        "b": 170
+        "r": 170
       },
       "content": {
         "bold": false,
@@ -22722,36 +22722,36 @@
     },
     {
       "assetStoreId": "",
+      "height": 14,
       "name": "hud_pips_pistola",
       "persistentUuid": "4eeead66-9113-4fe9-96cc-26940acf9174",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/pip_pistola.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 96,
-      "height": 14,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 16,
       "name": "hud_pips_doze",
       "persistentUuid": "4e6118b0-918b-42bd-b0a2-82101a7f5f2e",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/pip_doze.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 60,
-      "height": 16,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 8,
       "name": "hud_pips_minigun",
       "persistentUuid": "139d672c-2955-4051-b36b-cd78e0802d62",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/pip_minigun.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 150,
-      "height": 8,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -22800,12 +22800,12 @@
     },
     {
       "assetStoreId": "",
+      "height": 4,
       "name": "hud_recarga_fill",
       "persistentUuid": "c11179ca-ed28-4b99-8697-afb94be49853",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_branco.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 0,
-      "height": 4,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -22854,12 +22854,12 @@
     },
     {
       "assetStoreId": "",
+      "height": 4,
       "name": "hud_calor_fill",
       "persistentUuid": "571f4c24-25ec-4cb6-ae82-4be2975a544c",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_laranja.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 0,
-      "height": 4,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -22881,9 +22881,9 @@
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -22963,24 +22963,24 @@
     },
     {
       "assetStoreId": "",
+      "height": 8,
       "name": "hud_boss_rastro",
       "persistentUuid": "40541467-e906-46f5-b1ac-1cd903533e97",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_branco.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 720,
-      "height": 8,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 8,
       "name": "hud_boss_fill",
       "persistentUuid": "4472d55b-9359-444e-934e-1946e4d9b0e7",
-      "type": "TiledSpriteObject::TiledSprite",
       "texture": "hud/fill_vermelho.png",
+      "type": "TiledSpriteObject::TiledSprite",
       "width": 720,
-      "height": 8,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -23002,9 +23002,9 @@
       "textAlignment": "left",
       "characterSize": 18,
       "color": {
-        "r": 205,
+        "b": 205,
         "g": 205,
-        "b": 205
+        "r": 205
       },
       "content": {
         "bold": false,
@@ -23912,9 +23912,9 @@
       "textAlignment": "center",
       "characterSize": 44,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -43565,99 +43565,99 @@
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_ceu",
       "persistentUuid": "8044d4a9-9c5e-4b9e-af2a-71874057d4bd",
+      "texture": "assets/gandalf_hell/fundo/ceu.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo/ceu.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_fundo",
       "persistentUuid": "e5abc0f9-01b2-4f9f-8b74-0343695dc092",
+      "texture": "assets/gandalf_hell/fundo/fundo.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo/fundo.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_meio",
       "persistentUuid": "4d9ee0f0-51fe-4dfd-9f30-77ebbb40647c",
+      "texture": "assets/gandalf_hell/fundo/meio.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo/meio.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_frente",
       "persistentUuid": "dae390bc-dd9a-4e42-9b1d-d9920610cf84",
+      "texture": "assets/gandalf_hell/fundo/frente.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo/frente.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_escuro_ceu",
       "persistentUuid": "3b1f186a-b509-43f5-8d7b-b88da1e176f4",
+      "texture": "assets/gandalf_hell/fundo_escuro/ceu.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo_escuro/ceu.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_escuro_fundo",
       "persistentUuid": "39acb1f3-e398-4b60-93e3-699b4a3cf6ba",
+      "texture": "assets/gandalf_hell/fundo_escuro/fundo.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo_escuro/fundo.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_escuro_meio",
       "persistentUuid": "766e5b3f-827d-46f6-8bc9-3ff1ef20a6c3",
+      "texture": "assets/gandalf_hell/fundo_escuro/meio.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo_escuro/meio.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
+      "height": 346,
       "name": "bg_inferno_escuro_frente",
       "persistentUuid": "466e4eef-8587-433e-a0fa-06ae442b839f",
+      "texture": "assets/gandalf_hell/fundo_escuro/frente.png",
       "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "texture": "assets/gandalf_hell/fundo_escuro/frente.png",
-      "width": 1024,
-      "height": 346
+      "behaviors": []
     },
     {
       "assetStoreId": "",
@@ -43738,8 +43738,7 @@
             ]
           },
           {
-            "folderName": "upgrades",
-            "children": []
+            "folderName": "upgrades"
           }
         ]
       },
@@ -43833,8 +43832,7 @@
             "objectName": "trader"
           },
           {
-            "folderName": "caronte",
-            "children": []
+            "folderName": "caronte"
           },
           {
             "objectName": "diabo"
@@ -43911,8 +43909,7 @@
             ]
           },
           {
-            "folderName": "hub",
-            "children": []
+            "folderName": "hub"
           },
           {
             "folderName": "bg",
@@ -44099,20 +44096,16 @@
         "folderName": "interface",
         "children": [
           {
-            "folderName": "dialogos",
-            "children": []
+            "folderName": "dialogos"
           },
           {
-            "folderName": "menu",
-            "children": []
+            "folderName": "menu"
           },
           {
-            "folderName": "pausa",
-            "children": []
+            "folderName": "pausa"
           },
           {
-            "folderName": "loja",
-            "children": []
+            "folderName": "loja"
           },
           {
             "folderName": "resumo_morte",
@@ -44126,8 +44119,7 @@
             ]
           },
           {
-            "folderName": "vitoria",
-            "children": []
+            "folderName": "vitoria"
           }
         ]
       },
@@ -44426,6 +44418,11 @@
       "type": "structure",
       "children": [
         {
+          "name": "boss_vida",
+          "type": "number",
+          "value": -1
+        },
+        {
           "name": "moedas",
           "type": "number",
           "value": 0
@@ -44434,11 +44431,6 @@
           "name": "progresso",
           "type": "number",
           "value": 0
-        },
-        {
-          "name": "boss_vida",
-          "type": "number",
-          "value": -1
         }
       ]
     },
@@ -44653,7 +44645,97 @@
           ]
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "AdvancedJump",
+          "type": "AdvancedJump::AdvancedJump"
+        },
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "HorizontalDash",
+          "type": "AdvancedJump::HorizontalDash"
+        },
+        {
+          "name": "LinearMovement",
+          "type": "LinearMovement::LinearMovement"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "SmoothPlatformerCamera",
+          "type": "SmoothCamera::SmoothPlatformerCamera"
+        },
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "Unnamed": 0
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "TweenPathMovement",
+          "type": "CurvedMovement::TweenPathMovement"
+        }
+      ]
     },
     {
       "b": 148,
@@ -45338,8 +45420,7 @@
       ],
       "objects": [],
       "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": []
+        "folderName": "__ROOT"
       },
       "events": [
         {
@@ -45466,7 +45547,6 @@
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
           "cameraType": "",
-          "defaultCameraBehavior": "top-left-anchored-if-never-moved",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -45592,6 +45672,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
+        },
+        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         },
@@ -45632,16 +45716,19 @@
       "variables": [
         {
           "name": "jaGirou",
+          "persistentUuid": "a179f1b3-10a6-4716-9b46-48e220b7b100",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_x",
+          "persistentUuid": "18b8da12-9182-4aed-8de5-e2f920b42f7a",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_y",
+          "persistentUuid": "7f96a991-ff7a-48fd-89d8-2d8b838a2837",
           "type": "number",
           "value": 0
         }
@@ -46216,8 +46303,7 @@
       ],
       "objects": [],
       "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": []
+        "folderName": "__ROOT"
       },
       "events": [
         {
@@ -46266,10 +46352,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Saída",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Saída",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -46310,7 +46395,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -46389,7 +46475,6 @@
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
           "cameraType": "",
-          "defaultCameraBehavior": "top-left-anchored-if-never-moved",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -46515,6 +46600,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
+        },
+        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         },
@@ -46555,16 +46644,19 @@
       "variables": [
         {
           "name": "jaGirou",
+          "persistentUuid": "aa77c371-91ba-42c0-954e-d839f9e63685",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_x",
+          "persistentUuid": "fdd05c9e-9f8c-439c-8ffb-8dc845c3bbe0",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_y",
+          "persistentUuid": "6366eebf-e1d0-4be0-b8da-6dc58d62386e",
           "type": "number",
           "value": 0
         }
@@ -47124,7 +47216,6 @@
           "customSize": true,
           "depth": 1,
           "height": 130,
-          "keepRatio": false,
           "layer": "",
           "name": "zumbi",
           "persistentUuid": "4be16d45-ce26-4631-b4af-b2e225275f6a",
@@ -47141,7 +47232,6 @@
           "customSize": true,
           "depth": 1,
           "height": 170,
-          "keepRatio": false,
           "layer": "",
           "name": "pigman",
           "persistentUuid": "d2522ee4-6386-4e86-9b58-327b58296f64",
@@ -47158,7 +47248,6 @@
           "customSize": true,
           "depth": 1,
           "height": 160,
-          "keepRatio": false,
           "layer": "",
           "name": "atirador",
           "persistentUuid": "e6eff9a4-8cf3-449d-a069-e43ef551196e",
@@ -47175,7 +47264,6 @@
           "customSize": true,
           "depth": 1,
           "height": 80,
-          "keepRatio": false,
           "layer": "",
           "name": "sapo",
           "persistentUuid": "7f946908-0206-4d1e-8c95-8dacb52f4fb5",
@@ -47192,7 +47280,6 @@
           "customSize": true,
           "depth": 1,
           "height": 130,
-          "keepRatio": false,
           "layer": "",
           "name": "zumbi",
           "persistentUuid": "6f81e370-b928-41e7-acc2-a37143773251",
@@ -47209,7 +47296,6 @@
           "customSize": true,
           "depth": 1,
           "height": 100,
-          "keepRatio": false,
           "layer": "",
           "name": "voador",
           "persistentUuid": "14c55898-160a-4837-b8e8-b175b29517bf",
@@ -47226,7 +47312,6 @@
           "customSize": true,
           "depth": 1,
           "height": 175,
-          "keepRatio": false,
           "layer": "",
           "name": "cutulu",
           "persistentUuid": "436454bc-986d-492e-bf1c-9ddaddbde690",
@@ -47496,8 +47581,7 @@
       ],
       "objects": [],
       "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": []
+        "folderName": "__ROOT"
       },
       "events": [
         {
@@ -47624,7 +47708,6 @@
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
           "cameraType": "",
-          "defaultCameraBehavior": "top-left-anchored-if-never-moved",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -47748,6 +47831,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
         },
         {
           "name": "Tween",
@@ -48374,8 +48461,7 @@
       ],
       "objects": [],
       "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": []
+        "folderName": "__ROOT"
       },
       "events": [
         {
@@ -48509,7 +48595,6 @@
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
           "cameraType": "",
-          "defaultCameraBehavior": "top-left-anchored-if-never-moved",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -48633,6 +48718,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
         },
         {
           "name": "Tween",
@@ -48759,7 +48848,97 @@
           ]
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "AdvancedJump",
+          "type": "AdvancedJump::AdvancedJump"
+        },
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "HorizontalDash",
+          "type": "AdvancedJump::HorizontalDash"
+        },
+        {
+          "name": "LinearMovement",
+          "type": "LinearMovement::LinearMovement"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "SmoothPlatformerCamera",
+          "type": "SmoothCamera::SmoothPlatformerCamera"
+        },
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "Unnamed": 0
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "TweenPathMovement",
+          "type": "CurvedMovement::TweenPathMovement"
+        }
+      ]
     }
   ],
   "externalEvents": [
@@ -48802,6 +48981,7 @@
               "comment": "Roda uma vez quando a cena começa: zera cronômetros, pré-carrega sons e cria as três armas, equipando a que está em arma_atual."
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -49257,7 +49437,8 @@
                         "laser_x",
                         "laser_y",
                         "laser_x",
-                        "laser_y"
+                        "laser_y",
+                        ""
                       ]
                     }
                   ],
@@ -49313,10 +49494,10 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movimento",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -49641,17 +49822,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Morte do Pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -50177,7 +50358,7 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             }
           ],
           "parameters": []
@@ -50480,7 +50661,6 @@
                   "name": "Tiro e recarga",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
-                  "parameters": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -50612,17 +50792,17 @@
                       ]
                     }
                   ],
-                  "folded": true
+                  "parameters": []
                 },
                 {
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Recuo e sons",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
-                  "parameters": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -50837,21 +51017,20 @@
                       ]
                     }
                   ],
-                  "folded": true
+                  "parameters": []
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Group",
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
                   "name": "Dispersão e lentidão",
                   "source": "",
-                  "creationTime": 0,
-                  "colorR": 74,
-                  "colorG": 176,
-                  "colorB": 228,
-                  "parameters": [],
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
-                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda no máximo na fração vel_mov da velocidade (sem mexer no dash).",
                       "color": {
                         "b": 109,
                         "g": 230,
@@ -50859,15 +51038,16 @@
                         "textB": 0,
                         "textG": 0,
                         "textR": 0
-                      }
+                      },
+                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda no máximo na fração vel_mov da velocidade (sem mexer no dash)."
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "MouseButtonFromTextPressed",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "MouseButtonFromTextPressed"
                           },
                           "parameters": [
                             "",
@@ -50885,8 +51065,7 @@
                             "\"fogo\""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -50903,8 +51082,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -50920,8 +51098,8 @@
                         },
                         {
                           "type": {
-                            "value": "FireBullet::FireBullet::IsReloadInProgress",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "FireBullet::FireBullet::IsReloadInProgress"
                           },
                           "parameters": [
                             "Arma",
@@ -50931,8 +51109,8 @@
                         },
                         {
                           "type": {
-                            "value": "AdvancedJump::HorizontalDash::IsDashing",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "AdvancedJump::HorizontalDash::IsDashing"
                           },
                           "parameters": [
                             "pato",
@@ -50952,22 +51130,10 @@
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::CurrentSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "clamp(pato.PlatformerObject::CurrentSpeed(), -289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov, 289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov)"
-                          ]
-                        }
-                      ],
-                      "events": []
+                      "actions": []
                     }
-                  ]
+                  ],
+                  "parameters": []
                 }
               ]
             }
@@ -50998,10 +51164,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Preparar inimigos",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Preparar inimigos",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -51096,7 +51261,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -51104,10 +51270,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Estados (terrestres)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Estados (terrestres)",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -51545,8 +51710,8 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "Distance",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "Distance"
                           },
                           "parameters": [
                             "Terrestre",
@@ -51850,7 +52015,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -51858,10 +52024,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Zumbi",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Zumbi",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -51997,7 +52162,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -52005,10 +52171,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Pigman",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Pigman",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -52519,7 +52684,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -52527,10 +52693,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Atirador",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Atirador",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -53050,7 +53215,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -53058,10 +53224,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Sapo",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Sapo",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -53830,7 +53995,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -53838,10 +54004,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Cutulu",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Cutulu",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -54562,7 +54727,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -54570,10 +54736,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Mergulhadores",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Mergulhadores",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -54872,8 +55037,8 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "Distance",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "Distance"
                           },
                           "parameters": [
                             "Mergulhador",
@@ -55424,7 +55589,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -55432,10 +55598,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Condenados",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Condenados",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -55947,7 +56112,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -55955,10 +56121,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Condenado inchado",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Condenado inchado",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -56401,7 +56566,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -56409,10 +56575,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Caveira gigante",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Caveira gigante",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -56926,7 +57091,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -56934,10 +57100,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Árvore condenada",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Árvore condenada",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -57059,7 +57224,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -57067,10 +57233,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Flutuantes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Flutuantes",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -57305,8 +57470,8 @@
                     },
                     {
                       "type": {
-                        "value": "Distance",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "Distance"
                       },
                       "parameters": [
                         "Flutuante",
@@ -57499,7 +57664,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -57507,10 +57673,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Moscas",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Moscas",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -57621,7 +57786,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -57629,10 +57795,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Olho demoníaco",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Olho demoníaco",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58017,7 +58182,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -58025,10 +58191,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Mina demoníaca",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Mina demoníaca",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58347,7 +58512,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -58355,10 +58521,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Paredes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Paredes",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58551,17 +58716,18 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Separação",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58605,7 +58771,7 @@
               ]
             }
           ],
-          "folded": true
+          "parameters": []
         }
       ]
     },
@@ -58630,10 +58796,10 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Dano e invencibilidade",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58730,17 +58896,6 @@
                 },
                 {
                   "type": {
-                    "value": "PlatformBehavior::CurrentSpeed"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject",
-                    "=",
-                    "sign(pato.CenterX() - Inimigo.CenterX()) * 600"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "PlatformBehavior::SimulateJumpKey"
                   },
                   "parameters": [
@@ -58818,17 +58973,6 @@
                   "parameters": [
                     "pato",
                     "\"iframes\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::CurrentSpeed"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject",
-                    "=",
-                    "sign(pato.CenterX() - projetil_inimigo.CenterX()) * 600"
                   ]
                 },
                 {
@@ -58971,17 +59115,17 @@
               ]
             }
           ],
-          "folded": true
+          "parameters": []
         },
         {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Projéteis",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -58996,18 +59140,17 @@
               "comment": "Balas somem ao bater no chão. Bala do jogador tira vida do inimigo, com efeito e som de acerto."
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
               "name": "Balas (alcance, queda e perfuração)",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Quando a bala nasce, copia os valores da arma equipada (dano, alcance, queda, perfuração, repulsão) e o ponto de partida. Depois a queda de dano depende da distância percorrida e a bala some ao passar do alcance.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -59015,10 +59158,12 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Quando a bala nasce, copia os valores da arma equipada (dano, alcance, queda, perfuração, repulsão) e o ponto de partida. Depois a queda de dano depende da distância percorrida e a bala some ao passar do alcance."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -59164,12 +59309,11 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": [],
-                  "object": "projetil"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -59221,13 +59365,12 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
-                  ],
-                  "object": "projetil"
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -59287,6 +59430,7 @@
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
+              "object": "projetil",
               "conditions": [
                 {
                   "type": {
@@ -59478,8 +59622,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59508,11 +59651,9 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ],
-              "object": "projetil"
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -59542,7 +59683,7 @@
               ]
             }
           ],
-          "folded": true
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -59951,8 +60092,7 @@
                             "\"vida\""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 }
@@ -60002,8 +60142,8 @@
                 },
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::Name",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
                   "parameters": [
                     "Inimigo",
@@ -60090,8 +60230,8 @@
                 },
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::Name",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
                   "parameters": [
                     "Inimigo",
@@ -60283,10 +60423,10 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Física",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -60454,17 +60594,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Ímã e sumiço",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -60584,17 +60724,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Coleta",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -60722,7 +60862,7 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             }
           ],
           "parameters": []
@@ -60751,10 +60891,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Ataques do boss",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Ataques do boss",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -60900,7 +61039,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ]
     },
@@ -60921,13 +61061,13 @@
           "comment": "Atualiza o HUD: vida, moedas, arma, munição, recarga, slots e barra do boss."
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
           "colorB": 230,
           "colorG": 230,
           "colorR": 230,
           "creationTime": 0,
           "name": "HUD",
           "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -60946,10 +61086,10 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Esconder condicionais",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -61085,17 +61225,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Vida e moedas",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -61381,17 +61521,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Arma",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -61889,8 +62029,8 @@
                         },
                         {
                           "type": {
-                            "value": "FireBullet::FireBullet::IsReloadInProgress",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "FireBullet::FireBullet::IsReloadInProgress"
                           },
                           "parameters": [
                             "Arma",
@@ -61978,17 +62118,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Slots",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -62185,17 +62325,17 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Boss",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -62380,7 +62520,7 @@
                   ]
                 }
               ],
-              "folded": true
+              "parameters": []
             }
           ],
           "parameters": []
@@ -62409,10 +62549,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Aplicar upgrades",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Aplicar upgrades",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -62517,7 +62656,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -62525,10 +62665,9 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Debug (remover antes da entrega)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
-          "name": "Debug (remover antes da entrega)",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -62568,7 +62707,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ]
     }
