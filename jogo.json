@@ -21928,7 +21928,7 @@
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
       "emitterAngleA": 0,
-      "emitterAngleB": 18,
+      "emitterAngleB": 25,
       "emitterForceMax": 900,
       "emitterForceMin": 600,
       "flow": 200,
@@ -21963,7 +21963,7 @@
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 60,
+      "tank": 30,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 4,
@@ -44407,35 +44407,42 @@
     },
     {
       "name": "arma_atual",
+      "persistentUuid": "d7cefc2f-4549-4042-81bd-60b43d25570c",
       "type": "string",
       "value": "pistola"
     },
     {
       "name": "moedas_total",
+      "persistentUuid": "881d0113-93fb-4107-aa3a-dd4ffc0ac5a7",
       "type": "number",
       "value": 0
     },
     {
       "name": "mortes",
+      "persistentUuid": "cc41776c-ec82-4b00-83c7-a264ebaf1b21",
       "type": "number",
       "value": 0
     },
     {
       "name": "ultima_run",
+      "persistentUuid": "311ac45b-5621-45a6-bbe6-dbde61278979",
       "type": "structure",
       "children": [
         {
           "name": "boss_vida",
+          "persistentUuid": "4e04e460-fa53-4f2a-819c-f8f8504a7a58",
           "type": "number",
           "value": -1
         },
         {
           "name": "moedas",
+          "persistentUuid": "51afc412-d049-4d1f-a3a0-954bbe0d0d9e",
           "type": "number",
           "value": 0
         },
         {
           "name": "progresso",
+          "persistentUuid": "47dc6875-eb65-45ff-9927-052d447a187c",
           "type": "number",
           "value": 0
         }
@@ -44443,10 +44450,12 @@
     },
     {
       "name": "recorde",
+      "persistentUuid": "da2283f5-2dd6-407a-a5a8-403b411b6171",
       "type": "structure",
       "children": [
         {
           "name": "progresso",
+          "persistentUuid": "cab58ad4-ea78-449d-a92c-5870aa95b5ca",
           "type": "number",
           "value": 0
         }
@@ -44454,30 +44463,36 @@
     },
     {
       "name": "upgrades",
+      "persistentUuid": "23cab1eb-da1a-4e82-88e2-5c3c6b586e30",
       "type": "structure",
       "children": [
         {
           "name": "cadencia",
+          "persistentUuid": "85f944de-6831-4f63-a060-8e38394a4cdb",
           "type": "number",
           "value": 0
         },
         {
           "name": "dano",
+          "persistentUuid": "160abbd5-7d85-4656-8707-657a56dccd44",
           "type": "number",
           "value": 0
         },
         {
           "name": "recarga",
+          "persistentUuid": "d86d46ee-0289-43cb-b9f5-afb05c366a38",
           "type": "number",
           "value": 0
         },
         {
           "name": "velocidade",
+          "persistentUuid": "8ef5dc02-1ace-4720-aa6e-340aac5187b3",
           "type": "number",
           "value": 0
         },
         {
           "name": "vida",
+          "persistentUuid": "67867246-08ff-473b-81e9-30ddf65c39af",
           "type": "number",
           "value": 0
         }
@@ -44485,15 +44500,18 @@
     },
     {
       "name": "armas",
+      "persistentUuid": "f95f421e-99af-4bb1-8655-66a86978d2a6",
       "type": "structure",
       "children": [
         {
           "name": "doze",
+          "persistentUuid": "46819b77-007d-4541-94f9-a989069ab829",
           "type": "boolean",
           "value": true
         },
         {
           "name": "minigun",
+          "persistentUuid": "1444d967-a0d7-4537-b2aa-e247281b693f",
           "type": "boolean",
           "value": true
         }
@@ -44501,6 +44519,7 @@
     },
     {
       "name": "mult_dano",
+      "persistentUuid": "75c28771-141f-46ff-a453-0160cd766892",
       "type": "number",
       "value": 1
     },
@@ -44775,16 +44794,19 @@
       "variables": [
         {
           "name": "jaGirou",
+          "persistentUuid": "662655ab-511b-4fa4-be4a-8ad4a78b8a1d",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_x",
+          "persistentUuid": "85350a79-a6d4-446e-a3f3-4e700ef9325b",
           "type": "number",
           "value": 0
         },
         {
           "name": "laser_y",
+          "persistentUuid": "8756aa99-c9c5-4a16-b09a-2d86a68b93f9",
           "type": "number",
           "value": 0
         }
@@ -49501,7 +49523,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Movimento",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -49634,8 +49655,8 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::IsOnFloor",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
                             "pato",
@@ -49653,7 +49674,7 @@
                             "Tween",
                             "\"giroPuloDuplo\"",
                             "360 * (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001))",
-                            "\"linear\"",
+                            "\"easeInOutQuad\"",
                             "0.35",
                             ""
                           ]
@@ -49764,16 +49785,6 @@
                         },
                         {
                           "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), -pato.PlatformerObject::JumpSpeed() - 0.001) + 180"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
@@ -49820,16 +49831,6 @@
                         },
                         {
                           "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
@@ -49844,19 +49845,17 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Group",
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
                   "name": "Propulsor acompanha o pato",
                   "source": "",
-                  "creationTime": 0,
-                  "colorR": 74,
-                  "colorG": 176,
-                  "colorB": 228,
-                  "parameters": [],
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
-                      "events": [],
                       "actions": [
                         {
                           "type": {
@@ -49877,12 +49876,13 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
+                            "AngleBetweenPositions(pato.PlatformerObject::CurrentSpeed(), 0, 0,  pato.PlatformerObject::CurrentFallSpeed() - 0.001)"
                           ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
