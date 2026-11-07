@@ -55,3 +55,12 @@ def test_inimigos_guardam_serie_da_bala():
 def test_armas_liberadas():
     armas = [v for v in JOGO['variables'] if v['name'] == 'armas'][0]
     assert all(f['value'] for f in armas['children'])
+
+
+def test_dano_inteiro_e_dash_intocado():
+    txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
+    assert 'max(1, round(projetil.dano * projetil.fator' in txt
+    jogador = [e for e in JOGO['externalEvents'] if e['name'] == 'Jogador'][0]
+    grupo = json.dumps([e for e in jogador['events'] if e.get('name') == 'Controle das Armas'], ensure_ascii=False)
+    assert 'PlatformBehavior::MaxSpeed' not in grupo  # o dash configura o MaxSpeed sozinho
+    assert 'HorizontalDash::IsDashing' in grupo

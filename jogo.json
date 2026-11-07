@@ -50851,7 +50851,7 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
-                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda na velocidade vel_mov da arma.",
+                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda no máximo na fração vel_mov da velocidade (sem mexer no dash).",
                       "color": {
                         "b": 109,
                         "g": 230,
@@ -50928,62 +50928,26 @@
                             "FireBullet",
                             ""
                           ]
-                        }
-                      ],
-                      "actions": [
+                        },
                         {
                           "type": {
-                            "value": "PlatformBehavior::MaxSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov"
-                          ]
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "MouseButtonFromTextPressed",
+                            "value": "AdvancedJump::HorizontalDash::IsDashing",
                             "inverted": true
                           },
                           "parameters": [
-                            "",
-                            "\"Left\""
+                            "pato",
+                            "HorizontalDash",
+                            ""
                           ]
-                        }
-                      ],
-                      "actions": [
+                        },
                         {
                           "type": {
-                            "value": "PlatformBehavior::MaxSpeed"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "pato",
-                            "PlatformerObject",
-                            "=",
-                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
-                          ]
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "FireBullet::FireBullet::IsReloadInProgress"
-                          },
-                          "parameters": [
-                            "Arma",
-                            "FireBullet",
+                            "invencivel",
+                            "False",
                             ""
                           ]
                         }
@@ -50991,13 +50955,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlatformBehavior::MaxSpeed"
+                            "value": "PlatformBehavior::CurrentSpeed"
                           },
                           "parameters": [
                             "pato",
                             "PlatformerObject",
                             "=",
-                            "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                            "clamp(pato.PlatformerObject::CurrentSpeed(), -289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov, 289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade)) * Arma.vel_mov)"
                           ]
                         }
                       ],
@@ -59368,7 +59332,7 @@
                     "Inimigo",
                     "vida",
                     "-",
-                    "projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)"
+                    "max(1, round(projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)))"
                   ]
                 },
                 {

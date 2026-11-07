@@ -141,7 +141,7 @@ def main():
     for a in acoes:
         p = a['parameters']
         if a['type']['value'] == 'SetNumberObjectVariable' and p[:2] == ['Inimigo', 'vida']:
-            p[3] = 'projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)'
+            p[3] = 'max(1, round(projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)))'
         elif a['type']['value'] == 'SetNumberObjectVariable' and p[:2] == ['Inimigo', 'kb_dir']:
             p[3] = 'sign(Inimigo.CenterX() - projetil.CenterX()) * projetil.repulsao * projetil.fator'
     for k, a in enumerate(acoes):
@@ -173,16 +173,16 @@ def main():
     base = '289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))'
     equipada['events'].append(grupo('Dispersão e lentidão', [
         comentario('Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). '
-                   'Atirando sem recarregar, o pato anda na velocidade vel_mov da arma.'),
+                   'Atirando sem recarregar, o pato anda no máximo na fração vel_mov da velocidade (sem mexer no dash).'),
         E([C('MouseButtonFromTextPressed', '', '"Left"', inv=True)], [A('ResetTimer', '', '"fogo"')]),
         E([], [A('FireBullet::FireBullet::SetAngleVariance', 'Arma', 'FireBullet',
                  'Arma.disp_min + (Arma.disp_max - Arma.disp_min) * min(1, TimerElapsedTime("fogo") / 2.5)', '')]),
-        E([atirando, C('FireBullet::FireBullet::IsReloadInProgress', 'Arma', 'FireBullet', '', inv=True)],
-          [A('PlatformBehavior::MaxSpeed', 'pato', 'PlatformerObject', '=', f'{base} * Arma.vel_mov')]),
-        E([C('MouseButtonFromTextPressed', '', '"Left"', inv=True)],
-          [A('PlatformBehavior::MaxSpeed', 'pato', 'PlatformerObject', '=', base)]),
-        E([C('FireBullet::FireBullet::IsReloadInProgress', 'Arma', 'FireBullet', '')],
-          [A('PlatformBehavior::MaxSpeed', 'pato', 'PlatformerObject', '=', base)]),
+        # limita a velocidade de caminhada sem mexer no MaxSpeed (o dash cuida dele sozinho); no dash e levando dano não limita
+        E([atirando, C('FireBullet::FireBullet::IsReloadInProgress', 'Arma', 'FireBullet', '', inv=True),
+           C('AdvancedJump::HorizontalDash::IsDashing', 'pato', 'HorizontalDash', '', inv=True),
+           C('BooleanObjectVariable', 'pato', 'invencivel', 'False', '')],
+          [A('PlatformBehavior::CurrentSpeed', 'pato', 'PlatformerObject', '=',
+             f'clamp(pato.PlatformerObject::CurrentSpeed(), -{base} * Arma.vel_mov, {base} * Arma.vel_mov)')]),
     ]))
     # grupo 'Dispersão e lentidão' precisa do nome no evento para a idempotência acima
     equipada['events'][-1]['name'] = 'Dispersão e lentidão'
