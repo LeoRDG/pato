@@ -21931,7 +21931,7 @@
       "emitterAngleB": 18,
       "emitterForceMax": 900,
       "emitterForceMin": 600,
-      "flow": 300,
+      "flow": 200,
       "jumpForwardInTimeOnCreation": 0,
       "maxParticleNb": 60,
       "name": "propulsor",
@@ -21951,8 +21951,8 @@
       "particleGravityY": 0,
       "particleGreen1": 42,
       "particleGreen2": 81,
-      "particleLifeTimeMax": 0.3,
-      "particleLifeTimeMin": 0.12,
+      "particleLifeTimeMax": 0.55,
+      "particleLifeTimeMin": 0.3,
       "particleRed1": 82,
       "particleRed2": 107,
       "particleSize1": 100,
@@ -21963,11 +21963,18 @@
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 30,
+      "tank": 60,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 4,
-      "variables": [],
+      "variables": [
+        {
+          "name": "dash",
+          "persistentUuid": "971ebfae-60a6-40d2-a577-a05c942a4af0",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -49762,7 +49769,18 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), -pato.PlatformerObject::JumpSpeed())"
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), -pato.PlatformerObject::JumpSpeed() - 0.001) + 180"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "dash",
+                            "=",
+                            "0"
                           ]
                         }
                       ]
@@ -49807,7 +49825,59 @@
                           "parameters": [
                             "propulsor",
                             "=",
-                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed())"
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "dash",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Group",
+                  "name": "Propulsor acompanha o pato",
+                  "source": "",
+                  "creationTime": 0,
+                  "colorR": 74,
+                  "colorG": 176,
+                  "colorB": 228,
+                  "parameters": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "events": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "=",
+                            "pato.CenterX()",
+                            "=",
+                            "pato.CenterY() + (1 - propulsor.dash) * (pato.Height() / 2 - 10)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "propulsor",
+                            "=",
+                            "AngleBetweenPositions(0, 0, pato.PlatformerObject::CurrentSpeed(), pato.PlatformerObject::CurrentFallSpeed() - 0.001) + 180"
                           ]
                         }
                       ]
