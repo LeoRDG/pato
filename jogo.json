@@ -8618,6 +8618,78 @@
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_00.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_01.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_02.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_03.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_04.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_05.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_06.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/rolando_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/rolando_07.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/anjos/roda_anjo/morte_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/anjos/roda_anjo/morte_06.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -8781,9 +8853,10 @@
           "PlatformerCharacter": "PlatformerObject"
         },
         {
-          "maxSpeed": 700,
+          "isFolded": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "maxSpeed": 700,
           "acceleration": 4200,
           "gravity": 2000,
           "jumpSpeed": 800,
@@ -8813,10 +8886,10 @@
           "FollowOnY": true,
           "FollowFreeAreaLeft": 0,
           "FollowFreeAreaRight": 0,
-          "FollowFreeAreaTop": 0,
+          "FollowFreeAreaTop": 300,
           "FollowFreeAreaBottom": 0,
           "CameraOffsetX": 0,
-          "CameraOffsetY": 0,
+          "CameraOffsetY": -300,
           "CameraDelay": 0,
           "ForecastTime": 0,
           "ForecastHistoryDuration": 0,
@@ -21551,61 +21624,73 @@
         },
         {
           "name": "morto",
+          "persistentUuid": "9e23d3e7-4b4c-4471-971d-9835828c8715",
           "type": "boolean",
           "value": false
         },
         {
           "name": "qtd_moedas",
+          "persistentUuid": "733ba254-d45a-4086-9684-02a1ec913ada",
           "type": "number",
           "value": 0
         },
         {
           "name": "estado",
+          "persistentUuid": "03d42eac-b0c0-4372-a0f4-55802cd2e204",
           "type": "string",
           "value": "patrulha"
         },
         {
           "name": "base_x",
+          "persistentUuid": "39df948c-a0ad-4d83-a26c-dc1442ca8df7",
           "type": "number",
           "value": 0
         },
         {
           "name": "base_y",
+          "persistentUuid": "b441bdbc-d03d-4efe-8d4c-9012ac969bb7",
           "type": "number",
           "value": 0
         },
         {
           "name": "direcao",
+          "persistentUuid": "f87af562-4987-4ed6-af56-89f553cc3c6f",
           "type": "number",
           "value": 1
         },
         {
           "name": "escolha",
+          "persistentUuid": "400c65d0-c41d-4fb5-a62a-f8a287ff4c78",
           "type": "number",
           "value": 1
         },
         {
           "name": "tiros",
+          "persistentUuid": "8be19deb-eada-4af4-81d2-e6b868d83668",
           "type": "number",
           "value": 0
         },
         {
           "name": "kb_dir",
+          "persistentUuid": "76a13f97-efed-47bf-9b30-f93b13ec9f1d",
           "type": "number",
           "value": 0
         },
         {
           "name": "acertado",
+          "persistentUuid": "107041f2-e9ec-4aaf-a275-a2641fed9f81",
           "type": "boolean",
           "value": false
         },
         {
           "name": "quer_andar",
+          "persistentUuid": "81125b7e-efac-4936-8849-fdb481fdc1db",
           "type": "boolean",
           "value": false
         },
         {
           "name": "sprite_esquerda",
+          "persistentUuid": "bb843103-b043-4eb3-9a58-146c6d7ccdc8",
           "type": "boolean",
           "value": false
         },
@@ -21674,7 +21759,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -22082,7 +22167,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -44836,10 +44921,10 @@
       "content": {
         "opacity": 255,
         "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
-        "rowCount": 9,
-        "columnCount": 17,
-        "tileSize": 64,
-        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144"
+        "rowCount": 36,
+        "columnCount": 68,
+        "tileSize": 16,
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144,15,130,197,264,265,266,267,131,199,198"
       }
     },
     {
@@ -44874,19 +44959,27 @@
       "type": "TileMap::SimpleTileMap",
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "canBeGrabbed": true,
+          "name": "Platform",
+          "platformType": "NormalPlatform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "yGrabOffset": 0
+        }
+      ],
       "content": {
         "opacity": 255,
         "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
         "rowCount": 9,
         "columnCount": 17,
         "tileSize": 64,
-        "tilesWithHitBox": ""
+        "tilesWithHitBox": "0,17,34,1,35,2,19,36,3,20,37,4,38,5,22,39,7,8,6,23,40,41,42,25,26,27,28,10,44,12,29,46,15,16,33,32,57,58,59,74,91,92,93,76,51,52,53,70,87,85,86,68,54,55,56,73,90,88,89,71,103,104,105,123,140,139,138,121,137,136,119,102,106,108,109,110,125,126,127,142"
       }
     },
     {
       "assetStoreId": "",
-      "name": "tiles_inferno_escuro",
+      "name": "tiles_inferno_escuro_",
       "persistentUuid": "fbd11b7c-92b2-4e42-8c98-7fa521164f31",
       "type": "TileMap::SimpleTileMap",
       "variables": [],
@@ -44906,7 +44999,7 @@
         "rowCount": 9,
         "columnCount": 17,
         "tileSize": 64,
-        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144"
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97"
       }
     },
     {
@@ -46309,13 +46402,13 @@
                 "objectName": "tiles_inferno"
               },
               {
-                "objectName": "tiles_inferno_escuro"
-              },
-              {
                 "objectName": "tiles_inferno_ponte"
               },
               {
                 "objectName": "tiles_inferno_decor"
+              },
+              {
+                "objectName": "tiles_inferno_escuro_"
               },
               {
                 "objectName": "tiles_inferno_escuro_ponte"
@@ -46869,7 +46962,7 @@
           "name": "tiles_inferno"
         },
         {
-          "name": "tiles_inferno_escuro"
+          "name": "tiles_inferno_escuro_"
         }
       ]
     }
@@ -47294,998 +47387,15 @@
       ]
     },
     {
-      "b": 148,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "principal",
-      "name": "principal",
-      "r": 69,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 88,
-      "uiSettings": {
-        "grid": false,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "gridHeight": 32,
-        "gridDepth": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridOffsetZ": 0,
-        "gridColor": 10401023,
-        "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.6455105703311705,
-        "windowMask": false,
-        "selectedLayer": "",
-        "gameEditorMode": "instances-editor"
-      },
-      "objectsGroups": [],
-      "variables": [
-        {
-          "name": "jaGirou",
-          "persistentUuid": "662655ab-511b-4fa4-be4a-8ad4a78b8a1d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "laser_x",
-          "persistentUuid": "85350a79-a6d4-446e-a3f3-4e700ef9325b",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "laser_y",
-          "persistentUuid": "8756aa99-c9c5-4a16-b09a-2d86a68b93f9",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 599,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "abdb1e0d-55f8-4264-9335-84d4ab56ab95",
-          "width": 5288,
-          "x": -975,
-          "y": 577,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 155,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pato",
-          "persistentUuid": "0f96187e-f90c-4bfd-80a9-54e0b68853d4",
-          "width": 180,
-          "x": 34,
-          "y": 422,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 500,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "7365e602-7636-4932-83d6-2c2c19d988b8",
-          "width": 2966,
-          "x": -3694,
-          "y": 405,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 49,
-          "keepRatio": true,
-          "layer": "",
-          "name": "alvo",
-          "persistentUuid": "7a573065-9054-49be-8151-d86f9b75f62b",
-          "width": 49,
-          "x": 603,
-          "y": 158,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 321,
-          "keepRatio": true,
-          "layer": "",
-          "name": "zumbi",
-          "persistentUuid": "82ca77e9-fd61-4744-b1dd-1254c9bdbf8b",
-          "width": 265,
-          "x": -439,
-          "y": -17,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1926,
-          "keepRatio": true,
-          "layer": "",
-          "name": "bg",
-          "persistentUuid": "a01a55e1-b895-4306-8ab0-cbb223ba8e46",
-          "width": 10000,
-          "x": -3852,
-          "y": 815,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "dano_feedback",
-          "persistentUuid": "ec493940-a07e-4664-9d5b-a25051e1e825",
-          "width": 0,
-          "x": 22,
-          "y": -576,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 437,
-          "keepRatio": true,
-          "layer": "",
-          "name": "boss",
-          "persistentUuid": "f9bd0d1f-994b-4215-9968-cb2644d43eb4",
-          "width": 529,
-          "x": 3075,
-          "y": 192,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1094,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "14649958-111c-4e71-9a29-32020ca983d1",
-          "width": 1359,
-          "x": 878,
-          "y": -753,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 36,
-          "keepRatio": true,
-          "layer": "",
-          "name": "laser",
-          "persistentUuid": "d639da8d-2194-4db3-a19b-9eaa211a43c5",
-          "width": 32,
-          "x": 82,
-          "y": -73,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "moedas",
-          "persistentUuid": "d4a8ebad-d2a8-432e-98a7-1d4710ee2308",
-          "width": 0,
-          "x": 86,
-          "y": 84,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "municao",
-          "persistentUuid": "17979551-661b-4eb2-b08c-21c2b47bdfe4",
-          "width": 0,
-          "x": 1732,
-          "y": 928,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "max_municao",
-          "persistentUuid": "8fae377a-e16c-4caa-bdd6-6e8d13f46214",
-          "width": 0,
-          "x": 1802,
-          "y": 962,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "8be468a0-8095-477d-9590-20c6710c6b3f",
-          "width": 1429,
-          "x": -539,
-          "y": 343,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 1080,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vinheta",
-          "persistentUuid": "69295762-edac-4174-8fed-9f4532933c75",
-          "width": 1920,
-          "x": 0,
-          "y": 0,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_trilho",
-          "persistentUuid": "8f50716d-4097-4352-a122-bd87f5478727",
-          "width": 0,
-          "x": 48,
-          "y": 62,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 10,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_rastro",
-          "persistentUuid": "6eca50c4-f713-448c-b711-2730a08b489b",
-          "width": 360,
-          "x": 48,
-          "y": 62,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 10,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_fill",
-          "persistentUuid": "21f3b2a6-f58a-4c59-b1d1-9a46d2ea661d",
-          "width": 360,
-          "x": 48,
-          "y": 62,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_txt",
-          "persistentUuid": "120e5a09-ba22-46a0-bf2d-6780dea41386",
-          "width": 0,
-          "x": 48,
-          "y": 18,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 28,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_moeda",
-          "persistentUuid": "7b67c7fb-6bd0-4306-aa39-7535f9bbdc79",
-          "width": 28,
-          "x": 48,
-          "y": 86,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot1",
-          "persistentUuid": "fc2741f6-5008-4cb5-9255-ee30d94938aa",
-          "width": 0,
-          "x": 1640,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot2",
-          "persistentUuid": "470aa3b6-4222-4a4f-9fd2-5b1261036394",
-          "width": 0,
-          "x": 1700,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot3",
-          "persistentUuid": "1db53932-c396-4260-a7a7-c092073f8f58",
-          "width": 0,
-          "x": 1760,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 104,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma",
-          "persistentUuid": "6d3be52a-881c-4da1-b1f4-7abc08f9e637",
-          "width": 360,
-          "x": 1512,
-          "y": 928,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma_icone",
-          "persistentUuid": "ed6a28df-08db-429f-b9ec-297199395474",
-          "width": 0,
-          "x": 1552,
-          "y": 934,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma_nome",
-          "persistentUuid": "e63511b8-c4db-4739-b4a8-79d80838fc1e",
-          "width": 0,
-          "x": 1552,
-          "y": 994,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 14,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_pistola",
-          "persistentUuid": "f129886d-63ba-4ff3-aec2-a7987d86abfd",
-          "width": 96,
-          "x": 1776,
-          "y": 1008,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_doze",
-          "persistentUuid": "6525e2a5-d7d6-4d81-80c3-22d9d808e12a",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_minigun",
-          "persistentUuid": "068a91b3-de11-4358-ade4-7357ed6c9dba",
-          "width": 150,
-          "x": 1722,
-          "y": 1012,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_recarga_trilho",
-          "persistentUuid": "1d21d065-06f1-446c-91f6-3cd0d75546e4",
-          "width": 0,
-          "x": 1512,
-          "y": 1028,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_recarga_fill",
-          "persistentUuid": "6ffedb9b-2add-413b-be1e-136e884324f0",
-          "width": 0,
-          "x": 1512,
-          "y": 1028,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_trilho",
-          "persistentUuid": "50bac674-3d6e-4cb5-8107-e9fabb60542b",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_fill",
-          "persistentUuid": "084620a1-0f80-4afb-99ff-9c4b0b2a7965",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_trilho",
-          "persistentUuid": "df48ba40-0365-43cc-920f-321d72fc5e65",
-          "width": 0,
-          "x": 600,
-          "y": 72,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_rastro",
-          "persistentUuid": "2f2a46b2-3f22-446d-99b4-cb3a9b5145f4",
-          "width": 720,
-          "x": 600,
-          "y": 72,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_fill",
-          "persistentUuid": "65c89430-113a-40c9-ac09-51819b7fda6a",
-          "width": 720,
-          "x": 600,
-          "y": 72,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_nome",
-          "persistentUuid": "cc4b7e15-3eed-412f-9da0-820f669f82b8",
-          "width": 0,
-          "x": 936,
-          "y": 42,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "hud_anel",
-          "persistentUuid": "a342baf9-85d1-482b-9176-89453a053a34",
-          "width": 0,
-          "x": 0,
-          "y": 0,
-          "zOrder": 1000,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "hud_r_hint",
-          "persistentUuid": "14aeae70-34b8-4d09-afa1-1573d0727f86",
-          "width": 0,
-          "x": 0,
-          "y": 0,
-          "zOrder": 1000,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot4",
-          "persistentUuid": "3c64ad4b-9df1-49ec-9b7c-ba9440d01211",
-          "width": 0,
-          "x": 1820,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_lanca",
-          "persistentUuid": "3db4851d-b9ab-4297-97f4-7f64917bd302",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT"
-      },
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Mapa de testes com todos os inimigos e o boss. Os eventos ficam nos eventos externos."
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Jogador"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Inimigos"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Boss"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Combate"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "HUD"
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera2DPlaneMaxDrawingDistance": 5000,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "folded": true,
-              "name": "3D Ambient Hemisphere Light",
-              "doubleParameters": {
-                "elevation": 40,
-                "intensity": 0.33,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "groundColor": "127;127;127",
-                "skyColor": "255;255;255",
-                "top": "Z+"
-              },
-              "booleanParameters": {}
-            },
-            {
-              "effectType": "Scene3D::DirectionalLight",
-              "name": "3D Sun Light",
-              "doubleParameters": {
-                "distanceFromCamera": 1500,
-                "elevation": 40,
-                "frustumSize": 4000,
-                "intensity": 0.75,
-                "minimumShadowBias": 0,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "color": "255;255;255",
-                "shadowQuality": "medium",
-                "top": "Z+"
-              },
-              "booleanParameters": {
-                "isCastingShadow": true
-              }
-            }
-          ]
-        },
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera2DPlaneMaxDrawingDistance": 5000,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "HUD",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "folded": true,
-              "name": "3D Ambient Hemisphere Light",
-              "doubleParameters": {
-                "elevation": 40,
-                "intensity": 0.33,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "groundColor": "127;127;127",
-                "skyColor": "255;255;255",
-                "top": "Z+"
-              },
-              "booleanParameters": {}
-            },
-            {
-              "effectType": "Scene3D::DirectionalLight",
-              "name": "3D Sun Light",
-              "doubleParameters": {
-                "distanceFromCamera": 1500,
-                "elevation": 40,
-                "frustumSize": 4000,
-                "intensity": 0.75,
-                "minimumShadowBias": 0,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "color": "255;255;255",
-                "shadowQuality": "medium",
-                "top": "Z+"
-              },
-              "booleanParameters": {
-                "isCastingShadow": true
-              }
-            }
-          ]
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "AdvancedJump",
-          "type": "AdvancedJump::AdvancedJump"
-        },
-        {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior"
-        },
-        {
-          "name": "Animation",
-          "type": "AnimatableCapability::AnimatableBehavior"
-        },
-        {
-          "name": "Effect",
-          "type": "EffectCapability::EffectBehavior"
-        },
-        {
-          "name": "FireBullet",
-          "type": "FireBullet::FireBullet"
-        },
-        {
-          "name": "Flippable",
-          "type": "FlippableCapability::FlippableBehavior"
-        },
-        {
-          "name": "HorizontalDash",
-          "type": "AdvancedJump::HorizontalDash"
-        },
-        {
-          "name": "LinearMovement",
-          "type": "LinearMovement::LinearMovement"
-        },
-        {
-          "name": "Opacity",
-          "type": "OpacityCapability::OpacityBehavior"
-        },
-        {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior"
-        },
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior"
-        },
-        {
-          "name": "PlatformerConfigurationStack",
-          "type": "AdvancedJump::PlatformerConfigurationStack"
-        },
-        {
-          "name": "PlatformerObject",
-          "type": "PlatformBehavior::PlatformerObjectBehavior"
-        },
-        {
-          "name": "Resizable",
-          "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
-        },
-        {
-          "name": "SmoothPlatformerCamera",
-          "type": "SmoothCamera::SmoothPlatformerCamera"
-        },
-        {
-          "name": "Sticker",
-          "type": "Sticker::Sticker"
-        },
-        {
-          "name": "Text",
-          "type": "TextContainerCapability::TextContainerBehavior"
-        },
-        {
-          "name": "TileMap",
-          "type": "TileMap::TileMapBehavior"
-        },
-        {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
-        }
-      ]
-    },
-    {
-      "b": 148,
+      "b": 44,
       "disableInputWhenNotFocused": true,
       "mangledName": "Hub",
       "name": "Hub",
-      "r": 69,
+      "r": 24,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 88,
+      "v": 36,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -48298,7 +47408,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6455105703311705,
+        "zoomFactor": 0.3216911764706019,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -48329,48 +47439,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 600,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "fd501549-1df7-43d2-94cf-5a326088e348",
-          "width": 7000,
-          "x": -2000,
-          "y": 577,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 48,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "e9abd7cc-70b7-4de3-a97f-bfeffc9bbb7d",
-          "width": 400,
-          "x": 1400,
-          "y": 380,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
           "height": 155,
           "keepRatio": true,
           "layer": "",
           "name": "pato",
           "persistentUuid": "6647c81f-20af-4247-ae02-d2ade1a3f53d",
           "width": 180,
-          "x": 34,
-          "y": 422,
+          "x": 1,
+          "y": 748,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -48389,23 +47465,6 @@
           "x": 603,
           "y": 158,
           "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1926,
-          "keepRatio": true,
-          "layer": "",
-          "name": "bg",
-          "persistentUuid": "c95257ba-a01c-49ef-831b-bef4aa4710dd",
-          "width": 10000,
-          "x": -3852,
-          "y": 815,
-          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -48922,11 +47981,119 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 490,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tiles_inferno_escuro_",
+          "persistentUuid": "38c88e3e-1c21-42b5-bdb0-db14b7430662",
+          "width": 3150,
+          "x": -359,
+          "y": 1010,
+          "zOrder": 1004,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":45,\"dimY\":7,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144]]}]}"
+            }
+          ],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 477,
+          "keepRatio": true,
+          "layer": "",
+          "name": "trader",
+          "persistentUuid": "a43a6867-7b95-4add-aaae-6d5bdc0546a1",
+          "width": 462,
+          "x": 938,
+          "y": 530,
+          "zOrder": 1002,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 346,
+          "keepRatio": true,
+          "layer": "fundo",
+          "name": "bg_inferno_escuro_meio",
+          "persistentUuid": "07e9b647-8d40-4812-b9de-6e44b20f6170",
+          "width": 5588,
+          "x": -1546,
+          "y": 732,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 346,
+          "keepRatio": true,
+          "layer": "fundo",
+          "name": "bg_inferno_escuro_fundo",
+          "persistentUuid": "8f51efc1-2a6c-4e0d-8981-c86d9e9fcb9a",
+          "width": 5918,
+          "x": -1727,
+          "y": 699,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 346,
+          "keepRatio": true,
+          "layer": "fundo",
+          "name": "bg_inferno_escuro_frente",
+          "persistentUuid": "f6d88a65-6223-48e0-8cfd-b2e307b492be",
+          "width": 5554,
+          "x": -1520,
+          "y": 742,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
-      "objects": [],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "persistentUuid": "880803bc-8e6f-443e-901d-f01c9788f6b1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        }
+      ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewSprite"
+          }
+        ]
       },
       "events": [
         {
@@ -48974,7 +48141,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Saída",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -49020,9 +48186,109 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "bg_inferno_escuro_frente",
+                "=",
+                "CameraCenterX() * 0.4"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "bg_inferno_escuro_ceu",
+                "=",
+                "CameraCenterX() * 0.03"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "bg_inferno_escuro_fundo",
+                "=",
+                "CameraCenterX() * 0.12"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "bg_inferno_escuro_meio",
+                "=",
+                "CameraCenterX() * 0.25"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "fundo",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -49103,7 +48369,7 @@
           "isLocked": false,
           "name": "HUD",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
@@ -49258,7 +48524,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6455105703311705,
+        "zoomFactor": 0.49336942119506516,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -49295,8 +48561,8 @@
           "name": "chao",
           "persistentUuid": "2ca76bec-ddaa-4b45-976d-605441e74e27",
           "width": 20000,
-          "x": -2000,
-          "y": 577,
+          "x": -1907,
+          "y": 802,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -50359,18 +49625,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Cada camada do fundo desloca a textura com uma fração do movimento da câmera: as de trás andam menos."
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -50450,925 +49704,6 @@
           ],
           "effects": []
         },
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera2DPlaneMaxDrawingDistance": 5000,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "folded": true,
-              "name": "3D Ambient Hemisphere Light",
-              "doubleParameters": {
-                "elevation": 40,
-                "intensity": 0.33,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "groundColor": "127;127;127",
-                "skyColor": "255;255;255",
-                "top": "Z+"
-              },
-              "booleanParameters": {}
-            },
-            {
-              "effectType": "Scene3D::DirectionalLight",
-              "name": "3D Sun Light",
-              "doubleParameters": {
-                "distanceFromCamera": 1500,
-                "elevation": 40,
-                "frustumSize": 4000,
-                "intensity": 0.75,
-                "minimumShadowBias": 0,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "color": "255;255;255",
-                "shadowQuality": "medium",
-                "top": "Z+"
-              },
-              "booleanParameters": {
-                "isCastingShadow": true
-              }
-            }
-          ]
-        },
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera2DPlaneMaxDrawingDistance": 5000,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "HUD",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "folded": true,
-              "name": "3D Ambient Hemisphere Light",
-              "doubleParameters": {
-                "elevation": 40,
-                "intensity": 0.33,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "groundColor": "127;127;127",
-                "skyColor": "255;255;255",
-                "top": "Z+"
-              },
-              "booleanParameters": {}
-            },
-            {
-              "effectType": "Scene3D::DirectionalLight",
-              "name": "3D Sun Light",
-              "doubleParameters": {
-                "distanceFromCamera": 1500,
-                "elevation": 40,
-                "frustumSize": 4000,
-                "intensity": 0.75,
-                "minimumShadowBias": 0,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "color": "255;255;255",
-                "shadowQuality": "medium",
-                "top": "Z+"
-              },
-              "booleanParameters": {
-                "isCastingShadow": true
-              }
-            }
-          ]
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "AdvancedJump",
-          "type": "AdvancedJump::AdvancedJump"
-        },
-        {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior"
-        },
-        {
-          "name": "Animation",
-          "type": "AnimatableCapability::AnimatableBehavior"
-        },
-        {
-          "name": "Effect",
-          "type": "EffectCapability::EffectBehavior"
-        },
-        {
-          "name": "FireBullet",
-          "type": "FireBullet::FireBullet"
-        },
-        {
-          "name": "Flippable",
-          "type": "FlippableCapability::FlippableBehavior"
-        },
-        {
-          "name": "HorizontalDash",
-          "type": "AdvancedJump::HorizontalDash"
-        },
-        {
-          "name": "LinearMovement",
-          "type": "LinearMovement::LinearMovement"
-        },
-        {
-          "name": "Opacity",
-          "type": "OpacityCapability::OpacityBehavior"
-        },
-        {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior"
-        },
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior"
-        },
-        {
-          "name": "PlatformerConfigurationStack",
-          "type": "AdvancedJump::PlatformerConfigurationStack"
-        },
-        {
-          "name": "PlatformerObject",
-          "type": "PlatformBehavior::PlatformerObjectBehavior"
-        },
-        {
-          "name": "Resizable",
-          "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
-        },
-        {
-          "name": "SmoothPlatformerCamera",
-          "type": "SmoothCamera::SmoothPlatformerCamera"
-        },
-        {
-          "name": "Sticker",
-          "type": "Sticker::Sticker"
-        },
-        {
-          "name": "Text",
-          "type": "TextContainerCapability::TextContainerBehavior"
-        },
-        {
-          "name": "TileMap",
-          "type": "TileMap::TileMapBehavior"
-        },
-        {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
-        }
-      ]
-    },
-    {
-      "b": 148,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "Boss",
-      "name": "Boss",
-      "r": 69,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 88,
-      "uiSettings": {
-        "grid": false,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "gridHeight": 32,
-        "gridDepth": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridOffsetZ": 0,
-        "gridColor": 10401023,
-        "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.6455105703311705,
-        "windowMask": false,
-        "selectedLayer": "",
-        "gameEditorMode": "instances-editor"
-      },
-      "objectsGroups": [],
-      "variables": [
-        {
-          "name": "jaGirou",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "laser_x",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "laser_y",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 600,
-          "keepRatio": true,
-          "layer": "",
-          "name": "chao",
-          "persistentUuid": "55d77426-d4db-487e-99c7-c6961c556b98",
-          "width": 7000,
-          "x": -2000,
-          "y": 577,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 437,
-          "keepRatio": true,
-          "layer": "",
-          "name": "boss",
-          "persistentUuid": "203c001e-678f-4402-8b76-707ade2125e0",
-          "width": 529,
-          "x": 1400,
-          "y": 120,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 155,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pato",
-          "persistentUuid": "0378267a-2948-476a-a59f-02de81d655ee",
-          "width": 180,
-          "x": 34,
-          "y": 422,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 49,
-          "keepRatio": true,
-          "layer": "",
-          "name": "alvo",
-          "persistentUuid": "db7d78be-1e38-40ef-9ca9-6c9ec90330df",
-          "width": 49,
-          "x": 603,
-          "y": 158,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1926,
-          "keepRatio": true,
-          "layer": "",
-          "name": "bg",
-          "persistentUuid": "91bc38f3-c13c-4f7e-9938-82ed496b69f9",
-          "width": 10000,
-          "x": -3852,
-          "y": 815,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "dano_feedback",
-          "persistentUuid": "422de7cd-43b9-4867-8c38-3074dad57dd5",
-          "width": 0,
-          "x": 22,
-          "y": -576,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 36,
-          "keepRatio": true,
-          "layer": "",
-          "name": "laser",
-          "persistentUuid": "10175b20-deba-4e1e-a1b9-9594123ffab2",
-          "width": 32,
-          "x": 82,
-          "y": -73,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "moedas",
-          "persistentUuid": "7c01e183-473f-488f-92d0-0d2397373ddd",
-          "width": 0,
-          "x": 86,
-          "y": 84,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "municao",
-          "persistentUuid": "244fdfe6-4a6f-4a9e-b289-e3ea35026369",
-          "width": 0,
-          "x": 1732,
-          "y": 928,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "max_municao",
-          "persistentUuid": "ea5b237d-fcdd-4aed-87b3-140a0e6e6ad7",
-          "width": 0,
-          "x": 1802,
-          "y": 962,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 1080,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vinheta",
-          "persistentUuid": "d7428b6e-ea49-4e58-b7f0-5c7afdf4bd96",
-          "width": 1920,
-          "x": 0,
-          "y": 0,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_trilho",
-          "persistentUuid": "0efbc3f3-c8e2-46a3-b132-2938938cf170",
-          "width": 0,
-          "x": 48,
-          "y": 62,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 10,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_rastro",
-          "persistentUuid": "3d890214-52ba-417f-80c8-cf7c32b2d337",
-          "width": 360,
-          "x": 48,
-          "y": 62,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 10,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_fill",
-          "persistentUuid": "83e34b79-df71-4046-a168-b98b1c802a2d",
-          "width": 360,
-          "x": 48,
-          "y": 62,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_vida_txt",
-          "persistentUuid": "8c58c081-d459-4dd1-9ad6-f67b74f615ed",
-          "width": 0,
-          "x": 48,
-          "y": 18,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 28,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_moeda",
-          "persistentUuid": "68f9796e-3303-4fad-9a56-44422ac5b9c5",
-          "width": 28,
-          "x": 48,
-          "y": 86,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot1",
-          "persistentUuid": "f1a4828e-4453-498e-9f3c-c899673a9930",
-          "width": 0,
-          "x": 1640,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot2",
-          "persistentUuid": "e2db7f7f-cda2-4f50-947b-2aeb8021eb2d",
-          "width": 0,
-          "x": 1700,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot3",
-          "persistentUuid": "7fcded82-0388-4ecd-8b8c-4e6529773068",
-          "width": 0,
-          "x": 1760,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 104,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma",
-          "persistentUuid": "26e7c46c-8815-46d5-8a8b-d29065447d9e",
-          "width": 360,
-          "x": 1512,
-          "y": 928,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma_icone",
-          "persistentUuid": "e4d00992-da42-455f-8e4e-556caba4d09f",
-          "width": 0,
-          "x": 1552,
-          "y": 934,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_arma_nome",
-          "persistentUuid": "9e28edbe-805c-4fc9-b771-8cd497a65677",
-          "width": 0,
-          "x": 1552,
-          "y": 994,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 14,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_pistola",
-          "persistentUuid": "e2e1aa05-6e40-4a1e-973a-d72d2fee2504",
-          "width": 96,
-          "x": 1776,
-          "y": 1008,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_doze",
-          "persistentUuid": "2854bafc-8128-40af-bb24-8f92273dcda3",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_minigun",
-          "persistentUuid": "199ae63e-2212-4962-9c2b-92dcef9d75c1",
-          "width": 150,
-          "x": 1722,
-          "y": 1012,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_recarga_trilho",
-          "persistentUuid": "07cf4a6f-0aba-4ed3-b533-0fe841753bff",
-          "width": 0,
-          "x": 1512,
-          "y": 1028,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_recarga_fill",
-          "persistentUuid": "5073e72a-0c33-40f4-9291-936eff1367d3",
-          "width": 0,
-          "x": 1512,
-          "y": 1028,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_trilho",
-          "persistentUuid": "2ae2208b-53bb-4d31-9e3e-3d2744e7c8a4",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_fill",
-          "persistentUuid": "1b46067e-2ee6-4126-8059-43078b9aac4e",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_trilho",
-          "persistentUuid": "09d7ba5e-90eb-4ff4-ba10-09f56450d63d",
-          "width": 0,
-          "x": 600,
-          "y": 72,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_rastro",
-          "persistentUuid": "780b2082-00c6-4a57-bf37-f7266710b3d3",
-          "width": 720,
-          "x": 600,
-          "y": 72,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_fill",
-          "persistentUuid": "bdda8dda-b676-480e-afcf-f59bb6a99bb6",
-          "width": 720,
-          "x": 600,
-          "y": 72,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_boss_nome",
-          "persistentUuid": "5fa7149b-5be7-4e39-8776-a9ddce7c55af",
-          "width": 0,
-          "x": 936,
-          "y": 42,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "hud_anel",
-          "persistentUuid": "bd623e78-eb7e-426b-a9e4-63fe0612fc82",
-          "width": 0,
-          "x": 0,
-          "y": 0,
-          "zOrder": 1000,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "hud_r_hint",
-          "persistentUuid": "2ba2dafa-d7d0-407e-a22e-3869ebce62f6",
-          "width": 0,
-          "x": 0,
-          "y": 0,
-          "zOrder": 1000,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_slot4",
-          "persistentUuid": "525f2e53-058e-46f8-9a40-7e7609f0d8a9",
-          "width": 0,
-          "x": 1820,
-          "y": 872,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_lanca",
-          "persistentUuid": "4b472caf-1350-4274-8a15-a63a4eb41e2f",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT"
-      },
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Arena do boss (fases e intro na KAN-30)."
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Jogador"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "AplicarUpgrades"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Inimigos"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Boss"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Combate"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "HUD"
-        }
-      ],
-      "layers": [
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -51792,7 +50127,7 @@
   ],
   "externalEvents": [
     {
-      "associatedLayout": "principal",
+      "associatedLayout": "Hub",
       "name": "Jogador",
       "events": [
         {
@@ -52563,7 +50898,7 @@
                         "bocal_y",
                         "laser_x",
                         "laser_y",
-                        "2"
+                        "1.5"
                       ]
                     }
                   ]
@@ -52676,6 +51011,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movimento",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -54275,6 +52611,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Animações do pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -55041,6 +53378,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Tiro e recarga",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -55944,6 +54282,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Giro da minigun",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -56048,6 +54387,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Som de recarga",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
