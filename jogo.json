@@ -8781,7 +8781,7 @@
           "PlatformerCharacter": "PlatformerObject"
         },
         {
-          "maxSpeed": 500,
+          "maxSpeed": 700,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 4200,
@@ -12080,7 +12080,7 @@
         {
           "name": "cooldown_base",
           "type": "number",
-          "value": 0.08
+          "value": 0.05
         },
         {
           "name": "recarga_base",
@@ -12091,7 +12091,7 @@
           "name": "dano",
           "persistentUuid": "e00ed6ce-6217-46e5-a479-5e2a6578470c",
           "type": "number",
-          "value": 8
+          "value": 7
         },
         {
           "name": "alcance",
@@ -12183,7 +12183,7 @@
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.08,
+          "FireCooldown": 0.05,
           "HasJustFired": false,
           "RotateBullet": true,
           "FiringArc": 45,
@@ -52276,6 +52276,36 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
+                    "mira_lado",
+                    "=",
+                    "sign(MouseX() - pato.CenterX() + 0.001)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mira_a",
+                    "=",
+                    "atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - asin(clamp(Arma.bocal_f * Arma.Height() / max(DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()), Arma.Width() / 2 + 1), -1, 1)) - ToRad(recuo)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mira_graus",
+                    "=",
+                    "ToDeg(atan2(sin(mira_a), mira_lado * cos(mira_a)))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
                     "coice_j",
                     "=",
                     "RandomFloatInRange(-1, 1) * Arma.tremor * clamp(coice / max(Arma.kick, 0.01), 0, 1)"
@@ -52295,13 +52325,12 @@
                 },
                 {
                   "type": {
-                    "value": "RotateTowardObject"
+                    "value": "SetAngle"
                   },
                   "parameters": [
                     "Arma",
-                    "alvo",
-                    "5000",
-                    ""
+                    "=",
+                    "mira_graus"
                   ]
                 },
                 {
@@ -52411,9 +52440,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "mira_lado",
+                    "bocal_x",
                     "=",
-                    "sign(MouseX() - pato.CenterX() + 0.001)"
+                    "Arma.CenterX() + mira_lado * cos(mira_a) * Arma.Width() / 2 - mira_lado * sin(mira_a) * Arma.bocal_f * Arma.Height()"
                   ]
                 },
                 {
@@ -52421,9 +52450,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "mira_a",
+                    "bocal_y",
                     "=",
-                    "atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo)"
+                    "Arma.CenterY() + sin(mira_a) * Arma.Width() / 2 + cos(mira_a) * Arma.bocal_f * Arma.Height()"
                   ]
                 },
                 {
@@ -52433,9 +52462,9 @@
                   "parameters": [
                     "alvo",
                     "=",
-                    "Arma.CenterX() + mira_lado * cos(mira_a) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Width() * .5",
+                    "bocal_x + mira_lado * cos(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Width() * .5",
                     "=",
-                    "Arma.CenterY() + sin(mira_a) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Height() * .5"
+                    "bocal_y + sin(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Height() * .5"
                   ]
                 },
                 {
@@ -52468,16 +52497,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "mira_graus",
-                    "=",
-                    "ToDeg(atan2(sin(mira_a), mira_lado * cos(mira_a)))"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
@@ -52485,26 +52504,6 @@
                     "Opacity",
                     "=",
                     "250"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "bocal_x",
-                    "=",
-                    "Arma.CenterX() + mira_lado * cos(mira_a) * Arma.Width() / 2 - mira_lado * sin(mira_a) * Arma.bocal_f * Arma.Height()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "bocal_y",
-                    "=",
-                    "Arma.CenterY() + sin(mira_a) * Arma.Width() / 2 + cos(mira_a) * Arma.bocal_f * Arma.Height()"
                   ]
                 },
                 {
@@ -66737,7 +66736,8 @@
                   "comment": "Soma em pato.moedas e moedas_total e mostra +N no mundo e no HUD."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "moeda",
                   "conditions": [
                     {
                       "type": {
@@ -68704,7 +68704,7 @@
                     "pato",
                     "PlatformerObject",
                     "=",
-                    "289 * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                    "pato.PlatformerObject::MaxSpeed() * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
                   ]
                 },
                 {
