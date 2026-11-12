@@ -109,7 +109,7 @@ def main():
     # ------------------------------------------------------------------ moedas, acerto e morte dos inimigos
     col = grupo_de(comb, 'Coleta')
     pega = next(e for e in col['events'] if tem_a(e, 'Delete', 'moeda'))
-    pega['actions'].insert(0, som('som_moeda.wav', 45, 'RandomFloatInRange(0.97, 1.12)'))
+    pega['actions'].insert(0, som('som_moeda.wav', 25, 'RandomFloatInRange(0.97, 1.12)'))
     for e in walk(comb):
         for a in e.get('actions') or []:
             if a['type']['value'] == 'PlaySound' and a['parameters'][1] == 'hit.wav':
@@ -144,6 +144,12 @@ def main():
         boom = next(e for e in walk(g['events']) if tem_a(e, 'SetNumberObjectVariable', obj, 'vida', '=', '0'))
         boom['actions'] = [a for a in boom['actions'] if not (a['type']['value'] == 'PlaySound' and a['parameters'][1] == 'som_explosao.wav')]   # (rodar de novo)
         boom['actions'].append(som('som_explosao.wav', 70, 'RandomFloatInRange(0.75, 0.85)'))
+
+    # ------------------------------------------------------------------ pré-carregar (como os sons das armas): sem isso o primeiro
+    # toque de cada som espera o arquivo carregar e decodificar
+    pre = next(e for e in walk(jog) if tem_a(e, 'PreloadSound', '', 'som_pistola.wav'))
+    pre['actions'] = [a for a in pre['actions'] if not (a['type']['value'] == 'PreloadSound' and a['parameters'][1] in nossos)]
+    pre['actions'] += [A('PreloadSound', '', n) for n in nossos]
 
     # ------------------------------------------------------------------ troca de arma
     troca = grupo_de(jog, 'Troca de Arma')

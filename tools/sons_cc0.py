@@ -103,8 +103,18 @@ def mixa(*partes):
     return out
 
 
-def grava(x, nome, fade_in=0.003, fade_out=0.05, pico=0.7, satura=0.0):
-    """Normaliza pelo pico, fade nas pontas, saturação leve opcional (tanh) e grava assets/<nome> mono 16 bits."""
+def pronto(x, frac):
+    """Corta o começo até o som chegar a frac do pico (envelope de 5 ms), 3 ms antes: sem subida lenta, o som não parece atrasado."""
+    w = int(0.005 * SR)
+    env = np.array([np.abs(x[i:i + w]).max() for i in range(0, max(1, len(x) - w), w)])
+    return x[max(0, int(np.argmax(env >= frac * env.max())) * w - int(0.003 * SR)):]
+
+
+def grava(x, nome, fade_in=0.003, fade_out=0.05, pico=0.7, satura=0.0, ataque=0.3):
+    """Corta a subida lenta do começo (ataque = fração do pico onde o som começa; 0 = não corta), normaliza pelo pico, fade nas
+    pontas, saturação leve opcional (tanh) e grava assets/<nome> mono 16 bits."""
+    if ataque:
+        x = pronto(x, ataque)
     x = filtro(x, 25, None, 2)
     n = len(x)
     g = np.minimum(1, np.minimum(np.arange(n) / max(1, SR * fade_in), (n - np.arange(n)) / max(1, SR * fade_out)))

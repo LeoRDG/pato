@@ -4,6 +4,7 @@ Cada som final (assets/som_*.wav) tem uma receita abaixo: de quais gravações v
 assets/fontes_cc0/ e são baixadas sozinhas na primeira vez (o script confere na página de cada uma que a licença é CC0).
 O registro das fontes (autor, título, endereço, licença, trecho usado) é regerado em assets/fontes_cc0/FONTES.txt e fontes.json.
 
+Todo som começa já forte: grava() corta a subida lenta do começo (até 30% do pico, ou o 'ataque' da receita), senão parece atrasado.
 Para trocar um som: ache outra gravação CC0 no Freesound, ponha o id em FONTES (apelido -> id) e ajuste a receita; rode de novo.
 Rodar:  python3 tools/t31_sons_jogo.py   (não mexe no jogo.json; quem liga os sons nos eventos é t32_sons_eventos.py)
 """
@@ -35,7 +36,8 @@ def receitas(f):
                                [('quack2', 'inteiro, tom -20%'), ('demonio', '1,4 s a partir de 0,28 s, entra aos 0,25 s')],
                                mixa((tom(corta(f('quack2'), dur=0.45), 0.8), 0, 1), (corta(f('demonio'), 0.2, 1.4), 0.25, 0.8)),
                                {'fade_out': 0.6})
-    R['som_moeda.wav'] = ('pegar moeda', [('moeda', 'inteiro')], corta(f('moeda')), {'fade_out': 0.08})
+    R['som_moeda.wav'] = ('pegar moeda', [('moeda', 'só a primeira nota, 0,12 s, sem grave')],
+                          filtro(corta(f('moeda'), dur=0.12), 600), {'fade_out': 0.07})
     R['som_moedas_soltas.wav'] = ('moedas caindo do inimigo morto', [('moedas_caem', '0,7 s a partir de 0,26 s')],
                                   corta(f('moedas_caem'), 0.2, 0.7), {'fade_out': 0.3})
     R['som_acerto.wav'] = ('bala acerta inimigo', [('splat', 'inteiro'), ('soco', '0,18 s, por baixo')],
@@ -54,21 +56,21 @@ def receitas(f):
     R['som_cuspe.wav'] = ('sapo cospe', [('cuspe', '0,25 s a partir de 1,05 s'), ('cuspe2', 'tom +30%, por baixo')],
                           mixa((corta(f('cuspe'), 1.0, 0.25), 0, 1), (tom(corta(f('cuspe2'), dur=0.4), 1.3), 0, 0.4)), {'fade_out': 0.06})
     R['som_cura.wav'] = ('sapo cura os inimigos perto', [('energia', '0,8 s, tom +50%')],
-                         tom(corta(f('energia'), dur=1.2), 1.5), {'fade_in': 0.1, 'fade_out': 0.35})
+                         tom(corta(f('energia'), dur=1.2), 1.5), {'fade_out': 0.35, 'ataque': 0.5})
     R['som_aviso_cutulu.wav'] = ('cutulu rosna antes de atacar', [('rosnado', '0,9 s a partir de 0,32 s, tom -10%')],
-                                 tom(corta(f('rosnado'), 0.25, 0.8), 0.9), {'fade_out': 0.3})
+                                 tom(corta(f('rosnado'), 0.25, 0.8), 0.9), {'fade_out': 0.3, 'ataque': 0.6})
     R['som_aviso_mergulhador.wav'] = ('voadores gritam antes do mergulho', [('grito', '0,55 s, tom +15%')],
                                       tom(corta(f('grito'), 0.1, 0.63), 1.15), {'fade_out': 0.25})
     R['som_aviso_condenado.wav'] = ('condenados gemem antes do bote', [('zumbi', '0,6 s')],
                                     corta(f('zumbi'), 0.05, 0.6), {'fade_out': 0.25})
     R['som_aviso_inchado.wav'] = ('condenado inchado borbulha antes de explodir', [('gorgolejo', '0,65 s')],
-                                  corta(f('gorgolejo'), dur=0.65), {'fade_out': 0.15})
+                                  corta(f('gorgolejo'), dur=0.65), {'fade_out': 0.15, 'ataque': 0.6})
     R['som_aviso_caveira.wav'] = ('caveira gigante ruge antes do fogo', [('rugido', '0,8 s a partir de 0,35 s')],
-                                  corta(f('rugido'), 0.3, 0.8), {'fade_out': 0.3, 'satura': 0.5})
+                                  corta(f('rugido'), 0.3, 0.8), {'fade_out': 0.3, 'satura': 0.5, 'ataque': 0.6})
     R['som_fogo_caveira.wav'] = ('explosão de fogo da caveira gigante', [('fogo', '1,3 s')],
-                                 corta(f('fogo'), dur=1.3), {'fade_out': 0.5})
+                                 corta(f('fogo'), dur=1.3), {'fade_out': 0.5, 'ataque': 0.6})
     R['som_aviso_olho.wav'] = ('olho demoníaco carrega o tiro', [('carga', '0,55 s do começo, de trás para a frente (sobe)')],
-                                corta(f('carga'), dur=0.55)[::-1].copy(), {'fade_in': 0.15, 'fade_out': 0.02})
+                                corta(f('carga'), dur=0.55)[::-1].copy(), {'fade_in': 0.01, 'fade_out': 0.02, 'ataque': 0.6})
     R['som_tiro_olho.wav'] = ('tiro do olho demoníaco', [('magia', '0,6 s')], corta(f('magia'), dur=0.6), {'fade_out': 0.2})
     R['som_aviso_mina.wav'] = ('mina demoníaca apita antes de explodir', [('trava', '0,5 s, tom +20%')],
                                tom(corta(f('trava'), dur=0.6), 1.2), {'fade_out': 0.03})
