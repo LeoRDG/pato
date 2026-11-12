@@ -8252,6 +8252,290 @@
         "name": "assets/gandalf_hell/tiles/tiles_inferno_escuro.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/pato_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_idle_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_idle_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_idle_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_idle_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_idle_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_idle_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_walk_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_walk_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_walk_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_walk_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_walk_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_jump_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_jump_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_fall_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_fall_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_hit_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_hit_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_hit_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_hit_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pato_death_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pato_death_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/arma_pistola.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arma_pistola.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_doze.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arma_doze.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_minigun.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arma_minigun.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_lanca.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arma_lanca.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/arma_lanca.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/arma_lanca.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/slot_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/slot_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/slot_4_sel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/slot_4_sel.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/slot_4_lock.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/slot_4_lock.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/pip_lanca.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud/pip_lanca.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/flash_pistola.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flash_pistola.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/flash_doze.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flash_doze.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/flash_minigun.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flash_minigun.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/flash_lanca.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flash_lanca.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pistola.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pistola.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_doze.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_doze.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_minigun.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_minigun.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_lanca.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_lanca.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_explosao.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_explosao.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/tiles/tiles_inferno_escuro_2x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/tiles/tiles_inferno_escuro_2x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_minigun_giro.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_minigun_giro.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -8360,6 +8644,12 @@
         {
           "name": "buf_ativo",
           "persistentUuid": "25ebcc74-aaf8-4e99-8976-9bcc4d7479a1",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "em_dano",
+          "persistentUuid": "58734c21-8b3b-419a-b1d1-89536c5ad7f0",
           "type": "boolean",
           "value": false
         }
@@ -8552,16 +8842,16 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "Parado",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.18,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "patop.png",
+                  "image": "pato_idle_0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8569,28 +8859,520 @@
                     "y": 0
                   },
                   "centerPoint": {
-                    "automatic": true,
+                    "automatic": false,
                     "name": "centre",
-                    "x": 0,
-                    "y": 0
+                    "x": 18,
+                    "y": 21
                   },
                   "customCollisionMask": [
                     [
                       {
-                        "x": 112,
-                        "y": 107
+                        "x": 6,
+                        "y": 11
                       },
                       {
-                        "x": 1488,
-                        "y": 107
+                        "x": 30,
+                        "y": 11
                       },
                       {
-                        "x": 1488,
-                        "y": 1495
+                        "x": 30,
+                        "y": 31
                       },
                       {
-                        "x": 112,
-                        "y": 1495
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_idle_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_idle_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Andar",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.09,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_walk_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_walk_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_walk_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_walk_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pulo",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_jump_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Queda",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_fall_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dano",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_hit_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_hit_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Morte",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "pato_death_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 18,
+                    "y": 21
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 11
+                      },
+                      {
+                        "x": 30,
+                        "y": 31
+                      },
+                      {
+                        "x": 6,
+                        "y": 31
                       }
                     ]
                   ]
@@ -8805,6 +9587,24 @@
           "persistentUuid": "f8fdd290-d1d3-4143-bd7f-f2802083e987",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "64176640-af11-4782-8ee7-f73cacb28dab",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "boom",
+          "persistentUuid": "3baf77f7-886f-4cd1-9435-e44dff957493",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "gy",
+          "persistentUuid": "0cffbace-3d89-4dac-b41a-5c91c8a963a2",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -9140,6 +9940,12 @@
           "persistentUuid": "3576b443-eb42-4652-b471-1bd25e60b6a4",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "2cfeabe1-7cff-4a9b-8f8f-313db92680c2",
+          "type": "string",
+          "value": "verde"
         }
       ],
       "effects": [
@@ -10026,6 +10832,36 @@
           "persistentUuid": "391619e2-0795-43bd-9383-3a5a6d853cd9",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "a1a808ac-30f2-4dd4-bb5b-0d2386614468",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "91fd86a1-ffd5-43fa-b282-b3fd4776262e",
+          "type": "number",
+          "value": 7
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "710d4208-0292-4b0a-a7cd-deefdf083fc1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "06134ee8-f671-47ea-b820-cb030e7d8b69",
+          "type": "number",
+          "value": -0.333
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "29409b88-93cd-42c3-b541-35457b79a5e5",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -10072,7 +10908,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "glock-removebg-preview.png",
+                  "image": "arma_pistola.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10088,20 +10924,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 42,
-                        "y": 101
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 458,
-                        "y": 101
+                        "x": 62,
+                        "y": 0
                       },
                       {
-                        "x": 458,
-                        "y": 387
+                        "x": 62,
+                        "y": 24
                       },
                       {
-                        "x": 42,
-                        "y": 387
+                        "x": 0,
+                        "y": 24
                       }
                     ]
                   ]
@@ -10226,6 +11062,12 @@
           "persistentUuid": "555f0cd0-4369-4097-99e4-f235904ffe77",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "ffa17c64-efd2-432c-8f55-1baf2fa951b2",
+          "type": "string",
+          "value": "brasa"
         }
       ],
       "effects": [
@@ -10873,6 +11715,12 @@
           "persistentUuid": "359d32a4-f3e7-4643-86e9-b6214bbe5d9b",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "eabbb73c-53e9-41fb-af51-66af36ff7fc7",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -11246,6 +12094,36 @@
           "persistentUuid": "fae583aa-4e1e-4d28-8a27-ce3a0af4dfab",
           "type": "number",
           "value": 0.65
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "f351f941-4d4b-4fad-a30d-83ee47769748",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "c7c30583-8f1b-4347-b727-4e400d2f5ddc",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "e2fd6ebc-223c-403a-a971-c85e51ef2d98",
+          "type": "number",
+          "value": 1.4
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "f3052ada-90e8-4d04-a62e-c3daa6b8ae11",
+          "type": "number",
+          "value": 0.097
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "8579033a-c55a-4f71-b383-55b77eccf8b3",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -11292,7 +12170,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "minigun.png",
+                  "image": "arma_minigun.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -11308,20 +12186,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 15,
-                        "y": 7
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 1268,
-                        "y": 7
+                        "x": 147,
+                        "y": 0
                       },
                       {
-                        "x": 1268,
-                        "y": 396
+                        "x": 147,
+                        "y": 62
                       },
                       {
-                        "x": 15,
-                        "y": 396
+                        "x": 0,
+                        "y": 62
                       }
                     ]
                   ]
@@ -11458,6 +12336,12 @@
           "persistentUuid": "f7bb3ed0-3857-4052-9dfd-b30e6c94217e",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "51a3a0a3-ab51-4e43-887b-ddebf1367667",
+          "type": "string",
+          "value": "verde"
         }
       ],
       "effects": [],
@@ -11790,6 +12674,36 @@
           "persistentUuid": "502847af-8c58-4cc5-877d-1abeca7d9bf1",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "f5c9c9e4-bcb0-4479-bead-f5a5ae6cbc3e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "a2491c44-a198-4339-af89-cfc51c6bfc7f",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "d116ccd7-43a0-45c0-ac19-d92055180e3c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "071f3c89-e910-4dc3-93a3-11ebb1be4025",
+          "type": "number",
+          "value": -0.21
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "c38d701c-079b-4624-a5c4-28c58e5cb14a",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -11836,7 +12750,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "shotgun.png",
+                  "image": "arma_doze.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -11852,20 +12766,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 6,
-                        "y": 10
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 2418,
-                        "y": 10
+                        "x": 51,
+                        "y": 0
                       },
                       {
-                        "x": 2418,
-                        "y": 469
+                        "x": 51,
+                        "y": 13
                       },
                       {
-                        "x": 6,
-                        "y": 469
+                        "x": 0,
+                        "y": 13
                       }
                     ]
                   ]
@@ -12442,6 +13356,12 @@
           "persistentUuid": "18a2d2a3-45ac-4a3d-bfbc-783bcd6ae4f6",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "0ababb62-f4f2-40ee-a6cb-cdd8472ebddc",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -15447,6 +16367,12 @@
           "persistentUuid": "c565defb-e36e-479b-ae48-6494daf980ca",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "bad402e8-c061-45e2-a324-d16f1e6da8b0",
+          "type": "string",
+          "value": "ciano"
         }
       ],
       "effects": [
@@ -18030,6 +18956,12 @@
           "persistentUuid": "b45c111b-1e63-493a-979d-9d749949b011",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "f58d6814-19bc-4b4f-84dc-0c757b1cddbc",
+          "type": "string",
+          "value": "verde"
         }
       ],
       "effects": [
@@ -20624,6 +21556,12 @@
           "persistentUuid": "6b3495a2-2cb5-4d96-a35f-95fef412f438",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "16961972-efbf-4dfc-a167-c9447dc1f52a",
+          "type": "string",
+          "value": "roxo"
         }
       ],
       "effects": [],
@@ -22728,6 +23666,35 @@
               ]
             }
           ]
+        },
+        {
+          "name": "lanca",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "hud/arma_lanca.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -24157,6 +25124,12 @@
           "persistentUuid": "2853ccab-3442-4ef5-b185-f351d9cfe392",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "531782de-da6c-477a-a39a-3a083ca805a5",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -25300,6 +26273,12 @@
           "persistentUuid": "230016da-cb91-4298-8fee-aabf0ab4bc7f",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "80394e96-a0fa-4f0b-8ec0-bb8935f3aa13",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -26443,6 +27422,12 @@
           "persistentUuid": "6cf45376-c367-4cc8-aea1-a8a181cdaa05",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "d33e1cb2-d11d-4196-9c03-1b25738acfb6",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -27586,6 +28571,12 @@
           "persistentUuid": "687e689e-cf8f-443d-9c12-e2b0f0a03822",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "28996566-0690-474a-ba61-666bcdb7456c",
+          "type": "string",
+          "value": "azul"
         }
       ],
       "effects": [
@@ -28729,6 +29720,12 @@
           "persistentUuid": "ca1e3e18-004e-4cda-9b09-482904ab9623",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "fa3b8cb0-652e-4da1-b3bb-1d2fd4654736",
+          "type": "string",
+          "value": "vermelho"
         }
       ],
       "effects": [
@@ -29608,6 +30605,12 @@
           "persistentUuid": "14faef77-af31-4d5a-84ef-4366e14cf2e3",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "49006779-7e77-40ed-86d9-07982ebba332",
+          "type": "string",
+          "value": "lasca"
         }
       ],
       "effects": [
@@ -30364,6 +31367,12 @@
           "persistentUuid": "42f00ee6-ae46-4204-bfdf-7d16fb6480cc",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "c7acfeae-bc50-4129-a06e-29111bbfed55",
+          "type": "string",
+          "value": "azul"
         }
       ],
       "effects": [
@@ -30952,6 +31961,12 @@
           "persistentUuid": "8508e3db-7f6a-4ac9-bb5d-4ccc360388d6",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "a755f378-8fa9-4dc6-bef8-062a3547f1aa",
+          "type": "string",
+          "value": "gosma"
         }
       ],
       "effects": [
@@ -31432,6 +32447,12 @@
           "persistentUuid": "539608a3-8c5a-4f75-b39a-5007402215b9",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "370057f7-fca3-46d0-af96-ad4bdea06a34",
+          "type": "string",
+          "value": "escuro"
         }
       ],
       "effects": [
@@ -32088,6 +33109,12 @@
           "persistentUuid": "51934b30-83d2-47f0-8099-8f1d0d052f05",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "b1fa1bf6-669b-4f3c-8f2a-338352ca4aa4",
+          "type": "string",
+          "value": "brasa"
         }
       ],
       "effects": [
@@ -32712,6 +33739,12 @@
           "persistentUuid": "fd4d172d-d314-47b7-95b8-c4a9401496eb",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "e42fd1c4-91dc-4b20-baf6-6a908831d6ac",
+          "type": "string",
+          "value": "escuro"
         }
       ],
       "effects": [
@@ -33264,6 +34297,12 @@
           "persistentUuid": "6fbc9f49-b337-4e1b-89a3-1d7b70c6603d",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "eed16c3a-4552-470f-84ab-fbeb909768b7",
+          "type": "string",
+          "value": "escuro"
         }
       ],
       "effects": [
@@ -34680,6 +35719,12 @@
           "persistentUuid": "fb345ddf-3d41-4f53-bff2-2c6a092df9ee",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "a192c365-9ca9-4fa1-8956-4b5042b23794",
+          "type": "string",
+          "value": "escuro"
         }
       ],
       "effects": [
@@ -43721,13 +44766,63 @@
       "type": "TileMap::SimpleTileMap",
       "variables": [],
       "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_inferno_ponte",
+      "persistentUuid": "a12e6ca0-b24d-45ca-95df-d42d278ef559",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "108,109,110,125,126,127,142"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_inferno_decor",
+      "persistentUuid": "2d3f7d66-1c67-4fd3-a1b9-d8df2c910e5b",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
       "behaviors": [],
       "content": {
         "opacity": 255,
-        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno.png",
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_2x.png",
         "rowCount": 9,
         "columnCount": 17,
-        "tileSize": 32,
+        "tileSize": 64,
         "tilesWithHitBox": ""
       }
     },
@@ -43738,13 +44833,63 @@
       "type": "TileMap::SimpleTileMap",
       "variables": [],
       "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_escuro_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_inferno_escuro_ponte",
+      "persistentUuid": "edd95535-0fde-40a2-b20b-4bf3b41b2959",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_escuro_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "108,109,110,125,126,127,142"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_inferno_escuro_decor",
+      "persistentUuid": "4cf64238-c371-4f36-b28f-a6f410f6fe4b",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
       "behaviors": [],
       "content": {
         "opacity": 255,
-        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_escuro.png",
+        "atlasImage": "assets/gandalf_hell/tiles/tiles_inferno_escuro_2x.png",
         "rowCount": 9,
         "columnCount": 17,
-        "tileSize": 32,
+        "tileSize": 64,
         "tilesWithHitBox": ""
       }
     },
@@ -43795,6 +44940,1094 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "lanca",
+      "persistentUuid": "b47eac4b-4222-4bbe-9543-a48409ed56c5",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "valocidade_bala",
+          "persistentUuid": "5b8b89a6-2b7e-4ea7-b276-adf390b7cd33",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "recuo",
+          "persistentUuid": "478b362d-4247-437d-aff4-88942b7d4f52",
+          "type": "number",
+          "value": 14
+        },
+        {
+          "name": "equipada",
+          "persistentUuid": "40b8e680-89b6-4aba-991d-7806eaaf0f5f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.9
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 2.4
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "faffb8a1-7781-4ebf-8d28-7bce4655efef",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "a4821214-02e9-4dab-bea1-983b1b5ebfb5",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "65830b4c-d103-4f78-ad43-8cc9b7faff13",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "3389e469-3306-4d44-932a-a28f5b78c8e6",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "20992821-3267-429b-9d25-956b7026b9ea",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "0116bfec-97b6-445d-876f-62cea7271082",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "df64b5bf-96fa-4e6c-9282-f91bc203dce1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "954b8fdd-3076-4dea-a346-4ae067c0d579",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "502847af-8c58-4cc5-877d-1abeca7d9bf1",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "6e58033f-aa0e-48b4-8182-35bb560c9fce",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "b562a7eb-ce9c-4da0-b957-adae75d201af",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "e3137b68-c85b-4ff9-ab97-9dfc4ee56bee",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "4667f6ee-02cb-44d3-a13b-94191c362991",
+          "type": "number",
+          "value": -0.202
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "8bfb1fc9-ee50-4f92-9daa-114d8bc3ecd4",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 0.9,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 20,
+          "BulletQuantity": 1,
+          "AngleVariance": 0,
+          "BulletSpeedVariance": 103,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 4,
+          "ReloadDuration": 2.4,
+          "MaxAmmo": 24,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 24,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": false,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": false,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "arma_lanca.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 111,
+                        "y": 0
+                      },
+                      {
+                        "x": 111,
+                        "y": 42
+                      },
+                      {
+                        "x": 0,
+                        "y": 42
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 16,
+      "name": "hud_pips_lanca",
+      "persistentUuid": "8ea5a2c5-0655-46c6-b1da-ba69da080cc3",
+      "texture": "hud/pip_lanca.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 60,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "hud_slot4",
+      "persistentUuid": "54e30e96-7dca-4c3f-9b5f-0a9ab9a5a8d1",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 2,
+          "relativeToOriginalWindowSize": true,
+          "topEdgeAnchor": 2,
+          "leftEdgeAnchor": 2,
+          "rightEdgeAnchor": 2,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "normal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "hud/slot_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sel",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "hud/slot_4_sel.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lock",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "hud/slot_4_lock.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -35,
+      "emitterAngleB": 35,
+      "emitterForceMax": 450,
+      "emitterForceMin": 120,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 80,
+      "name": "fogo_lanca",
+      "particleAlpha1": 230,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 90,
+      "particleBlue2": 70,
+      "particleColor1": "255;200;90",
+      "particleColor2": "70;70;70",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 200,
+      "particleGreen2": 70,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.15,
+      "particleRed1": 255,
+      "particleRed2": 70,
+      "particleSize1": 100,
+      "particleSize2": 220,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "706ae779-2e4e-4659-b2bc-48668e77bfb8",
+      "rendererParam1": 22,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 40,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 6,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "flash_cano",
+      "persistentUuid": "0cafbc43-ae39-4e66-b727-e686aae36b5d",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "dur",
+          "persistentUuid": "84f4bd39-7946-4585-92d4-f1906f386ac4",
+          "type": "number",
+          "value": 0.05
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pistola",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_pistola.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 6.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 6.5
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "doze",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_doze.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 15
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "minigun",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_minigun.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 5.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 5.5
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lanca",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_lanca.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 160,
+      "emitterForceMin": 40,
+      "flow": 1500,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 120,
+      "name": "explosao_fumaca",
+      "particleAlpha1": 170,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 90,
+      "particleBlue2": 40,
+      "particleColor1": "90;90;90",
+      "particleColor2": "40;40;40",
+      "particleGravityX": 0,
+      "particleGravityY": -60,
+      "particleGreen1": 90,
+      "particleGreen2": 40,
+      "particleLifeTimeMax": 1.4,
+      "particleLifeTimeMin": 0.7,
+      "particleRed1": 90,
+      "particleRed2": 40,
+      "particleSize1": 80,
+      "particleSize2": 220,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "1a72c352-91f9-479b-9db0-a5d34391cce1",
+      "rendererParam1": 46,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 35,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 22,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 520,
+      "emitterForceMin": 150,
+      "flow": 4000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 120,
+      "name": "explosao_fogo",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 120,
+      "particleBlue2": 10,
+      "particleColor1": "255;230;120",
+      "particleColor2": "200;50;10",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 230,
+      "particleGreen2": 50,
+      "particleLifeTimeMax": 0.55,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 255,
+      "particleRed2": 200,
+      "particleSize1": 100,
+      "particleSize2": 30,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "0487a931-acff-4c92-9fe2-70ab55ca6178",
+      "rendererParam1": 40,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 60,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 14,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 900,
+      "emitterForceMin": 400,
+      "flow": 4000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 120,
+      "name": "explosao_faiscas",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 160,
+      "particleBlue2": 0,
+      "particleColor1": "255;240;160",
+      "particleColor2": "255;120;0",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 240,
+      "particleGreen2": 120,
+      "particleLifeTimeMax": 0.7,
+      "particleLifeTimeMin": 0.3,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 40,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "10507cd7-bbe8-4468-856f-d957a39891db",
+      "rendererParam1": 6,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 40,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 6,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_vermelho",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 20,
+      "particleBlue2": 0,
+      "particleColor1": "200;20;20",
+      "particleColor2": "90;0;0",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 20,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 200,
+      "particleRed2": 90,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "c05ddbab-27d9-44e0-a12c-035bac30403f",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_escuro",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 30,
+      "particleBlue2": 10,
+      "particleColor1": "140;10;30",
+      "particleColor2": "50;0;10",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 10,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 140,
+      "particleRed2": 50,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "dc561443-021d-4e7e-af42-cf242f113db7",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_verde",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 40,
+      "particleBlue2": 10,
+      "particleColor1": "110;200;40",
+      "particleColor2": "30;90;10",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 200,
+      "particleGreen2": 90,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 110,
+      "particleRed2": 30,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "738f9bbb-0006-4d3e-8c9e-118ea06a5609",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_ciano",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 160,
+      "particleBlue2": 70,
+      "particleColor1": "40;200;160",
+      "particleColor2": "10;80;70",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 200,
+      "particleGreen2": 80,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 40,
+      "particleRed2": 10,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "1480adc0-0a3c-44e5-bab0-669739df8ea8",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_azul",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 160,
+      "particleColor1": "60;170;255",
+      "particleColor2": "10;60;160",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 170,
+      "particleGreen2": 60,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 60,
+      "particleRed2": 10,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "8a6c9d00-9df2-4137-902d-49f442c8aee6",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_brasa",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 40,
+      "particleBlue2": 0,
+      "particleColor1": "255;170;40",
+      "particleColor2": "200;40;0",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 170,
+      "particleGreen2": 40,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 255,
+      "particleRed2": 200,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "297e8412-5316-43e9-9580-260311ee1c91",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_lasca",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 60,
+      "particleBlue2": 25,
+      "particleColor1": "150;100;60",
+      "particleColor2": "70;45;25",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 100,
+      "particleGreen2": 45,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 150,
+      "particleRed2": 70,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "bbf11250-42f4-4890-b0a0-1734ad0c4fae",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_gosma",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 60,
+      "particleBlue2": 10,
+      "particleColor1": "220;200;60",
+      "particleColor2": "110;90;10",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 200,
+      "particleGreen2": 90,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 220,
+      "particleRed2": 110,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "e2fe0d21-8576-44b9-a9a9-5aaff9757aad",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -40,
+      "emitterAngleB": 40,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_roxo",
+      "particleAlpha1": 255,
+      "particleAlpha2": 110,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 220,
+      "particleBlue2": 100,
+      "particleColor1": "160;70;220",
+      "particleColor2": "60;20;100",
+      "particleGravityX": 0,
+      "particleGravityY": 900,
+      "particleGreen1": 70,
+      "particleGreen2": 20,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 160,
+      "particleRed2": 60,
+      "particleSize1": 100,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "1315dd00-477a-40bf-a76e-4d38e85a6fcc",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 4,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -43817,6 +46050,45 @@
           },
           {
             "objectName": "poeira"
+          },
+          {
+            "objectName": "fogo_lanca"
+          },
+          {
+            "objectName": "explosao_fumaca"
+          },
+          {
+            "objectName": "explosao_fogo"
+          },
+          {
+            "objectName": "explosao_faiscas"
+          },
+          {
+            "objectName": "sangue_vermelho"
+          },
+          {
+            "objectName": "sangue_escuro"
+          },
+          {
+            "objectName": "sangue_verde"
+          },
+          {
+            "objectName": "sangue_ciano"
+          },
+          {
+            "objectName": "sangue_azul"
+          },
+          {
+            "objectName": "sangue_brasa"
+          },
+          {
+            "objectName": "sangue_lasca"
+          },
+          {
+            "objectName": "sangue_gosma"
+          },
+          {
+            "objectName": "sangue_roxo"
           }
         ]
       },
@@ -43845,6 +46117,12 @@
           },
           {
             "folderName": "upgrades"
+          },
+          {
+            "objectName": "lanca"
+          },
+          {
+            "objectName": "flash_cano"
           }
         ]
       },
@@ -43968,6 +46246,18 @@
               },
               {
                 "objectName": "tiles_inferno_escuro"
+              },
+              {
+                "objectName": "tiles_inferno_ponte"
+              },
+              {
+                "objectName": "tiles_inferno_decor"
+              },
+              {
+                "objectName": "tiles_inferno_escuro_ponte"
+              },
+              {
+                "objectName": "tiles_inferno_escuro_decor"
               }
             ]
           },
@@ -44151,6 +46441,9 @@
                   },
                   {
                     "objectName": "hud_pips_minigun"
+                  },
+                  {
+                    "objectName": "hud_pips_lanca"
                   }
                 ]
               },
@@ -44176,6 +46469,9 @@
                     "objectName": "hud_calor_fill"
                   }
                 ]
+              },
+              {
+                "objectName": "hud_slot4"
               }
             ]
           },
@@ -44393,6 +46689,9 @@
         },
         {
           "name": "doze"
+        },
+        {
+          "name": "lanca"
         }
       ]
     },
@@ -44493,6 +46792,20 @@
         },
         {
           "name": "mina_demoniaca"
+        }
+      ]
+    },
+    {
+      "name": "Terreno",
+      "objects": [
+        {
+          "name": "chao"
+        },
+        {
+          "name": "tiles_inferno"
+        },
+        {
+          "name": "tiles_inferno_escuro"
         }
       ]
     }
@@ -44609,6 +46922,12 @@
           "value": true
         },
         {
+          "name": "lanca",
+          "persistentUuid": "0afc6bea-46f5-4f62-ade0-6db36fc6d100",
+          "type": "boolean",
+          "value": true
+        },
+        {
           "name": "minigun",
           "persistentUuid": "1444d967-a0d7-4537-b2aa-e247281b693f",
           "type": "boolean",
@@ -44625,6 +46944,54 @@
     {
       "name": "serie_bala",
       "persistentUuid": "cbbe2567-763e-4222-b3cd-df0c735406c1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "bocal_x",
+      "persistentUuid": "52d74526-34cc-4032-b6a8-045f397b3ff1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "bocal_y",
+      "persistentUuid": "1c8e932d-3c6a-47e6-bcac-aaa1ce07a037",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "mira_a",
+      "persistentUuid": "b4e74aaf-46c2-460a-8961-558f31a14eb5",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "mira_lado",
+      "persistentUuid": "caba2ecd-4fbc-455f-ac52-faf38230dc52",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "mira_graus",
+      "persistentUuid": "1212bb04-f5e7-4d16-8508-eee57cacd34f",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "coice",
+      "persistentUuid": "31eb010a-1d29-4ccd-a50b-405d889f21e3",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "coice_j",
+      "persistentUuid": "5224bed0-d0e8-45f3-bb57-a38eb8166275",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "giro",
+      "persistentUuid": "6ad54971-6e11-4989-82d0-2eed3fd0a608",
       "type": "number",
       "value": 0
     }
@@ -44932,14 +47299,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 136,
+          "height": 155,
           "keepRatio": true,
           "layer": "",
           "name": "pato",
           "persistentUuid": "0f96187e-f90c-4bfd-80a9-54e0b68853d4",
-          "width": 115,
-          "x": 66,
-          "y": 441,
+          "width": 180,
+          "x": 34,
+          "y": 422,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -45250,7 +47617,7 @@
           "name": "hud_slot1",
           "persistentUuid": "fc2741f6-5008-4cb5-9255-ee30d94938aa",
           "width": 0,
-          "x": 1700,
+          "x": 1640,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -45266,7 +47633,7 @@
           "name": "hud_slot2",
           "persistentUuid": "470aa3b6-4222-4a4f-9fd2-5b1261036394",
           "width": 0,
-          "x": 1760,
+          "x": 1700,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -45282,7 +47649,7 @@
           "name": "hud_slot3",
           "persistentUuid": "1db53932-c396-4260-a7a7-c092073f8f58",
           "width": 0,
-          "x": 1820,
+          "x": 1760,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -45541,6 +47908,38 @@
           "x": 0,
           "y": 0,
           "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_slot4",
+          "persistentUuid": "3c64ad4b-9df1-49ec-9b7c-ba9440d01211",
+          "width": 0,
+          "x": 1820,
+          "y": 872,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_pips_lanca",
+          "persistentUuid": "3db4851d-b9ab-4297-97f4-7f64917bd302",
+          "width": 60,
+          "x": 1812,
+          "y": 1006,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -45900,14 +48299,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 136,
+          "height": 155,
           "keepRatio": true,
           "layer": "",
           "name": "pato",
           "persistentUuid": "6647c81f-20af-4247-ae02-d2ade1a3f53d",
-          "width": 115,
-          "x": 66,
-          "y": 441,
+          "width": 180,
+          "x": 34,
+          "y": 422,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -46133,7 +48532,7 @@
           "name": "hud_slot1",
           "persistentUuid": "593786c5-11e3-43a6-8c8f-245c30ad41e6",
           "width": 0,
-          "x": 1700,
+          "x": 1640,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -46149,7 +48548,7 @@
           "name": "hud_slot2",
           "persistentUuid": "57bf72ca-3eeb-4b52-83e6-d435151dd76c",
           "width": 0,
-          "x": 1760,
+          "x": 1700,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -46165,7 +48564,7 @@
           "name": "hud_slot3",
           "persistentUuid": "0d069e8f-dfd7-4303-b740-0157de6f0049",
           "width": 0,
-          "x": 1820,
+          "x": 1760,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -46424,6 +48823,38 @@
           "x": 0,
           "y": 0,
           "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_slot4",
+          "persistentUuid": "3a06cdd8-3bd4-4a2a-9410-bd4f25939709",
+          "width": 0,
+          "x": 1820,
+          "y": 872,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_pips_lanca",
+          "persistentUuid": "12b25de5-4a42-4d0d-adef-5c484b797a32",
+          "width": 60,
+          "x": 1812,
+          "y": 1006,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -46811,14 +49242,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 136,
+          "height": 155,
           "keepRatio": true,
           "layer": "",
           "name": "pato",
           "persistentUuid": "2d156ff4-6cda-4ec3-b39c-23d09acf54d8",
-          "width": 115,
-          "x": 66,
-          "y": 441,
+          "width": 180,
+          "x": 34,
+          "y": 422,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -47044,7 +49475,7 @@
           "name": "hud_slot1",
           "persistentUuid": "98988ebc-d88a-455e-8b1a-2fede649cb37",
           "width": 0,
-          "x": 1700,
+          "x": 1640,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -47060,7 +49491,7 @@
           "name": "hud_slot2",
           "persistentUuid": "65ea45ed-bcac-4952-a91a-afb99104c4f6",
           "width": 0,
-          "x": 1760,
+          "x": 1700,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -47076,7 +49507,7 @@
           "name": "hud_slot3",
           "persistentUuid": "c7ccc01d-dd3c-42b4-a49e-de889ae2e3f4",
           "width": 0,
-          "x": 1820,
+          "x": 1760,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -47705,6 +50136,54 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_slot4",
+          "persistentUuid": "e3adac57-1952-428a-ae8d-a746bc839678",
+          "width": 0,
+          "x": 1820,
+          "y": 872,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_pips_lanca",
+          "persistentUuid": "516a7fc5-884f-45f3-8134-11200dc96772",
+          "width": 60,
+          "x": 1812,
+          "y": 1006,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "memento_mori",
+          "persistentUuid": "8a47a3ca-68de-4a5a-9265-bb2f23cf1eec",
+          "width": 0,
+          "x": 1748,
+          "y": 257,
+          "zOrder": 1001,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -48058,14 +50537,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 136,
+          "height": 155,
           "keepRatio": true,
           "layer": "",
           "name": "pato",
           "persistentUuid": "0378267a-2948-476a-a59f-02de81d655ee",
-          "width": 115,
-          "x": 66,
-          "y": 441,
+          "width": 180,
+          "x": 34,
+          "y": 422,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -48291,7 +50770,7 @@
           "name": "hud_slot1",
           "persistentUuid": "f1a4828e-4453-498e-9f3c-c899673a9930",
           "width": 0,
-          "x": 1700,
+          "x": 1640,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -48307,7 +50786,7 @@
           "name": "hud_slot2",
           "persistentUuid": "e2db7f7f-cda2-4f50-947b-2aeb8021eb2d",
           "width": 0,
-          "x": 1760,
+          "x": 1700,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -48323,7 +50802,7 @@
           "name": "hud_slot3",
           "persistentUuid": "7fcded82-0388-4ecd-8b8c-4e6529773068",
           "width": 0,
-          "x": 1820,
+          "x": 1760,
           "y": 872,
           "zOrder": 10,
           "numberProperties": [],
@@ -48582,6 +51061,38 @@
           "x": 0,
           "y": 0,
           "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_slot4",
+          "persistentUuid": "525f2e53-058e-46f8-9a40-7e7609f0d8a9",
+          "width": 0,
+          "x": 1820,
+          "y": 872,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_pips_lanca",
+          "persistentUuid": "4b472caf-1350-4274-8a15-a63a4eb41e2f",
+          "width": 60,
+          "x": 1812,
+          "y": 1006,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -49143,7 +51654,65 @@
                       },
                       "parameters": [
                         "",
-                        "shotgun.wav"
+                        "som_pistola.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_doze.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_minigun.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_lanca.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_explosao.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_minigun_giro.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_minigun_giro.wav",
+                        "5",
+                        "yes",
+                        "0",
+                        "1"
                       ]
                     }
                   ]
@@ -49190,13 +51759,25 @@
                     },
                     {
                       "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "lanca",
+                        "pato.X()",
+                        "pato.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ScalableCapability::ScalableBehavior::SetValue"
                       },
                       "parameters": [
                         "pistola",
                         "Scale",
-                        "*",
-                        ".25"
+                        "=",
+                        "2"
                       ]
                     },
                     {
@@ -49206,8 +51787,8 @@
                       "parameters": [
                         "doze",
                         "Scale",
-                        "*",
-                        ".1"
+                        "=",
+                        "4"
                       ]
                     },
                     {
@@ -49217,8 +51798,19 @@
                       "parameters": [
                         "minigun",
                         "Scale",
-                        "*",
-                        ".2"
+                        "=",
+                        "1.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "Scale",
+                        "=",
+                        "1.5"
                       ]
                     },
                     {
@@ -49341,6 +51933,43 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "lanca",
+                            ""
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -49373,8 +52002,30 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "equipada",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "coice_j",
+                    "=",
+                    "RandomFloatInRange(-1, 1) * Arma.tremor * clamp(coice / max(Arma.kick, 0.01), 0, 1)"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetXY"
@@ -49382,9 +52033,9 @@
                   "parameters": [
                     "Arma",
                     "=",
-                    "pato.X() +30",
+                    "pato.CenterX() + mira_lado * (15 + 0.2 * Arma.Width()) - Arma.Width() / 2 - mira_lado * cos(mira_a) * coice - sin(mira_a) * coice_j",
                     "=",
-                    "pato.Y() + 30"
+                    "pato.Y() + pato.Height() * 0.68 - Arma.Height() / 2 - sin(mira_a) * coice + mira_lado * cos(mira_a) * coice_j"
                   ]
                 },
                 {
@@ -49397,6 +52048,16 @@
                     "5000",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "=",
+                    "pato.ZOrder() - 2"
+                  ]
                 }
               ]
             },
@@ -49405,12 +52066,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PosX"
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
                   },
                   "parameters": [
-                    "alvo",
+                    "MouseX()",
                     "<",
-                    "pato.X()"
+                    "pato.CenterX()"
                   ]
                 }
               ],
@@ -49423,16 +52084,6 @@
                     "pato",
                     "Flippable",
                     "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetX"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "-",
-                    "60"
                   ]
                 },
                 {
@@ -49452,12 +52103,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PosX"
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
                   },
                   "parameters": [
-                    "alvo",
+                    "MouseX()",
                     ">=",
-                    "pato.X()"
+                    "pato.CenterX()"
                   ]
                 }
               ],
@@ -49486,8 +52137,40 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "equipada",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mira_lado",
+                    "=",
+                    "sign(MouseX() - pato.CenterX() + 0.001)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mira_a",
+                    "=",
+                    "clamp(atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo), -ToRad(55), ToRad(55))"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetXY"
@@ -49495,9 +52178,9 @@
                   "parameters": [
                     "alvo",
                     "=",
-                    "Arma.CenterX() + cos((atan2(MouseY() - Arma.CenterY(), MouseX() - Arma.CenterX()) - sign(MouseX() - Arma.CenterX()) * ToRad(recuo))) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Width() * .5",
+                    "Arma.CenterX() + mira_lado * cos(mira_a) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Width() * .5",
                     "=",
-                    "Arma.CenterY() + sin((atan2(MouseY() - Arma.CenterY(), MouseX() - Arma.CenterX()) - sign(MouseX() - Arma.CenterX()) * ToRad(recuo))) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Height() * .5"
+                    "Arma.CenterY() + sin(mira_a) * DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()) - alvo.Height() * .5"
                   ]
                 },
                 {
@@ -49520,6 +52203,26 @@
                 },
                 {
                   "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "coice",
+                    "*",
+                    "pow(0.000001, TimeDelta())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "mira_graus",
+                    "=",
+                    "ToDeg(atan2(sin(mira_a), mira_lado * cos(mira_a)))"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
@@ -49534,9 +52237,29 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
+                    "bocal_x",
+                    "=",
+                    "Arma.CenterX() + mira_lado * cos(mira_a) * Arma.Width() / 2 - mira_lado * sin(mira_a) * Arma.bocal_f * Arma.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "bocal_y",
+                    "=",
+                    "Arma.CenterY() + sin(mira_a) * Arma.Width() / 2 + cos(mira_a) * Arma.bocal_f * Arma.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
                     "laser_x",
                     "=",
-                    "Arma.CenterX() + cos(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000"
+                    "bocal_x + mira_lado * cos(mira_a) * 4000"
                   ]
                 },
                 {
@@ -49546,7 +52269,7 @@
                   "parameters": [
                     "laser_y",
                     "=",
-                    "Arma.CenterY() + sin(atan2(alvo.CenterY() - Arma.CenterY(), alvo.CenterX() - Arma.CenterX())) * 4000"
+                    "bocal_y + sin(mira_a) * 4000"
                   ]
                 }
               ],
@@ -49559,9 +52282,9 @@
                         "value": "RaycastToPosition"
                       },
                       "parameters": [
-                        "chao",
-                        "Arma.CenterX()",
-                        "Arma.CenterY()",
+                        "Terreno",
+                        "bocal_x",
+                        "bocal_y",
                         "laser_x",
                         "laser_y",
                         "laser_x",
@@ -49582,8 +52305,8 @@
                       },
                       "parameters": [
                         "laser",
-                        "Arma.CenterX()",
-                        "Arma.CenterY()",
+                        "bocal_x",
+                        "bocal_y",
                         "laser_x",
                         "laser_y",
                         "2"
@@ -49592,6 +52315,83 @@
                   ]
                 }
               ]
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Clarão",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "flash_cano",
+                        "=",
+                        "bocal_x",
+                        "=",
+                        "bocal_y"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "flash_cano",
+                        "=",
+                        "mira_graus"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetZOrder"
+                      },
+                      "parameters": [
+                        "flash_cano",
+                        "=",
+                        "pato.ZOrder() - 1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "flash_cano",
+                        "\"ttl\"",
+                        ">",
+                        "flash_cano.dur"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "flash_cano",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -49754,8 +52554,8 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::IsOnFloor",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
                             "pato",
@@ -49764,8 +52564,8 @@
                         },
                         {
                           "type": {
-                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
                           },
                           "parameters": [
                             "pato",
@@ -49955,19 +52755,17 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Group",
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
                   "name": "Propulsor acompanha o pato",
                   "source": "",
-                  "creationTime": 0,
-                  "colorR": 74,
-                  "colorG": 176,
-                  "colorB": 228,
-                  "parameters": [],
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
-                      "events": [],
                       "actions": [
                         {
                           "type": {
@@ -49993,7 +52791,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
@@ -50535,18 +53334,16 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Sensação do pato",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Pulo e queda: buffer de pulo (apertou até 0,12 s antes de pousar e o pulo sai no pouso), pulo curto ao soltar o Espaço subindo e queda mais pesada (gravidade extra descendo, fora do dash).",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -50554,7 +53351,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Pulo e queda: buffer de pulo (apertou até 0,12 s antes de pousar e o pulo sai no pouso), pulo curto ao soltar o Espaço subindo e queda mais pesada (gravidade extra descendo, fora do dash)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50570,8 +53368,8 @@
                     },
                     {
                       "type": {
-                        "value": "PlatformBehavior::CanJump",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "PlatformBehavior::CanJump"
                       },
                       "parameters": [
                         "pato",
@@ -50600,8 +53398,7 @@
                         "\"bufpulo\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50641,8 +53438,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50711,8 +53507,7 @@
                         "-0.2"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50740,7 +53535,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlatformBehavior::SetCurrentFallSpeed"
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
                       },
                       "parameters": [
                         "pato",
@@ -50749,8 +53544,7 @@
                         "pato.PlatformerObject::CurrentFallSpeed() * 0.45"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50766,8 +53560,8 @@
                     },
                     {
                       "type": {
-                        "value": "AdvancedJump::HorizontalDash::IsDashing",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
                       },
                       "parameters": [
                         "pato",
@@ -50779,7 +53573,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlatformBehavior::SetCurrentFallSpeed"
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
                       },
                       "parameters": [
                         "pato",
@@ -50788,12 +53582,10 @@
                         "min(700, pato.PlatformerObject::CurrentFallSpeed() + 1400 * TimeDelta())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Squash & stretch pelo tamanho do pato, ancorado nos pés: estica ao decolar e caindo rápido, achata ao pousar. larg0/alt0 guardam o tamanho original; imp é o impulso (decai sozinho), ar o esticado do ar.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -50801,7 +53593,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Squash & stretch pelo tamanho do pato, ancorado nos pés: estica ao decolar e caindo rápido, achata ao pousar. larg0/alt0 guardam o tamanho original; imp é o impulso (decai sozinho), ar o esticado do ar."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50838,16 +53631,15 @@
                         "pato.Height()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "PlatformBehavior::IsOnFloor",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsOnFloor"
                       },
                       "parameters": [
                         "pato",
@@ -50878,8 +53670,7 @@
                         "-0.1 * clamp(abs(pato.PlatformerObject::CurrentFallSpeed()) / 800, 0, 1)"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50906,8 +53697,7 @@
                         "0"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -50981,8 +53771,7 @@
                             "270"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
@@ -51083,8 +53872,7 @@
                         "0"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -51138,8 +53926,7 @@
                         "90 + 90 * sign(pato.PlatformerObject::CurrentSpeed())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -51224,10 +54011,407 @@
                         "pato.pe_y - pato.Height()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Animações do pato",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Animação do pato por estado. Os estados são exclusivos (morto > dano > no ar > andando > parado): mandar a mesma animação todo quadro é ok, mas alternar entre duas reiniciaria os quadros. Espelhar fica no grupo Mira."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "invencivel",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"iframes\"",
+                        "<",
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Morte\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Dano\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsJumping"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Pulo\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsFalling"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Queda\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.PlatformerObject::CurrentSpeed())",
+                        ">",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Andar\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "em_dano",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.PlatformerObject::CurrentSpeed())",
+                        "<=",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Animation",
+                        "=",
+                        "\"Parado\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -51468,6 +54652,82 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Num4\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "armas.lanca",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Arma",
+                    "equipada",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "lanca",
+                    "equipada",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "Arma",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "lanca",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "arma_atual",
+                    "=",
+                    "\"lanca\""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -51554,6 +54814,16 @@
                             "",
                             "\"Left\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "giro + 1 - Arma.espera_giro",
+                            ">=",
+                            "1"
+                          ]
                         }
                       ],
                       "actions": [
@@ -51564,8 +54834,8 @@
                           "parameters": [
                             "Arma",
                             "FireBullet",
-                            "Arma.X() + 0.5 * Arma.Width()",
-                            "Arma.Y() + 0.5 * Arma.Height()",
+                            "bocal_x",
+                            "bocal_y",
                             "projetil",
                             "alvo",
                             "Arma.valocidade_bala",
@@ -51719,6 +54989,16 @@
                             "=",
                             "min(recuo, 35)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "coice",
+                            "=",
+                            "Arma.kick"
+                          ]
                         }
                       ]
                     },
@@ -51743,7 +55023,7 @@
                           },
                           "parameters": [
                             "",
-                            "glock18-1[1].wav",
+                            "som_pistola.wav",
                             "1",
                             "80",
                             "80",
@@ -51758,7 +55038,7 @@
                             "",
                             "1",
                             "*",
-                            "RandomFloatInRange(.8, 1.1)"
+                            "RandomFloatInRange(.96, 1.04)"
                           ]
                         }
                       ]
@@ -51784,7 +55064,7 @@
                           },
                           "parameters": [
                             "",
-                            "shotgun.wav",
+                            "som_doze.wav",
                             "1",
                             "80",
                             "80",
@@ -51799,7 +55079,7 @@
                             "",
                             "1",
                             "*",
-                            "RandomFloatInRange(.9, 1.05)"
+                            "RandomFloatInRange(.97, 1.03)"
                           ]
                         }
                       ],
@@ -51865,11 +55145,11 @@
                           },
                           "parameters": [
                             "",
-                            "minigun.wav",
+                            "som_minigun.wav",
                             "1",
                             "80",
                             "80",
-                            "-40"
+                            "1"
                           ]
                         },
                         {
@@ -51880,7 +55160,418 @@
                             "",
                             "1",
                             "*",
-                            "RandomFloatInRange(.8, 1.1)"
+                            "RandomFloatInRange(.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Fogo do cano",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Cada tiro cria o clarão (flash_cano, animação da arma) na boca do cano, apontado na direção do tiro; o grupo Clarão segue o cano e apaga o clarão em poucos centésimos de segundo."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "flash_cano",
+                                "bocal_x",
+                                "bocal_y",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Animation",
+                                "=",
+                                "\"pistola\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "dur",
+                                "=",
+                                "0.05"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "\"ttl\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Scale",
+                                "=",
+                                "3 * RandomFloatInRange(0.85, 1.2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "=",
+                                "mira_graus"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "doze",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "flash_cano",
+                                "bocal_x",
+                                "bocal_y",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Animation",
+                                "=",
+                                "\"doze\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "dur",
+                                "=",
+                                "0.07"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "\"ttl\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Scale",
+                                "=",
+                                "3.5 * RandomFloatInRange(0.85, 1.2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "=",
+                                "mira_graus"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "flash_cano",
+                                "bocal_x",
+                                "bocal_y",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Animation",
+                                "=",
+                                "\"minigun\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "dur",
+                                "=",
+                                "0.04"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "\"ttl\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Scale",
+                                "=",
+                                "3 * RandomFloatInRange(0.85, 1.2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "=",
+                                "mira_graus"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "flash_cano",
+                                "bocal_x",
+                                "bocal_y",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Animation",
+                                "=",
+                                "\"lanca\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "dur",
+                                "=",
+                                "0.09"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "\"ttl\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "Scale",
+                                "=",
+                                "4 * RandomFloatInRange(0.85, 1.2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "flash_cano",
+                                "=",
+                                "mira_graus"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "fogo_lanca",
+                                "bocal_x",
+                                "bocal_y",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "fogo_lanca",
+                                "=",
+                                "mira_graus"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::HasJustFired"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "FireBullet",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundOnChannel"
+                          },
+                          "parameters": [
+                            "",
+                            "som_lanca.wav",
+                            "1",
+                            "90",
+                            "90",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSoundChannelPitch"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "=",
+                            "RandomFloatInRange(.97, 1.03)"
                           ]
                         }
                       ]
@@ -52003,6 +55694,113 @@
                     }
                   ],
                   "parameters": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Giro da minigun",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Segurar o tiro com a minigun acelera os canos (0 a 1 em 0.5 s); ela só atira com giro = 1. Soltar desacelera. O laço do canal 5 acompanha (volume e tom).",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "giro",
+                        "=",
+                        "max(0, giro - 1.6 * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "arma_atual",
+                        "=",
+                        "\"minigun\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "giro",
+                        "=",
+                        "min(1, giro + (1.6 + 1 / 0.5) * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSoundChannelVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "5",
+                        "=",
+                        "35 * giro"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "5",
+                        "=",
+                        "0.75 + 0.45 * giro"
+                      ]
+                    }
+                  ],
+                  "events": []
                 }
               ]
             }
@@ -52273,7 +56071,7 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::CurrentSpeed"
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
                           },
                           "parameters": [
                             "Terrestre",
@@ -56311,7 +60109,7 @@
                       },
                       "parameters": [
                         "Mergulhador",
-                        "chao",
+                        "Terreno",
                         "",
                         "",
                         ""
@@ -57411,7 +61209,7 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::CurrentSpeed"
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
                           },
                           "parameters": [
                             "pato",
@@ -57880,7 +61678,7 @@
                     },
                     {
                       "type": {
-                        "value": "PlatformBehavior::CurrentSpeed"
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
                       },
                       "parameters": [
                         "pato",
@@ -59357,7 +63155,7 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::CurrentSpeed"
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
                           },
                           "parameters": [
                             "pato",
@@ -60118,6 +63916,17 @@
                       },
                       "parameters": [
                         "projetil",
+                        "raio",
+                        "=",
+                        "Arma.raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
                         "queda_min",
                         "=",
                         "Arma.queda_min"
@@ -60242,6 +64051,357 @@
               "parameters": []
             },
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Gravidade da granada",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Granada (projetil.raio > 0) cai em arco: gravidade alta (900 px/s2) somada à velocidade do tiro."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "gy",
+                        "+",
+                        "900 * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "+",
+                        "projetil.gy * TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Explosão da granada",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Granada (projetil.raio > 0) explode ao tocar no chão ou num inimigo: dano em área, 100% no centro e 50% na borda do raio, repulsão para longe do centro, explosão de partículas (fumaça, fogo e faíscas) e som. Depois a granada some."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "Terreno",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "boom",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "Inimigo",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "boom",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "boom",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_fumaca",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_fogo",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_faiscas",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_explosao.wav",
+                        "3",
+                        "90",
+                        "90",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "3",
+                        "=",
+                        "RandomFloatInRange(.95, 1.05)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY())",
+                            "<",
+                            "projetil.raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "vida",
+                            "-",
+                            "max(1, round(projetil.dano * (1 - 0.5 * DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY()) / projetil.raio) * RandomFloatInRange(0.9, 1.1) * GlobalVariable(mult_dano)))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "acertado",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "kb_dir",
+                            "=",
+                            "sign(Inimigo.CenterX() - projetil.CenterX() + 0.001) * projetil.repulsao * (1 - 0.5 * DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY()) / projetil.raio)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "projetil",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -60250,7 +64410,7 @@
                   },
                   "parameters": [
                     "projetil",
-                    "chao",
+                    "Terreno",
                     "",
                     "",
                     ""
@@ -60278,7 +64438,7 @@
                   },
                   "parameters": [
                     "projetil_inimigo",
-                    "chao",
+                    "Terreno",
                     "",
                     "",
                     ""
@@ -60301,6 +64461,17 @@
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "projetil",
               "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "projetil",
+                    "raio",
+                    "<=",
+                    "0"
+                  ]
+                },
                 {
                   "type": {
                     "value": "CollisionNP"
@@ -60380,53 +64551,369 @@
                     "=",
                     "projetil.serie"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "hit",
-                    "projetil.X()",
-                    "projetil.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "hit",
-                    "\"ttl\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "hit",
-                    "Scale",
-                    "*",
-                    ".05"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "hit",
-                    "=",
-                    "projetil.X()+(projetil.Width()/2)-(hit.Width()/25)",
-                    "=",
-                    "projetil.Y()+(projetil.Height()/2)-hit.Height()*.5"
-                  ]
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"vermelho\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_vermelho",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_vermelho",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"escuro\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_escuro",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_escuro",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"verde\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_verde",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_verde",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"ciano\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_ciano",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_ciano",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"azul\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_azul",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_azul",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"brasa\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_brasa",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_brasa",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"lasca\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_lasca",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_lasca",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"gosma\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_gosma",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_gosma",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "sangue",
+                        "=",
+                        "\"roxo\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "sangue_roxo",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "sangue_roxo",
+                        "=",
+                        "projetil.Angle()"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -61389,7 +65876,7 @@
                       },
                       "parameters": [
                         "moeda",
-                        "chao",
+                        "Terreno",
                         "",
                         "",
                         ""
@@ -61403,7 +65890,7 @@
                       },
                       "parameters": [
                         "moeda",
-                        "chao",
+                        "Terreno",
                         ""
                       ]
                     },
@@ -62089,6 +66576,14 @@
                         "Opacity",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "hud_pips_lanca"
                       ]
                     }
                   ]
@@ -62983,6 +67478,78 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "hud_arma_icone",
+                            "Animation",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "hud_arma_nome",
+                            "Text",
+                            "=",
+                            "\"LANÇA-GRANADAS\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "hud_pips_lanca",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                          },
+                          "parameters": [
+                            "hud_pips_lanca",
+                            "Resizable",
+                            "=",
+                            "12 * Arma.FireBullet::ShotsBeforeNextReload()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "hud_pips_lanca",
+                            "=",
+                            "hud_arma.X() + 360 + 4 - hud_pips_lanca.Width()",
+                            "=",
+                            "hud_arma.Y() + 78"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -63010,45 +67577,6 @@
                     "textR": 0
                   },
                   "comment": "Destaca o slot da arma equipada e mostra cadeado nas bloqueadas."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "hud_slot1",
-                        "Animation",
-                        "=",
-                        "\"normal\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "hud_slot2",
-                        "Animation",
-                        "=",
-                        "\"normal\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "hud_slot3",
-                        "Animation",
-                        "=",
-                        "\"normal\""
-                      ]
-                    }
-                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -63186,6 +67714,63 @@
                       },
                       "parameters": [
                         "hud_slot3",
+                        "Animation",
+                        "=",
+                        "\"lock\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "equipada",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "hud_slot4",
+                        "Animation",
+                        "=",
+                        "\"sel\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "armas.lanca",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "hud_slot4",
                         "Animation",
                         "=",
                         "\"lock\""

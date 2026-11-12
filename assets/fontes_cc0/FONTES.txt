@@ -1,0 +1,22 @@
+De onde vêm os sons gravados do jogo
+====================================
+
+Todas as gravações abaixo são de domínio público (CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/),
+conforme a página de cada uma no Freesound. Não exigem atribuição; ficam anotadas aqui para conferência.
+Baixadas em 2026-11-12 (prévia mp3 do Freesound, convertida para wav mono 44,1 kHz). Usadas por tools/t19_sons_cc0.py.
+
+som_lanca.wav (lança-granadas)
+  lanca_163458.wav             "Grenade Launcher" por LeMudCrab
+                               https://freesound.org/people/LeMudCrab/sounds/163458/
+  lanca_162401.wav             "M203 Grenade Launcher 2" por qubodup (segundo o autor, de um vídeo do governo dos EUA)
+                               https://freesound.org/people/qubodup/sounds/162401/
+
+som_minigun.wav (minigun, um tiro)
+  minigun_450853.wav           "gun lee enfield 303 rifle clean shot" por kyles (os primeiros 0,8 s)
+                               https://freesound.org/people/kyles/sounds/450853/
+
+som_minigun_giro.wav (giro dos canos da minigun, em laço)
+  giro_125401.wav              "Electric Motor Whir" por jasonLON (motor de uma Dremel; 4 s a partir dos 5 s)
+                               https://freesound.org/people/jasonLON/sounds/125401/
+
+Os outros sons (som_pistola.wav, som_doze.wav, som_explosao.wav) são sintetizados por tools/t17_sons_armas.py, sem gravação nenhuma.
