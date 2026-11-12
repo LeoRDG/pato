@@ -9033,6 +9033,12 @@
           "persistentUuid": "58734c21-8b3b-419a-b1d1-89536c5ad7f0",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "chao_baixo",
+          "persistentUuid": "8a9df7bc-548b-498c-b294-ee55b77759c1",
+          "type": "number",
+          "value": -999999
         }
       ],
       "effects": [],
@@ -53467,6 +53473,101 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Câmera não perde o chão",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "O chão mais baixo em que o pato já pisou (pato.chao_baixo) fica sempre com pelo menos 140 px na tela: a câmera não sobe além disso quando o pato pula. Se o pato subir muito (ficaria a menos de 150 px do topo), a câmera volta a acompanhar.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "chao_baixo",
+                        "=",
+                        "max(pato.chao_baixo, pato.Y() + pato.Height())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "chao_baixo",
+                        ">",
+                        "-999998"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "<",
+                        "min(pato.chao_baixo + 140 - CameraHeight(\"\", 0) / 2, pato.Y() - 150 + CameraHeight(\"\", 0) / 2)",
+                        "\"\"",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetCameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "min(pato.chao_baixo + 140 - CameraHeight(\"\", 0) / 2, pato.Y() - 150 + CameraHeight(\"\", 0) / 2)",
+                        "\"\"",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
