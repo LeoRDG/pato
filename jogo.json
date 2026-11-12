@@ -9682,6 +9682,12 @@
           "persistentUuid": "0cffbace-3d89-4dac-b41a-5c91c8a963a2",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "d9d0674c-2490-4d5a-a221-9a3cb4eff0c5",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -10945,6 +10951,12 @@
           "persistentUuid": "476d2924-439d-4701-95ba-a7443019a024",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "f00f6f73-be52-46a2-bf5d-b8e955009e52",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -12213,6 +12225,12 @@
           "persistentUuid": "6a8ddc16-332e-4af6-8484-543099562754",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "db89cf69-c0ee-4e70-9ffd-85b86ccd1647",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -12799,6 +12817,12 @@
           "persistentUuid": "d33b5e99-3b6f-4784-a4de-6dd7b4562e1b",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "6e346158-35b2-45a1-8b16-c8d65a2e737f",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -45096,7 +45120,7 @@
           "name": "dano",
           "persistentUuid": "faffb8a1-7781-4ebf-8d28-7bce4655efef",
           "type": "number",
-          "value": 90
+          "value": 1
         },
         {
           "name": "alcance",
@@ -45181,6 +45205,12 @@
           "persistentUuid": "91d5d14d-ee41-4ad7-abe2-79aec898ec5d",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "5238dab1-740d-4df6-8c6f-309272ebea8d",
+          "type": "number",
+          "value": 90
         }
       ],
       "effects": [],
@@ -45666,7 +45696,32 @@
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 14,
-      "variables": [],
+      "variables": [
+        {
+          "name": "dano",
+          "persistentUuid": "71f99a4f-2785-4e6a-afe5-d5a207d8685f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "91d98fa0-c415-4ffe-b86e-accfc90e112c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "364a8059-dcbe-42e7-bfaf-369869473e76",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "aplicado",
+          "persistentUuid": "55752e71-cf85-4ef4-8a3e-914a0397afe9",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -47390,6 +47445,12 @@
           "persistentUuid": "7f96a991-ff7a-48fd-89d8-2d8b838a2837",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "exp_d",
+          "persistentUuid": "19f7b4d5-7761-4d3b-86b3-05871f7d7156",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -48498,6 +48559,12 @@
         {
           "name": "laser_y",
           "persistentUuid": "6366eebf-e1d0-4be0-b8da-6dc58d62386e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "exp_d",
+          "persistentUuid": "d520d703-1c15-4fdf-9c53-e2d44546d043",
           "type": "number",
           "value": 0
         }
@@ -62532,6 +62599,17 @@
                       },
                       "parameters": [
                         "projetil",
+                        "dano_explosao",
+                        "=",
+                        "Arma.dano_explosao"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
                         "queda_min",
                         "=",
                         "Arma.queda_min"
@@ -62731,16 +62809,18 @@
               "parameters": []
             },
             {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
+              "type": "BuiltinCommonInstructions::Group",
               "name": "Explosão da granada",
               "source": "",
-              "type": "BuiltinCommonInstructions::Group",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Granada (projetil.raio > 0) explode ao tocar no chão ou num inimigo; quem ela acerta direto leva o dano da granada (1). A explosão cria as partículas e o som, e o emissor explosao_fogo leva o dano, o raio e a repulsão (ver Dano da explosão). Depois a granada some.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -62748,12 +62828,10 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  },
-                  "comment": "Granada (projetil.raio > 0) explode ao tocar no chão ou num inimigo: dano em área, 100% no centro e 50% na borda do raio, repulsão para longe do centro, explosão de partículas (fumaça, fogo e faíscas) e som. Depois a granada some."
+                  }
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -62791,11 +62869,12 @@
                         ""
                       ]
                     }
-                  ]
+                  ],
+                  "events": [],
+                  "object": "projetil"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -62843,12 +62922,35 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "vida",
+                        "-",
+                        "max(1, round(projetil.dano * GlobalVariable(mult_dano)))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "acertado",
+                        "True",
+                        ""
+                      ]
                     }
-                  ]
+                  ],
+                  "events": [],
+                  "object": "projetil"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -62901,6 +63003,39 @@
                     },
                     {
                       "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "explosao_fogo",
+                        "dano",
+                        "=",
+                        "projetil.dano_explosao"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "explosao_fogo",
+                        "raio",
+                        "=",
+                        "projetil.raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "explosao_fogo",
+                        "repulsao",
+                        "=",
+                        "projetil.repulsao"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "PlaySoundOnChannel"
                       },
                       "parameters": [
@@ -62922,22 +63057,64 @@
                         "=",
                         "RandomFloatInRange(.95, 1.05)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "projetil",
+                        ""
+                      ]
                     }
                   ],
+                  "events": [],
+                  "object": "projetil"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Dano da explosão",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Cada explosão nova (emissor explosao_fogo) dá dano uma vez em todo inimigo vivo cuja caixa esteja a menos de raio px do centro: dano * (1 - distância / raio), 100% no centro e 0 na borda (mínimo 1). A repulsão cai do mesmo jeito.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "explosao_fogo",
+                        "aplicado",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
+                      "type": "BuiltinCommonInstructions::ForEach",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY())",
-                            "<",
-                            "projetil.raio"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "BooleanObjectVariable"
@@ -62953,38 +63130,69 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Inimigo",
-                            "vida",
-                            "-",
-                            "max(1, round(projetil.dano * (1 - 0.5 * DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY()) / projetil.raio) * RandomFloatInRange(0.9, 1.1) * GlobalVariable(mult_dano)))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "acertado",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "kb_dir",
+                            "exp_d",
                             "=",
-                            "sign(Inimigo.CenterX() - projetil.CenterX() + 0.001) * projetil.repulsao * (1 - 0.5 * DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), projetil.CenterX(), projetil.CenterY()) / projetil.raio)"
+                            "sqrt(pow(max(0, abs(explosao_fogo.X() - Inimigo.CenterX()) - Inimigo.Width() / 2), 2) + pow(max(0, abs(explosao_fogo.Y() - Inimigo.CenterY()) - Inimigo.Height() / 2), 2))"
                           ]
                         }
-                      ]
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "exp_d",
+                                "<",
+                                "explosao_fogo.raio"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "vida",
+                                "-",
+                                "max(1, round(explosao_fogo.dano * (1 - exp_d / explosao_fogo.raio) * RandomFloatInRange(0.9, 1.1) * GlobalVariable(mult_dano)))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "acertado",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "kb_dir",
+                                "=",
+                                "sign(Inimigo.CenterX() - explosao_fogo.X() + 0.001) * explosao_fogo.repulsao * (1 - exp_d / explosao_fogo.raio)"
+                              ]
+                            }
+                          ],
+                          "events": []
+                        }
+                      ],
+                      "object": "Inimigo"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -62992,19 +63200,22 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "Delete"
+                            "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "projetil",
+                            "explosao_fogo",
+                            "aplicado",
+                            "True",
                             ""
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     }
-                  ]
+                  ],
+                  "object": "explosao_fogo"
                 }
-              ],
-              "parameters": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
