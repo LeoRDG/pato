@@ -8690,6 +8690,266 @@
         "name": "assets/anjos/roda_anjo/morte_06.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/som_acerto.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_acerto.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_atirador.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_atirador.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_caveira.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_caveira.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_condenado.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_condenado.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_cutulu.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_cutulu.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_inchado.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_inchado.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_mergulhador.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_mergulhador.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_mina.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_mina.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_olho.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_olho.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_pigman.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_pigman.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_aviso_sapo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_aviso_sapo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_cura.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_cura.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_cuspe.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_cuspe.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_dash.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_dash.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_fogo_caveira.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_fogo_caveira.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_inimigo_morte.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_inimigo_morte.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_moeda.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_moeda.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_moedas_soltas.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_moedas_soltas.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pato_dano.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pato_dano.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pato_morte.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pato_morte.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pouso.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pouso.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pulo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pulo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_pulo_ar.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_pulo_ar.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_tiro_inimigo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_tiro_inimigo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_tiro_olho.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_tiro_olho.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_troca_arma.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_troca_arma.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -51163,6 +51423,111 @@
                         },
                         {
                           "type": {
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pulo.wav",
+                            "",
+                            "40",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CanJump"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
+                          },
+                          "parameters": [
+                            "pato",
+                            "AdvancedJump",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pulo.wav",
+                            "",
+                            "40",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CanJump"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "PlatformBehavior::IsOnFloor",
                             "inverted": true
                           },
@@ -51196,6 +51561,18 @@
                             "\"linear\"",
                             "0.35",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pulo_ar.wav",
+                            "",
+                            "45",
+                            "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
                       ],
@@ -51316,6 +51693,18 @@
                             "dash",
                             "=",
                             "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_dash.wav",
+                            "",
+                            "50",
+                            "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
                       ]
@@ -51572,6 +51961,18 @@
                         "ultima_run.boss_vida",
                         "=",
                         "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pato_morte.wav",
+                        "",
+                        "90",
+                        "1"
                       ]
                     }
                   ],
@@ -52096,6 +52497,18 @@
                         "False",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pulo.wav",
+                        "",
+                        "40",
+                        "RandomFloatInRange(0.95, 1.05)"
+                      ]
                     }
                   ]
                 },
@@ -52297,6 +52710,18 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pouso.wav",
+                        "",
+                        "35 + 45 * clamp((pato.queda_vy - 250) / 450, 0, 1)",
+                        "RandomFloatInRange(0.92, 1.05)"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Create"
@@ -52896,6 +53321,18 @@
                     "=",
                     "\"pistola\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_troca_arma.wav",
+                    "",
+                    "50",
+                    "RandomFloatInRange(0.95, 1.05)"
+                  ]
                 }
               ]
             },
@@ -52970,6 +53407,18 @@
                     "arma_atual",
                     "=",
                     "\"doze\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_troca_arma.wav",
+                    "",
+                    "50",
+                    "RandomFloatInRange(0.95, 1.05)"
                   ]
                 }
               ]
@@ -53046,6 +53495,18 @@
                     "=",
                     "\"minigun\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_troca_arma.wav",
+                    "",
+                    "50",
+                    "RandomFloatInRange(0.95, 1.05)"
+                  ]
                 }
               ]
             },
@@ -53121,6 +53582,18 @@
                     "arma_atual",
                     "=",
                     "\"lanca\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_troca_arma.wav",
+                    "",
+                    "50",
+                    "RandomFloatInRange(0.95, 1.05)"
                   ]
                 }
               ]
@@ -55895,10 +56368,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_pigman.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     }
                   ]
@@ -56458,10 +56931,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_atirador.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     }
                   ]
@@ -56657,6 +57130,36 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::HasJustFired"
+                  },
+                  "parameters": [
+                    "atirador",
+                    "FireBullet",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_tiro_inimigo.wav",
+                    "",
+                    "55",
+                    "RandomFloatInRange(0.93, 1.07)"
+                  ]
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -57030,10 +57533,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_sapo.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -57237,6 +57740,18 @@
                         "=",
                         "\"cura\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_cura.wav",
+                        "",
+                        "50",
+                        "1"
+                      ]
                     }
                   ]
                 },
@@ -57437,6 +57952,36 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::HasJustFired"
+                  },
+                  "parameters": [
+                    "sapo",
+                    "FireBullet",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_cuspe.wav",
+                    "",
+                    "55",
+                    "RandomFloatInRange(0.93, 1.07)"
+                  ]
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -57718,10 +58263,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_cutulu.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -58662,10 +59207,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_mergulhador.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     }
                   ]
@@ -59312,10 +59857,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_condenado.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -59835,10 +60380,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_inchado.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -59910,6 +60455,18 @@
                         "vida",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_explosao.wav",
+                        "",
+                        "70",
+                        "RandomFloatInRange(0.75, 0.85)"
                       ]
                     }
                   ],
@@ -60271,10 +60828,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_caveira.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -60346,6 +60903,18 @@
                         "Animation",
                         "=",
                         "\"ataque\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_fogo_caveira.wav",
+                        "",
+                        "75",
+                        "1"
                       ]
                     }
                   ]
@@ -61482,10 +62051,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_olho.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     },
                     {
@@ -61624,6 +62193,36 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::HasJustFired"
+                  },
+                  "parameters": [
+                    "olho_demoniaco",
+                    "FireBullet",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_tiro_olho.wav",
+                    "",
+                    "55",
+                    "RandomFloatInRange(0.93, 1.07)"
+                  ]
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -61792,10 +62391,10 @@
                       },
                       "parameters": [
                         "",
-                        "test.wav",
+                        "som_aviso_mina.wav",
                         "",
-                        "60",
-                        "0.6"
+                        "65",
+                        "RandomFloatInRange(0.95, 1.05)"
                       ]
                     }
                   ]
@@ -61856,6 +62455,18 @@
                         "vida",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_explosao.wav",
+                        "",
+                        "70",
+                        "RandomFloatInRange(0.75, 0.85)"
                       ]
                     }
                   ],
@@ -63856,10 +64467,10 @@
                       },
                       "parameters": [
                         "",
-                        "hit.wav",
+                        "som_acerto.wav",
                         "",
-                        "20",
-                        "1"
+                        "35",
+                        "RandomFloatInRange(0.9, 1.1)"
                       ]
                     },
                     {
@@ -63960,6 +64571,72 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Sons de dano",
+          "source": "",
+          "creationTime": 0,
+          "colorR": 74,
+          "colorG": 176,
+          "colorB": 228,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Quack quando o pato perde vida (antes do Feedback atualizar vida_controle). A morte tem som próprio.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "<",
+                    "pato.vida_controle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_pato_dano.wav",
+                    "",
+                    "80",
+                    "RandomFloatInRange(0.95, 1.08)"
+                  ]
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "colorB": 228,
@@ -64270,6 +64947,30 @@
                     "Animation",
                     "=",
                     "\"morte\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_inimigo_morte.wav",
+                    "",
+                    "55",
+                    "RandomFloatInRange(0.9, 1.1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_moedas_soltas.wav",
+                    "",
+                    "35",
+                    "1"
                   ]
                 }
               ],
@@ -65042,6 +65743,18 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_moeda.wav",
+                        "",
+                        "45",
+                        "RandomFloatInRange(0.97, 1.12)"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "SetNumberObjectVariable"

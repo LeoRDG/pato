@@ -49,3 +49,125 @@ som_recarga_pistola.wav, som_recarga_doze.wav, som_recarga_minigun.wav, som_reca
                                https://freesound.org/people/mernantau/sounds/766165/
 
 Os outros sons (som_pistola.wav, som_doze.wav) são sintetizados por tools/t17_sons_armas.py, sem gravação nenhuma.
+
+--- início: sons do jogo, tools/t31_sons_jogo.py (gerado, não editar à mão) ---
+
+som_pulo.wav (pulo do chão)
+  pulo_331381.wav                    "Public Domain Jump Sound" por qubodup (inteiro, tom +15%)
+                                     https://freesound.org/people/qubodup/sounds/331381/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_pulo_ar.wav (pulo no ar, com o giro)
+  whoosh_60013.wav                   "Whoosh" por qubodup (inteiro, tom +30%)
+                                     https://freesound.org/people/qubodup/sounds/60013/   [Creative Commons 0, baixado em 2026-11-12]
+  pulo_331381.wav                    "Public Domain Jump Sound" por qubodup (inteiro, tom +40%, baixo)
+                                     https://freesound.org/people/qubodup/sounds/331381/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_dash.wav (dash)
+  whoosh_60013.wav                   "Whoosh" por qubodup (inteiro, tom -15%)
+                                     https://freesound.org/people/qubodup/sounds/60013/   [Creative Commons 0, baixado em 2026-11-12]
+  woosh_683101.wav                   "quick woosh" por florianreichelt (0,25 s a partir de 0,19 s)
+                                     https://freesound.org/people/florianreichelt/sounds/683101/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_pouso.wav (pouso depois de uma queda)
+  impacto_364690.wav                 "Human Impact on Ground" por alegemaate (0,35 s, tom +30%, sem grave)
+                                     https://freesound.org/people/alegemaate/sounds/364690/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_pato_dano.wav (pato leva dano)
+  quack_418509.wav                   "single quack from a duck" por Mikes-MultiMedia (0,22 s, tom +10%)
+                                     https://freesound.org/people/Mikes-MultiMedia/sounds/418509/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_pato_morte.wav (pato morre: quack grave e o demônio saindo)
+  quack2_242664.wav                  "quack.wav" por Reitanna (inteiro, tom -20%)
+                                     https://freesound.org/people/Reitanna/sounds/242664/   [Creative Commons 0, baixado em 2026-11-12]
+  demonio_444445.wav                 "Demon Growl for Halloween Spooky Creepy Scary Monster Ghoul Ghost Sounds" por Voices_Of_Marz (1,4 s a partir de 0,28 s, entra aos 0,25 s)
+                                     https://freesound.org/people/Voices_Of_Marz/sounds/444445/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_moeda.wav (pegar moeda)
+  moeda_402067.wav                   "Retro, Coin 01.wav" por LilMati (inteiro)
+                                     https://freesound.org/people/LilMati/sounds/402067/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_moedas_soltas.wav (moedas caindo do inimigo morto)
+  moedas_caem_17502.wav              "Coin dropping.wav" por Jace (0,7 s a partir de 0,26 s)
+                                     https://freesound.org/people/Jace/sounds/17502/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_acerto.wav (bala acerta inimigo)
+  splat_232135.wav                   "splat 005.wav" por yottasounds (inteiro)
+                                     https://freesound.org/people/yottasounds/sounds/232135/   [Creative Commons 0, baixado em 2026-11-12]
+  soco_118513.wav                    "Punch_02.wav" por thefsoundman (0,18 s, por baixo)
+                                     https://freesound.org/people/thefsoundman/sounds/118513/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_inimigo_morte.wav (inimigo morre)
+  morte_monstro_559621.wav           "monster_sound_medium_death.wav" por Leadstarson (0,75 s)
+                                     https://freesound.org/people/Leadstarson/sounds/559621/   [Creative Commons 0, baixado em 2026-11-12]
+  splat2_87535.wav                   "Splat!.wav" por Whiprealgood (inteiro, por baixo)
+                                     https://freesound.org/people/Whiprealgood/sounds/87535/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_pigman.wav (pigman avisa a investida)
+  porco_233177.wav                   "Pig - Grunt and Squeal 4 - 96kHz.wav" por JarredGibb (0,8 s a partir de 0,16 s)
+                                     https://freesound.org/people/JarredGibb/sounds/233177/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_atirador.wav (atirador engatilha)
+  rec_pistola_ferrolho_tras_276959.wav "pistol reload sound.mp3" por GFL7 (inteiro, tom -15%)
+                                     https://freesound.org/people/GFL7/sounds/276959/   [Creative Commons 0, baixado em 2026-11-12]
+  rec_pistola_ferrolho_frente_276959.wav "pistol reload sound.mp3" por GFL7 (inteiro, tom -15%, aos 0,14 s)
+                                     https://freesound.org/people/GFL7/sounds/276959/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_tiro_inimigo.wav (tiro do atirador)
+  projetil_193427.wav                "Projectile Shoot" por unfa (0,3 s, tom -20%)
+                                     https://freesound.org/people/unfa/sounds/193427/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_sapo.wav (sapo coaxa antes de cuspir)
+  sapo_536759.wav                    "Frog.ogg" por egomassive (inteiro)
+                                     https://freesound.org/people/egomassive/sounds/536759/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_cuspe.wav (sapo cospe)
+  cuspe_52157.wav                    "spitpaste_1-2.aif" por wogelife (0,25 s a partir de 1,05 s)
+                                     https://freesound.org/people/wogelife/sounds/52157/   [Creative Commons 0, baixado em 2026-11-12]
+  cuspe2_445118.wav                  "Cartoon - Splat!" por Breviceps (tom +30%, por baixo)
+                                     https://freesound.org/people/Breviceps/sounds/445118/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_cura.wav (sapo cura os inimigos perto)
+  energia_519415.wav                 "Magical focus energy" por Iridiuss (0,8 s, tom +50%)
+                                     https://freesound.org/people/Iridiuss/sounds/519415/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_cutulu.wav (cutulu rosna antes de atacar)
+  rosnado_222523.wav                 "Deep Monster Growl" por uagadugu (0,9 s a partir de 0,32 s, tom -10%)
+                                     https://freesound.org/people/uagadugu/sounds/222523/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_mergulhador.wav (voadores gritam antes do mergulho)
+  grito_333832.wav                   "Demonic Woman Scream.wav" por nick121087 (0,55 s, tom +15%)
+                                     https://freesound.org/people/nick121087/sounds/333832/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_condenado.wav (condenados gemem antes do bote)
+  zumbi_463721.wav                   "Burp Monster Zombie groan moan" por EricsSoundschmiede (0,6 s)
+                                     https://freesound.org/people/EricsSoundschmiede/sounds/463721/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_inchado.wav (condenado inchado borbulha antes de explodir)
+  gorgolejo_402861.wav               "Gurgled Scream" por jacksonacademyashmore (0,65 s)
+                                     https://freesound.org/people/jacksonacademyashmore/sounds/402861/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_caveira.wav (caveira gigante ruge antes do fogo)
+  rugido_469123.wav                  "Demon_Lion_Monster_Growl_Roar" por Manim8 (0,8 s a partir de 0,35 s)
+                                     https://freesound.org/people/Manim8/sounds/469123/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_fogo_caveira.wav (explosão de fogo da caveira gigante)
+  fogo_260554.wav                    "Basic Fire whoosh" por LookIMadeAThing (1,3 s)
+                                     https://freesound.org/people/LookIMadeAThing/sounds/260554/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_olho.wav (olho demoníaco carrega o tiro)
+  carga_500913.wav                   "Spell charge spin down" por Bertsz (0,55 s do começo, de trás para a frente (sobe))
+                                     https://freesound.org/people/Bertsz/sounds/500913/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_tiro_olho.wav (tiro do olho demoníaco)
+  magia_442872.wav                   "Fire Magic" por qubodup (0,6 s)
+                                     https://freesound.org/people/qubodup/sounds/442872/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_aviso_mina.wav (mina demoníaca apita antes de explodir)
+  trava_189327.wav                   "missile lock on sound" por Alxy (0,5 s, tom +20%)
+                                     https://freesound.org/people/Alxy/sounds/189327/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_troca_arma.wav (troca de arma)
+  rec_pistola_ferrolho_frente_276959.wav "pistol reload sound.mp3" por GFL7 (inteiro, tom -10%)
+                                     https://freesound.org/people/GFL7/sounds/276959/   [Creative Commons 0, baixado em 2026-11-12]
+
+--- fim: sons do jogo, tools/t31_sons_jogo.py ---
