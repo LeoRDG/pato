@@ -8757,44 +8757,8 @@
           "value": false
         },
         {
-          "name": "larg0",
-          "persistentUuid": "e0fe1b06-1224-436e-a491-f090a785a37f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "alt0",
-          "persistentUuid": "0e9fb59f-b7aa-49a3-a4b7-721b9351602f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "imp",
-          "persistentUuid": "870c3937-1eb5-408d-a28f-55df5d4847ed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ar",
-          "persistentUuid": "a8cfaac2-6ccc-43a2-90a4-0968255f581e",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "queda_vy",
           "persistentUuid": "8c1b1049-d33c-43bb-9e48-ea022dfc31e1",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "pe_y",
-          "persistentUuid": "572ab9d7-0e4d-4eba-9432-6b6ec67b109e",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "cx",
-          "persistentUuid": "6266ae6c-e129-4fb6-b9b9-ca1f56d75940",
           "type": "number",
           "value": 0
         },
@@ -47416,12 +47380,6 @@
       "objectsGroups": [],
       "variables": [
         {
-          "name": "jaGirou",
-          "persistentUuid": "a179f1b3-10a6-4716-9b46-48e220b7b100",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "laser_x",
           "persistentUuid": "18b8da12-9182-4aed-8de5-e2f920b42f7a",
           "type": "number",
@@ -48531,12 +48489,6 @@
       },
       "objectsGroups": [],
       "variables": [
-        {
-          "name": "jaGirou",
-          "persistentUuid": "aa77c371-91ba-42c0-954e-d839f9e63685",
-          "type": "number",
-          "value": 0
-        },
         {
           "name": "laser_x",
           "persistentUuid": "fdd05c9e-9f8c-439c-8ffb-8dc845c3bbe0",
@@ -50623,7 +50575,7 @@
                   "parameters": [
                     "mira_a",
                     "=",
-                    "atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - asin(clamp(Arma.bocal_f * Arma.Height() / max(DistanceBetweenPositions(Arma.CenterX(), Arma.CenterY(), MouseX(), MouseY()), Arma.Width() / 2 + 1), -1, 1)) - ToRad(recuo)"
+                    "atan2(MouseY() - (pato.Y() + pato.Height() * 0.68), mira_lado * (MouseX() - pato.CenterX())) - asin(clamp(Arma.bocal_f * Arma.Height() / max(DistanceBetweenPositions(pato.CenterX(), (pato.Y() + pato.Height() * 0.68), MouseX(), MouseY()), 1), -1, 1)) - ToRad(recuo)"
                   ]
                 },
                 {
@@ -50653,9 +50605,9 @@
                   "parameters": [
                     "Arma",
                     "=",
-                    "pato.CenterX() + mira_lado * (15 + 0.2 * Arma.Width()) - Arma.Width() / 2 - mira_lado * cos(mira_a) * coice - sin(mira_a) * coice_j",
+                    "pato.CenterX() + mira_lado * cos(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) - sin(mira_a) * coice_j - Arma.Width() / 2",
                     "=",
-                    "pato.Y() + pato.Height() * 0.68 - Arma.Height() / 2 - sin(mira_a) * coice + mira_lado * cos(mira_a) * coice_j"
+                    "(pato.Y() + pato.Height() * 0.68) + sin(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) + mira_lado * cos(mira_a) * coice_j - Arma.Height() / 2"
                   ]
                 },
                 {
@@ -51026,7 +50978,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "A/D andam, Shift dá dash, Espaço pula. Giro de 360° no pulo, que volta a 0 ao pousar. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
+                  "comment": "A/D andam, Shift dá dash, Espaço pula. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -51117,108 +51069,6 @@
                             "pato",
                             "HorizontalDash",
                             ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Space\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::CanJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "PlatformBehavior::IsOnFloor"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "AdvancedJump",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                          },
-                          "parameters": [
-                            "pato",
-                            "Tween",
-                            "\"giroPuloDuplo\"",
-                            "360 * (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001))",
-                            "\"linear\"",
-                            "0.35",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::IsOnFloor"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "pato",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "jaGirou",
-                            "=",
-                            "0"
                           ]
                         }
                       ]
@@ -51481,16 +51331,6 @@
                       "parameters": [
                         "alvo",
                         ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "pato",
-                        "=",
-                        "90"
                       ]
                     },
                     {
@@ -52085,17 +51925,6 @@
                         "False",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "imp",
-                        "=",
-                        "-0.2"
-                      ]
                     }
                   ]
                 },
@@ -52175,55 +52004,6 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Squash & stretch pelo tamanho do pato, ancorado nos pés: estica ao decolar e caindo rápido, achata ao pousar. larg0/alt0 guardam o tamanho original; imp é o impulso (decai sozinho), ar o esticado do ar."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SceneJustBegins"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "larg0",
-                        "=",
-                        "pato.Width()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "alt0",
-                        "=",
-                        "pato.Height()"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -52247,44 +52027,6 @@
                         "queda_vy",
                         "=",
                         "pato.PlatformerObject::CurrentFallSpeed()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "ar",
-                        "=",
-                        "-0.1 * clamp(abs(pato.PlatformerObject::CurrentFallSpeed()) / 800, 0, 1)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::IsOnFloor"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "ar",
-                        "=",
-                        "0"
                       ]
                     }
                   ]
@@ -52311,19 +52053,7 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "imp",
-                        "=",
-                        "-0.2"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -52396,17 +52126,6 @@
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "imp",
-                        "=",
-                        "clamp(pato.queda_vy / 800, 0.3, 1) * 0.3"
-                      ]
-                    },
                     {
                       "type": {
                         "value": "Create"
@@ -52514,91 +52233,6 @@
                         "poeira",
                         "=",
                         "90 + 90 * sign(pato.PlatformerObject::CurrentSpeed())"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "imp",
-                        "=",
-                        "pato.imp * pow(0.00005, TimeDelta())"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "cx",
-                        "=",
-                        "pato.CenterX()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "pe_y",
-                        "=",
-                        "pato.Y() + pato.Height()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                      },
-                      "parameters": [
-                        "pato",
-                        "Resizable",
-                        "=",
-                        "pato.alt0 * (1 - clamp(pato.imp + pato.ar, -0.3, 0.35))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                      },
-                      "parameters": [
-                        "pato",
-                        "Resizable",
-                        "=",
-                        "pato.larg0 * (1 + 0.8 * clamp(pato.imp + pato.ar, -0.3, 0.35))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "pato",
-                        "=",
-                        "pato.cx - pato.Width() / 2",
-                        "=",
-                        "pato.pe_y - pato.Height()"
                       ]
                     }
                   ]

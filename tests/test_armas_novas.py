@@ -44,6 +44,7 @@ def test_tiro_e_laser_saem_do_bocal_mira_livre_e_granada_cai():
     assert 'FireTowardObject' in txt and '"bocal_x", "bocal_y", "projetil"' in txt
     assert 'LineV2", "laser", "bocal_x"' not in txt and '"laser", "bocal_x", "bocal_y"' in txt
     assert 'ToRad(55)' not in txt and '"mira_a", "=", "atan2(MouseY()' in txt   # sem limite de ângulo
+    assert 'abs(MouseX() - Arma.CenterX())' not in txt   # nem a sobra dele: o ângulo sai do ombro do pato, 360 graus
     assert 'Gravidade da granada' in txt and '900 * TimeDelta()' in txt
 
 

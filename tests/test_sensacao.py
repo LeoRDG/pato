@@ -25,13 +25,10 @@ def test_buffer_pulo_curto_e_queda_pesada():
     assert any(t == 'PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed' and '1400 * TimeDelta()' in p[3] for t, p in a)
 
 
-def test_squash_ancorado_nos_pes():
+def test_sem_animacao_falsa_no_pato():
     a = acoes()
-    assert any(t.endswith('SetHeight') and p[0] == 'pato' for t, p in a)
-    assert any(t == 'SetXY' and p[0] == 'pato' and 'pe_y' in p[4] for t, p in a)
-
-
-def test_giro_nao_acontece_no_pulo_de_coiote():
-    jog = [e for e in JOGO['externalEvents'] if e['name'] == 'Jogador'][0]
-    txt = json.dumps(jog, ensure_ascii=False)
-    assert '"AdvancedJump::AdvancedJump::CanCoyoteJump"' in txt
+    assert not any(t.startswith('ResizableCapability::') and p[0] == 'pato' for t, p in a)   # squash & stretch saiu
+    assert not any(t in ('SetXY', 'SetAngle') and p[0] == 'pato' for t, p in a)              # nem reposiciona nem gira o pato
+    assert not any(t.endswith('AddObjectAngleTween2') and p[0] == 'pato' for t, p in a)      # giro do pulo duplo saiu
+    nomes = {v['name'] for v in OBJ['pato']['variables']}
+    assert not nomes & {'larg0', 'alt0', 'imp', 'ar', 'pe_y', 'cx'} and 'queda_vy' in nomes

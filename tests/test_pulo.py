@@ -12,14 +12,6 @@ def eventos():
     return list(walk(jog['events']))
 
 
-def test_giro_so_no_pulo_no_ar():
-    giros = [e for e in eventos() if any(a['type']['value'].endswith('AddObjectAngleTween2') for a in e.get('actions', []))]
-    assert len(giros) == 1
-    conds = {(c['type']['value'], bool(c['type'].get('inverted'))) for c in giros[0]['conditions']}
-    assert ('KeyFromTextJustPressed', False) in conds and ('PlatformBehavior::IsOnFloor', True) in conds
-    assert 'alvo.CenterX()' in giros[0]['actions'][0]['parameters'][3]
-
-
 def test_propulsor_segue_o_pato():
     angulos = [a['parameters'][2] for e in eventos() for a in e.get('actions', [])
                if a['type']['value'] == 'SetAngle' and a['parameters'][0] == 'propulsor']
