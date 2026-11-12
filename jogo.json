@@ -50583,6 +50583,240 @@
                         "",
                         "som_recarga_lanca.wav"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_acerto.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_atirador.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_caveira.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_condenado.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_cutulu.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_inchado.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_mergulhador.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_mina.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_olho.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_pigman.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_aviso_sapo.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_cura.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_cuspe.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_dash.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_fogo_caveira.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_inimigo_morte.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_moeda.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_moedas_soltas.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pato_dano.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pato_morte.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pouso.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pulo.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pulo_ar.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_tiro_inimigo.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_tiro_olho.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_troca_arma.wav"
+                      ]
                     }
                   ]
                 },
@@ -65751,7 +65985,7 @@
                         "",
                         "som_moeda.wav",
                         "",
-                        "45",
+                        "25",
                         "RandomFloatInRange(0.97, 1.12)"
                       ]
                     },
