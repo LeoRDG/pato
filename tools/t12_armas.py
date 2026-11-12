@@ -181,7 +181,7 @@ def main():
         E([atirando, C('FireBullet::FireBullet::IsReloadInProgress', 'Arma', 'FireBullet', '', inv=True),
            C('AdvancedJump::HorizontalDash::IsDashing', 'pato', 'HorizontalDash', '', inv=True),
            C('BooleanObjectVariable', 'pato', 'invencivel', 'False', '')],
-          [A('PlatformBehavior::CurrentSpeed', 'pato', 'PlatformerObject', '=',
+          [A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed', 'pato', 'PlatformerObject', '=',
              f'clamp(pato.PlatformerObject::CurrentSpeed(), -{base} * Arma.vel_mov, {base} * Arma.vel_mov)')]),
     ]))
     # grupo 'Dispersão e lentidão' precisa do nome no evento para a idempotência acima

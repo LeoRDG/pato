@@ -57,9 +57,9 @@ def main():
         E([C('BooleanObjectVariable', 'pato', 'buf_ativo', 'True', ''), noChao(), C('BooleanObjectVariable', 'pato', 'morto', 'False', '')],
           [A('PlatformBehavior::SimulateJumpKey', *PL), setvar_b('buf_ativo', 'False'), setvar('imp', '-0.2')]),
         E([C('KeyFromTextReleased', '', '"Space"'), C('BuiltinCommonInstructions::CompareNumbers', VY, '<', '-250')],
-          [A('PlatformBehavior::SetCurrentFallSpeed', *PL, '=', f'{VY} * 0.45')]),
+          [A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed', *PL, '=', f'{VY} * 0.45')]),
         E([C('PlatformBehavior::IsFalling', *PL), C('AdvancedJump::HorizontalDash::IsDashing', 'pato', 'HorizontalDash', '', inv=True)],
-          [A('PlatformBehavior::SetCurrentFallSpeed', *PL, '=', f'min(700, {VY} + 1400 * TimeDelta())')]),
+          [A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed', *PL, '=', f'min(700, {VY} + 1400 * TimeDelta())')]),
 
         comentario('Squash & stretch pelo tamanho do pato, ancorado nos pés: estica ao decolar e caindo rápido, achata ao pousar. '
                    'larg0/alt0 guardam o tamanho original; imp é o impulso (decai sozinho), ar o esticado do ar.'),
