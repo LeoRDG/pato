@@ -31,9 +31,9 @@ def acao_falsa(a):
         return True
     if t == 'SetXY' and p[0] == 'pato' and 'pe_y' in p[4]:
         return True
-    if t == 'Tween::TweenBehavior::AddObjectAngleTween2' and p[0] == 'pato':
+    if t == 'Tween::TweenBehavior::AddObjectAngleTween2' and p[0] == 'pato' and p[2] == '"giroPuloDuplo"':   # o giro novo (t30) fica
         return True
-    if t == 'SetAngle' and p[0] == 'pato':
+    if t == 'SetAngle' and p[0] == 'pato' and p[2] == '90':
         return True
     if t == 'SetNumberVariable' and p[0] == 'jaGirou':
         return True

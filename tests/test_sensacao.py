@@ -28,7 +28,7 @@ def test_buffer_pulo_curto_e_queda_pesada():
 def test_sem_animacao_falsa_no_pato():
     a = acoes()
     assert not any(t.startswith('ResizableCapability::') and p[0] == 'pato' for t, p in a)   # squash & stretch saiu
-    assert not any(t in ('SetXY', 'SetAngle') and p[0] == 'pato' for t, p in a)              # nem reposiciona nem gira o pato
-    assert not any(t.endswith('AddObjectAngleTween2') and p[0] == 'pato' for t, p in a)      # giro do pulo duplo saiu
+    assert not any(t == 'SetXY' and p[0] == 'pato' for t, p in a)                            # nem reposiciona o pato
+    assert not any(t == 'SetAngle' and p[0] == 'pato' and p[2] != '0' for t, p in a)         # nem deita ao morrer
     nomes = {v['name'] for v in OBJ['pato']['variables']}
     assert not nomes & {'larg0', 'alt0', 'imp', 'ar', 'pe_y', 'cx'} and 'queda_vy' in nomes
