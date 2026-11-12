@@ -234,7 +234,7 @@ def main():
         (2500, 12000, 0.010, 0.030, 0.080, 0.320, -8, 0.9),
         (1500, 9000, 0.200, 0.150, 0.250, 0.450, -14, 1.0, 18),   # destroços: ruído picotado (último número = estalos por segundo)
     ], drive=2.4)
-    grava(L, R, 'som_explosao.wav', fade=0.5, pico=0.55)
+    # som_explosao.wav agora vem de gravações CC0 (tools/t19_sons_cc0.py); esta versão sintetizada não é mais gravada
 
     # minigun (um tiro, tocado em rajada): a mesma ordem, bem curta e quase mono para a rajada não embolar.
     #      Muito grave e agudo, pouco médio (é o que deixa cada tiro "seco" e pesado); cauda mínima.

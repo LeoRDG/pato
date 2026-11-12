@@ -19,4 +19,11 @@ som_minigun_giro.wav (giro dos canos da minigun, em laço)
   giro_125401.wav              "Electric Motor Whir" por jasonLON (motor de uma Dremel; 4 s a partir dos 5 s)
                                https://freesound.org/people/jasonLON/sounds/125401/
 
-Os outros sons (som_pistola.wav, som_doze.wav, som_explosao.wav) são sintetizados por tools/t17_sons_armas.py, sem gravação nenhuma.
+som_explosao.wav (explosão da granada)
+  explosao_609587.wav          "Grenade Explosion SFX (medium-sized, meaty, realistic)" por unfa (os primeiros 2,6 s;
+                               feita pelo autor com sintetizador + gravação de rojão)
+                               https://freesound.org/people/unfa/sounds/609587/
+  explosao_251401.wav          "Dynamite explosion in the mountain" por felix.blume (os primeiros 2,6 s; dinamite real)
+                               https://freesound.org/people/felix.blume/sounds/251401/
+
+Os outros sons (som_pistola.wav, som_doze.wav) são sintetizados por tools/t17_sons_armas.py, sem gravação nenhuma.

@@ -8536,6 +8536,38 @@
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo/ceu_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo/ceu_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo/fundo_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo/fundo_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo/meio_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo/meio_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo/frente_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo/frente_3x.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -8654,22 +8686,7 @@
           "value": false
         }
       ],
-      "effects": [
-        {
-          "effectType": "AdvancedBloom",
-          "name": "Effect",
-          "doubleParameters": {
-            "bloomScale": 1.7,
-            "blur": 4,
-            "brightness": 1.5,
-            "padding": 4,
-            "quality": 7,
-            "threshold": 0.15
-          },
-          "stringParameters": {},
-          "booleanParameters": {}
-        }
-      ],
+      "effects": [],
       "behaviors": [
         {
           "isFolded": true,
@@ -44665,48 +44682,48 @@
     },
     {
       "assetStoreId": "",
-      "height": 346,
+      "height": 1080,
       "name": "bg_inferno_ceu",
       "persistentUuid": "8044d4a9-9c5e-4b9e-af2a-71874057d4bd",
-      "texture": "assets/gandalf_hell/fundo/ceu.png",
+      "texture": "assets/gandalf_hell/fundo/ceu_3x.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 1024,
+      "width": 3840,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
-      "height": 346,
+      "height": 1080,
       "name": "bg_inferno_fundo",
       "persistentUuid": "e5abc0f9-01b2-4f9f-8b74-0343695dc092",
-      "texture": "assets/gandalf_hell/fundo/fundo.png",
+      "texture": "assets/gandalf_hell/fundo/fundo_3x.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 1024,
+      "width": 3840,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
-      "height": 346,
+      "height": 1080,
       "name": "bg_inferno_meio",
       "persistentUuid": "4d9ee0f0-51fe-4dfd-9f30-77ebbb40647c",
-      "texture": "assets/gandalf_hell/fundo/meio.png",
+      "texture": "assets/gandalf_hell/fundo/meio_3x.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 1024,
+      "width": 3840,
       "variables": [],
       "effects": [],
       "behaviors": []
     },
     {
       "assetStoreId": "",
-      "height": 346,
+      "height": 1080,
       "name": "bg_inferno_frente",
       "persistentUuid": "dae390bc-dd9a-4e42-9b1d-d9920610cf84",
-      "texture": "assets/gandalf_hell/fundo/frente.png",
+      "texture": "assets/gandalf_hell/fundo/frente_3x.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 1024,
+      "width": 3840,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -49173,15 +49190,15 @@
       ]
     },
     {
-      "b": 148,
+      "b": 0,
       "disableInputWhenNotFocused": true,
       "mangledName": "Inferno",
       "name": "Inferno",
-      "r": 69,
+      "r": 198,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 88,
+      "v": 48,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -49268,23 +49285,6 @@
           "x": 603,
           "y": 158,
           "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1926,
-          "keepRatio": true,
-          "layer": "",
-          "name": "bg",
-          "persistentUuid": "0ff2af90-9be5-4b8c-b5e0-27206f5d1331",
-          "width": 10000,
-          "x": -3852,
-          "y": 815,
-          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -50184,6 +50184,70 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1080,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_inferno_ceu",
+          "persistentUuid": "2a7e4962-d810-5970-a3db-1059be81f7f1",
+          "width": 3840,
+          "x": -960.0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1080,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_inferno_fundo",
+          "persistentUuid": "1bc780a9-0b5f-5ed3-b11a-a39f4bedf351",
+          "width": 3840,
+          "x": -960.0,
+          "y": 0,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1080,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_inferno_meio",
+          "persistentUuid": "c65996e8-7e0e-5c12-bacc-47f82f247314",
+          "width": 3840,
+          "x": -960.0,
+          "y": 0,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1080,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_inferno_frente",
+          "persistentUuid": "eb55a475-9003-50a2-b6e7-3b8b7d7a741f",
+          "width": 3840,
+          "x": -960.0,
+          "y": 0,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -50237,9 +50301,109 @@
             "includeConfig": 0
           },
           "target": "HUD"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Fundo em parallax",
+          "source": "",
+          "creationTime": 0,
+          "colorR": 74,
+          "colorG": 176,
+          "colorB": 228,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Cada camada do fundo desloca a textura com uma fração do movimento da câmera: as de trás andam menos.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_ceu",
+                    "=",
+                    "CameraCenterX() * 0.03"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_fundo",
+                    "=",
+                    "CameraCenterX() * 0.12"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_meio",
+                    "=",
+                    "CameraCenterX() * 0.25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_frente",
+                    "=",
+                    "CameraCenterX() * 0.4"
+                  ]
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Fundo",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -52168,7 +52332,7 @@
                   "parameters": [
                     "mira_a",
                     "=",
-                    "clamp(atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo), -ToRad(55), ToRad(55))"
+                    "atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo)"
                   ]
                 },
                 {

@@ -39,11 +39,11 @@ def test_recursos_do_hud_existem():
         assert r in RES and os.path.exists(os.path.join(RAIZ, 'assets', r))
 
 
-def test_tiro_e_laser_saem_do_bocal_e_mira_limitada_e_granada_cai():
+def test_tiro_e_laser_saem_do_bocal_mira_livre_e_granada_cai():
     txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
     assert 'FireTowardObject' in txt and '"bocal_x", "bocal_y", "projetil"' in txt
     assert 'LineV2", "laser", "bocal_x"' not in txt and '"laser", "bocal_x", "bocal_y"' in txt
-    assert 'ToRad(55)' in txt
+    assert 'ToRad(55)' not in txt and '"mira_a", "=", "atan2(MouseY()' in txt   # sem limite de ângulo
     assert 'Gravidade da granada' in txt and '900 * TimeDelta()' in txt
 
 

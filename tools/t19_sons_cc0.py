@@ -5,9 +5,10 @@ entram as camadas da receita de t17 (`camadas`): grave que cresce depois do esta
   - som_lanca.wav  : disparo com o "tunc" de tubo bem marcado (base) + um M203 real (corpo e médios);
   - som_minigun.wav: um tiro de fuzil limpo (Lee-Enfield .303) encurtado + soco e grave densos em camadas; curto e quase mono,
                      para a rajada do jogo não embolar.
+  - som_explosao.wav: explosão de granada feita para jogos + dinamite real, com a onda de grave atrasada por cima;
   - som_minigun_giro.wav: laço do giro dos canos, a partir de um motor elétrico real.
 Volume no mesmo nível das outras armas.   Rodar:  python3 tools/t19_sons_cc0.py   (pode rodar de novo; não mexe no jogo.json)
-t17_sons_armas.py não grava mais estes dois arquivos.
+t17_sons_armas.py não grava mais estes arquivos.
 """
 import os, wave
 import numpy as np
@@ -91,7 +92,44 @@ def giro():
         o.setnchannels(2); o.setsampwidth(2); o.setframerate(SR); o.writeframes(pcm.tobytes())
 
 
+def le_estereo(nome):
+    w = wave.open(os.path.join(ROOT, 'assets', 'fontes_cc0', nome))
+    assert w.getframerate() == SR and w.getnchannels() == 2
+    x = np.frombuffer(w.readframes(w.getnframes()), dtype='<i2').reshape(-1, 2).astype(float) / 32768
+    ini = np.argmax(np.abs(x).max(1) > 0.1 * np.abs(x).max())
+    x = x[max(ini - 30, 0):]
+    return x / np.abs(x).max()
+
+
+def explosao():
+    """Base: uma explosão de granada feita para jogos (estalo forte, corpo cheio, estéreo) + uma explosão de dinamite real (o estrondo
+    e o eco de verdade). Por cima, só o que falta nas duas: a onda de grave que chega atrasada (o "BUM" depois do estalo), ar nos agudos e destroços.
+    Um limitador no fim deixa o som denso (as gravações têm o estalo muito acima do resto)."""
+    dur = 1.6
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    encaixa = lambda x: np.vstack([x, np.zeros((max(0, n - len(x)), 2))])[:n]
+    granada = encaixa(le_estereo('explosao_609587.wav'))
+    dinamite = encaixa(le_estereo('explosao_251401.wav'))
+    dinamite *= np.exp(-np.maximum(t - 0.12, 0) / 0.10)[:, None]      # só o estouro: o resto dela é eco de montanha
+    real = granada + 0.7 * dinamite
+    real = real / np.abs(real).max()
+
+    rng = np.random.default_rng(7022)
+    L, R = camadas(dur, rng, [
+        (22, 70, 0.040, 0.045, 0.110, 0.220, 0, 0.0),         # onda de grave atrasada
+        (60, 220, 0.045, 0.050, 0.080, 0.200, -8, 0.2),
+        (2500, 12000, 0.000, 0.002, 0.060, 0.160, -9, 0.9),   # ar: as gravações têm pouco agudo (ficava abafado)
+        (1500, 9000, 0.150, 0.100, 0.150, 0.250, -18, 1.0, 18),   # destroços estalando na cauda
+    ], drive=1.6)
+    k = 0.55 / max(np.abs(L).max(), np.abs(R).max())
+    env = np.exp(-np.maximum(t - 0.35, 0) / 0.22)              # corta o eco das gravações: explosão seca, sem sala
+    L, R = (np.tanh(2.2 * (real[:, c] * env + k * v)) for c, v in ((0, L), (1, R)))
+    grava(L, R, 'som_explosao.wav', fade=0.4, pico=0.55)
+
+
 if __name__ == '__main__':
     lanca()
     minigun()
     giro()
+    explosao()

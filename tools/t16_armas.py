@@ -240,7 +240,7 @@ def main():
         upsert(d['variables'], k, 0)
     upsert(d['variables'], 'mira_lado', 1)
     equip = lambda: C('BooleanObjectVariable', 'Arma', 'equipada', 'True', '')
-    MAXANG = 55   # graus acima/abaixo da horizontal
+    # sem limite de ângulo (tirado na tarefa 21)
     LARG = 'Arma.Width()'
     todos = list(walk(jog['events']))
     acha = lambda f: [e for e in todos if f(e)][0]
@@ -266,7 +266,7 @@ def main():
     e_alvo['conditions'] = [equip()]
     e_alvo['actions'] = [
         A('SetNumberVariable', 'mira_lado', '=', 'sign(MouseX() - pato.CenterX() + 0.001)'),
-        A('SetNumberVariable', 'mira_a', '=', f'clamp(atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo), -ToRad({MAXANG}), ToRad({MAXANG}))'),
+        A('SetNumberVariable', 'mira_a', '=', 'atan2(MouseY() - Arma.CenterY(), abs(MouseX() - Arma.CenterX())) - ToRad(recuo)'),
         A('SetXY', 'alvo', '=', f'Arma.CenterX() + mira_lado * cos(mira_a) * {DIST} - alvo.Width() * .5', '=', f'Arma.CenterY() + sin(mira_a) * {DIST} - alvo.Height() * .5'),
         A('HideCursor', ''),
         A('SetNumberVariable', 'recuo', '*', 'pow(0.98, TimeDelta() * 60)'),
