@@ -26,4 +26,26 @@ som_explosao.wav (explosão da granada)
   explosao_251401.wav          "Dynamite explosion in the mountain" por felix.blume (os primeiros 2,6 s; dinamite real)
                                https://freesound.org/people/felix.blume/sounds/251401/
 
+som_doze_pump.wav (bombeada da doze)
+  pump_351226.wav              "shotgun_rack.wav" por Pacifici (Mossberg 590A1 real; 0,9 s a partir dos 0,2 s, só a bombeada)
+                               https://freesound.org/people/Pacifici/sounds/351226/
+
+som_recarga_pistola.wav, som_recarga_doze.wav, som_recarga_minigun.wav, som_recarga_lanca.wav (recargas)
+  Montadas com estalos curtos recortados destas gravações (o número no nome do arquivo rec_*.wav é o da gravação;
+  o recorte começa no instante indicado). A doze termina com a bombeada (pump_351226.wav, acima).
+  rec_pistola_pente_sai/pente_entra/ferrolho_tras/ferrolho_frente_276959.wav  (0,17 / 0,85 / 1,51 / 1,70 s)
+                               "pistol reload sound" por GFL7
+                               https://freesound.org/people/GFL7/sounds/276959/
+  rec_cartucho_379976.wav      "Inserting Shell" por morganpurkis (feito pelo autor no Audacity)
+                               https://freesound.org/people/morganpurkis/sounds/379976/
+  rec_lanca_abre/fecha_52202.wav  (0,37 / 8,27 s)
+                               "Single Barreled Shotgun Loading" por sentryx86 (espingarda de quebrar real)
+                               https://freesound.org/people/sentryx86/sounds/52202/
+  rec_minigun_caixa_sai/caixa_entra_422688.wav  (0,18 / 0,61 s)
+                               "ammo reload" por niamhd00145229
+                               https://freesound.org/people/niamhd00145229/sounds/422688/
+  rec_minigun_ferrolho_tras/ferrolho_frente_766165.wav  (3,76 / 6,74 s)
+                               "Gun clicking sound" por mernantau (recarga de fuzil)
+                               https://freesound.org/people/mernantau/sounds/766165/
+
 Os outros sons (som_pistola.wav, som_doze.wav) são sintetizados por tools/t17_sons_armas.py, sem gravação nenhuma.

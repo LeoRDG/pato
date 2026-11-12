@@ -8568,6 +8568,56 @@
         "name": "assets/gandalf_hell/fundo/frente_3x.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/som_doze_pump.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_doze_pump.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_recarga_pistola.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_recarga_pistola.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_recarga_doze.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_recarga_doze.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_recarga_minigun.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_recarga_minigun.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_recarga_lanca.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_recarga_lanca.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -8618,16 +8668,19 @@
         },
         {
           "name": "invencivel",
+          "persistentUuid": "c3af9889-a130-4774-a54b-b114ae95f373",
           "type": "boolean",
           "value": false
         },
         {
           "name": "morto",
+          "persistentUuid": "e8cbff29-a142-4304-b32a-28260699c9ae",
           "type": "boolean",
           "value": false
         },
         {
           "name": "resumo",
+          "persistentUuid": "b13b7a23-7933-4f89-8da0-643cc7b0975f",
           "type": "boolean",
           "value": false
         },
@@ -8703,37 +8756,6 @@
         },
         {
           "isFolded": true,
-          "name": "FireBullet",
-          "type": "FireBullet::FireBullet",
-          "FireCooldown": 0.23,
-          "HasJustFired": false,
-          "RotateBullet": true,
-          "FiringArc": 45,
-          "BulletQuantity": 1,
-          "AngleVariance": 0,
-          "BulletSpeedVariance": 0,
-          "AmmoQuantity": 0,
-          "ShotsPerReload": 30,
-          "ReloadDuration": 2,
-          "MaxAmmo": 30,
-          "ShotsBeforeNextReload": 0,
-          "TotalShotsFired": 0,
-          "TotalBulletsCreated": 0,
-          "StartingAmmo": 30,
-          "TotalReloadsCompleted": 0,
-          "UnlimitedAmmo": false,
-          "ReloadInProgress": false,
-          "HeatIncreasePerShot": 0,
-          "HeatLevel": 0,
-          "AutomaticReloading": true,
-          "OverheatDuration": 0,
-          "LinearCoolingRate": 0.1,
-          "ExponentialCoolingRate": 0.3,
-          "BulletLayer": "",
-          "RandomizedAngle": 0
-        },
-        {
-          "isFolded": true,
           "name": "HorizontalDash",
           "type": "AdvancedJump::HorizontalDash",
           "PlatformerCharacter": "PlatformerObject",
@@ -8759,6 +8781,7 @@
           "PlatformerCharacter": "PlatformerObject"
         },
         {
+          "maxSpeed": 500,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 4200,
@@ -8772,7 +8795,6 @@
           "deceleration": 2600,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 700,
-          "maxSpeed": 289,
           "slopeMaxAngle": 60,
           "useLegacyTrajectory": false,
           "useRepeatedJump": false,
@@ -8853,6 +8875,7 @@
           "FloorDownwardSpeedMax": 9000
         },
         {
+          "isFolded": true,
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         }
@@ -9020,7 +9043,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.09,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -10879,6 +10902,12 @@
           "persistentUuid": "29409b88-93cd-42c3-b541-35457b79a5e5",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "476d2924-439d-4701-95ba-a7443019a024",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -12141,6 +12170,12 @@
           "persistentUuid": "8579033a-c55a-4f71-b383-55b77eccf8b3",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "6a8ddc16-332e-4af6-8484-543099562754",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -12721,6 +12756,12 @@
           "persistentUuid": "c38d701c-079b-4624-a5c4-28c58e5cb14a",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "d33b5e99-3b6f-4784-a4de-6dd7b4562e1b",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -45077,6 +45118,12 @@
           "persistentUuid": "8bfb1fc9-ee50-4f92-9daa-114d8bc3ecd4",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "91d5d14d-ee41-4ad7-abe2-79aec898ec5d",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -50194,7 +50241,7 @@
           "name": "bg_inferno_ceu",
           "persistentUuid": "2a7e4962-d810-5970-a3db-1059be81f7f1",
           "width": 3840,
-          "x": -960.0,
+          "x": -960,
           "y": 0,
           "zOrder": 1,
           "numberProperties": [],
@@ -50210,7 +50257,7 @@
           "name": "bg_inferno_fundo",
           "persistentUuid": "1bc780a9-0b5f-5ed3-b11a-a39f4bedf351",
           "width": 3840,
-          "x": -960.0,
+          "x": -960,
           "y": 0,
           "zOrder": 2,
           "numberProperties": [],
@@ -50226,7 +50273,7 @@
           "name": "bg_inferno_meio",
           "persistentUuid": "c65996e8-7e0e-5c12-bacc-47f82f247314",
           "width": 3840,
-          "x": -960.0,
+          "x": -960,
           "y": 0,
           "zOrder": 3,
           "numberProperties": [],
@@ -50242,7 +50289,7 @@
           "name": "bg_inferno_frente",
           "persistentUuid": "eb55a475-9003-50a2-b6e7-3b8b7d7a741f",
           "width": 3840,
-          "x": -960.0,
+          "x": -960,
           "y": 0,
           "zOrder": 4,
           "numberProperties": [],
@@ -50303,18 +50350,16 @@
           "target": "HUD"
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "name": "Fundo em parallax",
           "source": "",
-          "creationTime": 0,
-          "colorR": 74,
-          "colorG": 176,
-          "colorB": 228,
-          "parameters": [],
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Cada camada do fundo desloca a textura com uma fração do movimento da câmera: as de trás andam menos.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -50322,7 +50367,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Cada camada do fundo desloca a textura com uma fração do movimento da câmera: as de trás andam menos."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -50368,10 +50414,10 @@
                     "CameraCenterX() * 0.4"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -51877,6 +51923,51 @@
                         "yes",
                         "0",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_doze_pump.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_pistola.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_doze.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_minigun.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_lanca.wav"
                       ]
                     }
                   ]
@@ -55072,18 +55163,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "carregar.mp3",
-                            "",
-                            "100",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "FireBullet::FireBullet::ReloadAmmo"
                           },
                           "parameters": [
@@ -55266,7 +55345,7 @@
                               },
                               "parameters": [
                                 "",
-                                "carrega_doze.mp3",
+                                "som_doze_pump.wav",
                                 "2",
                                 "",
                                 "100",
@@ -55281,7 +55360,7 @@
                                 "",
                                 "2",
                                 "*",
-                                "RandomFloatInRange(.95, 1.05)"
+                                "RandomFloatInRange(.8, .85)"
                               ]
                             }
                           ]
@@ -55862,18 +55941,16 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Giro da minigun",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Segurar o tiro com a minigun acelera os canos (0 a 1 em 0.5 s); ela só atira com giro = 1. Soltar desacelera. O laço do canal 5 acompanha (volume e tom).",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -55881,7 +55958,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Segurar o tiro com a minigun acelera os canos (0 a 1 em 0.5 s); ela só atira com giro = 1. Soltar desacelera. O laço do canal 5 acompanha (volume e tom)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -55897,8 +55975,7 @@
                         "max(0, giro - 1.6 * TimeDelta())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -55934,8 +56011,7 @@
                         "min(1, giro + (1.6 + 1 / 0.5) * TimeDelta())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -55963,10 +56039,402 @@
                         "0.75 + 0.45 * giro"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Som de recarga",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Toca uma vez quando a recarga começa; o tom segue a duração da recarga (upgrades encurtam)."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "pistola",
+                        "FireBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pistola",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pistola",
+                        "som_recarga",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_pistola.wav",
+                        "6",
+                        "",
+                        "80",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "6",
+                        "=",
+                        "clamp(pistola.recarga_base / max(0.01, pistola.FireBullet::ReloadDuration()), 1, 2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "pistola",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pistola",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "doze",
+                        "FireBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "doze",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "doze",
+                        "som_recarga",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_doze.wav",
+                        "6",
+                        "",
+                        "80",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "6",
+                        "=",
+                        "clamp(doze.recarga_base / max(0.01, doze.FireBullet::ReloadDuration()), 1, 2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "doze",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "doze",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "minigun",
+                        "FireBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "minigun",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "minigun",
+                        "som_recarga",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_minigun.wav",
+                        "6",
+                        "",
+                        "80",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "6",
+                        "=",
+                        "clamp(minigun.recarga_base / max(0.01, minigun.FireBullet::ReloadDuration()), 1, 2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "minigun",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "minigun",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "FireBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "som_recarga",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_recarga_lanca.wav",
+                        "6",
+                        "",
+                        "80",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "6",
+                        "=",
+                        "clamp(lanca.recarga_base / max(0.01, lanca.FireBullet::ReloadDuration()), 1, 2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FireBullet::FireBullet::IsReloadInProgress"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lanca",
+                        "som_recarga",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
