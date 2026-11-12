@@ -51045,7 +51045,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "A/D andam, Shift dá dash, Espaço pula. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
+                  "comment": "A/D andam, Shift dá dash, Espaço pula. Todo pulo no ar (depois do primeiro) dá um giro de 360°, que volta a 0 ao pousar. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -51139,6 +51139,67 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::CanJump"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "AdvancedJump",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "pato",
+                            "Tween",
+                            "\"giroPulo\"",
+                            "360 * (round(pato.Angle() / 360) + (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001)))",
+                            "\"linear\"",
+                            "0.35",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -51260,6 +51321,49 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::RemoveTween"
+                      },
+                      "parameters": [
+                        "pato",
+                        "Tween",
+                        "\"giroPulo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "pato",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": []
                 },
                 {
                   "colorB": 228,
