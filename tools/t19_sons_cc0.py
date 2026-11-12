@@ -6,6 +6,8 @@ entram as camadas da receita de t17 (`camadas`): grave que cresce depois do esta
   - som_minigun.wav: um tiro de fuzil limpo (Lee-Enfield .303) encurtado + soco e grave densos em camadas; curto e quase mono,
                      para a rajada do jogo não embolar.
   - som_explosao.wav: explosão de granada feita para jogos + dinamite real, com a onda de grave atrasada por cima;
+  - som_doze_pump.wav: bombeada real de uma Mossberg 590A1, com realce de presença;
+  - som_recarga_<arma>.wav: recargas montadas com estalos recortados de gravações reais (rec_*.wav);
   - som_minigun_giro.wav: laço do giro dos canos, a partir de um motor elétrico real.
 Volume no mesmo nível das outras armas.   Rodar:  python3 tools/t19_sons_cc0.py   (pode rodar de novo; não mexe no jogo.json)
 t17_sons_armas.py não grava mais estes arquivos.
@@ -128,8 +130,64 @@ def explosao():
     grava(L, R, 'som_explosao.wav', fade=0.4, pico=0.55)
 
 
+def pump():
+    """Bombeada da doze: gravação real de uma Mossberg 590A1 sendo bombeada ("chk... chk": ferrolho para trás e para frente,
+    dois estalos metálicos secos). Sem camada grave por baixo (isso fazia soar como coisa caindo no chão) e sem eco:
+    só um realce de presença (1,5-6 kHz) e um limitador leve para o som ficar forte sem perder o estalo."""
+    x = le('pump_351226.wav')
+    n = len(x)
+    t = np.arange(n) / SR
+    x = x * np.where(t < 0.55, 1, np.exp(-(t - 0.55) / 0.08))           # corta o resto depois do segundo estalo
+    x = passa(x, 150, None, 2)
+    x = x + 0.6 * passa(x, 1500, 6000, 2)                               # presença: metal
+    x = np.tanh(1.8 * x / np.abs(x).max())
+    grava(x, x, 'som_doze_pump.wav', fade=0.1, pico=0.75)
+
+
+def montagem(dur, pecas, nome, pico=0.6):
+    """Recarga montada com estalos recortados de gravações reais (assets/fontes_cc0/rec_*.wav).
+    pecas: (arquivo ou array, início em s, ganho, velocidade). velocidade < 1 = mais lento e mais grave (peça mais pesada).
+    Sem eco; limitador leve; volume abaixo dos tiros."""
+    n = int(SR * dur)
+    x = np.zeros(n)
+    for fonte, t0, g, vel in pecas:
+        y = le(fonte) if isinstance(fonte, str) else fonte
+        if vel != 1:
+            y = np.interp(np.arange(0, len(y) - 1, vel), np.arange(len(y)), y)
+        i = int(t0 * SR)
+        y = y[:n - i]
+        x[i:i + len(y)] += g * y
+    x = passa(x, 120, None, 2)
+    x = np.tanh(1.5 * x / np.abs(x).max())
+    grava(x, x, nome, fade=0.05, pico=pico)
+
+
+def recargas():
+    """Uma recarga por arma, com a duração da recarga de cada uma (pistola 1 s, doze 2,2 s, minigun 2,5 s, lança 2,4 s;
+    o jogo acelera o som quando um upgrade encurta a recarga)."""
+    montagem(1.0, [('rec_pistola_pente_sai_276959.wav', 0.02, 0.8, 1),
+                   ('rec_pistola_pente_entra_276959.wav', 0.36, 1.0, 1),
+                   ('rec_pistola_ferrolho_tras_276959.wav', 0.66, 0.8, 1),
+                   ('rec_pistola_ferrolho_frente_276959.wav', 0.80, 1.0, 1)], 'som_recarga_pistola.wav')
+    bomba = le('pump_351226.wav')
+    montagem(2.2, [('rec_cartucho_379976.wav', 0.10, 0.9, 0.95),
+                   ('rec_cartucho_379976.wav', 0.42, 0.8, 1.03),
+                   ('rec_cartucho_379976.wav', 0.74, 0.9, 0.98),
+                   ('rec_cartucho_379976.wav', 1.06, 0.8, 1.02),
+                   (bomba, 1.36, 1.0, 1)], 'som_recarga_doze.wav')
+    montagem(2.5, [('rec_minigun_caixa_sai_422688.wav', 0.05, 1.0, 0.8),
+                   ('rec_minigun_caixa_entra_422688.wav', 0.95, 1.0, 0.8),
+                   ('rec_minigun_ferrolho_tras_766165.wav', 1.70, 0.9, 0.85),
+                   ('rec_minigun_ferrolho_frente_766165.wav', 2.05, 1.0, 0.85)], 'som_recarga_minigun.wav')
+    montagem(2.4, [('rec_lanca_abre_52202.wav', 0.10, 1.0, 0.9),
+                   ('rec_cartucho_379976.wav', 0.95, 1.0, 0.75),
+                   ('rec_lanca_fecha_52202.wav', 1.85, 1.0, 0.9)], 'som_recarga_lanca.wav')
+
+
 if __name__ == '__main__':
     lanca()
     minigun()
     giro()
     explosao()
+    pump()
+    recargas()

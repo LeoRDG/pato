@@ -117,3 +117,18 @@ def test_minigun_so_atira_com_os_canos_girando():
     assert ev.count('giro + 1 - Arma.espera_giro') == 1
     espera = {n: {v['name']: v['value'] for v in OBJ[n]['variables']}['espera_giro'] for n in ('pistola', 'doze', 'minigun', 'lanca')}
     assert espera == {'pistola': 0, 'doze': 0, 'minigun': 1, 'lanca': 0}
+
+
+def test_bombeada_da_doze_nova():
+    ev = json.dumps([x['events'] for x in JOGO['externalEvents']])
+    assert 'carrega_doze.mp3' not in ev and ev.count('"som_doze_pump.wav", "2"') == 1 and 'som_doze_pump.wav' in RES
+    assert os.path.exists(os.path.join(RAIZ, 'assets', 'som_doze_pump.wav'))
+
+
+def test_som_de_recarga_por_arma():
+    ev = json.dumps([x['events'] for x in JOGO['externalEvents'] if x['name'] == 'Jogador'])
+    assert 'carregar.mp3' not in ev
+    for n in ('pistola', 'doze', 'minigun', 'lanca'):
+        assert f'"som_recarga_{n}.wav", "6"' in ev and f'som_recarga_{n}.wav' in RES
+        assert os.path.exists(os.path.join(RAIZ, 'assets', f'som_recarga_{n}.wav'))
+        assert any(v['name'] == 'som_recarga' for v in OBJ[n]['variables'])
