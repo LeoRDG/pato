@@ -133,3 +133,20 @@ def test_som_de_recarga_por_arma():
         assert f'"som_recarga_{n}.wav", "6"' in ev and f'som_recarga_{n}.wav' in RES
         assert os.path.exists(os.path.join(RAIZ, 'assets', f'som_recarga_{n}.wav'))
         assert any(v['name'] == 'som_recarga' for v in OBJ[n]['variables'])
+
+
+def test_granada_da_1_e_explosao_no_emissor_com_queda():
+    lanca = {v['name']: v['value'] for v in OBJ['lanca']['variables']}
+    assert lanca['dano'] == 1 and lanca['dano_explosao'] > 1
+    assert {v['name'] for v in OBJ['explosao_fogo']['variables']} >= {'dano', 'raio', 'repulsao', 'aplicado'}
+    comb = [x for x in JOGO['externalEvents'] if x['name'] == 'Combate'][0]
+
+    def walk(evs):
+        for e in evs:
+            yield e
+            yield from walk(e.get('events') or [])
+    dano = [e for e in walk(comb['events']) if e.get('name') == 'Dano da explosão'][0]
+    fe = [e for e in walk(dano['events']) if e['type'] == 'BuiltinCommonInstructions::ForEach']
+    assert [e['object'] for e in fe] == ['explosao_fogo', 'Inimigo']   # cada inimigo é escolhido de verdade
+    txt = json.dumps(dano, ensure_ascii=False)
+    assert '(1 - exp_d / explosao_fogo.raio)' in txt and 'Inimigo.Width() / 2' in txt   # queda até a borda da caixa
