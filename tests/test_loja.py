@@ -141,7 +141,8 @@ def test_loja_grupos():
 
 def test_loja_nao_cita_ids_do_catalogo():
     txt = json.dumps([e for e in ext('Loja') if e.get('type') != 'BuiltinCommonInstructions::Comment'])
-    for proibido in ('cadencia', 'recarga', 'velocidade', '"dano', 'upgrades.', 'armas.'):
+    # 'dano' também é variável de todo inimigo; ids do catálogo só aparecem via upgrades./armas.
+    for proibido in ('cadencia', 'recarga', 'velocidade', 'upgrades.', 'armas.'):
         assert proibido not in txt, proibido
 
 
@@ -161,3 +162,53 @@ def test_compra_exige_moedas():
     assert any(c['type']['value'] == 'NumberVariable' and c['parameters'][:2] == ['moedas_total', '>='] for c in ev['conditions'])
     assert any(c['parameters'][:2] == ['loja_sel_nivel', '<'] for c in ev['conditions'])
     assert any(c['parameters'][:2] == ['loja_sel_bloq', '='] for c in ev['conditions'])
+
+
+# ------------------------------------------------------------------ Tarefa 5: mercador inimigo secreto
+
+def _grupo_dano():
+    comb = ext('Combate')
+    return next(e for e in anda(comb) if e.get('name') == 'Dano e invencibilidade')
+
+
+def test_contato_ignora_calmo():
+    contato = next(e for e in _grupo_dano()['events']
+                   if any(c['type']['value'] == 'CollisionNP' and c['parameters'][:2] == ['pato', 'Inimigo'] for c in e.get('conditions') or []))
+    assert any(c['type']['value'] == 'StringObjectVariable' and c['parameters'][:4] == ['Inimigo', 'estado', '!=', '"calmo"']
+               for c in contato['conditions'])
+    assert any(a['parameters'][:4] == ['pato', 'ultimo_agressor', '=', 'Inimigo.ObjectName()'] for a in contato['actions'])
+    bala = next(e for e in _grupo_dano()['events']
+                if any(c['parameters'][:2] == ['projetil_inimigo', 'pato'] for c in e.get('conditions') or [])
+                and any(c['parameters'][:3] == ['pato', 'invencivel', 'False'] for c in e['conditions']))
+    assert any(a['parameters'][:4] == ['pato', 'ultimo_agressor', '=', 'projetil_inimigo.origem'] for a in bala['actions'])
+
+
+def test_hostil_fecha_loja():
+    merc = list(anda([_grupo_loja('Mercador')]))
+    vira = next(e for e in merc if any(a['parameters'][:4] == ['trader', 'estado', '=', '"hostil"'] for a in e.get('actions') or []))
+    sub = list(anda([vira]))
+    assert any(c['parameters'][:2] == ['loja_aberta', 'True'] for s in sub for c in s.get('conditions') or [])
+    assert any(a['parameters'][:3] == ['loja_acao', '=', '"fechar"'] for s in sub for a in s.get('actions') or [])
+    # quem fecha de fato (Abrir e fechar) destrava o pato
+    fecha = next(e for e in anda([_grupo_loja('Abrir e fechar')])
+                 if any(c['parameters'][:3] == ['loja_acao', '=', '"fechar"'] for c in e.get('conditions') or []))
+    assert any(a['parameters'][:3] == ['pato', 'na_loja', 'False'] for a in fecha['actions'])
+    assert any(a['parameters'][:2] == ['loja_aberta', 'False'] for a in fecha['actions'])
+
+
+def test_multa_nao_negativa():
+    morte = next(e for e in anda(ext('Jogador')) if e.get('name') == 'Morte do Pato')
+    multa = [e for e in anda([morte]) if any(c['parameters'][:4] == ['pato', 'ultimo_agressor', '=', '"trader"']
+                                             for c in e.get('conditions') or [])]
+    assert len(multa) == 1
+    acts = {a['parameters'][0] if a['type']['value'] == 'SetNumberVariable' else a['parameters'][1]: a['parameters'][-1]
+            for a in multa[0]['actions']}
+    assert 'trader.multa' in acts['moedas_perdidas']
+    assert acts['moedas_total'].replace(' ', '').startswith('max(0,')
+
+
+def test_ganchos_vazios():
+    nomes = [e.get('name') for e in anda([_grupo_loja('Mercador')])]
+    assert 'Ataques do trader' in nomes and 'Quando o trader morre' in nomes
+    assert any(a['type']['value'] == 'SetBooleanVariable' and a['parameters'][:2] == ['trader_morto', 'True']
+               for e in anda([_grupo_loja('Mercador')]) for a in e.get('actions') or [])

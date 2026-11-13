@@ -55857,6 +55857,46 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "ultimo_agressor",
+                            "=",
+                            "\"trader\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "moedas_perdidas",
+                            "=",
+                            "round(GlobalVariable(moedas_total) * trader.multa)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "moedas_total",
+                            "=",
+                            "max(0, GlobalVariable(moedas_total) - pato.moedas_perdidas)"
+                          ]
+                        }
+                      ],
+                      "events": []
                     }
                   ]
                 },
@@ -56011,6 +56051,36 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "moedas_perdidas",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "resumo_txt",
+                            "Text",
+                            "+",
+                            "NewLine() + NewLine() + \"O mercador levou \" + ToString(pato.moedas_perdidas) + \" moedas\""
+                          ]
+                        }
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -68520,6 +68590,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "estado",
+                    "!=",
+                    "\"calmo\""
+                  ]
                 }
               ],
               "actions": [
@@ -68561,6 +68642,17 @@
                   "parameters": [
                     "pato",
                     "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "Inimigo.ObjectName()"
                   ]
                 }
               ]
@@ -68604,6 +68696,17 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "projetil_inimigo.origem"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetNumberObjectVariable"
@@ -74968,6 +75071,275 @@
                 "textG": 0,
                 "textR": 0
               }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Calmo: cada vez que a vida do mercador cai (bala, explosão ou soco) conta um golpe. Quando os golpes chegam à paciência, ele fica hostil e fecha a loja.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "vida_vista",
+                    "=",
+                    "trader.vida"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "estado",
+                    "=",
+                    "\"calmo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "vida",
+                    "<",
+                    "trader.vida_vista"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "golpes",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "vida_vista",
+                    "=",
+                    "trader.vida"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "estado",
+                    "=",
+                    "\"calmo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "golpes",
+                    ">=",
+                    "trader.paciencia"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "estado",
+                    "=",
+                    "\"hostil\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "dano",
+                    "=",
+                    "trader.dano_hostil"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation",
+                    "=",
+                    "\"idle\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_acao",
+                        "=",
+                        "\"fechar\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Ataques do trader",
+              "source": "",
+              "folded": false,
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "A fazer: ataques do mercador hostil (trader.estado = \"hostil\"). Projéteis dele devem ter projetil_inimigo.origem = \"trader\" para a multa valer.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "trader_morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Group",
+                  "name": "Quando o trader morre",
+                  "source": "",
+                  "folded": false,
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "parameters": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "comment": "A decidir: o que muda quando o pato mata o mercador (global trader_morto).",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -74993,6 +75365,142 @@
                 "textG": 0,
                 "textR": 0
               }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Barra de vida do mercador hostil, usando a barra do boss do HUD.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "estado",
+                    "=",
+                    "\"hostil\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "hud_boss_trilho",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "hud_boss_rastro",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "hud_boss_fill",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "hud_boss_nome",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "hud_boss_fill",
+                    "Resizable",
+                    "=",
+                    "hud_boss_trilho.Width() * clamp(trader.vida / trader.max_vida, 0, 1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "hud_boss_fill",
+                    "=",
+                    "hud_boss_trilho.X()",
+                    "=",
+                    "hud_boss_trilho.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "hud_boss_rastro",
+                    "=",
+                    "hud_boss_trilho.X()",
+                    "=",
+                    "hud_boss_trilho.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "hud_boss_nome",
+                    "Text",
+                    "=",
+                    "trader.nome_barra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "hud_boss_nome",
+                    "=",
+                    "hud_boss_trilho.X() + hud_boss_trilho.Width() / 2 - hud_boss_nome.Width() / 2",
+                    "=",
+                    "hud_boss_trilho.Y() - 30"
+                  ]
+                }
+              ],
+              "events": []
             }
           ]
         }
