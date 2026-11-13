@@ -9147,6 +9147,18 @@
           "persistentUuid": "d182307b-e979-4949-85ee-da88de4ef9a0",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "coice_x",
+          "persistentUuid": "1d70707e-5b7c-411f-9037-8665cce14b84",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "coice_y",
+          "persistentUuid": "7c9c102b-0715-4641-b49d-1c80f422b242",
+          "type": "number",
+          "value": 1000
         }
       ],
       "effects": [],
@@ -54509,7 +54521,7 @@
                             "pato",
                             "PlatformerObject",
                             "=",
-                            "clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * 700, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())"
+                            "clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * pato.coice_x, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())"
                           ]
                         },
                         {
@@ -54559,7 +54571,7 @@
                                 "pato",
                                 "soco_vy",
                                 "=",
-                                "-pato.soco_sin * 1000"
+                                "-pato.soco_sin * pato.coice_y"
                               ]
                             }
                           ],
