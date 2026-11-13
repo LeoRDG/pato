@@ -54931,6 +54931,17 @@
                             "",
                             "\"a\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -54956,6 +54967,17 @@
                             "",
                             "\"d\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -54980,6 +55002,17 @@
                           "parameters": [
                             "",
                             "\"LShift\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -55025,6 +55058,17 @@
                             "pato",
                             "PlatformerObject"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -55080,6 +55124,17 @@
                           "parameters": [
                             "pato",
                             "AdvancedJump",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
                             ""
                           ]
                         }
@@ -55138,6 +55193,17 @@
                           "parameters": [
                             "pato",
                             "AdvancedJump",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
                             ""
                           ]
                         }
@@ -55182,6 +55248,17 @@
                             "",
                             "\"Space\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -55215,6 +55292,17 @@
                           "parameters": [
                             "pato",
                             "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -55970,6 +56058,17 @@
                         "pato",
                         "PlatformerObject"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -56136,6 +56235,17 @@
                         ">=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -56247,6 +56357,17 @@
                       "parameters": [
                         "pato",
                         "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
                       ]
                     }
                   ],
@@ -57425,6 +57546,17 @@
                         ">",
                         "pato.soco_espera"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -58084,6 +58216,17 @@
                         "",
                         "\"Right\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -58551,6 +58694,17 @@
                     "",
                     "\"Num1\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -58636,6 +58790,17 @@
                   "parameters": [
                     "armas.doze",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
                     ""
                   ]
                 }
@@ -58725,6 +58890,17 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -58810,6 +58986,17 @@
                   "parameters": [
                     "armas.lanca",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
                     ""
                   ]
                 }
@@ -58975,6 +59162,17 @@
                             ">=",
                             "1"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -59005,6 +59203,17 @@
                           "parameters": [
                             "",
                             "\"r\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -59827,6 +60036,17 @@
                             "False",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": []
@@ -59894,6 +60114,17 @@
                         "arma_atual",
                         "=",
                         "\"minigun\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
                       ]
                     }
                   ],
