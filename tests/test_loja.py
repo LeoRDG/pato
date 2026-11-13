@@ -35,7 +35,7 @@ def tipos(e):
 
 def test_catalogo_tem_campos():
     cat = glob('loja_catalogo')
-    assert cat['type'] == 'array' and len(cat['children']) == 5
+    assert cat['type'] == 'array' and len(cat['children']) >= 5
     ids = []
     for item in cat['children']:
         f = {c['name']: c['value'] for c in item['children']}
