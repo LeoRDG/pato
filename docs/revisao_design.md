@@ -33,10 +33,10 @@ Every new number below must be a GDevelop variable from the start (see `CLAUDE.m
 - **Problem:** enemies stunned by the punch (`estado = "dano"`) still deal contact damage. In a close-range punching game, the enemy you just knocked back hurts you.
 - **Fix:** skip contact damage while the enemy's `estado` is `"dano"`, and/or while the punch is active (`soco_duracao`). Make it a toggle variable.
 
-### FIX-3: Coins and upgrades persist through death (high, blocks the leaderboard)
-- **Where:** `moedas_total` (global), `upgrades` (global), `Combate` → *Moeda* → *Coleta*.
-- **Problem:** with permanent coins and stat upgrades, the score rewards grinding instead of skill.
-- **Fix:** see the "Run economy" section under Score.
+### ~~FIX-3: Coins and upgrades persist through death~~ (not a bug: decided)
+- **Where:** `moedas_total` (global), `upgrades` (global).
+- **Decision:** permanent coins and upgrades are the intended design. They give players a reason to replay for a better time.
+- **Fairness:** handled by a finite upgrade tree and by showing each player's build on the leaderboard (see FEAT-3, SCORE-4).
 
 ### FIX-4: Progress % only works for left-to-right levels (medium)
 - **Where:** `Jogador` → *Morte do Pato* (`ultima_run.progresso`, from `inicio.X` to `safezone.X`).
@@ -73,9 +73,28 @@ Every new number below must be a GDevelop variable from the start (see `CLAUDE.m
 - A global `fase_atual` decides where the Hub door leads.
 - Fill in `Menu` and `Vitoria`.
 
-### FEAT-3: Hub shop
-- Make `trader` interactive: buy upgrades and weapons (`upgrades.*`, `armas.*`).
-- Prices as variables.
+### FEAT-3: Hub shop with permanent upgrades
+- Make `trader` interactive: buy upgrades and weapons (`upgrades.*`, `armas.*`). All purchases are permanent.
+- Prices as variables (`preco_*`).
+
+**Finite tree.** The total cost of everything is reachable in a handful of runs (about 5–8).
+- **Early on,** upgrades make each run faster, which keeps players replaying.
+- **Once maxed,** everyone has the same kit, so the top of the leaderboard comes down to skill.
+- **Tuning:** total cost ÷ average coins per run = number of runs to max out.
+
+**Movement upgrades** are the main category. They lower your time by opening faster routes:
+
+| Upgrade | Why it lowers your time | Variables |
+|---|---|---|
+| Double punch launch | Two launches per jump; skips platforms and reaches shortcuts | `coice_cargas` |
+| Wall hop | Punching a wall resets the air jump; enables vertical shortcuts (Heaven) | — |
+| Shotgun jump | Shotgun recoil launches the duck; a second movement tool | `doze_coice` |
+| Dash through bullets | Push through instead of waiting | `dash_imune` |
+| Stronger launch | Longer gaps become reachable | `coice_x`, `coice_y` (per level) |
+
+**Level design rule:** each level has **shortcuts that only open with these upgrades**, so a stronger returning player sees the same level open up.
+
+**Stat upgrades** (fire rate, reload, damage, health, speed) stay, since faster kills also mean faster rooms. Cap each at about 3 levels (today it's 5) so they don't overshadow the movement upgrades. The cap is a variable.
 
 ### FEAT-4: Bosses with 3 phases
 - Rule: each phase adds one new pattern with a clear warning, and the phase shows on the existing boss bar (`hud_boss_*`).
@@ -127,11 +146,12 @@ Every new number below must be a GDevelop variable from the start (see `CLAUDE.m
 - Dying restarts the current room and resets that room's score, the same way Hotline Miami restarts the floor.
 - The clock keeps running, so deaths cost you through the time bonus instead of a flat penalty.
 
-### SCORE-4: Run economy (leaderboard fairness)
-- **Main board: full run.** Starting a new run resets coins and upgrades. Coins are spent in the Hub only between levels during that run.
-- **Permanent unlocks, if any:** options only (weapons, cosmetics), never stat boosts.
-- **Unspent coins add to the score.** The player chooses between buying power and banking points.
+### SCORE-4: Leaderboard fairness with permanent upgrades
+- **Main board: full run** (all 3 worlds and bosses), score and time.
+- **Show the build with the score,** for example `48,200 · 14/20 upgrades`. Anyone can see whether a score came from skill or from upgrades.
+- **Optional "No upgrades" board:** start a run with upgrades turned off and it submits to a separate board, giving experts their own category.
 - **Per-level boards:** secondary, for practice.
+- The finite tree (FEAT-3) means top players all end up with the same kit.
 
 ### SCORE-5: Leaderboard submission
 - Use GDevelop's built-in leaderboards (the `LeaderboardDialog` extension is already installed).
@@ -145,6 +165,6 @@ Every new number below must be a GDevelop variable from the start (see `CLAUDE.m
 2. [ ] FEAT-1, FEAT-2 (rooms, progression loop)
 3. [ ] Build Hell properly with the current roster, plus its boss (FEAT-4)
 4. [ ] SCORE-1, SCORE-2, SCORE-3
-5. [ ] FEAT-3 + SCORE-4 (shop, run economy)
+5. [ ] FEAT-3 + SCORE-4 (permanent shop, upgrade shortcuts, build on the leaderboard)
 6. [ ] FIX-6 + SCORE-5 (leaderboard)
 7. [ ] Purgatory, then Heaven
