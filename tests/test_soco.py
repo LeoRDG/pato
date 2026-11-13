@@ -28,7 +28,7 @@ def test_soco_no_botao_direito_com_luva_e_dano_pequeno():
     assert '"Create"' in txt and '"soco"' in txt and 'som_soco.wav' in txt
     acerto = [e for e in walk(soco['events']) if e.get('object') == 'Inimigo'][0]     # cada inimigo é testado de verdade
     dano = [a for a in acerto['actions'] if a['parameters'][:2] == ['Inimigo', 'vida']][0]['parameters'][3]
-    assert 'round(12 *' in dano                                    # bem menos que a pistola (26)
+    assert 'round(pato.soco_dano *' in dano                                    # bem menos que a pistola (26)
     assert any(a['parameters'][:2] == ['Inimigo', 'socado'] for a in acerto['actions'])
     assert 'soco' in OBJ and os.path.exists(os.path.join(RAIZ, 'assets', 'soco_luva.png'))
     assert all(any(v['name'] == 'socado' for v in OBJ[m['name']]['variables'])

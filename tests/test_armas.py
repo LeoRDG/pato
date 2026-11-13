@@ -43,7 +43,7 @@ def test_bala_nasce_com_os_valores_da_arma():
     txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
     for k in ('Arma.dano', 'Arma.alcance', 'Arma.queda_min', 'Arma.furos', 'Arma.repulsao'):
         assert k in txt
-    assert 'projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15)' in txt
+    assert 'projetil.dano * projetil.fator * RandomFloatInRange(1 - projetil.dano_var, 1 + projetil.dano_var)' in txt
     assert '(projetil.dano + Random(38))' not in txt
 
 

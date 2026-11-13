@@ -21,8 +21,8 @@ def test_poeira_existe_e_esta_numa_pasta():
 def test_buffer_pulo_curto_e_queda_pesada():
     a = acoes()
     assert any(t == 'ResetObjectTimer' and p[1] == '"bufpulo"' for t, p in a)
-    assert any(t == 'PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed' and '* 0.45' in p[3] for t, p in a)
-    assert any(t == 'PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed' and '1400 * TimeDelta()' in p[3] for t, p in a)
+    assert any(t == 'PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed' and '* pato.pulo_corte' in p[3] for t, p in a)
+    assert any(t == 'PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed' and 'pato.dash_gravidade * TimeDelta()' in p[3] for t, p in a)
 
 
 def test_sem_animacao_falsa_no_pato():
