@@ -74,3 +74,29 @@ def test_objetos_loja_existem():
     meus = coleta([obj(n) for n in novos], [])
     resto = coleta([o for o in JOGO['objects'] if o['name'] not in novos] + JOGO['variables'], [])
     assert len(meus) == len(set(meus)) and not set(meus) & set(resto)
+
+
+# ------------------------------------------------------------------ Tarefa 2: reaplicar upgrades
+
+def _aplicar():
+    grupo = next(e for e in ext('AplicarUpgrades') if e.get('name') == 'Aplicar upgrades')
+    alvo = next(e for e in grupo['events'] if any(a['type']['value'] == 'PlatformBehavior::MaxSpeed' for a in e.get('actions') or []))
+    return grupo, alvo
+
+
+def test_velocidade_parte_da_base():
+    grupo, alvo = _aplicar()
+    ms = next(a for a in alvo['actions'] if a['type']['value'] == 'PlatformBehavior::MaxSpeed')
+    assert ms['parameters'][-1].startswith('pato.velocidade_base *')
+    antes = grupo['events'][:grupo['events'].index(alvo)]
+    assert any('SceneJustBegins' in tipos(e) and any('velocidade_base' in json.dumps(a['parameters']) for a in e['actions'])
+               for e in antes)
+
+
+def test_upgrades_reaplicaveis():
+    _, alvo = _aplicar()
+    (cond,) = alvo['conditions']
+    assert cond['type']['value'] == 'BuiltinCommonInstructions::Or'
+    subs = json.dumps(cond['subInstructions'])
+    assert 'SceneJustBegins' in subs and 'reaplicar_upgrades' in subs
+    assert any(a['parameters'][:3] == ['pato', 'reaplicar_upgrades', 'False'] for a in alvo['actions'])

@@ -72940,6 +72940,52 @@
               "actions": [
                 {
                   "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "velocidade_base",
+                    "=",
+                    "pato.PlatformerObject::MaxSpeed()"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SceneJustBegins"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "reaplicar_upgrades",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
                     "value": "FireBullet::FireBullet::SetCooldown"
                   },
                   "parameters": [
@@ -72978,7 +73024,7 @@
                     "pato",
                     "PlatformerObject",
                     "=",
-                    "pato.PlatformerObject::MaxSpeed() * (1 + pato.upg_velocidade * GlobalVariable(upgrades.velocidade))"
+                    "pato.velocidade_base * (1 + pato.upg_velocidade * GlobalVariable(upgrades.velocidade))"
                   ]
                 },
                 {
@@ -73012,6 +73058,17 @@
                     "vida_controle",
                     "=",
                     "pato.vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "reaplicar_upgrades",
+                    "False",
+                    ""
                   ]
                 }
               ]
