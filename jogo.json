@@ -9165,6 +9165,30 @@
           "persistentUuid": "6b65c5e9-cafe-4ace-8c98-9739208acb10",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "coice_vx",
+          "persistentUuid": "e773640d-a3a9-4562-901b-826dc41e5984",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "coice_parede_x",
+          "persistentUuid": "45a9b6ec-625e-408b-bcca-0d0a1aa40d9e",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "coice_parede_y",
+          "persistentUuid": "00f9c242-9a40-4d79-9780-88733c0efd7f",
+          "type": "number",
+          "value": 650
+        },
+        {
+          "name": "coice_parede_freio",
+          "persistentUuid": "ad358755-c319-48d8-8abb-a90d9eae72e2",
+          "type": "number",
+          "value": 1800
         }
       ],
       "effects": [],
@@ -54563,6 +54587,97 @@
                               },
                               "parameters": [
                                 "abs(pato.soco_sin)",
+                                "<=",
+                                "0.2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "coice_vx",
+                                "=",
+                                "-pato.soco_cos * pato.coice_parede_x"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_vy",
+                                "=",
+                                "-pato.coice_parede_y"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::IsOnFloor"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "PlatformerObject"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "coice_guarda",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::JsCode",
+                              "inlineCode": [
+                                "const pato = runtimeScene.getObjects(\"pato\")[0];",
+                                "const b = pato && pato.getBehavior(\"PlatformerObject\");",
+                                "if (b && b._setFalling && b._falling) {",
+                                "  const alvo = pato.getVariables().get(\"soco_vy\").getAsNumber();   // px/s, negativo = para cima",
+                                "  const noChao = b._state === b._onFloor;",
+                                "  const agora = b._state === b._falling ? b._currentFallSpeed",
+                                "    : b._state === b._jumping ? b._currentFallSpeed - b._jumping.getCurrentJumpSpeed() : 0;",
+                                "  if ((alvo < 0 && alvo < agora) || (alvo > 0 && alvo > agora && !noChao)) {",
+                                "    const podiaPular = b._canJump;",
+                                "    if (b._state !== b._falling) b._setFalling();",
+                                "    b._canJump = podiaPular;",
+                                "    b._currentFallSpeed = alvo;   // para baixo, o comportamento limita na queda máxima",
+                                "  }",
+                                "}"
+                              ],
+                              "parameterObjects": "",
+                              "useStrict": true,
+                              "eventsSheetExpanded": false
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(pato.soco_sin)",
                                 ">",
                                 "0.2"
                               ]
@@ -55288,6 +55403,85 @@
                         "coice_guarda",
                         "False",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.coice_vx)",
+                        ">",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "pato",
+                        "+",
+                        "pato.coice_vx * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_vx",
+                        "=",
+                        "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_vx",
+                        "=",
+                        "0"
                       ]
                     }
                   ],
