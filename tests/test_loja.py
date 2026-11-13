@@ -100,3 +100,21 @@ def test_upgrades_reaplicaveis():
     subs = json.dumps(cond['subInstructions'])
     assert 'SceneJustBegins' in subs and 'reaplicar_upgrades' in subs
     assert any(a['parameters'][:3] == ['pato', 'reaplicar_upgrades', 'False'] for a in alvo['actions'])
+
+
+# ------------------------------------------------------------------ Tarefa 3: trava dos controles
+
+def _entrada(c):
+    t = c['type']
+    return (any(k in t['value'] for k in ('Key', 'MouseButton', 'Gamepad')) and t['value'] != 'AnyKeyReleased'
+            and not t.get('inverted'))
+
+
+def test_toda_entrada_do_jogador_tem_trava():
+    guardados = 0
+    for e in anda(ext('Jogador')):
+        if any(_entrada(c) for c in e.get('conditions') or []):
+            assert any(c['type']['value'] == 'BooleanObjectVariable' and c['parameters'][:3] == ['pato', 'na_loja', 'False']
+                       for c in e['conditions']), e['conditions']
+            guardados += 1
+    assert guardados > 0
