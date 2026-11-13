@@ -9195,6 +9195,222 @@
           "persistentUuid": "43690be0-733c-4e72-b78a-242f409988cb",
           "type": "number",
           "value": 0.35
+        },
+        {
+          "name": "upg_cadencia",
+          "persistentUuid": "e6a171c0-2196-4730-bd36-424e43287309",
+          "type": "number",
+          "value": 0.85
+        },
+        {
+          "name": "upg_recarga",
+          "persistentUuid": "8c83f526-df65-479b-ad49-62ea82a60a10",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "upg_dano",
+          "persistentUuid": "2a52e090-626c-4601-9443-d8a425c03c07",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "upg_velocidade",
+          "persistentUuid": "7e492360-2f03-4295-80ae-1b2d4689faf1",
+          "type": "number",
+          "value": 0.1
+        },
+        {
+          "name": "upg_vida_base",
+          "persistentUuid": "3cd282a6-0a6f-4fd2-bad8-89ecc97c7abf",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "upg_vida_nivel",
+          "persistentUuid": "8d49ab58-7ac5-4ee8-a1f2-41a2369bea10",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "f1_moedas",
+          "persistentUuid": "40ee2454-77ac-4ddf-84a3-f2e21c354dd5",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "iframes_tempo",
+          "persistentUuid": "d5c01132-648d-4778-b42a-072cb898be4a",
+          "type": "number",
+          "value": 0.75
+        },
+        {
+          "name": "pulo_buffer",
+          "persistentUuid": "21a12e91-7b78-48a2-be55-bbf2debc775a",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "pulo_corte",
+          "persistentUuid": "8e91c693-6643-4222-acba-493d13a3ba13",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "pulo_corte_vel",
+          "persistentUuid": "94f90bca-283f-41fb-a4ca-21e8c8dc4017",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dash_queda_max",
+          "persistentUuid": "01413d0c-d9d6-4198-a4d4-371f10f37c29",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "dash_gravidade",
+          "persistentUuid": "c7c4ebc2-b6d1-4b04-a28f-9c547343d7e7",
+          "type": "number",
+          "value": 1400
+        },
+        {
+          "name": "poeira_queda_min",
+          "persistentUuid": "f25853a1-1c3e-4fe1-bd4b-5a9fea8d9474",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_anim_tempo",
+          "persistentUuid": "420ab75d-e5d8-45d2-ab36-03890eb6fa6d",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "camera_abaixo",
+          "persistentUuid": "16c7f4ad-1c13-4822-b068-a5d3768529bb",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "camera_acima",
+          "persistentUuid": "78403a22-2e57-4ac0-a0e1-e1ef5a4b6e9c",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "morte_escala_tempo",
+          "persistentUuid": "bac42b23-12a6-40ea-adf7-5c2febd50a59",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "morte_espera",
+          "persistentUuid": "31d15970-3a57-4d15-a0de-48db177e2c40",
+          "type": "number",
+          "value": 0.15
+        },
+        {
+          "name": "soco_alcance_parede",
+          "persistentUuid": "67eaf3cb-0a5a-4029-9737-da9656a848f7",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "soco_dano",
+          "persistentUuid": "ad9e35b6-1633-48d5-88d9-44314b560146",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "soco_empurrao",
+          "persistentUuid": "b23154c0-5011-4dcc-b85e-02780c4b9514",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "soco_stun",
+          "persistentUuid": "f3488657-c40b-465b-bb0a-50b130eacad1",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "soco_vel_inimigo",
+          "persistentUuid": "780eb4f4-0abd-4a64-b780-8700fcc8650a",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "soco_duracao",
+          "persistentUuid": "6349c181-4910-4098-a3c3-b9533fe1f3c5",
+          "type": "number",
+          "value": 0.16
+        },
+        {
+          "name": "soco_alcance_ini",
+          "persistentUuid": "8353f5fb-7fb4-4c0e-b9a9-38ca3e70303b",
+          "type": "number",
+          "value": 35
+        },
+        {
+          "name": "soco_alcance_extra",
+          "persistentUuid": "bc42f789-8e76-4ae5-951b-fa958b771180",
+          "type": "number",
+          "value": 95
+        },
+        {
+          "name": "soco_rastro_dist",
+          "persistentUuid": "18ba117f-42d1-4bf6-8545-51f6cdcbee35",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "soco_hit_alcance",
+          "persistentUuid": "fdeee982-96e0-4773-bc20-e5a4ce93cdb3",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "soco_hit_folga",
+          "persistentUuid": "5116231f-74fb-43a1-b401-83ac09033b09",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "recuo_decai",
+          "persistentUuid": "11aa9e81-90e4-491d-b646-19640e7df0df",
+          "type": "number",
+          "value": 0.98
+        },
+        {
+          "name": "coice_decai",
+          "persistentUuid": "ab927ebb-dfcd-45fc-b70b-2316a0671fbc",
+          "type": "number",
+          "value": 1e-06
+        },
+        {
+          "name": "recuo_max",
+          "persistentUuid": "3a75c40b-e110-459c-8d1a-f7369bf91a2a",
+          "type": "number",
+          "value": 35
+        },
+        {
+          "name": "laser_alcance",
+          "persistentUuid": "87390dd3-37a4-4554-aac5-0d6ad0ff3503",
+          "type": "number",
+          "value": 4000
+        },
+        {
+          "name": "giro_decai",
+          "persistentUuid": "e7c0a258-ede0-4a8b-bb35-0d721219995a",
+          "type": "number",
+          "value": 1.6
+        },
+        {
+          "name": "giro_sobe",
+          "persistentUuid": "ef7159be-0f32-48b1-9877-149bd2d0d8e0",
+          "type": "number",
+          "value": 3.6
         }
       ],
       "effects": [],
@@ -10109,6 +10325,18 @@
           "persistentUuid": "d9d0674c-2490-4d5a-a221-9a3cb4eff0c5",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "gravidade",
+          "persistentUuid": "06fdb620-b986-4802-8607-3dc1a3ab3639",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "dano_var",
+          "persistentUuid": "5b096fe9-c10c-4599-8f73-19002f6ca0ab",
+          "type": "number",
+          "value": 0.15
         }
       ],
       "effects": [
@@ -10462,6 +10690,54 @@
           "persistentUuid": "04104c2c-ff30-4933-bd79-7e0963fcaee4",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "dc6b4160-784e-4a22-8014-3f90c0a3d9c8",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "f6a750b5-81bc-4bb7-9239-7f5663a8b5b5",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "dfd059d8-c799-4070-9894-f95b4c563475",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "e0de5032-19d9-4817-9e44-7fa92d5a3db9",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "411afefc-cf71-4b68-90dd-a9fe2d3c7747",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "5846dd05-d23f-446b-9037-1ab89e6f2c9d",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "2e9d1688-082a-442c-bc37-0d35f417424d",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "7979ddef-9f70-464b-ad0b-83c60eecdf71",
+          "type": "number",
+          "value": 40
         }
       ],
       "effects": [
@@ -11223,6 +11499,24 @@
           "persistentUuid": "dc91a018-756d-4405-a11a-42161328214c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "subida",
+          "persistentUuid": "5653c451-b018-4f72-92da-62e45ccdef88",
+          "type": "number",
+          "value": 240
+        },
+        {
+          "name": "escala_decai",
+          "persistentUuid": "4a328a3b-fab3-42cb-8ef1-ff79846e7432",
+          "type": "number",
+          "value": 0.993
+        },
+        {
+          "name": "opacidade_decai",
+          "persistentUuid": "784431c8-5fe2-4c6e-acc4-59f33bf137db",
+          "type": "number",
+          "value": 0.95
         }
       ],
       "effects": [],
@@ -11390,6 +11684,24 @@
           "persistentUuid": "f00f6f73-be52-46a2-bf5d-b8e955009e52",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "0962138e-0009-4f08-aa8e-2b054d9658aa",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "3896f5a8-7122-4745-8699-a8a1efc7f7a0",
+          "type": "number",
+          "value": 0.05
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "94e8600f-fbcb-41d4-a466-f7483f154e55",
+          "type": "number",
+          "value": 3
         }
       ],
       "effects": [],
@@ -11608,6 +11920,90 @@
           "persistentUuid": "f01014e9-fe90-43ba-a3df-60b5f8be4c23",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "11881f75-acae-431f-a0ef-e19d63f7df56",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "4282bea6-38e6-4acc-a6cd-126daa3ab250",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_vel",
+          "persistentUuid": "c5933100-6d7e-4c82-8966-5dc71b542e7f",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "d900b779-cfa3-43ec-9bce-077fe105408e",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "f6c21706-a24f-4ec3-9216-bb7d7ac3659f",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "ea32d25d-dc4b-404c-8875-ddbf7f4c5e01",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "587a2d52-51c9-41e3-bc8c-bc8ca63567bd",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "095af051-5663-4b65-9403-8200b99fd14c",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "ee352eb9-a53f-430d-a82b-efffd2148c7a",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "ff3f8675-e809-4a79-95e5-f07cbcd36380",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "c355ccfe-aa78-428a-93c2-77cee9c4cc1f",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "2a519ff1-55fe-4d93-b97d-e5578931cb10",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "mergulho_vel",
+          "persistentUuid": "a33ba1d8-27a1-470a-b541-06218c8dcd96",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "mergulho_tempo",
+          "persistentUuid": "0a369976-211c-4274-9488-cb86813076cb",
+          "type": "number",
+          "value": 0.45
         }
       ],
       "effects": [
@@ -12273,6 +12669,96 @@
           "persistentUuid": "e10d3663-4aa6-4a1d-939d-f57fc2565b06",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "fe63cdd8-81ca-4bc7-8edd-2750db2ad409",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "553bb39f-88a2-4201-8d59-1b0bb0c8c4f5",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "0c89ff99-025b-4731-bfbf-6eb507af5af1",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "7acbfe36-1a27-4782-bb89-412da409b781",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "683ff20f-d4b3-4cdf-b9dd-b2b214a9fa60",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "a04a3500-6c2e-4d7c-9203-41ee78d402e6",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "26a16f15-a620-4831-b171-f532a1a1dcb4",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "8185f818-064e-4d40-9496-5ce834eab06b",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dist_max",
+          "persistentUuid": "f0142484-254a-43dd-ac39-3ea02d036ea0",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "dist_min",
+          "persistentUuid": "14d6b9e9-1488-437b-968e-394fc8ce2dd6",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "52db4ca0-330d-421e-b503-26953cc0d86b",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "67c2c051-7e3e-4f73-90cc-70024b0daf0a",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "22841db0-be41-4e2f-9c4b-10cf409798d9",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "tiro_vel",
+          "persistentUuid": "2779b835-7dc7-47a3-b2e8-c54a8a072d39",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "rajada",
+          "persistentUuid": "725701ac-5d91-4e1a-8834-f7c92649ff34",
+          "type": "number",
+          "value": 3
         }
       ],
       "effects": [
@@ -12688,6 +13174,24 @@
           "persistentUuid": "db89cf69-c0ee-4e70-9ffd-85b86ccd1647",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "33d2317c-0f8d-487f-adf1-ebde4934bf1d",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "fe819fb3-8e18-4f5e-9469-578451f1d8b0",
+          "type": "number",
+          "value": 0.04
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "d254c00c-2fa9-4728-8477-d056354bad9e",
+          "type": "number",
+          "value": 3
         }
       ],
       "effects": [],
@@ -12918,6 +13422,78 @@
           "persistentUuid": "f2de992a-440c-4645-b6be-dfe4f54a9871",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "pulo_dist",
+          "persistentUuid": "20320529-eb59-4093-88ef-97eef007c9d4",
+          "type": "number",
+          "value": 1200
+        },
+        {
+          "name": "pulo_cooldown",
+          "persistentUuid": "095d247f-998a-47ee-9536-ff1c5cbe6daa",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "pulo_x1",
+          "persistentUuid": "58332f18-3d8f-48ce-ad4c-727b290ffb44",
+          "type": "number",
+          "value": 0.25
+        },
+        {
+          "name": "pulo_x2",
+          "persistentUuid": "d5c326ec-11f1-43d4-acf8-cd9cdf094fc1",
+          "type": "number",
+          "value": 0.75
+        },
+        {
+          "name": "pulo_alt1_min",
+          "persistentUuid": "20dff37a-48a9-460b-8182-a4f745fdbbcb",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "pulo_alt1_max",
+          "persistentUuid": "2a8a1273-7854-4b09-98ce-8682e4fdacdf",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "pulo_alt2_min",
+          "persistentUuid": "b20b6be7-d6fa-4a02-937f-73fb07ad33d4",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "pulo_alt2_max",
+          "persistentUuid": "5dbe338e-115b-434d-8601-0538ba59951a",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "pulo_dur_min",
+          "persistentUuid": "42c6d173-cedf-4209-89e4-c43ee7cb0729",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "pulo_dur_max",
+          "persistentUuid": "a6188fb0-43bd-4c63-8de5-22a985aa0d40",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "pulo_giro_min",
+          "persistentUuid": "b243a101-10ba-47a5-ac69-c807037d9fce",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "pulo_giro_max",
+          "persistentUuid": "230cd608-d780-4d7b-93cf-392feb619484",
+          "type": "number",
+          "value": 6
         }
       ],
       "effects": [],
@@ -13292,6 +13868,30 @@
           "persistentUuid": "6e346158-35b2-45a1-8b16-c8d65a2e737f",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "a7507d2f-90b5-4fbc-8ca6-ea5402ac9b01",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "b104ae64-59b9-453b-84c1-425212f85e7c",
+          "type": "number",
+          "value": 0.07
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "f203b9b1-d09b-4240-9e3d-37854bd0d9af",
+          "type": "number",
+          "value": 3.5
+        },
+        {
+          "name": "pump_espera",
+          "persistentUuid": "80ad4186-7c8e-4629-8003-35fc30efe7a2",
+          "type": "number",
+          "value": 0.29
         }
       ],
       "effects": [],
@@ -13385,7 +13985,14 @@
       "persistentUuid": "fc37150d-ca87-4d6c-9dfc-26990338ca3e",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "duracao",
+          "persistentUuid": "5eca1c0c-0ebf-4102-839a-5440db365f3e",
+          "type": "number",
+          "value": 0.2
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -13512,6 +14119,72 @@
           "name": "parada",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "espalha_x",
+          "persistentUuid": "56aa4138-9f01-4570-9341-fa274baded5f",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "lanca_min",
+          "persistentUuid": "d601d1a3-d503-4920-89eb-a9af7cf14ea5",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "lanca_max",
+          "persistentUuid": "023bf774-bd0d-4fc2-ad19-1a28680fe18e",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "gravidade",
+          "persistentUuid": "e191ce6e-bc68-495f-81a1-1c325ad312e5",
+          "type": "number",
+          "value": 1800
+        },
+        {
+          "name": "quique",
+          "persistentUuid": "5c05be5b-9fd9-4c89-b87d-9d1ad9506d96",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "atrito_x",
+          "persistentUuid": "a93b851d-6405-430a-bf51-613f1c130c51",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "parada_vy",
+          "persistentUuid": "e038cce1-9145-449c-9c5f-ff1154684a61",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "iman_dist",
+          "persistentUuid": "b44b01c9-3631-44f7-824e-aed87b52bc3b",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "iman_vel",
+          "persistentUuid": "bb10010b-8cbf-4a22-afff-f9fa04b8dceb",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "pisca_inicio",
+          "persistentUuid": "804a75f6-6800-4ae2-b0db-d7f1f607ab42",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "duracao",
+          "persistentUuid": "258bca8a-7328-4d9b-a91a-d76903f43a4b",
+          "type": "number",
+          "value": 6
         }
       ],
       "effects": [
@@ -13754,6 +14427,24 @@
           "name": "Variable",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "subida",
+          "persistentUuid": "533e2e5d-5f1d-4171-b27e-56aab73efe45",
+          "type": "number",
+          "value": 240
+        },
+        {
+          "name": "escala_decai",
+          "persistentUuid": "501b94fe-cf46-4241-8cbb-456ea23f16d8",
+          "type": "number",
+          "value": 0.993
+        },
+        {
+          "name": "opacidade_decai",
+          "persistentUuid": "9101edb6-6616-40b8-a105-c5140707e081",
+          "type": "number",
+          "value": 0.95
         }
       ],
       "effects": [],
@@ -13962,6 +14653,90 @@
           "persistentUuid": "b8832237-5426-457e-aead-1cfbf8037d0f",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "65abaf6f-2091-4f59-9e32-d74654cd5d44",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "1418e06a-20fb-4ebb-a8f9-898716b0fe12",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "2a799cce-a722-41e0-8a19-0d2901fdc894",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "6f86f481-0899-4818-a4b6-abbc55793cb7",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "f19687fe-019b-4fd4-a09e-be610cdcbd48",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "fcb3198d-f720-4d1e-a9d7-9e9c48110edc",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "b7f97156-dcb2-4a93-a0cc-0b9acfbb4394",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "be431717-6603-49e6-875e-f843ea1a251e",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "710de041-8096-4ef7-938b-9ca663e8f4ce",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "dba45528-3d1f-4304-8549-a99e3c573439",
+          "type": "number",
+          "value": 450
+        },
+        {
+          "name": "ataque_alt",
+          "persistentUuid": "0700cc93-c5fc-4a73-88c4-bc9f5b549cfc",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "47f76bb4-5279-4238-91e7-86236c0e4d5c",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "investida_vel",
+          "persistentUuid": "b03155e2-7843-432f-ba89-1628524542af",
+          "type": "number",
+          "value": 650
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "45b67d9f-8326-44c5-bd90-844d28034956",
+          "type": "number",
+          "value": 0.8
         }
       ],
       "effects": [
@@ -16985,6 +17760,108 @@
           "persistentUuid": "a9483171-b7a2-4887-9b92-43ef8cad632d",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "a7cf998a-b623-4d81-a476-419736c7dd45",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "73b5b044-4c08-4e05-980a-f9ec5ad9b7e4",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "7aad61d1-5ddf-42a6-adfe-d02b67322f58",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "40c39333-35e6-4dcb-85ba-bf8d4d7c6da8",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "e584408e-c24d-4cb4-b9b5-d3e59ac89df1",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "4403a972-40b6-4049-b7c9-a3a48c868d93",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "5db5bad3-0554-465d-a684-ea64cc977394",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "af4dcafe-48a5-4607-829a-6c417333f130",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "602a3a56-36b5-4527-8b89-d39570b9b91c",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "7b7ff291-a73f-43cf-8d31-7ea9237dfed9",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "8d4ecd6b-df42-4dab-b55a-9f9dcefdd7fb",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "investida_vel",
+          "persistentUuid": "53312882-3c48-40f8-b9f7-b172e6a44301",
+          "type": "number",
+          "value": 550
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "12afd55c-fa70-4f70-9125-a586668e7eed",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "voo_vel",
+          "persistentUuid": "b41f23eb-ea4b-43bb-8ac8-393608898f82",
+          "type": "number",
+          "value": 380
+        },
+        {
+          "name": "voo_pulo",
+          "persistentUuid": "51753e1f-f03e-4006-98ad-7d3924a037af",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "voo_tempo_min",
+          "persistentUuid": "59b1e2c7-0b9b-4c0e-b490-cd55ab14ba7e",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "pulo_normal",
+          "persistentUuid": "f5d862ad-9a5b-4f9b-be9f-6ebe43276164",
+          "type": "number",
+          "value": 600
         }
       ],
       "effects": [
@@ -19586,6 +20463,126 @@
           "persistentUuid": "f931a10b-290d-409e-a5af-885cb659519c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "a69de84c-3436-43a5-9da5-011972318536",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "47c361f8-9432-4b39-8a11-c1644ca212ad",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "85a3a4cc-37bc-4a68-a33c-48ead99f4f66",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "79aac53e-6a32-4c12-8249-544cd853e172",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "b4625ab2-b234-4432-8ca1-439ea108a960",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "4055c8bb-2403-48d0-93f7-b6f7d33d89d4",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "acd9759a-a8f9-4b8e-95ca-21dcf83d8e6e",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "f9913036-9cb0-4b60-8f0b-5ccf67b84325",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dist_max",
+          "persistentUuid": "bf219339-a4ae-4125-a701-ccd1489a1890",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "dist_min",
+          "persistentUuid": "6027c91f-8679-4aa5-983b-e263db0df404",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "a282d28d-f17a-4995-9124-f1c5925f285c",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "e953191f-b8b8-4fad-a2ad-b651be1adf00",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "f099d938-88a5-40e0-bb2e-6af3b2cf2f67",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "tiro_vel",
+          "persistentUuid": "e06a517e-1e9d-432b-8dfd-d30b4eccaaac",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "atacar_tempo",
+          "persistentUuid": "081067e0-1720-4522-a735-7e986c482c40",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "cura_intervalo",
+          "persistentUuid": "d3264f4b-c5af-41f0-b959-afaf20b7e089",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "cura_tempo",
+          "persistentUuid": "c111f39d-9f1a-4edb-bdac-b57f52303b79",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "cura_raio",
+          "persistentUuid": "0dd829ac-6bde-4b52-b9c0-c44c380ff23b",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "cura_valor",
+          "persistentUuid": "3733c102-3edf-489c-b061-da4955d70d33",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "cura_brilho",
+          "persistentUuid": "81b45d2f-f772-4b09-a862-5b16e5bfce8d",
+          "type": "number",
+          "value": 0.4
         }
       ],
       "effects": [
@@ -23819,6 +24816,24 @@
           "persistentUuid": "49270829-62da-47e3-9024-5b4144da8d49",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "subida",
+          "persistentUuid": "219e8c07-4d17-47a1-9dac-417a9916dc55",
+          "type": "number",
+          "value": 240
+        },
+        {
+          "name": "escala_decai",
+          "persistentUuid": "941ac92b-f429-43f6-8b34-44e277892805",
+          "type": "number",
+          "value": 0.993
+        },
+        {
+          "name": "opacidade_decai",
+          "persistentUuid": "f2ace920-1910-4b6d-b1c4-16ff0d6cd75b",
+          "type": "number",
+          "value": 0.95
         }
       ],
       "effects": [],
@@ -25790,6 +26805,84 @@
           "persistentUuid": "b01f7f74-a51f-4f28-8d59-14a08b24be78",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "c583687f-f49b-4460-b04f-0aa428b6b0e7",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "1c1d2a7b-fb78-48db-8c95-eabea9a22b13",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "46a9abc3-3aa6-4588-94db-09bd64fbffa8",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "d4527ffd-7e71-4e6c-a856-0fac12aba5d9",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "9b115919-f2fc-4979-a5e4-eb5dd2ae3d7e",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "1cbf3182-6b0e-4972-a881-64d8aa320366",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "2a2e8650-a73f-4cda-9dc6-55cf29b292bb",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "c7bb2597-8f0a-46bb-9e90-1ef5a9b855b7",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "09aed442-5763-4eca-9627-97c8d00eac5c",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "7914821d-79de-4974-9f3a-68945ee8bb8f",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "1965b8fb-5b1f-4f35-ac7b-5677d35d9223",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "investida_fator",
+          "persistentUuid": "074b8eac-94d9-495d-9ac4-4db76b3909e3",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "0f722855-bbdf-4313-8e0d-b1ac667eef7d",
+          "type": "number",
+          "value": 0.35
         }
       ],
       "effects": [
@@ -26951,6 +28044,84 @@
           "persistentUuid": "3330aac4-e7f1-4be7-9ab0-b044d41ff897",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "ffe576fd-7278-4402-a136-25ed6d5d0b8a",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "6d269cb6-dc03-4dae-98b7-449aa10100e3",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "d8302c94-1cc2-4d89-9406-3b66ac1559df",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "d06086a2-d0ef-419e-8eaf-5fd5d900db5a",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "3edbc041-ef71-443e-a6df-86e3d21651a5",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "00766be5-347b-4b2d-b224-2157facda7d6",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "c4b597ad-12e8-4814-95fc-7f962083101e",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "e3fbf70b-5371-4169-82b8-b5bf5fa76ac0",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "e63c668f-dac9-49f2-a31a-f6c5bdb4bdc5",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "60d5361d-48b8-44ac-9938-abae4d1be5ef",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "9feba1f9-7f75-49ec-ab30-122de9829779",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "investida_fator",
+          "persistentUuid": "a81c7f41-a2f8-4cec-99cf-a34b26504088",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "0f6891cb-3d62-4cce-90ec-e58141956061",
+          "type": "number",
+          "value": 0.35
         }
       ],
       "effects": [
@@ -28112,6 +29283,84 @@
           "persistentUuid": "79e24332-62c4-44ee-bdb8-303f627da1bc",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "793eb602-7931-4268-905f-9be7cd738a8f",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "fa3813d6-0b81-4746-9323-a75e8f575ab2",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "9856fbb2-7e32-4281-b1db-f9cc7a1b2cf9",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "ed023fd9-b81a-49e4-beb6-29c8b68131b6",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "d122723b-8139-4288-a8c4-026da2dff761",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "6ad5db11-95ef-4413-b544-2a23c798f196",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "0ff81d69-2ff8-45c8-ba84-802bfb462c6a",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "693ef93d-7cce-4b70-a5c0-6bf47372ed03",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "20797867-3672-4e6b-9496-fa2e76c31216",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "cbdd4bd4-6d7c-4845-9043-a86c9e78dede",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "4afbbd76-726c-4909-803a-1a7145993eee",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "investida_fator",
+          "persistentUuid": "4223a3b8-1296-421c-80ef-2d51239cbd66",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "7d34aa04-dbb4-4eea-8497-5ea6f9289bee",
+          "type": "number",
+          "value": 0.35
         }
       ],
       "effects": [
@@ -29273,6 +30522,84 @@
           "persistentUuid": "0531bf2f-e57a-40d9-b720-add9f1733c5f",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "ed026617-7c62-454d-8dd5-6a31dec0e0c0",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "a2e1a983-0d96-4232-9553-4229fae87812",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "22f124c6-9728-4154-94b6-7d4145fb43cd",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "172cdb18-4dd1-4d31-a8af-af61bd7dc89d",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "1a51f364-cf21-47a1-9c81-baf50d34e1a5",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "0de50757-decf-464f-b0bb-576fe8b1474c",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "93ce7d37-c7d0-4a24-9653-ce16f8376147",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "c94127ff-4cf6-450a-ab1a-3c33976af0a4",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "eac7c240-173d-4388-b43e-794e6ac591e1",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "2396faee-0c83-4a19-b251-f10af7f2ad1d",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "5b219606-4df9-4040-9e9f-9102f3ae74c0",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "investida_fator",
+          "persistentUuid": "34bdfe55-3236-4faa-b737-bd08592baeeb",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "0cbe7a5f-eb36-4367-8afd-303546cf0543",
+          "type": "number",
+          "value": 0.35
         }
       ],
       "effects": [
@@ -30434,6 +31761,84 @@
           "persistentUuid": "3dcf93cb-e9cf-4e41-a1ad-1f59c8b899f1",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "4410a1fd-bb65-4845-91e5-d8d39c972c3b",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "0b7f15b0-cb26-4706-a1da-6beb01ae8260",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "674ab7c3-b6e5-48bf-b111-92a031011402",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "144812da-a152-4658-996f-9372de61a876",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "eaa95efa-3538-437c-b92b-62e0ed1e7a17",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "7246bc8d-a2ae-433b-894b-5dbe7152967d",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "15f6b1be-9155-4c80-b0cc-df1bd744085d",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "a1c8b9b2-641b-48b0-bff7-f607ad5cd6f2",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "b94ad9d8-2ebf-42ae-95fe-7124e9a220f8",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "4e8db95b-e46b-41be-909b-7d17e461bae8",
+          "type": "number",
+          "value": 160
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "53918b59-9d09-4a15-9a60-621cbc19c38b",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "explosao_raio",
+          "persistentUuid": "23a4ca72-9505-41fd-b0af-d1ef33b7dff0",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "explosao_empurrao",
+          "persistentUuid": "ff19cb92-b538-4cb7-aa93-056400d69476",
+          "type": "number",
+          "value": 600
         }
       ],
       "effects": [
@@ -32105,6 +33510,90 @@
           "persistentUuid": "85d54b72-5c53-4fbe-8456-f70cfb0aa775",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "28681c0d-3e62-4c5d-a16f-a9d2c8cd5326",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "e8999e68-51ea-4522-82c2-e7f1cb542777",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_vel",
+          "persistentUuid": "78598570-eaf3-47c0-9515-d5f51938cf37",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "3998d87c-a52a-4ea3-90c3-22ea58e48658",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "062b1d0a-0fb3-4560-b842-67e623a18055",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "16c6fe4e-e7c0-4677-8f1c-91a5edcdc98e",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "8376ecf7-37c0-4b38-85ea-d7ed4a802e2c",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "57c7da7f-c1dd-44b0-a105-6b22a4548b99",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "500a71e6-906c-4ce2-93de-83537f864415",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "ce788afa-cd9c-4920-bc4e-bc6a6ba7a405",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "8e2250a1-34cd-40a9-a88e-72680591dcea",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "103b7455-1e7b-441b-a385-8e779d853055",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "mergulho_vel",
+          "persistentUuid": "65f46f78-550a-40fc-b40e-0f3d9cc26086",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "mergulho_tempo",
+          "persistentUuid": "d9fe5863-9e65-4f72-a4c4-039d61aaa496",
+          "type": "number",
+          "value": 0.45
         }
       ],
       "effects": [
@@ -32711,6 +34200,54 @@
           "persistentUuid": "c480dea7-10a4-44d7-905e-7832dc0ecaa3",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "183ed409-4383-43f8-9c1e-3a6af9f5d231",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "c6634d7e-58e2-4a1e-b7de-e4b370066752",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "e2c56814-673c-4bc9-ba1f-d9f812c44c59",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "f1e5bda0-c306-4e2d-bf01-9461d9464ca3",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "87193884-177b-4aff-be42-53dd14d0f6fd",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "30aabf39-9ef9-40c6-a8cb-676e8e0c96e2",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "e12aaca3-ed20-4b90-a6cb-b6f04c36e980",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "vertical_fator",
+          "persistentUuid": "65388eb8-e515-43d6-8a34-a05fd685ddc0",
+          "type": "number",
+          "value": 0.7
         }
       ],
       "effects": [
@@ -33209,6 +34746,90 @@
           "persistentUuid": "a311f035-0b24-4dfc-a8a0-a710a9170e3e",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "b075fda7-b4f2-42e7-82fa-b409aef7fb47",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "e3988808-9ef2-4d24-baea-39d354b811a9",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "17d29898-49d1-4b46-87e2-af3a1bd3c642",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "4dec3d4b-b5ee-42b7-90b3-6e8ff1c184e0",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "9a7a5f5c-d231-4d37-a74b-3a14dc0d63db",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "c6945b6f-7c04-4189-ba24-6a69e20a0cdc",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "89b88ee3-bd10-4956-a485-aef2de638014",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "dist_max",
+          "persistentUuid": "ddb7c9d4-7e75-4950-ad14-7f24c25f21e5",
+          "type": "number",
+          "value": 550
+        },
+        {
+          "name": "dist_min",
+          "persistentUuid": "68ec79e3-d8c9-4467-bee2-6b42a64af29f",
+          "type": "number",
+          "value": 350
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "67dd608f-e75d-40ca-a88d-a2e77b552682",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "d601030e-c336-42c1-9ce4-44f15fba093e",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "1d95d83a-1e01-468f-9612-4d5df1694df7",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "tiro_vel",
+          "persistentUuid": "a7153392-6f95-4a75-bba2-b34983902e24",
+          "type": "number",
+          "value": 650
+        },
+        {
+          "name": "atacar_tempo",
+          "persistentUuid": "ef8b7971-0c21-4eb4-8ece-8786cb44eca3",
+          "type": "number",
+          "value": 0.3
         }
       ],
       "effects": [
@@ -33883,6 +35504,72 @@
           "persistentUuid": "97d4c978-a58e-4831-bff4-bc0b93b95a4d",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "0f4fd98f-8f42-4229-a182-5ba665acbc6e",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "8c8190d3-5220-48de-8f21-abdb2675f415",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "ca7a57cc-3c7e-474d-bec8-f21bf03a33c9",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "de85b1b8-aa11-425a-8593-a3c1948dff2a",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "d9d2d3a3-77b0-4fd9-9bae-480f5a393ac9",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "3dc2b5dc-8518-4ef6-8444-7cc55b475f5d",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "perseguir_dist",
+          "persistentUuid": "0102e038-d1cb-4c1c-8e46-28aba7cef212",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "explodir_dist",
+          "persistentUuid": "b8dc6258-633d-4cd9-b6ca-f326de951f7d",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "5c66c3ad-6cc0-45aa-9407-9cd854eece58",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "explosao_raio",
+          "persistentUuid": "dd6e818d-37bd-47ad-ae85-bacdc577b4a6",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "explosao_empurrao",
+          "persistentUuid": "3009c128-9705-4228-840b-9c0f46dc6470",
+          "type": "number",
+          "value": 600
         }
       ],
       "effects": [
@@ -34525,6 +36212,90 @@
           "persistentUuid": "9db411fd-d7db-4cc8-81a6-51df19191c31",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "955ee90a-e062-4290-b079-07ec2d135f3c",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "6cb97cbf-dedc-4202-aa89-520c4cc45ae4",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_vel",
+          "persistentUuid": "a7905478-b8ed-4781-ab6e-d57191fa4fd7",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "75c3457d-46c3-4534-971b-706a39608ec4",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "31b336be-c3c3-4db1-a1ed-db268a15e17f",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "227efcba-a1d6-481c-86e9-3c86e572a331",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "9d55ca4d-6417-4ddb-b41a-664dca3e905c",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "6a7dbc7d-8c42-4aa7-b1e8-fa9dc0e301a8",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "7775dfd5-ddd5-4f65-b3fd-08849f94c671",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "d6f7d365-4bf8-43bc-9312-a2cfdcc27324",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "0338c0d4-4f74-4828-b39e-018ad49022fc",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "5b0d2182-6f13-4489-b6c8-8dfe576bb057",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "mergulho_vel",
+          "persistentUuid": "1d281a0e-8a5f-4997-b615-5225d471e354",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "mergulho_tempo",
+          "persistentUuid": "470ce77a-e8b4-4aab-8f0f-b10cedb01fca",
+          "type": "number",
+          "value": 0.45
         }
       ],
       "effects": [
@@ -35095,6 +36866,90 @@
           "persistentUuid": "682d169c-ec20-40f2-b168-1a87e534bb89",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "9d7d073d-e4eb-4e31-9779-eaaa98004b2d",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "76b44117-3fc6-48e9-9516-e9311a5a272e",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_vel",
+          "persistentUuid": "b54c4828-c85a-4b99-ba2e-a081790afee2",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "77b3690d-c174-456d-b42d-d07a6c3f9e35",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "17fcbb09-4f40-46e1-8a7e-ea6df5e8d2ca",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "b9043cc9-40d2-457c-895d-f981d6a17e89",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "8a370bee-bc9f-4a57-ac6c-12eb57c8473c",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "f8448490-6861-4713-b19e-2e08a8fcacb0",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "955e9f5b-9232-4bc0-b541-5f12696fa964",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "3ea069c8-52fb-4838-9cdd-58a904d3aa69",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "a05f4106-b01f-4753-8d37-1689f0ad2ef8",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "2281f04c-71d0-49ba-8960-a82892fd83c7",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "mergulho_vel",
+          "persistentUuid": "4556a5c9-6f42-4329-8187-ddf5fd78cb98",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "mergulho_tempo",
+          "persistentUuid": "7ce13190-a522-406c-bddc-c9691802839c",
+          "type": "number",
+          "value": 0.45
         }
       ],
       "effects": [
@@ -36529,6 +38384,108 @@
           "persistentUuid": "80c5e956-ada0-49ed-af60-d660d09358f5",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "32d53f65-a92d-4c73-ab35-555b581b68a9",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "bdf95fa1-b4cb-4d24-80cb-261e44e88b44",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "38cf7084-2a38-4655-b398-635506ba45aa",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "1c79a634-a8b9-437c-a7d4-baa2468fafe4",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "c169c7ea-a33d-4a63-ab0d-4403cece6e69",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "094abadf-ef96-43b5-87c3-35854f725bfe",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "82e67359-b8a1-40b2-9858-1a85378ccb67",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "215bf9fd-9d40-4e9b-9093-3194ed57ca90",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "c4e92db3-e172-49d0-9aad-71c3786cfab8",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_espera_extra",
+          "persistentUuid": "6d779f5f-6af4-425d-ac91-2f9855aa060b",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "e46f0bb5-e350-44d7-a737-f2ddeaeb1f60",
+          "type": "number",
+          "value": 350
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "4cb4fd24-12ef-4f56-841a-677775b06343",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "fogo_inicio",
+          "persistentUuid": "55facfe3-8ceb-4c7a-bf9a-4be622f3f72d",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "fogo_fim",
+          "persistentUuid": "2ecec64c-5133-4b72-9fcc-675bcad12a8a",
+          "type": "number",
+          "value": 1.4
+        },
+        {
+          "name": "fogo_raio",
+          "persistentUuid": "c8ff3e84-2617-46af-949f-e3ca7aa096c2",
+          "type": "number",
+          "value": 260
+        },
+        {
+          "name": "fogo_empurrao",
+          "persistentUuid": "a8f5fe81-cf2b-44f2-84d1-216172a7bd19",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "ataque_duracao",
+          "persistentUuid": "8fbbae8b-fc47-41fa-a0ee-96738e977b55",
+          "type": "number",
+          "value": 1.6
         }
       ],
       "effects": [
@@ -45884,6 +47841,24 @@
           "persistentUuid": "5238dab1-740d-4df6-8c6f-309272ebea8d",
           "type": "number",
           "value": 90
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "2d27606f-96c1-49a1-8ddd-fc2e78c956e4",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "6af344f2-c240-48ad-84a5-a61755003cdf",
+          "type": "number",
+          "value": 0.09
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "84b8779e-7143-4722-86fd-fd4a0893e233",
+          "type": "number",
+          "value": 4
         }
       ],
       "effects": [],
@@ -46393,6 +48368,12 @@
           "persistentUuid": "55752e71-cf85-4ef4-8a3e-914a0397afe9",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dano_var",
+          "persistentUuid": "4acc86a3-998e-41b9-b6f0-1e9cdc18f8b0",
+          "type": "number",
+          "value": 0.1
         }
       ],
       "effects": [],
@@ -52035,7 +54016,7 @@
                   "parameters": [
                     "recuo",
                     "*",
-                    "pow(0.98, TimeDelta() * 60)"
+                    "pow(pato.recuo_decai, TimeDelta() * 60)"
                   ]
                 },
                 {
@@ -52045,7 +54026,7 @@
                   "parameters": [
                     "coice",
                     "*",
-                    "pow(0.000001, TimeDelta())"
+                    "pow(pato.coice_decai, TimeDelta())"
                   ]
                 },
                 {
@@ -52066,7 +54047,7 @@
                   "parameters": [
                     "laser_x",
                     "=",
-                    "bocal_x + mira_lado * cos(mira_a) * 4000"
+                    "bocal_x + mira_lado * cos(mira_a) * pato.laser_alcance"
                   ]
                 },
                 {
@@ -52076,7 +54057,7 @@
                   "parameters": [
                     "laser_y",
                     "=",
-                    "bocal_y + sin(mira_a) * 4000"
+                    "bocal_y + sin(mira_a) * pato.laser_alcance"
                   ]
                 }
               ],
@@ -52855,7 +54836,7 @@
                       },
                       "parameters": [
                         "",
-                        "0.3"
+                        "pato.morte_escala_tempo"
                       ]
                     },
                     {
@@ -53051,7 +55032,7 @@
                         "pato",
                         "\"morte\"",
                         ">",
-                        "0.15"
+                        "pato.morte_espera"
                       ]
                     }
                   ],
@@ -53360,7 +55341,7 @@
                         "pato",
                         "\"bufpulo\"",
                         ">",
-                        "0.12"
+                        "pato.pulo_buffer"
                       ]
                     }
                   ],
@@ -53467,7 +55448,7 @@
                       "parameters": [
                         "pato.PlatformerObject::CurrentFallSpeed()",
                         "<",
-                        "-250"
+                        "-pato.pulo_corte_vel"
                       ]
                     },
                     {
@@ -53490,7 +55471,7 @@
                         "pato",
                         "PlatformerObject",
                         "=",
-                        "pato.PlatformerObject::CurrentFallSpeed() * 0.45"
+                        "pato.PlatformerObject::CurrentFallSpeed() * pato.pulo_corte"
                       ]
                     }
                   ]
@@ -53538,7 +55519,7 @@
                         "pato",
                         "PlatformerObject",
                         "=",
-                        "min(700, pato.PlatformerObject::CurrentFallSpeed() + 1400 * TimeDelta())"
+                        "min(pato.dash_queda_max, pato.PlatformerObject::CurrentFallSpeed() + pato.dash_gravidade * TimeDelta())"
                       ]
                     }
                   ]
@@ -53661,7 +55642,7 @@
                         "pato",
                         "queda_vy",
                         ">",
-                        "250"
+                        "pato.poeira_queda_min"
                       ]
                     }
                   ],
@@ -53674,7 +55655,7 @@
                         "",
                         "som_pouso.wav",
                         "",
-                        "35 + 45 * clamp((pato.queda_vy - 250) / 450, 0, 1)",
+                        "35 + 45 * clamp((pato.queda_vy - pato.poeira_queda_min) / 450, 0, 1)",
                         "RandomFloatInRange(0.92, 1.05)"
                       ]
                     },
@@ -53853,7 +55834,7 @@
                         "pato",
                         "\"iframes\"",
                         "<",
-                        "0.3"
+                        "pato.dano_anim_tempo"
                       ]
                     },
                     {
@@ -54260,7 +56241,7 @@
                       "parameters": [
                         "",
                         "<",
-                        "min(pato.chao_baixo + 140 - CameraHeight(\"\", 0) / 2, pato.Y() - 150 + CameraHeight(\"\", 0) / 2)",
+                        "min(pato.chao_baixo + pato.camera_abaixo - CameraHeight(\"\", 0) / 2, pato.Y() - pato.camera_acima + CameraHeight(\"\", 0) / 2)",
                         "\"\"",
                         "0"
                       ]
@@ -54274,7 +56255,7 @@
                       "parameters": [
                         "",
                         "=",
-                        "min(pato.chao_baixo + 140 - CameraHeight(\"\", 0) / 2, pato.Y() - 150 + CameraHeight(\"\", 0) / 2)",
+                        "min(pato.chao_baixo + pato.camera_abaixo - CameraHeight(\"\", 0) / 2, pato.Y() - pato.camera_acima + CameraHeight(\"\", 0) / 2)",
                         "\"\"",
                         "0"
                       ]
@@ -54535,8 +56516,8 @@
                             "Terreno",
                             "pato.CenterX() - pato.soco_sin * 0",
                             "pato.CenterY() + pato.soco_cos * 0",
-                            "pato.CenterX() - pato.soco_sin * 0 + pato.soco_cos * 150",
-                            "pato.CenterY() + pato.soco_cos * 0 + pato.soco_sin * 150",
+                            "pato.CenterX() - pato.soco_sin * 0 + pato.soco_cos * pato.soco_alcance_parede",
+                            "pato.CenterY() + pato.soco_cos * 0 + pato.soco_sin * pato.soco_alcance_parede",
                             "soco_rx",
                             "soco_ry",
                             ""
@@ -54569,8 +56550,8 @@
                             "Terreno",
                             "pato.CenterX() - pato.soco_sin * pato.Height() / 3",
                             "pato.CenterY() + pato.soco_cos * pato.Height() / 3",
-                            "pato.CenterX() - pato.soco_sin * pato.Height() / 3 + pato.soco_cos * 150",
-                            "pato.CenterY() + pato.soco_cos * pato.Height() / 3 + pato.soco_sin * 150",
+                            "pato.CenterX() - pato.soco_sin * pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
+                            "pato.CenterY() + pato.soco_cos * pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
                             "soco_rx",
                             "soco_ry",
                             ""
@@ -54603,8 +56584,8 @@
                             "Terreno",
                             "pato.CenterX() - pato.soco_sin * -pato.Height() / 3",
                             "pato.CenterY() + pato.soco_cos * -pato.Height() / 3",
-                            "pato.CenterX() - pato.soco_sin * -pato.Height() / 3 + pato.soco_cos * 150",
-                            "pato.CenterY() + pato.soco_cos * -pato.Height() / 3 + pato.soco_sin * 150",
+                            "pato.CenterX() - pato.soco_sin * -pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
+                            "pato.CenterY() + pato.soco_cos * -pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
                             "soco_rx",
                             "soco_ry",
                             ""
@@ -54967,7 +56948,7 @@
                           "parameters": [
                             "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) - ((Inimigo.Width() + Inimigo.Height()) / 4)",
                             "<",
-                            "150"
+                            "pato.soco_hit_alcance"
                           ]
                         },
                         {
@@ -54977,7 +56958,7 @@
                           "parameters": [
                             "abs(pato.soco_cos * (Inimigo.CenterY() - pato.CenterY()) - pato.soco_sin * (Inimigo.CenterX() - pato.CenterX()))",
                             "<",
-                            "((Inimigo.Width() + Inimigo.Height()) / 4) + 60"
+                            "((Inimigo.Width() + Inimigo.Height()) / 4) + pato.soco_hit_folga"
                           ]
                         }
                       ],
@@ -54990,7 +56971,7 @@
                             "Inimigo",
                             "vida",
                             "-",
-                            "max(1, round(12 * GlobalVariable(mult_dano)))"
+                            "max(1, round(pato.soco_dano * GlobalVariable(mult_dano)))"
                           ]
                         },
                         {
@@ -55012,7 +56993,7 @@
                             "Inimigo",
                             "kb_dir",
                             "=",
-                            "pato.soco_lado * 4"
+                            "pato.soco_lado * pato.soco_empurrao"
                           ]
                         },
                         {
@@ -55034,7 +57015,7 @@
                             "Inimigo",
                             "socado",
                             "=",
-                            "0.2"
+                            "pato.soco_stun"
                           ]
                         },
                         {
@@ -55165,9 +57146,9 @@
                       "parameters": [
                         "soco",
                         "=",
-                        "pato.CenterX() + (35 + 95 * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / 0.16)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
+                        "pato.CenterX() + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
                         "=",
-                        "pato.CenterY() + 8 + (35 + 95 * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / 0.16)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
+                        "pato.CenterY() + 8 + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
                       ]
                     },
                     {
@@ -55194,9 +57175,9 @@
                       "parameters": [
                         "soco_rastro",
                         "=",
-                        "pato.CenterX() + 120 * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
+                        "pato.CenterX() + pato.soco_rastro_dist * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
                         "=",
-                        "pato.CenterY() + 8 + 120 * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
+                        "pato.CenterY() + 8 + pato.soco_rastro_dist * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
                       ]
                     },
                     {
@@ -55223,7 +57204,7 @@
                         "soco",
                         "\"t\"",
                         ">",
-                        "0.16"
+                        "pato.soco_duracao"
                       ]
                     }
                   ],
@@ -55251,7 +57232,7 @@
                         "soco_rastro",
                         "\"t\"",
                         ">",
-                        "0.16"
+                        "pato.soco_duracao"
                       ]
                     }
                   ],
@@ -55332,7 +57313,7 @@
                             "Terrestre",
                             "PlatformerObject",
                             "=",
-                            "900"
+                            "pato.soco_vel_inimigo"
                           ]
                         },
                         {
@@ -55343,7 +57324,7 @@
                             "Terrestre",
                             "PlatformerObject",
                             "=",
-                            "Terrestre.soco_dir * 900"
+                            "Terrestre.soco_dir * pato.soco_vel_inimigo"
                           ]
                         }
                       ],
@@ -56138,7 +58119,7 @@
                           "parameters": [
                             "recuo",
                             "=",
-                            "min(recuo, 35)"
+                            "min(recuo, pato.recuo_max)"
                           ]
                         },
                         {
@@ -56244,7 +58225,7 @@
                                 "value": "Wait"
                               },
                               "parameters": [
-                                ".29"
+                                "doze.pump_espera"
                               ]
                             },
                             {
@@ -56383,7 +58364,7 @@
                                 "flash_cano",
                                 "dur",
                                 "=",
-                                "0.05"
+                                "pistola.flash_dur"
                               ]
                             },
                             {
@@ -56403,7 +58384,7 @@
                                 "flash_cano",
                                 "Scale",
                                 "=",
-                                "3 * RandomFloatInRange(0.85, 1.2)"
+                                "pistola.flash_escala * RandomFloatInRange(0.85, 1.2)"
                               ]
                             },
                             {
@@ -56464,7 +58445,7 @@
                                 "flash_cano",
                                 "dur",
                                 "=",
-                                "0.07"
+                                "doze.flash_dur"
                               ]
                             },
                             {
@@ -56484,7 +58465,7 @@
                                 "flash_cano",
                                 "Scale",
                                 "=",
-                                "3.5 * RandomFloatInRange(0.85, 1.2)"
+                                "doze.flash_escala * RandomFloatInRange(0.85, 1.2)"
                               ]
                             },
                             {
@@ -56545,7 +58526,7 @@
                                 "flash_cano",
                                 "dur",
                                 "=",
-                                "0.04"
+                                "minigun.flash_dur"
                               ]
                             },
                             {
@@ -56565,7 +58546,7 @@
                                 "flash_cano",
                                 "Scale",
                                 "=",
-                                "3 * RandomFloatInRange(0.85, 1.2)"
+                                "minigun.flash_escala * RandomFloatInRange(0.85, 1.2)"
                               ]
                             },
                             {
@@ -56626,7 +58607,7 @@
                                 "flash_cano",
                                 "dur",
                                 "=",
-                                "0.09"
+                                "lanca.flash_dur"
                               ]
                             },
                             {
@@ -56646,7 +58627,7 @@
                                 "flash_cano",
                                 "Scale",
                                 "=",
-                                "4 * RandomFloatInRange(0.85, 1.2)"
+                                "lanca.flash_escala * RandomFloatInRange(0.85, 1.2)"
                               ]
                             },
                             {
@@ -56789,7 +58770,7 @@
                           "parameters": [
                             "Arma",
                             "FireBullet",
-                            "Arma.disp_min + (Arma.disp_max - Arma.disp_min) * min(1, TimerElapsedTime(\"fogo\") / 2.5)",
+                            "Arma.disp_min + (Arma.disp_max - Arma.disp_min) * min(1, TimerElapsedTime(\"fogo\") / Arma.disp_tempo)",
                             ""
                           ]
                         }
@@ -56881,7 +58862,7 @@
                       "parameters": [
                         "giro",
                         "=",
-                        "max(0, giro - 1.6 * TimeDelta())"
+                        "max(0, giro - pato.giro_decai * TimeDelta())"
                       ]
                     }
                   ]
@@ -56917,7 +58898,7 @@
                       "parameters": [
                         "giro",
                         "=",
-                        "min(1, giro + (1.6 + 1 / 0.5) * TimeDelta())"
+                        "min(1, giro + pato.giro_sobe * TimeDelta())"
                       ]
                     }
                   ]
@@ -57608,7 +59589,7 @@
                             "Terrestre",
                             "PlatformerObject",
                             "=",
-                            "250"
+                            "Terrestre.empurrao_vel"
                           ]
                         },
                         {
@@ -57619,7 +59600,7 @@
                             "Terrestre",
                             "PlatformerObject",
                             "=",
-                            "Terrestre.kb_dir * 250"
+                            "Terrestre.kb_dir * Terrestre.empurrao_vel"
                           ]
                         },
                         {
@@ -57659,7 +59640,7 @@
                         "Terrestre",
                         "\"estado\"",
                         ">",
-                        "0.2"
+                        "Terrestre.dano_duracao"
                       ]
                     }
                   ],
@@ -57710,7 +59691,7 @@
                         "Terrestre",
                         "PlatformerObject",
                         "=",
-                        "Terrestre.velocidade * 0.5"
+                        "Terrestre.velocidade * Terrestre.patrulha_fator"
                       ]
                     }
                   ],
@@ -57725,7 +59706,7 @@
                           "parameters": [
                             "Terrestre",
                             ">",
-                            "Terrestre.base_x + 200"
+                            "Terrestre.base_x + Terrestre.patrulha_raio"
                           ]
                         }
                       ],
@@ -57753,7 +59734,7 @@
                           "parameters": [
                             "Terrestre",
                             "<",
-                            "Terrestre.base_x - 200"
+                            "Terrestre.base_x - Terrestre.patrulha_raio"
                           ]
                         }
                       ],
@@ -57855,7 +59836,7 @@
                           "parameters": [
                             "Terrestre",
                             "pato",
-                            "800",
+                            "Terrestre.aggro_dist",
                             ""
                           ]
                         }
@@ -57925,7 +59906,7 @@
                           "parameters": [
                             "Terrestre",
                             "pato",
-                            "1000",
+                            "Terrestre.desiste_dist",
                             ""
                           ]
                         }
@@ -58287,7 +60268,7 @@
                       "parameters": [
                         "abs(pato.CenterX() - zumbi.CenterX())",
                         ">",
-                        "40"
+                        "zumbi.parar_dist"
                       ]
                     }
                   ],
@@ -58452,7 +60433,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - pigman.CenterX())",
                             ">",
-                            "40"
+                            "pigman.parar_dist"
                           ]
                         }
                       ],
@@ -58587,7 +60568,7 @@
                         "pigman",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "pigman.ataque_espera"
                       ]
                     },
                     {
@@ -58597,7 +60578,7 @@
                       "parameters": [
                         "pigman",
                         "pato",
-                        "450",
+                        "pigman.ataque_alcance",
                         ""
                       ]
                     },
@@ -58608,7 +60589,7 @@
                       "parameters": [
                         "abs(pato.CenterY() - pigman.CenterY())",
                         "<",
-                        "200"
+                        "pigman.ataque_alt"
                       ]
                     }
                   ],
@@ -58691,7 +60672,7 @@
                         "pigman",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "pigman.aviso_tempo"
                       ]
                     }
                   ],
@@ -58724,7 +60705,7 @@
                         "pigman",
                         "PlatformerObject",
                         "=",
-                        "650"
+                        "pigman.investida_vel"
                       ]
                     },
                     {
@@ -58855,7 +60836,7 @@
                         "pigman",
                         "\"estado\"",
                         ">",
-                        "0.8"
+                        "pigman.investida_tempo"
                       ]
                     }
                   ],
@@ -58962,7 +60943,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - atirador.CenterX())",
                             ">",
-                            "600"
+                            "atirador.dist_max"
                           ]
                         }
                       ],
@@ -59054,7 +61035,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - atirador.CenterX())",
                             "<",
-                            "400"
+                            "atirador.dist_min"
                           ]
                         }
                       ],
@@ -59160,7 +61141,7 @@
                         "atirador",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "atirador.ataque_espera"
                       ]
                     },
                     {
@@ -59170,7 +61151,7 @@
                       "parameters": [
                         "atirador",
                         "pato",
-                        "800",
+                        "atirador.ataque_alcance",
                         ""
                       ]
                     }
@@ -59254,7 +61235,7 @@
                         "atirador",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "atirador.aviso_tempo"
                       ]
                     }
                   ],
@@ -59319,7 +61300,7 @@
                         "atirador.CenterY()",
                         "projetil_inimigo",
                         "pato",
-                        "900",
+                        "atirador.tiro_vel",
                         ""
                       ]
                     }
@@ -59386,7 +61367,7 @@
                         "atirador",
                         "tiros",
                         ">=",
-                        "3"
+                        "atirador.rajada"
                       ]
                     }
                   ],
@@ -59534,7 +61515,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - sapo.CenterX())",
                             ">",
-                            "500"
+                            "sapo.dist_max"
                           ]
                         }
                       ],
@@ -59626,7 +61607,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - sapo.CenterX())",
                             "<",
-                            "300"
+                            "sapo.dist_min"
                           ]
                         }
                       ],
@@ -59761,7 +61742,7 @@
                         "sapo",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "sapo.ataque_espera"
                       ]
                     },
                     {
@@ -59771,7 +61752,7 @@
                       "parameters": [
                         "sapo",
                         "pato",
-                        "700",
+                        "sapo.ataque_alcance",
                         ""
                       ]
                     }
@@ -59866,7 +61847,7 @@
                         "sapo",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "sapo.aviso_tempo"
                       ]
                     }
                   ],
@@ -59902,7 +61883,7 @@
                         "sapo.CenterY()",
                         "projetil_inimigo",
                         "pato",
-                        "700",
+                        "sapo.tiro_vel",
                         ""
                       ]
                     }
@@ -59930,7 +61911,7 @@
                         "sapo",
                         "\"estado\"",
                         ">",
-                        "0.4"
+                        "sapo.atacar_tempo"
                       ]
                     }
                   ],
@@ -59988,7 +61969,7 @@
                         "sapo",
                         "\"cura\"",
                         ">",
-                        "4"
+                        "sapo.cura_intervalo"
                       ]
                     }
                   ],
@@ -60069,7 +62050,7 @@
                         "sapo",
                         "\"estado\"",
                         ">",
-                        "0.8"
+                        "sapo.cura_tempo"
                       ]
                     }
                   ],
@@ -60148,7 +62129,7 @@
                       "parameters": [
                         "Inimigo",
                         "sapo",
-                        "300",
+                        "sapo.cura_raio",
                         ""
                       ]
                     },
@@ -60173,7 +62154,7 @@
                         "Inimigo",
                         "vida",
                         "=",
-                        "min(Inimigo.max_vida, Inimigo.vida + 20)"
+                        "min(Inimigo.max_vida, Inimigo.vida + sapo.cura_valor)"
                       ]
                     },
                     {
@@ -60220,7 +62201,7 @@
                     "Inimigo",
                     "\"curado\"",
                     ">",
-                    "0.4"
+                    "sapo.cura_brilho"
                   ]
                 }
               ],
@@ -60355,7 +62336,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - cutulu.CenterX())",
                             ">",
-                            "40"
+                            "cutulu.parar_dist"
                           ]
                         }
                       ],
@@ -60490,7 +62471,7 @@
                         "cutulu",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "cutulu.ataque_espera"
                       ]
                     },
                     {
@@ -60500,7 +62481,7 @@
                       "parameters": [
                         "cutulu",
                         "pato",
-                        "500",
+                        "cutulu.ataque_alcance",
                         ""
                       ]
                     }
@@ -60635,7 +62616,7 @@
                         "cutulu",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "cutulu.aviso_tempo"
                       ]
                     }
                   ],
@@ -60686,7 +62667,7 @@
                             "cutulu",
                             "PlatformerObject",
                             "=",
-                            "550"
+                            "cutulu.investida_vel"
                           ]
                         }
                       ]
@@ -60715,7 +62696,7 @@
                             "cutulu",
                             "PlatformerObject",
                             "=",
-                            "380"
+                            "cutulu.voo_vel"
                           ]
                         },
                         {
@@ -60726,7 +62707,7 @@
                             "cutulu",
                             "PlatformerObject",
                             "=",
-                            "900"
+                            "cutulu.voo_pulo"
                           ]
                         },
                         {
@@ -60879,7 +62860,7 @@
                         "cutulu",
                         "\"estado\"",
                         ">",
-                        "0.4"
+                        "cutulu.investida_tempo"
                       ]
                     }
                   ],
@@ -60948,7 +62929,7 @@
                         "cutulu",
                         "\"estado\"",
                         ">",
-                        "0.3"
+                        "cutulu.voo_tempo_min"
                       ]
                     },
                     {
@@ -60999,7 +62980,7 @@
                         "cutulu",
                         "PlatformerObject",
                         "=",
-                        "600"
+                        "cutulu.pulo_normal"
                       ]
                     }
                   ]
@@ -61082,7 +63063,7 @@
                       "parameters": [
                         "Mergulhador",
                         "+",
-                        "Mergulhador.kb_dir * 40"
+                        "Mergulhador.kb_dir * Mergulhador.empurrao_x"
                       ]
                     }
                   ],
@@ -61160,7 +63141,7 @@
                         "Mergulhador",
                         "\"estado\"",
                         ">",
-                        "0.2"
+                        "Mergulhador.dano_duracao"
                       ]
                     }
                   ],
@@ -61210,7 +63191,7 @@
                       "parameters": [
                         "Mergulhador",
                         "+",
-                        "cos(TimeFromStart() * 1.2) * 180 * TimeDelta()"
+                        "cos(TimeFromStart() * 1.2) * Mergulhador.patrulha_vel * TimeDelta()"
                       ]
                     }
                   ],
@@ -61225,7 +63206,7 @@
                           "parameters": [
                             "Mergulhador",
                             "pato",
-                            "800",
+                            "Mergulhador.aggro_dist",
                             ""
                           ]
                         }
@@ -61279,7 +63260,7 @@
                         "Mergulhador",
                         "base_y",
                         "=",
-                        "pato.Y() - 250"
+                        "pato.Y() - Mergulhador.altura_sobre_pato"
                       ]
                     }
                   ],
@@ -61294,7 +63275,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - Mergulhador.CenterX())",
                             ">",
-                            "20"
+                            "Mergulhador.parar_dist"
                           ]
                         }
                       ],
@@ -61322,7 +63303,7 @@
                           "parameters": [
                             "Mergulhador",
                             "pato",
-                            "1000",
+                            "Mergulhador.desiste_dist",
                             ""
                           ]
                         }
@@ -61408,7 +63389,7 @@
                       "parameters": [
                         "Mergulhador",
                         "+",
-                        "(Mergulhador.base_y + sin(TimeFromStart() * 3) * 60 - Mergulhador.Y()) * min(1, 4 * TimeDelta())"
+                        "(Mergulhador.base_y + sin(TimeFromStart() * 3) * Mergulhador.onda_amp - Mergulhador.Y()) * min(1, Mergulhador.onda_suave * TimeDelta())"
                       ]
                     }
                   ]
@@ -61435,7 +63416,7 @@
                         "Mergulhador",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "Mergulhador.ataque_espera"
                       ]
                     },
                     {
@@ -61445,7 +63426,7 @@
                       "parameters": [
                         "abs(pato.CenterX() - Mergulhador.CenterX())",
                         "<",
-                        "80"
+                        "Mergulhador.ataque_alcance"
                       ]
                     }
                   ],
@@ -61588,7 +63569,7 @@
                         "Mergulhador",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "Mergulhador.aviso_tempo"
                       ]
                     }
                   ],
@@ -61638,7 +63619,7 @@
                       "parameters": [
                         "Mergulhador",
                         "+",
-                        "900 * TimeDelta()"
+                        "Mergulhador.mergulho_vel * TimeDelta()"
                       ]
                     }
                   ]
@@ -61665,7 +63646,7 @@
                         "Mergulhador",
                         "\"estado\"",
                         ">",
-                        "0.45"
+                        "Mergulhador.mergulho_tempo"
                       ]
                     }
                   ],
@@ -61949,7 +63930,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - CorpoACorpo.CenterX())",
                             ">",
-                            "40"
+                            "CorpoACorpo.parar_dist"
                           ]
                         }
                       ],
@@ -62084,7 +64065,7 @@
                         "CorpoACorpo",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "CorpoACorpo.ataque_espera"
                       ]
                     },
                     {
@@ -62094,7 +64075,7 @@
                       "parameters": [
                         "CorpoACorpo",
                         "pato",
-                        "150",
+                        "CorpoACorpo.ataque_alcance",
                         ""
                       ]
                     }
@@ -62189,7 +64170,7 @@
                         "CorpoACorpo",
                         "\"estado\"",
                         ">",
-                        "0.45"
+                        "CorpoACorpo.aviso_tempo"
                       ]
                     }
                   ],
@@ -62222,7 +64203,7 @@
                         "CorpoACorpo",
                         "PlatformerObject",
                         "=",
-                        "CorpoACorpo.velocidade * 4"
+                        "CorpoACorpo.velocidade * CorpoACorpo.investida_fator"
                       ]
                     },
                     {
@@ -62353,7 +64334,7 @@
                         "CorpoACorpo",
                         "\"estado\"",
                         ">",
-                        "0.35"
+                        "CorpoACorpo.investida_tempo"
                       ]
                     }
                   ],
@@ -62472,7 +64453,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - condenado_inchado.CenterX())",
                             ">",
-                            "40"
+                            "condenado_inchado.parar_dist"
                           ]
                         }
                       ],
@@ -62607,7 +64588,7 @@
                         "condenado_inchado",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "condenado_inchado.ataque_espera"
                       ]
                     },
                     {
@@ -62617,7 +64598,7 @@
                       "parameters": [
                         "condenado_inchado",
                         "pato",
-                        "160",
+                        "condenado_inchado.ataque_alcance",
                         ""
                       ]
                     }
@@ -62712,7 +64693,7 @@
                         "condenado_inchado",
                         "\"estado\"",
                         ">",
-                        "0.6"
+                        "condenado_inchado.aviso_tempo"
                       ]
                     }
                   ],
@@ -62772,7 +64753,7 @@
                           "parameters": [
                             "condenado_inchado",
                             "pato",
-                            "230",
+                            "condenado_inchado.explosao_raio",
                             ""
                           ]
                         },
@@ -62839,7 +64820,7 @@
                             "pato",
                             "PlatformerObject",
                             "=",
-                            "sign(pato.CenterX() - condenado_inchado.CenterX()) * 600"
+                            "sign(pato.CenterX() - condenado_inchado.CenterX()) * condenado_inchado.explosao_empurrao"
                           ]
                         },
                         {
@@ -62938,7 +64919,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - caveira_gigante.CenterX())",
                             ">",
-                            "40"
+                            "caveira_gigante.parar_dist"
                           ]
                         }
                       ],
@@ -63044,7 +65025,7 @@
                         "caveira_gigante",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "caveira_gigante.ataque_espera"
                       ]
                     },
                     {
@@ -63054,7 +65035,7 @@
                       "parameters": [
                         "caveira_gigante",
                         "pato",
-                        "350",
+                        "caveira_gigante.ataque_alcance",
                         ""
                       ]
                     },
@@ -63066,7 +65047,7 @@
                         "caveira_gigante",
                         "\"ataque\"",
                         ">",
-                        "4"
+                        "caveira_gigante.ataque_espera_extra"
                       ]
                     }
                   ],
@@ -63160,7 +65141,7 @@
                         "caveira_gigante",
                         "\"estado\"",
                         ">",
-                        "0.6"
+                        "caveira_gigante.aviso_tempo"
                       ]
                     }
                   ],
@@ -63232,7 +65213,7 @@
                         "caveira_gigante",
                         "\"estado\"",
                         ">",
-                        "0.4"
+                        "caveira_gigante.fogo_inicio"
                       ]
                     },
                     {
@@ -63243,7 +65224,7 @@
                         "caveira_gigante",
                         "\"estado\"",
                         "<",
-                        "1.4"
+                        "caveira_gigante.fogo_fim"
                       ]
                     },
                     {
@@ -63253,7 +65234,7 @@
                       "parameters": [
                         "caveira_gigante",
                         "pato",
-                        "260",
+                        "caveira_gigante.fogo_raio",
                         ""
                       ]
                     },
@@ -63320,7 +65301,7 @@
                         "pato",
                         "PlatformerObject",
                         "=",
-                        "sign(pato.CenterX() - caveira_gigante.CenterX()) * 600"
+                        "sign(pato.CenterX() - caveira_gigante.CenterX()) * caveira_gigante.fogo_empurrao"
                       ]
                     },
                     {
@@ -63356,7 +65337,7 @@
                         "caveira_gigante",
                         "\"estado\"",
                         ">",
-                        "1.6"
+                        "caveira_gigante.ataque_duracao"
                       ]
                     }
                   ],
@@ -63603,7 +65584,7 @@
                       "parameters": [
                         "Flutuante",
                         "+",
-                        "Flutuante.kb_dir * 40"
+                        "Flutuante.kb_dir * Flutuante.empurrao_x"
                       ]
                     }
                   ],
@@ -63681,7 +65662,7 @@
                         "Flutuante",
                         "\"estado\"",
                         ">",
-                        "0.2"
+                        "Flutuante.dano_duracao"
                       ]
                     }
                   ],
@@ -63729,7 +65710,7 @@
                       "parameters": [
                         "Flutuante",
                         "pato",
-                        "700",
+                        "Flutuante.aggro_dist",
                         ""
                       ]
                     }
@@ -63779,7 +65760,7 @@
                       "parameters": [
                         "Flutuante",
                         "pato",
-                        "1000",
+                        "Flutuante.desiste_dist",
                         ""
                       ]
                     }
@@ -64044,7 +66025,7 @@
                       "parameters": [
                         "moscas",
                         "+",
-                        "(moscas.base_y + sin(TimeFromStart() * 6) * 20 - moscas.Y()) * min(1, 4 * TimeDelta())"
+                        "(moscas.base_y + sin(TimeFromStart() * 6) * moscas.onda_amp - moscas.Y()) * min(1, moscas.onda_suave * TimeDelta())"
                       ]
                     }
                   ]
@@ -64072,7 +66053,7 @@
                       "parameters": [
                         "moscas",
                         "+",
-                        "sign(pato.CenterX() - moscas.CenterX()) * moscas.velocidade * TimeDelta() + sin(TimeFromStart() * 13 + moscas.base_x) * 3"
+                        "sign(pato.CenterX() - moscas.CenterX()) * moscas.velocidade * TimeDelta() + sin(TimeFromStart() * 13 + moscas.base_x) * moscas.tremor"
                       ]
                     },
                     {
@@ -64082,7 +66063,7 @@
                       "parameters": [
                         "moscas",
                         "+",
-                        "sign(pato.CenterY() - moscas.CenterY()) * moscas.velocidade * 0.7 * TimeDelta() + cos(TimeFromStart() * 11) * 3"
+                        "sign(pato.CenterY() - moscas.CenterY()) * moscas.velocidade * moscas.vertical_fator * TimeDelta() + cos(TimeFromStart() * 11) * moscas.tremor"
                       ]
                     }
                   ]
@@ -64166,7 +66147,7 @@
                       "parameters": [
                         "olho_demoniaco",
                         "+",
-                        "(olho_demoniaco.base_y + sin(TimeFromStart() * 2) * 40 - olho_demoniaco.Y()) * min(1, 4 * TimeDelta())"
+                        "(olho_demoniaco.base_y + sin(TimeFromStart() * 2) * olho_demoniaco.onda_amp - olho_demoniaco.Y()) * min(1, olho_demoniaco.onda_suave * TimeDelta())"
                       ]
                     }
                   ]
@@ -64195,7 +66176,7 @@
                         "olho_demoniaco",
                         "base_y",
                         "=",
-                        "pato.Y() - 200"
+                        "pato.Y() - olho_demoniaco.altura_sobre_pato"
                       ]
                     }
                   ],
@@ -64210,7 +66191,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - olho_demoniaco.CenterX())",
                             ">",
-                            "550"
+                            "olho_demoniaco.dist_max"
                           ]
                         }
                       ],
@@ -64237,7 +66218,7 @@
                           "parameters": [
                             "abs(pato.CenterX() - olho_demoniaco.CenterX())",
                             "<",
-                            "350"
+                            "olho_demoniaco.dist_min"
                           ]
                         }
                       ],
@@ -64278,7 +66259,7 @@
                         "olho_demoniaco",
                         "\"ataque\"",
                         ">",
-                        "2.5"
+                        "olho_demoniaco.ataque_espera"
                       ]
                     },
                     {
@@ -64288,7 +66269,7 @@
                       "parameters": [
                         "olho_demoniaco",
                         "pato",
-                        "700",
+                        "olho_demoniaco.ataque_alcance",
                         ""
                       ]
                     }
@@ -64383,7 +66364,7 @@
                         "olho_demoniaco",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "olho_demoniaco.aviso_tempo"
                       ]
                     }
                   ],
@@ -64419,7 +66400,7 @@
                         "olho_demoniaco.CenterY()",
                         "projetil_inimigo",
                         "pato",
-                        "650",
+                        "olho_demoniaco.tiro_vel",
                         ""
                       ]
                     }
@@ -64447,7 +66428,7 @@
                         "olho_demoniaco",
                         "\"estado\"",
                         ">",
-                        "0.3"
+                        "olho_demoniaco.atacar_tempo"
                       ]
                     }
                   ],
@@ -64573,7 +66554,7 @@
                   "parameters": [
                     "mina_demoniaca",
                     "+",
-                    "(mina_demoniaca.base_y + sin(TimeFromStart() * 2) * 15 - mina_demoniaca.Y()) * min(1, 4 * TimeDelta())"
+                    "(mina_demoniaca.base_y + sin(TimeFromStart() * 2) * mina_demoniaca.onda_amp - mina_demoniaca.Y()) * min(1, mina_demoniaca.onda_suave * TimeDelta())"
                   ]
                 }
               ],
@@ -64599,7 +66580,7 @@
                       "parameters": [
                         "mina_demoniaca",
                         "pato",
-                        "400",
+                        "mina_demoniaca.perseguir_dist",
                         ""
                       ]
                     }
@@ -64649,7 +66630,7 @@
                       "parameters": [
                         "mina_demoniaca",
                         "pato",
-                        "140",
+                        "mina_demoniaca.explodir_dist",
                         ""
                       ]
                     }
@@ -64711,7 +66692,7 @@
                         "mina_demoniaca",
                         "\"estado\"",
                         ">",
-                        "0.5"
+                        "mina_demoniaca.aviso_tempo"
                       ]
                     }
                   ],
@@ -64771,7 +66752,7 @@
                           "parameters": [
                             "mina_demoniaca",
                             "pato",
-                            "200",
+                            "mina_demoniaca.explosao_raio",
                             ""
                           ]
                         },
@@ -64838,7 +66819,7 @@
                             "pato",
                             "PlatformerObject",
                             "=",
-                            "sign(pato.CenterX() - mina_demoniaca.CenterX()) * 600"
+                            "sign(pato.CenterX() - mina_demoniaca.CenterX()) * mina_demoniaca.explosao_empurrao"
                           ]
                         },
                         {
@@ -64955,7 +66936,7 @@
                     "Terrestre",
                     "\"travado\"",
                     ">",
-                    "0.3"
+                    "Terrestre.travado_tempo"
                   ]
                 },
                 {
@@ -65022,7 +67003,7 @@
                     "Terrestre",
                     "\"travado\"",
                     ">",
-                    "0.3"
+                    "Terrestre.travado_tempo"
                   ]
                 },
                 {
@@ -65429,7 +67410,7 @@
                     "pato",
                     "\"iframes\"",
                     ">",
-                    "0.75"
+                    "pato.iframes_tempo"
                   ]
                 }
               ],
@@ -65795,7 +67776,7 @@
                         "projetil",
                         "gy",
                         "+",
-                        "900 * TimeDelta()"
+                        "projetil.gravidade * TimeDelta()"
                       ]
                     },
                     {
@@ -66166,7 +68147,7 @@
                                 "Inimigo",
                                 "vida",
                                 "-",
-                                "max(1, round(explosao_fogo.dano * (1 - exp_d / explosao_fogo.raio) * RandomFloatInRange(0.9, 1.1) * GlobalVariable(mult_dano)))"
+                                "max(1, round(explosao_fogo.dano * (1 - exp_d / explosao_fogo.raio) * RandomFloatInRange(1 - explosao_fogo.dano_var, 1 + explosao_fogo.dano_var) * GlobalVariable(mult_dano)))"
                               ]
                             },
                             {
@@ -66332,7 +68313,7 @@
                     "Inimigo",
                     "vida",
                     "-",
-                    "max(1, round(projetil.dano * projetil.fator * RandomFloatInRange(0.85, 1.15) * GlobalVariable(mult_dano)))"
+                    "max(1, round(projetil.dano * projetil.fator * RandomFloatInRange(1 - projetil.dano_var, 1 + projetil.dano_var) * GlobalVariable(mult_dano)))"
                   ]
                 },
                 {
@@ -66838,7 +68819,7 @@
                     "hit",
                     "\"ttl\"",
                     ">",
-                    ".2"
+                    "hit.duracao"
                   ]
                 }
               ],
@@ -67096,7 +69077,7 @@
                   "parameters": [
                     "Feedback",
                     "-",
-                    "240 * TimeDelta()"
+                    "Feedback.subida * TimeDelta()"
                   ]
                 },
                 {
@@ -67107,7 +69088,7 @@
                     "Feedback",
                     "Scale",
                     "*",
-                    "pow(0.993, TimeDelta() * 60)"
+                    "pow(Feedback.escala_decai, TimeDelta() * 60)"
                   ]
                 },
                 {
@@ -67118,7 +69099,7 @@
                     "Feedback",
                     "Opacity",
                     "*",
-                    "pow(0.95, TimeDelta() * 60)"
+                    "pow(Feedback.opacidade_decai, TimeDelta() * 60)"
                   ]
                 }
               ]
@@ -67330,7 +69311,7 @@
                             "moeda",
                             "vx",
                             "=",
-                            "RandomInRange(-250, 250)"
+                            "RandomInRange(-moeda.espalha_x, moeda.espalha_x)"
                           ]
                         },
                         {
@@ -67341,7 +69322,7 @@
                             "moeda",
                             "vy",
                             "=",
-                            "RandomInRange(-700, -400)"
+                            "RandomInRange(-moeda.lanca_max, -moeda.lanca_min)"
                           ]
                         },
                         {
@@ -67725,7 +69706,7 @@
                         "moeda",
                         "vy",
                         "+",
-                        "1800 * TimeDelta()"
+                        "moeda.gravidade * TimeDelta()"
                       ]
                     },
                     {
@@ -67807,7 +69788,7 @@
                         "moeda",
                         "vy",
                         "*",
-                        "-0.5"
+                        "-moeda.quique"
                       ]
                     },
                     {
@@ -67818,7 +69799,7 @@
                         "moeda",
                         "vx",
                         "*",
-                        "0.7"
+                        "moeda.atrito_x"
                       ]
                     }
                   ],
@@ -67834,7 +69815,7 @@
                             "moeda",
                             "vy",
                             ">",
-                            "-120"
+                            "-moeda.parada_vy"
                           ]
                         }
                       ],
@@ -67889,7 +69870,7 @@
                       "parameters": [
                         "moeda",
                         "pato",
-                        "150",
+                        "moeda.iman_dist",
                         ""
                       ]
                     }
@@ -67913,7 +69894,7 @@
                       "parameters": [
                         "moeda",
                         "+",
-                        "(pato.CenterX() - moeda.CenterX()) * 10 * TimeDelta()"
+                        "(pato.CenterX() - moeda.CenterX()) * moeda.iman_vel * TimeDelta()"
                       ]
                     },
                     {
@@ -67923,7 +69904,7 @@
                       "parameters": [
                         "moeda",
                         "+",
-                        "(pato.CenterY() - moeda.CenterY()) * 10 * TimeDelta()"
+                        "(pato.CenterY() - moeda.CenterY()) * moeda.iman_vel * TimeDelta()"
                       ]
                     }
                   ]
@@ -67939,7 +69920,7 @@
                         "moeda",
                         "\"vida\"",
                         ">",
-                        "4"
+                        "moeda.pisca_inicio"
                       ]
                     }
                   ],
@@ -67968,7 +69949,7 @@
                         "moeda",
                         "\"vida\"",
                         ">",
-                        "6"
+                        "moeda.duracao"
                       ]
                     }
                   ],
@@ -68191,7 +70172,7 @@
                   "parameters": [
                     "pato",
                     "boss",
-                    "1200",
+                    "boss.pulo_dist",
                     ""
                   ]
                 },
@@ -68256,10 +70237,10 @@
                   "parameters": [
                     "",
                     "\"pulo\"",
-                    "(pato.CenterX() - boss.CenterX()) * 0.25",
-                    "RandomInRange(-400, -300)",
-                    "(pato.CenterX() - boss.CenterX()) * 0.75",
-                    "RandomInRange(-1000, -600)",
+                    "(pato.CenterX() - boss.CenterX()) * boss.pulo_x1",
+                    "RandomInRange(-boss.pulo_alt1_max, -boss.pulo_alt1_min)",
+                    "(pato.CenterX() - boss.CenterX()) * boss.pulo_x2",
+                    "RandomInRange(-boss.pulo_alt2_max, -boss.pulo_alt2_min)",
                     "pato.CenterX() - boss.CenterX()",
                     "pato.CenterY() - boss.CenterY()",
                     "",
@@ -68274,8 +70255,8 @@
                     "boss",
                     "TweenPathMovement",
                     "\"pulo\"",
-                    "RandomInRange(1, 3)",
-                    "RandomFloatInRange(3, 6)",
+                    "RandomInRange(boss.pulo_dur_min, boss.pulo_dur_max)",
+                    "RandomFloatInRange(boss.pulo_giro_min, boss.pulo_giro_max)",
                     "\"bouncePast\"",
                     "pato.X()",
                     "pato.Y()-boss.Y()",
@@ -68295,7 +70276,7 @@
                     "boss",
                     "\"cooldown\"",
                     ">",
-                    "5"
+                    "boss.pulo_cooldown"
                   ]
                 }
               ],
@@ -69957,7 +71938,7 @@
                   "parameters": [
                     "Arma",
                     "FireBullet",
-                    "Arma.cooldown_base * pow(0.85, GlobalVariable(upgrades.cadencia))",
+                    "Arma.cooldown_base * pow(pato.upg_cadencia, GlobalVariable(upgrades.cadencia))",
                     ""
                   ]
                 },
@@ -69968,7 +71949,7 @@
                   "parameters": [
                     "Arma",
                     "FireBullet",
-                    "Arma.recarga_base * pow(0.8, GlobalVariable(upgrades.recarga))",
+                    "Arma.recarga_base * pow(pato.upg_recarga, GlobalVariable(upgrades.recarga))",
                     ""
                   ]
                 },
@@ -69979,7 +71960,7 @@
                   "parameters": [
                     "mult_dano",
                     "=",
-                    "1 + 0.2 * GlobalVariable(upgrades.dano)"
+                    "1 + pato.upg_dano * GlobalVariable(upgrades.dano)"
                   ]
                 },
                 {
@@ -69990,7 +71971,7 @@
                     "pato",
                     "PlatformerObject",
                     "=",
-                    "pato.PlatformerObject::MaxSpeed() * (1 + 0.1 * GlobalVariable(upgrades.velocidade))"
+                    "pato.PlatformerObject::MaxSpeed() * (1 + pato.upg_velocidade * GlobalVariable(upgrades.velocidade))"
                   ]
                 },
                 {
@@ -70001,7 +71982,7 @@
                     "pato",
                     "max_vida",
                     "=",
-                    "100 + 25 * GlobalVariable(upgrades.vida)"
+                    "pato.upg_vida_base + pato.upg_vida_nivel * GlobalVariable(upgrades.vida)"
                   ]
                 },
                 {
@@ -70074,7 +72055,7 @@
                   "parameters": [
                     "moedas_total",
                     "+",
-                    "500"
+                    "pato.f1_moedas"
                   ]
                 }
               ]
