@@ -9010,6 +9010,16 @@
         "name": "soco_rastro_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/som_bhop.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_bhop.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -9411,6 +9421,66 @@
           "persistentUuid": "ef7159be-0f32-48b1-9877-149bd2d0d8e0",
           "type": "number",
           "value": 3.6
+        },
+        {
+          "name": "bhop_janela",
+          "persistentUuid": "f6bd4e1e-d50e-4553-83e0-b34732b164d7",
+          "type": "number",
+          "value": 0.1
+        },
+        {
+          "name": "bhop_ganho",
+          "persistentUuid": "804298be-b38c-4a1f-8de6-aa0362a4a057",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "bhop_max_serie",
+          "persistentUuid": "4d11b92c-a458-48ea-bfbe-3dd5f0e7a66a",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "bhop_vel_min",
+          "persistentUuid": "6f78533c-3cb5-4bcb-9e88-acd89c2002ff",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "bhop_serie",
+          "persistentUuid": "158af8c8-7708-4bc9-a0a2-8a0f7848b077",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bhop_vel_base",
+          "persistentUuid": "e5300e0f-2db8-49fc-9ae4-4d3e7dbb75fc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bhop_no_chao",
+          "persistentUuid": "1037cddd-060f-4a0d-a724-fea6b508d2a1",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "bhop_som_volume",
+          "persistentUuid": "6b698b33-4433-40c3-be2c-7a1c1109cee5",
+          "type": "number",
+          "value": 18
+        },
+        {
+          "name": "bhop_som_tom",
+          "persistentUuid": "634c7a1e-9ccf-4148-a5d9-902ca1479fa0",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "bhop_som_passo",
+          "persistentUuid": "5fc3a284-f45b-404a-ade1-97ffa120a3d9",
+          "type": "number",
+          "value": 1.1225
         }
       ],
       "effects": [],
@@ -53503,6 +53573,15 @@
                         "",
                         "som_troca_arma.wav"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_bhop.wav"
+                      ]
                     }
                   ]
                 },
@@ -55772,6 +55851,337 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Bunny hop",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Bunny hop: pular até bhop_janela s depois de pousar, andando a pelo menos bhop_vel_min da velocidade base, sobe a série (até bhop_max_serie) e a velocidade máxima ganha bhop_ganho da base por degrau. Ficar no chão mais que bhop_janela zera. Fora do dash; sair do chão sem pular não conta. Cada degrau toca som_bhop bem baixo (bhop_som_volume), um tom acima do anterior (bhop_som_tom × bhop_som_passo por degrau).",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_serie",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_vel_base",
+                        "=",
+                        "pato.PlatformerObject::MaxSpeed()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_no_chao",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_no_chao",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"bhop_chao\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_no_chao",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_no_chao",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsJumping"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"bhop_chao\"",
+                            "<=",
+                            "pato.bhop_janela"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.PlatformerObject::CurrentSpeed())",
+                            ">=",
+                            "pato.bhop_vel_base * pato.bhop_vel_min"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AdvancedJump::HorizontalDash::IsDashing",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "HorizontalDash",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "bhop_serie",
+                            "=",
+                            "min(pato.bhop_max_serie, pato.bhop_serie + 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "pato.bhop_vel_base * (1 + pato.bhop_ganho * pato.bhop_serie)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "sign(pato.PlatformerObject::CurrentSpeed()) * pato.bhop_vel_base * (1 + pato.bhop_ganho * pato.bhop_serie)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_bhop.wav",
+                            "",
+                            "pato.bhop_som_volume",
+                            "pato.bhop_som_tom * pow(pato.bhop_som_passo, pato.bhop_serie - 1)"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"bhop_chao\"",
+                        ">",
+                        "pato.bhop_janela"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_serie",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "bhop_serie",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "pato.bhop_vel_base"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "colorB": 228,
