@@ -23355,6 +23355,12 @@
           "persistentUuid": "05bcabb1-e6b5-4c46-ae7b-a1bf8b66c6a7",
           "type": "string",
           "value": "Mercador"
+        },
+        {
+          "name": "rastro_vel",
+          "persistentUuid": "973b8e94-e04d-462f-8bc1-228ec9e6d48b",
+          "type": "number",
+          "value": 300
         }
       ],
       "effects": [],
@@ -51124,6 +51130,24 @@
           "persistentUuid": "ff3e518a-f28a-4d91-9814-1600e0bca174",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "loja_comprar",
+          "persistentUuid": "473a0cf5-562a-4f04-950c-f0a8f27b2466",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_lmb_antes",
+          "persistentUuid": "fa9c9f28-42ee-440c-bb59-5c733fcf8c2c",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "loja_lmb_ok",
+          "persistentUuid": "222c4e75-4251-476c-845d-38787ace1f1d",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -74537,7 +74561,7 @@
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "GlobalVariable(upgrades[loja_req])",
+                        "max(GlobalVariable(upgrades[loja_req]), GlobalVariable(armas[loja_req]))",
                         "<",
                         "1"
                       ]
@@ -74816,6 +74840,35 @@
               }
             },
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Clique só vale se o botão foi apertado de novo sobre uma linha com a loja aberta, e solto sobre uma linha.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_comprar",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -74830,28 +74883,228 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyFromTextJustPressed"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextJustPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Space\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    }
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_comprar",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_antes",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "loja_linha",
+                    "",
+                    "yes"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_ok",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_ok",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "loja_linha",
+                    "",
+                    "yes"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_comprar",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_antes",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed",
+                    "inverted": true
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_antes",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_lmb_ok",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "loja_comprar",
+                    "=",
+                    "1"
                   ]
                 },
                 {
@@ -75500,7 +75753,66 @@
                   ]
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "hud_boss_rastro.Width()",
+                        ">",
+                        "hud_boss_fill.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "hud_boss_rastro",
+                        "Resizable",
+                        "-",
+                        "trader.rastro_vel * TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "hud_boss_rastro.Width()",
+                        "<",
+                        "hud_boss_fill.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "hud_boss_rastro",
+                        "Resizable",
+                        "=",
+                        "hud_boss_fill.Width()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         }
