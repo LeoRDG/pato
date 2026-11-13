@@ -49,27 +49,34 @@ def test_soco_vai_na_direcao_da_mira_com_rastro():
     assert len(quadros) == 4 and all(os.path.exists(os.path.join(RAIZ, 'assets', q['image'])) for q in quadros)
 
 
-def test_soco_no_terreno_da_velocidade_contraria_sem_usar_o_pulo():
+def test_coice_deterministico_tres_raios_e_formula_unica():
     evs = list(walk(grupo()['events']))
-    bate = [e for e in evs if any(c['type']['value'] == 'RaycastToPosition' and 'pato.soco_cos' in c['parameters'][3] and
-                                  'pato.soco_sin' in c['parameters'][4] for c in e.get('conditions', []))]
-    assert len(bate) == 1                                          # o raio vai na direção do soco
-    vel = [a for a in bate[0]['actions'] if a['type']['value'].endswith('SetCurrentSpeed')][0]['parameters'][3]
-    assert '- pato.soco_cos * pato.coice_x' in vel                           # contra a direção do soco
-    vert = bate[0]['events'][1]                                      # [0] é o soco lateral
-    assert vert['actions'][0]['parameters'][:4] == ['pato', 'soco_vy', '=', '-pato.soco_sin * pato.coice_y']
-    js = [e for e in vert['events'] if e['type'] == 'BuiltinCommonInstructions::JsCode']
+    raios = [e for e in evs if any(c['type']['value'] == 'RaycastToPosition' and 'pato.soco_cos' in c['parameters'][3]
+                                   for c in e.get('conditions', []))]
+    assert len(raios) == 3 and all('soco_bateu' in json.dumps(e['actions']) for e in raios)      # três raios, qualquer um vale
+    kick = [e for e in evs if any(a['parameters'][:2] == ['pato', 'coice_vx'] and 'coice_parede_x' in a['parameters'][3]
+                                 for a in e.get('actions', []))]
+    assert len(kick) == 1 and 'soco_bateu' in json.dumps(kick[0]['conditions'])
+    acts = {a['parameters'][1]: a['parameters'][3] for a in kick[0]['actions'] if a['type']['value'] == 'SetNumberObjectVariable'}
+    assert 'coice_parede_x' in acts['coice_vx'] and 'max(0, pato.soco_sin)' in acts['coice_vx']
+    assert 'coice_y' in acts['soco_vy'] and 'coice_parede_y' in acts['soco_vy'] and 'abs(pato.soco_sin)' in acts['soco_vy']
+    vel = [a for a in kick[0]['actions'] if a['type']['value'].endswith('SetCurrentSpeed')][0]['parameters'][3]
+    assert vel == 'pato.PlatformerObject::CurrentSpeed() * (1 - abs(pato.soco_cos))'            # não soma à velocidade atual
+    txt = json.dumps(grupo(), ensure_ascii=False)
+    assert 'LIMIAR' not in txt and not any("'<='" in json.dumps(e['conditions']) for e in kick)       # sem faixas por ângulo
+    js = [e for e in walk(kick[0]['events']) if e['type'] == 'BuiltinCommonInstructions::JsCode']
     assert len(js) == 1
     codigo = '\n'.join(js[0]['inlineCode'])
-    assert '_currentFallSpeed = alvo' in codigo and '_setFalling()' in codigo and 'soco_vy' in codigo
+    assert '_currentFallSpeed = alvo' in codigo and '_setFalling()' in codigo and 'agora' not in codigo   # sempre sobrescreve
     # nada de pulo, voo automático, teclas travadas ou agarrar na parede
-    txt = json.dumps(grupo(), ensure_ascii=False)
-    for velho in ('soltou', 'voo', 'SimulateLeftKey', 'SimulateRightKey', 'SimulateJumpKey', 'PlatformBehavior::JumpSpeed', 'JumpSustainTime',
-                  'MaxFallingSpeed', 'impulso', 'agarrado', 'parede_agora', 'KeyFromTextPressed'):
+    for velho in ('soltou', 'voo', 'SimulateLeftKey', 'SimulateRightKey', 'SimulateJumpKey', 'PlatformBehavior::JumpSpeed',
+                  'JumpSustainTime', 'MaxFallingSpeed', 'impulso', 'agarrado', 'parede_agora', 'KeyFromTextPressed'):
         assert velho not in txt
+    mov = [e for e in evs if any(a['type']['value'] == 'SetX' and 'pato.coice_vx' in a['parameters'][2] for a in e.get('actions', []))]
+    assert len(mov) == 1 and 'coice_parede_freio' in json.dumps(mov[0]['actions'])
     nomes = {v['name'] for v in OBJ['pato']['variables']}
-    assert {'soco_vy', 'y_antes', 'coice_x', 'coice_y'} <= nomes   # força do coice ajustável no GDevelop
-    assert {'soco_vy', 'y_antes'} <= nomes and not nomes & {'agarrado', 'parede_agora', 'pulo_base', 'pulo_restaurar', 'voo'}
+    assert {'coice_y', 'coice_parede_x', 'coice_parede_y', 'coice_parede_freio', 'coice_vx', 'soco_vy', 'y_antes', 'soco_bateu'} <= nomes
+    assert not nomes & {'coice_x', 'agarrado', 'parede_agora', 'pulo_base', 'pulo_restaurar', 'voo'}
     jog = [x for x in JOGO['externalEvents'] if x['name'] == 'Jogador'][0]
     assert not any(e.get('name') == 'Soco e paredes' for e in walk(jog['events']))
 
@@ -100,18 +107,5 @@ def test_coice_nao_gasta_pulo():
     assert len(guarda) == 1 and 'coice_guarda' in json.dumps(guarda[0]['conditions'])
     marca = [e for e in evs if any(a['parameters'][1:2] == ['coice_guarda'] and a['parameters'][2:3] == ['True']
                                    for a in e.get('actions', []))]
-    assert len(marca) == 2 and all(any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in m['conditions']) for m in marca)         # lateral e vertical
+    assert len(marca) == 1 and all(any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in m['conditions']) for m in marca)
     assert any(v['name'] == 'coice_guarda' for v in OBJ['pato']['variables'])
-
-
-def test_soco_lateral_tem_empurrao_proprio_e_pulinho():
-    evs = list(walk(grupo()['events']))
-    lat = [e for e in evs if any(a['parameters'][:2] == ['pato', 'coice_vx'] and 'coice_parede_x' in a['parameters'][3]
-                                 for a in e.get('actions', []))]
-    assert len(lat) == 1 and "<=" in json.dumps(lat[0]['conditions'])
-    assert any('coice_parede_y' in a['parameters'][3] for a in lat[0]['actions'])
-    assert any(e['type'] == 'BuiltinCommonInstructions::JsCode' for e in lat[0]['events'])
-    mov = [e for e in evs if any(a['type']['value'] == 'SetX' and 'pato.coice_vx' in a['parameters'][2] for a in e.get('actions', []))]
-    assert len(mov) == 1 and 'coice_parede_freio' in json.dumps(mov[0]['actions'])
-    nomes = {v['name'] for v in OBJ['pato']['variables']}
-    assert {'coice_parede_x', 'coice_parede_y', 'coice_parede_freio', 'coice_vx'} <= nomes
