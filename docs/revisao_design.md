@@ -76,6 +76,7 @@ Every new number below must be a GDevelop variable from the start (see `CLAUDE.m
 ### FEAT-3: Hub shop with permanent upgrades
 - Make `trader` interactive: buy upgrades and weapons (`upgrades.*`, `armas.*`). All purchases are permanent.
 - Prices as variables (`preco_*`).
+- **Implemented (system only):** catalog `loja_catalogo` + trader menu, trader as a secret enemy. See `docs/superpowers/specs/2026-11-13-loja-catalogo-design.md` and `docs/superpowers/plans/2026-11-13-loja-catalogo.md`.
 
 **Finite tree.** The total cost of everything is reachable in a handful of runs (about 5–8).
 - **Early on,** upgrades make each run faster, which keeps players replaying.
