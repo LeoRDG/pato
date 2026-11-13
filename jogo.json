@@ -9189,6 +9189,12 @@
           "persistentUuid": "25acf091-7d94-4205-aa37-76024993631c",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "soco_espera",
+          "persistentUuid": "43690be0-733c-4e72-b78a-242f409988cb",
+          "type": "number",
+          "value": 0.35
         }
       ],
       "effects": [],
@@ -54377,7 +54383,7 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Soco no botão direito (espera de 0.35 s): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco.",
+                  "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -54429,7 +54435,7 @@
                         "pato",
                         "\"soco\"",
                         ">",
-                        "0.35"
+                        "pato.soco_espera"
                       ]
                     }
                   ],

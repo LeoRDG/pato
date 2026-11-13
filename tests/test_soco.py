@@ -109,3 +109,11 @@ def test_coice_nao_gasta_pulo():
                                    for a in e.get('actions', []))]
     assert len(marca) == 1 and all(any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in m['conditions']) for m in marca)
     assert any(v['name'] == 'coice_guarda' for v in OBJ['pato']['variables'])
+
+
+def test_espera_do_soco_e_variavel_do_pato():
+    soco = [e for e in walk(grupo()['events']) if any(c['type']['value'] == 'CompareObjectTimer' and c['parameters'][1] == '"soco"'
+                                                      for c in e.get('conditions', [])) and e.get('events')][0]
+    timer = [c for c in soco['conditions'] if c['type']['value'] == 'CompareObjectTimer'][0]
+    assert timer['parameters'][3] == 'pato.soco_espera'
+    assert any(v['name'] == 'soco_espera' for v in OBJ['pato']['variables'])

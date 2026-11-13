@@ -1,6 +1,6 @@
 """Tarefa 34: soco no botão direito (na direção da mira, com rastro) e coice ao socar o terreno.
 
-SOCO (botão direito, espera de COOLDOWN s): uma luva sai do pato NA DIREÇÃO DA MIRA (qualquer ângulo, do centro do pato até o
+SOCO (botão direito, espera de pato.soco_espera s, variável do pato): uma luva sai do pato NA DIREÇÃO DA MIRA (qualquer ângulo, do centro do pato até o
   mouse) e volta (objeto `soco`, 0,16 s), com um rastro em arco na ponta (objeto `soco_rastro`, 4 quadros).
   Todo inimigo vivo nessa direção, até ALCANCE px e a menos de LARGURA px da linha do soco, leva SOCO_DANO (× mult_dano) e é
   jogado para longe: os terrestres ganham um empurrão de SOCO_VEL px/s enquanto estão no estado "dano" (0,2 s; quem está
@@ -17,7 +17,7 @@ SOCO NO TERRENO (coice, sempre igual para o mesmo soco): se qualquer um de três
   e escreve a velocidade de queda direto (negativa = subindo); a gravidade normal faz o resto. Subindo e batendo no teto, a
   velocidade é zerada. Não há corte por ângulo nem tempo certo. Não funciona durante o dash.
   A força fica nas variáveis do objeto pato, em px/s (o script só as cria se não existirem, nunca troca o valor):
-    `coice_y` (1000 = 250 px de altura), `coice_parede_x`, `coice_parede_y`, `coice_parede_freio` (px/s² com que o empurrão
+    `soco_espera` (segundos entre socos, 0,35), `coice_y` (1000 = 250 px de altura), `coice_parede_x`, `coice_parede_y`, `coice_parede_freio` (px/s² com que o empurrão
     lateral some). A antiga `coice_x` foi removida.
   O coice NÃO gasta pulo: saindo do chão, o pulo do chão fica guardado (o "coyote time" do AdvancedJump, que acabaria em
   0,2 s, é mantido reiniciando o cronômetro dele) até o pato pular ou pousar; o pulo no ar continua valendo depois.
@@ -36,7 +36,7 @@ ROOT = os.path.dirname(PATH)
 NOME = 'Soco'
 VELHOS = ('Soco e paredes',)   # nome do grupo nas versões anteriores
 PL = ('pato', 'PlatformerObject')
-COOLDOWN = 0.35
+COOLDOWN = 0.35    # valor inicial de pato.soco_espera (s entre socos); depois é ajustável no GDevelop
 ALCANCE = 150      # px a partir do centro do pato, na direção do soco
 LARGURA = 60       # px para cada lado da linha do soco (mais o raio do inimigo)
 SOCO_DANO = 12
@@ -249,10 +249,10 @@ def eventos():
                tipo=FE, object='Inimigo')
 
     soco = [
-        comentario(f'Soco no botão direito (espera de {COOLDOWN} s): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no '
+        comentario(f'Soco no botão direito (espera de pato.soco_espera s, começa em {COOLDOWN}): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no '
                    f'terreno (até {ALCANCE_PAREDE} px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco.'),
         E([C('MouseButtonFromTextPressed', '', '"Right"'), flag('rmb_antes', False), vivo(),
-           C('CompareObjectTimer', 'pato', '"soco"', '>', str(COOLDOWN))],
+           C('CompareObjectTimer', 'pato', '"soco"', '>', 'pato.soco_espera')],
           [A('ResetObjectTimer', 'pato', '"soco"'), setn('soco_lado', f'sign(MouseX() - {CX} + 0.001)'),
            setn('soco_ang', f'ToDeg(atan2(MouseY() - {CY}, MouseX() - {CX}))'),
            setn('soco_cos', 'cos(ToRad(pato.soco_ang))'), setn('soco_sin', 'sin(ToRad(pato.soco_ang))'), setb('soco_acertou', False)],
@@ -305,7 +305,7 @@ def main():
     pv[:] = [v for v in pv if v['name'] not in velhas]
     for k in ('soco_lado', 'soco_ang', 'soco_cos', 'soco_sin', 'soco_vy', 'y_antes', 'coice_vx'):
         upsert(pv, k, 0)
-    for k, v in (('coice_y', IMPULSO_Y), ('coice_parede_x', PAREDE_X),
+    for k, v in (('soco_espera', COOLDOWN), ('coice_y', IMPULSO_Y), ('coice_parede_x', PAREDE_X),
                  ('coice_parede_y', PAREDE_Y), ('coice_parede_freio', PAREDE_FREIO)):   # força do coice: ajustável no GDevelop, o script não sobrescreve
         if not any(x['name'] == k for x in pv):
             upsert(pv, k, v)
