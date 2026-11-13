@@ -16,6 +16,8 @@ SOCO NO TERRENO: se o soco bate no Terreno (raio do centro do pato na direção 
   Os eventos antigos de gravidade extra na queda e de corte ao soltar Espaço só valem com a velocidade de queda >= 0
   (a ação deles não aceita valor negativo e zeraria a subida).
   Ao bater a cabeça no teto subindo assim, a velocidade é zerada (senão o pato ficaria colado até a gravidade vencer).
+  A força do coice fica nas variáveis do objeto pato, `coice_x` e `coice_y` (px/s), editáveis no GDevelop; o script só as
+  cria se não existirem, nunca troca o valor.
   Não funciona durante o dash. (Agarrar na parede saiu: fica para depois.)
 
 O script não roda se jogo.json.autosave for mais novo que jogo.json (mudanças não salvas no GDevelop seriam perdidas).
@@ -39,8 +41,8 @@ SOCO_VEL = 900     # px/s do empurrão nos terrestres
 SOCO_KB = 4        # kb_dir dos voadores (× 40 px)
 DUR = 0.16         # s da luva na tela
 ALCANCE_PAREDE = 150   # px do centro do pato até onde o soco alcança o terreno
-IMPULSO_X = 700    # px/s para o lado, contra a direção do soco
-IMPULSO_Y = 1000   # px/s para cima ou para baixo, × o quanto o soco aponta na vertical (1000 para cima = 250 px de altura)
+IMPULSO_X = 700    # valor inicial de pato.coice_x: px/s para o lado, contra a direção do soco
+IMPULSO_Y = 1000   # valor inicial de pato.coice_y: px/s para cima ou para baixo, × o quanto o soco aponta na vertical (1000 para cima = 250 px de altura)
 LIMIAR_Y = 0.2     # o soco precisa apontar pelo menos isso (seno) para cima/baixo para dar impulso vertical
 ESCALA = 5
 RASTRO_DIST = 120  # px do centro do pato até o centro do rastro
@@ -206,9 +208,9 @@ def eventos():
                            f'{CY} + pato.soco_sin * {ALCANCE_PAREDE}', 'soco_rx', 'soco_ry', '')],
         [setb('soco_acertou', True),
          A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed', *PL, '=',
-           f'clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * {IMPULSO_X}, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())'),
+           f'clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * pato.coice_x, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())'),
          A('Create', '', 'poeira', 'soco_rx', 'soco_ry', ''), A('SetAngle', 'poeira', '=', 'pato.soco_ang')],
-        [E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', f'-pato.soco_sin * {IMPULSO_Y}')], [js_vertical])])
+        [E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', '-pato.soco_sin * pato.coice_y')], [js_vertical])])
 
     luva = E([], [
         A('Create', '', 'soco', CX, CY, ''),
@@ -287,6 +289,9 @@ def main():
     pv[:] = [v for v in pv if v['name'] not in velhas]
     for k in ('soco_lado', 'soco_ang', 'soco_cos', 'soco_sin', 'soco_vy', 'y_antes'):
         upsert(pv, k, 0)
+    for k, v in (('coice_x', IMPULSO_X), ('coice_y', IMPULSO_Y)):   # força do coice: ajustável no GDevelop, o script não sobrescreve
+        if not any(x['name'] == k for x in pv):
+            upsert(pv, k, v)
     for k in ('rmb_antes', 'soco_acertou'):
         upsert(pv, k, False)
     for g in d['objectsGroups']:

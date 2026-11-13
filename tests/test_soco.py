@@ -55,9 +55,9 @@ def test_soco_no_terreno_da_velocidade_contraria_sem_usar_o_pulo():
                                   'pato.soco_sin' in c['parameters'][4] for c in e.get('conditions', []))]
     assert len(bate) == 1                                          # o raio vai na direção do soco
     vel = [a for a in bate[0]['actions'] if a['type']['value'].endswith('SetCurrentSpeed')][0]['parameters'][3]
-    assert '- pato.soco_cos * 700' in vel                           # contra a direção do soco
+    assert '- pato.soco_cos * pato.coice_x' in vel                           # contra a direção do soco
     vert = bate[0]['events'][0]
-    assert vert['actions'][0]['parameters'][:4] == ['pato', 'soco_vy', '=', '-pato.soco_sin * 1000']
+    assert vert['actions'][0]['parameters'][:4] == ['pato', 'soco_vy', '=', '-pato.soco_sin * pato.coice_y']
     js = [e for e in vert['events'] if e['type'] == 'BuiltinCommonInstructions::JsCode']
     assert len(js) == 1
     codigo = '\n'.join(js[0]['inlineCode'])
@@ -68,6 +68,7 @@ def test_soco_no_terreno_da_velocidade_contraria_sem_usar_o_pulo():
                   'MaxFallingSpeed', 'impulso', 'agarrado', 'parede_agora', 'KeyFromTextPressed'):
         assert velho not in txt
     nomes = {v['name'] for v in OBJ['pato']['variables']}
+    assert {'soco_vy', 'y_antes', 'coice_x', 'coice_y'} <= nomes   # força do coice ajustável no GDevelop
     assert {'soco_vy', 'y_antes'} <= nomes and not nomes & {'agarrado', 'parede_agora', 'pulo_base', 'pulo_restaurar', 'voo'}
     jog = [x for x in JOGO['externalEvents'] if x['name'] == 'Jogador'][0]
     assert not any(e.get('name') == 'Soco e paredes' for e in walk(jog['events']))
