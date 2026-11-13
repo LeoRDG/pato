@@ -9481,6 +9481,36 @@
           "persistentUuid": "5fc3a284-f45b-404a-ade1-97ffa120a3d9",
           "type": "number",
           "value": 1.1225
+        },
+        {
+          "name": "na_loja",
+          "persistentUuid": "79ce9415-a375-44c3-ae71-214b5fffe366",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "reaplicar_upgrades",
+          "persistentUuid": "9f6010f5-e0f8-4bc3-b372-ab5b810775bc",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "velocidade_base",
+          "persistentUuid": "2b8f56d1-20f7-4df4-aba1-1ce339d02ad9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ultimo_agressor",
+          "persistentUuid": "ad4484fc-4948-44c0-b51d-9739ab2ec41d",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "moedas_perdidas",
+          "persistentUuid": "8178c499-a752-4e2d-b7a9-34464e31f87d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -12961,6 +12991,12 @@
           "persistentUuid": "476b3286-08a3-4a61-9b27-062f010372e9",
           "type": "number",
           "value": 13
+        },
+        {
+          "name": "origem",
+          "persistentUuid": "e0ac1b8c-4bdf-4998-8038-ee63a6486c52",
+          "type": "string",
+          "value": ""
         }
       ],
       "effects": [
@@ -23144,7 +23180,7 @@
           "name": "vida",
           "persistentUuid": "96963945-fc30-4406-8e63-a0caf54e25dc",
           "type": "number",
-          "value": 10
+          "value": 1500
         },
         {
           "name": "dano",
@@ -23162,7 +23198,7 @@
           "name": "max_vida",
           "persistentUuid": "b703d5f8-a912-481b-8eed-ed19026bbd36",
           "type": "number",
-          "value": 10
+          "value": 1500
         },
         {
           "name": "vida_controle",
@@ -23198,7 +23234,7 @@
           "name": "estado",
           "persistentUuid": "03d42eac-b0c0-4372-a0f4-55802cd2e204",
           "type": "string",
-          "value": "patrulha"
+          "value": "calmo"
         },
         {
           "name": "base_x",
@@ -23277,6 +23313,48 @@
           "persistentUuid": "c5789d3a-3617-4a51-a566-d738731d98df",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "paciencia",
+          "persistentUuid": "846121a6-da74-444f-8dba-afce66934bfb",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "golpes",
+          "persistentUuid": "3a21e4f9-6260-44c1-b0cd-5eeeb516b69c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vida_vista",
+          "persistentUuid": "88fa6837-6975-4e26-b7f7-37ee6feb587a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "multa",
+          "persistentUuid": "57dad380-d7c4-469a-b0aa-7f20ebfc2590",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "dano_hostil",
+          "persistentUuid": "58647903-86d9-44c3-8dfe-d1be570e9185",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "loja_raio",
+          "persistentUuid": "6c0df8aa-3692-4efd-8ce3-c0211adad483",
+          "type": "number",
+          "value": 160
+        },
+        {
+          "name": "nome_barra",
+          "persistentUuid": "05bcabb1-e6b5-4c46-ae7b-a1bf8b66c6a7",
+          "type": "string",
+          "value": "Mercador"
         }
       ],
       "effects": [],
@@ -49172,6 +49250,170 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "loja_painel",
+      "persistentUuid": "fe3f0233-f33d-4e70-b7b4-b3efdbdbbe42",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 190,
+      "outlineSize": 0,
+      "outlineOpacity": 0,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "outlineColor": {
+        "r": 253,
+        "g": 65,
+        "b": 65
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "loja_linha",
+      "persistentUuid": "4e61f2c0-e1f1-4cab-a3c9-46c4c7eaa3dd",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "name": "indice",
+          "persistentUuid": "fb28e448-ff03-4c47-9681-38638199f72a",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "string": "",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 28,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 28,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "loja_desc",
+      "persistentUuid": "9416327a-7f8d-4b76-b295-b6602a0769f1",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 24,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 24,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "loja_dica",
+      "persistentUuid": "7ab54ac5-aafd-4c76-83ad-988b39be068d",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "E",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "center",
+      "characterSize": 28,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "E",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 28,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -50144,6 +50386,289 @@
       "persistentUuid": "6ad54971-6e11-4989-82d0-2eed3fd0a608",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "loja_catalogo",
+      "persistentUuid": "3123f557-ea67-4d3e-93ea-e2a95276da77",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "persistentUuid": "c02ec915-49f5-478a-b422-e436740135f3",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "72cbbf5f-7381-4389-b6eb-ebabe46c66bf",
+              "type": "string",
+              "value": "cadencia"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "37a502ca-a2c8-4ac9-8900-f55ed86c5f30",
+              "type": "string",
+              "value": "Cadência"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "6a363ca8-10df-4818-a7b1-6c02ea0f5db7",
+              "type": "string",
+              "value": "-15% de espera entre tiros por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "e0fa4308-44a7-4128-b677-a53716b68dde",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "b1c2e385-cf0c-4d26-8df3-153e115ec69b",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "417ab772-e225-41ce-91d9-416d7b804d6a",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "2cab4aef-adfb-47d3-9e9d-ef08847def1b",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "d8306fc7-30ec-45be-bdfd-0dd5884d33a3",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "persistentUuid": "9ed6b5c0-1973-4966-8743-597fba993e23",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "c5e9a42d-3084-4d2d-acb3-2239a4e311d8",
+              "type": "string",
+              "value": "dano"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "c6877d22-034b-407d-b0cf-89b4f05659c9",
+              "type": "string",
+              "value": "Dano"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "138539b1-7436-4a29-b737-154654f9c51b",
+              "type": "string",
+              "value": "+20% de dano por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "8b4250d7-281a-4d82-b4be-e3048d1d26c2",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "eef7865d-3f27-4ae3-ab77-8307f7f3e9a1",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "6675eea4-e96a-4902-b94c-908d19b61987",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "2d446a89-f58d-4cf2-8970-d1d85902e4a5",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "b5ea8308-0903-4aa3-97a7-1095fe2124ee",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "persistentUuid": "f3a0961d-f259-4d86-9b85-484d3f3c20db",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "a75ff9a7-26fd-4170-a38a-8b44275d515f",
+              "type": "string",
+              "value": "recarga"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "c35ce693-0713-4f33-b7e6-580ee6fb2081",
+              "type": "string",
+              "value": "Recarga"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "e4a65292-6e6d-4de0-8625-e7b9faf51da3",
+              "type": "string",
+              "value": "-20% no tempo de recarga por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "779ef79c-b77a-4cd1-9e11-921f395285a5",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "27877f10-645c-4be2-b0ae-40e903eb2fa1",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "a2b1374a-9af4-47c0-a068-4195b2d48820",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "593eb033-d37d-4970-b516-8c0de4277ceb",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "8c236249-f5e2-4db6-84f1-19a4170a77d6",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "persistentUuid": "a47be24b-522c-4f71-acc1-fac94b73f04f",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "c5131074-4d00-4b65-831f-4136660d2fd4",
+              "type": "string",
+              "value": "velocidade"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "4d5813c2-2859-44c1-8e40-3daa12c0e97f",
+              "type": "string",
+              "value": "Velocidade"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "8756111b-aa49-4867-ada0-a9f9913059e5",
+              "type": "string",
+              "value": "+10% de velocidade por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "0dddd0be-5b2d-462b-b14d-cebb85d29a73",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "82622900-78b0-4c07-b355-8124472cdad8",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "21544974-880d-41df-95db-7e8d80522846",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "d2f19da1-6bb7-4b06-a196-0b539e632bce",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "67c41425-10e3-4ec9-8a65-9786a5cb3292",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "persistentUuid": "1e00ed1a-7ea9-4470-a001-a8dd4668963d",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "b40b00ca-0dc8-41f4-af4d-e641711a4cd1",
+              "type": "string",
+              "value": "vida"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "b0d81bf8-bb06-4f58-8377-c71ef7605061",
+              "type": "string",
+              "value": "Vida"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "c661dc7a-3791-4324-bba6-cdbfa9992cc0",
+              "type": "string",
+              "value": "+25 de vida máxima por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "ac8b840e-f9bc-4d4e-b865-1ba34be1d4ce",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "faaca2f7-9990-408b-bc27-bb2a61bc2968",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "7d4b40c7-7b0c-4401-9d57-3d7f5fb0e175",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "ec140ec3-236a-47e5-9ad2-9c76bec9d663",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "142ae89b-afa6-48a0-9a08-2c5c8c21b613",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "trader_morto",
+      "persistentUuid": "3b84cda9-3222-489f-93ca-4630fb61ed15",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -50437,6 +50962,78 @@
           "persistentUuid": "80e4d894-d64d-4f6b-be3d-26a10cd36144",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "loja_aberta",
+          "persistentUuid": "ec79c988-8d3d-4316-bfa0-388826f4eb40",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "loja_sel",
+          "persistentUuid": "33c006b9-da91-48df-abb9-e747e0ed4df5",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_i",
+          "persistentUuid": "e282088e-6695-44c0-94a3-9c819b41a4fc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_x",
+          "persistentUuid": "7af08c5d-3ada-439d-b129-bb5c6cf55ee2",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "loja_y",
+          "persistentUuid": "00983969-e380-4038-a66a-1cde9f3849a6",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "loja_largura",
+          "persistentUuid": "8b0a5fc3-9f6b-4154-9562-4004c4bd4a7e",
+          "type": "number",
+          "value": 620
+        },
+        {
+          "name": "loja_linha_alt",
+          "persistentUuid": "cfff4e99-0689-41d5-80f3-2f18ffb3d2da",
+          "type": "number",
+          "value": 56
+        },
+        {
+          "name": "loja_cor_ok",
+          "persistentUuid": "36718457-a99e-4752-a3ab-32f086747113",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "loja_cor_caro",
+          "persistentUuid": "9392242b-21fa-480a-a000-7558d9dd46be",
+          "type": "string",
+          "value": "120;120;120"
+        },
+        {
+          "name": "loja_cor_max",
+          "persistentUuid": "c250785b-4e3a-4b24-a6b1-83beb082c56d",
+          "type": "string",
+          "value": "240;200;80"
+        },
+        {
+          "name": "loja_cor_bloq",
+          "persistentUuid": "c4e72c8c-355d-4fdf-a415-4a5ead0a3c45",
+          "type": "string",
+          "value": "200;80;80"
+        },
+        {
+          "name": "loja_cor_sel",
+          "persistentUuid": "7689304b-2d2f-498a-850d-47e7903d9783",
+          "type": "string",
+          "value": "255;230;120"
         }
       ],
       "instances": [
