@@ -170,4 +170,14 @@ som_troca_arma.wav (troca de arma)
   rec_pistola_ferrolho_frente_276959.wav "pistol reload sound.mp3" por GFL7 (inteiro, tom -10%)
                                      https://freesound.org/people/GFL7/sounds/276959/   [Creative Commons 0, baixado em 2026-11-12]
 
+som_soco.wav (soco no ar (botão direito))
+  whoosh_60013.wav                   "Whoosh" por qubodup (0,2 s, tom +60%)
+                                     https://freesound.org/people/qubodup/sounds/60013/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_soco_acerto.wav (soco acerta inimigo ou parede)
+  soco_118513.wav                    "Punch_02.wav" por thefsoundman (0,2 s)
+                                     https://freesound.org/people/thefsoundman/sounds/118513/   [Creative Commons 0, baixado em 2026-11-12]
+  impacto_364690.wav                 "Human Impact on Ground" por alegemaate (0,2 s, tom -20%, por baixo)
+                                     https://freesound.org/people/alegemaate/sounds/364690/   [Creative Commons 0, baixado em 2026-11-12]
+
 --- fim: sons do jogo, tools/t31_sons_jogo.py ---
