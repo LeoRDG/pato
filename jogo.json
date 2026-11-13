@@ -8922,6 +8922,26 @@
         "userAdded": true
       },
       {
+        "file": "assets/som_soco.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_soco.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_soco_acerto.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_soco_acerto.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
         "file": "assets/som_tiro_inimigo.wav",
         "kind": "audio",
         "metadata": "",
@@ -8949,6 +8969,46 @@
         "preloadAsMusic": false,
         "preloadAsSound": true,
         "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/soco_luva.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "soco_luva.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/soco_rastro_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "soco_rastro_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/soco_rastro_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "soco_rastro_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/soco_rastro_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "soco_rastro_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/soco_rastro_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "soco_rastro_4.png",
+        "smoothed": false,
         "userAdded": true
       }
     ]
@@ -9039,6 +9099,54 @@
           "persistentUuid": "8a9df7bc-548b-498c-b294-ee55b77759c1",
           "type": "number",
           "value": -999999
+        },
+        {
+          "name": "soco_lado",
+          "persistentUuid": "c1e78c5f-f79a-4e5c-851c-687a227e8520",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "rmb_antes",
+          "persistentUuid": "9a3828b3-ad86-46ba-9d1a-c3894f374dda",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "soco_acertou",
+          "persistentUuid": "700625fb-e1f8-427e-ba4e-540876f0b460",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "soco_ang",
+          "persistentUuid": "d8becf92-790f-4d68-af2d-94e2fc436d4b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_cos",
+          "persistentUuid": "f9747504-f2ce-4e53-a436-ca4b69ddbac8",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_sin",
+          "persistentUuid": "6c92a738-d1c2-407c-95fa-3ece48bef669",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_vy",
+          "persistentUuid": "d30b0c62-fe53-4222-81df-ff8401fdbfd0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "y_antes",
+          "persistentUuid": "d182307b-e979-4949-85ee-da88de4ef9a0",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -10295,6 +10403,18 @@
           "persistentUuid": "2cfeabe1-7cff-4a9b-8f8f-313db92680c2",
           "type": "string",
           "value": "verde"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "626aec49-3d77-43a0-ace2-de20461e28e2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "04104c2c-ff30-4933-bd79-7e0963fcaee4",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -11429,6 +11549,18 @@
           "persistentUuid": "ffa17c64-efd2-432c-8f55-1baf2fa951b2",
           "type": "string",
           "value": "brasa"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "6bf4ffba-d0fa-4457-a6ff-3a13ff99fc89",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "f01014e9-fe90-43ba-a3df-60b5f8be4c23",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -12082,6 +12214,18 @@
           "persistentUuid": "eabbb73c-53e9-41fb-af51-66af36ff7fc7",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "9c8cd271-0326-4916-97cc-b4f54601e238",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "e10d3663-4aa6-4a1d-939d-f57fc2565b06",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -12715,6 +12859,18 @@
           "persistentUuid": "51a3a0a3-ab51-4e43-887b-ddebf1367667",
           "type": "string",
           "value": "verde"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "be18244e-ff93-4229-aadd-d0f99387b867",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "f2de992a-440c-4645-b6be-dfe4f54a9871",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -13402,12 +13558,12 @@
         }
       ],
       "string": "moedas",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 28,
       "color": {
-        "b": 255,
-        "g": 255,
+        "b": 94,
+        "g": 214,
         "r": 255
       },
       "content": {
@@ -13425,12 +13581,12 @@
         "smoothed": true,
         "underlined": false,
         "text": "moedas",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 28,
         "lineHeight": 0,
-        "color": "255;255;255"
+        "color": "255;214;94"
       }
     },
     {
@@ -13446,7 +13602,7 @@
       "effects": [],
       "behaviors": [],
       "string": "municao\n",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -13469,7 +13625,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "municao\n",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 64,
@@ -13490,7 +13646,7 @@
       "effects": [],
       "behaviors": [],
       "string": "max municao",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 26,
       "color": {
@@ -13513,7 +13669,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "max municao",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 26,
@@ -13747,6 +13903,18 @@
           "persistentUuid": "0ababb62-f4f2-40ee-a6cb-cdd8472ebddc",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "ef74d2a5-0cc8-4bc3-9ab0-acf282d59964",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "b8832237-5426-457e-aead-1cfbf8037d0f",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -16758,6 +16926,18 @@
           "persistentUuid": "bad402e8-c061-45e2-a324-d16f1e6da8b0",
           "type": "string",
           "value": "ciano"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "82424c70-5844-4ab1-8d72-2c633d6413ea",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "a9483171-b7a2-4887-9b92-43ef8cad632d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -19347,6 +19527,18 @@
           "persistentUuid": "f58d6814-19bc-4b4f-84dc-0c757b1cddbc",
           "type": "string",
           "value": "verde"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "d4729fd2-56e7-4032-a378-d02cfea48252",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "f931a10b-290d-409e-a5af-885cb659519c",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -21959,6 +22151,18 @@
           "persistentUuid": "16961972-efbf-4dfc-a167-c9447dc1f52a",
           "type": "string",
           "value": "roxo"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "ca99634d-745b-4098-abf1-421dbbcebd5c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "c5789d3a-3617-4a51-a566-d738731d98df",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -23451,7 +23655,7 @@
       "effects": [],
       "behaviors": [],
       "string": "100",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 30,
       "color": {
@@ -23474,7 +23678,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "100",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 30,
@@ -23573,7 +23777,7 @@
       "effects": [],
       "behaviors": [],
       "string": "+10",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 24,
       "color": {
@@ -23596,7 +23800,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "+10",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 24,
@@ -24108,7 +24312,7 @@
       "effects": [],
       "behaviors": [],
       "string": "PISTOLA",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 16,
       "color": {
@@ -24131,7 +24335,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "PISTOLA",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 16,
@@ -24296,7 +24500,7 @@
       "effects": [],
       "behaviors": [],
       "string": "R  RECARREGAR",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
@@ -24319,7 +24523,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "R  RECARREGAR",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 20,
@@ -25527,6 +25731,18 @@
           "persistentUuid": "531782de-da6c-477a-a39a-3a083ca805a5",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "8a42cab1-7aa2-4a96-9249-f41496fffcdc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "b01f7f74-a51f-4f28-8d59-14a08b24be78",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -26676,6 +26892,18 @@
           "persistentUuid": "80394e96-a0fa-4f0b-8ec0-bb8935f3aa13",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "5ba4f80d-9f0b-4268-9b47-cbd174c56d1c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "3330aac4-e7f1-4be7-9ab0-b044d41ff897",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -27825,6 +28053,18 @@
           "persistentUuid": "d33e1cb2-d11d-4196-9c03-1b25738acfb6",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "0ac6de48-641b-452a-bc79-09158dce5dba",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "79e24332-62c4-44ee-bdb8-303f627da1bc",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -28974,6 +29214,18 @@
           "persistentUuid": "28996566-0690-474a-ba61-666bcdb7456c",
           "type": "string",
           "value": "azul"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "cf0d552d-0ccc-45e1-b9a2-7e857f8e0992",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "0531bf2f-e57a-40d9-b720-add9f1733c5f",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -30123,6 +30375,18 @@
           "persistentUuid": "fa3b8cb0-652e-4da1-b3bb-1d2fd4654736",
           "type": "string",
           "value": "vermelho"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "a0817407-a6cd-483b-b6f9-725ab88899d2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "3dcf93cb-e9cf-4e41-a1ad-1f59c8b899f1",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -31008,6 +31272,18 @@
           "persistentUuid": "49006779-7e77-40ed-86d9-07982ebba332",
           "type": "string",
           "value": "lasca"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "9e99fea9-3de0-4dda-b44f-c28fea695af4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "42b1c16a-e61e-44c9-9032-12cd40c5303d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -31770,6 +32046,18 @@
           "persistentUuid": "c7acfeae-bc50-4129-a06e-29111bbfed55",
           "type": "string",
           "value": "azul"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "ebd201ac-8c7b-4476-9be6-fea6461ec3af",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "85d54b72-5c53-4fbe-8456-f70cfb0aa775",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -32364,6 +32652,18 @@
           "persistentUuid": "a755f378-8fa9-4dc6-bef8-062a3547f1aa",
           "type": "string",
           "value": "gosma"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "9cc0e479-da82-4600-9722-5a611285bb57",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "c480dea7-10a4-44d7-905e-7832dc0ecaa3",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -32850,6 +33150,18 @@
           "persistentUuid": "370057f7-fca3-46d0-af96-ad4bdea06a34",
           "type": "string",
           "value": "escuro"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "1400ac64-da7c-4309-a510-2171a2a485b7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "a311f035-0b24-4dfc-a8a0-a710a9170e3e",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -33512,6 +33824,18 @@
           "persistentUuid": "b1fa1bf6-669b-4f3c-8f2a-338352ca4aa4",
           "type": "string",
           "value": "brasa"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "a231f2e1-56d9-4076-af32-9479e7598d6d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "97d4c978-a58e-4831-bff4-bc0b93b95a4d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -34142,6 +34466,18 @@
           "persistentUuid": "e42fd1c4-91dc-4b20-baf6-6a908831d6ac",
           "type": "string",
           "value": "escuro"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "4d2ad5fa-c8be-4606-926f-da2fa47a0d0f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "9db411fd-d7db-4cc8-81a6-51df19191c31",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -34700,6 +35036,18 @@
           "persistentUuid": "eed16c3a-4552-470f-84ab-fbeb909768b7",
           "type": "string",
           "value": "escuro"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "e7b17a61-52ae-44a0-a32c-307d02c9612d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "682d169c-ec20-40f2-b168-1a87e534bb89",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -36122,6 +36470,18 @@
           "persistentUuid": "a192c365-9ca9-4fa1-8956-4b5042b23794",
           "type": "string",
           "value": "escuro"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "297128f1-9162-4cb4-af2a-5541799c1795",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "80c5e956-ada0-49ed-af60-d660d09358f5",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -45215,10 +45575,10 @@
       "effects": [],
       "behaviors": [
         {
-          "canBeGrabbed": true,
           "name": "Platform",
-          "platformType": "NormalPlatform",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": true,
+          "platformType": "NormalPlatform",
           "yGrabOffset": 0
         }
       ],
@@ -46470,6 +46830,250 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "soco",
+      "persistentUuid": "7d5ad198-92a5-4901-b15f-1f6026c02fea",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "ang",
+          "persistentUuid": "3b1a2881-4620-49bd-8d47-6a8110e2595d",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "soco",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "soco_luva.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      },
+                      {
+                        "x": 15,
+                        "y": 11
+                      },
+                      {
+                        "x": 0,
+                        "y": 11
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "soco_rastro",
+      "persistentUuid": "6adb39fe-8e56-49fd-814f-b6d4f9acfebc",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "ang",
+          "persistentUuid": "a4b2f48a-3d15-4c5c-832f-ed5886a56c6e",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "soco_rastro",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.04,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "soco_rastro_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 34
+                      },
+                      {
+                        "x": 0,
+                        "y": 34
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "soco_rastro_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 34
+                      },
+                      {
+                        "x": 0,
+                        "y": 34
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "soco_rastro_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 34
+                      },
+                      {
+                        "x": 0,
+                        "y": 34
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "soco_rastro_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 34
+                      },
+                      {
+                        "x": 0,
+                        "y": 34
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -46531,6 +47135,12 @@
           },
           {
             "objectName": "sangue_roxo"
+          },
+          {
+            "objectName": "soco"
+          },
+          {
+            "objectName": "soco_rastro"
           }
         ]
       },
@@ -47693,7 +48303,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3216911764706019,
+        "zoomFactor": 0.20902556228336158,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -47715,6 +48325,18 @@
         {
           "name": "exp_d",
           "persistentUuid": "19f7b4d5-7761-4d3b-86b3-05871f7d7156",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_rx",
+          "persistentUuid": "088cf653-7d31-44a1-89d9-c0e24d236406",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_ry",
+          "persistentUuid": "80e4d894-d64d-4f6b-be3d-26a10cd36144",
           "type": "number",
           "value": 0
         }
@@ -48271,20 +48893,20 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 490,
+          "height": 2240,
           "keepRatio": true,
           "layer": "",
           "name": "tiles_inferno_escuro_",
           "persistentUuid": "38c88e3e-1c21-42b5-bdb0-db14b7430662",
-          "width": 3150,
-          "x": -359,
-          "y": 1010,
+          "width": 3290,
+          "x": -499,
+          "y": -740,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [
             {
               "name": "tilemap",
-              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":45,\"dimY\":7,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144]]}]}"
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":47,\"dimY\":32,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[19,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[-1,-1,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[-1,-1,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[-1,-1,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144]]}]}"
             }
           ],
           "initialVariables": []
@@ -48654,7 +49276,7 @@
           "isLocked": false,
           "name": "HUD",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -48809,7 +49431,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.49336942119506516,
+        "zoomFactor": 0.5449810500781216,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -48831,6 +49453,18 @@
         {
           "name": "exp_d",
           "persistentUuid": "d520d703-1c15-4fdf-9c53-e2d44546d043",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_rx",
+          "persistentUuid": "9f9c8604-b939-40ca-8dab-248f85acdca5",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_ry",
+          "persistentUuid": "e3d86890-c106-4fc8-a9a0-1dd8cc3c98b7",
           "type": "number",
           "value": 0
         }
@@ -50803,6 +51437,24 @@
                       },
                       "parameters": [
                         "",
+                        "som_soco.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_soco_acerto.wav"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PreloadSound"
+                      },
+                      "parameters": [
+                        "",
                         "som_tiro_inimigo.wav"
                       ]
                     },
@@ -51684,8 +52336,7 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -51710,8 +52361,8 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::IsOnFloor",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
                             "pato",
@@ -51742,8 +52393,7 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -51768,8 +52418,8 @@
                         },
                         {
                           "type": {
-                            "value": "PlatformBehavior::IsOnFloor",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
                             "pato",
@@ -51778,8 +52428,8 @@
                         },
                         {
                           "type": {
-                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
                           },
                           "parameters": [
                             "pato",
@@ -51815,8 +52465,7 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -51991,8 +52640,7 @@
                         "0"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "colorB": 228,
@@ -52580,6 +53228,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Sensação do pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -52773,6 +53422,16 @@
                         "<",
                         "-250"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.PlatformerObject::CurrentFallSpeed()",
+                        ">=",
+                        "0"
+                      ]
                     }
                   ],
                   "actions": [
@@ -52810,6 +53469,16 @@
                         "pato",
                         "HorizontalDash",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.PlatformerObject::CurrentFallSpeed()",
+                        ">=",
+                        "0"
                       ]
                     }
                   ],
@@ -53475,18 +54144,17 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
               "name": "Câmera não perde o chão",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "O chão mais baixo em que o pato já pisou (pato.chao_baixo) fica sempre com pelo menos 140 px na tela: a câmera não sobe além disso quando o pato pula. Se o pato subir muito (ficaria a menos de 150 px do topo), a câmera volta a acompanhar.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -53494,7 +54162,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "O chão mais baixo em que o pato já pisou (pato.chao_baixo) fica sempre com pelo menos 140 px na tela: a câmera não sobe além disso quando o pato pula. Se o pato subir muito (ficaria a menos de 150 px do topo), a câmera volta a acompanhar."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -53521,8 +54190,7 @@
                         "max(pato.chao_baixo, pato.Y() + pato.Height())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -53562,6 +54230,959 @@
                         "min(pato.chao_baixo + 140 - CameraHeight(\"\", 0) / 2, pato.Y() - 150 + CameraHeight(\"\", 0) / 2)",
                         "\"\"",
                         "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "name": "Soco",
+              "source": "",
+              "creationTime": 0,
+              "colorR": 74,
+              "colorG": 176,
+              "colorB": 228,
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneJustBegins"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"soco\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "y_antes",
+                        "=",
+                        "pato.Y()"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.PlatformerObject::CurrentFallSpeed()",
+                        "<",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.Y()",
+                        ">=",
+                        "pato.y_antes - 0.01"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Soco no botão direito (espera de 0.35 s): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco.",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "rmb_antes",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"soco\"",
+                        ">",
+                        "0.35"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"soco\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "soco_lado",
+                        "=",
+                        "sign(MouseX() - pato.CenterX() + 0.001)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "soco_ang",
+                        "=",
+                        "ToDeg(atan2(MouseY() - pato.CenterY(), MouseX() - pato.CenterX()))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "soco_cos",
+                        "=",
+                        "cos(ToRad(pato.soco_ang))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "soco_sin",
+                        "=",
+                        "sin(ToRad(pato.soco_ang))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "soco_acertou",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AdvancedJump::HorizontalDash::IsDashing",
+                            "inverted": true
+                          },
+                          "parameters": [
+                            "pato",
+                            "HorizontalDash",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RaycastToPosition"
+                          },
+                          "parameters": [
+                            "Terreno",
+                            "pato.CenterX()",
+                            "pato.CenterY()",
+                            "pato.CenterX() + pato.soco_cos * 150",
+                            "pato.CenterY() + pato.soco_sin * 150",
+                            "soco_rx",
+                            "soco_ry",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_acertou",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * 700, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "poeira",
+                            "soco_rx",
+                            "soco_ry",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "poeira",
+                            "=",
+                            "pato.soco_ang"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(pato.soco_sin)",
+                                ">",
+                                "0.2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_vy",
+                                "=",
+                                "-pato.soco_sin * 1000"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::JsCode",
+                              "inlineCode": [
+                                "const pato = runtimeScene.getObjects(\"pato\")[0];",
+                                "const b = pato && pato.getBehavior(\"PlatformerObject\");",
+                                "if (b && b._setFalling && b._falling) {",
+                                "  const alvo = pato.getVariables().get(\"soco_vy\").getAsNumber();   // px/s, negativo = para cima",
+                                "  const noChao = b._state === b._onFloor;",
+                                "  const agora = b._state === b._falling ? b._currentFallSpeed",
+                                "    : b._state === b._jumping ? b._currentFallSpeed - b._jumping.getCurrentJumpSpeed() : 0;",
+                                "  if ((alvo < 0 && alvo < agora) || (alvo > 0 && alvo > agora && !noChao)) {",
+                                "    const podiaPular = b._canJump;",
+                                "    if (b._state !== b._falling) b._setFalling();",
+                                "    b._canJump = podiaPular;",
+                                "    b._currentFallSpeed = alvo;   // para baixo, o comportamento limita na queda máxima",
+                                "  }",
+                                "}"
+                              ],
+                              "parameterObjects": "",
+                              "useStrict": true,
+                              "eventsSheetExpanded": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "soco",
+                            "pato.CenterX()",
+                            "pato.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "soco",
+                            "ang",
+                            "=",
+                            "pato.soco_ang"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "soco",
+                            "Scale",
+                            "=",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "soco",
+                            "=",
+                            "pato.soco_ang"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "soco",
+                            "\"t\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "soco_rastro",
+                            "pato.CenterX()",
+                            "pato.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "ang",
+                            "=",
+                            "pato.soco_ang"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "Scale",
+                            "=",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "=",
+                            "pato.soco_ang"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "\"t\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_soco.wav",
+                            "",
+                            "55",
+                            "RandomFloatInRange(0.93, 1.07)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_cos",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipY"
+                              },
+                              "parameters": [
+                                "soco",
+                                "Flippable",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipY"
+                              },
+                              "parameters": [
+                                "soco_rastro",
+                                "Flippable",
+                                "yes"
+                              ]
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) + ((Inimigo.Width() + Inimigo.Height()) / 4)",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) - ((Inimigo.Width() + Inimigo.Height()) / 4)",
+                            "<",
+                            "150"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.soco_cos * (Inimigo.CenterY() - pato.CenterY()) - pato.soco_sin * (Inimigo.CenterX() - pato.CenterX()))",
+                            "<",
+                            "((Inimigo.Width() + Inimigo.Height()) / 4) + 60"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "vida",
+                            "-",
+                            "max(1, round(12 * GlobalVariable(mult_dano)))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "acertado",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "kb_dir",
+                            "=",
+                            "pato.soco_lado * 4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "soco_dir",
+                            "=",
+                            "pato.soco_lado"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "socado",
+                            "=",
+                            "0.2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_acertou",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [],
+                      "object": "Inimigo"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_acertou",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_soco_acerto.wav",
+                            "",
+                            "65",
+                            "RandomFloatInRange(0.93, 1.07)"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "rmb_antes",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "rmb_antes",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\".",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "soco",
+                        "=",
+                        "pato.CenterX() + (35 + 95 * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / 0.16)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
+                        "=",
+                        "pato.CenterY() + 8 + (35 + 95 * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / 0.16)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetZOrder"
+                      },
+                      "parameters": [
+                        "soco",
+                        "=",
+                        "pato.ZOrder() + 2"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "soco_rastro",
+                        "=",
+                        "pato.CenterX() + 120 * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
+                        "=",
+                        "pato.CenterY() + 8 + 120 * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetZOrder"
+                      },
+                      "parameters": [
+                        "soco_rastro",
+                        "=",
+                        "pato.ZOrder() + 1"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "soco",
+                        "\"t\"",
+                        ">",
+                        "0.16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "soco",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "soco_rastro",
+                        "\"t\"",
+                        ">",
+                        "0.16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "soco_rastro",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "socado",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "socado",
+                        "-",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "estado",
+                            "=",
+                            "\"dano\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject",
+                            "=",
+                            "900"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                          },
+                          "parameters": [
+                            "Terrestre",
+                            "PlatformerObject",
+                            "=",
+                            "Terrestre.soco_dir * 900"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "y_antes",
+                        "=",
+                        "pato.Y()"
                       ]
                     }
                   ],
@@ -57493,8 +59114,7 @@
                     "RandomFloatInRange(0.93, 1.07)"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -58315,8 +59935,7 @@
                     "RandomFloatInRange(0.93, 1.07)"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -62556,8 +64175,7 @@
                     "RandomFloatInRange(0.93, 1.07)"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -63859,18 +65477,16 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Explosão da granada",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Granada (projetil.raio > 0) explode ao tocar no chão ou num inimigo; quem ela acerta direto leva o dano da granada (1). A explosão cria as partículas e o som, e o emissor explosao_fogo leva o dano, o raio e a repulsão (ver Dano da explosão). Depois a granada some.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -63878,10 +65494,12 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Granada (projetil.raio > 0) explode ao tocar no chão ou num inimigo; quem ela acerta direto leva o dano da granada (1). A explosão cria as partículas e o som, e o emissor explosao_fogo leva o dano, o raio e a repulsão (ver Dano da explosão). Depois a granada some."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -63919,12 +65537,11 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": [],
-                  "object": "projetil"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -63995,12 +65612,11 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": [],
-                  "object": "projetil"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -64117,25 +65733,22 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": [],
-                  "object": "projetil"
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Dano da explosão",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Cada explosão nova (emissor explosao_fogo) dá dano uma vez em todo inimigo vivo cuja caixa esteja a menos de raio px do centro: dano * (1 - distância / raio), 100% no centro e 0 na borda (mínimo 1). A repulsão cai do mesmo jeito.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -64143,10 +65756,12 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Cada explosão nova (emissor explosao_fogo) dá dano uma vez em todo inimigo vivo cuja caixa esteja a menos de raio px do centro: dano * (1 - distância / raio), 100% no centro e 0 na borda (mínimo 1). A repulsão cai do mesmo jeito."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "explosao_fogo",
                   "conditions": [
                     {
                       "type": {
@@ -64164,6 +65779,7 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Inimigo",
                       "conditions": [
                         {
                           "type": {
@@ -64238,11 +65854,9 @@
                                 "sign(Inimigo.CenterX() - explosao_fogo.X() + 0.001) * explosao_fogo.repulsao * (1 - exp_d / explosao_fogo.raio)"
                               ]
                             }
-                          ],
-                          "events": []
+                          ]
                         }
-                      ],
-                      "object": "Inimigo"
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -64259,13 +65873,12 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
-                  ],
-                  "object": "explosao_fogo"
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -64908,18 +66521,16 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "name": "Sons de dano",
           "source": "",
-          "creationTime": 0,
-          "colorR": 74,
-          "colorG": 176,
-          "colorB": 228,
-          "parameters": [],
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Quack quando o pato perde vida (antes do Feedback atualizar vida_controle). A morte tem som próprio.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -64927,7 +66538,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Quack quando o pato perde vida (antes do Feedback atualizar vida_controle). A morte tem som próprio."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -64968,10 +66580,10 @@
                     "RandomFloatInRange(0.95, 1.08)"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,

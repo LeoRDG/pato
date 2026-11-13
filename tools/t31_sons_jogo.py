@@ -76,6 +76,10 @@ def receitas(f):
                                tom(corta(f('trava'), dur=0.6), 1.2), {'fade_out': 0.03})
     R['som_troca_arma.wav'] = ('troca de arma', [('rec_pistola_ferrolho_frente_276959.wav', 'inteiro, tom -10%')],
                                tom(f('rec_pistola_ferrolho_frente_276959.wav'), 0.9), {})
+    R['som_soco.wav'] = ('soco no ar (botão direito)', [('whoosh', '0,2 s, tom +60%')],
+                         tom(corta(f('whoosh')), 1.6), {'fade_out': 0.08})
+    R['som_soco_acerto.wav'] = ('soco acerta inimigo ou parede', [('soco', '0,2 s'), ('impacto', '0,2 s, tom -20%, por baixo')],
+                                mixa((corta(f('soco'), dur=0.2), 0, 1), (tom(corta(f('impacto'), dur=0.16), 0.8), 0, 0.5)), {'fade_out': 0.06})
     return R
 
 
