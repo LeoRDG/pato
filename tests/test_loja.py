@@ -118,3 +118,46 @@ def test_toda_entrada_do_jogador_tem_trava():
                        for c in e['conditions']), e['conditions']
             guardados += 1
     assert guardados > 0
+
+
+# ------------------------------------------------------------------ Tarefa 4: eventos da loja
+
+GRUPOS_LOJA = ['Dica', 'Abrir e fechar', 'Menu', 'Compra', 'Mercador', 'Barra do mercador']
+
+
+def _grupo_loja(nome):
+    return next(e for e in ext('Loja') if e.get('name') == nome)
+
+
+def test_hub_liga_loja_por_ultimo():
+    hub = next(l for l in JOGO['layouts'] if l['name'] == 'Hub')
+    links = [e for e in hub['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
+    assert links[-1]['target'] == 'Loja' and hub['events'][-1] is links[-1]
+
+
+def test_loja_grupos():
+    assert [e['name'] for e in ext('Loja') if e['type'] == 'BuiltinCommonInstructions::Group'] == GRUPOS_LOJA
+
+
+def test_loja_nao_cita_ids_do_catalogo():
+    txt = json.dumps([e for e in ext('Loja') if e.get('type') != 'BuiltinCommonInstructions::Comment'])
+    for proibido in ('cadencia', 'recarga', 'velocidade', '"dano', 'upgrades.', 'armas.'):
+        assert proibido not in txt, proibido
+
+
+def _eventos_compra():
+    return list(anda([_grupo_loja('Compra')]))
+
+
+def test_compra_desconta_e_reaplica():
+    assert any(any(a['type']['value'] == 'SetNumberVariable' and a['parameters'][:2] == ['moedas_total', '-'] for a in e.get('actions') or [])
+               and any(a['parameters'][:3] == ['pato', 'reaplicar_upgrades', 'True'] for a in e.get('actions') or [])
+               for e in _eventos_compra())
+
+
+def test_compra_exige_moedas():
+    ev = next(e for e in _eventos_compra()
+              if any(a['parameters'][:2] == ['moedas_total', '-'] for a in e.get('actions') or []))
+    assert any(c['type']['value'] == 'NumberVariable' and c['parameters'][:2] == ['moedas_total', '>='] for c in ev['conditions'])
+    assert any(c['parameters'][:2] == ['loja_sel_nivel', '<'] for c in ev['conditions'])
+    assert any(c['parameters'][:2] == ['loja_sel_bloq', '='] for c in ev['conditions'])
