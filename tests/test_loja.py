@@ -212,3 +212,32 @@ def test_ganchos_vazios():
     assert 'Ataques do trader' in nomes and 'Quando o trader morre' in nomes
     assert any(a['type']['value'] == 'SetBooleanVariable' and a['parameters'][:2] == ['trader_morto', 'True']
                for e in anda([_grupo_loja('Mercador')]) for a in e.get('actions') or [])
+
+
+# ------------------------------------------------------------------ Revisão final
+
+def test_clique_so_compra_sobre_linha():
+    compra = list(anda([_grupo_loja('Compra')]))
+    principal = next(e for e in compra if any(a['parameters'][:2] == ['moedas_total', '-'] for a in e.get('actions') or []))
+    assert 'BuiltinCommonInstructions::Or' not in tipos(principal)
+    assert any(c['parameters'][:3] == ['loja_comprar', '=', '1'] for c in principal['conditions'])
+    clique = next(e for e in compra if 'MouseButtonFromTextReleased' in tipos(e))
+    assert 'SourisSurObjet' in tipos(clique)
+    assert any(c['parameters'][:2] == ['loja_lmb_ok', 'True'] for c in clique['conditions'])
+    assert any(a['parameters'][:3] == ['loja_comprar', '=', '1'] for a in clique['actions'])
+    # o botão já segurado quando a loja abre não vale: só uma pressão nova (borda) sobre uma linha libera o clique
+    libera = next(e for e in compra if any(a['parameters'][:2] == ['loja_lmb_ok', 'True'] for a in e.get('actions') or []))
+    assert any(c['parameters'][:2] == ['loja_lmb_antes', 'False'] for c in libera['conditions'])
+    assert 'SourisSurObjet' in tipos(libera)
+
+
+def test_requer_aceita_arma():
+    menu = json.dumps(_grupo_loja('Menu'))
+    assert 'armas[loja_req]' in menu
+
+
+def test_barra_rastro_encolhe():
+    barra = list(anda([_grupo_loja('Barra do mercador')]))
+    assert any(a['type']['value'] == 'ResizableCapability::ResizableBehavior::SetWidth' and a['parameters'][0] == 'hud_boss_rastro'
+               and a['parameters'][2] == '-' and 'trader.rastro_vel' in a['parameters'][3]
+               for e in barra for a in e.get('actions') or [])
