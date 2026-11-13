@@ -56,7 +56,7 @@ def test_soco_no_terreno_da_velocidade_contraria_sem_usar_o_pulo():
     assert len(bate) == 1                                          # o raio vai na direção do soco
     vel = [a for a in bate[0]['actions'] if a['type']['value'].endswith('SetCurrentSpeed')][0]['parameters'][3]
     assert '- pato.soco_cos * pato.coice_x' in vel                           # contra a direção do soco
-    vert = bate[0]['events'][0]
+    vert = bate[0]['events'][1]                                      # [0] é o soco lateral
     assert vert['actions'][0]['parameters'][:4] == ['pato', 'soco_vy', '=', '-pato.soco_sin * pato.coice_y']
     js = [e for e in vert['events'] if e['type'] == 'BuiltinCommonInstructions::JsCode']
     assert len(js) == 1
@@ -100,5 +100,18 @@ def test_coice_nao_gasta_pulo():
     assert len(guarda) == 1 and 'coice_guarda' in json.dumps(guarda[0]['conditions'])
     marca = [e for e in evs if any(a['parameters'][1:2] == ['coice_guarda'] and a['parameters'][2:3] == ['True']
                                    for a in e.get('actions', []))]
-    assert len(marca) == 1 and any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in marca[0]['conditions'])
+    assert len(marca) == 2 and all(any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in m['conditions']) for m in marca)         # lateral e vertical
     assert any(v['name'] == 'coice_guarda' for v in OBJ['pato']['variables'])
+
+
+def test_soco_lateral_tem_empurrao_proprio_e_pulinho():
+    evs = list(walk(grupo()['events']))
+    lat = [e for e in evs if any(a['parameters'][:2] == ['pato', 'coice_vx'] and 'coice_parede_x' in a['parameters'][3]
+                                 for a in e.get('actions', []))]
+    assert len(lat) == 1 and "<=" in json.dumps(lat[0]['conditions'])
+    assert any('coice_parede_y' in a['parameters'][3] for a in lat[0]['actions'])
+    assert any(e['type'] == 'BuiltinCommonInstructions::JsCode' for e in lat[0]['events'])
+    mov = [e for e in evs if any(a['type']['value'] == 'SetX' and 'pato.coice_vx' in a['parameters'][2] for a in e.get('actions', []))]
+    assert len(mov) == 1 and 'coice_parede_freio' in json.dumps(mov[0]['actions'])
+    nomes = {v['name'] for v in OBJ['pato']['variables']}
+    assert {'coice_parede_x', 'coice_parede_y', 'coice_parede_freio', 'coice_vx'} <= nomes

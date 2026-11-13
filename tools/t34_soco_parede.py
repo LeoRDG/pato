@@ -18,6 +18,9 @@ SOCO NO TERRENO: se o soco bate no Terreno (raio do centro do pato na direção 
   Ao bater a cabeça no teto subindo assim, a velocidade é zerada (senão o pato ficaria colado até a gravidade vencer).
   A força do coice fica nas variáveis do objeto pato, `coice_x` e `coice_y` (px/s), editáveis no GDevelop; o script só as
   cria se não existirem, nunca troca o valor.
+  SOCO LATERAL (|sin| <= LIMIAR_Y, ex.: na parede): além da velocidade acima (que o limite de velocidade do pato e a freada cortam
+  em ~0,3 s), o pato ganha um empurrão `coice_vx` = −cos × coice_parede_x, aplicado por SetX fora desse limite e que some a
+  coice_parede_freio px/s², mais um pulinho de coice_parede_y px/s para cima (a parábola). Variáveis do pato, editáveis no GDevelop.
   O coice NÃO gasta pulo: saindo do chão, o pulo do chão fica guardado (o "coyote time" do AdvancedJump, que acabaria em
   0,2 s, é mantido reiniciando o cronômetro dele) até o pato pular ou pousar; o pulo no ar continua valendo depois.
   Não funciona durante o dash. (Agarrar na parede saiu: fica para depois.)
@@ -27,7 +30,7 @@ Sons: som_soco.wav (golpe no ar) e som_soco_acerto.wav (acertou inimigo ou terre
 Rodar:  python3 tools/t31_sons_jogo.py && python3 tools/t32_sons_eventos.py && python3 tools/t34_soco_parede.py
         (pode rodar de novo). Salve e feche o projeto no GDevelop antes.
 """
-import json, math, os, sys, uuid
+import copy, json, math, os, sys, uuid
 from PIL import Image
 from t12_armas import A, C, E, PATH, comentario, grupo, upsert
 
@@ -44,6 +47,9 @@ SOCO_KB = 4        # kb_dir dos voadores (× 40 px)
 DUR = 0.16         # s da luva na tela
 ALCANCE_PAREDE = 150   # px do centro do pato até onde o soco alcança o terreno
 IMPULSO_X = 700    # valor inicial de pato.coice_x: px/s para o lado, contra a direção do soco
+PAREDE_X = 900     # valor inicial de pato.coice_parede_x: px/s extra para o lado em soco lateral (fora do limite de velocidade)
+PAREDE_Y = 650     # valor inicial de pato.coice_parede_y: px/s para cima em soco lateral (650 = ~105 px de altura)
+PAREDE_FREIO = 1800  # valor inicial de pato.coice_parede_freio: px/s² com que o empurrão lateral some (900 → ~225 px)
 IMPULSO_Y = 1000   # valor inicial de pato.coice_y: px/s para cima ou para baixo, × o quanto o soco aponta na vertical (1000 para cima = 250 px de altura)
 LIMIAR_Y = 0.2     # o soco precisa apontar pelo menos isso (seno) para cima/baixo para dar impulso vertical
 ESCALA = 5
@@ -212,7 +218,10 @@ def eventos():
          A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed', *PL, '=',
            f'clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * pato.coice_x, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())'),
          A('Create', '', 'poeira', 'soco_rx', 'soco_ry', ''), A('SetAngle', 'poeira', '=', 'pato.soco_ang')],
-        [E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', '-pato.soco_sin * pato.coice_y')], [E([no_chao()], [setb('coice_guarda', True)]), js_vertical])])
+        [E([cmp('abs(pato.soco_sin)', '<=', LIMIAR_Y)],                         # soco lateral: empurrão extra e um pulinho (parábola)
+           [setn('coice_vx', '-pato.soco_cos * pato.coice_parede_x'), setn('soco_vy', '-pato.coice_parede_y')],
+           [E([no_chao()], [setb('coice_guarda', True)]), copy.deepcopy(js_vertical)]),
+         E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', '-pato.soco_sin * pato.coice_y')], [E([no_chao()], [setb('coice_guarda', True)]), js_vertical])])
 
     luva = E([], [
         A('Create', '', 'soco', CX, CY, ''),
@@ -273,6 +282,10 @@ def eventos():
         E([flag('coice_guarda', True), C('PlatformBehavior::IsFalling', *PL)],
           [A('ResetObjectTimer', 'pato', '"__CoyoteTime_CoyoteJump"')]),
         E([flag('coice_guarda', True), C('PlatformBehavior::IsFalling', *PL, inv=True)], [setb('coice_guarda', False)]),
+        E([cmp('abs(pato.coice_vx)', '>', 1), dash(inv=True)],
+          [A('SetX', 'pato', '+', 'pato.coice_vx * TimeDelta()'),
+           setn('coice_vx', 'sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())')]),
+        E([dash()], [setn('coice_vx', 0)]),
         E([], [setn('y_antes', 'pato.Y()')]),
     ]
     return grupo(NOME, [inicio] + teto + soco + depois)
@@ -292,9 +305,10 @@ def main():
     velhas = ('impulso', 'soco_f', 'sustento_restaurar', 'parede_lado', 'vel_base', 'sustento_base', 'queda_base', 'parede_agora',
               'pulo_base', 'agarrado', 'pulo_restaurar', 'voo', 'voo_dir', 'voo_f', 'voo_q', 'voo_pulou', 'voo_fim')   # das versões anteriores
     pv[:] = [v for v in pv if v['name'] not in velhas]
-    for k in ('soco_lado', 'soco_ang', 'soco_cos', 'soco_sin', 'soco_vy', 'y_antes'):
+    for k in ('soco_lado', 'soco_ang', 'soco_cos', 'soco_sin', 'soco_vy', 'y_antes', 'coice_vx'):
         upsert(pv, k, 0)
-    for k, v in (('coice_x', IMPULSO_X), ('coice_y', IMPULSO_Y)):   # força do coice: ajustável no GDevelop, o script não sobrescreve
+    for k, v in (('coice_x', IMPULSO_X), ('coice_y', IMPULSO_Y), ('coice_parede_x', PAREDE_X),
+                 ('coice_parede_y', PAREDE_Y), ('coice_parede_freio', PAREDE_FREIO)):   # força do coice: ajustável no GDevelop, o script não sobrescreve
         if not any(x['name'] == k for x in pv):
             upsert(pv, k, v)
     for k in ('rmb_antes', 'soco_acertou', 'coice_guarda'):
