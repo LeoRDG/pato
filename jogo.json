@@ -51034,6 +51034,96 @@
           "persistentUuid": "7689304b-2d2f-498a-850d-47e7903d9783",
           "type": "string",
           "value": "255;230;120"
+        },
+        {
+          "name": "loja_acao",
+          "persistentUuid": "652afdf7-fee1-49dc-85d4-6eb16851e0d0",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_id",
+          "persistentUuid": "f1a76721-dd65-43f8-b121-aa26602bdbb7",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_tipo",
+          "persistentUuid": "a597cbaf-bd0e-4cc1-9b96-6627ce85ddb0",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_req",
+          "persistentUuid": "513378e3-ea69-4f01-a07d-ab79980a303f",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_nivel",
+          "persistentUuid": "1af34eb6-064f-48ad-bfae-dcce031ba7a0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_max",
+          "persistentUuid": "c6ba986d-9ccb-4608-a7a2-34202135fe81",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_preco",
+          "persistentUuid": "2574dcf5-050b-483e-a78c-f9e7ba7b081d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_bloq",
+          "persistentUuid": "4002d628-ce08-43c0-aeed-75e4ec631813",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_texto",
+          "persistentUuid": "68e91259-b2e8-4fc4-b58f-f06fb89a7872",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_sel_id",
+          "persistentUuid": "6d788589-1ef6-40d0-96e9-396b5c1aede9",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_sel_tipo",
+          "persistentUuid": "43e7728f-22fa-4a23-881e-afecc4c08fe3",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "loja_sel_nivel",
+          "persistentUuid": "62749483-e6b7-49e5-8a31-48d3f7823816",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_sel_max",
+          "persistentUuid": "a17a7857-c2c0-49aa-9742-c805a7b4e124",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_sel_preco",
+          "persistentUuid": "ca625c5d-19b3-4070-94cb-2bf2d71e18e7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "loja_sel_bloq",
+          "persistentUuid": "ff3e518a-f28a-4d91-9814-1600e0bca174",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -51834,6 +51924,13 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Loja"
         }
       ],
       "layers": [
@@ -73357,6 +73454,1547 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Hub",
+      "name": "Loja",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Loja do Hub: o menu é montado a partir da global loja_catalogo. Para criar um upgrade, adicione um item lá.",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          }
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Dica",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Um \"E\" aparece sobre o mercador calmo quando o pato está perto e a loja está fechada.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "loja_dica",
+                    "trader.CenterX()",
+                    "trader.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "loja_dica",
+                    "=",
+                    "900"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "loja_dica"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "estado",
+                    "=",
+                    "\"calmo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "trader",
+                    "pato",
+                    "trader.loja_raio",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "loja_dica",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "loja_dica",
+                    "=",
+                    "trader.CenterX() - loja_dica.Width() / 2",
+                    "=",
+                    "trader.Y() - loja_dica.Height() - 8"
+                  ]
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Abrir e fechar",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "E abre perto do mercador calmo e fecha; Esc fecha. Quem quiser abrir/fechar a loja muda loja_acao.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"e\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_acao",
+                        "=",
+                        "\"fechar\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "estado",
+                        "=",
+                        "\"calmo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "trader",
+                        "pato",
+                        "trader.loja_raio",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_acao",
+                        "=",
+                        "\"abrir\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Escape\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "loja_acao",
+                    "=",
+                    "\"fechar\""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "loja_acao",
+                    "=",
+                    "\"abrir\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation",
+                    "=",
+                    "\"dialogo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "loja_painel",
+                    "0",
+                    "0",
+                    "\"HUD\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "loja_painel",
+                    "=",
+                    "950"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_i",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "loja_linha",
+                        "CameraBorderLeft(\"HUD\") + loja_x",
+                        "CameraBorderTop(\"HUD\") + loja_y + loja_i * loja_linha_alt",
+                        "\"HUD\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "indice",
+                        "=",
+                        "loja_i"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "=",
+                        "1000"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_i",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [],
+                  "repeatExpression": "GlobalVariableChildCount(loja_catalogo)"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "loja_desc",
+                        "CameraBorderLeft(\"HUD\") + loja_x",
+                        "CameraBorderTop(\"HUD\") + loja_y + GlobalVariableChildCount(loja_catalogo) * loja_linha_alt + 16",
+                        "\"HUD\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "loja_desc",
+                        "=",
+                        "1000"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_acao",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "loja_acao",
+                    "=",
+                    "\"fechar\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "loja_painel",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "loja_linha",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "loja_desc",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "loja_acao",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "estado",
+                        "=",
+                        "\"calmo\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Menu",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "W/S ou o mouse escolhem a linha. Cada linha é recalculada a partir do catálogo a cada quadro.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "GlobalVariableChildCount(loja_catalogo)",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"w\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel",
+                    "=",
+                    "mod(loja_sel - 1 + GlobalVariableChildCount(loja_catalogo), GlobalVariableChildCount(loja_catalogo))"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "GlobalVariableChildCount(loja_catalogo)",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"s\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel",
+                    "=",
+                    "mod(loja_sel + 1, GlobalVariableChildCount(loja_catalogo))"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "loja_linha",
+                    "",
+                    "yes"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel",
+                    "=",
+                    "loja_linha.indice"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::Rectangle"
+                  },
+                  "parameters": [
+                    "loja_painel",
+                    "CameraBorderLeft(\"HUD\") + loja_x - 24",
+                    "CameraBorderTop(\"HUD\") + loja_y - 24",
+                    "CameraBorderLeft(\"HUD\") + loja_x + loja_largura",
+                    "CameraBorderTop(\"HUD\") + loja_y + GlobalVariableChildCount(loja_catalogo) * loja_linha_alt + 72"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "loja_desc",
+                    "Text",
+                    "=",
+                    "GlobalVariableString(loja_catalogo[loja_sel].descricao)"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "loja_id",
+                    "=",
+                    "GlobalVariableString(loja_catalogo[loja_linha.indice].id)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "loja_tipo",
+                    "=",
+                    "GlobalVariableString(loja_catalogo[loja_linha.indice].tipo)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "loja_req",
+                    "=",
+                    "GlobalVariableString(loja_catalogo[loja_linha.indice].requer)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_max",
+                    "=",
+                    "GlobalVariable(loja_catalogo[loja_linha.indice].nivel_max)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "loja_bloq",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "loja_tipo",
+                        "=",
+                        "\"arma\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_nivel",
+                        "=",
+                        "GlobalVariable(armas[loja_id])"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "loja_tipo",
+                        "!=",
+                        "\"arma\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_nivel",
+                        "=",
+                        "GlobalVariable(upgrades[loja_id])"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_preco",
+                        "=",
+                        "round(GlobalVariable(loja_catalogo[loja_linha.indice].preco_base) * pow(GlobalVariable(loja_catalogo[loja_linha.indice].preco_mult), loja_nivel))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_texto",
+                        "=",
+                        "GlobalVariableString(loja_catalogo[loja_linha.indice].nome) + \"   \" + ToString(loja_nivel) + \"/\" + ToString(loja_max) + \"   \""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "loja_req",
+                        "!=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "GlobalVariable(upgrades[loja_req])",
+                        "<",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_bloq",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "comment": "Texto e cor: a última regra que vale ganha (selecionada > bloqueada > no máximo > cara > ok).",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  }
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "Text",
+                        "=",
+                        "loja_texto + ToString(loja_preco) + \" moedas\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "loja_cor_ok"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "moedas_total",
+                        "<",
+                        "loja_preco"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "loja_cor_caro"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "loja_nivel",
+                        ">=",
+                        "loja_max"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "Text",
+                        "=",
+                        "loja_texto + \"MÁX\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "loja_cor_max"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "loja_bloq",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "Text",
+                        "=",
+                        "loja_texto + \"precisa de \" + loja_req"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "loja_cor_bloq"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "indice",
+                        "=",
+                        "loja_sel"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "loja_linha",
+                        "loja_cor_sel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_id",
+                        "=",
+                        "loja_id"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_tipo",
+                        "=",
+                        "loja_tipo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_nivel",
+                        "=",
+                        "loja_nivel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_max",
+                        "=",
+                        "loja_max"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_preco",
+                        "=",
+                        "loja_preco"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "loja_sel_bloq",
+                        "=",
+                        "loja_bloq"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "object": "loja_linha"
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Compra",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Espaço ou clique compra a linha selecionada se não estiver no máximo, nem bloqueada, e houver moedas.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "loja_aberta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel_bloq",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "loja_sel_nivel",
+                    "<",
+                    "loja_sel_max"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "moedas_total",
+                    ">=",
+                    "loja_sel_preco"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "moedas_total",
+                    "-",
+                    "loja_sel_preco"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "reaplicar_upgrades",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation",
+                    "=",
+                    "\"aprovado\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "loja_sel_tipo",
+                        "=",
+                        "\"arma\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "armas[loja_sel_id]",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "loja_sel_tipo",
+                        "!=",
+                        "\"arma\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "upgrades[loja_sel_id]",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation",
+                    "=",
+                    "\"aprovado\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "trader",
+                    "Animation",
+                    "=",
+                    "\"idle\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Animation",
+                        "=",
+                        "\"dialogo\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Mercador",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Mercador como inimigo secreto (tarefa 32).",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Barra do mercador",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Barra de vida do mercador hostil (tarefa 32).",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            }
+          ]
         }
       ]
     }
