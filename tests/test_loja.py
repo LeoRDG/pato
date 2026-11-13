@@ -99,7 +99,7 @@ def test_upgrades_reaplicaveis():
     assert cond['type']['value'] == 'BuiltinCommonInstructions::Or'
     subs = json.dumps(cond['subInstructions'])
     assert 'SceneJustBegins' in subs and 'reaplicar_upgrades' in subs
-    assert any(a['parameters'][:3] == ['pato', 'reaplicar_upgrades', 'False'] for a in alvo['actions'])
+    assert any(a['parameters'][:3] == ['reaplicar_upgrades', 'False', ''] for a in alvo['actions'])
 
 
 # ------------------------------------------------------------------ Tarefa 3: trava dos controles
@@ -152,7 +152,7 @@ def _eventos_compra():
 
 def test_compra_desconta_e_reaplica():
     assert any(any(a['type']['value'] == 'SetNumberVariable' and a['parameters'][:2] == ['moedas_total', '-'] for a in e.get('actions') or [])
-               and any(a['parameters'][:3] == ['pato', 'reaplicar_upgrades', 'True'] for a in e.get('actions') or [])
+               and any(a['parameters'][:3] == ['reaplicar_upgrades', 'True', ''] for a in e.get('actions') or [])
                for e in _eventos_compra())
 
 
@@ -241,3 +241,20 @@ def test_barra_rastro_encolhe():
     assert any(a['type']['value'] == 'ResizableCapability::ResizableBehavior::SetWidth' and a['parameters'][0] == 'hud_boss_rastro'
                and a['parameters'][2] == '-' and 'trader.rastro_vel' in a['parameters'][3]
                for e in barra for a in e.get('actions') or [])
+
+
+# ------------------------------------------------------------------ Bug: Or com condição de objeto filtrava o pato
+
+def test_reaplicar_nao_filtra_o_pato():
+    # Uma condição de objeto dentro do Or deixava o pato sem instâncias no início da cena (pato.* = 0, cooldown 0).
+    _, alvo = _aplicar()
+    (ou,) = alvo['conditions']
+    for c in ou['subInstructions']:
+        assert 'ObjectVariable' not in c['type']['value'], c
+    assert any(c['type']['value'] == 'BooleanVariable' and c['parameters'][:2] == ['reaplicar_upgrades', 'True']
+               for c in ou['subInstructions'])
+    assert any(a['type']['value'] == 'SetBooleanVariable' and a['parameters'][:2] == ['reaplicar_upgrades', 'False']
+               for a in alvo['actions'])
+    compra = json.dumps(_grupo_loja('Compra'))
+    assert '"reaplicar_upgrades", "True"' in compra and '"pato", "reaplicar_upgrades"' not in compra
+    assert glob('reaplicar_upgrades')['value'] is False

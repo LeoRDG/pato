@@ -9489,12 +9489,6 @@
           "value": false
         },
         {
-          "name": "reaplicar_upgrades",
-          "persistentUuid": "9f6010f5-e0f8-4bc3-b372-ab5b810775bc",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "velocidade_base",
           "persistentUuid": "2b8f56d1-20f7-4df4-aba1-1ce339d02ad9",
           "type": "number",
@@ -50675,6 +50669,12 @@
       "persistentUuid": "3b84cda9-3222-489f-93ca-4630fb61ed15",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "reaplicar_upgrades",
+      "persistentUuid": "04aa8751-330b-4213-9246-bf62dc3b7545",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -73426,10 +73426,9 @@
                     },
                     {
                       "type": {
-                        "value": "BooleanObjectVariable"
+                        "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "pato",
                         "reaplicar_upgrades",
                         "True",
                         ""
@@ -73517,10 +73516,9 @@
                 },
                 {
                   "type": {
-                    "value": "SetBooleanObjectVariable"
+                    "value": "SetBooleanVariable"
                   },
                   "parameters": [
-                    "pato",
                     "reaplicar_upgrades",
                     "False",
                     ""
@@ -75151,10 +75149,9 @@
                 },
                 {
                   "type": {
-                    "value": "SetBooleanObjectVariable"
+                    "value": "SetBooleanVariable"
                   },
                   "parameters": [
-                    "pato",
                     "reaplicar_upgrades",
                     "True",
                     ""
