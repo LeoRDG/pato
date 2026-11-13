@@ -49414,6 +49414,395 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "boneco",
+      "persistentUuid": "09e5d4ec-e601-4ae6-831c-24fde3e2fe2a",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "43605317-c7ec-4643-aed4-25d0fe2cb843",
+          "type": "number",
+          "value": 100000
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "22481866-5e02-4a9b-bdaa-739d844d6226",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "61c4e124-8822-4863-927f-c9fb327b5f6f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "ed8004ce-22cb-4a2d-b0e2-e5ec95392a10",
+          "type": "number",
+          "value": 100000
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "6319ed38-52a7-4a89-aac3-691e153ceabb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "23a81191-cac7-46b0-a64d-20b4613e5cda",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "8d88a807-892c-4946-8300-5746bdb126b6",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "type": "boolean",
+          "value": false,
+          "persistentUuid": "dd6f2458-f6bf-43e8-abd5-290925a6d4e1"
+        },
+        {
+          "name": "qtd_moedas",
+          "type": "number",
+          "value": 0,
+          "persistentUuid": "04042dcc-2885-4cd5-ab00-0e4471e08009"
+        },
+        {
+          "name": "estado",
+          "type": "string",
+          "value": "calmo",
+          "persistentUuid": "f185d540-a4b1-46a0-975d-e528a8d3d46a"
+        },
+        {
+          "name": "base_x",
+          "type": "number",
+          "value": 0,
+          "persistentUuid": "b90cb04b-9540-42df-8a67-d543a4f57e91"
+        },
+        {
+          "name": "base_y",
+          "type": "number",
+          "value": 0,
+          "persistentUuid": "e642b2d9-1935-4c15-b572-78d6e68dfc0b"
+        },
+        {
+          "name": "direcao",
+          "type": "number",
+          "value": 1,
+          "persistentUuid": "6f0d12be-9fc8-4b03-8e0a-939ba1c98750"
+        },
+        {
+          "name": "escolha",
+          "type": "number",
+          "value": 1,
+          "persistentUuid": "5fb50ad5-5e60-4f26-90d2-a9ae72a2dd36"
+        },
+        {
+          "name": "tiros",
+          "type": "number",
+          "value": 0,
+          "persistentUuid": "ad99ee2c-ec6a-4d48-af8b-b39571e647fb"
+        },
+        {
+          "name": "kb_dir",
+          "type": "number",
+          "value": 0,
+          "persistentUuid": "36f70e9c-197c-4c5c-b18a-3fc6dcffa0be"
+        },
+        {
+          "name": "acertado",
+          "type": "boolean",
+          "value": false,
+          "persistentUuid": "f4426d05-2b05-4e97-a6ac-d793d173a412"
+        },
+        {
+          "name": "quer_andar",
+          "type": "boolean",
+          "value": false,
+          "persistentUuid": "9ac6f93b-a32a-4a43-bbb8-89d692b318ff"
+        },
+        {
+          "name": "sprite_esquerda",
+          "type": "boolean",
+          "value": true,
+          "persistentUuid": "51be7673-7bd9-4a19-8a0e-704fcd6aba98"
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "738f88c7-8a58-44ea-b22b-2bd0e48155cb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "6945bfb9-b08b-4396-a0e0-787526a42629",
+          "type": "string",
+          "value": "lasca"
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "b8c28aef-d4ba-49b6-b203-861ff0bc7978",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "soco_dir",
+          "persistentUuid": "6e7bafcd-91c3-4973-857c-75b7fee23d36",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "empurrao_vel",
+          "persistentUuid": "5bdbfaf2-7157-4588-8adb-2dc2ec41ff8c",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "e5f26a59-79bd-444b-81ad-00a0fcc4dadb",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_fator",
+          "persistentUuid": "d6f26237-8ea2-474f-a674-6d10b07b1ca8",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "patrulha_raio",
+          "persistentUuid": "f1716897-198c-4aa5-a6f9-942df642f710",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aggro_dist",
+          "persistentUuid": "5c5a7ac5-d1d4-49bd-b542-1a8ac33ff3d5",
+          "type": "number",
+          "value": 800
+        },
+        {
+          "name": "desiste_dist",
+          "persistentUuid": "c8605957-bc5d-44e1-975e-3d6afa663d1d",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "travado_tempo",
+          "persistentUuid": "b1bb5ad2-262a-4b27-8619-ae7141cb4f7c",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "a252f314-2fb1-4a44-95f8-2255da5ab5ac",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "0728e006-fb66-45e4-a004-1351a7f28bde",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "ae756702-818b-4ee2-9f4a-a311c37534c6",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "1a999a73-b81a-434f-975f-2ca70f3760e9",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "investida_fator",
+          "persistentUuid": "9293d586-6cf5-4f25-9a0a-ca04f0da85cb",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "investida_tempo",
+          "persistentUuid": "e9007405-4d83-422c-9f6e-8ca0636433c5",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "regen_espera",
+          "persistentUuid": "c7675c51-0e31-4d06-9660-386678827e82",
+          "type": "number",
+          "value": 1.5
+        },
+        {
+          "name": "vida_vista",
+          "persistentUuid": "46515f4b-e91b-4ede-8a07-0295ec04d472",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dps_altura",
+          "persistentUuid": "9e27610c-461c-4ff1-8657-843c9fb96552",
+          "type": "number",
+          "value": 36
+        },
+        {
+          "name": "dps_janela",
+          "persistentUuid": "466e5738-37e9-43a5-9ecd-fe9df5bbd41b",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "dps_passo",
+          "persistentUuid": "0c60a2ad-89ea-48ba-a919-f003e6c41548",
+          "type": "number",
+          "value": 0.1
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Brightness",
+          "name": "Brilho",
+          "doubleParameters": {
+            "brightness": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack",
+          "PlatformerCharacter": "PlatformerObject"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "useRepeatedJump": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/gandalf_hell/estatua/idle_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 8
+                      },
+                      {
+                        "x": 92,
+                        "y": 8
+                      },
+                      {
+                        "x": 92,
+                        "y": 160
+                      },
+                      {
+                        "x": 2,
+                        "y": 160
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "boneco_dps",
+      "persistentUuid": "8d8cf1d2-477f-4c3d-88c3-b0e871fb3857",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "DPS 0",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "center",
+      "characterSize": 24,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "DPS 0",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 24,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -49996,6 +50385,9 @@
         },
         {
           "name": "caveira_gigante"
+        },
+        {
+          "name": "boneco"
         }
       ]
     },
@@ -50067,6 +50459,9 @@
         },
         {
           "name": "caveira_gigante"
+        },
+        {
+          "name": "boneco"
         }
       ]
     },
@@ -51148,6 +51543,36 @@
           "persistentUuid": "222c4e75-4251-476c-845d-38787ace1f1d",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "dps_buf",
+          "persistentUuid": "16746c1e-8deb-410b-a763-5c0c6d38c5bb",
+          "type": "array",
+          "children": []
+        },
+        {
+          "name": "dps_idx",
+          "persistentUuid": "4514c20f-0c56-49c8-8ea9-9175be13667e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dps_idx_ant",
+          "persistentUuid": "c9faa5b5-8104-4dd9-b1ff-0d55bcfde443",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dps_soma",
+          "persistentUuid": "bf771dd6-e9e5-4068-be60-70c398252122",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dps_i",
+          "persistentUuid": "17e30089-41c7-40a4-967c-edcf13ffff2a",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -51787,6 +52212,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 240,
+          "keepRatio": true,
+          "layer": "",
+          "name": "boneco",
+          "persistentUuid": "4eb7b2d0-9eef-4f99-b325-7ff0f354b462",
+          "width": 144,
+          "x": 1700,
+          "y": 560,
+          "zOrder": 1002,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -51946,6 +52388,323 @@
                 "=",
                 "CameraCenterX() * 0.25"
               ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Boneco de teste",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Boneco para testar as armas: leva dano de tudo e, depois de boneco.regen_espera s sem dano, volta à vida cheia. O DPS é o dano dos últimos boneco.dps_janela s dividido por dps_janela.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida_vista",
+                    "=",
+                    "boneco.vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "boneco_dps",
+                    "boneco.CenterX()",
+                    "boneco.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "boneco_dps",
+                    "=",
+                    "1100"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "dps_idx",
+                    "=",
+                    "mod(floor(TimeFromStart() / boneco.dps_passo), round(boneco.dps_janela / boneco.dps_passo))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "dps_idx",
+                        "!=",
+                        "dps_idx_ant"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "dps_buf[dps_idx]",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "dps_idx_ant",
+                        "=",
+                        "dps_idx"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida",
+                    "<",
+                    "boneco.vida_vista"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "\"sem_dano\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "dps_buf[dps_idx]",
+                    "+",
+                    "boneco.vida_vista - boneco.vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida_vista",
+                    "=",
+                    "boneco.vida"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida",
+                    "<",
+                    "boneco.max_vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "\"sem_dano\"",
+                    ">",
+                    "boneco.regen_espera"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida",
+                    "=",
+                    "boneco.max_vida"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "boneco",
+                    "vida_vista",
+                    "=",
+                    "boneco.max_vida"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "dps_soma",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "dps_i",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "dps_soma",
+                        "+",
+                        "dps_buf[dps_i]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "dps_i",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [],
+                  "repeatExpression": "round(boneco.dps_janela / boneco.dps_passo)"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boneco_dps",
+                    "Text",
+                    "=",
+                    "\"DPS \" + ToString(round(dps_soma / boneco.dps_janela))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "boneco_dps",
+                    "=",
+                    "boneco.CenterX() - boneco_dps.Width() / 2",
+                    "=",
+                    "boneco.Y() - boneco.dps_altura"
+                  ]
+                }
+              ],
+              "events": []
             }
           ]
         },
