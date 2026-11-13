@@ -18,6 +18,8 @@ SOCO NO TERRENO: se o soco bate no Terreno (raio do centro do pato na direção 
   Ao bater a cabeça no teto subindo assim, a velocidade é zerada (senão o pato ficaria colado até a gravidade vencer).
   A força do coice fica nas variáveis do objeto pato, `coice_x` e `coice_y` (px/s), editáveis no GDevelop; o script só as
   cria se não existirem, nunca troca o valor.
+  O coice NÃO gasta pulo: saindo do chão, o pulo do chão fica guardado (o "coyote time" do AdvancedJump, que acabaria em
+  0,2 s, é mantido reiniciando o cronômetro dele) até o pato pular ou pousar; o pulo no ar continua valendo depois.
   Não funciona durante o dash. (Agarrar na parede saiu: fica para depois.)
 
 O script não roda se jogo.json.autosave for mais novo que jogo.json (mudanças não salvas no GDevelop seriam perdidas).
@@ -210,7 +212,7 @@ def eventos():
          A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed', *PL, '=',
            f'clamp(pato.PlatformerObject::CurrentSpeed() - pato.soco_cos * pato.coice_x, -pato.PlatformerObject::MaxSpeed(), pato.PlatformerObject::MaxSpeed())'),
          A('Create', '', 'poeira', 'soco_rx', 'soco_ry', ''), A('SetAngle', 'poeira', '=', 'pato.soco_ang')],
-        [E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', '-pato.soco_sin * pato.coice_y')], [js_vertical])])
+        [E([cmp('abs(pato.soco_sin)', '>', LIMIAR_Y)], [setn('soco_vy', '-pato.soco_sin * pato.coice_y')], [E([no_chao()], [setb('coice_guarda', True)]), js_vertical])])
 
     luva = E([], [
         A('Create', '', 'soco', CX, CY, ''),
@@ -268,6 +270,9 @@ def eventos():
           [E([C('StringObjectVariable', 'Terrestre', 'estado', '=', '"dano"'), C('BooleanObjectVariable', 'Terrestre', 'morto', 'False', '')],
              [A('PlatformBehavior::MaxSpeed', 'Terrestre', 'PlatformerObject', '=', str(SOCO_VEL)),
               A('PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed', 'Terrestre', 'PlatformerObject', '=', f'Terrestre.soco_dir * {SOCO_VEL}')])]),
+        E([flag('coice_guarda', True), C('PlatformBehavior::IsFalling', *PL)],
+          [A('ResetObjectTimer', 'pato', '"__CoyoteTime_CoyoteJump"')]),
+        E([flag('coice_guarda', True), C('PlatformBehavior::IsFalling', *PL, inv=True)], [setb('coice_guarda', False)]),
         E([], [setn('y_antes', 'pato.Y()')]),
     ]
     return grupo(NOME, [inicio] + teto + soco + depois)
@@ -292,7 +297,7 @@ def main():
     for k, v in (('coice_x', IMPULSO_X), ('coice_y', IMPULSO_Y)):   # força do coice: ajustável no GDevelop, o script não sobrescreve
         if not any(x['name'] == k for x in pv):
             upsert(pv, k, v)
-    for k in ('rmb_antes', 'soco_acertou'):
+    for k in ('rmb_antes', 'soco_acertou', 'coice_guarda'):
         upsert(pv, k, False)
     for g in d['objectsGroups']:
         if g['name'] == 'Inimigo':

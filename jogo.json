@@ -9152,13 +9152,19 @@
           "name": "coice_x",
           "persistentUuid": "1d70707e-5b7c-411f-9037-8665cce14b84",
           "type": "number",
-          "value": 700
+          "value": 1400
         },
         {
           "name": "coice_y",
           "persistentUuid": "7c9c102b-0715-4641-b49d-1c80f422b242",
           "type": "number",
-          "value": 1000
+          "value": 1200
+        },
+        {
+          "name": "coice_guarda",
+          "persistentUuid": "6b65c5e9-cafe-4ace-8c98-9739208acb10",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -54577,6 +54583,34 @@
                           ],
                           "events": [
                             {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::IsOnFloor"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "PlatformerObject"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "coice_guarda",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::JsCode",
                               "inlineCode": [
                                 "const pato = runtimeScene.getObjects(\"pato\")[0];",
@@ -55181,6 +55215,83 @@
                       "events": []
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_guarda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsFalling"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "pato",
+                        "\"__CoyoteTime_CoyoteJump\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_guarda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsFalling",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_guarda",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",

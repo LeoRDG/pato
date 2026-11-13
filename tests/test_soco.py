@@ -91,3 +91,14 @@ def test_eventos_antigos_de_queda_nao_zeram_a_subida_do_coice():
                                                    for a in e.get('actions', []))]
     assert len(mexem) >= 1
     assert all(sum(c['parameters'][:3] == [FALL, '>=', '0'] for c in e['conditions']) == 1 for e in mexem)
+
+
+def test_coice_nao_gasta_pulo():
+    evs = list(walk(grupo()['events']))
+    guarda = [e for e in evs if any(a['type']['value'] == 'ResetObjectTimer' and a['parameters'][1:] == ['"__CoyoteTime_CoyoteJump"']
+                                    for a in e.get('actions', []))]
+    assert len(guarda) == 1 and 'coice_guarda' in json.dumps(guarda[0]['conditions'])
+    marca = [e for e in evs if any(a['parameters'][1:2] == ['coice_guarda'] and a['parameters'][2:3] == ['True']
+                                   for a in e.get('actions', []))]
+    assert len(marca) == 1 and any(c['type']['value'] == 'PlatformBehavior::IsOnFloor' for c in marca[0]['conditions'])
+    assert any(v['name'] == 'coice_guarda' for v in OBJ['pato']['variables'])
