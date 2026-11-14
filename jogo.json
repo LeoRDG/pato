@@ -60771,6 +60771,318 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 3350,
+          "y": -6430,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "f28845de-7500-5ad2-9dcf-02d896621fdc",
+              "type": "number",
+              "value": 3350
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "86773d38-e59f-5b8a-aa7f-82b7bfd96580",
+              "type": "number",
+              "value": -6430
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "995c5640-e1ba-5c09-8cdd-5534d3fc3bfc",
+              "type": "number",
+              "value": 3350
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "4c19ac56-4869-5831-8e6a-550ffd7d209d",
+              "type": "number",
+              "value": -6750
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "b03e5a91-da41-5a63-babd-345ba0b71975",
+              "type": "number",
+              "value": 320
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "3074c1d2-d0a6-5eaa-abc0-2557b7ec3f82",
+              "type": "number",
+              "value": 0.25
+            }
+          ],
+          "persistentUuid": "cfcee1e1-e850-5ca6-9c9e-b6286709325c"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 4000,
+          "y": -6880,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "1effb9da-9fb4-555a-940d-f45c3c7253a1",
+              "type": "number",
+              "value": 4000
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "f07139c2-22de-5784-be54-1cea7d9d53b3",
+              "type": "number",
+              "value": -6880
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "dbb64cc8-a199-51eb-b3cc-31c012ab9b59",
+              "type": "number",
+              "value": 4700
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "0931e846-7b24-5a4a-8188-7191df218cd4",
+              "type": "number",
+              "value": -6880
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "db654f1c-5435-50b4-a0b0-56ec4e7bfd7b",
+              "type": "number",
+              "value": 420
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "bcae7afa-464c-5c17-b713-ead158887d52",
+              "type": "number",
+              "value": 0.2
+            }
+          ],
+          "persistentUuid": "a7b518c1-1388-5efa-a48e-01f247ee19a9"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 5350,
+          "y": -6930,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "96980673-ff81-5c55-9a01-27bc3a37a032",
+              "type": "number",
+              "value": 5350
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "a314580c-fca8-562a-91c5-362b0549061b",
+              "type": "number",
+              "value": -6930
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "8b287e40-7565-5eea-a131-6a4166c3b6ef",
+              "type": "number",
+              "value": 5350
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "232813bb-39b5-5205-a940-adeeaa73f301",
+              "type": "number",
+              "value": -7230
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "a499d8c5-2617-5053-9cd4-15c5a96c374f",
+              "type": "number",
+              "value": 340
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "c30bcb90-6018-53d2-a87a-fdab089b8a14",
+              "type": "number",
+              "value": 0.25
+            }
+          ],
+          "persistentUuid": "82bf15ea-48b4-5e47-ba0b-fe7b189e34da"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 4700,
+          "y": -7340,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "9d6242e0-104b-564a-a3b2-b7dd3dde1b34",
+              "type": "number",
+              "value": 4700
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "ec67d556-7947-5540-ac79-0420121a1a51",
+              "type": "number",
+              "value": -7340
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "bb04e229-d085-5737-ace0-7ca9e69f17c9",
+              "type": "number",
+              "value": 3800
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "d8e2688c-ce6b-50fd-a29e-760ac9fa1f61",
+              "type": "number",
+              "value": -7340
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "9c2d0151-c0a0-5384-bf0b-78f843a549d4",
+              "type": "number",
+              "value": 450
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "78d7fedf-3e91-5bc4-806a-0f5c0299a71d",
+              "type": "number",
+              "value": 0.2
+            }
+          ],
+          "persistentUuid": "5c248c7a-cebe-5ed2-8662-ce264ceef0f9"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 3150,
+          "y": -7300,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "9e38ef80-9f1d-5120-941f-21900c9e53b6",
+              "type": "number",
+              "value": 3150
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "ffe7c890-182c-511a-8d6d-0fac7193ba5f",
+              "type": "number",
+              "value": -7300
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "e094d2f4-cb99-5ba4-b21c-ecbb4465e170",
+              "type": "number",
+              "value": 3150
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "735c8c2e-1891-5b07-972e-1b47d1791ebb",
+              "type": "number",
+              "value": -7600
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "3176cf37-e6ab-52f3-baf5-16d540bdb7a9",
+              "type": "number",
+              "value": 340
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "42e07273-f9fe-5f28-8020-ab65dd224e7e",
+              "type": "number",
+              "value": 0.25
+            }
+          ],
+          "persistentUuid": "7d7e3b7d-7ffd-5857-a32f-459c99f7b509"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 175,
+          "layer": "",
+          "name": "plataforma_movel",
+          "width": 407,
+          "x": 3800,
+          "y": -7733,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "ini_x",
+              "persistentUuid": "6a9501a3-3544-57fb-9a90-fba0ff128006",
+              "type": "number",
+              "value": 3800
+            },
+            {
+              "name": "ini_y",
+              "persistentUuid": "3b2c404f-39b4-5284-a6b8-4edb97575e0a",
+              "type": "number",
+              "value": -7733
+            },
+            {
+              "name": "fim_x",
+              "persistentUuid": "698b1344-2e67-59b9-a41c-83b293dc0d32",
+              "type": "number",
+              "value": 5300
+            },
+            {
+              "name": "fim_y",
+              "persistentUuid": "58398e28-c0f5-5365-82c0-53c81e596691",
+              "type": "number",
+              "value": -7733
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "f2b34f96-9b0f-5120-ac32-cee95778610f",
+              "type": "number",
+              "value": 480
+            },
+            {
+              "name": "espera",
+              "persistentUuid": "9d1196cf-ca23-561a-b4ab-ad5c0a4ab259",
+              "type": "number",
+              "value": 0.3
+            }
+          ],
+          "persistentUuid": "812d1b8a-9ac8-5a82-a159-d578578e527e"
         }
       ],
       "objects": [],
