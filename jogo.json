@@ -4318,30 +4318,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/hud/pip_doze.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "hud/pip_doze.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/hud/pip_minigun.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "hud/pip_minigun.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/hud/pip_pistola.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "hud/pip_pistola.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "assets/hud/slot_1.png",
         "kind": "image",
         "metadata": "",
@@ -8418,14 +8394,6 @@
         "kind": "image",
         "metadata": "",
         "name": "hud/slot_4_lock.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/hud/pip_lanca.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "hud/pip_lanca.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -25714,42 +25682,6 @@
         "lineHeight": 0,
         "color": "170;170;170"
       }
-    },
-    {
-      "assetStoreId": "",
-      "height": 14,
-      "name": "hud_pips_pistola",
-      "persistentUuid": "4eeead66-9113-4fe9-96cc-26940acf9174",
-      "texture": "hud/pip_pistola.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 96,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "assetStoreId": "",
-      "height": 16,
-      "name": "hud_pips_doze",
-      "persistentUuid": "4e6118b0-918b-42bd-b0a2-82101a7f5f2e",
-      "texture": "hud/pip_doze.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 60,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "assetStoreId": "",
-      "height": 8,
-      "name": "hud_pips_minigun",
-      "persistentUuid": "139d672c-2955-4051-b36b-cd78e0802d62",
-      "texture": "hud/pip_minigun.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 150,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
     },
     {
       "adaptCollisionMaskAutomatically": false,
@@ -48199,18 +48131,6 @@
       ]
     },
     {
-      "assetStoreId": "",
-      "height": 16,
-      "name": "hud_pips_lanca",
-      "persistentUuid": "8ea5a2c5-0655-46c6-b1da-ba69da080cc3",
-      "texture": "hud/pip_lanca.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 60,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "hud_slot4",
@@ -50356,23 +50276,6 @@
                 "objectName": "max_municao"
               },
               {
-                "folderName": "municao_pips",
-                "children": [
-                  {
-                    "objectName": "hud_pips_pistola"
-                  },
-                  {
-                    "objectName": "hud_pips_doze"
-                  },
-                  {
-                    "objectName": "hud_pips_minigun"
-                  },
-                  {
-                    "objectName": "hud_pips_lanca"
-                  }
-                ]
-              },
-              {
                 "folderName": "recarga_e_calor",
                 "children": [
                   {
@@ -52343,54 +52246,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 14,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_pistola",
-          "persistentUuid": "3b98d7b6-4ca7-4999-b8f0-c6193cb99b2c",
-          "width": 96,
-          "x": 1776,
-          "y": 1008,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_doze",
-          "persistentUuid": "4f3c36a5-3fef-4dbb-829f-0e7e99ca8b57",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_minigun",
-          "persistentUuid": "9cd6ec25-c50d-4a57-b70c-44b18a35dd06",
-          "width": 150,
-          "x": 1722,
-          "y": 1012,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -52561,22 +52416,6 @@
           "x": 1820,
           "y": 872,
           "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_lanca",
-          "persistentUuid": "12b25de5-4a42-4d0d-adef-5c484b797a32",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -53822,54 +53661,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 14,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_pistola",
-          "persistentUuid": "364c953c-7f77-4443-af06-6e1881536a2d",
-          "width": 96,
-          "x": 1776,
-          "y": 1008,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_doze",
-          "persistentUuid": "1b605a7b-7f4e-4f24-9bc1-b3eef565a264",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_minigun",
-          "persistentUuid": "7679ec15-eb7a-49f4-831a-a6b6801ed5e2",
-          "width": 150,
-          "x": 1722,
-          "y": 1012,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -54407,22 +54198,6 @@
           "x": 1820,
           "y": 872,
           "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_pips_lanca",
-          "persistentUuid": "516a7fc5-884f-45f3-8134-11200dc96772",
-          "width": 60,
-          "x": 1812,
-          "y": 1006,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -73261,30 +73036,6 @@
                         "value": "Hide"
                       },
                       "parameters": [
-                        "hud_pips_pistola"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "hud_pips_doze"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "hud_pips_minigun"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
                         "hud_boss_trilho"
                       ]
                     },
@@ -73321,14 +73072,6 @@
                         "Opacity",
                         "=",
                         "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "hud_pips_lanca"
                       ]
                     }
                   ]
@@ -73779,38 +73522,6 @@
                             "=",
                             "\"PISTOLA\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_pips_pistola",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_pips_pistola",
-                            "Resizable",
-                            "=",
-                            "6 * Arma.FireBullet::ShotsBeforeNextReload()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_pips_pistola",
-                            "=",
-                            "hud_arma.X() + 360 + 3 - hud_pips_pistola.Width()",
-                            "=",
-                            "hud_arma.Y() + 80"
-                          ]
                         }
                       ]
                     },
@@ -73851,38 +73562,6 @@
                             "=",
                             "\"DOZE\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_pips_doze",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_pips_doze",
-                            "Resizable",
-                            "=",
-                            "10 * Arma.FireBullet::ShotsBeforeNextReload()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_pips_doze",
-                            "=",
-                            "hud_arma.X() + 360 + 4 - hud_pips_doze.Width()",
-                            "=",
-                            "hud_arma.Y() + 78"
-                          ]
                         }
                       ]
                     },
@@ -73922,38 +73601,6 @@
                             "Text",
                             "=",
                             "\"MINIGUN\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_pips_minigun",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_pips_minigun",
-                            "Resizable",
-                            "=",
-                            "3 * ceil(50 * Arma.FireBullet::ShotsBeforeNextReload() / max(1, Arma.FireBullet::ShotsPerReload()))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_pips_minigun",
-                            "=",
-                            "hud_arma.X() + 360 + 1 - hud_pips_minigun.Width()",
-                            "=",
-                            "hud_arma.Y() + 84"
                           ]
                         },
                         {
@@ -74188,47 +73835,6 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "FireBullet::FireBullet::HasJustFired"
-                          },
-                          "parameters": [
-                            "Arma",
-                            "FireBullet",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "hud_arma_icone",
-                            "=",
-                            "-6"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                          },
-                          "parameters": [
-                            "hud_arma_icone",
-                            "Tween",
-                            "\"coice\"",
-                            "0",
-                            "\"easeOutQuad\"",
-                            "0.12",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
                             "value": "BooleanObjectVariable"
                           },
                           "parameters": [
@@ -74260,38 +73866,6 @@
                             "Text",
                             "=",
                             "\"LANÇA-GRANADAS\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_pips_lanca",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_pips_lanca",
-                            "Resizable",
-                            "=",
-                            "12 * Arma.FireBullet::ShotsBeforeNextReload()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_pips_lanca",
-                            "=",
-                            "hud_arma.X() + 360 + 4 - hud_pips_lanca.Width()",
-                            "=",
-                            "hud_arma.Y() + 78"
                           ]
                         }
                       ]
