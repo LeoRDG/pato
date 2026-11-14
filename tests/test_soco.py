@@ -87,8 +87,8 @@ def test_bater_no_teto_subindo_zera_a_velocidade():
                                   for c in e.get('conditions', []))]
     assert len(teto) == 1 and 'pato.y_antes' in json.dumps(teto[0]['conditions'])
     assert teto[0]['actions'][0]['type']['value'].endswith('SetCurrentFallSpeed')
-    ordem = [i for i, e in enumerate(grupo()['events']) if e is teto[0] or 'Right' in json.dumps(e.get('conditions', []))]
-    assert grupo()['events'][ordem[0]] is teto[0]                   # confere antes do soco do quadro
+    ordem = [e for e in evs if e is teto[0] or 'Right' in json.dumps(e.get('conditions', []))]
+    assert ordem[0] is teto[0]                                      # confere antes do soco do quadro (ordem de execução, com subgrupos)
 
 
 def test_eventos_antigos_de_queda_nao_zeram_a_subida_do_coice():

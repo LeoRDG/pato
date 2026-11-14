@@ -57892,238 +57892,998 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SceneJustBegins"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"soco\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "y_antes",
-                        "=",
-                        "pato.Y()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "pato.PlatformerObject::CurrentFallSpeed()",
-                        "<",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "pato.Y()",
-                        ">=",
-                        "pato.y_antes - 0.01"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "rmb_antes",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"soco\"",
-                        ">",
-                        "pato.soco_espera"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "na_loja",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"soco\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "soco_lado",
-                        "=",
-                        "sign(MouseX() - pato.CenterX() + 0.001)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "soco_ang",
-                        "=",
-                        "ToDeg(atan2(MouseY() - pato.CenterY(), MouseX() - pato.CenterX()))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "soco_cos",
-                        "=",
-                        "cos(ToRad(pato.soco_ang))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "soco_sin",
-                        "=",
-                        "sin(ToRad(pato.soco_ang))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "soco_acertou",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Início",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneJustBegins"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"soco\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "y_antes",
+                            "=",
+                            "pato.Y()"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Teto",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.PlatformerObject::CurrentFallSpeed()",
+                            "<",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.Y()",
+                            ">=",
+                            "pato.y_antes - 0.01"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Golpe",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Right\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "rmb_antes",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"soco\"",
+                            ">",
+                            "pato.soco_espera"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"soco\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_lado",
+                            "=",
+                            "sign(MouseX() - pato.CenterX() + 0.001)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_ang",
+                            "=",
+                            "ToDeg(atan2(MouseY() - pato.CenterY(), MouseX() - pato.CenterX()))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_cos",
+                            "=",
+                            "cos(ToRad(pato.soco_ang))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_sin",
+                            "=",
+                            "sin(ToRad(pato.soco_ang))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "soco_acertou",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_bateu",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RaycastToPosition"
+                              },
+                              "parameters": [
+                                "Terreno",
+                                "pato.CenterX() - pato.soco_sin * 0",
+                                "pato.CenterY() + pato.soco_cos * 0",
+                                "pato.CenterX() - pato.soco_sin * 0 + pato.soco_cos * pato.soco_alcance_parede",
+                                "pato.CenterY() + pato.soco_cos * 0 + pato.soco_sin * pato.soco_alcance_parede",
+                                "soco_rx",
+                                "soco_ry",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_bateu",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RaycastToPosition"
+                              },
+                              "parameters": [
+                                "Terreno",
+                                "pato.CenterX() - pato.soco_sin * pato.Height() / 3",
+                                "pato.CenterY() + pato.soco_cos * pato.Height() / 3",
+                                "pato.CenterX() - pato.soco_sin * pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
+                                "pato.CenterY() + pato.soco_cos * pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
+                                "soco_rx",
+                                "soco_ry",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_bateu",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RaycastToPosition"
+                              },
+                              "parameters": [
+                                "Terreno",
+                                "pato.CenterX() - pato.soco_sin * -pato.Height() / 3",
+                                "pato.CenterY() + pato.soco_cos * -pato.Height() / 3",
+                                "pato.CenterX() - pato.soco_sin * -pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
+                                "pato.CenterY() + pato.soco_cos * -pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
+                                "soco_rx",
+                                "soco_ry",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_bateu",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_bateu",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "AdvancedJump::HorizontalDash::IsDashing"
+                              },
+                              "parameters": [
+                                "pato",
+                                "HorizontalDash",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_acertou",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                              },
+                              "parameters": [
+                                "pato",
+                                "PlatformerObject",
+                                "=",
+                                "pato.PlatformerObject::CurrentSpeed() * (1 - abs(pato.soco_cos))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "coice_vx",
+                                "=",
+                                "-pato.soco_cos * pato.coice_parede_x * (1 - max(0, pato.soco_sin))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_vy",
+                                "=",
+                                "-pato.soco_sin * pato.coice_y - pato.coice_parede_y * (1 - abs(pato.soco_sin))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "poeira",
+                                "soco_rx",
+                                "soco_ry",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "poeira",
+                                "=",
+                                "pato.soco_ang"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::IsOnFloor"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "PlatformerObject"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "coice_guarda",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::JsCode",
+                              "inlineCode": [
+                                "const pato = runtimeScene.getObjects(\"pato\")[0];",
+                                "const b = pato && pato.getBehavior(\"PlatformerObject\");",
+                                "if (b && b._setFalling && b._falling) {",
+                                "  const alvo = pato.getVariables().get(\"soco_vy\").getAsNumber();   // px/s, negativo = para cima",
+                                "  const noChao = b._state === b._onFloor;",
+                                "  if (alvo < 0 || (alvo > 0 && !noChao)) {   // sempre sobrescreve: o mesmo soco dá sempre a mesma velocidade vertical",
+                                "    const podiaPular = b._canJump;",
+                                "    if (b._state !== b._falling) b._setFalling();",
+                                "    b._canJump = podiaPular;",
+                                "    b._currentFallSpeed = alvo;   // para baixo, o comportamento limita na queda máxima",
+                                "  }",
+                                "}"
+                              ],
+                              "parameterObjects": "",
+                              "useStrict": true,
+                              "eventsSheetExpanded": false
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "soco",
+                                "pato.CenterX()",
+                                "pato.CenterY()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "soco",
+                                "ang",
+                                "=",
+                                "pato.soco_ang"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "soco",
+                                "Scale",
+                                "=",
+                                "5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "soco",
+                                "=",
+                                "pato.soco_ang"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "soco",
+                                "\"t\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "soco_rastro",
+                                "pato.CenterX()",
+                                "pato.CenterY()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "soco_rastro",
+                                "ang",
+                                "=",
+                                "pato.soco_ang"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "soco_rastro",
+                                "Scale",
+                                "=",
+                                "5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "soco_rastro",
+                                "=",
+                                "pato.soco_ang"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "soco_rastro",
+                                "\"t\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "som_soco.wav",
+                                "",
+                                "55",
+                                "RandomFloatInRange(0.93, 1.07)"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "pato",
+                                    "soco_cos",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FlippableCapability::FlippableBehavior::FlipY"
+                                  },
+                                  "parameters": [
+                                    "soco",
+                                    "Flippable",
+                                    "yes"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "FlippableCapability::FlippableBehavior::FlipY"
+                                  },
+                                  "parameters": [
+                                    "soco_rastro",
+                                    "Flippable",
+                                    "yes"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Inimigo",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "morto",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) + ((Inimigo.Width() + Inimigo.Height()) / 4)",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) - ((Inimigo.Width() + Inimigo.Height()) / 4)",
+                                "<",
+                                "pato.soco_hit_alcance"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(pato.soco_cos * (Inimigo.CenterY() - pato.CenterY()) - pato.soco_sin * (Inimigo.CenterX() - pato.CenterX()))",
+                                "<",
+                                "((Inimigo.Width() + Inimigo.Height()) / 4) + pato.soco_hit_folga"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "vida",
+                                "-",
+                                "max(1, round(pato.soco_dano * GlobalVariable(mult_dano)))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "acertado",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "kb_dir",
+                                "=",
+                                "pato.soco_lado * pato.soco_empurrao"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "soco_dir",
+                                "=",
+                                "pato.soco_lado"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Inimigo",
+                                "socado",
+                                "=",
+                                "pato.soco_stun"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_acertou",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "soco_acertou",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "som_soco_acerto.wav",
+                                "",
+                                "65",
+                                "RandomFloatInRange(0.93, 1.07)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Right\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_loja",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "rmb_antes",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Right\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "rmb_antes",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Luva e rastro",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\"."
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetXY"
                           },
                           "parameters": [
-                            "pato",
-                            "soco_bateu",
-                            "False",
+                            "soco",
+                            "=",
+                            "pato.CenterX() + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
+                            "=",
+                            "pato.CenterY() + 8 + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetZOrder"
+                          },
+                          "parameters": [
+                            "soco",
+                            "=",
+                            "pato.ZOrder() + 2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "=",
+                            "pato.CenterX() + pato.soco_rastro_dist * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
+                            "=",
+                            "pato.CenterY() + 8 + pato.soco_rastro_dist * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetZOrder"
+                          },
+                          "parameters": [
+                            "soco_rastro",
+                            "=",
+                            "pato.ZOrder() + 1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "soco",
+                            "\"t\"",
+                            ">",
+                            "pato.soco_duracao"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "soco",
                             ""
                           ]
                         }
@@ -58134,96 +58894,166 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "RaycastToPosition"
+                            "value": "CompareObjectTimer"
                           },
                           "parameters": [
-                            "Terreno",
-                            "pato.CenterX() - pato.soco_sin * 0",
-                            "pato.CenterY() + pato.soco_cos * 0",
-                            "pato.CenterX() - pato.soco_sin * 0 + pato.soco_cos * pato.soco_alcance_parede",
-                            "pato.CenterY() + pato.soco_cos * 0 + pato.soco_sin * pato.soco_alcance_parede",
-                            "soco_rx",
-                            "soco_ry",
-                            ""
+                            "soco_rastro",
+                            "\"t\"",
+                            ">",
+                            "pato.soco_duracao"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "Delete"
                           },
                           "parameters": [
-                            "pato",
-                            "soco_bateu",
-                            "True",
+                            "soco_rastro",
                             ""
                           ]
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Empurrão nos terrestres",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "RaycastToPosition"
+                            "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "Terreno",
-                            "pato.CenterX() - pato.soco_sin * pato.Height() / 3",
-                            "pato.CenterY() + pato.soco_cos * pato.Height() / 3",
-                            "pato.CenterX() - pato.soco_sin * pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
-                            "pato.CenterY() + pato.soco_cos * pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
-                            "soco_rx",
-                            "soco_ry",
-                            ""
+                            "Terrestre",
+                            "socado",
+                            ">",
+                            "0"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "soco_bateu",
-                            "True",
-                            ""
+                            "Terrestre",
+                            "socado",
+                            "-",
+                            "TimeDelta()"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Terrestre",
+                                "estado",
+                                "=",
+                                "\"dano\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Terrestre",
+                                "morto",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::MaxSpeed"
+                              },
+                              "parameters": [
+                                "Terrestre",
+                                "PlatformerObject",
+                                "=",
+                                "pato.soco_vel_inimigo"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                              },
+                              "parameters": [
+                                "Terrestre",
+                                "PlatformerObject",
+                                "=",
+                                "Terrestre.soco_dir * pato.soco_vel_inimigo"
+                              ]
+                            }
                           ]
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Coice na parede",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "RaycastToPosition"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "Terreno",
-                            "pato.CenterX() - pato.soco_sin * -pato.Height() / 3",
-                            "pato.CenterY() + pato.soco_cos * -pato.Height() / 3",
-                            "pato.CenterX() - pato.soco_sin * -pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
-                            "pato.CenterY() + pato.soco_cos * -pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
-                            "soco_rx",
-                            "soco_ry",
+                            "pato",
+                            "coice_guarda",
+                            "True",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsFalling"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "ResetObjectTimer"
                           },
                           "parameters": [
                             "pato",
-                            "soco_bateu",
-                            "True",
-                            ""
+                            "\"__CoyoteTime_CoyoteJump\""
                           ]
                         }
                       ]
@@ -58237,9 +59067,47 @@
                           },
                           "parameters": [
                             "pato",
-                            "soco_bateu",
+                            "coice_guarda",
                             "True",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsFalling"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "coice_guarda",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.coice_vx)",
+                            ">",
+                            "1"
                           ]
                         },
                         {
@@ -58257,24 +59125,12 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetX"
                           },
                           "parameters": [
                             "pato",
-                            "soco_acertou",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "pato.PlatformerObject::CurrentSpeed() * (1 - abs(pato.soco_cos))"
+                            "+",
+                            "pato.coice_vx * TimeDelta()"
                           ]
                         },
                         {
@@ -58285,842 +59141,70 @@
                             "pato",
                             "coice_vx",
                             "=",
-                            "-pato.soco_cos * pato.coice_parede_x * (1 - max(0, pato.soco_sin))"
+                            "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AdvancedJump::HorizontalDash::IsDashing"
+                          },
+                          "parameters": [
+                            "pato",
+                            "HorizontalDash",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
                         {
                           "type": {
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
                             "pato",
-                            "soco_vy",
+                            "coice_vx",
                             "=",
-                            "-pato.soco_sin * pato.coice_y - pato.coice_parede_y * (1 - abs(pato.soco_sin))"
+                            "0"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "poeira",
-                            "soco_rx",
-                            "soco_ry",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "poeira",
-                            "=",
-                            "pato.soco_ang"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::IsOnFloor"
-                              },
-                              "parameters": [
-                                "pato",
-                                "PlatformerObject"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "coice_guarda",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::JsCode",
-                          "inlineCode": [
-                            "const pato = runtimeScene.getObjects(\"pato\")[0];",
-                            "const b = pato && pato.getBehavior(\"PlatformerObject\");",
-                            "if (b && b._setFalling && b._falling) {",
-                            "  const alvo = pato.getVariables().get(\"soco_vy\").getAsNumber();   // px/s, negativo = para cima",
-                            "  const noChao = b._state === b._onFloor;",
-                            "  if (alvo < 0 || (alvo > 0 && !noChao)) {   // sempre sobrescreve: o mesmo soco dá sempre a mesma velocidade vertical",
-                            "    const podiaPular = b._canJump;",
-                            "    if (b._state !== b._falling) b._setFalling();",
-                            "    b._canJump = podiaPular;",
-                            "    b._currentFallSpeed = alvo;   // para baixo, o comportamento limita na queda máxima",
-                            "  }",
-                            "}"
-                          ],
-                          "parameterObjects": "",
-                          "useStrict": true,
-                          "eventsSheetExpanded": false
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Guarda a altura",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "soco",
-                            "pato.CenterX()",
-                            "pato.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "soco",
-                            "ang",
-                            "=",
-                            "pato.soco_ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "soco",
-                            "Scale",
-                            "=",
-                            "5"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "soco",
-                            "=",
-                            "pato.soco_ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "soco",
-                            "\"t\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "soco_rastro",
-                            "pato.CenterX()",
-                            "pato.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "ang",
-                            "=",
-                            "pato.soco_ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "Scale",
-                            "=",
-                            "5"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "=",
-                            "pato.soco_ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "\"t\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_soco.wav",
-                            "",
-                            "55",
-                            "RandomFloatInRange(0.93, 1.07)"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_cos",
-                                "<",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "FlippableCapability::FlippableBehavior::FlipY"
-                              },
-                              "parameters": [
-                                "soco",
-                                "Flippable",
-                                "yes"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "FlippableCapability::FlippableBehavior::FlipY"
-                              },
-                              "parameters": [
-                                "soco_rastro",
-                                "Flippable",
-                                "yes"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "Inimigo",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) + ((Inimigo.Width() + Inimigo.Height()) / 4)",
-                            ">",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) - ((Inimigo.Width() + Inimigo.Height()) / 4)",
-                            "<",
-                            "pato.soco_hit_alcance"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(pato.soco_cos * (Inimigo.CenterY() - pato.CenterY()) - pato.soco_sin * (Inimigo.CenterX() - pato.CenterX()))",
-                            "<",
-                            "((Inimigo.Width() + Inimigo.Height()) / 4) + pato.soco_hit_folga"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "vida",
-                            "-",
-                            "max(1, round(pato.soco_dano * GlobalVariable(mult_dano)))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "acertado",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "kb_dir",
-                            "=",
-                            "pato.soco_lado * pato.soco_empurrao"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "soco_dir",
-                            "=",
-                            "pato.soco_lado"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "socado",
-                            "=",
-                            "pato.soco_stun"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
                             "pato",
-                            "soco_acertou",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_acertou",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_soco_acerto.wav",
-                            "",
-                            "65",
-                            "RandomFloatInRange(0.93, 1.07)"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "na_loja",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "rmb_antes",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "rmb_antes",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\"."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "soco",
-                        "=",
-                        "pato.CenterX() + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
-                        "=",
-                        "pato.CenterY() + 8 + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetZOrder"
-                      },
-                      "parameters": [
-                        "soco",
-                        "=",
-                        "pato.ZOrder() + 2"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "soco_rastro",
-                        "=",
-                        "pato.CenterX() + pato.soco_rastro_dist * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
-                        "=",
-                        "pato.CenterY() + 8 + pato.soco_rastro_dist * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetZOrder"
-                      },
-                      "parameters": [
-                        "soco_rastro",
-                        "=",
-                        "pato.ZOrder() + 1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "soco",
-                        "\"t\"",
-                        ">",
-                        "pato.soco_duracao"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "soco",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "soco_rastro",
-                        "\"t\"",
-                        ">",
-                        "pato.soco_duracao"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "soco_rastro",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Terrestre",
-                        "socado",
-                        ">",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Terrestre",
-                        "socado",
-                        "-",
-                        "TimeDelta()"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "estado",
+                            "y_antes",
                             "=",
-                            "\"dano\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::MaxSpeed"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "PlatformerObject",
-                            "=",
-                            "pato.soco_vel_inimigo"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "PlatformerObject",
-                            "=",
-                            "Terrestre.soco_dir * pato.soco_vel_inimigo"
+                            "pato.Y()"
                           ]
                         }
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_guarda",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::IsFalling"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
-                      ]
-                    }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"__CoyoteTime_CoyoteJump\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_guarda",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "PlatformBehavior::IsFalling"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_guarda",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "abs(pato.coice_vx)",
-                        ">",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "AdvancedJump::HorizontalDash::IsDashing"
-                      },
-                      "parameters": [
-                        "pato",
-                        "HorizontalDash",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetX"
-                      },
-                      "parameters": [
-                        "pato",
-                        "+",
-                        "pato.coice_vx * TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_vx",
-                        "=",
-                        "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AdvancedJump::HorizontalDash::IsDashing"
-                      },
-                      "parameters": [
-                        "pato",
-                        "HorizontalDash",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_vx",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "y_antes",
-                        "=",
-                        "pato.Y()"
-                      ]
-                    }
-                  ]
+                  "parameters": []
                 }
               ],
               "parameters": []
