@@ -55222,18 +55222,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Roda uma vez quando a cena começa: zera cronômetros, pré-carrega sons e cria as três armas, equipando a que está em arma_atual."
-            },
-            {
               "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -55259,1084 +55247,558 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pistola.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_doze.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_minigun.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_lanca.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_explosao.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_minigun_giro.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundOnChannel"
-                      },
-                      "parameters": [
-                        "",
-                        "som_minigun_giro.wav",
-                        "5",
-                        "yes",
-                        "0",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_doze_pump.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_pistola.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_doze.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_minigun.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_lanca.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_acerto.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_atirador.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_caveira.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_condenado.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_cutulu.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_inchado.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_mergulhador.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_mina.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_olho.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_pigman.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_aviso_sapo.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_cura.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_cuspe.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_dash.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_fogo_caveira.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_inimigo_morte.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_moeda.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_moedas_soltas.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pato_dano.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pato_morte.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pouso.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pulo.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pulo_ar.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_soco.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_soco_acerto.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_tiro_inimigo.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_tiro_olho.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_troca_arma.wav"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PreloadSound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_bhop.wav"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "pistola",
-                        "pato.X()",
-                        "pato.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "doze",
-                        "pato.X()",
-                        "pato.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "minigun",
-                        "pato.X()",
-                        "pato.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "lanca",
-                        "pato.X()",
-                        "pato.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "Scale",
-                        "=",
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "doze",
-                        "Scale",
-                        "=",
-                        "4"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "Scale",
-                        "=",
-                        "1.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "Scale",
-                        "=",
-                        "1.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "Arma"
-                      ]
-                    }
-                  ],
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Preload dos sons",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "arma_atual",
-                            "=",
-                            "\"pistola\""
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pistola.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_doze.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_minigun.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_lanca.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_explosao.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_minigun_giro.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundOnChannel"
+                          },
+                          "parameters": [
+                            "",
+                            "som_minigun_giro.wav",
+                            "5",
+                            "yes",
+                            "0",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_doze_pump.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_recarga_pistola.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_recarga_doze.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_recarga_minigun.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_recarga_lanca.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_acerto.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_atirador.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_caveira.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_condenado.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_cutulu.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_inchado.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_mergulhador.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_mina.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_olho.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_pigman.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_sapo.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_cura.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_cuspe.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_dash.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_fogo_caveira.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_inimigo_morte.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_moeda.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_moedas_soltas.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pato_dano.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pato_morte.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pouso.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pulo.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_pulo_ar.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_soco.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_soco_acerto.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_tiro_inimigo.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_tiro_olho.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_troca_arma.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_bhop.wav"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Criacao das Armas",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "pistola",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "doze",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "minigun",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "lanca",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
                           },
                           "parameters": [
                             "pistola",
-                            "equipada",
-                            "True",
-                            ""
+                            "Scale",
+                            "=",
+                            "2"
                           ]
                         },
                         {
                           "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "pistola",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "arma_atual",
-                            "=",
-                            "\"doze\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
                           },
                           "parameters": [
                             "doze",
-                            "equipada",
-                            "True",
-                            ""
+                            "Scale",
+                            "=",
+                            "4"
                           ]
                         },
                         {
                           "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "doze",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "arma_atual",
-                            "=",
-                            "\"minigun\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
                           },
                           "parameters": [
                             "minigun",
-                            "equipada",
-                            "True",
-                            ""
+                            "Scale",
+                            "=",
+                            "1.5"
                           ]
                         },
                         {
                           "type": {
-                            "value": "Show"
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
                           },
                           "parameters": [
-                            "minigun",
-                            ""
+                            "lanca",
+                            "Scale",
+                            "=",
+                            "1.5"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "Hide"
                           },
                           "parameters": [
-                            "arma_atual",
-                            "=",
-                            "\"lanca\""
+                            "Arma"
                           ]
                         }
                       ],
-                      "actions": [
+                      "events": [
                         {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "lanca",
-                            "equipada",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "lanca",
-                            ""
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"pistola\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "pistola",
+                                ""
+                              ]
+                            }
                           ]
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Mira",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "A arma acompanha o pato e aponta para a mira (alvo); o pato vira para o lado da mira; desenha o laser e aplica o recuo na mira."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "mira_lado",
-                    "=",
-                    "sign(MouseX() - pato.CenterX() + 0.001)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "mira_a",
-                    "=",
-                    "atan2(MouseY() - (pato.Y() + pato.Height() * 0.68), mira_lado * (MouseX() - pato.CenterX())) - asin(clamp(Arma.bocal_f * Arma.Height() / max(DistanceBetweenPositions(pato.CenterX(), (pato.Y() + pato.Height() * 0.68), MouseX(), MouseY()), 1), -1, 1)) - ToRad(recuo)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "mira_graus",
-                    "=",
-                    "ToDeg(atan2(sin(mira_a), mira_lado * cos(mira_a)))"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "coice_j",
-                    "=",
-                    "RandomFloatInRange(-1, 1) * Arma.tremor * clamp(coice / max(Arma.kick, 0.01), 0, 1)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "=",
-                    "pato.CenterX() + mira_lado * cos(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) - sin(mira_a) * coice_j - Arma.Width() / 2",
-                    "=",
-                    "(pato.Y() + pato.Height() * 0.68) + sin(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) + mira_lado * cos(mira_a) * coice_j - Arma.Height() / 2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAngle"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "=",
-                    "mira_graus"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetZOrder"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "=",
-                    "pato.ZOrder() - 2"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "MouseX()",
-                    "<",
-                    "pato.CenterX()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipX"
-                  },
-                  "parameters": [
-                    "pato",
-                    "Flippable",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipY"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "Flippable",
-                    "yes"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "MouseX()",
-                    ">=",
-                    "pato.CenterX()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipX"
-                  },
-                  "parameters": [
-                    "pato",
-                    "Flippable",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipY"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "Flippable",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "bocal_x",
-                    "=",
-                    "Arma.CenterX() + mira_lado * cos(mira_a) * Arma.Width() / 2 - mira_lado * sin(mira_a) * Arma.bocal_f * Arma.Height()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "bocal_y",
-                    "=",
-                    "Arma.CenterY() + sin(mira_a) * Arma.Width() / 2 + cos(mira_a) * Arma.bocal_f * Arma.Height()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "alvo",
-                    "=",
-                    "bocal_x + mira_lado * cos(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Width() * .5",
-                    "=",
-                    "bocal_y + sin(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Height() * .5"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "HideCursor"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "recuo",
-                    "*",
-                    "pow(pato.recuo_decai, TimeDelta() * 60)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "coice",
-                    "*",
-                    "pow(pato.coice_decai, TimeDelta())"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "alvo",
-                    "Opacity",
-                    "=",
-                    "250"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "laser_x",
-                    "=",
-                    "bocal_x + mira_lado * cos(mira_a) * pato.laser_alcance"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "laser_y",
-                    "=",
-                    "bocal_y + sin(mira_a) * pato.laser_alcance"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "RaycastToPosition"
-                      },
-                      "parameters": [
-                        "Terreno",
-                        "bocal_x",
-                        "bocal_y",
-                        "laser_x",
-                        "laser_y",
-                        "laser_x",
-                        "laser_y",
-                        ""
-                      ]
-                    }
                   ],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "GlobalVariable(upgrades.laser)",
-                        ">",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::LineV2"
-                      },
-                      "parameters": [
-                        "laser",
-                        "bocal_x",
-                        "bocal_y",
-                        "laser_x",
-                        "laser_y",
-                        "1.5"
-                      ]
-                    }
-                  ]
+                  "parameters": []
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Hide"
-                  },
-                  "parameters": [
-                    "alvo",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Clarão",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "flash_cano",
-                        "=",
-                        "bocal_x",
-                        "=",
-                        "bocal_y"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "flash_cano",
-                        "=",
-                        "mira_graus"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetZOrder"
-                      },
-                      "parameters": [
-                        "flash_cano",
-                        "=",
-                        "pato.ZOrder() - 1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "flash_cano",
-                        "\"ttl\"",
-                        ">",
-                        "flash_cano.dur"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "flash_cano",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
             }
           ],
           "parameters": []
@@ -60190,11 +59652,429 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Controle das Armas",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Mira e posicionamento",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Arma",
+                        "equipada",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Angulo",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "mira_lado",
+                                "=",
+                                "sign(MouseX() - pato.CenterX() + 0.001)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "mira_a",
+                                "=",
+                                "atan2(MouseY() - (pato.Y() + pato.Height() * 0.68), mira_lado * (MouseX() - pato.CenterX())) - asin(clamp(Arma.bocal_f * Arma.Height() / max(DistanceBetweenPositions(pato.CenterX(), (pato.Y() + pato.Height() * 0.68), MouseX(), MouseY()), 1), -1, 1)) - ToRad(recuo)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "mira_graus",
+                                "=",
+                                "ToDeg(atan2(sin(mira_a), mira_lado * cos(mira_a)))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "Arma",
+                                "=",
+                                "mira_graus"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetZOrder"
+                              },
+                              "parameters": [
+                                "Arma",
+                                "=",
+                                "pato.ZOrder() - 2"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Posicao da arma",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "coice_j",
+                                "=",
+                                "RandomFloatInRange(-1, 1) * Arma.tremor * clamp(coice / max(Arma.kick, 0.01), 0, 1)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetXY"
+                              },
+                              "parameters": [
+                                "Arma",
+                                "=",
+                                "pato.CenterX() + mira_lado * cos(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) - sin(mira_a) * coice_j - Arma.Width() / 2",
+                                "=",
+                                "(pato.Y() + pato.Height() * 0.68) + sin(mira_a) * ((15 + 0.2 * Arma.Width()) - coice) + mira_lado * cos(mira_a) * coice_j - Arma.Height() / 2"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Cano e alvo",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "bocal_x",
+                                "=",
+                                "Arma.CenterX() + mira_lado * cos(mira_a) * Arma.Width() / 2 - mira_lado * sin(mira_a) * Arma.bocal_f * Arma.Height()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "bocal_y",
+                                "=",
+                                "Arma.CenterY() + sin(mira_a) * Arma.Width() / 2 + cos(mira_a) * Arma.bocal_f * Arma.Height()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetXY"
+                              },
+                              "parameters": [
+                                "alvo",
+                                "=",
+                                "bocal_x + mira_lado * cos(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Width() * .5",
+                                "=",
+                                "bocal_y + sin(mira_a) * DistanceBetweenPositions(bocal_x, bocal_y, MouseX(), MouseY()) - alvo.Height() * .5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "HideCursor"
+                              },
+                              "parameters": [
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Hide"
+                              },
+                              "parameters": [
+                                "alvo"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Recuo",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "recuo",
+                                "*",
+                                "pow(pato.recuo_decai, TimeDelta() * 60)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "coice",
+                                "*",
+                                "pow(pato.coice_decai, TimeDelta())"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ]
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Flipa a Arma para nao ficar de cabeca para baixo ao girar",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "MouseX()",
+                            "<",
+                            "pato.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipX"
+                          },
+                          "parameters": [
+                            "pato",
+                            "Flippable",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipY"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "Flippable",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "MouseX()",
+                            ">=",
+                            "pato.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipX"
+                          },
+                          "parameters": [
+                            "pato",
+                            "Flippable",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipY"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "Flippable",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Clarão",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "bocal_x",
+                            "=",
+                            "bocal_y"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "mira_graus"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetZOrder"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "pato.ZOrder() - 1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "\"ttl\"",
+                            ">",
+                            "flash_cano.dur"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": []
+            },
             {
               "colorB": 228,
               "colorG": 176,
@@ -60206,7 +60086,6 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -60568,6 +60447,7 @@
               "parameters": []
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
