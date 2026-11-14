@@ -9036,7 +9036,7 @@
           "name": "vida",
           "persistentUuid": "a7dde4d8-945f-455a-9c0e-bf89060a5ab0",
           "type": "number",
-          "value": 100
+          "value": 1
         },
         {
           "name": "municao",
@@ -24881,7 +24881,7 @@
       "flow": 200,
       "jumpForwardInTimeOnCreation": 0,
       "maxParticleNb": 60,
-      "name": "propulsor",
+      "name": "cagada",
       "particleAlpha1": 218,
       "particleAlpha2": 0,
       "particleAlphaRandomness1": 0,
@@ -50040,7 +50040,7 @@
             "objectName": "laser"
           },
           {
-            "objectName": "propulsor"
+            "objectName": "cagada"
           },
           {
             "objectName": "poeira"
@@ -55200,18 +55200,6 @@
       "name": "Jogador",
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Eventos do jogador, iguais em todas as cenas jogáveis: armas no início da cena, mira, movimento, morte, troca e controle das armas."
-        },
-        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -55808,23 +55796,10 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Controle do Pato",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Tudo do jogador: movimento, dano recebido e morte. Com o pato morto, os controles param."
-            },
             {
               "colorB": 228,
               "colorG": 176,
@@ -55836,18 +55811,7 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "A/D andam, Shift dá dash, Espaço pula. Todo pulo no ar (depois do primeiro) dá um giro de 360°, que volta a 0 ao pousar. Pulo e dash dão uma rajada curta de propulsor: para baixo no pulo, para trás no dash."
-                },
-                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -55857,6 +55821,17 @@
                       "parameters": [
                         "pato",
                         "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
                         "False",
                         ""
                       ]
@@ -55874,17 +55849,6 @@
                           "parameters": [
                             "",
                             "\"a\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
                           ]
                         }
                       ],
@@ -55911,17 +55875,6 @@
                             "",
                             "\"d\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
                         }
                       ],
                       "actions": [
@@ -55946,17 +55899,6 @@
                           "parameters": [
                             "",
                             "\"LShift\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
                           ]
                         }
                       ],
@@ -56002,17 +55944,6 @@
                             "pato",
                             "PlatformerObject"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
                         }
                       ],
                       "actions": [
@@ -56070,17 +56001,6 @@
                             "AdvancedJump",
                             ""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
                         }
                       ],
                       "actions": [
@@ -56099,87 +56019,88 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "pulo no ar e giro em direcao do movimento",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
-                          "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Space\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::CanJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "PlatformBehavior::IsOnFloor"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "AdvancedJump",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyFromTextJustPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Space\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::CanJump"
+                              },
+                              "parameters": [
+                                "pato",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "pato",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "AdvancedJump::AdvancedJump::CanCoyoteJump"
+                              },
+                              "parameters": [
+                                "pato",
+                                "AdvancedJump",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                              },
+                              "parameters": [
+                                "pato",
+                                "Tween",
+                                "\"giroPulo\"",
+                                "360 * (round(pato.Angle() / 360) + (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001)))",
+                                "\"easeOutQuad\"",
+                                "0.35",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "som_pulo_ar.wav",
+                                "",
+                                "45",
+                                "RandomFloatInRange(0.95, 1.05)"
+                              ]
+                            }
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                          },
-                          "parameters": [
-                            "pato",
-                            "Tween",
-                            "\"giroPulo\"",
-                            "360 * (round(pato.Angle() / 360) + (min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20)) * sign(pato.PlatformerObject::CurrentSpeed()) + (1 - min(1, floor(abs(pato.PlatformerObject::CurrentSpeed()) / 20))) * sign(alvo.CenterX() - pato.CenterX() + 0.001)))",
-                            "\"linear\"",
-                            "0.35",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_pulo_ar.wav",
-                            "",
-                            "45",
-                            "RandomFloatInRange(0.95, 1.05)"
-                          ]
-                        }
-                      ]
+                      "parameters": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -56192,17 +56113,6 @@
                             "",
                             "\"Space\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
                         }
                       ],
                       "actions": [
@@ -56213,123 +56123,6 @@
                           "parameters": [
                             "pato",
                             "PlatformerObject"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Space\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::CanJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "propulsor",
-                            "pato.CenterX()",
-                            "pato.Y() + pato.Height() - 10",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "dash",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AdvancedJump::HorizontalDash::IsDashing"
-                          },
-                          "parameters": [
-                            "pato",
-                            "HorizontalDash",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "propulsor",
-                            "pato.CenterX()",
-                            "pato.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "dash",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_dash.wav",
-                            "",
-                            "50",
-                            "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
                       ]
@@ -56377,46 +56170,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Propulsor acompanha o pato",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "=",
-                            "pato.CenterX()",
-                            "=",
-                            "pato.CenterY() + (1 - propulsor.dash) * (pato.Height() / 2 - 10)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "propulsor",
-                            "=",
-                            "AngleBetweenPositions(pato.PlatformerObject::CurrentSpeed(), 0, 0,  pato.PlatformerObject::CurrentFallSpeed() - 0.001)"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
                 }
               ],
               "parameters": []
@@ -56427,22 +56180,156 @@
               "colorR": 74,
               "creationTime": 0,
               "folded": true,
-              "name": "Morte do Pato",
+              "name": "Cagada no pulo e dash",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Vida zerada: o demônio sai do pato (fumaça), o pato cai parado como um brinquedo e o tempo fica lento por 0,5 s. Guarda a run (moedas, % até a safezone, recorde, mortes) e mostra o resumo; qualquer tecla volta para o Hub. Na cena Boss o resumo mostra a % de vida que sobrou no boss."
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::CanJump"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "cagada",
+                        "pato.CenterX()",
+                        "pato.Y() + pato.Height() - 10",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cagada",
+                        "dash",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
                 },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "cagada",
+                        "=",
+                        "pato.CenterX()",
+                        "=",
+                        "pato.CenterY() + (1 - cagada.dash) * (pato.Height() / 2 - 10)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "cagada",
+                        "=",
+                        "AngleBetweenPositions(pato.PlatformerObject::CurrentSpeed(), 0, 0,  pato.PlatformerObject::CurrentFallSpeed() - 0.001)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "cagada",
+                        "pato.CenterX()",
+                        "pato.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "cagada",
+                        "dash",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_dash.wav",
+                        "",
+                        "50",
+                        "RandomFloatInRange(0.95, 1.05)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Morte do Pato",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -56483,6 +56370,18 @@
                     },
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_pato_morte.wav",
+                        "",
+                        "90",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
@@ -56492,50 +56391,11 @@
                     },
                     {
                       "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Arma",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "laser",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "alvo",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ChangeColor"
                       },
                       "parameters": [
                         "pato",
                         "\"150;150;150\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "demonio_fumaca",
-                        "pato.CenterX()",
-                        "pato.CenterY()",
-                        ""
                       ]
                     },
                     {
@@ -56586,21 +56446,43 @@
                         "=",
                         "-1"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_pato_morte.wav",
-                        "",
-                        "90",
-                        "1"
-                      ]
                     }
                   ],
                   "events": [
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Arma",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "alvo",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "laser",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -56747,6 +56629,54 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"x\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida",
+                        "=",
+                        "-10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -57587,6 +57517,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Bunny hop",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -58406,6 +58337,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Soco",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -59652,6 +59584,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Controle das Armas",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
