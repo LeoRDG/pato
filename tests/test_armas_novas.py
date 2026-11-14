@@ -25,17 +25,17 @@ def test_raio_so_na_lanca():
 
 def test_explosao_e_troca_e_hud():
     txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
-    for pedaco in ('Explosão da granada', 'Num4', 'armas.lanca', 'hud_slot4', 'hud_pips_lanca', 'LANÇA-GRANADAS'):
+    for pedaco in ('Explosão da granada', 'Num4', 'armas.lanca', 'hud_slot4', 'LANÇA-GRANADAS'):
         assert pedaco in txt, pedaco
     for lay in JOGO['layouts']:
         nomes = {i['name'] for i in lay['instances']}
         if 'hud_slot3' in nomes:
-            assert {'hud_slot4', 'hud_pips_lanca'} <= nomes
+            assert 'hud_slot4' in nomes
             assert max(i['x'] for i in lay['instances'] if i['name'].startswith('hud_slot')) + 52 <= 1920
 
 
 def test_recursos_do_hud_existem():
-    for r in ('hud/arma_lanca.png', 'hud/slot_4.png', 'hud/slot_4_sel.png', 'hud/slot_4_lock.png', 'hud/pip_lanca.png'):
+    for r in ('hud/arma_lanca.png', 'hud/slot_4.png', 'hud/slot_4_sel.png', 'hud/slot_4_lock.png'):
         assert r in RES and os.path.exists(os.path.join(RAIZ, 'assets', r))
 
 
