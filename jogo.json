@@ -4302,14 +4302,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/hud/fill_laranja.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "hud/fill_laranja.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "assets/hud/fill_vermelho.png",
         "kind": "image",
         "metadata": "",
@@ -13438,7 +13430,7 @@
           "HeatIncreasePerShot": 0,
           "HeatLevel": 0,
           "AutomaticReloading": false,
-          "OverheatDuration": 5,
+          "OverheatDuration": 0,
           "LinearCoolingRate": 0.1,
           "ExponentialCoolingRate": 0.3,
           "BulletLayer": "",
@@ -25731,60 +25723,6 @@
       "name": "hud_recarga_fill",
       "persistentUuid": "c11179ca-ed28-4b99-8697-afb94be49853",
       "texture": "hud/fill_branco.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 0,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "hud_calor_trilho",
-      "persistentUuid": "b2da87b9-23ed-4be9-a7db-9805ea398f76",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "hud/trilho_fino.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assetStoreId": "",
-      "height": 4,
-      "name": "hud_calor_fill",
-      "persistentUuid": "571f4c24-25ec-4cb6-ae82-4be2975a544c",
-      "texture": "hud/fill_laranja.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 0,
       "variables": [],
@@ -50276,7 +50214,7 @@
                 "objectName": "max_municao"
               },
               {
-                "folderName": "recarga_e_calor",
+                "folderName": "recarga",
                 "children": [
                   {
                     "objectName": "hud_recarga_trilho"
@@ -50289,12 +50227,6 @@
                   },
                   {
                     "objectName": "hud_r_hint"
-                  },
-                  {
-                    "objectName": "hud_calor_trilho"
-                  },
-                  {
-                    "objectName": "hud_calor_fill"
                   }
                 ]
               },
@@ -52282,38 +52214,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "HUD",
-          "name": "hud_calor_trilho",
-          "persistentUuid": "c165f3f8-e2b9-4301-b65a-b73c285c3c3b",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_fill",
-          "persistentUuid": "b0649dce-965d-4b51-89c6-b68e647dd497",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
           "name": "hud_boss_trilho",
           "persistentUuid": "3dbc6875-8d58-47d4-b334-0009f24260a0",
           "width": 0,
@@ -53686,38 +53586,6 @@
           "width": 0,
           "x": 1512,
           "y": 1028,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_trilho",
-          "persistentUuid": "57a0154c-2ed5-4322-8404-7bf9f9d952c3",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 4,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "hud_calor_fill",
-          "persistentUuid": "c209c33c-4ae1-4caa-bb60-47bcf9aa4389",
-          "width": 0,
-          "x": 1512,
-          "y": 914,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -73020,22 +72888,6 @@
                         "value": "Hide"
                       },
                       "parameters": [
-                        "hud_calor_trilho"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "hud_calor_fill"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
                         "hud_boss_trilho"
                       ]
                     },
@@ -73395,7 +73247,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Ícone, nome, munição e marcadores da arma equipada; calor da minigun; recarga com anel na mira; aviso de pente vazio; coice do ícone."
+                  "comment": "Ícone, nome e munição da arma equipada; recarga com anel na mira; aviso de pente vazio."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -73601,59 +73453,6 @@
                             "Text",
                             "=",
                             "\"MINIGUN\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_calor_trilho",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_calor_fill",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_calor_trilho",
-                            "=",
-                            "hud_arma.X()",
-                            "=",
-                            "hud_arma.Y() - 14"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_calor_fill",
-                            "=",
-                            "hud_arma.X()",
-                            "=",
-                            "hud_arma.Y() - 14"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_calor_fill",
-                            "Resizable",
-                            "=",
-                            "360 * clamp(Arma.FireBullet::HeatLevel(), 0, 1)"
                           ]
                         }
                       ]
