@@ -9708,6 +9708,14 @@
         "name": "assets/anjos/roda_anjo/morte_05.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -55343,6 +55351,73 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_purgatorio",
+      "persistentUuid": "d764285a-43ea-5848-a98e-75aa26995d87",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_purgatorio_ponte",
+      "persistentUuid": "5873fd1c-c60f-5ff1-899c-339b9a7c3669",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": "108,109,110,125,126,127,142"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "tiles_purgatorio_decor",
+      "persistentUuid": "7a974a24-b4e6-5985-8aeb-21228b9b3dae",
+      "type": "TileMap::SimpleTileMap",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "opacity": 255,
+        "atlasImage": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
+        "rowCount": 9,
+        "columnCount": 17,
+        "tileSize": 64,
+        "tilesWithHitBox": ""
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -55605,6 +55680,15 @@
               },
               {
                 "objectName": "tiles_ceu_decor"
+              },
+              {
+                "objectName": "tiles_purgatorio"
+              },
+              {
+                "objectName": "tiles_purgatorio_ponte"
+              },
+              {
+                "objectName": "tiles_purgatorio_decor"
               }
             ]
           },
@@ -56152,6 +56236,9 @@
         },
         {
           "name": "tiles_ceu"
+        },
+        {
+          "name": "tiles_purgatorio"
         }
       ]
     }
