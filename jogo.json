@@ -56213,6 +56213,54 @@
       ],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 30,
+      "emitterForceMax": 18,
+      "emitterForceMin": 0,
+      "flow": 2.5,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "sangue_goteira",
+      "particleAlpha1": 255,
+      "particleAlpha2": 190,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 14,
+      "particleBlue2": 4,
+      "particleColor1": "165;12;14",
+      "particleColor2": "80;0;4",
+      "particleGravityX": 0,
+      "particleGravityY": 1100,
+      "particleGreen1": 12,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 1.4,
+      "particleLifeTimeMin": 0.9,
+      "particleRed1": 165,
+      "particleRed2": 80,
+      "particleSize1": 100,
+      "particleSize2": 70,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "26869a45-0415-54ec-9aee-a852a4b1155e",
+      "rendererParam1": 9,
+      "rendererParam2": 4,
+      "rendererType": "Line",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 5,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -56501,6 +56549,9 @@
               },
               {
                 "objectName": "estatua_2"
+              },
+              {
+                "objectName": "sangue_goteira"
               }
             ]
           },
