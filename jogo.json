@@ -9396,7 +9396,7 @@
           "name": "coice_decai",
           "persistentUuid": "ab927ebb-dfcd-45fc-b70b-2316a0671fbc",
           "type": "number",
-          "value": 1e-06
+          "value": 0.000001
         },
         {
           "name": "recuo_max",
@@ -9597,9 +9597,9 @@
           "PlatformerCharacter": "PlatformerObject"
         },
         {
-          "canGrabWithoutMoving": false,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "canGrabWithoutMoving": false,
           "maxSpeed": 700,
           "acceleration": 4200,
           "gravity": 2000,
@@ -49647,75 +49647,75 @@
         },
         {
           "name": "morto",
+          "persistentUuid": "dd6f2458-f6bf-43e8-abd5-290925a6d4e1",
           "type": "boolean",
-          "value": false,
-          "persistentUuid": "dd6f2458-f6bf-43e8-abd5-290925a6d4e1"
+          "value": false
         },
         {
           "name": "qtd_moedas",
+          "persistentUuid": "04042dcc-2885-4cd5-ab00-0e4471e08009",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "04042dcc-2885-4cd5-ab00-0e4471e08009"
+          "value": 0
         },
         {
           "name": "estado",
+          "persistentUuid": "f185d540-a4b1-46a0-975d-e528a8d3d46a",
           "type": "string",
-          "value": "calmo",
-          "persistentUuid": "f185d540-a4b1-46a0-975d-e528a8d3d46a"
+          "value": "calmo"
         },
         {
           "name": "base_x",
+          "persistentUuid": "b90cb04b-9540-42df-8a67-d543a4f57e91",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "b90cb04b-9540-42df-8a67-d543a4f57e91"
+          "value": 0
         },
         {
           "name": "base_y",
+          "persistentUuid": "e642b2d9-1935-4c15-b572-78d6e68dfc0b",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "e642b2d9-1935-4c15-b572-78d6e68dfc0b"
+          "value": 0
         },
         {
           "name": "direcao",
+          "persistentUuid": "6f0d12be-9fc8-4b03-8e0a-939ba1c98750",
           "type": "number",
-          "value": 1,
-          "persistentUuid": "6f0d12be-9fc8-4b03-8e0a-939ba1c98750"
+          "value": 1
         },
         {
           "name": "escolha",
+          "persistentUuid": "5fb50ad5-5e60-4f26-90d2-a9ae72a2dd36",
           "type": "number",
-          "value": 1,
-          "persistentUuid": "5fb50ad5-5e60-4f26-90d2-a9ae72a2dd36"
+          "value": 1
         },
         {
           "name": "tiros",
+          "persistentUuid": "ad99ee2c-ec6a-4d48-af8b-b39571e647fb",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "ad99ee2c-ec6a-4d48-af8b-b39571e647fb"
+          "value": 0
         },
         {
           "name": "kb_dir",
+          "persistentUuid": "36f70e9c-197c-4c5c-b18a-3fc6dcffa0be",
           "type": "number",
-          "value": 0,
-          "persistentUuid": "36f70e9c-197c-4c5c-b18a-3fc6dcffa0be"
+          "value": 0
         },
         {
           "name": "acertado",
+          "persistentUuid": "f4426d05-2b05-4e97-a6ac-d793d173a412",
           "type": "boolean",
-          "value": false,
-          "persistentUuid": "f4426d05-2b05-4e97-a6ac-d793d173a412"
+          "value": false
         },
         {
           "name": "quer_andar",
+          "persistentUuid": "9ac6f93b-a32a-4a43-bbb8-89d692b318ff",
           "type": "boolean",
-          "value": false,
-          "persistentUuid": "9ac6f93b-a32a-4a43-bbb8-89d692b318ff"
+          "value": false
         },
         {
           "name": "sprite_esquerda",
+          "persistentUuid": "51be7673-7bd9-4a19-8a0e-704fcd6aba98",
           "type": "boolean",
-          "value": true,
-          "persistentUuid": "51be7673-7bd9-4a19-8a0e-704fcd6aba98"
+          "value": true
         },
         {
           "name": "bala_serie",
@@ -50535,6 +50535,27 @@
             "objectName": "safezone"
           }
         ]
+      },
+      {
+        "objectName": "loja_painel"
+      },
+      {
+        "objectName": "loja_linha"
+      },
+      {
+        "objectName": "loja_desc"
+      },
+      {
+        "objectName": "loja_dica"
+      },
+      {
+        "objectName": "boneco"
+      },
+      {
+        "objectName": "boneco_dps"
+      },
+      {
+        "objectName": "eletro_raio"
       }
     ]
   },
@@ -50897,8 +50918,32 @@
           "value": 0
         },
         {
+          "name": "eletricidade",
+          "persistentUuid": "6dd4d229-1c21-49d3-b0fb-40caebe517df",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "laser",
+          "persistentUuid": "e41ad9d6-e836-4edf-b0be-983303b723c2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "perfuracao",
+          "persistentUuid": "79657652-2a95-4673-b98f-0a142d93b034",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "recarga",
           "persistentUuid": "d86d46ee-0289-43cb-b9f5-afb05c366a38",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ricochete",
+          "persistentUuid": "75cbce55-fcbb-4c21-981d-9202a2069f95",
           "type": "number",
           "value": 0
         },
@@ -50911,30 +50956,6 @@
         {
           "name": "vida",
           "persistentUuid": "67867246-08ff-473b-81e9-30ddf65c39af",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ricochete",
-          "persistentUuid": "75cbce55-fcbb-4c21-981d-9202a2069f95",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "perfuracao",
-          "persistentUuid": "79657652-2a95-4673-b98f-0a142d93b034",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "eletricidade",
-          "persistentUuid": "6dd4d229-1c21-49d3-b0fb-40caebe517df",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "laser",
-          "persistentUuid": "e41ad9d6-e836-4edf-b0be-983303b723c2",
           "type": "number",
           "value": 0
         }
@@ -51031,21 +51052,9 @@
       "type": "array",
       "children": [
         {
-          "type": "structure",
           "persistentUuid": "c02ec915-49f5-478a-b422-e436740135f3",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "72cbbf5f-7381-4389-b6eb-ebabe46c66bf",
-              "type": "string",
-              "value": "cadencia"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "37a502ca-a2c8-4ac9-8900-f55ed86c5f30",
-              "type": "string",
-              "value": "Cadência"
-            },
             {
               "name": "descricao",
               "persistentUuid": "6a363ca8-10df-4818-a7b1-6c02ea0f5db7",
@@ -51053,16 +51062,22 @@
               "value": "-15% de espera entre tiros por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "e0fa4308-44a7-4128-b677-a53716b68dde",
+              "name": "id",
+              "persistentUuid": "72cbbf5f-7381-4389-b6eb-ebabe46c66bf",
               "type": "string",
-              "value": "upgrade"
+              "value": "cadencia"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "b1c2e385-cf0c-4d26-8df3-153e115ec69b",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "37a502ca-a2c8-4ac9-8900-f55ed86c5f30",
+              "type": "string",
+              "value": "Cadência"
             },
             {
               "name": "preco_base",
@@ -51081,25 +51096,19 @@
               "persistentUuid": "d8306fc7-30ec-45be-bdfd-0dd5884d33a3",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "e0fa4308-44a7-4128-b677-a53716b68dde",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "9ed6b5c0-1973-4966-8743-597fba993e23",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "c5e9a42d-3084-4d2d-acb3-2239a4e311d8",
-              "type": "string",
-              "value": "dano"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "c6877d22-034b-407d-b0cf-89b4f05659c9",
-              "type": "string",
-              "value": "Dano"
-            },
             {
               "name": "descricao",
               "persistentUuid": "138539b1-7436-4a29-b737-154654f9c51b",
@@ -51107,16 +51116,22 @@
               "value": "+20% de dano por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "8b4250d7-281a-4d82-b4be-e3048d1d26c2",
+              "name": "id",
+              "persistentUuid": "c5e9a42d-3084-4d2d-acb3-2239a4e311d8",
               "type": "string",
-              "value": "upgrade"
+              "value": "dano"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "eef7865d-3f27-4ae3-ab77-8307f7f3e9a1",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "c6877d22-034b-407d-b0cf-89b4f05659c9",
+              "type": "string",
+              "value": "Dano"
             },
             {
               "name": "preco_base",
@@ -51135,25 +51150,19 @@
               "persistentUuid": "b5ea8308-0903-4aa3-97a7-1095fe2124ee",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "8b4250d7-281a-4d82-b4be-e3048d1d26c2",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "f3a0961d-f259-4d86-9b85-484d3f3c20db",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "a75ff9a7-26fd-4170-a38a-8b44275d515f",
-              "type": "string",
-              "value": "recarga"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "c35ce693-0713-4f33-b7e6-580ee6fb2081",
-              "type": "string",
-              "value": "Recarga"
-            },
             {
               "name": "descricao",
               "persistentUuid": "e4a65292-6e6d-4de0-8625-e7b9faf51da3",
@@ -51161,16 +51170,22 @@
               "value": "-20% no tempo de recarga por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "779ef79c-b77a-4cd1-9e11-921f395285a5",
+              "name": "id",
+              "persistentUuid": "a75ff9a7-26fd-4170-a38a-8b44275d515f",
               "type": "string",
-              "value": "upgrade"
+              "value": "recarga"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "27877f10-645c-4be2-b0ae-40e903eb2fa1",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "c35ce693-0713-4f33-b7e6-580ee6fb2081",
+              "type": "string",
+              "value": "Recarga"
             },
             {
               "name": "preco_base",
@@ -51189,25 +51204,19 @@
               "persistentUuid": "8c236249-f5e2-4db6-84f1-19a4170a77d6",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "779ef79c-b77a-4cd1-9e11-921f395285a5",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "a47be24b-522c-4f71-acc1-fac94b73f04f",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "c5131074-4d00-4b65-831f-4136660d2fd4",
-              "type": "string",
-              "value": "velocidade"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "4d5813c2-2859-44c1-8e40-3daa12c0e97f",
-              "type": "string",
-              "value": "Velocidade"
-            },
             {
               "name": "descricao",
               "persistentUuid": "8756111b-aa49-4867-ada0-a9f9913059e5",
@@ -51215,16 +51224,22 @@
               "value": "+10% de velocidade por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "0dddd0be-5b2d-462b-b14d-cebb85d29a73",
+              "name": "id",
+              "persistentUuid": "c5131074-4d00-4b65-831f-4136660d2fd4",
               "type": "string",
-              "value": "upgrade"
+              "value": "velocidade"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "82622900-78b0-4c07-b355-8124472cdad8",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "4d5813c2-2859-44c1-8e40-3daa12c0e97f",
+              "type": "string",
+              "value": "Velocidade"
             },
             {
               "name": "preco_base",
@@ -51243,25 +51258,19 @@
               "persistentUuid": "67c41425-10e3-4ec9-8a65-9786a5cb3292",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "0dddd0be-5b2d-462b-b14d-cebb85d29a73",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "1e00ed1a-7ea9-4470-a001-a8dd4668963d",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "b40b00ca-0dc8-41f4-af4d-e641711a4cd1",
-              "type": "string",
-              "value": "vida"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "b0d81bf8-bb06-4f58-8377-c71ef7605061",
-              "type": "string",
-              "value": "Vida"
-            },
             {
               "name": "descricao",
               "persistentUuid": "c661dc7a-3791-4324-bba6-cdbfa9992cc0",
@@ -51269,16 +51278,22 @@
               "value": "+25 de vida máxima por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "ac8b840e-f9bc-4d4e-b865-1ba34be1d4ce",
+              "name": "id",
+              "persistentUuid": "b40b00ca-0dc8-41f4-af4d-e641711a4cd1",
               "type": "string",
-              "value": "upgrade"
+              "value": "vida"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "faaca2f7-9990-408b-bc27-bb2a61bc2968",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "b0d81bf8-bb06-4f58-8377-c71ef7605061",
+              "type": "string",
+              "value": "Vida"
             },
             {
               "name": "preco_base",
@@ -51297,25 +51312,19 @@
               "persistentUuid": "142ae89b-afa6-48a0-9a08-2c5c8c21b613",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "ac8b840e-f9bc-4d4e-b865-1ba34be1d4ce",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "41259739-9751-497e-a21b-af205a00284d",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "17c977ae-27d7-46f8-9259-e1070201d0ab",
-              "type": "string",
-              "value": "ricochete"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "16b99b40-bcae-4b4f-8a81-0ea27eb193e5",
-              "type": "string",
-              "value": "Ricochete"
-            },
             {
               "name": "descricao",
               "persistentUuid": "52bd3e7e-2e69-4e48-b319-f415ef49ad24",
@@ -51323,16 +51332,22 @@
               "value": "+1 ricochete por nível; a bala perde dano a cada ricochete"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "fecce8eb-3c2f-4a68-8157-6146013bd5bd",
+              "name": "id",
+              "persistentUuid": "17c977ae-27d7-46f8-9259-e1070201d0ab",
               "type": "string",
-              "value": "upgrade"
+              "value": "ricochete"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "1bc0bc0e-02dc-4f29-9c24-715d328d9aef",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "16b99b40-bcae-4b4f-8a81-0ea27eb193e5",
+              "type": "string",
+              "value": "Ricochete"
             },
             {
               "name": "preco_base",
@@ -51351,25 +51366,19 @@
               "persistentUuid": "039a4674-06cb-4a40-855e-90c65dbb0006",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "fecce8eb-3c2f-4a68-8157-6146013bd5bd",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "c07edd8d-ff47-46b6-82dc-649b7ef9d21d",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "6768f744-56e2-4b7c-9376-2c76269fe009",
-              "type": "string",
-              "value": "perfuracao"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "b1dcd0f7-f3eb-44f9-b137-b7dea6e53c5c",
-              "type": "string",
-              "value": "Perfuração"
-            },
             {
               "name": "descricao",
               "persistentUuid": "8e027f65-d694-4335-b9dc-3a2e288f3f64",
@@ -51377,16 +51386,22 @@
               "value": "+1 inimigo atravessado por bala por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "e800bebf-18a5-45a1-9ead-b56de535aa5a",
+              "name": "id",
+              "persistentUuid": "6768f744-56e2-4b7c-9376-2c76269fe009",
               "type": "string",
-              "value": "upgrade"
+              "value": "perfuracao"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "b86c93bf-eb07-4bee-aab8-abae441a3b62",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "b1dcd0f7-f3eb-44f9-b137-b7dea6e53c5c",
+              "type": "string",
+              "value": "Perfuração"
             },
             {
               "name": "preco_base",
@@ -51405,25 +51420,19 @@
               "persistentUuid": "bb32328e-ddad-468b-830c-db7317dd8eda",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "e800bebf-18a5-45a1-9ead-b56de535aa5a",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "87434237-b8c7-4b2b-8069-75db783992d3",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "622c19ea-dae2-4325-9171-bf40b64f1d62",
-              "type": "string",
-              "value": "eletricidade"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "125cf942-8ef4-405c-8f8e-3d9c923f2cd4",
-              "type": "string",
-              "value": "Eletricidade"
-            },
             {
               "name": "descricao",
               "persistentUuid": "453747e9-39dd-4ad1-a699-0ee497cfad1c",
@@ -51431,16 +51440,22 @@
               "value": "Raios ligam as balas no ar e dão dano em quem encostar; +dano por nível"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "a9bea54d-dfe9-4840-8534-26fcbc47845f",
+              "name": "id",
+              "persistentUuid": "622c19ea-dae2-4325-9171-bf40b64f1d62",
               "type": "string",
-              "value": "upgrade"
+              "value": "eletricidade"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "6d2c6e81-5a04-4bc6-97ea-0cdf3af1a0eb",
               "type": "number",
               "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "125cf942-8ef4-405c-8f8e-3d9c923f2cd4",
+              "type": "string",
+              "value": "Eletricidade"
             },
             {
               "name": "preco_base",
@@ -51459,25 +51474,19 @@
               "persistentUuid": "5b6fc3cc-f4d2-4b6f-880d-555ee5aece82",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "a9bea54d-dfe9-4840-8534-26fcbc47845f",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         },
         {
-          "type": "structure",
           "persistentUuid": "12da5641-2b5a-410a-94db-92da5c8b59f4",
+          "type": "structure",
           "children": [
-            {
-              "name": "id",
-              "persistentUuid": "50780f10-26fb-4f9b-9660-4d97c0828d67",
-              "type": "string",
-              "value": "laser"
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "b46bd5d1-e017-4a71-be0b-2b1629b214ce",
-              "type": "string",
-              "value": "Laser"
-            },
             {
               "name": "descricao",
               "persistentUuid": "c0477bdd-9d79-493a-a06e-7e61f84c144f",
@@ -51485,16 +51494,22 @@
               "value": "Mira a laser: mostra para onde a arma aponta"
             },
             {
-              "name": "tipo",
-              "persistentUuid": "24f982ce-8878-4670-a310-8ed85ee5b048",
+              "name": "id",
+              "persistentUuid": "50780f10-26fb-4f9b-9660-4d97c0828d67",
               "type": "string",
-              "value": "upgrade"
+              "value": "laser"
             },
             {
               "name": "nivel_max",
               "persistentUuid": "d39c6d1a-c31a-4510-8cd7-22e42a187e98",
               "type": "number",
               "value": 1
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "b46bd5d1-e017-4a71-be0b-2b1629b214ce",
+              "type": "string",
+              "value": "Laser"
             },
             {
               "name": "preco_base",
@@ -51513,6 +51528,12 @@
               "persistentUuid": "76d798ea-0044-44d4-9289-210cac2c8789",
               "type": "string",
               "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "24f982ce-8878-4670-a310-8ed85ee5b048",
+              "type": "string",
+              "value": "upgrade"
             }
           ]
         }
@@ -52953,19 +52974,16 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Boneco de teste",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Boneco de teste",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Boneco para testar as armas: leva dano de tudo e, depois de boneco.regen_espera s sem dano, volta à vida cheia. O DPS é o dano dos últimos boneco.dps_janela s dividido por dps_janela.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -52973,7 +52991,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Boneco para testar as armas: leva dano de tudo e, depois de boneco.regen_espera s sem dano, volta à vida cheia. O DPS é o dano dos últimos boneco.dps_janela s dividido por dps_janela."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -53021,8 +53040,7 @@
                     "1100"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -53075,8 +53093,7 @@
                         "dps_idx"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
@@ -53126,8 +53143,7 @@
                     "boneco.vida"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -53178,8 +53194,7 @@
                     "boneco.max_vida"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -53209,6 +53224,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "round(boneco.dps_janela / boneco.dps_passo)",
                   "conditions": [],
                   "actions": [
                     {
@@ -53231,9 +53247,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": [],
-                  "repeatExpression": "round(boneco.dps_janela / boneco.dps_passo)"
+                  ]
                 }
               ]
             },
@@ -53264,10 +53278,10 @@
                     "boneco.Y() - boneco.dps_altura"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -56245,8 +56259,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "colorB": 228,
@@ -56333,6 +56346,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Controle do Pato",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -57266,8 +57280,7 @@
                             "max(0, GlobalVariable(moedas_total) - pato.moedas_perdidas)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
@@ -57450,8 +57463,7 @@
                             "NewLine() + NewLine() + \"O mercador levou \" + ToString(pato.moedas_perdidas) + \" moedas\""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -58109,18 +58121,16 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Bunny hop",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Bunny hop: pular até bhop_janela s depois de pousar, andando a pelo menos bhop_vel_min da velocidade base, sobe a série (até bhop_max_serie) e a velocidade máxima ganha bhop_ganho da base por degrau. Ficar no chão mais que bhop_janela zera. Fora do dash; sair do chão sem pular não conta. Cada degrau toca som_bhop bem baixo (bhop_som_volume), um tom acima do anterior (bhop_som_tom × bhop_som_passo por degrau).",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -58128,7 +58138,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Bunny hop: pular até bhop_janela s depois de pousar, andando a pelo menos bhop_vel_min da velocidade base, sobe a série (até bhop_max_serie) e a velocidade máxima ganha bhop_ganho da base por degrau. Ficar no chão mais que bhop_janela zera. Fora do dash; sair do chão sem pular não conta. Cada degrau toca som_bhop bem baixo (bhop_som_volume), um tom acima do anterior (bhop_som_tom × bhop_som_passo por degrau)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -58146,8 +58157,8 @@
                     },
                     {
                       "type": {
-                        "value": "AdvancedJump::HorizontalDash::IsDashing",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
                       },
                       "parameters": [
                         "pato",
@@ -58168,8 +58179,7 @@
                         "pato.PlatformerObject::MaxSpeed()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -58216,16 +58226,15 @@
                         "\"bhop_chao\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "PlatformBehavior::IsOnFloor",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsOnFloor"
                       },
                       "parameters": [
                         "pato",
@@ -58304,8 +58313,8 @@
                         },
                         {
                           "type": {
-                            "value": "AdvancedJump::HorizontalDash::IsDashing",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "AdvancedJump::HorizontalDash::IsDashing"
                           },
                           "parameters": [
                             "pato",
@@ -58360,8 +58369,7 @@
                             "pato.bhop_som_tom * pow(pato.bhop_som_passo, pato.bhop_serie - 1)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
@@ -58401,8 +58409,8 @@
                     },
                     {
                       "type": {
-                        "value": "AdvancedJump::HorizontalDash::IsDashing",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
                       },
                       "parameters": [
                         "pato",
@@ -58434,10 +58442,10 @@
                         "pato.bhop_vel_base"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -58932,14 +58940,13 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "name": "Soco",
               "source": "",
-              "creationTime": 0,
-              "colorR": 74,
-              "colorG": 176,
-              "colorB": 228,
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -58974,12 +58981,10 @@
                         "pato.Y()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -58987,7 +58992,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59025,12 +59031,10 @@
                         "0"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -59038,7 +59042,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59179,8 +59184,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -59213,8 +59217,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -59247,8 +59250,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -59281,8 +59283,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -59300,8 +59301,8 @@
                         },
                         {
                           "type": {
-                            "value": "AdvancedJump::HorizontalDash::IsDashing",
-                            "inverted": true
+                            "inverted": true,
+                            "value": "AdvancedJump::HorizontalDash::IsDashing"
                           },
                           "parameters": [
                             "pato",
@@ -59404,8 +59405,7 @@
                                 ""
                               ]
                             }
-                          ],
-                          "events": []
+                          ]
                         },
                         {
                           "type": "BuiltinCommonInstructions::JsCode",
@@ -59589,13 +59589,13 @@
                                 "yes"
                               ]
                             }
-                          ],
-                          "events": []
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Inimigo",
                       "conditions": [
                         {
                           "type": {
@@ -59706,9 +59706,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": [],
-                      "object": "Inimigo"
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -59738,8 +59736,7 @@
                             "RandomFloatInRange(0.93, 1.07)"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
@@ -59779,16 +59776,15 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "MouseButtonFromTextPressed",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "MouseButtonFromTextPressed"
                       },
                       "parameters": [
                         "",
@@ -59808,12 +59804,10 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\".",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -59821,7 +59815,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\"."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59849,8 +59844,7 @@
                         "pato.ZOrder() + 2"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59878,8 +59872,7 @@
                         "pato.ZOrder() + 1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59906,8 +59899,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -59934,8 +59926,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -60015,8 +60006,7 @@
                             "Terrestre.soco_dir * pato.soco_vel_inimigo"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
@@ -60054,8 +60044,7 @@
                         "\"__CoyoteTime_CoyoteJump\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -60073,8 +60062,8 @@
                     },
                     {
                       "type": {
-                        "value": "PlatformBehavior::IsFalling",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsFalling"
                       },
                       "parameters": [
                         "pato",
@@ -60094,8 +60083,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -60112,8 +60100,8 @@
                     },
                     {
                       "type": {
-                        "value": "AdvancedJump::HorizontalDash::IsDashing",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
                       },
                       "parameters": [
                         "pato",
@@ -60144,8 +60132,7 @@
                         "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -60173,8 +60160,7 @@
                         "0"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -60191,418 +60177,10 @@
                         "pato.Y()"
                       ]
                     }
-                  ],
-                  "events": []
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Troca de Arma",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Teclas 1/2/3 equipam pistola, doze e minigun (doze e minigun só se compradas, global armas) e guardam a escolha em arma_atual."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextJustPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Num1\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "pato",
-                    "na_loja",
-                    "False",
-                    ""
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "pistola",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Hide"
-                  },
-                  "parameters": [
-                    "Arma"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Show"
-                  },
-                  "parameters": [
-                    "pistola",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "arma_atual",
-                    "=",
-                    "\"pistola\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "som_troca_arma.wav",
-                    "",
-                    "50",
-                    "RandomFloatInRange(0.95, 1.05)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextJustPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Num2\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "armas.doze",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "pato",
-                    "na_loja",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "doze",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Hide"
-                  },
-                  "parameters": [
-                    "Arma"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Show"
-                  },
-                  "parameters": [
-                    "doze",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "arma_atual",
-                    "=",
-                    "\"doze\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "som_troca_arma.wav",
-                    "",
-                    "50",
-                    "RandomFloatInRange(0.95, 1.05)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextJustPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Num3\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "armas.minigun",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "pato",
-                    "na_loja",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "minigun",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Hide"
-                  },
-                  "parameters": [
-                    "Arma"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Show"
-                  },
-                  "parameters": [
-                    "minigun",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "arma_atual",
-                    "=",
-                    "\"minigun\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "som_troca_arma.wav",
-                    "",
-                    "50",
-                    "RandomFloatInRange(0.95, 1.05)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextJustPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Num4\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "armas.lanca",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "pato",
-                    "na_loja",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Arma",
-                    "equipada",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "lanca",
-                    "equipada",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Hide"
-                  },
-                  "parameters": [
-                    "Arma",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Show"
-                  },
-                  "parameters": [
-                    "lanca",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "arma_atual",
-                    "=",
-                    "\"lanca\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "som_troca_arma.wav",
-                    "",
-                    "50",
-                    "RandomFloatInRange(0.95, 1.05)"
-                  ]
-                }
-              ]
+              "parameters": []
             }
           ],
           "parameters": []
@@ -60618,16 +60196,376 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Só para a arma equipada: tiro, recarga, recuo da mira e som de cada arma."
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Troca de Arma",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Num1\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "equipada",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pistola",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Hide"
+                          },
+                          "parameters": [
+                            "Arma"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "pistola",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"pistola\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_troca_arma.wav",
+                            "",
+                            "50",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Num2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "armas.doze",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "equipada",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "doze",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Hide"
+                          },
+                          "parameters": [
+                            "Arma"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "doze",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"doze\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_troca_arma.wav",
+                            "",
+                            "50",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Num3\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "armas.minigun",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "equipada",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "minigun",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Hide"
+                          },
+                          "parameters": [
+                            "Arma"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "minigun",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_troca_arma.wav",
+                            "",
+                            "50",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextJustPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Num4\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "armas.lanca",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Arma",
+                            "equipada",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Hide"
+                          },
+                          "parameters": [
+                            "Arma",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "lanca",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_troca_arma.wav",
+                            "",
+                            "50",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -60653,6 +60591,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [],
@@ -60663,22 +60612,10 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
-                  "name": "Tiro e recarga",
+                  "name": "Tiro",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Clique atira na direção da mira; R recarrega; pente vazio recarrega sozinho com som."
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -60700,17 +60637,6 @@
                             ">=",
                             "1"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
                         }
                       ],
                       "actions": [
@@ -60730,7 +60656,20 @@
                           ]
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Recarga",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -60741,17 +60680,6 @@
                           "parameters": [
                             "",
                             "\"r\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
                           ]
                         }
                       ],
@@ -60825,22 +60753,10 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
-                  "name": "Recuo e sons",
+                  "name": "Recuo",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Cada tiro gira a mira para cima (recuo em graus, igual a qualquer distância do mouse, no máximo 35°) e toca o som da arma com pitch aleatório."
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -60887,7 +60803,20 @@
                           ]
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Muzzle Flash",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -60905,26 +60834,66 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlaySoundOnChannel"
+                            "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "som_pistola.wav",
-                            "1",
-                            "80",
-                            "80",
-                            "1"
+                            "flash_cano",
+                            "bocal_x",
+                            "bocal_y",
+                            ""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetSoundChannelPitch"
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "",
-                            "1",
-                            "*",
-                            "RandomFloatInRange(.96, 1.04)"
+                            "flash_cano",
+                            "Animation",
+                            "=",
+                            "\"pistola\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "dur",
+                            "=",
+                            "pistola.flash_dur"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "\"ttl\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Scale",
+                            "=",
+                            "pistola.flash_escala * RandomFloatInRange(0.85, 1.2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "mira_graus"
                           ]
                         }
                       ]
@@ -60946,66 +60915,66 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlaySoundOnChannel"
+                            "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "som_doze.wav",
-                            "1",
-                            "80",
-                            "80",
-                            "1"
+                            "flash_cano",
+                            "bocal_x",
+                            "bocal_y",
+                            ""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetSoundChannelPitch"
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "",
-                            "1",
-                            "*",
-                            "RandomFloatInRange(.97, 1.03)"
+                            "flash_cano",
+                            "Animation",
+                            "=",
+                            "\"doze\""
                           ]
-                        }
-                      ],
-                      "events": [
+                        },
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Wait"
-                              },
-                              "parameters": [
-                                "doze.pump_espera"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlaySoundOnChannel"
-                              },
-                              "parameters": [
-                                "",
-                                "som_doze_pump.wav",
-                                "2",
-                                "",
-                                "100",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetSoundChannelPitch"
-                              },
-                              "parameters": [
-                                "",
-                                "2",
-                                "*",
-                                "RandomFloatInRange(.8, .85)"
-                              ]
-                            }
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "dur",
+                            "=",
+                            "doze.flash_dur"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "\"ttl\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Scale",
+                            "=",
+                            "doze.flash_escala * RandomFloatInRange(0.85, 1.2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "mira_graus"
                           ]
                         }
                       ]
@@ -61027,15 +60996,251 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlaySoundOnChannel"
+                            "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "som_minigun.wav",
-                            "1",
-                            "80",
-                            "80",
-                            "1"
+                            "flash_cano",
+                            "bocal_x",
+                            "bocal_y",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Animation",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "dur",
+                            "=",
+                            "minigun.flash_dur"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "\"ttl\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Scale",
+                            "=",
+                            "minigun.flash_escala * RandomFloatInRange(0.85, 1.2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "mira_graus"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::HasJustFired"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "FireBullet",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "flash_cano",
+                            "bocal_x",
+                            "bocal_y",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Animation",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "dur",
+                            "=",
+                            "lanca.flash_dur"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "\"ttl\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "Scale",
+                            "=",
+                            "lanca.flash_escala * RandomFloatInRange(0.85, 1.2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "flash_cano",
+                            "=",
+                            "mira_graus"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "fogo_lanca",
+                            "bocal_x",
+                            "bocal_y",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "fogo_lanca",
+                            "=",
+                            "mira_graus"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Giro da minigun",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "giro",
+                            "=",
+                            "max(0, giro - pato.giro_decai * TimeDelta())"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "giro",
+                            "=",
+                            "min(1, giro + pato.giro_sobe * TimeDelta())"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSoundChannelVolume"
+                          },
+                          "parameters": [
+                            "",
+                            "5",
+                            "=",
+                            "35 * giro"
                           ]
                         },
                         {
@@ -61044,34 +61249,36 @@
                           },
                           "parameters": [
                             "",
-                            "1",
-                            "*",
-                            "RandomFloatInRange(.95, 1.05)"
+                            "5",
+                            "=",
+                            "0.75 + 0.45 * giro"
                           ]
                         }
                       ]
-                    },
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Sons",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
                       "colorB": 228,
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "Fogo do cano",
+                      "folded": true,
+                      "name": "Tiro",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Cada tiro cria o clarão (flash_cano, animação da arma) na boca do cano, apontado na direção do tiro; o grupo Clarão segue o cano e apaga o clarão em poucos centésimos de segundo."
-                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -61089,66 +61296,26 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Create"
+                                "value": "PlaySoundOnChannel"
                               },
                               "parameters": [
                                 "",
-                                "flash_cano",
-                                "bocal_x",
-                                "bocal_y",
-                                ""
+                                "som_pistola.wav",
+                                "1",
+                                "80",
+                                "80",
+                                "1"
                               ]
                             },
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                "value": "SetSoundChannelPitch"
                               },
                               "parameters": [
-                                "flash_cano",
-                                "Animation",
-                                "=",
-                                "\"pistola\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "dur",
-                                "=",
-                                "pistola.flash_dur"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "\"ttl\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "Scale",
-                                "=",
-                                "pistola.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "=",
-                                "mira_graus"
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.96, 1.04)"
                               ]
                             }
                           ]
@@ -61170,66 +61337,66 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Create"
+                                "value": "PlaySoundOnChannel"
                               },
                               "parameters": [
                                 "",
-                                "flash_cano",
-                                "bocal_x",
-                                "bocal_y",
-                                ""
+                                "som_doze.wav",
+                                "1",
+                                "80",
+                                "80",
+                                "1"
                               ]
                             },
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                "value": "SetSoundChannelPitch"
                               },
                               "parameters": [
-                                "flash_cano",
-                                "Animation",
-                                "=",
-                                "\"doze\""
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.97, 1.03)"
                               ]
-                            },
+                            }
+                          ],
+                          "events": [
                             {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "dur",
-                                "=",
-                                "doze.flash_dur"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "\"ttl\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "Scale",
-                                "=",
-                                "doze.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "=",
-                                "mira_graus"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "doze.pump_espera"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySoundOnChannel"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "som_doze_pump.wav",
+                                    "2",
+                                    "",
+                                    "100",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSoundChannelPitch"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "2",
+                                    "*",
+                                    "RandomFloatInRange(.8, .85)"
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -61251,66 +61418,26 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Create"
+                                "value": "PlaySoundOnChannel"
                               },
                               "parameters": [
                                 "",
-                                "flash_cano",
-                                "bocal_x",
-                                "bocal_y",
-                                ""
+                                "som_minigun.wav",
+                                "1",
+                                "80",
+                                "80",
+                                "1"
                               ]
                             },
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                "value": "SetSoundChannelPitch"
                               },
                               "parameters": [
-                                "flash_cano",
-                                "Animation",
-                                "=",
-                                "\"minigun\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "dur",
-                                "=",
-                                "minigun.flash_dur"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "\"ttl\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "Scale",
-                                "=",
-                                "minigun.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "=",
-                                "mira_graus"
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.95, 1.05)"
                               ]
                             }
                           ]
@@ -61332,88 +61459,26 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Create"
+                                "value": "PlaySoundOnChannel"
                               },
                               "parameters": [
                                 "",
-                                "flash_cano",
-                                "bocal_x",
-                                "bocal_y",
-                                ""
+                                "som_lanca.wav",
+                                "1",
+                                "90",
+                                "90",
+                                "1"
                               ]
                             },
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "Animation",
-                                "=",
-                                "\"lanca\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "dur",
-                                "=",
-                                "lanca.flash_dur"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "\"ttl\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "Scale",
-                                "=",
-                                "lanca.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "flash_cano",
-                                "=",
-                                "mira_graus"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Create"
+                                "value": "SetSoundChannelPitch"
                               },
                               "parameters": [
                                 "",
-                                "fogo_lanca",
-                                "bocal_x",
-                                "bocal_y",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "fogo_lanca",
+                                "1",
                                 "=",
-                                "mira_graus"
+                                "RandomFloatInRange(.97, 1.03)"
                               ]
                             }
                           ]
@@ -61422,686 +61487,390 @@
                       "parameters": []
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Recarga",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
-                          "type": {
-                            "value": "FireBullet::FireBullet::HasJustFired"
-                          },
-                          "parameters": [
-                            "lanca",
-                            "FireBullet",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_pistola.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(pistola.recarga_base / max(0.01, pistola.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "doze",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "doze",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "doze",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_doze.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(doze.recarga_base / max(0.01, doze.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_minigun.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(minigun.recarga_base / max(0.01, minigun.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_lanca.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(lanca.recarga_base / max(0.01, lanca.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pistola",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "doze",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "doze",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlaySoundOnChannel"
-                          },
-                          "parameters": [
-                            "",
-                            "som_lanca.wav",
-                            "1",
-                            "90",
-                            "90",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetSoundChannelPitch"
-                          },
-                          "parameters": [
-                            "",
-                            "1",
-                            "=",
-                            "RandomFloatInRange(.97, 1.03)"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Dispersão e lentidão",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Segurando o gatilho, a dispersão sobe de disp_min a disp_max em 2,5 s (só o minigun tem os dois diferentes). Atirando sem recarregar, o pato anda no máximo na fração vel_mov da velocidade (sem mexer no dash)."
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Left\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetTimer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"fogo\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "FireBullet::FireBullet::SetAngleVariance"
-                          },
-                          "parameters": [
-                            "Arma",
-                            "FireBullet",
-                            "Arma.disp_min + (Arma.disp_max - Arma.disp_min) * min(1, TimerElapsedTime(\"fogo\") / Arma.disp_tempo)",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Left\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "FireBullet::FireBullet::IsReloadInProgress"
-                          },
-                          "parameters": [
-                            "Arma",
-                            "FireBullet",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "AdvancedJump::HorizontalDash::IsDashing"
-                          },
-                          "parameters": [
-                            "pato",
-                            "HorizontalDash",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": []
+                      "parameters": []
                     }
                   ],
                   "parameters": []
                 }
               ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "folded": true,
-              "name": "Giro da minigun",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Segurar o tiro com a minigun acelera os canos (0 a 1 em 0.5 s); ela só atira com giro = 1. Soltar desacelera. O laço do canal 5 acompanha (volume e tom)."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "giro",
-                        "=",
-                        "max(0, giro - pato.giro_decai * TimeDelta())"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringVariable"
-                      },
-                      "parameters": [
-                        "arma_atual",
-                        "=",
-                        "\"minigun\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "na_loja",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "giro",
-                        "=",
-                        "min(1, giro + pato.giro_sobe * TimeDelta())"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetSoundChannelVolume"
-                      },
-                      "parameters": [
-                        "",
-                        "5",
-                        "=",
-                        "35 * giro"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSoundChannelPitch"
-                      },
-                      "parameters": [
-                        "",
-                        "5",
-                        "=",
-                        "0.75 + 0.45 * giro"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "folded": true,
-              "name": "Som de recarga",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Toca uma vez quando a recarga começa; o tom segue a duração da recarga (upgrades encurtam)."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "FireBullet",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "som_recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundOnChannel"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_pistola.wav",
-                        "6",
-                        "",
-                        "80",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSoundChannelPitch"
-                      },
-                      "parameters": [
-                        "",
-                        "6",
-                        "=",
-                        "clamp(pistola.recarga_base / max(0.01, pistola.FireBullet::ReloadDuration()), 1, 2)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "FireBullet",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pistola",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "doze",
-                        "FireBullet",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "doze",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "doze",
-                        "som_recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundOnChannel"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_doze.wav",
-                        "6",
-                        "",
-                        "80",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSoundChannelPitch"
-                      },
-                      "parameters": [
-                        "",
-                        "6",
-                        "=",
-                        "clamp(doze.recarga_base / max(0.01, doze.FireBullet::ReloadDuration()), 1, 2)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "doze",
-                        "FireBullet",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "doze",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "FireBullet",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "som_recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundOnChannel"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_minigun.wav",
-                        "6",
-                        "",
-                        "80",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSoundChannelPitch"
-                      },
-                      "parameters": [
-                        "",
-                        "6",
-                        "=",
-                        "clamp(minigun.recarga_base / max(0.01, minigun.FireBullet::ReloadDuration()), 1, 2)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "FireBullet",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "minigun",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "FireBullet",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "som_recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundOnChannel"
-                      },
-                      "parameters": [
-                        "",
-                        "som_recarga_lanca.wav",
-                        "6",
-                        "",
-                        "80",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSoundChannelPitch"
-                      },
-                      "parameters": [
-                        "",
-                        "6",
-                        "=",
-                        "clamp(lanca.recarga_base / max(0.01, lanca.FireBullet::ReloadDuration()), 1, 2)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FireBullet::FireBullet::IsReloadInProgress"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "FireBullet",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "lanca",
-                        "som_recarga",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
             }
           ],
           "parameters": []
@@ -70831,7 +70600,6 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Granada com ricochetes sobrando explode no terreno sem sumir (projetil.quica); o evento de Ricochete, mais abaixo, a rebate.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -70839,10 +70607,12 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Granada com ricochetes sobrando explode no terreno sem sumir (projetil.quica); o evento de Ricochete, mais abaixo, a rebate."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -70902,9 +70672,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": [],
-                  "object": "projetil"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -71043,8 +70811,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -71084,8 +70851,7 @@
                             ""
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 }
@@ -71236,7 +71002,6 @@
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Ricochete: bala do jogador com ricochetes sobrando quica no terreno como num espelho (upgrades.ricochete, pato.ricochete_perda).",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -71244,10 +71009,12 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Ricochete: bala do jogador com ricochetes sobrando quica no terreno como num espelho (upgrades.ricochete, pato.ricochete_perda)."
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
+              "object": "projetil",
               "conditions": [
                 {
                   "type": {
@@ -71334,7 +71101,6 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Só o movimento em Y ainda bate: chão/teto (inverte Y). Só o movimento em X bate: parede (inverte X). Nenhum dos dois ou os dois: quina (inverte os dois).",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -71342,7 +71108,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Só o movimento em Y ainda bate: chão/teto (inverte Y). Só o movimento em X bate: parede (inverte X). Nenhum dos dois ou os dois: quina (inverte os dois)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -71372,8 +71139,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -71391,8 +71157,7 @@
                         "projetil.py"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -71422,8 +71187,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -71474,8 +71238,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -71661,13 +71424,11 @@
                             "projetil.ang"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 }
-              ],
-              "object": "projetil"
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -71723,8 +71484,7 @@
                     "projetil.Y()"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -73623,19 +73383,16 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Eletricidade",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Eletricidade",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Eletricidade (upgrades.eletricidade): cada bala do jogador se liga por um raio à bala mais próxima disparada antes dela, até pato.eletro_alcance px. A cada pato.eletro_intervalo s o raio dá dano em todo inimigo a menos de pato.eletro_largura px dele.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -73643,7 +73400,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Eletricidade (upgrades.eletricidade): cada bala do jogador se liga por um raio à bala mais próxima disparada antes dela, até pato.eletro_alcance px. A cada pato.eletro_intervalo s o raio dá dano em todo inimigo a menos de pato.eletro_largura px dele."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -73683,8 +73441,7 @@
                     "900"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -73774,13 +73531,13 @@
                             "0"
                           ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "projetil",
                   "conditions": [
                     {
                       "type": {
@@ -73965,6 +73722,7 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Repeat",
+                              "repeatExpression": "pato.eletro_segmentos",
                               "conditions": [],
                               "actions": [
                                 {
@@ -74004,8 +73762,7 @@
                                         "0"
                                       ]
                                     }
-                                  ],
-                                  "events": []
+                                  ]
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
@@ -74074,11 +73831,9 @@
                                         "1"
                                       ]
                                     }
-                                  ],
-                                  "events": []
+                                  ]
                                 }
-                              ],
-                              "repeatExpression": "pato.eletro_segmentos"
+                              ]
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
@@ -74098,6 +73853,7 @@
                               "events": [
                                 {
                                   "type": "BuiltinCommonInstructions::ForEach",
+                                  "object": "Inimigo",
                                   "conditions": [
                                     {
                                       "type": {
@@ -74160,11 +73916,9 @@
                                             "max(1, round(pato.eletro_dano * GlobalVariable(upgrades.eletricidade) * GlobalVariable(mult_dano)))"
                                           ]
                                         }
-                                      ],
-                                      "events": []
+                                      ]
                                     }
-                                  ],
-                                  "object": "Inimigo"
+                                  ]
                                 }
                               ]
                             }
@@ -74172,12 +73926,12 @@
                         }
                       ]
                     }
-                  ],
-                  "object": "projetil"
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ]
     },
@@ -75999,8 +75753,7 @@
                     "pato.PlatformerObject::MaxSpeed()"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76183,7 +75936,6 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Loja do Hub: o menu é montado a partir da global loja_catalogo. Para criar um upgrade, adicione um item lá.",
           "color": {
             "b": 109,
             "g": 230,
@@ -76191,22 +75943,20 @@
             "textB": 0,
             "textG": 0,
             "textR": 0
-          }
+          },
+          "comment": "Loja do Hub: o menu é montado a partir da global loja_catalogo. Para criar um upgrade, adicione um item lá."
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Dica",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Dica",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Um \"E\" aparece sobre o mercador calmo quando o pato está perto e a loja está fechada.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -76214,7 +75964,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Um \"E\" aparece sobre o mercador calmo quando o pato está perto e a loja está fechada."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76251,8 +76002,7 @@
                     "900"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76266,8 +76016,7 @@
                     "loja_dica"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76338,25 +76087,22 @@
                     "trader.Y() - loja_dica.Height() - 8"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Abrir e fechar",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Abrir e fechar",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "E abre perto do mercador calmo e fecha; Esc fecha. Quem quiser abrir/fechar a loja muda loja_acao.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -76364,7 +76110,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "E abre perto do mercador calmo e fecha; Esc fecha. Quem quiser abrir/fechar a loja muda loja_acao."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76406,8 +76153,7 @@
                         "\"fechar\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -76467,8 +76213,7 @@
                         "\"abrir\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
@@ -76506,8 +76251,7 @@
                     "\"fechar\""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76602,6 +76346,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "GlobalVariableChildCount(loja_catalogo)",
                   "conditions": [],
                   "actions": [
                     {
@@ -76647,9 +76392,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": [],
-                  "repeatExpression": "GlobalVariableChildCount(loja_catalogo)"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -76687,8 +76430,7 @@
                         "\"\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
@@ -76794,27 +76536,24 @@
                         "\"idle\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Menu",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Menu",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "W/S ou o mouse escolhem a linha. Cada linha é recalculada a partir do catálogo a cada quadro.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -76822,7 +76561,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "W/S ou o mouse escolhem a linha. Cada linha é recalculada a partir do catálogo a cada quadro."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76868,8 +76608,7 @@
                     "mod(loja_sel - 1 + GlobalVariableChildCount(loja_catalogo), GlobalVariableChildCount(loja_catalogo))"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76915,8 +76654,7 @@
                     "mod(loja_sel + 1, GlobalVariableChildCount(loja_catalogo))"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76953,8 +76691,7 @@
                     "loja_linha.indice"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -76994,11 +76731,11 @@
                     "GlobalVariableString(loja_catalogo[loja_sel].descricao)"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
+              "object": "loja_linha",
               "conditions": [],
               "actions": [
                 {
@@ -77078,8 +76815,7 @@
                         "GlobalVariable(armas[loja_id])"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77106,8 +76842,7 @@
                         "GlobalVariable(upgrades[loja_id])"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77133,8 +76868,7 @@
                         "GlobalVariableString(loja_catalogo[loja_linha.indice].nome) + \"   \" + ToString(loja_nivel) + \"/\" + ToString(loja_max) + \"   \""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77171,12 +76905,10 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "Texto e cor: a última regra que vale ganha (selecionada > bloqueada > no máximo > cara > ok).",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -77184,7 +76916,8 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "Texto e cor: a última regra que vale ganha (selecionada > bloqueada > no máximo > cara > ok)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77210,8 +76943,7 @@
                         "loja_cor_ok"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77237,8 +76969,7 @@
                         "loja_cor_caro"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77275,8 +77006,7 @@
                         "loja_cor_max"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77313,8 +77043,7 @@
                         "loja_cor_bloq"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77401,28 +77130,24 @@
                         "loja_bloq"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ],
-              "object": "loja_linha"
+              ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Compra",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Compra",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Espaço ou clique compra a linha selecionada se não estiver no máximo, nem bloqueada, e houver moedas.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -77430,11 +77155,11 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Espaço ou clique compra a linha selecionada se não estiver no máximo, nem bloqueada, e houver moedas."
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Clique só vale se o botão foi apertado de novo sobre uma linha com a loja aberta, e solto sobre uma linha.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -77442,7 +77167,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Clique só vale se o botão foi apertado de novo sobre uma linha com a loja aberta, e solto sobre uma linha."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77458,8 +77184,7 @@
                     "0"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77495,8 +77220,7 @@
                     "1"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77552,8 +77276,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77609,8 +77332,7 @@
                     "1"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77636,16 +77358,15 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "MouseButtonFromTextPressed",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "MouseButtonFromTextPressed"
                   },
                   "parameters": [
                     "",
@@ -77674,8 +77395,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77790,8 +77510,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -77818,8 +77537,7 @@
                         "1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
@@ -77887,27 +77605,24 @@
                         "\"dialogo\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Mercador",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Mercador",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Mercador como inimigo secreto (tarefa 32).",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -77915,11 +77630,11 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Mercador como inimigo secreto (tarefa 32)."
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Calmo: cada vez que a vida do mercador cai (bala, explosão ou soco) conta um golpe. Quando os golpes chegam à paciência, ele fica hostil e fecha a loja.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -77927,7 +77642,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Calmo: cada vez que a vida do mercador cai (bala, explosão ou soco) conta um golpe. Quando os golpes chegam à paciência, ele fica hostil e fecha a loja."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -77953,8 +77669,7 @@
                     "trader.vida"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -78005,8 +77720,7 @@
                     "trader.vida"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -78095,25 +77809,21 @@
                         "\"fechar\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
-              "name": "Ataques do trader",
-              "source": "",
-              "folded": false,
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "parameters": [],
+              "name": "Ataques do trader",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
-                  "comment": "A fazer: ataques do mercador hostil (trader.estado = \"hostil\"). Projéteis dele devem ter projetil_inimigo.origem = \"trader\" para a multa valer.",
                   "color": {
                     "b": 109,
                     "g": 230,
@@ -78121,9 +77831,11 @@
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
-                  }
+                  },
+                  "comment": "A fazer: ataques do mercador hostil (trader.estado = \"hostil\"). Projéteis dele devem ter projetil_inimigo.origem = \"trader\" para a multa valer."
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -78160,19 +77872,16 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Group",
-                  "name": "Quando o trader morre",
-                  "source": "",
-                  "folded": false,
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "parameters": [],
+                  "name": "Quando o trader morre",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
-                      "comment": "A decidir: o que muda quando o pato mata o mercador (global trader_morto).",
                       "color": {
                         "b": 109,
                         "g": 230,
@@ -78180,28 +77889,28 @@
                         "textB": 0,
                         "textG": 0,
                         "textR": 0
-                      }
+                      },
+                      "comment": "A decidir: o que muda quando o pato mata o mercador (global trader_morto)."
                     }
-                  ]
+                  ],
+                  "parameters": []
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "name": "Barra do mercador",
-          "source": "",
-          "folded": false,
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "parameters": [],
+          "name": "Barra do mercador",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Barra de vida do mercador hostil (tarefa 32).",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -78209,11 +77918,11 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Barra de vida do mercador hostil (tarefa 32)."
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
-              "comment": "Barra de vida do mercador hostil, usando a barra do boss do HUD.",
               "color": {
                 "b": 109,
                 "g": 230,
@@ -78221,7 +77930,8 @@
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
-              }
+              },
+              "comment": "Barra de vida do mercador hostil, usando a barra do boss do HUD."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -78372,8 +78082,7 @@
                         "trader.rastro_vel * TimeDelta()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -78401,12 +78110,12 @@
                         "hud_boss_fill.Width()"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ]
     }
