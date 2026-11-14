@@ -9820,6 +9820,38 @@
         "name": "assets/plataforma_movel/idle_05.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo_escuro/ceu_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo_escuro/ceu_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo_escuro/fundo_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo_escuro/fundo_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo_escuro/meio_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo_escuro/meio_3x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/gandalf_hell/fundo_escuro/frente_3x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/gandalf_hell/fundo_escuro/frente_3x.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -56105,6 +56137,82 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "bg_inferno_noite_ceu",
+      "persistentUuid": "496562d2-785b-5049-98d5-a2009c48eb1a",
+      "texture": "assets/gandalf_hell/fundo_escuro/ceu_3x.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 3840,
+      "variables": [
+        {
+          "name": "parallax",
+          "persistentUuid": "ee919221-25d1-5f3f-90de-d18cf9b7b68a",
+          "type": "number",
+          "value": 0.03
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "bg_inferno_noite_fundo",
+      "persistentUuid": "0638d11d-c63f-5b4c-8da7-b0b06a73d2de",
+      "texture": "assets/gandalf_hell/fundo_escuro/fundo_3x.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 3840,
+      "variables": [
+        {
+          "name": "parallax",
+          "persistentUuid": "db2c1680-01ba-5106-8c98-2bc876b02e68",
+          "type": "number",
+          "value": 0.12
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "bg_inferno_noite_meio",
+      "persistentUuid": "af8cf699-a3b2-562b-b409-893b41fb96d0",
+      "texture": "assets/gandalf_hell/fundo_escuro/meio_3x.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 3840,
+      "variables": [
+        {
+          "name": "parallax",
+          "persistentUuid": "ad9a9bd0-60cf-58f3-9fe4-06ce6a33bac8",
+          "type": "number",
+          "value": 0.25
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "bg_inferno_noite_frente",
+      "persistentUuid": "d5ffae80-04c1-56a1-a096-bedf2c2a4e9a",
+      "texture": "assets/gandalf_hell/fundo_escuro/frente_3x.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 3840,
+      "variables": [
+        {
+          "name": "parallax",
+          "persistentUuid": "f5ab7f08-051d-5b2b-b69e-4214ce37983b",
+          "type": "number",
+          "value": 0.4
+        }
+      ],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -56460,6 +56568,18 @@
               },
               {
                 "objectName": "bg_inferno_escuro_frente"
+              },
+              {
+                "objectName": "bg_inferno_noite_ceu"
+              },
+              {
+                "objectName": "bg_inferno_noite_fundo"
+              },
+              {
+                "objectName": "bg_inferno_noite_meio"
+              },
+              {
+                "objectName": "bg_inferno_noite_frente"
               }
             ]
           }
@@ -59601,6 +59721,66 @@
           "persistentUuid": "e3d86890-c106-4fc8-a9a0-1dd8cc3c98b7",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "fundo_troca_y_baixo",
+          "persistentUuid": "f2d10cd3-7c71-5a2e-ab7e-72bd4d82c82d",
+          "type": "number",
+          "value": -400
+        },
+        {
+          "name": "fundo_troca_y_alto",
+          "persistentUuid": "6a614957-1df7-5498-a586-9f71d363f06f",
+          "type": "number",
+          "value": -2000
+        },
+        {
+          "name": "fundo_troca_suave",
+          "persistentUuid": "dc5c2e9c-697b-5f04-a68f-4d07356ba579",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "fundo_mistura",
+          "persistentUuid": "62c3de18-7a5b-5c18-90fb-29e51432e632",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fundo_cor_r",
+          "persistentUuid": "41a3196b-f77a-56bd-aa15-376c90190370",
+          "type": "number",
+          "value": 198
+        },
+        {
+          "name": "fundo_cor_g",
+          "persistentUuid": "87df039a-95e4-5fd3-8dd1-bc9d78ebb664",
+          "type": "number",
+          "value": 48
+        },
+        {
+          "name": "fundo_cor_b",
+          "persistentUuid": "55b04463-074d-5ad8-b884-a50c772a2beb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fundo_noite_cor_r",
+          "persistentUuid": "b39555d8-5f23-501e-8639-55b3f4e01b94",
+          "type": "number",
+          "value": 37
+        },
+        {
+          "name": "fundo_noite_cor_g",
+          "persistentUuid": "e04afeaa-f8af-5025-8c92-e28b7ad6317c",
+          "type": "number",
+          "value": 42
+        },
+        {
+          "name": "fundo_noite_cor_b",
+          "persistentUuid": "570a36aa-ee4e-5918-bd0c-8ed9bb1cf672",
+          "type": "number",
+          "value": 51
         }
       ],
       "instances": [
@@ -60659,6 +60839,13 @@
             "includeConfig": 0
           },
           "target": "Plataformas"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "FundoEscuro"
         }
       ],
       "layers": [
@@ -83605,6 +83792,408 @@
                     "plataforma_movel.ini_x + (plataforma_movel.fim_x - plataforma_movel.ini_x) * (1 - cos(plataforma_movel.fase * 3.14159265)) / 2",
                     "=",
                     "plataforma_movel.ini_y + (plataforma_movel.fim_y - plataforma_movel.ini_y) * (1 - cos(plataforma_movel.fase * 3.14159265)) / 2"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Inferno",
+      "name": "FundoEscuro",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Troca do fundo pela altura do pato. fundo_mistura vai de 0 (inferno normal, pato abaixo de fundo_troca_y_baixo) a 1 (inferno escuro, pato acima de fundo_troca_y_alto) e persegue esse alvo com a suavidade de fundo_troca_suave. As camadas escuras (bg_inferno_noite_*) ficam por cima das normais com opacidade 255 * fundo_mistura, e a cor de fundo da cena vai de fundo_cor_* a fundo_noite_cor_*. Como depende só da altura, vale subindo e descendo."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Fundo escuro",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_inferno_noite_ceu",
+                    "bg_inferno_ceu.X()",
+                    "bg_inferno_ceu.Y()",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_ceu.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_ceu.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "=",
+                    "bg_inferno_frente.ZOrder() + 1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_inferno_noite_fundo",
+                    "bg_inferno_fundo.X()",
+                    "bg_inferno_fundo.Y()",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_fundo.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_fundo.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "=",
+                    "bg_inferno_frente.ZOrder() + 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_inferno_noite_meio",
+                    "bg_inferno_meio.X()",
+                    "bg_inferno_meio.Y()",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_meio.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_meio.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "=",
+                    "bg_inferno_frente.ZOrder() + 3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_inferno_noite_frente",
+                    "bg_inferno_frente.X()",
+                    "bg_inferno_frente.Y()",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_frente.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "Resizable",
+                    "=",
+                    "bg_inferno_frente.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "=",
+                    "bg_inferno_frente.ZOrder() + 4"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "fundo_mistura",
+                    "=",
+                    "clamp((fundo_troca_y_baixo - pato.CenterY()) / max(1, fundo_troca_y_baixo - fundo_troca_y_alto), 0, 1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "pato",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "fundo_mistura",
+                    "+",
+                    "(clamp((fundo_troca_y_baixo - pato.CenterY()) / max(1, fundo_troca_y_baixo - fundo_troca_y_alto), 0, 1) - fundo_mistura) * min(1, fundo_troca_suave * TimeDelta())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "Opacity",
+                    "=",
+                    "255 * fundo_mistura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "Opacity",
+                    "=",
+                    "255 * fundo_mistura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "Opacity",
+                    "=",
+                    "255 * fundo_mistura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "Opacity",
+                    "=",
+                    "255 * fundo_mistura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_ceu",
+                    "=",
+                    "CameraCenterX() * bg_inferno_noite_ceu.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_fundo",
+                    "=",
+                    "CameraCenterX() * bg_inferno_noite_fundo.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_meio",
+                    "=",
+                    "CameraCenterX() * bg_inferno_noite_meio.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_inferno_noite_frente",
+                    "=",
+                    "CameraCenterX() * bg_inferno_noite_frente.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneBackground"
+                  },
+                  "parameters": [
+                    "",
+                    "ToString(round(lerp(fundo_cor_r, fundo_noite_cor_r, fundo_mistura))) + \";\" + ToString(round(lerp(fundo_cor_g, fundo_noite_cor_g, fundo_mistura))) + \";\" + ToString(round(lerp(fundo_cor_b, fundo_noite_cor_b, fundo_mistura)))"
                   ]
                 }
               ]
