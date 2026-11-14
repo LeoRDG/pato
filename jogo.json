@@ -15199,6 +15199,12 @@
           "persistentUuid": "258bca8a-7328-4d9b-a91a-d76903f43a4b",
           "type": "number",
           "value": 6
+        },
+        {
+          "name": "tem_gravidade",
+          "persistentUuid": "42091cb5-43d0-5344-a8a6-755537c081a2",
+          "type": "boolean",
+          "value": true
         }
       ],
       "effects": [
@@ -77668,6 +77674,17 @@
                         "moeda",
                         "parada",
                         "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "tem_gravidade",
+                        "True",
                         ""
                       ]
                     }
