@@ -25001,6 +25001,63 @@
       }
     },
     {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "hud_tempo",
+      "persistentUuid": "6edf190b-5810-5863-bf64-c2af850a52dd",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "name": "margem_x",
+          "persistentUuid": "723eceea-73c5-5fb8-9496-255de8f81e68",
+          "type": "number",
+          "value": 48
+        },
+        {
+          "name": "margem_y",
+          "persistentUuid": "40ff2834-c689-56bb-9ba1-85464c4458e2",
+          "type": "number",
+          "value": 18
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "string": "00:00",
+      "font": "Name Smile.otf",
+      "textAlignment": "left",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "00:00",
+        "font": "Name Smile.otf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 30,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "hud_moeda",
@@ -50251,6 +50308,9 @@
                 "objectName": "hud_boss_nome"
               }
             ]
+          },
+          {
+            "objectName": "hud_tempo"
           }
         ]
       },
@@ -52426,6 +52486,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_tempo",
+          "persistentUuid": "fac6fefa-c391-518a-bca2-71c353f19ab6",
+          "width": 0,
+          "x": 1782,
+          "y": 18,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -54146,6 +54222,22 @@
           "x": -960,
           "y": 0,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "hud_tempo",
+          "persistentUuid": "85c50ab6-5a0a-5913-99e2-354cd973643e",
+          "width": 0,
+          "x": 1782,
+          "y": 18,
+          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -74087,6 +74179,71 @@
                             "hud_boss_fill.Width()"
                           ]
                         }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Tempo",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneJustBegins"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"tempo_cena\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "hud_tempo",
+                        "Text",
+                        "=",
+                        "SubStr(ToString(100 + floor(TimerElapsedTime(\"tempo_cena\") / 60)), 1, 2) + \":\" + SubStr(ToString(100 + mod(floor(TimerElapsedTime(\"tempo_cena\")), 60)), 1, 2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "hud_tempo",
+                        "=",
+                        "CameraCenterX(\"HUD\") + CameraWidth(\"HUD\") / 2 - hud_tempo.margem_x - hud_tempo.Width()",
+                        "=",
+                        "CameraCenterY(\"HUD\") - CameraHeight(\"HUD\") / 2 + hud_tempo.margem_y"
                       ]
                     }
                   ]
