@@ -9511,6 +9511,48 @@
           "persistentUuid": "458f4bc5-4c44-44de-86b4-935fe2e5f6c5",
           "type": "number",
           "value": 0.2
+        },
+        {
+          "name": "eletro_alcance",
+          "persistentUuid": "9dc27f0b-82a8-4c55-a6ac-4fa80cac6d9c",
+          "type": "number",
+          "value": 260
+        },
+        {
+          "name": "eletro_dano",
+          "persistentUuid": "5768a9ca-c93a-4e7d-89c5-ae1921d05b62",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "eletro_intervalo",
+          "persistentUuid": "949ca00c-3748-4759-aa09-3c479b41c412",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "eletro_largura",
+          "persistentUuid": "7673baa9-47fb-449e-aaa5-622aed92d5b8",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "eletro_espessura",
+          "persistentUuid": "88792b4f-2e77-4e0c-b2b7-5d7dfea7db7c",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "eletro_tremor",
+          "persistentUuid": "e4854bcb-ed06-45c3-a9e3-836cca9b1a17",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "eletro_segmentos",
+          "persistentUuid": "4e88f2be-4d91-4ea5-957f-62fbce07ed5d",
+          "type": "number",
+          "value": 5
         }
       ],
       "effects": [],
@@ -49941,6 +49983,45 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "eletro_raio",
+      "persistentUuid": "de5b090f-b5a8-413f-9971-d74ef49ceab0",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 5,
+            "outerStrength": 6
+          },
+          "stringParameters": {
+            "color": "90;180;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "fillOpacity": 123,
+      "outlineSize": 1,
+      "outlineOpacity": 230,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 140,
+        "g": 215,
+        "b": 255
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -50844,6 +50925,12 @@
           "persistentUuid": "79657652-2a95-4673-b98f-0a142d93b034",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "eletricidade",
+          "persistentUuid": "6dd4d229-1c21-49d3-b0fb-40caebe517df",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -51314,6 +51401,60 @@
               "value": ""
             }
           ]
+        },
+        {
+          "type": "structure",
+          "persistentUuid": "87434237-b8c7-4b2b-8069-75db783992d3",
+          "children": [
+            {
+              "name": "id",
+              "persistentUuid": "622c19ea-dae2-4325-9171-bf40b64f1d62",
+              "type": "string",
+              "value": "eletricidade"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "125cf942-8ef4-405c-8f8e-3d9c923f2cd4",
+              "type": "string",
+              "value": "Eletricidade"
+            },
+            {
+              "name": "descricao",
+              "persistentUuid": "453747e9-39dd-4ad1-a699-0ee497cfad1c",
+              "type": "string",
+              "value": "Raios ligam as balas no ar e dão dano em quem encostar; +dano por nível"
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "a9bea54d-dfe9-4840-8534-26fcbc47845f",
+              "type": "string",
+              "value": "upgrade"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "6d2c6e81-5a04-4bc6-97ea-0cdf3af1a0eb",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "955686d3-1e50-4234-87bb-a88c932925e7",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "e90fcc6f-7922-4df8-a21a-2e387aa1fc9e",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "5b6fc3cc-f4d2-4b6f-880d-555ee5aece82",
+              "type": "string",
+              "value": ""
+            }
+          ]
         }
       ]
     },
@@ -51328,6 +51469,108 @@
       "persistentUuid": "04aa8751-330b-4213-9246-bf62dc3b7545",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "eletro_relogio",
+      "persistentUuid": "6fec038f-baca-4d4b-ac1d-7e30add0b5f1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_tick",
+      "persistentUuid": "ac019ae6-5eb8-4cfa-944b-063114ab212b",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_ax",
+      "persistentUuid": "c350179d-48f5-4c4d-b30c-afbe95fcf530",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_ay",
+      "persistentUuid": "2688fc4a-2d54-4fc8-ba78-a7a9f52ae77c",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_bx",
+      "persistentUuid": "c364e748-bb4e-46a1-aacf-69425743326b",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_by",
+      "persistentUuid": "44d42dc6-e8d1-43c7-aea8-6d5406414b95",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_serie",
+      "persistentUuid": "0c2423ef-a566-4fe4-892a-73964a02ab2b",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_len",
+      "persistentUuid": "b40592ab-fe81-44aa-a4ae-fe4f9cecb67e",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_len2",
+      "persistentUuid": "0e38249d-17c1-47a3-aae2-297879b9b66e",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_i",
+      "persistentUuid": "c6f31444-9c08-4af1-b68c-faf0658f3d76",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_off",
+      "persistentUuid": "f0070fad-3cbe-42f5-af65-fd227388ab3d",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_x0",
+      "persistentUuid": "b5f7491b-bf68-462c-899c-5d5756aa2025",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_y0",
+      "persistentUuid": "4fc015ae-cbb1-4465-b720-2ee1981271e1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_x1",
+      "persistentUuid": "5858c01f-a055-4b35-8dab-71bd69fd9c80",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_y1",
+      "persistentUuid": "5b5755fb-fd8e-4280-b183-5d38dd128274",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_t",
+      "persistentUuid": "c1e58eb9-868e-4a2c-8f40-c1f8840abc15",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "eletro_d",
+      "persistentUuid": "951206f2-7cf2-4701-82e2-00d64f315537",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -73291,6 +73534,563 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Eletricidade",
+          "source": "",
+          "folded": false,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "comment": "Eletricidade (upgrades.eletricidade): cada bala do jogador se liga por um raio à bala mais próxima disparada antes dela, até pato.eletro_alcance px. A cada pato.eletro_intervalo s o raio dá dano em todo inimigo a menos de pato.eletro_largura px dele.",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              }
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "eletro_raio",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "eletro_raio",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "eletro_raio",
+                    "=",
+                    "900"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "GlobalVariable(upgrades.eletricidade)",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "pato",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "eletro_tick",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "eletro_relogio",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "eletro_relogio",
+                            ">=",
+                            "pato.eletro_intervalo"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_tick",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_relogio",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "eletro_ax",
+                        "=",
+                        "projetil.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "eletro_ay",
+                        "=",
+                        "projetil.CenterY()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "eletro_serie",
+                        "=",
+                        "projetil.serie"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "projetil"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "iniciado",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "serie",
+                            "<",
+                            "eletro_serie"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PickNearest"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "eletro_ax",
+                            "eletro_ay",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_bx",
+                            "=",
+                            "projetil.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_by",
+                            "=",
+                            "projetil.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_len2",
+                            "=",
+                            "pow(eletro_bx - eletro_ax, 2) + pow(eletro_by - eletro_ay, 2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "eletro_len",
+                            "=",
+                            "sqrt(eletro_len2)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "eletro_len",
+                                "<=",
+                                "pato.eletro_alcance"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "eletro_x0",
+                                "=",
+                                "eletro_ax"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "eletro_y0",
+                                "=",
+                                "eletro_ay"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "eletro_i",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Repeat",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "eletro_off",
+                                    "=",
+                                    "RandomFloatInRange(-pato.eletro_tremor, pato.eletro_tremor)"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                                      },
+                                      "parameters": [
+                                        "eletro_i + 1",
+                                        ">=",
+                                        "pato.eletro_segmentos"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_off",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_x1",
+                                        "=",
+                                        "eletro_ax + (eletro_bx - eletro_ax) * (eletro_i + 1) / pato.eletro_segmentos - (eletro_by - eletro_ay) / max(1, eletro_len) * eletro_off"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_y1",
+                                        "=",
+                                        "eletro_ay + (eletro_by - eletro_ay) * (eletro_i + 1) / pato.eletro_segmentos + (eletro_bx - eletro_ax) / max(1, eletro_len) * eletro_off"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PrimitiveDrawing::LineV2"
+                                      },
+                                      "parameters": [
+                                        "eletro_raio",
+                                        "eletro_x0",
+                                        "eletro_y0",
+                                        "eletro_x1",
+                                        "eletro_y1",
+                                        "pato.eletro_espessura"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_x0",
+                                        "=",
+                                        "eletro_x1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_y0",
+                                        "=",
+                                        "eletro_y1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_i",
+                                        "+",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ],
+                              "repeatExpression": "pato.eletro_segmentos"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "eletro_tick",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::ForEach",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Inimigo",
+                                        "morto",
+                                        "False",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_t",
+                                        "=",
+                                        "clamp(((Inimigo.CenterX() - eletro_ax) * (eletro_bx - eletro_ax) + (Inimigo.CenterY() - eletro_ay) * (eletro_by - eletro_ay)) / max(1, eletro_len2), 0, 1)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "eletro_d",
+                                        "=",
+                                        "sqrt(pow(max(0, abs(eletro_ax + eletro_t * (eletro_bx - eletro_ax) - Inimigo.CenterX()) - Inimigo.Width() / 2), 2) + pow(max(0, abs(eletro_ay + eletro_t * (eletro_by - eletro_ay) - Inimigo.CenterY()) - Inimigo.Height() / 2), 2))"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "eletro_d",
+                                            "<",
+                                            "pato.eletro_largura"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Inimigo",
+                                            "vida",
+                                            "-",
+                                            "max(1, round(pato.eletro_dano * GlobalVariable(upgrades.eletricidade) * GlobalVariable(mult_dano)))"
+                                          ]
+                                        }
+                                      ],
+                                      "events": []
+                                    }
+                                  ],
+                                  "object": "Inimigo"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "object": "projetil"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
