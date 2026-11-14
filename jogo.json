@@ -9312,7 +9312,7 @@
           "name": "morte_espera",
           "persistentUuid": "31d15970-3a57-4d15-a0de-48db177e2c40",
           "type": "number",
-          "value": 0.15
+          "value": 0.56
         },
         {
           "name": "soco_alcance_parede",
@@ -9593,6 +9593,7 @@
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "maxFallingSpeed": 2000,
           "canGrabWithoutMoving": false,
           "maxSpeed": 700,
           "acceleration": 4200,
@@ -9604,7 +9605,6 @@
           "canGrabPlatforms": false,
           "deceleration": 2600,
           "ladderClimbingSpeed": 150,
-          "maxFallingSpeed": 700,
           "slopeMaxAngle": 60,
           "useLegacyTrajectory": false,
           "useRepeatedJump": false,
@@ -24869,12 +24869,12 @@
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
       "emitterAngleA": 0,
-      "emitterAngleB": 25,
-      "emitterForceMax": 900,
-      "emitterForceMin": 600,
+      "emitterAngleB": 45,
+      "emitterForceMax": 500,
+      "emitterForceMin": 400,
       "flow": 200,
       "jumpForwardInTimeOnCreation": 0,
-      "maxParticleNb": 60,
+      "maxParticleNb": 30,
       "name": "cagada",
       "particleAlpha1": 218,
       "particleAlpha2": 0,
@@ -24892,12 +24892,12 @@
       "particleGravityY": 0,
       "particleGreen1": 42,
       "particleGreen2": 81,
-      "particleLifeTimeMax": 0.55,
-      "particleLifeTimeMin": 0.3,
+      "particleLifeTimeMax": 0.4,
+      "particleLifeTimeMin": 0.2,
       "particleRed1": 82,
       "particleRed2": 107,
-      "particleSize1": 100,
-      "particleSize2": 30,
+      "particleSize1": 80,
+      "particleSize2": 160,
       "particleSizeRandomness1": 0,
       "particleSizeRandomness2": 0,
       "persistentUuid": "01c10d2c-8ccd-458b-b5b1-083122321af8",
@@ -24907,7 +24907,7 @@
       "tank": 30,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 4,
+      "zoneRadius": 8,
       "variables": [
         {
           "name": "dash",
@@ -47908,12 +47908,12 @@
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
       "emitterAngleA": -25,
-      "emitterAngleB": 25,
-      "emitterForceMax": 280,
-      "emitterForceMin": 120,
+      "emitterAngleB": 3,
+      "emitterForceMax": 110,
+      "emitterForceMin": 33,
       "flow": 250,
       "jumpForwardInTimeOnCreation": 0,
-      "maxParticleNb": 60,
+      "maxParticleNb": 300,
       "name": "poeira",
       "particleAlpha1": 170,
       "particleAlpha2": 0,
@@ -47928,25 +47928,25 @@
       "particleColor1": "190;175;150",
       "particleColor2": "140;130;110",
       "particleGravityX": 0,
-      "particleGravityY": 0,
+      "particleGravityY": -0.1,
       "particleGreen1": 175,
       "particleGreen2": 130,
-      "particleLifeTimeMax": 0.4,
-      "particleLifeTimeMin": 0.2,
+      "particleLifeTimeMax": 0.3,
+      "particleLifeTimeMin": 0.1,
       "particleRed1": 190,
       "particleRed2": 140,
-      "particleSize1": 100,
-      "particleSize2": 40,
+      "particleSize1": 40,
+      "particleSize2": 80,
       "particleSizeRandomness1": 0,
       "particleSizeRandomness2": 0,
       "persistentUuid": "5337e4dc-1c05-48ce-b299-a276e1ecb29a",
       "rendererParam1": 10,
       "rendererParam2": 1,
       "rendererType": "Point",
-      "tank": 10,
+      "tank": 40,
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 8,
+      "zoneRadius": 20,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -51785,7 +51785,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.20902556228336158,
+        "zoomFactor": 0.5117784035210404,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -55672,6 +55672,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Controle do Pato",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -56202,11 +56203,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Morte do Pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -56296,7 +56299,6 @@
                   ],
                   "events": [
                     {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -56328,67 +56330,8 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "ultimo_agressor",
-                            "=",
-                            "\"trader\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "moedas_perdidas",
-                            "=",
-                            "round(GlobalVariable(moedas_total) * trader.multa)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "moedas_total",
-                            "=",
-                            "max(0, GlobalVariable(moedas_total) - pato.moedas_perdidas)"
-                          ]
-                        }
-                      ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -56464,8 +56407,7 @@
                         ""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ],
               "parameters": []
@@ -56475,28 +56417,16 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "Sensação do pato",
+              "name": "Feel do pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Pulo e queda: buffer de pulo (apertou até 0,12 s antes de pousar e o pulo sai no pouso), pulo curto ao soltar o Espaço subindo e queda mais pesada (gravidade extra descendo, fora do dash)."
-                },
                 {
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Buffer de pulo",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -56676,231 +56606,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "Pulo curto e queda pesada",
+                  "folded": true,
+                  "name": "Poeira",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Space\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "pato.PlatformerObject::CurrentFallSpeed()",
-                            "<",
-                            "-pato.pulo_corte_vel"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "pato.PlatformerObject::CurrentFallSpeed()",
-                            ">=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "pato.PlatformerObject::CurrentFallSpeed() * pato.pulo_corte"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::IsFalling"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "AdvancedJump::HorizontalDash::IsDashing"
-                          },
-                          "parameters": [
-                            "pato",
-                            "HorizontalDash",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "pato.PlatformerObject::CurrentFallSpeed()",
-                            ">=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "min(pato.dash_queda_max, pato.PlatformerObject::CurrentFallSpeed() + pato.dash_gravidade * TimeDelta())"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "PlatformBehavior::IsOnFloor"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "queda_vy",
-                            "=",
-                            "pato.PlatformerObject::CurrentFallSpeed()"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Poeira e pouso",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Space\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::CanJump"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::IsOnFloor"
-                              },
-                              "parameters": [
-                                "pato",
-                                "PlatformerObject"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "poeira",
-                                "pato.CenterX()",
-                                "pato.Y() + pato.Height()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "poeira",
-                                "=",
-                                "270"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -56918,17 +56628,6 @@
                             "value": "BuiltinCommonInstructions::Once"
                           },
                           "parameters": []
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "queda_vy",
-                            ">",
-                            "pato.poeira_queda_min"
-                          ]
                         }
                       ],
                       "actions": [
@@ -56963,40 +56662,7 @@
                           "parameters": [
                             "poeira",
                             "=",
-                            "200"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "poeira",
-                            "pato.CenterX()",
-                            "pato.Y() + pato.Height()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "poeira",
-                            "=",
-                            "340"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "queda_vy",
-                            "=",
-                            "0"
+                            "-90"
                           ]
                         }
                       ]
@@ -57071,18 +56737,6 @@
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Bunny hop: pular até bhop_janela s depois de pousar, andando a pelo menos bhop_vel_min da velocidade base, sobe a série (até bhop_max_serie) e a velocidade máxima ganha bhop_ganho da base por degrau. Ficar no chão mais que bhop_janela zera. Fora do dash; sair do chão sem pular não conta. Cada degrau toca som_bhop bem baixo (bhop_som_volume), um tom acima do anterior (bhop_som_tom × bhop_som_passo por degrau)."
-                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -57395,22 +57049,10 @@
               "colorR": 74,
               "creationTime": 0,
               "folded": true,
-              "name": "Animações do pato",
+              "name": "Animacoes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Animação do pato por estado. Os estados são exclusivos (morto > dano > no ar > andando > parado): mandar a mesma animação todo quadro é ok, mas alternar entre duas reiniciaria os quadros. Espelhar fica no grupo Mira."
-                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
@@ -57793,22 +57435,10 @@
               "colorR": 74,
               "creationTime": 0,
               "folded": true,
-              "name": "Câmera não perde o chão",
+              "name": "Chao nao sai da camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "O chão mais baixo em que o pato já pisou (pato.chao_baixo) fica sempre com pelo menos 140 px na tela: a câmera não sobe além disso quando o pato pula. Se o pato subir muito (ficaria a menos de 150 px do topo), a câmera volta a acompanhar."
-                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -57839,17 +57469,6 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "chao_baixo",
-                        ">",
-                        "-999998"
-                      ]
-                    },
                     {
                       "type": {
                         "value": "CameraCenterY"
@@ -57896,6 +57515,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Início",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -57943,22 +57563,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Teto",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Subindo com o coice do soco (velocidade de queda negativa) e sem conseguir subir: bateu no teto, a velocidade é zerada."
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -58005,22 +57614,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Golpe",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Soco no botão direito (espera de pato.soco_espera s, começa em 0.35): a luva sai na direção da mira (do centro do pato até o mouse). Se o soco bate no terreno (até 150 px), o pato ganha velocidade na direção contrária. Depois acerta os inimigos na direção do soco."
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -58790,22 +58388,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Luva e rastro",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Luva: vai e volta (seno) na direção do soco, com o rastro em arco logo à frente; os dois acompanham o pato e somem. Empurrão do soco nos terrestres enquanto estão no estado \"dano\"."
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
@@ -58924,7 +58511,8 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "Empurrão nos terrestres",
+                  "folded": true,
+                  "name": "KNOCKBACK",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -59018,6 +58606,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Coice na parede",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
