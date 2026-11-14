@@ -9716,6 +9716,62 @@
         "name": "assets/purgatorio/tiles/tiles_purgatorio_2x.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/lava/bolha_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/lava/bolha_06.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -43865,7 +43921,68 @@
       "persistentUuid": "584a754e-b422-440d-a552-993cc297f40d",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "anim_vel_min",
+          "persistentUuid": "a15e8acf-4a16-5e71-93c5-c1dd609b7629",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "anim_vel_max",
+          "persistentUuid": "60faaec5-fe17-5af5-ab30-b6d3fa66495d",
+          "type": "number",
+          "value": 1.3
+        },
+        {
+          "name": "superficie_frac",
+          "persistentUuid": "b6cabc90-b4ab-53a3-aa47-e139136bc350",
+          "type": "number",
+          "value": 0.22
+        },
+        {
+          "name": "brasa_espera_min",
+          "persistentUuid": "0bb69cb2-9dd6-5f8b-a1e9-e37eb1b6c4cf",
+          "type": "number",
+          "value": 0.15
+        },
+        {
+          "name": "brasa_espera_max",
+          "persistentUuid": "0ca76c83-2395-52da-8020-bd45ed5f87f2",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "brasa_espera",
+          "persistentUuid": "a624b6c8-6d38-5123-8688-2ffca227574a",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "bolha_espera_min",
+          "persistentUuid": "bfcd90b2-65d2-5734-9d0e-474ec12ff702",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "bolha_espera_max",
+          "persistentUuid": "0fb811a8-9c4d-52bc-ac17-5322bd6ac2be",
+          "type": "number",
+          "value": 1.6
+        },
+        {
+          "name": "bolha_espera",
+          "persistentUuid": "983af8b7-a5fe-5d5b-b096-5fb812f1aaac",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "bolha_afunda",
+          "persistentUuid": "b7a9e6fd-33f7-5ad4-a52b-b015da3d6372",
+          "type": "number",
+          "value": 10
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -44610,7 +44727,20 @@
       "persistentUuid": "fe6b0be8-7bac-482f-93e3-40d4171798f1",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "anim_vel_min",
+          "persistentUuid": "a50b93c7-3529-55ca-afa7-bbb5e9e0a725",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "anim_vel_max",
+          "persistentUuid": "53fd1de0-d6a6-500d-9f69-4947e7cfd034",
+          "type": "number",
+          "value": 1.3
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -45355,7 +45485,20 @@
       "persistentUuid": "07db5d55-ab62-4a66-ae35-dc8ed3bbe874",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "anim_vel_min",
+          "persistentUuid": "064e27ca-9ba8-5f30-9b17-a6e283398561",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "anim_vel_max",
+          "persistentUuid": "d1c24d2e-2691-59e0-9dc4-58f76b29791e",
+          "type": "number",
+          "value": 1.3
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -48446,7 +48589,7 @@
         "rowCount": 36,
         "columnCount": 68,
         "tileSize": 16,
-        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144,15,130,197,264,265,266,267,131,199,198"
+        "tilesWithHitBox": "0,1,2,3,4,5,6,7,8,10,12,17,19,20,22,23,25,26,27,28,29,34,35,36,37,38,39,40,41,42,44,46,51,52,53,54,55,56,57,58,59,61,63,68,70,71,73,74,76,77,78,79,80,85,86,87,88,89,90,91,92,93,95,97,144,15,130,197,264,265,266,267,131,199,198,1692,1693,1694,1695,1760,1761,1762,1763,1828,1829,1830,1831,1896,1897,1898,1899,1696,1697,1698,1699,1764,1765,1766,1767,1832,1833,1834,1835,1900,1901,1902,1903,1964,1965,1966,1967,2032,2033,2034,2035,2100,2101,2102,2103,2168,2169,2170,2171,1968,1969,1970,1971,2036,2037,2038,2039,2104,2105,2106,2107,2172,2173,2174,2175,2236,2237,2238,2239,2304,2305,2306,2307,2372,2373,2374,2375,2440,2441,2442,2443,2240,2241,2242,2243,2308,2309,2310,2311,2376,2377,2378,2379,2444,2445,2446,2447,1396,1397,1398,1399,1464,1465,1466,1467,1532,1533,1534,1535,1600,1601,1602,1603,1404,1405,1406,1407,1472,1473,1474,1475,1540,1541,1542,1543,1608,1609,1610,1611"
       }
     },
     {
@@ -55418,6 +55561,198 @@
         "tileSize": 64,
         "tilesWithHitBox": ""
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "lava_bolha",
+      "persistentUuid": "c8454b6f-19e3-507e-96f5-0ed9ccc573a8",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "estoura",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.09,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/lava/bolha_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": -115,
+      "emitterAngleB": -65,
+      "emitterForceMax": 150,
+      "emitterForceMin": 40,
+      "flow": 40,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 8,
+      "name": "lava_brasas",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 80,
+      "particleBlue2": 10,
+      "particleColor1": "255;200;80",
+      "particleColor2": "210;50;10",
+      "particleGravityX": 0,
+      "particleGravityY": -70,
+      "particleGreen1": 200,
+      "particleGreen2": 50,
+      "particleLifeTimeMax": 1.8,
+      "particleLifeTimeMin": 0.7,
+      "particleRed1": 255,
+      "particleRed2": 210,
+      "particleSize1": 100,
+      "particleSize2": 30,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "865d15df-d026-571a-b743-629f8cee291d",
+      "rendererParam1": 5,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 4,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 8,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -55732,6 +56067,12 @@
               },
               {
                 "objectName": "sangue_cascata"
+              },
+              {
+                "objectName": "lava_bolha"
+              },
+              {
+                "objectName": "lava_brasas"
               }
             ]
           },
@@ -59949,6 +60290,13 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lava"
         }
       ],
       "layers": [
@@ -82278,6 +82626,270 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Inferno",
+      "name": "Lava",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Lava com vida. No começo da cena as animações são dessincronizadas; depois, de tempos em tempos sorteados, cada poça solta brasas (lava_brasas) e bolhas (lava_bolha) num ponto qualquer da superfície. Tudo se regula nas variáveis de lava."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Lava",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "lava",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"brasa\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"bolha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "lava",
+                        "brasa_espera",
+                        "=",
+                        "RandomFloatInRange(0, lava.brasa_espera_max)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "lava",
+                        "bolha_espera",
+                        "=",
+                        "RandomFloatInRange(0, lava.bolha_espera_max)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// Cada lava (e cada lava_chamas) começa num quadro sorteado e com velocidade própria, para as peças",
+                    "// lado a lado não pulsarem juntas.",
+                    "const num = (o, n, padrao) => o.getVariables().has(n) ? o.getVariables().get(n).getAsNumber() : padrao;",
+                    "for (const nome of [\"lava\", \"lava_chamas\", \"lava_cascata\"]) {",
+                    "  for (const o of runtimeScene.getObjects(nome)) {",
+                    "    const min = num(o, \"anim_vel_min\", 0.7), max = num(o, \"anim_vel_max\", 1.3);",
+                    "    o.setAnimationFrame(Math.floor(Math.random() * o.getAnimationFrameCount()));",
+                    "    o.setAnimationSpeedScale(min + Math.random() * (max - min));",
+                    "  }",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "lava",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"brasa\"",
+                        ">",
+                        "lava.brasa_espera"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "lava_brasas",
+                        "lava.X() + RandomFloatInRange(0, lava.Width())",
+                        "lava.Y() + lava.Height() * lava.superficie_frac",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "lava_brasas",
+                        "=",
+                        "lava.ZOrder() + 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"brasa\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "lava",
+                        "brasa_espera",
+                        "=",
+                        "RandomFloatInRange(lava.brasa_espera_min, lava.brasa_espera_max)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"bolha\"",
+                        ">",
+                        "lava.bolha_espera"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "lava_bolha",
+                        "lava.X() + RandomFloatInRange(0, max(0, lava.Width() - 32))",
+                        "lava.Y() + lava.Height() * lava.superficie_frac - 32 + lava.bolha_afunda",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "lava_bolha",
+                        "=",
+                        "lava.ZOrder() + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "lava",
+                        "\"bolha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "lava",
+                        "bolha_espera",
+                        "=",
+                        "RandomFloatInRange(lava.bolha_espera_min, lava.bolha_espera_max)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "lava_bolha",
+                    "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "lava_bolha",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
