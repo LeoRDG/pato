@@ -44067,6 +44067,12 @@
           "persistentUuid": "b7a9e6fd-33f7-5ad4-a52b-b015da3d6372",
           "type": "number",
           "value": 10
+        },
+        {
+          "name": "brasa_angulo",
+          "persistentUuid": "4affcfc8-abf5-557f-b52d-1b893244d0df",
+          "type": "number",
+          "value": -90
         }
       ],
       "effects": [],
@@ -55796,8 +55802,8 @@
       "additive": true,
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
-      "emitterAngleA": -115,
-      "emitterAngleB": -65,
+      "emitterAngleA": 0,
+      "emitterAngleB": 50,
       "emitterForceMax": 150,
       "emitterForceMin": 40,
       "flow": 40,
@@ -83379,6 +83385,16 @@
                         "lava.X() + RandomFloatInRange(0, lava.Width())",
                         "lava.Y() + lava.Height() * lava.superficie_frac",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "lava_brasas",
+                        "=",
+                        "lava.brasa_angulo"
                       ]
                     },
                     {
