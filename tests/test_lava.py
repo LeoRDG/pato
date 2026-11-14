@@ -60,7 +60,11 @@ def test_objetos_e_variaveis_da_lava():
         assert s['image'] in RES and os.path.exists(os.path.join(RAIZ, s['image']))
     brasas = OBJ['lava_brasas']
     assert brasas['type'] == 'ParticleSystem::ParticleEmitter' and brasas['destroyWhenNoParticles'] and brasas['additive']
-    assert brasas['particleGravityY'] < 0 and brasas['emitterAngleA'] < -90 < brasas['emitterAngleB']   # sobem
+    # o emissor atira na direção do ângulo do objeto (leque de emitterAngleB graus): o evento aponta para cima
+    assert brasas['particleGravityY'] < 0 and 0 < abs(brasas['emitterAngleB']) < 90
+    assert variaveis('lava')['brasa_angulo'] == -90
+    txt = json.dumps(LAVA['events'])
+    assert txt.index('"Create"}, "parameters": ["", "lava_brasas"') < txt.index('"SetAngle"}, "parameters": ["lava_brasas", "=", "lava.brasa_angulo"]')
 
 
 def test_bolha_cresce_e_estoura():
