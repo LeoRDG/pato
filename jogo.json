@@ -9772,6 +9772,54 @@
         "name": "assets/lava/bolha_06.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/plataforma_movel/idle_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/plataforma_movel/idle_05.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -55759,6 +55807,304 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "plataforma_movel",
+      "persistentUuid": "d2e79f03-cb5b-5227-b8eb-41344445c2e9",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "ini_x",
+          "persistentUuid": "afa77213-cde9-5572-a19c-2b78909a7ad4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ini_y",
+          "persistentUuid": "3506e511-a7c2-5961-983b-4520ce0a90bb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fim_x",
+          "persistentUuid": "db8d65f1-d602-5828-b265-d609ceac71e9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fim_y",
+          "persistentUuid": "719b3fdf-ae98-5a07-a455-ec1950a22184",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "05b33362-c43d-504f-a58d-dff26347e3da",
+          "type": "number",
+          "value": 160
+        },
+        {
+          "name": "espera",
+          "persistentUuid": "7ea4f044-7c9f-51be-bfe7-4330fdc37769",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "9ef7ac33-85e1-5c7f-a5e6-8dc6be8b6e5f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "sentido",
+          "persistentUuid": "e2707750-a20e-586a-ba8b-2ab054a7d6ec",
+          "type": "number",
+          "value": 1
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.14,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/plataforma_movel/idle_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 4
+                      },
+                      {
+                        "x": 186,
+                        "y": 26
+                      },
+                      {
+                        "x": 6,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -56030,6 +56376,9 @@
               },
               {
                 "objectName": "tiles_purgatorio_decor"
+              },
+              {
+                "objectName": "plataforma_movel"
               }
             ]
           },
@@ -60303,6 +60652,13 @@
             "includeConfig": 0
           },
           "target": "Lava"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Plataformas"
         }
       ],
       "layers": [
@@ -82902,6 +83258,353 @@
                   "parameters": [
                     "lava_bolha",
                     ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Inferno",
+      "name": "Plataformas",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Plataformas móveis. Cada plataforma_movel vai e volta entre o começo (ini_x, ini_y) e o fim (fim_x, fim_y) escritos nas variáveis da instância. Um par deixado em 0, 0 vira, no começo da cena, a posição onde ela foi colocada. \"fase\" anda de 0 a 1 na velocidade dela, com espera em cada ponta, e a posição é o caminho entre começo e fim, acelerando e freando nas pontas."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Plataformas móveis",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sentido",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "ini_x",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "ini_y",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "ini_x",
+                        "=",
+                        "plataforma_movel.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "ini_y",
+                        "=",
+                        "plataforma_movel.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "fim_x",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "fim_y",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "fim_x",
+                        "=",
+                        "plataforma_movel.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_movel",
+                        "fim_y",
+                        "=",
+                        "plataforma_movel.Y()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\"",
+                    ">",
+                    "plataforma_movel.espera"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    "+",
+                    "plataforma_movel.sentido * plataforma_movel.velocidade * TimeDelta() / max(1, sqrt(pow(plataforma_movel.fim_x - plataforma_movel.ini_x, 2) + pow(plataforma_movel.fim_y - plataforma_movel.ini_y, 2)))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    ">=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sentido",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sentido",
+                    "=",
+                    "-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sentido",
+                    "<",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "fase",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sentido",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "=",
+                    "plataforma_movel.ini_x + (plataforma_movel.fim_x - plataforma_movel.ini_x) * (1 - cos(plataforma_movel.fase * 3.14159265)) / 2",
+                    "=",
+                    "plataforma_movel.ini_y + (plataforma_movel.fim_y - plataforma_movel.ini_y) * (1 - cos(plataforma_movel.fase * 3.14159265)) / 2"
                   ]
                 }
               ]
