@@ -9081,12 +9081,6 @@
           "value": false
         },
         {
-          "name": "resumo",
-          "persistentUuid": "b13b7a23-7933-4f89-8da0-643cc7b0975f",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "queda_vy",
           "persistentUuid": "8c1b1049-d33c-43bb-9e48-ea022dfc31e1",
           "type": "number",
@@ -26869,75 +26863,6 @@
         "r": 253,
         "g": 65,
         "b": 65
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "resumo_fundo",
-      "persistentUuid": "31a3e485-ff26-47d8-b73a-39c1c496fa2d",
-      "type": "PrimitiveDrawing::Drawer",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "fillOpacity": 190,
-      "outlineSize": 0,
-      "outlineOpacity": 0,
-      "absoluteCoordinates": true,
-      "clearBetweenFrames": true,
-      "antialiasing": "none",
-      "fillColor": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "outlineColor": {
-        "r": 253,
-        "g": 65,
-        "b": 65
-      }
-    },
-    {
-      "assetStoreId": "",
-      "bold": false,
-      "italic": false,
-      "name": "resumo_txt",
-      "persistentUuid": "2e3a0e60-160d-4b04-ae40-1aa135839064",
-      "smoothed": true,
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "",
-      "font": "CantoraOne-Regular.ttf",
-      "textAlignment": "center",
-      "characterSize": 44,
-      "color": {
-        "b": 255,
-        "g": 255,
-        "r": 255
-      },
-      "content": {
-        "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": true,
-        "italic": false,
-        "outlineColor": "0;0;0",
-        "outlineThickness": 0,
-        "shadowAngle": 90,
-        "shadowBlurRadius": 4,
-        "shadowColor": "0;0;0",
-        "shadowDistance": 2,
-        "shadowOpacity": 110,
-        "smoothed": true,
-        "underlined": false,
-        "text": "",
-        "font": "CantoraOne-Regular.ttf",
-        "textAlignment": "center",
-        "verticalTextAlignment": "top",
-        "characterSize": 44,
-        "lineHeight": 0,
-        "color": "255;255;255"
       }
     },
     {
@@ -50510,17 +50435,6 @@
             "folderName": "loja"
           },
           {
-            "folderName": "resumo_morte",
-            "children": [
-              {
-                "objectName": "resumo_fundo"
-              },
-              {
-                "objectName": "resumo_txt"
-              }
-            ]
-          },
-          {
             "folderName": "vitoria"
           }
         ]
@@ -50861,44 +50775,6 @@
       "persistentUuid": "cc41776c-ec82-4b00-83c7-a264ebaf1b21",
       "type": "number",
       "value": 0
-    },
-    {
-      "name": "ultima_run",
-      "persistentUuid": "311ac45b-5621-45a6-bbe6-dbde61278979",
-      "type": "structure",
-      "children": [
-        {
-          "name": "boss_vida",
-          "persistentUuid": "4e04e460-fa53-4f2a-819c-f8f8504a7a58",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "moedas",
-          "persistentUuid": "51afc412-d049-4d1f-a3a0-954bbe0d0d9e",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "progresso",
-          "persistentUuid": "47dc6875-eb65-45ff-9927-052d447a187c",
-          "type": "number",
-          "value": 0
-        }
-      ]
-    },
-    {
-      "name": "recorde",
-      "persistentUuid": "da2283f5-2dd6-407a-a5a8-403b411b6171",
-      "type": "structure",
-      "children": [
-        {
-          "name": "progresso",
-          "persistentUuid": "cab58ad4-ea78-449d-a92c-5870aa95b5ca",
-          "type": "number",
-          "value": 0
-        }
-      ]
     },
     {
       "name": "upgrades",
@@ -56416,36 +56292,6 @@
                         "+",
                         "1"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "ultima_run.moedas",
-                        "=",
-                        "pato.moedas"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "ultima_run.progresso",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "ultima_run.boss_vida",
-                        "=",
-                        "-1"
-                      ]
                     }
                   ],
                   "events": [
@@ -56479,110 +56325,6 @@
                           "parameters": [
                             "laser",
                             ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SceneInstancesCount"
-                          },
-                          "parameters": [
-                            "",
-                            "inicio",
-                            ">",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SceneInstancesCount"
-                          },
-                          "parameters": [
-                            "",
-                            "safezone",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "ultima_run.progresso",
-                            "=",
-                            "clamp((pato.X() - inicio.X()) / (safezone.X() - inicio.X()) * 100, 0, 100)"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "ultima_run.progresso",
-                            ">",
-                            "GlobalVariable(recorde.progresso)"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "recorde.progresso",
-                            "=",
-                            "GlobalVariable(ultima_run.progresso)"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareStrings"
-                          },
-                          "parameters": [
-                            "CurrentSceneName()",
-                            "=",
-                            "\"Boss\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SceneInstancesCount"
-                          },
-                          "parameters": [
-                            "",
-                            "boss",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "ultima_run.boss_vida",
-                            "=",
-                            "round(clamp(boss.vida / boss.max_vida, 0, 1) * 100)"
                           ]
                         }
                       ]
@@ -56692,17 +56434,6 @@
                     },
                     {
                       "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "resumo",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "CompareObjectTimer"
                       },
                       "parameters": [
@@ -56725,225 +56456,6 @@
                     },
                     {
                       "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "resumo",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"resumo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "resumo_fundo",
-                        "0",
-                        "0",
-                        "\"HUD\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "resumo_fundo",
-                        "=",
-                        "900"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "resumo_txt",
-                        "0",
-                        "0",
-                        "\"HUD\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "resumo_txt",
-                        "=",
-                        "1000"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "resumo_txt",
-                        "Text",
-                        "=",
-                        "\"O demônio foi expulso do pato\" + NewLine() + NewLine() + \"Moedas: +\" + ToString(GlobalVariable(ultima_run.moedas)) + \"   ·   Chegou a \" + ToString(round(GlobalVariable(ultima_run.progresso))) + \"% (recorde: \" + ToString(round(GlobalVariable(recorde.progresso))) + \"%)\" + NewLine() + NewLine() + \"Pressione qualquer tecla\""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "ultima_run.boss_vida",
-                            ">=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "resumo_txt",
-                            "Text",
-                            "=",
-                            "\"O demônio foi expulso do pato\" + NewLine() + NewLine() + \"Moedas: +\" + ToString(GlobalVariable(ultima_run.moedas)) + \"   ·   O boss ainda tinha \" + ToString(GlobalVariable(ultima_run.boss_vida)) + \"% de vida\" + NewLine() + NewLine() + \"Pressione qualquer tecla\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "moedas_perdidas",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "resumo_txt",
-                            "Text",
-                            "+",
-                            "NewLine() + NewLine() + \"O mercador levou \" + ToString(pato.moedas_perdidas) + \" moedas\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "resumo_txt",
-                            "=",
-                            "CameraCenterX(\"HUD\") - resumo_txt.Width() / 2",
-                            "=",
-                            "CameraCenterY(\"HUD\") - resumo_txt.Height() / 2"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "resumo",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::Rectangle"
-                      },
-                      "parameters": [
-                        "resumo_fundo",
-                        "-2000",
-                        "-2000",
-                        "6000",
-                        "4000"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "resumo",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"resumo\"",
-                        ">",
-                        "0.6"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnyKeyReleased"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
                         "value": "Scene"
                       },
                       "parameters": [
@@ -56952,7 +56464,8 @@
                         ""
                       ]
                     }
-                  ]
+                  ],
+                  "events": []
                 }
               ],
               "parameters": []
