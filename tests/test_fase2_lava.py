@@ -77,6 +77,8 @@ class Fase2Lava(unittest.TestCase):
         g = next(b for b in self.objs['pato']['behaviors'] if b['type'].endswith('PlatformerObjectBehavior'))['gravity']
         fundo = lava['y'] + lava['height'] - 54
         self.assertLess(fundo - self.vars(t63.LAVA)['pulo_vel'] ** 2 / (2 * g), max(p['y'] for p in pontes))
+        # ... e com folga acima da ponte mais alta (tools/t66_pulo_da_lava.py)
+        self.assertLess(fundo - self.vars(t63.LAVA)['pulo_vel'] ** 2 / (2 * g), min(p['y'] for p in pontes) - pato['height'])
         self.assertLess(dv['lava_cravado_t'], (len(anim['sprites']) - dv['lava_quadro_golpe']) * anim['timeBetweenFrames'])
         self.assertGreater(dv['lava_ataque_alcance'], dv['ataque_alcance'], 'na lava ataca de mais longe')
         self.assertLessEqual(dv['lava_golpe_dx'], dv['golpe_x_max'])
