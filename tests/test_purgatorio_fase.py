@@ -7,7 +7,9 @@ T = 64
 
 
 def tiles(inst):
-    return json.loads(next(p['value'] for p in inst['stringProperties'] if p['name'] == 'tilemap'))['layers'][0]['tiles']
+    """Tiles de uma instância de tile map; uma recém-posta no editor e ainda não pintada não tem nenhum."""
+    valor = next((p['value'] for p in inst['stringProperties'] if p['name'] == 'tilemap'), None)
+    return json.loads(valor)['layers'][0]['tiles'] if valor else []
 
 
 class Purgatorio(unittest.TestCase):
@@ -30,14 +32,22 @@ class Purgatorio(unittest.TestCase):
                     if t in hit:
                         alvo.add((round(i['x'] / T) + c, round(i['y'] / T) + r))
         # rodas: o tronco passa por todo o círculo, então cada ponto dele vale como um tronco parado (dá para esperar)
-        cls.rodas = [i for i in cls.cena['instances'] if i['name'] == 'plataforma_radial']
-        for i in cls.rodas:
-            v = {x['name']: x['value'] for x in i['initialVariables']}
-            larg = i['width'] if i.get('customSize') else 192
-            ancora = v.get('ancora_y', 14)
+        # cada roda é uma pedra (plataforma_radial_eixo) com raio, vel_ang, quantidade, angulo e escala
+        cls.rodas = []
+        padrao = {v['name']: v['value'] for v in cls.obj['plataforma_radial_eixo']['variables']}
+        ancora0 = next(v['value'] for v in cls.obj['plataforma_radial']['variables'] if v['name'] == 'ancora_y')
+        for i in cls.cena['instances']:
+            if i['name'] != 'plataforma_radial_eixo':
+                continue
+            v = dict(padrao, **{x['name']: x['value'] for x in i['initialVariables']})
+            v['cx'], v['cy'] = i['x'] + 28, i['y'] + 28                    # centro da pedra (56 x 56)
+            v['larg'], v['ancora'] = 192 * v['escala'], ancora0 * v['escala']
+            cls.rodas.append(v)
+        for v in cls.rodas:
+            larg, ancora = v['larg'], v['ancora']
             for g in range(0, 360, 5):
-                x0 = v['centro_x'] + v['raio'] * math.cos(math.radians(g)) - larg / 2
-                topo = v['centro_y'] + v['raio'] * math.sin(math.radians(g)) - ancora + 4 * larg / 192
+                x0 = v['cx'] + v['raio'] * math.cos(math.radians(g)) - larg / 2
+                topo = v['cy'] + v['raio'] * math.sin(math.radians(g)) - ancora + 4 * larg / 192
                 for c in range(math.floor((x0 + 8) / T), math.floor((x0 + larg - 8) / T) + 1):
                     cls.tronco.add((c, math.floor(topo / T)))
         # lajes que somem voltam depois de sumida s: para o caminho valem como troncos parados
@@ -144,33 +154,29 @@ class Purgatorio(unittest.TestCase):
 
 
     def test_rodas_de_troncos(self):
-        """Plataforma radial: gira em volta do centro (não vai e volta como a do Inferno), presa por um cipó."""
+        """Roda de troncos: um item só (a pedra do centro) com raio, velocidade e quantidade; os troncos nascem dela e
+        giram em volta (não vão e voltam como a plataforma do Inferno), presos por cipós."""
         o = self.obj['plataforma_radial']
         self.assertEqual([b['platformType'] for b in o['behaviors']], ['Jumpthru'])
-        self.assertLessEqual({'centro_x', 'centro_y', 'raio', 'vel_ang', 'angulo', 'ancora_y', 'com_eixo'},
-                             {v['name'] for v in o['variables']})
+        self.assertEqual({v['name'] for v in o['variables']}, {'roda', 'indice', 'ancora_y'})
+        self.assertLessEqual({'raio', 'vel_ang', 'quantidade', 'angulo', 'escala', 'giro'},
+                             {v['name'] for v in self.obj['plataforma_radial_eixo']['variables']})
         self.assertEqual(self.obj['plataforma_radial_corda']['type'], 'TiledSpriteObject::TiledSprite')
-        self.assertIn('plataforma_radial_eixo', self.obj)
+        self.assertNotIn('plataforma_radial', {i['name'] for i in self.cena['instances']})   # nascem da pedra
         ev = json.dumps(next(e for e in self.d['externalEvents'] if e['name'] == 'PlataformasRadiais')['events'])
-        for trecho in ('vel_ang * TimeDelta()', 'raio * cos(ToRad(plataforma_radial.angulo))', 'ini_x'):
-            (self.assertNotIn if trecho == 'ini_x' else self.assertIn)(trecho, ev)
-        rodas = {}
-        for i in self.rodas:
-            v = {x['name']: x['value'] for x in i['initialVariables']}
-            v['_larg'] = i['width'] if i.get('customSize') else 192
-            rodas.setdefault((v['centro_x'], v['centro_y']), []).append(v)
-        self.assertEqual(sorted(len(r) for r in rodas.values() if r[0]['_larg'] == 192), [2, 3])
-        for r in rodas.values():
-            self.assertEqual(sum(v['com_eixo'] for v in r), 1)           # uma pedra por roda
-            self.assertEqual(len({(v['raio'], v['vel_ang']) for v in r}), 1)
-        self.assertEqual({v['vel_ang'] > 0 for r in rodas.values() for v in r}, {True, False})   # uma em cada sentido
+        for trecho in ('"repeatExpression": "plataforma_radial_eixo.quantidade"', 'plataforma_radial_eixo.vel_ang * TimeDelta()',
+                       'plataforma_radial.indice * 360 / max(1, plataforma_radial_eixo.quantidade)', 'plataforma_radial_eixo.escala'):
+            self.assertIn(trecho, ev)
+        self.assertNotIn('centro_x', ev)
+        grandes = [v for v in self.rodas if v['escala'] == 1]
+        self.assertEqual(sorted(v['quantidade'] for v in grandes), [2, 3])
+        self.assertEqual({v['vel_ang'] > 0 for v in self.rodas}, {True, False})   # nos dois sentidos
         # o tronco e o pato em cima dele nunca entram no terreno
-        for r in rodas.values():
-            v = r[0]
+        for v in self.rodas:
             for g in range(0, 360, 3):
-                cx = v['centro_x'] + v['raio'] * math.cos(math.radians(g))
-                topo = v['centro_y'] + v['raio'] * math.sin(math.radians(g)) - v.get('ancora_y', 14)
-                for x in range(int(cx - v['_larg'] / 2), int(cx + v['_larg'] / 2), 16):
+                cx = v['cx'] + v['raio'] * math.cos(math.radians(g))
+                topo = v['cy'] + v['raio'] * math.sin(math.radians(g)) - v['ancora']
+                for x in range(int(cx - v['larg'] / 2), int(cx + v['larg'] / 2), 16):
                     for y in range(int(topo - self.pato['height']), int(topo + 30), 16):
                         self.assertNotIn((x // T, y // T), self.solido)
 
@@ -192,11 +198,10 @@ class Purgatorio(unittest.TestCase):
         self.assertTrue(self.acidos)
         z_pato = self.pato['zOrder']
         self.assertTrue(all(a['zOrder'] > z_pato for a in self.acidos))    # o pato afunda por trás da superfície
-        pequenas = [i for i in self.rodas if i.get('customSize')]
-        grandes = [i for i in self.rodas if not i.get('customSize')]
-        vel = lambda i: abs(next(v['value'] for v in i['initialVariables'] if v['name'] == 'vel_ang'))
-        self.assertGreaterEqual(len(pequenas), 5)
-        self.assertLess(max(i['width'] for i in pequenas), 192)
+        pequenas = [v for v in self.rodas if v['escala'] < 1]
+        grandes = [v for v in self.rodas if v['escala'] == 1]
+        vel = lambda v: abs(v['vel_ang'])
+        self.assertGreaterEqual(sum(v['quantidade'] for v in pequenas), 5)
         self.assertGreater(min(map(vel, pequenas)), max(map(vel, grandes)))
         # a saída fica no alto da escalada nova, acima do cume da primeira parte
         self.assertLess(self.var['saida_y'], -9408 - 60 * T)

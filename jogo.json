@@ -61390,32 +61390,14 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "centro_x",
-          "persistentUuid": "1a5d2fa9-c1bb-547d-988e-c906e7e022e2",
+          "name": "roda",
+          "persistentUuid": "a92a5070-1228-5576-9dbf-6d171a54ca8c",
           "type": "number",
           "value": 0
         },
         {
-          "name": "centro_y",
-          "persistentUuid": "63411664-e04b-57cd-9ac9-321e60db3e8c",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "raio",
-          "persistentUuid": "1893b817-6ed7-5128-887f-484ea762fd77",
-          "type": "number",
-          "value": 320
-        },
-        {
-          "name": "vel_ang",
-          "persistentUuid": "5ad8f783-01f0-57ac-8fb0-261f44c5c430",
-          "type": "number",
-          "value": 30
-        },
-        {
-          "name": "angulo",
-          "persistentUuid": "73b03e60-3b79-53fa-901e-dbe15d5773c1",
+          "name": "indice",
+          "persistentUuid": "c31730d7-b097-5a2b-a985-7e762cee187d",
           "type": "number",
           "value": 0
         },
@@ -61424,18 +61406,6 @@
           "persistentUuid": "72aa27a8-9db8-5c31-a969-f16b257c4dec",
           "type": "number",
           "value": 14
-        },
-        {
-          "name": "com_eixo",
-          "persistentUuid": "1b4f3f25-1816-5d3d-b301-fd74d8ed4a56",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "id",
-          "persistentUuid": "6625b976-66af-5ccd-b7df-d38bae49eb1c",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [],
@@ -61616,16 +61586,46 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "id",
-          "persistentUuid": "37ad222c-0847-58ab-b4ed-1d230ee184fd",
+          "name": "raio",
+          "persistentUuid": "b9a426e2-410d-52a1-acda-bfa91f1a665c",
+          "type": "number",
+          "value": 320
+        },
+        {
+          "name": "vel_ang",
+          "persistentUuid": "ca0ec268-d57c-5dda-b292-1298a35e778f",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "quantidade",
+          "persistentUuid": "a9e18a46-80d0-51f9-a042-6794e8d52188",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "angulo",
+          "persistentUuid": "22370beb-36ba-56a9-8d9c-0ed163b7f79a",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "488d6a25-9d1b-5cde-a5c5-da888365049b",
+          "type": "number",
+          "value": 1
         },
         {
           "name": "giro",
           "persistentUuid": "c230b1f5-cb14-5b57-9551-6609b1b5c8cc",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "id",
+          "persistentUuid": "37ad222c-0847-58ab-b4ed-1d230ee184fd",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -61672,8 +61672,14 @@
       "width": 64,
       "variables": [
         {
-          "name": "id",
-          "persistentUuid": "f33ddb35-0246-50a0-8600-988d3a93a4b2",
+          "name": "roda",
+          "persistentUuid": "f5eba104-bd69-5a74-b94f-1f3841c2ee5a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "indice",
+          "persistentUuid": "cb5f162e-01ad-5f1a-9542-940d82167b66",
           "type": "number",
           "value": 0
         }
@@ -68163,6 +68169,12 @@
           "persistentUuid": "6cce6de5-c6bc-54ce-8b5b-9a50a3011208",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "radial_i",
+          "persistentUuid": "1334262b-4624-5dd3-aa90-0f8b181127b2",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -69374,276 +69386,6 @@
         {
           "angle": 0,
           "customSize": false,
-          "depth": 1,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "bde61e5b-b1c8-58c9-aeaa-c6c2620d08af",
-          "width": 0,
-          "x": 2560,
-          "y": -5486,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "e6b2f3ea-4f21-5ded-b13c-0e2bf5e8a865",
-              "type": "number",
-              "value": 2656
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "b98db15c-7649-5384-8c85-d5e4e2be6a4d",
-              "type": "number",
-              "value": -5792
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "a35159d0-7061-5e4c-9950-e10a952ccfc7",
-              "type": "number",
-              "value": 320
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "fe5f89e9-6600-5abf-b9d3-86678c17d9b9",
-              "type": "number",
-              "value": 30
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "4d7c309e-96c0-563c-b73f-3a8cfbfa929c",
-              "type": "number",
-              "value": 90
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "9deff37d-ef19-5ae6-96ba-055db0f770ac",
-              "type": "boolean",
-              "value": true
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "depth": 1,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "470d2f2f-c75b-5522-b89f-ca8032946ac5",
-          "width": 0,
-          "x": 2283,
-          "y": -5966,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "7c171a0e-f717-5090-be0a-e87bac4522aa",
-              "type": "number",
-              "value": 2656
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "9c9d4827-2c73-5491-9369-90357f88f943",
-              "type": "number",
-              "value": -5792
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "787bdb67-3c70-5d78-9d1b-377df46a9bc1",
-              "type": "number",
-              "value": 320
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "430a2ac1-133a-53af-a213-42e748e8c6eb",
-              "type": "number",
-              "value": 30
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "60370899-c73d-53d3-b337-e165cd67a69d",
-              "type": "number",
-              "value": 210
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "523aa568-be9d-56db-85b2-78c9f883447d",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "depth": 1,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "0dfc1fc5-b522-5ac6-ab06-10eb0670d6af",
-          "width": 0,
-          "x": 2837,
-          "y": -5966,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "de07ed01-6727-5288-b302-c1f791c762f0",
-              "type": "number",
-              "value": 2656
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "8417f34d-c7fc-5999-acfd-5ce8994fd0d0",
-              "type": "number",
-              "value": -5792
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "cfd7c38c-1b4f-5c4f-a302-75d6efb466ef",
-              "type": "number",
-              "value": 320
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "643a12ff-665e-56a5-83ff-7d3b0cda5a22",
-              "type": "number",
-              "value": 30
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "15a5e772-f246-57b8-9aa7-0162d6363357",
-              "type": "number",
-              "value": 330
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "946df8bc-3443-5949-9d60-c1e9294e1cd9",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "depth": 1,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "d09926c9-85bf-5eb4-9195-d3ed67479ce5",
-          "width": 0,
-          "x": 2624,
-          "y": -7598,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "fe40fc39-fe46-5e23-8c11-7293fa378993",
-              "type": "number",
-              "value": 2464
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "80a41edb-86b6-5ff5-9c9e-941e5c07a7e9",
-              "type": "number",
-              "value": -7584
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "ba2af4b7-b7d1-58c0-a086-36be5178093a",
-              "type": "number",
-              "value": 256
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "d54745f0-dbc3-5ad5-8c06-c30811766799",
-              "type": "number",
-              "value": -40
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "2c69ab69-2df1-51e7-b1a0-ceeda1365e07",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "2cde128e-ac22-5f9f-bf3e-601e0ab6d31e",
-              "type": "boolean",
-              "value": true
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "depth": 1,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "ad9f1267-6dd6-5473-aebd-9f480522dcb2",
-          "width": 0,
-          "x": 2112,
-          "y": -7598,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "fe2e5282-efe1-5c23-9288-a223e38fe08f",
-              "type": "number",
-              "value": 2464
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "cd5b7928-921e-53e8-aa99-833f01c3a2a2",
-              "type": "number",
-              "value": -7584
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "320ff761-4fd8-5106-9ff4-d48727e29ef4",
-              "type": "number",
-              "value": 256
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "dbd26243-b08b-54ed-8fcf-6f4406221bd3",
-              "type": "number",
-              "value": -40
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "3cc1afe3-6d5d-58d9-b602-61ef41817876",
-              "type": "number",
-              "value": 180
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "bf4896f8-24f1-531b-9fea-157c04f5b365",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
           "height": 0,
           "keepRatio": true,
           "layer": "",
@@ -69780,426 +69522,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "600f15e9-a61b-5307-90ec-56a4c50a8d12",
-          "width": 116,
-          "x": -1594,
-          "y": -10691,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "0aefae0d-2615-545f-805c-df7d43d85a81",
-              "type": "number",
-              "value": -1728
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "34dd4559-70b8-591f-8266-5575f4b6c0da",
-              "type": "number",
-              "value": -10683
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "5f9deb32-8ca7-5b38-8a87-5a17fee2f0a9",
-              "type": "number",
-              "value": 192
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "f9a1fe37-0bf3-5564-bc48-b30f1b28d0c5",
-              "type": "number",
-              "value": 100
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "c1b6361a-a396-54f7-86d6-57f6758cc96f",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "df825a68-b7d8-5c98-8c10-06ef12e4e074",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "c6a306d5-e07d-5c0f-b157-50b96b33cd58",
-              "type": "boolean",
-              "value": true
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "9de0fc40-5f3b-5546-83f0-e2dca625b7a1",
-          "width": 116,
-          "x": -1978,
-          "y": -10691,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "ee1fd0c4-c11e-50b4-8435-27e799fda9f0",
-              "type": "number",
-              "value": -1728
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "7dd2158f-b555-5861-a109-c9bfeefc2f05",
-              "type": "number",
-              "value": -10683
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "31f00564-5430-5dd9-8e67-0abaa1720399",
-              "type": "number",
-              "value": 192
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "dd2ff5c8-d1c7-55fc-a84a-4846784ab9ed",
-              "type": "number",
-              "value": 100
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "e3452604-05a3-5784-ba20-3173e3e46681",
-              "type": "number",
-              "value": 180
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "f1217663-f9cf-5a80-951d-df7fb7ea32bf",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "caf68f96-2f6a-54fe-a04c-8dd0fe0b1a98",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "4e51431c-a8e6-533c-a5c1-9b38409f005d",
-          "width": 116,
-          "x": -634,
-          "y": -11267,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "8e19cdb9-afc7-5cf4-a7b2-e733b9ccd602",
-              "type": "number",
-              "value": -768
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "f1a473ea-3a8c-58a6-9814-cccd2b185524",
-              "type": "number",
-              "value": -11259
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "22a62f94-d34b-5f77-be67-f6d6fb86b466",
-              "type": "number",
-              "value": 192
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "b31f1bd7-7cf4-5605-9b6e-aa94f409469f",
-              "type": "number",
-              "value": -110
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "980b2691-5c5f-5045-8087-b442320e8f66",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "28270c6d-cc89-50a0-b802-fbd93260a0e1",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "08bdc5ae-b51d-5f5c-879e-9954299d8d7c",
-              "type": "boolean",
-              "value": true
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "44c045e7-f4fe-5dc1-a1ce-3a504b0d259d",
-          "width": 116,
-          "x": -1018,
-          "y": -11267,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "5ebc80a3-c52b-513c-acf6-c2383f3e4ded",
-              "type": "number",
-              "value": -768
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "2e68829d-74fd-552e-bbb0-fc7c1b3a0ac4",
-              "type": "number",
-              "value": -11259
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "3d79172f-da79-5347-9844-475579c7e548",
-              "type": "number",
-              "value": 192
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "6253daf3-9a10-59df-bf91-cc89ed8984a9",
-              "type": "number",
-              "value": -110
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "14df2700-da58-5f24-89d7-e1b7beb0df42",
-              "type": "number",
-              "value": 180
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "636f4036-8891-59f5-a8f6-66f064d6ebf8",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "96d632d9-82e3-545a-bb09-a37472db5733",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "27da755b-4b8d-5ade-9e43-331afebd41ac",
-          "width": 116,
-          "x": -1562,
-          "y": -12675,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "820250a8-7660-509c-98bd-4226bc43953a",
-              "type": "number",
-              "value": -1728
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "d763982e-10f0-5eff-b7a6-c8261b0dd3b4",
-              "type": "number",
-              "value": -12667
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "3f234403-e0b2-5518-9241-5f8ef1308fbf",
-              "type": "number",
-              "value": 224
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "ab8f5bc4-2137-5489-9a96-e1d96dfa3192",
-              "type": "number",
-              "value": 130
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "6e0f14d0-52f9-5aaf-8d64-f25ea1b17db1",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "141c4899-2b43-52e0-8998-41f1525357bf",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "5755b76c-9671-5121-bd50-dd7ffe95d0da",
-              "type": "boolean",
-              "value": true
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "1f2cdc83-9ef5-533d-81da-74f4ec55f755",
-          "width": 116,
-          "x": -1898,
-          "y": -12481,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "53275b6b-b995-5044-8186-d91e9d529125",
-              "type": "number",
-              "value": -1728
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "1656b93e-9f4c-51d2-bb9b-f476dbdc26b7",
-              "type": "number",
-              "value": -12667
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "f92c96d5-451f-5b2f-91e6-47368166a56b",
-              "type": "number",
-              "value": 224
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "812ec6c0-58bc-54ce-9552-0d4d6c0db536",
-              "type": "number",
-              "value": 130
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "8215e631-22fe-53e6-b01c-1058ac3f6ac4",
-              "type": "number",
-              "value": 120
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "8a3202e2-2f04-599c-a7f7-0bfe2d67f70c",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "6620a9b3-5af6-5968-b7fc-78f3e4a56e3d",
-              "type": "boolean",
-              "value": false
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "keepRatio": true,
-          "layer": "",
-          "name": "plataforma_radial",
-          "persistentUuid": "02df7197-8b72-5d8c-835d-3ee5be28d967",
-          "width": 116,
-          "x": -1898,
-          "y": -12869,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "centro_x",
-              "persistentUuid": "33b8c848-d9e8-5ae8-a99d-fc657fc1c439",
-              "type": "number",
-              "value": -1728
-            },
-            {
-              "name": "centro_y",
-              "persistentUuid": "7e5243d6-6713-52b8-adc5-e77fe8508abb",
-              "type": "number",
-              "value": -12667
-            },
-            {
-              "name": "raio",
-              "persistentUuid": "06fffdd6-a878-5194-8c5c-2a5507d5c569",
-              "type": "number",
-              "value": 224
-            },
-            {
-              "name": "vel_ang",
-              "persistentUuid": "c3a58a38-ce71-561e-bf40-939f50fc52d6",
-              "type": "number",
-              "value": 130
-            },
-            {
-              "name": "angulo",
-              "persistentUuid": "76d12749-6c72-5560-833c-314cd6424df3",
-              "type": "number",
-              "value": 240
-            },
-            {
-              "name": "ancora_y",
-              "persistentUuid": "8bcb635e-72bd-5213-a01f-d7f6271e9ffb",
-              "type": "number",
-              "value": 8
-            },
-            {
-              "name": "com_eixo",
-              "persistentUuid": "9b772aa1-8fac-5b75-adf6-3156d4614f2b",
-              "type": "boolean",
-              "value": false
-            }
-          ]
         },
         {
           "angle": 0,
@@ -70682,6 +70004,246 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "20ba8182-3626-5766-b5ae-5d095ff4eae7",
+          "width": 0,
+          "x": 2628,
+          "y": -5820,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "66fc571c-d9b4-58e9-876f-3800625efe1d",
+              "type": "number",
+              "value": 320
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "de0c164b-654c-5fb2-9b1e-98bb835b0344",
+              "type": "number",
+              "value": 30
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "b716cce3-d333-5a78-bb6c-4d661e61078b",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "b8c2d577-c632-5bdf-88e4-c27da0e4b8d1",
+              "type": "number",
+              "value": 90
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "989474c6-bc37-562d-93b9-e2e008c5400f",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "acb3735c-9628-552a-809a-1dc270f79c33",
+          "width": 0,
+          "x": 2436,
+          "y": -7612,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "1232b33c-41b8-56ef-b78f-d6996a481017",
+              "type": "number",
+              "value": 256
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "09d0db78-5abd-57dd-944e-a4de2d58a25b",
+              "type": "number",
+              "value": -40
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "19d77b1a-3ca9-55da-af47-5f131318c3c4",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "2824e0db-156a-52dd-9c67-ac545ef0d2d0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "d943fbd0-ef26-5886-be8e-98410d4a5503",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "ab5543fb-800d-592f-b06f-8374eb15b9d7",
+          "width": 0,
+          "x": -1756,
+          "y": -10711,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "9bbdbf11-d26e-504b-91c2-9449fc8d0908",
+              "type": "number",
+              "value": 192
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "d11e2486-7b2a-54b2-b230-02efa1898dc5",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "1979dda7-fdf7-52d2-bbfe-2d126fa6c9db",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "86de3cdd-fb2f-5f2b-b5af-44a4a92ba255",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "ff85e730-2dc0-5078-aaa9-c275e44737d5",
+              "type": "number",
+              "value": 0.604
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "b7e2cfd0-2b98-51bf-a7e6-8e44f1592503",
+          "width": 0,
+          "x": -796,
+          "y": -11287,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "4706dac5-54ea-5949-a0f1-18e601613b53",
+              "type": "number",
+              "value": 192
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "86ce0d6c-92cd-5f53-8cb2-0491d0171299",
+              "type": "number",
+              "value": -110
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "e39d5f6a-6ad3-50e8-9ba2-740140d02110",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "75874101-735e-5f2b-9fc0-c75367615c11",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "8887b6c7-f489-5442-82c8-e1e91eac3c7f",
+              "type": "number",
+              "value": 0.604
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "659b4208-1c77-5d6c-9245-0d6d8a99aa28",
+          "width": 0,
+          "x": -1756,
+          "y": -12695,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "829aa2db-0432-5090-84e6-eb1463e08964",
+              "type": "number",
+              "value": 224
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "e8e47f64-0571-5a1d-8e17-3cb721df61ff",
+              "type": "number",
+              "value": 130
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "a085049a-84d3-5455-958a-7612b416e021",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "1dc307b1-0fd5-50d0-9ad4-9c4507bff2fb",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "e8b42095-94e7-5f57-bc21-caa824f99c63",
+              "type": "number",
+              "value": 0.604
+            }
+          ]
         }
       ],
       "objects": [],
@@ -101765,7 +101327,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Plataformas radiais (rodas de troncos). Cada plataforma_radial gira sem parar em volta de (centro_x, centro_y) a `raio` px, a vel_ang graus/s (negativo = anti-horário), sempre de pé, a partir de `angulo` (0 = à direita, 90 = embaixo). Centro em 0, 0 vira, no começo da cena, o centro do círculo que passa por onde ela foi posta. No começo cada uma ganha um id, um cipó (plataforma_radial_corda) do centro até ela e, se com_eixo, a pedra do centro (plataforma_radial_eixo), que gira com ela vezes `giro`."
+          "comment": "Rodas de troncos. O item da roda é a pedra do centro (plataforma_radial_eixo): no começo da cena cada pedra cria `quantidade` troncos (plataforma_radial, do tamanho `escala`) e um cipó para cada um. A cada quadro a pedra gira vel_ang graus/s (negativo = anti-horário) e cada tronco fica a `raio` px do centro dela, no ângulo `angulo` + indice * 360 / quantidade, sempre de pé; a pedra gira junto vezes `giro`."
         },
         {
           "colorB": 228,
@@ -101775,6 +101337,7 @@
           "name": "Plataformas radiais",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -101792,7 +101355,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "plataforma_radial",
+                  "object": "plataforma_radial_eixo",
                   "conditions": [],
                   "actions": [
                     {
@@ -101810,67 +101373,27 @@
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "plataforma_radial",
+                        "plataforma_radial_eixo",
                         "id",
                         "=",
                         "radial_n"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "radial_i",
+                        "=",
+                        "0"
                       ]
                     }
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "plataforma_radial",
-                            "centro_x",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "plataforma_radial",
-                            "centro_y",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "plataforma_radial",
-                            "centro_x",
-                            "=",
-                            "plataforma_radial.X() + plataforma_radial.Width() / 2 - plataforma_radial.raio * cos(ToRad(plataforma_radial.angulo))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "plataforma_radial",
-                            "centro_y",
-                            "=",
-                            "plataforma_radial.Y() + plataforma_radial.ancora_y - plataforma_radial.raio * sin(ToRad(plataforma_radial.angulo))"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "plataforma_radial_eixo.quantidade",
                       "conditions": [],
                       "actions": [
                         {
@@ -101879,9 +101402,9 @@
                           },
                           "parameters": [
                             "",
-                            "plataforma_radial_corda",
-                            "plataforma_radial.centro_x",
-                            "plataforma_radial.centro_y",
+                            "plataforma_radial",
+                            "plataforma_radial_eixo.CenterX()",
+                            "plataforma_radial_eixo.CenterY()",
                             ""
                           ]
                         },
@@ -101890,10 +101413,54 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "plataforma_radial_corda",
-                            "id",
+                            "plataforma_radial",
+                            "roda",
                             "=",
-                            "plataforma_radial.id"
+                            "plataforma_radial_eixo.id"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "plataforma_radial",
+                            "indice",
+                            "=",
+                            "radial_i"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "plataforma_radial",
+                            "ancora_y",
+                            "*",
+                            "plataforma_radial_eixo.escala"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                          },
+                          "parameters": [
+                            "plataforma_radial",
+                            "Resizable",
+                            "=",
+                            "plataforma_radial.Width() * plataforma_radial_eixo.escala"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                          },
+                          "parameters": [
+                            "plataforma_radial",
+                            "Resizable",
+                            "=",
+                            "plataforma_radial.Height() * plataforma_radial_eixo.escala"
                           ]
                         },
                         {
@@ -101901,38 +101468,20 @@
                             "value": "SetZOrder"
                           },
                           "parameters": [
-                            "plataforma_radial_corda",
-                            "=",
-                            "plataforma_radial.ZOrder() - 2"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
                             "plataforma_radial",
-                            "com_eixo",
-                            "True",
-                            ""
+                            "=",
+                            "plataforma_radial_eixo.ZOrder() + 2"
                           ]
-                        }
-                      ],
-                      "actions": [
+                        },
                         {
                           "type": {
                             "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "plataforma_radial_eixo",
-                            "plataforma_radial.centro_x",
-                            "plataforma_radial.centro_y",
+                            "plataforma_radial_corda",
+                            "plataforma_radial_eixo.CenterX()",
+                            "plataforma_radial_eixo.CenterY()",
                             ""
                           ]
                         },
@@ -101941,10 +101490,21 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "plataforma_radial_eixo",
-                            "id",
+                            "plataforma_radial_corda",
+                            "roda",
                             "=",
-                            "plataforma_radial.id"
+                            "plataforma_radial_eixo.id"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "plataforma_radial_corda",
+                            "indice",
+                            "=",
+                            "radial_i"
                           ]
                         },
                         {
@@ -101952,9 +101512,19 @@
                             "value": "SetZOrder"
                           },
                           "parameters": [
-                            "plataforma_radial_eixo",
+                            "plataforma_radial_corda",
                             "=",
-                            "plataforma_radial.ZOrder() - 1"
+                            "plataforma_radial_eixo.ZOrder() - 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "radial_i",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -101972,22 +101542,58 @@
                     "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
-                    "plataforma_radial",
+                    "plataforma_radial_eixo",
                     "angulo",
                     "+",
-                    "plataforma_radial.vel_ang * TimeDelta()"
+                    "plataforma_radial_eixo.vel_ang * TimeDelta()"
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetXY"
+                    "value": "SetAngle"
                   },
                   "parameters": [
-                    "plataforma_radial",
+                    "plataforma_radial_eixo",
                     "=",
-                    "plataforma_radial.centro_x + plataforma_radial.raio * cos(ToRad(plataforma_radial.angulo)) - plataforma_radial.Width() / 2",
-                    "=",
-                    "plataforma_radial.centro_y + plataforma_radial.raio * sin(ToRad(plataforma_radial.angulo)) - plataforma_radial.ancora_y"
+                    "plataforma_radial_eixo.angulo * plataforma_radial_eixo.giro"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "plataforma_radial",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "plataforma_radial_eixo",
+                        "id",
+                        "=",
+                        "plataforma_radial.roda"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "plataforma_radial",
+                        "=",
+                        "plataforma_radial_eixo.CenterX() + plataforma_radial_eixo.raio * cos(ToRad(plataforma_radial_eixo.angulo + plataforma_radial.indice * 360 / max(1, plataforma_radial_eixo.quantidade))) - plataforma_radial.Width() / 2",
+                        "=",
+                        "plataforma_radial_eixo.CenterY() + plataforma_radial_eixo.raio * sin(ToRad(plataforma_radial_eixo.angulo + plataforma_radial.indice * 360 / max(1, plataforma_radial_eixo.quantidade))) - plataforma_radial.ancora_y"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -102006,10 +101612,10 @@
                         "value": "NumberObjectVariable"
                       },
                       "parameters": [
-                        "plataforma_radial",
+                        "plataforma_radial_eixo",
                         "id",
                         "=",
-                        "plataforma_radial_corda.id"
+                        "plataforma_radial_corda.roda"
                       ]
                     }
                   ],
@@ -102022,7 +101628,7 @@
                         "plataforma_radial_corda",
                         "Resizable",
                         "=",
-                        "plataforma_radial.raio"
+                        "plataforma_radial_eixo.raio"
                       ]
                     },
                     {
@@ -102032,9 +101638,9 @@
                       "parameters": [
                         "plataforma_radial_corda",
                         "=",
-                        "plataforma_radial.centro_x + plataforma_radial.raio * cos(ToRad(plataforma_radial.angulo)) / 2 - plataforma_radial_corda.Width() / 2",
+                        "plataforma_radial_eixo.CenterX() + plataforma_radial_eixo.raio * cos(ToRad(plataforma_radial_eixo.angulo + plataforma_radial_corda.indice * 360 / max(1, plataforma_radial_eixo.quantidade))) / 2 - plataforma_radial_corda.Width() / 2",
                         "=",
-                        "plataforma_radial.centro_y + plataforma_radial.raio * sin(ToRad(plataforma_radial.angulo)) / 2 - plataforma_radial_corda.Height() / 2"
+                        "plataforma_radial_eixo.CenterY() + plataforma_radial_eixo.raio * sin(ToRad(plataforma_radial_eixo.angulo + plataforma_radial_corda.indice * 360 / max(1, plataforma_radial_eixo.quantidade))) / 2 - plataforma_radial_corda.Height() / 2"
                       ]
                     },
                     {
@@ -102044,63 +101650,14 @@
                       "parameters": [
                         "plataforma_radial_corda",
                         "=",
-                        "plataforma_radial.angulo"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "plataforma_radial_eixo",
-              "conditions": [],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "plataforma_radial",
-                        "id",
-                        "=",
-                        "plataforma_radial_eixo.id"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "plataforma_radial_eixo",
-                        "=",
-                        "plataforma_radial.centro_x - plataforma_radial_eixo.Width() / 2",
-                        "=",
-                        "plataforma_radial.centro_y - plataforma_radial_eixo.Height() / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "plataforma_radial_eixo",
-                        "=",
-                        "plataforma_radial.angulo * plataforma_radial_eixo.giro"
+                        "ToDeg(ToRad(plataforma_radial_eixo.angulo + plataforma_radial_corda.indice * 360 / max(1, plataforma_radial_eixo.quantidade)))"
                       ]
                     }
                   ]
                 }
               ]
             }
-          ],
-          "parameters": []
+          ]
         }
       ]
     },
