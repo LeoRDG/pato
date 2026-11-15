@@ -10949,6 +10949,12 @@
           "persistentUuid": "b400f3d5-199e-51f6-bdb7-5c121a1b8a26",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "camera_offset_normal",
+          "persistentUuid": "5a4e4d0b-2f67-5b3d-bea4-e5e0cdadf7d9",
+          "type": "number",
+          "value": -140
         }
       ],
       "effects": [],
@@ -60530,6 +60536,18 @@
           "persistentUuid": "591193bb-aa56-5398-9314-32d59b2ed900",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "camera_mistura",
+          "persistentUuid": "0a9a2a97-fc33-526c-a1e8-0dc2816a14d4",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "camera_dy",
+          "persistentUuid": "0d8d47d7-556e-5a07-ab77-40c904c85b68",
+          "type": "number",
+          "value": 60
         }
       ]
     },
@@ -94739,6 +94757,166 @@
                   "parameterObjects": "",
                   "useStrict": true,
                   "eventsSheetExpanded": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Câmera da luta",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Câmera da luta: com a arena trancada a câmera mira entre o pato e o demônio (camera_mistura) mais camera_dy px para baixo; fora da luta volta ao deslocamento normal da SmoothCamera do pato."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "camera_offset_normal",
+                    "=",
+                    "pato.SmoothCamera::OffsetY()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SmoothCamera::SmoothCamera::SetOffsetYOp"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothCamera",
+                    "=",
+                    "(demonio_chefe.CenterY() - pato.CenterY()) * demonio_chefe.camera_mistura + demonio_chefe.camera_dy",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "chefe_trancado",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "demonio_chefe",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SmoothCamera::SmoothCamera::SetOffsetYOp"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothCamera",
+                    "=",
+                    "pato.camera_offset_normal",
+                    ""
+                  ]
                 }
               ]
             }
