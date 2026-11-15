@@ -100,3 +100,13 @@ def test_condenado_em_chamas_no_inferno():
                for a in OBJ['condenado_em_chamas']['animations'] for d in a['directions'] for s in d['sprites'])
     grupo = json.dumps(G['Condenado em chamas (frenesi)'])
     assert 'sangue_verde' not in grupo and 'explosao_faiscas' in grupo and 'som_espiral.wav' in grupo
+
+
+def test_morte_dos_anjos_com_particulas():
+    em = OBJ['anjo_morte_luz']
+    assert em['type'] == 'ParticleSystem::ParticleEmitter' and em['destroyWhenNoParticles']
+    grupo = json.dumps(G['Morte dos anjos (partículas de luz)'])
+    for anjo in ('querubim', 'serafim', 'ofanim', 'roda_anjo'):
+        assert {'morte_luz_raio', 'morte_luz_qtd'} <= variaveis(anjo)
+        assert f'"{anjo}.morte_luz_raio"' in grupo and f'"{anjo}.morte_luz_qtd"' in grupo
+    assert 'Condenado em chamas (frenesi)' in json.dumps([e.get('name') for e in G['Inferno']['events']], ensure_ascii=False)
