@@ -60,7 +60,7 @@ class SangueExplosao(unittest.TestCase):
             pass
         texto = json.dumps(self.ext['Chefe']['events'])
         self.assertIn('"golpe", "=", "\\"cutelo\\""', texto)
-        self.assertEqual(texto.count('"Create"'), 1)
+        self.assertEqual(texto.count('"Create"}, "parameters": ["", "bola_fogo"'), 1)
 
     def test_ligado_no_inferno(self):
         cena = next(l for l in self.d['layouts'] if l['name'] == 'Inferno')

@@ -28246,7 +28246,50 @@
       "textureParticleName": "",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 20,
-      "variables": [],
+      "variables": [
+        {
+          "name": "fluxo_continuo",
+          "persistentUuid": "2942967f-8fac-582b-8c50-75fce5fe8798",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "64d64b6a-ba1b-5127-b73e-be21d8208233",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "angulo",
+          "persistentUuid": "c41a9abb-d4b6-5d5a-8a08-a223fe09342a",
+          "type": "number",
+          "value": -90
+        },
+        {
+          "name": "dy",
+          "persistentUuid": "556cbf57-71e3-5d10-a5f1-bcd19cabdd29",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "z_rel",
+          "persistentUuid": "0f977fba-44af-541b-b0cd-455ab619921c",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "do_chefe",
+          "persistentUuid": "762753a9-7c38-5765-9db4-104e5e50613d",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "parando",
+          "persistentUuid": "1c6fdc6e-22cf-51d4-8ebc-516d3a06e8d7",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -60167,6 +60210,12 @@
           "persistentUuid": "28f4299a-8294-5598-8545-034a0242d077",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "fumaca_criada",
+          "persistentUuid": "0f96d9f1-0a5f-5dd6-a15c-51fc34db7add",
+          "type": "boolean",
+          "value": false
         }
       ]
     },
@@ -91020,6 +91069,363 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Fumaça da fúria",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Fumaça da fúria: quando o demônio entra em fúria, cria um demonio_fumaca contínuo (fluxo_continuo, raio, angulo, dy e z_rel ficam no demonio_fumaca) que segue o corpo dele; quando ele morre, a fumaça para e some sozinha."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "em_furia",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "fumaca_criada",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "fumaca_criada",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_fumaca",
+                    "demonio_chefe.CenterX()",
+                    "demonio_chefe.CenterY()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "=",
+                    "demonio_chefe.CenterX()",
+                    "=",
+                    "demonio_chefe.CenterY() + demonio_fumaca.dy"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "=",
+                    "demonio_fumaca.angulo"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "=",
+                    "demonio_chefe.ZOrder() + demonio_fumaca.z_rel"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "do_chefe",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// deixa o emissor contínuo, com o fluxo e o raio das variáveis dele",
+                    "for (const o of objects) {",
+                    "  const v = o.getVariables();",
+                    "  o.setTank(-1);",
+                    "  o.setFlow(v.get(\"fluxo_continuo\").getAsNumber());",
+                    "  o.setZoneRadius(v.get(\"raio\").getAsNumber());",
+                    "}"
+                  ],
+                  "parameterObjects": "demonio_fumaca",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "do_chefe",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "parando",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "=",
+                    "demonio_chefe.CenterX()",
+                    "=",
+                    "demonio_chefe.CenterY() + demonio_fumaca.dy"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "=",
+                    "demonio_chefe.ZOrder() + demonio_fumaca.z_rel"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "do_chefe",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "parando",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "parando",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// para de emitir; o emissor se apaga sozinho quando a última partícula some",
+                    "for (const o of objects) o.stopEmission();"
+                  ],
+                  "parameterObjects": "demonio_fumaca",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "do_chefe",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "parando",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_fumaca",
+                    "parando",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// para de emitir; o emissor se apaga sozinho quando a última partícula some",
+                    "for (const o of objects) o.stopEmission();"
+                  ],
+                  "parameterObjects": "demonio_fumaca",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             }
