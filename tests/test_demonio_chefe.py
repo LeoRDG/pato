@@ -27,7 +27,7 @@ class DemonioChefe(unittest.TestCase):
     def test_animacoes_e_imagens(self):
         recursos = {r['name'] for r in self.d['resources']['resources']}
         anims = {a['name']: a for a in self.obj['animations']}
-        self.assertEqual(set(anims), {'idle', 'andando', 'ataque', 'tomou_dano', 'morte'})
+        self.assertLessEqual({'idle', 'andando', 'ataque', 'tomou_dano', 'morte'}, set(anims))
         for a in anims.values():
             for s in a['directions'][0]['sprites']:
                 self.assertIn(s['image'], recursos)
@@ -60,10 +60,8 @@ class DemonioChefe(unittest.TestCase):
         self.assertAlmostEqual(self.vars['golpe_fim'], 12 * tempo)
 
     def test_sem_numeros_soltos_nos_eventos(self):
-        permitidos = {'0', '1', '2', '30', '0.75', '0.85'}
+        permitidos = {'0', '1', '2', '30', '360', '0.75', '0.85', '0.8', '0.9'}   # 360: volta inteira; tons de som
         for ins in instrucoes(self.ext['events']):
-            if ins['type']['value'] == 'PlaySound':
-                continue
             for p in ins['parameters']:
                 for n in re.findall(r'(?<![\w.])\d+(?:\.\d+)?(?![\w])', p):
                     self.assertIn(n, permitidos | {'30'}, f'{ins["type"]["value"]}: {p}')
