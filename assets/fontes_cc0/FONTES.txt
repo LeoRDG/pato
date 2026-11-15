@@ -181,3 +181,93 @@ som_soco_acerto.wav (soco acerta inimigo ou parede)
                                      https://freesound.org/people/alegemaate/sounds/364690/   [Creative Commons 0, baixado em 2026-11-12]
 
 --- fim: sons do jogo, tools/t31_sons_jogo.py ---
+
+--- início: sons das mecânicas dos inimigos, tools/t77_sons_inimigos.py (gerado, não editar à mão) ---
+
+som_arremesso.wav (condenada joga ossos)
+  arremesso_346373.wav               "Throwing / Whip Effect" por denao270 (inteiro, tom -10%)
+                                     https://freesound.org/people/denao270/sounds/346373/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_carga.wav (condenado azul avisa a investida)
+  rugido_curto_132874.wav            "Monster Short Roar.wav" por ecfike (0,8 s, tom -15%)
+                                     https://freesound.org/people/ecfike/sounds/132874/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_bate_parede.wav (investida bate na parede / roda bate)
+  queda_corpo_504626.wav             "BODY FALL - V HVY - DIRT" por leonelmail (0,5 s)
+                                     https://freesound.org/people/leonelmail/sounds/504626/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_bile.wav (bolsa de bile estoura)
+  splat_molhado_495118.wav           "Wet Splat 1.mp3" por nebulasnails (inteiro)
+                                     https://freesound.org/people/nebulasnails/sounds/495118/   [Creative Commons 0, baixado em 2026-11-15]
+  rasga_30931.wav                    "rip_tear FLESH!.wav" por aust_paul (0,3 s, tom -20%, por baixo)
+                                     https://freesound.org/people/aust_paul/sounds/30931/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_espinhos.wav (árvore solta o leque de espinhos)
+  swosh_59988.wav                    "SWOSH-01 44.1kHz" por qubodup (três vezes, tons 1,3 / 1,15 / 1,45, 30 ms entre elas)
+                                     https://freesound.org/people/qubodup/sounds/59988/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_espiral.wav (caveira gigante gira a espiral de fogo)
+  fogo_260554.wav                    "Basic Fire whoosh" por LookIMadeAThing (1,2 s a partir de 0,2 s)
+                                     https://freesound.org/people/LookIMadeAThing/sounds/260554/   [Creative Commons 0, baixado em 2026-11-12]
+
+som_ping.wav (bala ricocheteia em inimigo blindado)
+  ricochete_30932.wav                "bullet ricochet.wav" por aust_paul (0,35 s, tom +20%)
+                                     https://freesound.org/people/aust_paul/sounds/30932/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_investida.wav (cabeça voadora / roda disparam)
+  swing_389590.wav                   "Swing Woosh" por Jofae (inteiro, tom -15%)
+                                     https://freesound.org/people/Jofae/sounds/389590/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_roubo.wav (diabinho rouba moedas)
+  moeda_obj_146723.wav               "coin object" por Leszek_Szary (inteiro)
+                                     https://freesound.org/people/Leszek_Szary/sounds/146723/   [Creative Commons 0, baixado em 2026-11-15]
+  risada_diabinho_205751.wav         "Imp Laugh" por scorpion67890 (inteiro, entra aos 0,05 s)
+                                     https://freesound.org/people/scorpion67890/sounds/205751/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_laser_carga.wav (olho demoníaco mira o raio)
+  laser_carga_588242.wav             "Laser Charge Up" por magnuswaker (inteiro, tom -10%)
+                                     https://freesound.org/people/magnuswaker/sounds/588242/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_laser.wav (olho demoníaco dispara o raio)
+  laser_feixe_352852.wav             "Game - Style Laser Beam" por Jofae (0,5 s, tom -20%)
+                                     https://freesound.org/people/Jofae/sounds/352852/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_bomba.wav (voador solta bomba)
+  bomba_cai_506313.wav               "Falling Bomb.wav" por Daleonfire (0,7 s)
+                                     https://freesound.org/people/Daleonfire/sounds/506313/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_arranca.wav (zumbi perde a cabeça)
+  rasga_30931.wav                    "rip_tear FLESH!.wav" por aust_paul (inteiro)
+                                     https://freesound.org/people/aust_paul/sounds/30931/   [Creative Commons 0, baixado em 2026-11-15]
+  splat_molhado_495118.wav           "Wet Splat 1.mp3" por nebulasnails (inteiro, tom -20%)
+                                     https://freesound.org/people/nebulasnails/sounds/495118/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_impacto.wav (pigman cai do salto e solta as ondas)
+  impacto_pedra_513694.wav           "impact-stone-heavy.wav" por kasparsj (0,7 s, tom -15%)
+                                     https://freesound.org/people/kasparsj/sounds/513694/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_lingua.wav (língua do sapo)
+  slurp_445974.wav                   "Cartoon - Slurp!" por Breviceps (inteiro, tom -10%)
+                                     https://freesound.org/people/Breviceps/sounds/445974/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_flecha.wav (querubim atira a flecha)
+  arco_394179.wav                    "Longbow Release 2.wav" por saturdaysoundguy (inteiro)
+                                     https://freesound.org/people/saturdaysoundguy/sounds/394179/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_luz.wav (serafim e ofanim soltam luz)
+  magia_442774.wav                   "Magic Spell" por qubodup (0,7 s, tom +20%)
+                                     https://freesound.org/people/qubodup/sounds/442774/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_olhos.wav (ofanim abre os olhos)
+  magia2_241809.wav                  "Magic SFX for Games " por suntemple (0,8 s, tom -20%)
+                                     https://freesound.org/people/suntemple/sounds/241809/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_roda.wav (roda do anjo acelera girando)
+  woosh_fundo_245932.wav             "Deep wooshing.wav" por sophiehall3535 (0,6 s, tom +50%)
+                                     https://freesound.org/people/sophiehall3535/sounds/245932/   [Creative Commons 0, baixado em 2026-11-15]
+
+som_levanta.wav (condenado se levanta)
+  zumbi_463721.wav                   "Burp Monster Zombie groan moan" por EricsSoundschmiede (0,9 s, tom -15%)
+                                     https://freesound.org/people/EricsSoundschmiede/sounds/463721/   [Creative Commons 0, baixado em 2026-11-12]
+
+--- fim: sons das mecânicas dos inimigos, tools/t77_sons_inimigos.py ---
