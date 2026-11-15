@@ -10372,6 +10372,38 @@
         "name": "assets/parede_chefe/portao.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/destroco/pedaco_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/destroco/pedaco_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/destroco/pedaco_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/destroco/pedaco_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/destroco/pedaco_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/destroco/pedaco_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/destroco/pedaco_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/destroco/pedaco_03.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -10911,6 +10943,12 @@
           "persistentUuid": "3c30a995-5201-561c-bf02-e5db1ffb0b4c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "lava_pulo",
+          "persistentUuid": "b400f3d5-199e-51f6-bdb7-5c121a1b8a26",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -44648,6 +44686,24 @@
           "persistentUuid": "4affcfc8-abf5-557f-b52d-1b893244d0df",
           "type": "number",
           "value": -90
+        },
+        {
+          "name": "dano_fase2",
+          "persistentUuid": "e03de2cd-4b8f-5bf2-9b56-e46f1cae3e5c",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "dano_margem",
+          "persistentUuid": "3b1a622c-6f41-589f-8976-476a6397cb15",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "pulo_vel",
+          "persistentUuid": "cc5ca4a6-1b10-58c3-90a0-fab92a85749d",
+          "type": "number",
+          "value": 1500
         }
       ],
       "effects": [],
@@ -60216,6 +60272,264 @@
           "persistentUuid": "0f96d9f1-0a5f-5dd6-a15c-51fc34db7add",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "golpe_quebra_dx",
+          "persistentUuid": "b5208be3-06a5-5491-8468-37f9c096b4b0",
+          "type": "number",
+          "value": 220
+        },
+        {
+          "name": "golpe_quebra_raio",
+          "persistentUuid": "d8249e06-001c-58f0-baa8-d33c57ce61ca",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "golpe_quebra_qtd",
+          "persistentUuid": "60135cd5-23d0-50c4-96c7-abd3f378a21d",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "explosao_quebra_raio",
+          "persistentUuid": "c1e089ac-cb7a-56fd-b1d6-b29084e71a11",
+          "type": "number",
+          "value": 220
+        },
+        {
+          "name": "explosao_quebra_qtd",
+          "persistentUuid": "fb588b0c-1adc-593d-9341-a842a7be73e5",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "quebra_som_volume",
+          "persistentUuid": "dc53794d-6ba4-5b46-a691-41598d751db1",
+          "type": "number",
+          "value": 45
+        },
+        {
+          "name": "grande_explosoes",
+          "persistentUuid": "97caec0d-ce13-5966-a2b6-b5e8eaf7177d",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "grande_som_volume",
+          "persistentUuid": "3a0c6f50-a61e-5595-bfd9-b0893a6becec",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "grande_tom",
+          "persistentUuid": "f28abd19-50db-5933-808a-049e47699e65",
+          "type": "number",
+          "value": 0.65
+        },
+        {
+          "name": "queda_vel",
+          "persistentUuid": "63bb5b52-c0cb-5b7f-951d-3d5d67a39189",
+          "type": "number",
+          "value": 1800
+        },
+        {
+          "name": "lava_afunda",
+          "persistentUuid": "27447bfa-cc9a-5d29-a10b-8aea3fad7ab2",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "lava_borda",
+          "persistentUuid": "b8c5b049-b907-5d2e-a91d-71b5c03cbb95",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "lava_vel_fator",
+          "persistentUuid": "6490961d-d7c7-5fe7-b7db-5036e5a489ec",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "lava_pulo_altura",
+          "persistentUuid": "d677311d-9ad2-51c4-bc2a-728cf5e5f6ad",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "lava_y",
+          "persistentUuid": "bdbaf687-e20c-56a8-b798-a3468d575c72",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_ataque_alcance",
+          "persistentUuid": "fd623f28-89b5-5a98-81df-545a6466a058",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "lava_golpe_baixo",
+          "persistentUuid": "8100c54d-4e10-5207-850a-49371976d7ca",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "lava_golpe_dx",
+          "persistentUuid": "80af4c62-0b3f-5e87-a7da-7204c387c31a",
+          "type": "number",
+          "value": 170
+        },
+        {
+          "name": "lava_subida_t",
+          "persistentUuid": "fa8a1f8c-c79e-58a1-bb59-a7eedb357148",
+          "type": "number",
+          "value": 0.55
+        },
+        {
+          "name": "lava_espera_t",
+          "persistentUuid": "7b22c011-04e5-5749-966b-0c1eff6726eb",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "lava_pancada_vel",
+          "persistentUuid": "313aea51-b242-5ba7-830d-01d7e5be673d",
+          "type": "number",
+          "value": 2600
+        },
+        {
+          "name": "lava_quadro_espera",
+          "persistentUuid": "fe0fd877-c838-5b4e-af38-b1d61e95fe6d",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "lava_quadro_golpe",
+          "persistentUuid": "f86e243f-eaad-54d1-b100-21c5d2bfffc5",
+          "type": "number",
+          "value": 9
+        },
+        {
+          "name": "lava_golpe_janela",
+          "persistentUuid": "78588ff8-d323-50cc-8e16-fb0bc2344d66",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "lava_cravado_t",
+          "persistentUuid": "a7eeca83-a34f-53a0-a54b-a11ac4f41995",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "lava_volta_t",
+          "persistentUuid": "54e08ffb-80c3-54f5-9023-6abef0a0a02d",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "lava_x0",
+          "persistentUuid": "65ec6b1d-b563-553c-92db-7d8a90a56113",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_x1",
+          "persistentUuid": "8bc2cbf9-0aa5-50cb-afb5-ea1ee62823e6",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_y1",
+          "persistentUuid": "8b23c83d-5b12-5209-b328-00e9c6ac4202",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_t",
+          "persistentUuid": "d2ebdbd2-82ea-5427-b024-9d3988b7daca",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_u",
+          "persistentUuid": "488402cc-ee3b-5fde-897d-4757136e8551",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_quadro",
+          "persistentUuid": "7ad4acd9-8c68-55a8-b716-5ff343223015",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lava_avisou",
+          "persistentUuid": "b6992d0b-af80-541a-bcf2-31fe8d52e255",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quebra_feita",
+          "persistentUuid": "fb862381-e50b-58b9-8a98-437e3d99b006",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "grande_feita",
+          "persistentUuid": "dfef0f03-d7a3-5e50-979e-806b5532822e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "grande_i",
+          "persistentUuid": "3b436349-2a2a-5877-a109-4a5e3d548de4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "no_lava",
+          "persistentUuid": "f8dc83bf-5ff4-59bb-aeea-19248667050b",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "queda_quadro_a",
+          "persistentUuid": "9e1f0512-2b57-55ea-ac3f-4d88f182e350",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "queda_quadro_tempo",
+          "persistentUuid": "09e06100-90e6-563d-8333-ab405d3bb232",
+          "type": "number",
+          "value": 0.08
+        },
+        {
+          "name": "queda_bola_espera",
+          "persistentUuid": "ee8d9db8-34d2-5259-9700-e9ff7ecb3218",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "queda_bolas",
+          "persistentUuid": "62156ff3-b207-5c81-944e-959e0a54a22d",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "queda_bola_herda",
+          "persistentUuid": "7c182410-a2b4-5599-849f-c97aea03aa40",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "queda_quadro",
+          "persistentUuid": "591193bb-aa56-5398-9314-32d59b2ed900",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -60487,6 +60801,196 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "destroco",
+      "persistentUuid": "329df6df-39f4-5c91-bd09-69bb648c364d",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "gravidade",
+          "persistentUuid": "19a7ccad-61f5-5bfd-8563-2bbc232a8d60",
+          "type": "number",
+          "value": 2600
+        },
+        {
+          "name": "vel_x",
+          "persistentUuid": "b30ebfb4-e447-5957-a923-49f9500f2641",
+          "type": "number",
+          "value": 380
+        },
+        {
+          "name": "vel_y_min",
+          "persistentUuid": "da06aa89-a965-57c4-ad14-d2c89e1e77ec",
+          "type": "number",
+          "value": -900
+        },
+        {
+          "name": "vel_y_max",
+          "persistentUuid": "87534394-3079-58d3-83ee-18c286cbd385",
+          "type": "number",
+          "value": -250
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "483fe726-cc9d-52d8-87a2-81740fc38c2a",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "fundo_y",
+          "persistentUuid": "1df36a68-249c-5ce9-a120-a61626609634",
+          "type": "number",
+          "value": 330
+        },
+        {
+          "name": "z",
+          "persistentUuid": "bbd2bc53-a4f4-5bac-a529-f8815989516b",
+          "type": "number",
+          "value": 2805
+        },
+        {
+          "name": "vx",
+          "persistentUuid": "e7070a22-1959-5e55-a5bb-aa79fd5aeeee",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vy",
+          "persistentUuid": "590b246d-e100-5b8b-98bd-eefc102b7146",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "va",
+          "persistentUuid": "91720f69-618b-5104-9ed6-3e3a75812a58",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pedaco_0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/destroco/pedaco_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pedaco_1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/destroco/pedaco_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pedaco_2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/destroco/pedaco_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pedaco_3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/destroco/pedaco_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -60692,6 +61196,9 @@
               },
               {
                 "objectName": "parede_chefe"
+              },
+              {
+                "objectName": "destroco"
               }
             ]
           }
@@ -64099,6 +64606,54 @@
           "persistentUuid": "9304faee-acbd-5230-b056-1a1199a906a2",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "fase2",
+          "persistentUuid": "00a84b88-272f-5904-8e29-1ce81b8d9fb8",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quebra_x_min",
+          "persistentUuid": "224bbb99-1b5d-52e0-bf7c-d8a8c5e6d75e",
+          "type": "number",
+          "value": 11764
+        },
+        {
+          "name": "quebra_x_max",
+          "persistentUuid": "7f1fde44-782f-55de-a7fb-d5a7bce43a2f",
+          "type": "number",
+          "value": 13940
+        },
+        {
+          "name": "quebra_y_min",
+          "persistentUuid": "344b426b-7ec5-55ee-a74f-972c373dd088",
+          "type": "number",
+          "value": -7849
+        },
+        {
+          "name": "quebra_y_max",
+          "persistentUuid": "8124cc86-1c1a-5a89-aa9e-20d7d47116ce",
+          "type": "number",
+          "value": -7529
+        },
+        {
+          "name": "quebra_topo_linhas",
+          "persistentUuid": "3ed79a98-2ae1-5c05-b4ec-10d4a548c7fb",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "destroco_por_tile",
+          "persistentUuid": "5d158899-d27c-5e85-920a-c6dbad4332a7",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "plataformas_desligadas",
+          "persistentUuid": "93976d39-e2f7-5ef1-9607-522b9e766346",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -65360,6 +65915,90 @@
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tiles_inferno_ponte",
+          "persistentUuid": "8fd9f14d-c59e-5481-b9a7-c854c86fa0e0",
+          "width": 0,
+          "x": 11800,
+          "y": 120,
+          "zOrder": 1012,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":5,\"dimY\":1,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[125,126,126,126,127]]}]}"
+            }
+          ],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tiles_inferno_ponte",
+          "persistentUuid": "b0069bde-e818-545a-8f02-7d0a34977e8a",
+          "width": 0,
+          "x": 12370,
+          "y": 120,
+          "zOrder": 1012,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":5,\"dimY\":1,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[125,126,126,126,127]]}]}"
+            }
+          ],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tiles_inferno_ponte",
+          "persistentUuid": "84fb7a02-e789-554a-a9f4-cdcc37ba9297",
+          "width": 0,
+          "x": 12940,
+          "y": 120,
+          "zOrder": 1012,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":5,\"dimY\":1,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[125,126,126,126,127]]}]}"
+            }
+          ],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tiles_inferno_ponte",
+          "persistentUuid": "db311d1c-c272-55ba-9314-ee636851361e",
+          "width": 0,
+          "x": 13510,
+          "y": 120,
+          "zOrder": 1012,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":5,\"dimY\":1,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[125,126,126,126,127]]}]}"
+            }
+          ],
           "initialVariables": []
         }
       ],
@@ -89262,6 +89901,131 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "grande_feita",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "grande_feita",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"grande\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "Animation",
+                        "=",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "PlatformerObject",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_fogo_caveira.wav",
+                        "",
+                        "demonio_chefe.grande_som_volume",
+                        "demonio_chefe.grande_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "em_furia",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -91424,6 +92188,2548 @@
                     "for (const o of objects) o.stopEmission();"
                   ],
                   "parameterObjects": "demonio_fumaca",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Fase 2",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Fase 2: cada ataque quebra blocos sorteados dentro do piso da arena (a camada de cima fica); na fúria a explosão grande quebra tudo e a luta continua na lava lá embaixo, sobre as pontes. A zona que quebra fica nas variáveis de cena quebra_*; o resto nas variáveis do demonio_chefe, do destroco e da lava."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "!=",
+                    "\"atacar\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "quebra_feita",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"cutelo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "quebra_feita",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"estado\"",
+                    ">",
+                    "demonio_chefe.golpe_inicio / demonio_chefe.ritmo"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "quebra_feita",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_explosao.wav",
+                    "",
+                    "demonio_chefe.quebra_som_volume",
+                    "RandomFloatInRange(0.8, 0.9)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const cena = runtimeScene.getVariables();",
+                    "const n = (nome) => cena.get(nome).getAsNumber();",
+                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
+                    "const solta = (x, y) => {",
+                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
+                    "    const o = runtimeScene.createObject(\"destroco\");",
+                    "    if (!o) return;",
+                    "    const v = o.getVariables();",
+                    "    const num = (nome) => v.get(nome).getAsNumber();",
+                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
+                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
+                    "    o.setZOrder(num(\"z\"));",
+                    "    o.setAngle(sorteio(0, 360));",
+                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
+                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
+                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
+                    "  }",
+                    "};",
+                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
+                    "const quebra = (x0, x1, qtd, topo) => {",
+                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
+                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
+                    "  if (xb < xa) return;",
+                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
+                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
+                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
+                    "    const inteiros = [];",
+                    "    for (let c = c0; c <= c1; c++)",
+                    "      for (let r = r0 + topo; r <= r1; r++) {",
+                    "        const id = m.getTileAtGridCoordinates(c, r);",
+                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
+                    "      }",
+                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
+                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
+                    "      m.removeTileAtGridCoordinates(c, r);",
+                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
+                    "    }",
+                    "  }",
+                    "};",
+                    "for (const b of objects) {",
+                    "  const v = b.getVariables();",
+                    "  const num = (nome) => v.get(nome).getAsNumber();",
+                    "  const cx = b.getCenterXInScene() + num(\"direcao\") * num(\"golpe_quebra_dx\");",
+                    "  quebra(cx - num(\"golpe_quebra_raio\"), cx + num(\"golpe_quebra_raio\"), num(\"golpe_quebra_qtd\"), n(\"quebra_topo_linhas\"));",
+                    "}"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"explosao\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "explosao_feita",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "quebra_feita",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "quebra_feita",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_explosao.wav",
+                    "",
+                    "demonio_chefe.quebra_som_volume",
+                    "RandomFloatInRange(0.8, 0.9)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const cena = runtimeScene.getVariables();",
+                    "const n = (nome) => cena.get(nome).getAsNumber();",
+                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
+                    "const solta = (x, y) => {",
+                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
+                    "    const o = runtimeScene.createObject(\"destroco\");",
+                    "    if (!o) return;",
+                    "    const v = o.getVariables();",
+                    "    const num = (nome) => v.get(nome).getAsNumber();",
+                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
+                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
+                    "    o.setZOrder(num(\"z\"));",
+                    "    o.setAngle(sorteio(0, 360));",
+                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
+                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
+                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
+                    "  }",
+                    "};",
+                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
+                    "const quebra = (x0, x1, qtd, topo) => {",
+                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
+                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
+                    "  if (xb < xa) return;",
+                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
+                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
+                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
+                    "    const inteiros = [];",
+                    "    for (let c = c0; c <= c1; c++)",
+                    "      for (let r = r0 + topo; r <= r1; r++) {",
+                    "        const id = m.getTileAtGridCoordinates(c, r);",
+                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
+                    "      }",
+                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
+                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
+                    "      m.removeTileAtGridCoordinates(c, r);",
+                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
+                    "    }",
+                    "  }",
+                    "};",
+                    "for (const b of objects) {",
+                    "  const v = b.getVariables();",
+                    "  const num = (nome) => v.get(nome).getAsNumber();",
+                    "  const cx = b.getCenterXInScene() + 0;",
+                    "  quebra(cx - num(\"explosao_quebra_raio\"), cx + num(\"explosao_quebra_raio\"), num(\"explosao_quebra_qtd\"), n(\"quebra_topo_linhas\"));",
+                    "}"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"grande\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"estado\"",
+                    ">",
+                    "demonio_chefe.explosao_disparo / demonio_chefe.ritmo"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "grande_i",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_explosao.wav",
+                    "",
+                    "demonio_chefe.grande_som_volume",
+                    "demonio_chefe.grande_tom"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "PlatformerObject",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"queda\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"queda\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"queda_bola\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "demonio_chefe.grande_explosoes",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_fogo",
+                        "Variable(quebra_x_min) + (Variable(quebra_x_max) - Variable(quebra_x_min)) * (demonio_chefe.grande_i * 2 + 1) / (demonio_chefe.grande_explosoes * 2)",
+                        "Variable(quebra_y_min)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_fumaca",
+                        "Variable(quebra_x_min) + (Variable(quebra_x_max) - Variable(quebra_x_min)) * (demonio_chefe.grande_i * 2 + 1) / (demonio_chefe.grande_explosoes * 2)",
+                        "Variable(quebra_y_min)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "explosao_faiscas",
+                        "Variable(quebra_x_min) + (Variable(quebra_x_max) - Variable(quebra_x_min)) * (demonio_chefe.grande_i * 2 + 1) / (demonio_chefe.grande_explosoes * 2)",
+                        "Variable(quebra_y_min)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "grande_i",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const cena = runtimeScene.getVariables();",
+                    "const n = (nome) => cena.get(nome).getAsNumber();",
+                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
+                    "const solta = (x, y) => {",
+                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
+                    "    const o = runtimeScene.createObject(\"destroco\");",
+                    "    if (!o) return;",
+                    "    const v = o.getVariables();",
+                    "    const num = (nome) => v.get(nome).getAsNumber();",
+                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
+                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
+                    "    o.setZOrder(num(\"z\"));",
+                    "    o.setAngle(sorteio(0, 360));",
+                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
+                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
+                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
+                    "  }",
+                    "};",
+                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
+                    "const quebra = (x0, x1, qtd, topo) => {",
+                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
+                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
+                    "  if (xb < xa) return;",
+                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
+                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
+                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
+                    "    const inteiros = [];",
+                    "    for (let c = c0; c <= c1; c++)",
+                    "      for (let r = r0 + topo; r <= r1; r++) {",
+                    "        const id = m.getTileAtGridCoordinates(c, r);",
+                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
+                    "      }",
+                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
+                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
+                    "      m.removeTileAtGridCoordinates(c, r);",
+                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
+                    "    }",
+                    "  }",
+                    "};",
+                    "quebra(n(\"quebra_x_min\"), n(\"quebra_x_max\"), Infinity, 0);"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "sangue",
+                        ">=",
+                        "Variable(quebra_x_min) - sangue.Width()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "sangue",
+                        "<=",
+                        "Variable(quebra_x_max)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "sangue",
+                        "<",
+                        "Variable(quebra_y_max)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "sangue",
+                        ">",
+                        "Variable(quebra_y_min) - sangue.Height() * 2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "sangue",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "no_lava",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "+",
+                    "demonio_chefe.queda_vel * TimeDelta()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"queda\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "queda_quadro",
+                        "=",
+                        "demonio_chefe.queda_quadro_a + mod(floor(demonio_chefe.ObjectTimerElapsedTime(\"queda\") / demonio_chefe.queda_quadro_tempo), 2)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "// segura a animação explosao no quadro da variável queda_quadro",
+                        "for (const b of objects) {",
+                        "  if (b.getAnimationName() !== \"explosao\") b.setAnimationName(\"explosao\");",
+                        "  b.pauseAnimation();",
+                        "  b.setAnimationFrame(b.getVariables().get(\"queda_quadro\").getAsNumber());",
+                        "}"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"queda_bola\"",
+                            ">",
+                            "demonio_chefe.queda_bola_espera"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"queda_bola\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "demonio_chefe.queda_bolas",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "explosao_angulo",
+                                "=",
+                                "RandomFloatInRange(0, 360)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "bola_fogo",
+                                "demonio_chefe.CenterX()",
+                                "demonio_chefe.CenterY()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetXY"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "=",
+                                "demonio_chefe.CenterX() + demonio_chefe.explosao_raio * cos(ToRad(demonio_chefe.explosao_angulo)) - bola_fogo.Width() / 2",
+                                "=",
+                                "demonio_chefe.CenterY() + demonio_chefe.explosao_raio * sin(ToRad(demonio_chefe.explosao_angulo)) - bola_fogo.Height() / 2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "demonio_chefe.explosao_angulo",
+                                "demonio_chefe.explosao_vel",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "0",
+                                "demonio_chefe.queda_vel * demonio_chefe.queda_bola_herda",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "=",
+                                "demonio_chefe.explosao_angulo"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "dano",
+                                "=",
+                                "demonio_chefe.explosao_dano"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "vida",
+                                "=",
+                                "demonio_chefe.explosao_vida"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "bola_fogo",
+                                "\"vida\""
+                              ]
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"queda\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "for (const b of objects) b.resumeAnimation();"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "no_lava",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "lava.Y() + lava.Height() * lava.superficie_frac + demonio_chefe.lava_afunda - demonio_chefe.Height()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetZOrder"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "lava.ZOrder() - 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_y",
+                        "=",
+                        "demonio_chefe.Y()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"queda\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"ataque\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation",
+                            "=",
+                            "\"idle\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::JsCode",
+                          "inlineCode": [
+                            "for (const b of objects) b.resumeAnimation();"
+                          ],
+                          "parameterObjects": "demonio_chefe",
+                          "useStrict": true,
+                          "eventsSheetExpanded": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "no_lava",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"perseguir\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(pato.CenterX() - demonio_chefe.CenterX())",
+                    ">",
+                    "demonio_chefe.parar_dist"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "=",
+                    "clamp(demonio_chefe.CenterX() + sign(pato.CenterX() - demonio_chefe.CenterX()) * demonio_chefe.velocidade * demonio_chefe.ritmo * demonio_chefe.lava_vel_fator * TimeDelta(), Variable(quebra_x_min) + demonio_chefe.lava_borda, Variable(quebra_x_max) - demonio_chefe.lava_borda) - demonio_chefe.Width() / 2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "no_lava",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"perseguir\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"ataque\"",
+                    ">",
+                    "demonio_chefe.ataque_espera / demonio_chefe.ritmo"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(pato.CenterX() - demonio_chefe.CenterX())",
+                    "<",
+                    "demonio_chefe.lava_ataque_alcance"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"estado\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "direcao",
+                    "=",
+                    "sign(pato.CenterX() - demonio_chefe.CenterX())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "Animation",
+                    "=",
+                    "\"ataque\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"cutelo\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "no_lava",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "lava_t",
+                    "=",
+                    "demonio_chefe.ObjectTimerElapsedTime(\"estado\") * demonio_chefe.ritmo"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"cutelo\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"salto\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_t",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "direcao",
+                        "=",
+                        "sign(pato.CenterX() - demonio_chefe.CenterX())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_x0",
+                        "=",
+                        "demonio_chefe.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_x1",
+                        "=",
+                        "clamp(pato.CenterX() - demonio_chefe.direcao * demonio_chefe.lava_golpe_dx, Variable(quebra_x_min) + demonio_chefe.lava_borda, Variable(quebra_x_max) - demonio_chefe.lava_borda)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_y1",
+                        "=",
+                        "min(demonio_chefe.lava_y, pato.Y() + pato.Height() - demonio_chefe.Height() + demonio_chefe.lava_golpe_baixo)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "Animation",
+                        "=",
+                        "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"salto\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_u",
+                        "=",
+                        "clamp(demonio_chefe.lava_t / demonio_chefe.lava_subida_t, 0, 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "demonio_chefe.lava_x0 + (demonio_chefe.lava_x1 - demonio_chefe.lava_x0) * (1 - pow(1 - demonio_chefe.lava_u, 2)) - demonio_chefe.Width() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "demonio_chefe.lava_y + (demonio_chefe.lava_y1 - demonio_chefe.lava_pulo_altura - demonio_chefe.lava_y) * (1 - pow(1 - demonio_chefe.lava_u, 2))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "lava_quadro",
+                        "=",
+                        "min(demonio_chefe.lava_quadro_espera, floor(demonio_chefe.lava_u * (demonio_chefe.lava_quadro_espera + 1)))"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_avisou",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.lava_t",
+                            ">=",
+                            "demonio_chefe.lava_subida_t"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_avisou",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_caveira.wav",
+                            "",
+                            "demonio_chefe.som_volume",
+                            "RandomFloatInRange(0.75, 0.85)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.lava_t",
+                            ">=",
+                            "demonio_chefe.lava_subida_t + demonio_chefe.lava_espera_t"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"pancada\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_avisou",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"estado\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"pancada\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "min(demonio_chefe.lava_y1, demonio_chefe.Y() + demonio_chefe.lava_pancada_vel * demonio_chefe.ritmo * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.Y()",
+                            ">=",
+                            "demonio_chefe.lava_y1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"cravado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_t",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_quadro",
+                            "=",
+                            "demonio_chefe.lava_quadro_golpe"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_explosao.wav",
+                            "",
+                            "demonio_chefe.quebra_som_volume",
+                            "RandomFloatInRange(0.8, 0.9)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "explosao_faiscas",
+                            "demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.lava_golpe_dx",
+                            "demonio_chefe.Y() + demonio_chefe.Height() - demonio_chefe.lava_golpe_baixo",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "explosao_fumaca",
+                            "demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.lava_golpe_dx",
+                            "demonio_chefe.Y() + demonio_chefe.Height() - demonio_chefe.lava_golpe_baixo",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::JsCode",
+                          "inlineCode": [
+                            "// o cutelo bate: solta a animação a partir do quadro do golpe",
+                            "for (const b of objects) {",
+                            "  b.setAnimationFrame(b.getVariables().get(\"lava_quadro\").getAsNumber());",
+                            "  b.resumeAnimation();",
+                            "}"
+                          ],
+                          "parameterObjects": "demonio_chefe",
+                          "useStrict": true,
+                          "eventsSheetExpanded": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"salto\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"pancada\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "for (const b of objects) {",
+                        "  b.pauseAnimation();",
+                        "  b.setAnimationFrame(b.getVariables().get(\"lava_quadro\").getAsNumber());",
+                        "}"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"cravado\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "demonio_chefe.lava_y1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.lava_t",
+                            "<",
+                            "demonio_chefe.lava_golpe_janela"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.CenterX() - demonio_chefe.CenterX()) * demonio_chefe.direcao",
+                            ">",
+                            "demonio_chefe.golpe_x_min"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.CenterX() - demonio_chefe.CenterX()) * demonio_chefe.direcao",
+                            "<",
+                            "demonio_chefe.golpe_x_max"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.CenterY()",
+                            ">",
+                            "demonio_chefe.Y() + demonio_chefe.golpe_topo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.Y()",
+                            "<",
+                            "demonio_chefe.Y() + demonio_chefe.Height()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida",
+                            "-",
+                            "demonio_chefe.golpe_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"iframes\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "demonio_chefe.direcao * demonio_chefe.golpe_empurrao"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateJumpKey"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "ultimo_agressor",
+                            "=",
+                            "demonio_chefe.ObjectName()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.lava_t",
+                            ">=",
+                            "demonio_chefe.lava_cravado_t"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"volta\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "lava_t",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation",
+                            "=",
+                            "\"idle\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"volta\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "demonio_chefe.lava_y1 + (demonio_chefe.lava_y - demonio_chefe.lava_y1) * pow(clamp(demonio_chefe.lava_t / demonio_chefe.lava_volta_t, 0, 1), 2)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.lava_t",
+                            ">=",
+                            "demonio_chefe.lava_volta_t"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "=",
+                            "demonio_chefe.lava_y"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "golpe",
+                            "=",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "\"ataque\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "no_lava",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "!=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "=",
+                    "demonio_chefe.lava_y"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "for (const b of objects) b.resumeAnimation();"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "lava_pulo",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "lava_pulo",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::JumpSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "pato.pulo_forca_normal"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "pato",
+                    "lava",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    ">",
+                    "lava.Y() + lava.Height() * lava.superficie_frac + lava.dano_margem"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "-",
+                    "lava.dano_fase2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "\"lava\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::JumpSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "lava.pulo_vel"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "lava_pulo",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SetCanJump"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "plataformas_desligadas",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "plataformas_desligadas",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "plataforma_movel"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "Platform",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "plataformas_desligadas",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "demonio_chefe",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "plataformas_desligadas",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "Platform",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "destroco",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const dt = runtimeScene.getTimeManager().getElapsedTime() / 1000;",
+                    "for (const o of runtimeScene.getObjects(\"destroco\")) {",
+                    "  const v = o.getVariables();",
+                    "  const num = (nome) => v.get(nome).getAsNumber();",
+                    "  const vy = num(\"vy\") + num(\"gravidade\") * dt;",
+                    "  v.get(\"vy\").setNumber(vy);",
+                    "  o.setPosition(o.getX() + num(\"vx\") * dt, o.getY() + vy * dt);",
+                    "  o.setAngle(o.getAngle() + num(\"va\") * dt);",
+                    "  if (o.getY() > num(\"fundo_y\")) o.deleteFromScene();",
+                    "}"
+                  ],
+                  "parameterObjects": "",
                   "useStrict": true,
                   "eventsSheetExpanded": false
                 }
