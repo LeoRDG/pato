@@ -10364,6 +10364,14 @@
         "name": "assets/demonio_chefe/bola_fogo_03.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/parede_chefe/portao.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/parede_chefe/portao.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -60343,6 +60351,93 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "parede_chefe",
+      "persistentUuid": "c0d1d4b5-e883-5a61-89a4-4a297bb00449",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "descida_vel",
+          "persistentUuid": "8fbc316f-a552-5904-af86-4a012bdc8311",
+          "type": "number",
+          "value": 3200
+        },
+        {
+          "name": "subida_vel",
+          "persistentUuid": "4b244232-76b2-5d86-844e-4ace489e4d21",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "som_volume",
+          "persistentUuid": "5e2a706e-d8f2-5afd-b681-83ab81c08d68",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "som_tom",
+          "persistentUuid": "fd58ef1b-1212-5154-b2be-215d3c957d1c",
+          "type": "number",
+          "value": 0.55
+        },
+        {
+          "name": "fechado_y",
+          "persistentUuid": "2316d3b3-78fc-507f-941a-6ccbe9c4546b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fechado",
+          "persistentUuid": "1ff201d1-2436-5b2a-9818-3748acc41597",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/parede_chefe/portao.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -60545,6 +60640,9 @@
               },
               {
                 "objectName": "bola_fogo"
+              },
+              {
+                "objectName": "parede_chefe"
               }
             ]
           }
@@ -63934,6 +64032,24 @@
           "persistentUuid": "570a36aa-ee4e-5918-bd0c-8ed9bb1cf672",
           "type": "number",
           "value": 51
+        },
+        {
+          "name": "chefe_trancado",
+          "persistentUuid": "8c3c342d-0aea-5ff4-9359-5d995830b3bb",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "chefe_aberto",
+          "persistentUuid": "d12d594e-7a56-585e-adde-49ec50d9af23",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "chefe_fora",
+          "persistentUuid": "9304faee-acbd-5230-b056-1a1199a906a2",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -65179,6 +65295,23 @@
             }
           ],
           "persistentUuid": "812d1b8a-9ac8-5a82-a159-d578578e527e"
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 784,
+          "keepRatio": false,
+          "layer": "",
+          "name": "parede_chefe",
+          "persistentUuid": "fa7c365e-57d7-5ca9-a900-0ed2385ee8e7",
+          "width": 96,
+          "x": 11704,
+          "y": -8689,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -90295,6 +90428,597 @@
                   "parameters": [
                     "bola_fogo",
                     ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Arena",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Arena: cada parede_chefe (portão) foi posta onde fica FECHADA; no começo da cena sobe a própria altura para dentro do teto. Quando o pato entra no sangue do lado de dentro de todos os portões (lado do demônio, sem estar embaixo de nenhum) e o demônio está vivo, os portões descem a descida_vel e empurram o pato para dentro se encostarem nele. Quando o demônio morre, sobem a subida_vel."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_aberto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "parede_chefe",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "fechado_y",
+                            "=",
+                            "parede_chefe.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "fechado",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "=",
+                            "parede_chefe.fechado_y - parede_chefe.Height()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_aberto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "pato",
+                    "sangue",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "chefe_fora",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "parede_chefe",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(parede_chefe.CenterX() - pato.CenterX()) * (parede_chefe.CenterX() - demonio_chefe.CenterX())",
+                                "<=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(pato.CenterX() - parede_chefe.CenterX())",
+                                "<",
+                                "(parede_chefe.Width() + pato.Width()) / 2"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "chefe_fora",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "chefe_fora",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "chefe_trancado",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "parede_chefe",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "parede_chefe.Y()",
+                            "<",
+                            "parede_chefe.fechado_y"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "=",
+                            "min(parede_chefe.fechado_y, parede_chefe.Y() + parede_chefe.descida_vel * TimeDelta())"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "parede_chefe.Y()",
+                            ">=",
+                            "parede_chefe.fechado_y"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "fechado",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "fechado",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_explosao.wav",
+                            "",
+                            "parede_chefe.som_volume",
+                            "parede_chefe.som_tom"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "pato",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.CenterX()",
+                            ">",
+                            "parede_chefe.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "pato",
+                            "=",
+                            "parede_chefe.X() + parede_chefe.Width()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "pato",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.CenterX()",
+                            "<=",
+                            "parede_chefe.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "pato",
+                            "=",
+                            "parede_chefe.X() - pato.Width()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "demonio_chefe",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_aberto",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_trancado",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_aberto",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_aberto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "parede_chefe",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "parede_chefe.Y()",
+                            ">",
+                            "parede_chefe.fechado_y - parede_chefe.Height()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "parede_chefe",
+                            "=",
+                            "max(parede_chefe.fechado_y - parede_chefe.Height(), parede_chefe.Y() - parede_chefe.subida_vel * TimeDelta())"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
