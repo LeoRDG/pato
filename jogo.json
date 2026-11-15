@@ -93716,6 +93716,36 @@
                         "\"ataque\""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "// o salto sempre cai numa ponte: a mais perto do pato na horizontal",
+                        "const cena = runtimeScene.getVariables();",
+                        "const n = (k) => cena.get(k).getAsNumber();",
+                        "const pontes = runtimeScene.getObjects(\"tiles_inferno_ponte\").filter(",
+                        "  (p) => p.getX() >= n(\"quebra_x_min\") && p.getX() + p.getWidth() <= n(\"quebra_x_max\"));",
+                        "const pato = runtimeScene.getObjects(\"pato\")[0];",
+                        "if (pontes.length === 0 || !pato) return;",
+                        "const px = pato.getCenterXInScene();",
+                        "const longe = (p) => Math.max(p.getX() - px, px - (p.getX() + p.getWidth()), 0);",
+                        "const ponte = pontes.reduce((a, p) => (longe(p) < longe(a) ? p : a));",
+                        "const alvo = Math.min(Math.max(px, ponte.getX()), ponte.getX() + ponte.getWidth());",
+                        "for (const b of objects) {",
+                        "  const v = b.getVariables();",
+                        "  const num = (k) => v.get(k).getAsNumber();",
+                        "  const dir = Math.sign(alvo - b.getCenterXInScene()) || num(\"direcao\") || 1;",
+                        "  const x1 = alvo - dir * num(\"lava_golpe_dx\");",
+                        "  v.get(\"direcao\").setNumber(dir);",
+                        "  v.get(\"lava_x1\").setNumber(Math.min(Math.max(x1, n(\"quebra_x_min\") + num(\"lava_borda\")), n(\"quebra_x_max\") - num(\"lava_borda\")));",
+                        "  v.get(\"lava_y1\").setNumber(ponte.getY() - b.getHeight() + num(\"lava_golpe_baixo\"));",
+                        "}"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
                   ]
                 },
                 {
