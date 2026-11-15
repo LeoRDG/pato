@@ -60,7 +60,7 @@ class DemonioChefe(unittest.TestCase):
         self.assertAlmostEqual(self.vars['golpe_fim'], 12 * tempo)
 
     def test_sem_numeros_soltos_nos_eventos(self):
-        permitidos = {'0', '1', '2', '30', '360', '0.75', '0.85', '0.8', '0.9'}   # 360: volta inteira; tons de som
+        permitidos = {'0', '1', '2', '30', '255', '360', '0.01', '0.75', '0.85', '0.8', '0.9'}   # 255: opacidade cheia; 360: volta inteira; 0.01: evita dividir por zero; tons de som
         for ins in instrucoes(self.ext['events']):
             for p in ins['parameters']:
                 for n in re.findall(r'(?<![\w.])\d+(?:\.\d+)?(?![\w])', p):
