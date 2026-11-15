@@ -78010,15 +78010,6 @@
                             "=",
                             "sign(pato.CenterX() - condenado_inchado.CenterX()) * condenado_inchado.explosao_empurrao"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateJumpKey"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
                         }
                       ]
                     }
@@ -78490,15 +78481,6 @@
                         "PlatformerObject",
                         "=",
                         "sign(pato.CenterX() - caveira_gigante.CenterX()) * caveira_gigante.fogo_empurrao"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateJumpKey"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
                       ]
                     }
                   ]
@@ -80009,15 +79991,6 @@
                             "=",
                             "sign(pato.CenterX() - mina_demoniaca.CenterX()) * mina_demoniaca.explosao_empurrao"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateJumpKey"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
                         }
                       ]
                     }
@@ -80420,15 +80393,6 @@
                 },
                 {
                   "type": {
-                    "value": "PlatformBehavior::SimulateJumpKey"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetStringObjectVariable"
                   },
                   "parameters": [
@@ -80519,15 +80483,6 @@
                   "parameters": [
                     "pato",
                     "\"iframes\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::SimulateJumpKey"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject"
                   ]
                 },
                 {
@@ -90874,15 +90829,6 @@
                     },
                     {
                       "type": {
-                        "value": "PlatformBehavior::SimulateJumpKey"
-                      },
-                      "parameters": [
-                        "pato",
-                        "PlatformerObject"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SetStringObjectVariable"
                       },
                       "parameters": [
@@ -91247,15 +91193,6 @@
                   "parameters": [
                     "pato",
                     "\"iframes\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::SimulateJumpKey"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject"
                   ]
                 },
                 {
@@ -94169,15 +94106,6 @@
                             "PlatformerObject",
                             "=",
                             "demonio_chefe.direcao * demonio_chefe.golpe_empurrao"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateJumpKey"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
                           ]
                         },
                         {
