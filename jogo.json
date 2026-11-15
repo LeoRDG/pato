@@ -60590,6 +60590,54 @@
           "persistentUuid": "a35accc7-f86b-5ef7-a0c7-a6b0d5950762",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "rajada_duracao",
+          "persistentUuid": "dd87d2d4-4404-5649-b806-bc8d16982f73",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "rajada_espera",
+          "persistentUuid": "3ba62326-a2bf-5e12-9309-d67f74cbd326",
+          "type": "number",
+          "value": 0.25
+        },
+        {
+          "name": "rajada_giro",
+          "persistentUuid": "f4a0fd38-ade7-5b31-9f30-a9a3271d70e5",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "rajada_dano",
+          "persistentUuid": "fa577a7e-c6d5-5e1e-8b7e-f5909adf7105",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "rajada_quadro",
+          "persistentUuid": "aa82c41b-d777-5bd7-967e-f15808b6485a",
+          "type": "number",
+          "value": 9
+        },
+        {
+          "name": "rajada_ativa",
+          "persistentUuid": "7f06b703-5403-54fe-b41d-61be45ec8700",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "rajada_feita",
+          "persistentUuid": "176ecc78-41bd-56b2-a4cb-cb4893c53113",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "rajada_angulo",
+          "persistentUuid": "e9f87942-179f-586c-b958-0591fe281d41",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -95192,6 +95240,494 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Rajada da fúria",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Rajada da fúria: em fúria a explosão segura o auge do fogo por rajada_duracao s e a cada rajada_espera s gira rajada_giro graus e solta mais um anel de explosao_bolas; as bolas da rajada tiram rajada_dano."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "!=",
+                    "\"atacar\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_feita",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "em_furia",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "golpe",
+                    "=",
+                    "\"explosao\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "explosao_feita",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_feita",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_feita",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_ativa",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"rajada\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"rajada_tiro\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_angulo",
+                    "=",
+                    "demonio_chefe.explosao_angulo"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "bola_fogo",
+                        "\"vida\"",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "bola_fogo",
+                        "dano",
+                        "=",
+                        "demonio_chefe.rajada_dano"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_ativa",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// segura o auge do fogo enquanto a rajada dura",
+                    "for (const b of objects) {",
+                    "  b.pauseAnimation();",
+                    "  b.setAnimationFrame(b.getVariables().get(\"rajada_quadro\").getAsNumber());",
+                    "}"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"rajada_tiro\"",
+                        ">",
+                        "demonio_chefe.rajada_espera"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"rajada_tiro\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "rajada_angulo",
+                        "+",
+                        "demonio_chefe.rajada_giro"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "bola_i",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "demonio_chefe.explosao_bolas",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "bola_fogo",
+                            "demonio_chefe.CenterX()",
+                            "demonio_chefe.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "=",
+                            "demonio_chefe.CenterX() + demonio_chefe.explosao_raio * cos(ToRad(demonio_chefe.rajada_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas)) - bola_fogo.Width() / 2",
+                            "=",
+                            "demonio_chefe.CenterY() + demonio_chefe.explosao_raio * sin(ToRad(demonio_chefe.rajada_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas)) - bola_fogo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "demonio_chefe.rajada_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas",
+                            "demonio_chefe.explosao_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "=",
+                            "demonio_chefe.rajada_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "dano",
+                            "=",
+                            "demonio_chefe.rajada_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "vida",
+                            "=",
+                            "demonio_chefe.explosao_vida"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "bola_i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"rajada\"",
+                        ">",
+                        "demonio_chefe.rajada_duracao"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "rajada_ativa",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "for (const b of objects) b.resumeAnimation();"
+                      ],
+                      "parameterObjects": "demonio_chefe",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_ativa",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "rajada_ativa",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "for (const b of objects) b.resumeAnimation();"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             }
