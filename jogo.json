@@ -10332,6 +10332,38 @@
         "name": "assets/demonio_chefe/morte_21.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/demonio_chefe/bola_fogo_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/demonio_chefe/bola_fogo_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/demonio_chefe/bola_fogo_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/demonio_chefe/bola_fogo_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/demonio_chefe/bola_fogo_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/demonio_chefe/bola_fogo_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/demonio_chefe/bola_fogo_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/demonio_chefe/bola_fogo_03.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -10859,6 +10891,18 @@
           "persistentUuid": "4e88f2be-4d91-4ea5-957f-62fbce07ed5d",
           "type": "number",
           "value": 5
+        },
+        {
+          "name": "no_sangue",
+          "persistentUuid": "c8b722c1-1809-529b-808d-d207d434fd34",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_forca_normal",
+          "persistentUuid": "3c30a995-5201-561c-bf02-e5db1ffb0b4c",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -46815,7 +46859,20 @@
       "persistentUuid": "aed2568f-3c3b-49d7-94e8-6f03bf81b7f5",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vel_fator",
+          "persistentUuid": "ce0486dd-fea3-5276-87f0-5c1917406f5b",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "pulo_fator",
+          "persistentUuid": "326e8e2f-24e3-5037-972b-00820d49f7e7",
+          "type": "number",
+          "value": 0.65
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -59014,6 +59071,702 @@
               ]
             }
           ]
+        },
+        {
+          "name": "explosao",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_08.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_09.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_08.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/demonio_chefe/morte_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 300,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 100
+                      },
+                      {
+                        "x": 450,
+                        "y": 384
+                      },
+                      {
+                        "x": 300,
+                        "y": 384
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "variables": [
@@ -59334,6 +60087,260 @@
           "persistentUuid": "9b3ce250-cfec-5497-a206-82bf3c55e631",
           "type": "number",
           "value": 300
+        },
+        {
+          "name": "golpe",
+          "persistentUuid": "4c9b26b9-33a9-5397-add3-92c296fd66aa",
+          "type": "string",
+          "value": "cutelo"
+        },
+        {
+          "name": "explosao_espera",
+          "persistentUuid": "279159f7-3eaa-5e52-abe1-e8288efe1aab",
+          "type": "number",
+          "value": 7
+        },
+        {
+          "name": "explosao_disparo",
+          "persistentUuid": "1e90b720-4335-5252-837f-1f838c672d5f",
+          "type": "number",
+          "value": 0.72
+        },
+        {
+          "name": "explosao_bolas",
+          "persistentUuid": "73016073-98ef-525e-b25b-6f4fe567d683",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "explosao_vel",
+          "persistentUuid": "0fca19ba-5e72-5c47-b807-fa16440ba1ec",
+          "type": "number",
+          "value": 520
+        },
+        {
+          "name": "explosao_raio",
+          "persistentUuid": "8e00228e-396f-5ce5-96fb-0018a76d1099",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "explosao_dano",
+          "persistentUuid": "a1fd17e6-9024-5f7e-abba-995923276b44",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "explosao_vida",
+          "persistentUuid": "a5a8a017-4037-55f8-a925-1555baca4dda",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "explosao_som_volume",
+          "persistentUuid": "67dad6fd-1fac-5b41-8cbd-51a90678853e",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "explosao_feita",
+          "persistentUuid": "fbe311fc-37ad-5fdc-9075-0d236cbdb12a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "explosao_angulo",
+          "persistentUuid": "13572d57-4f5b-5147-b907-4af7df1ac018",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bola_i",
+          "persistentUuid": "28f4299a-8294-5598-8545-034a0242d077",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "bola_fogo",
+      "persistentUuid": "767a8224-f4e8-538b-b996-4e3e60a7619f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "dano",
+          "persistentUuid": "d9874917-b4c9-522b-9cec-b948b84194df",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vida",
+          "persistentUuid": "970895e4-207c-5982-9f7a-77782924a295",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.06,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 30
+                      },
+                      {
+                        "x": 27,
+                        "y": 30
+                      }
+                    ]
+                  ],
+                  "image": "assets/demonio_chefe/bola_fogo_00.png"
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 30
+                      },
+                      {
+                        "x": 27,
+                        "y": 30
+                      }
+                    ]
+                  ],
+                  "image": "assets/demonio_chefe/bola_fogo_01.png"
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 30
+                      },
+                      {
+                        "x": 27,
+                        "y": 30
+                      }
+                    ]
+                  ],
+                  "image": "assets/demonio_chefe/bola_fogo_02.png"
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 6
+                      },
+                      {
+                        "x": 57,
+                        "y": 30
+                      },
+                      {
+                        "x": 27,
+                        "y": 30
+                      }
+                    ]
+                  ],
+                  "image": "assets/demonio_chefe/bola_fogo_03.png"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -59535,6 +60542,9 @@
             "children": [
               {
                 "objectName": "demonio_chefe"
+              },
+              {
+                "objectName": "bola_fogo"
               }
             ]
           }
@@ -64308,6 +65318,13 @@
             "includeConfig": 0
           },
           "target": "Chefe"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Sangue"
         }
       ],
       "layers": [
@@ -87721,6 +88738,15 @@
                     "demonio_chefe",
                     "\"atordoado\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "\"explosao\""
+                  ]
                 }
               ]
             },
@@ -88280,6 +89306,300 @@
                       },
                       "parameters": [
                         "demonio_chefe",
+                        "\"explosao\"",
+                        ">",
+                        "demonio_chefe.explosao_espera / demonio_chefe.ritmo"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "explosao_feita",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "Animation",
+                        "=",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "PlatformerObject",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_fogo_caveira.wav",
+                        "",
+                        "demonio_chefe.explosao_som_volume",
+                        "RandomFloatInRange(0.8, 0.9)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"explosao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "explosao_feita",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "\"estado\"",
+                        ">",
+                        "demonio_chefe.explosao_disparo / demonio_chefe.ritmo"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "explosao_feita",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "explosao_angulo",
+                        "=",
+                        "RandomFloatInRange(0, 360)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "bola_i",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "demonio_chefe.explosao_bolas",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "bola_fogo",
+                            "demonio_chefe.CenterX()",
+                            "demonio_chefe.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "=",
+                            "demonio_chefe.CenterX() + demonio_chefe.explosao_raio * cos(ToRad(demonio_chefe.explosao_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas)) - bola_fogo.Width() / 2",
+                            "=",
+                            "demonio_chefe.CenterY() + demonio_chefe.explosao_raio * sin(ToRad(demonio_chefe.explosao_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas)) - bola_fogo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "demonio_chefe.explosao_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas",
+                            "demonio_chefe.explosao_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "=",
+                            "demonio_chefe.explosao_angulo + demonio_chefe.bola_i * 360 / demonio_chefe.explosao_bolas"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "dano",
+                            "=",
+                            "demonio_chefe.explosao_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "vida",
+                            "=",
+                            "demonio_chefe.explosao_vida"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "bola_fogo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "bola_i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "estado",
+                        "=",
+                        "\"perseguir\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
                         "\"ataque\"",
                         ">",
                         "demonio_chefe.ataque_espera / demonio_chefe.ritmo"
@@ -88360,6 +89680,17 @@
                         "demonio_chefe.som_volume",
                         "RandomFloatInRange(0.75, 0.85)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"cutelo\""
+                      ]
                     }
                   ]
                 },
@@ -88375,6 +89706,17 @@
                         "estado",
                         "=",
                         "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "golpe",
+                        "=",
+                        "\"cutelo\""
                       ]
                     },
                     {
@@ -88785,6 +90127,376 @@
                         "hud_boss_fill.Width()"
                       ]
                     }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Bolas de fogo",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    "pato",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "\"demonio_chefe\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "-",
+                    "bola_fogo.dano"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    "Terreno",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    "\"vida\"",
+                    ">",
+                    "bola_fogo.vida"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "bola_fogo",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Inferno",
+      "name": "Sangue",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Poça de sangue: quem anda nela fica lento. O pato encostando num sangue anda a vel_fator da velocidade máxima (a velocidade é cortada depois dos outros eventos, então bhop e upgrades continuam valendo fora dela; o dash não é cortado) e pula com pulo_fator da força guardada em pato.pulo_forca_normal."
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Poça de sangue",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "pulo_forca_normal",
+                    "=",
+                    "pato.PlatformerObject::JumpSpeed()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "pato",
+                    "sangue",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "no_sangue",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::JumpSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "pato.pulo_forca_normal * sangue.pulo_fator"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.PlatformerObject::CurrentSpeed())",
+                        ">",
+                        "pato.PlatformerObject::MaxSpeed() * sangue.vel_fator"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                      },
+                      "parameters": [
+                        "pato",
+                        "PlatformerObject",
+                        "=",
+                        "sign(pato.PlatformerObject::CurrentSpeed()) * pato.PlatformerObject::MaxSpeed() * sangue.vel_fator"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP",
+                    "inverted": true
+                  },
+                  "parameters": [
+                    "pato",
+                    "sangue",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "no_sangue",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "no_sangue",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::JumpSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "pato.pulo_forca_normal"
                   ]
                 }
               ]
