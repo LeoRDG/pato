@@ -30,12 +30,12 @@ class FumacaFuria(unittest.TestCase):
         texto = json.dumps(self.grupo)
         self.assertIn('"em_furia", "True"', texto)
         self.assertEqual(texto.count('"Create"'), 1)
-        js = ['\n'.join(e['inlineCode']) for e in eventos(self.grupo['events']) if e['type'].endswith('JsCode')]
-        self.assertTrue(any('setTank(-1)' in c and 'fluxo_continuo' in c for c in js))
-        self.assertEqual(sum('stopEmission' in c for c in js), 2)
-        for e in eventos(self.grupo['events']):
-            if e['type'].endswith('JsCode'):
-                self.assertEqual(e['parameterObjects'], t62.F)
+        # contínuo (tanque infinito) com o fluxo e o raio das variáveis dele; para de emitir na morte (ou se o chefe some)
+        self.assertIn('"ParticleSystem::SetTank"}, "parameters": ["demonio_fumaca", "=", "-1"]', texto)
+        self.assertIn('"ParticleSystem::SetFlow"}, "parameters": ["demonio_fumaca", "=", "demonio_fumaca.fluxo_continuo"]', texto)
+        self.assertIn('"ParticleSystem::ZoneRadius"}, "parameters": ["demonio_fumaca", "=", "demonio_fumaca.raio"]', texto)
+        self.assertEqual(texto.count('"ParticleSystem::StopEmission"'), 2)
+        self.assertFalse([e for e in eventos(self.grupo['events']) if e['type'].endswith('JsCode')])
 
     def test_variaveis_existem(self):
         texto = json.dumps(self.grupo, ensure_ascii=False)

@@ -60638,6 +60638,126 @@
           "persistentUuid": "e9f87942-179f-586c-b958-0591fe281d41",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "quebra_tentativas",
+          "persistentUuid": "21ef35b4-b18f-55c9-bf02-055da0038e3f",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "quebra_x0",
+          "persistentUuid": "c1079969-130d-5470-bd8b-dd39f21d60ff",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_x1",
+          "persistentUuid": "7ed7a43d-f125-5472-9d9b-9d43a3663050",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_c0",
+          "persistentUuid": "686a661e-bd03-53f5-8782-7a5a0bc9afa0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_c1",
+          "persistentUuid": "92ab3c43-b9ee-5ea6-a976-294edb193e58",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_r0",
+          "persistentUuid": "69ae65db-b10b-5f9a-9d91-9df6f017b7fc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_r1",
+          "persistentUuid": "c5817779-6838-5935-80d6-911de4e90e0b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_c",
+          "persistentUuid": "2bc66ef0-494a-5168-b15b-4cbd570ed603",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_r",
+          "persistentUuid": "8b7d7e30-3abd-5143-9356-05acf900b40b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_qtd",
+          "persistentUuid": "8d6f1a9f-faad-53df-8bdc-13492cb3642b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_feitas",
+          "persistentUuid": "92256b85-8537-5575-97b7-d81d668ed766",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_dist",
+          "persistentUuid": "a5e9db6d-98d5-5cca-b98c-d2b0a779943e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_d",
+          "persistentUuid": "228c1c10-8536-5338-a209-f44d8ce4ff29",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_x0",
+          "persistentUuid": "0e6afe23-bbb1-5864-a3dd-89a2c25b5575",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_x1",
+          "persistentUuid": "f48539e6-f37a-5214-b9dd-c3f44b972349",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_y",
+          "persistentUuid": "53eb5abc-fa90-5896-9afa-7cb635ebf850",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "alvo_px",
+          "persistentUuid": "49710c75-cb43-5b0d-aedd-9f32287029a4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "moeda_t",
+          "persistentUuid": "71c38141-2733-5c5f-995a-188f5619f443",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "moeda_tx",
+          "persistentUuid": "db88ba50-d213-5a2a-b6fe-8e060b81cc6b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "moeda_g",
+          "persistentUuid": "d93bfda9-fa4c-582f-af81-ca4a0467213c",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -60977,6 +61097,12 @@
           "persistentUuid": "91720f69-618b-5104-9ed6-3e3a75812a58",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "pedacos",
+          "persistentUuid": "dda8625d-1820-57d2-89ce-154deb50b2c6",
+          "type": "number",
+          "value": 4
         }
       ],
       "effects": [],
@@ -92102,19 +92228,40 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "// deixa o emissor contínuo, com o fluxo e o raio das variáveis dele",
-                    "for (const o of objects) {",
-                    "  const v = o.getVariables();",
-                    "  o.setTank(-1);",
-                    "  o.setFlow(v.get(\"fluxo_continuo\").getAsNumber());",
-                    "  o.setZoneRadius(v.get(\"raio\").getAsNumber());",
-                    "}"
-                  ],
-                  "parameterObjects": "demonio_fumaca",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ParticleSystem::SetTank"
+                      },
+                      "parameters": [
+                        "demonio_fumaca",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::SetFlow"
+                      },
+                      "parameters": [
+                        "demonio_fumaca",
+                        "=",
+                        "demonio_fumaca.fluxo_continuo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ZoneRadius"
+                      },
+                      "parameters": [
+                        "demonio_fumaca",
+                        "=",
+                        "demonio_fumaca.raio"
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -92243,14 +92390,18 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "// para de emitir; o emissor se apaga sozinho quando a última partícula some",
-                    "for (const o of objects) o.stopEmission();"
-                  ],
-                  "parameterObjects": "demonio_fumaca",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ParticleSystem::StopEmission"
+                      },
+                      "parameters": [
+                        "demonio_fumaca"
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -92306,14 +92457,18 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "// para de emitir; o emissor se apaga sozinho quando a última partícula some",
-                    "for (const o of objects) o.stopEmission();"
-                  ],
-                  "parameterObjects": "demonio_fumaca",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ParticleSystem::StopEmission"
+                      },
+                      "parameters": [
+                        "demonio_fumaca"
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -92466,57 +92621,299 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "const cena = runtimeScene.getVariables();",
-                    "const n = (nome) => cena.get(nome).getAsNumber();",
-                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
-                    "const solta = (x, y) => {",
-                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
-                    "    const o = runtimeScene.createObject(\"destroco\");",
-                    "    if (!o) return;",
-                    "    const v = o.getVariables();",
-                    "    const num = (nome) => v.get(nome).getAsNumber();",
-                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
-                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
-                    "    o.setZOrder(num(\"z\"));",
-                    "    o.setAngle(sorteio(0, 360));",
-                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
-                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
-                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
-                    "  }",
-                    "};",
-                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
-                    "const quebra = (x0, x1, qtd, topo) => {",
-                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
-                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
-                    "  if (xb < xa) return;",
-                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
-                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
-                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
-                    "    const inteiros = [];",
-                    "    for (let c = c0; c <= c1; c++)",
-                    "      for (let r = r0 + topo; r <= r1; r++) {",
-                    "        const id = m.getTileAtGridCoordinates(c, r);",
-                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
-                    "      }",
-                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
-                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
-                    "      m.removeTileAtGridCoordinates(c, r);",
-                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
-                    "    }",
-                    "  }",
-                    "};",
-                    "for (const b of objects) {",
-                    "  const v = b.getVariables();",
-                    "  const num = (nome) => v.get(nome).getAsNumber();",
-                    "  const cx = b.getCenterXInScene() + num(\"direcao\") * num(\"golpe_quebra_dx\");",
-                    "  quebra(cx - num(\"golpe_quebra_raio\"), cx + num(\"golpe_quebra_raio\"), num(\"golpe_quebra_qtd\"), n(\"quebra_topo_linhas\"));",
-                    "}"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "max(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx - demonio_chefe.golpe_quebra_raio, Variable(quebra_x_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "min(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx + demonio_chefe.golpe_quebra_raio, Variable(quebra_x_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c0",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c1",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r0",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + Variable(quebra_topo_linhas)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r1",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_qtd",
+                        "=",
+                        "demonio_chefe.golpe_quebra_qtd"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_feitas",
+                        "=",
+                        "0"
+                      ]
+                    }
                   ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "demonio_chefe.quebra_qtd * demonio_chefe.quebra_tentativas",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.quebra_x1",
+                            ">=",
+                            "demonio_chefe.quebra_x0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.quebra_r1",
+                            ">=",
+                            "demonio_chefe.quebra_r0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_c",
+                            "=",
+                            "RandomInRange(demonio_chefe.quebra_c0, demonio_chefe.quebra_c1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_r",
+                            "=",
+                            "RandomInRange(demonio_chefe.quebra_r0, demonio_chefe.quebra_r1)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "demonio_chefe.quebra_feitas",
+                                "<",
+                                "demonio_chefe.quebra_qtd"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
+                              },
+                              "parameters": [
+                                "tiles_inferno",
+                                "TileMap",
+                                "demonio_chefe.quebra_c",
+                                "demonio_chefe.quebra_r"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_feitas",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Repeat",
+                              "repeatExpression": "Variable(destroco_por_tile)",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "destroco",
+                                    "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "Animation",
+                                    "=",
+                                    "RandomInRange(0, destroco.pedacos - 1)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetXY"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
+                                    "=",
+                                    "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetZOrder"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "destroco.z"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetAngle"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "RandomFloatInRange(0, 360)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "vx",
+                                    "=",
+                                    "RandomFloatInRange(-1, 1) * destroco.vel_x"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "vy",
+                                    "=",
+                                    "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "va",
+                                    "=",
+                                    "RandomFloatInRange(-1, 1) * destroco.giro"
+                                  ]
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -92616,57 +93013,299 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "const cena = runtimeScene.getVariables();",
-                    "const n = (nome) => cena.get(nome).getAsNumber();",
-                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
-                    "const solta = (x, y) => {",
-                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
-                    "    const o = runtimeScene.createObject(\"destroco\");",
-                    "    if (!o) return;",
-                    "    const v = o.getVariables();",
-                    "    const num = (nome) => v.get(nome).getAsNumber();",
-                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
-                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
-                    "    o.setZOrder(num(\"z\"));",
-                    "    o.setAngle(sorteio(0, 360));",
-                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
-                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
-                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
-                    "  }",
-                    "};",
-                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
-                    "const quebra = (x0, x1, qtd, topo) => {",
-                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
-                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
-                    "  if (xb < xa) return;",
-                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
-                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
-                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
-                    "    const inteiros = [];",
-                    "    for (let c = c0; c <= c1; c++)",
-                    "      for (let r = r0 + topo; r <= r1; r++) {",
-                    "        const id = m.getTileAtGridCoordinates(c, r);",
-                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
-                    "      }",
-                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
-                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
-                    "      m.removeTileAtGridCoordinates(c, r);",
-                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
-                    "    }",
-                    "  }",
-                    "};",
-                    "for (const b of objects) {",
-                    "  const v = b.getVariables();",
-                    "  const num = (nome) => v.get(nome).getAsNumber();",
-                    "  const cx = b.getCenterXInScene() + 0;",
-                    "  quebra(cx - num(\"explosao_quebra_raio\"), cx + num(\"explosao_quebra_raio\"), num(\"explosao_quebra_qtd\"), n(\"quebra_topo_linhas\"));",
-                    "}"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "max(demonio_chefe.CenterX() + 0 - demonio_chefe.explosao_quebra_raio, Variable(quebra_x_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "min(demonio_chefe.CenterX() + 0 + demonio_chefe.explosao_quebra_raio, Variable(quebra_x_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c0",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c1",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r0",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + Variable(quebra_topo_linhas)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r1",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_qtd",
+                        "=",
+                        "demonio_chefe.explosao_quebra_qtd"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_feitas",
+                        "=",
+                        "0"
+                      ]
+                    }
                   ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "demonio_chefe.quebra_qtd * demonio_chefe.quebra_tentativas",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.quebra_x1",
+                            ">=",
+                            "demonio_chefe.quebra_x0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.quebra_r1",
+                            ">=",
+                            "demonio_chefe.quebra_r0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_c",
+                            "=",
+                            "RandomInRange(demonio_chefe.quebra_c0, demonio_chefe.quebra_c1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_r",
+                            "=",
+                            "RandomInRange(demonio_chefe.quebra_r0, demonio_chefe.quebra_r1)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "demonio_chefe.quebra_feitas",
+                                "<",
+                                "demonio_chefe.quebra_qtd"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
+                              },
+                              "parameters": [
+                                "tiles_inferno",
+                                "TileMap",
+                                "demonio_chefe.quebra_c",
+                                "demonio_chefe.quebra_r"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_feitas",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Repeat",
+                              "repeatExpression": "Variable(destroco_por_tile)",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "destroco",
+                                    "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "Animation",
+                                    "=",
+                                    "RandomInRange(0, destroco.pedacos - 1)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetXY"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
+                                    "=",
+                                    "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetZOrder"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "destroco.z"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetAngle"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "=",
+                                    "RandomFloatInRange(0, 360)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "vx",
+                                    "=",
+                                    "RandomFloatInRange(-1, 1) * destroco.vel_x"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "vy",
+                                    "=",
+                                    "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "destroco",
+                                    "va",
+                                    "=",
+                                    "RandomFloatInRange(-1, 1) * destroco.giro"
+                                  ]
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -92848,52 +93487,277 @@
                   "events": []
                 },
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "const cena = runtimeScene.getVariables();",
-                    "const n = (nome) => cena.get(nome).getAsNumber();",
-                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
-                    "const solta = (x, y) => {",
-                    "  for (let k = 0; k < n(\"destroco_por_tile\"); k++) {",
-                    "    const o = runtimeScene.createObject(\"destroco\");",
-                    "    if (!o) return;",
-                    "    const v = o.getVariables();",
-                    "    const num = (nome) => v.get(nome).getAsNumber();",
-                    "    o.setAnimation(Math.floor(Math.random() * 4));      // um dos pedaços",
-                    "    o.setPosition(x + sorteio(-o.getWidth(), 0), y + sorteio(-o.getHeight(), 0));",
-                    "    o.setZOrder(num(\"z\"));",
-                    "    o.setAngle(sorteio(0, 360));",
-                    "    v.get(\"vx\").setNumber(sorteio(-1, 1) * num(\"vel_x\"));",
-                    "    v.get(\"vy\").setNumber(sorteio(num(\"vel_y_min\"), num(\"vel_y_max\")));",
-                    "    v.get(\"va\").setNumber(sorteio(-1, 1) * num(\"giro\"));",
-                    "  }",
-                    "};",
-                    "// qtd: quantos tiles sólidos sortear e tirar; topo: quantas linhas de cima do piso ficam intactas",
-                    "const quebra = (x0, x1, qtd, topo) => {",
-                    "  const xa = Math.max(x0, n(\"quebra_x_min\")), xb = Math.min(x1, n(\"quebra_x_max\") - 1);",
-                    "  const ya = n(\"quebra_y_min\"), yb = n(\"quebra_y_max\") - 1;",
-                    "  if (xb < xa) return;",
-                    "  for (const m of runtimeScene.getObjects(\"tiles_inferno\")) {",
-                    "    const [c0, r0] = m.getGridCoordinatesFromSceneCoordinates(xa, ya);",
-                    "    const [c1, r1] = m.getGridCoordinatesFromSceneCoordinates(xb, yb);",
-                    "    const inteiros = [];",
-                    "    for (let c = c0; c <= c1; c++)",
-                    "      for (let r = r0 + topo; r <= r1; r++) {",
-                    "        const id = m.getTileAtGridCoordinates(c, r);",
-                    "        if (id !== undefined && id >= 0) inteiros.push([c, r]);",
-                    "      }",
-                    "    for (let k = 0; k < qtd && inteiros.length > 0; k++) {",
-                    "      const [c, r] = inteiros.splice(Math.floor(Math.random() * inteiros.length), 1)[0];",
-                    "      m.removeTileAtGridCoordinates(c, r);",
-                    "      solta(m.getSceneXCoordinateOfTileCenter(c, r), m.getSceneYCoordinateOfTileCenter(c, r));",
-                    "    }",
-                    "  }",
-                    "};",
-                    "quebra(n(\"quebra_x_min\"), n(\"quebra_x_max\"), Infinity, 0);"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "Variable(quebra_x_min)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "Variable(quebra_x_max) - 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c0",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c1",
+                        "=",
+                        "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r0",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + 0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_r1",
+                        "=",
+                        "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_c",
+                        "=",
+                        "demonio_chefe.quebra_c0"
+                      ]
+                    }
                   ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "demonio_chefe.quebra_c1 - demonio_chefe.quebra_c0 + 1",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_r",
+                            "=",
+                            "demonio_chefe.quebra_r0"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "demonio_chefe.quebra_r1 - demonio_chefe.quebra_r0 + 1",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    ">=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
+                                  },
+                                  "parameters": [
+                                    "tiles_inferno",
+                                    "TileMap",
+                                    "demonio_chefe.quebra_c",
+                                    "demonio_chefe.quebra_r"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Repeat",
+                                  "repeatExpression": "Variable(destroco_por_tile)",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "destroco",
+                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "Animation",
+                                        "=",
+                                        "RandomInRange(0, destroco.pedacos - 1)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetXY"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
+                                        "=",
+                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetZOrder"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "destroco.z"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "RandomFloatInRange(0, 360)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "vx",
+                                        "=",
+                                        "RandomFloatInRange(-1, 1) * destroco.vel_x"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "vy",
+                                        "=",
+                                        "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "va",
+                                        "=",
+                                        "RandomFloatInRange(-1, 1) * destroco.giro"
+                                      ]
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_r",
+                                    "+",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_c",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -93032,18 +93896,40 @@
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "// segura a animação explosao no quadro da variável queda_quadro",
-                        "for (const b of objects) {",
-                        "  if (b.getAnimationName() !== \"explosao\") b.setAnimationName(\"explosao\");",
-                        "  b.pauseAnimation();",
-                        "  b.setAnimationFrame(b.getVariables().get(\"queda_quadro\").getAsNumber());",
-                        "}"
-                      ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation",
+                            "=",
+                            "\"explosao\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeSprite"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "=",
+                            "demonio_chefe.queda_quadro"
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -93223,13 +94109,19 @@
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "for (const b of objects) b.resumeAnimation();"
-                      ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -93375,13 +94267,19 @@
                       ],
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::JsCode",
-                          "inlineCode": [
-                            "for (const b of objects) b.resumeAnimation();"
-                          ],
-                          "parameterObjects": "demonio_chefe",
-                          "useStrict": true,
-                          "eventsSheetExpanded": false
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "Animation"
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -93719,32 +94617,227 @@
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "// o salto sempre cai numa ponte: a mais perto do pato na horizontal",
-                        "const cena = runtimeScene.getVariables();",
-                        "const n = (k) => cena.get(k).getAsNumber();",
-                        "const pontes = runtimeScene.getObjects(\"tiles_inferno_ponte\").filter(",
-                        "  (p) => p.getX() >= n(\"quebra_x_min\") && p.getX() + p.getWidth() <= n(\"quebra_x_max\"));",
-                        "const pato = runtimeScene.getObjects(\"pato\")[0];",
-                        "if (pontes.length === 0 || !pato) return;",
-                        "const px = pato.getCenterXInScene();",
-                        "const longe = (p) => Math.max(p.getX() - px, px - (p.getX() + p.getWidth()), 0);",
-                        "const ponte = pontes.reduce((a, p) => (longe(p) < longe(a) ? p : a));",
-                        "const alvo = Math.min(Math.max(px, ponte.getX()), ponte.getX() + ponte.getWidth());",
-                        "for (const b of objects) {",
-                        "  const v = b.getVariables();",
-                        "  const num = (k) => v.get(k).getAsNumber();",
-                        "  const dir = Math.sign(alvo - b.getCenterXInScene()) || num(\"direcao\") || 1;",
-                        "  const x1 = alvo - dir * num(\"lava_golpe_dx\");",
-                        "  v.get(\"direcao\").setNumber(dir);",
-                        "  v.get(\"lava_x1\").setNumber(Math.min(Math.max(x1, n(\"quebra_x_min\") + num(\"lava_borda\")), n(\"quebra_x_max\") - num(\"lava_borda\")));",
-                        "  v.get(\"lava_y1\").setNumber(ponte.getY() - b.getHeight() + num(\"lava_golpe_baixo\"));",
-                        "}"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "alvo_dist",
+                            "=",
+                            "-1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "tiles_inferno_ponte",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "tiles_inferno_ponte",
+                            ">=",
+                            "Variable(quebra_x_min)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "tiles_inferno_ponte",
+                            "<",
+                            "Variable(quebra_x_max)"
+                          ]
+                        }
                       ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "alvo_d",
+                            "=",
+                            "max(max(tiles_inferno_ponte.X() - pato.CenterX(), pato.CenterX() - tiles_inferno_ponte.X() - tiles_inferno_ponte.Width()), 0)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe.alvo_dist",
+                                    "<",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe.alvo_d",
+                                    "<",
+                                    "demonio_chefe.alvo_dist"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "alvo_dist",
+                                "=",
+                                "demonio_chefe.alvo_d"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "alvo_x0",
+                                "=",
+                                "tiles_inferno_ponte.X()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "alvo_x1",
+                                "=",
+                                "tiles_inferno_ponte.X() + tiles_inferno_ponte.Width()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "alvo_y",
+                                "=",
+                                "tiles_inferno_ponte.Y()"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "demonio_chefe.alvo_dist",
+                            ">=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "alvo_px",
+                            "=",
+                            "clamp(pato.CenterX(), demonio_chefe.alvo_x0, demonio_chefe.alvo_x1)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "demonio_chefe.alvo_px",
+                                "!=",
+                                "demonio_chefe.CenterX()"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "direcao",
+                                "=",
+                                "sign(demonio_chefe.alvo_px - demonio_chefe.CenterX())"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "lava_x1",
+                                "=",
+                                "clamp(demonio_chefe.alvo_px - demonio_chefe.direcao * demonio_chefe.lava_golpe_dx, Variable(quebra_x_min) + demonio_chefe.lava_borda, Variable(quebra_x_max) - demonio_chefe.lava_borda)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "lava_y1",
+                                "=",
+                                "demonio_chefe.alvo_y - demonio_chefe.Height() + demonio_chefe.lava_golpe_baixo"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -94033,17 +95126,29 @@
                       ],
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::JsCode",
-                          "inlineCode": [
-                            "// o cutelo bate: solta a animação a partir do quadro do golpe",
-                            "for (const b of objects) {",
-                            "  b.setAnimationFrame(b.getVariables().get(\"lava_quadro\").getAsNumber());",
-                            "  b.resumeAnimation();",
-                            "}"
-                          ],
-                          "parameterObjects": "demonio_chefe",
-                          "useStrict": true,
-                          "eventsSheetExpanded": false
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ChangeSprite"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "=",
+                                "demonio_chefe.lava_quadro"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "Animation"
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -94086,16 +95191,29 @@
                   "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "for (const b of objects) {",
-                        "  b.pauseAnimation();",
-                        "  b.setAnimationFrame(b.getVariables().get(\"lava_quadro\").getAsNumber());",
-                        "}"
-                      ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeSprite"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "=",
+                            "demonio_chefe.lava_quadro"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -94495,13 +95613,19 @@
                   "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "for (const b of objects) b.resumeAnimation();"
-                      ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -94861,22 +95985,77 @@
               "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "const dt = runtimeScene.getTimeManager().getElapsedTime() / 1000;",
-                    "for (const o of runtimeScene.getObjects(\"destroco\")) {",
-                    "  const v = o.getVariables();",
-                    "  const num = (nome) => v.get(nome).getAsNumber();",
-                    "  const vy = num(\"vy\") + num(\"gravidade\") * dt;",
-                    "  v.get(\"vy\").setNumber(vy);",
-                    "  o.setPosition(o.getX() + num(\"vx\") * dt, o.getY() + vy * dt);",
-                    "  o.setAngle(o.getAngle() + num(\"va\") * dt);",
-                    "  if (o.getY() > num(\"fundo_y\")) o.deleteFromScene();",
-                    "}"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "destroco",
+                        "vy",
+                        "+",
+                        "destroco.gravidade * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "destroco",
+                        "+",
+                        "destroco.vx * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "destroco",
+                        "+",
+                        "destroco.vy * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "destroco",
+                        "+",
+                        "destroco.va * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "destroco",
+                        ">",
+                        "destroco.fundo_y"
+                      ]
+                    }
                   ],
-                  "parameterObjects": "",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "destroco",
+                        ""
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -95115,38 +96294,159 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "// relança as moedas que o demônio acabou de soltar (timer \"vida\" zerado neste quadro) para cima das pontes",
-                    "const cena = runtimeScene.getVariables();",
-                    "const n = (k) => cena.get(k).getAsNumber();",
-                    "const pontes = runtimeScene.getObjects(\"tiles_inferno_ponte\").filter(",
-                    "  (p) => p.getX() >= n(\"quebra_x_min\") && p.getX() + p.getWidth() <= n(\"quebra_x_max\"));",
-                    "if (pontes.length === 0) return;",
-                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
-                    "for (const b of objects) {",
-                    "  const bv = b.getVariables();",
-                    "  const tmin = bv.get(\"moedas_ponte_tempo_min\").getAsNumber(), tmax = bv.get(\"moedas_ponte_tempo_max\").getAsNumber();",
-                    "  for (const m of runtimeScene.getObjects(\"moeda\")) {",
-                    "    if (m.getTimerElapsedTimeInSeconds(\"vida\") > 0) continue;",
-                    "    const v = m.getVariables();",
-                    "    const p = pontes[Math.floor(Math.random() * pontes.length)];",
-                    "    const tx = sorteio(p.getX(), p.getX() + p.getWidth() - m.getWidth());",
-                    "    const ty = p.getY() - m.getHeight();",
-                    "    const t = sorteio(tmin, tmax);",
-                    "    const g = v.get(\"gravidade\").getAsNumber();",
-                    "    v.get(\"vx\").setNumber((tx - m.getX()) / t);",
-                    "    v.get(\"vy\").setNumber((ty - m.getY()) / t - g * t / 2);",
-                    "    v.get(\"alvo_ponte\").setBoolean(true);",
-                    "    v.get(\"ponte_y\").setNumber(p.getY());",
-                    "    v.get(\"ponte_x0\").setNumber(p.getX());",
-                    "    v.get(\"ponte_x1\").setNumber(p.getX() + p.getWidth());",
-                    "  }",
-                    "}"
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "moeda",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "\"vida\"",
+                        "<=",
+                        "0"
+                      ]
+                    }
                   ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "tiles_inferno_ponte",
+                            ">=",
+                            "Variable(quebra_x_min)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "tiles_inferno_ponte",
+                            "<",
+                            "Variable(quebra_x_max)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "tiles_inferno_ponte"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "moeda_t",
+                            "=",
+                            "RandomFloatInRange(demonio_chefe.moedas_ponte_tempo_min, demonio_chefe.moedas_ponte_tempo_max)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "moeda_tx",
+                            "=",
+                            "RandomFloatInRange(tiles_inferno_ponte.X(), tiles_inferno_ponte.X() + tiles_inferno_ponte.Width() - moeda.Width())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "moeda_g",
+                            "=",
+                            "moeda.gravidade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "vx",
+                            "=",
+                            "(demonio_chefe.moeda_tx - moeda.X()) / demonio_chefe.moeda_t"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "vy",
+                            "=",
+                            "(tiles_inferno_ponte.Y() - moeda.Height() - moeda.Y()) / demonio_chefe.moeda_t - demonio_chefe.moeda_g * demonio_chefe.moeda_t / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "alvo_ponte",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "ponte_y",
+                            "=",
+                            "tiles_inferno_ponte.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "ponte_x0",
+                            "=",
+                            "tiles_inferno_ponte.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "ponte_x1",
+                            "=",
+                            "tiles_inferno_ponte.X() + tiles_inferno_ponte.Width()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -95510,17 +96810,29 @@
               "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "// segura o auge do fogo enquanto a rajada dura",
-                    "for (const b of objects) {",
-                    "  b.pauseAnimation();",
-                    "  b.setAnimationFrame(b.getVariables().get(\"rajada_quadro\").getAsNumber());",
-                    "}"
-                  ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeSprite"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "=",
+                        "demonio_chefe.rajada_quadro"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -95698,13 +97010,19 @@
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": [
-                        "for (const b of objects) b.resumeAnimation();"
-                      ],
-                      "parameterObjects": "demonio_chefe",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "Animation"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -95751,13 +97069,19 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "for (const b of objects) b.resumeAnimation();"
-                  ],
-                  "parameterObjects": "demonio_chefe",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "Animation"
+                      ]
+                    }
+                  ]
                 }
               ]
             }

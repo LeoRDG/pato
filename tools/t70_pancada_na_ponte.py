@@ -63,6 +63,9 @@ def migra(d):
     codigo = lambda s: s['inlineCode'] if isinstance(s['inlineCode'], str) else '\n'.join(s['inlineCode'])
     if any(MARCA in codigo(s) for s in e.get('events') or [] if s['type'].endswith('JsCode')):
         return
+    # já trocado por eventos (tools/t71_chefe_sem_js.py): um "Para cada" das pontes
+    if any(s.get('object') == 'tiles_inferno_ponte' for s in e.get('events') or []):
+        return
     e.setdefault('events', []).append(evento())
 
 

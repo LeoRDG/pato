@@ -42,9 +42,10 @@ class RajadaFuria(unittest.TestCase):
     def test_segura_o_quadro_e_solta(self):
         anim = next(a for a in self.boss['animations'] if a['name'] == 'explosao')['directions'][0]
         self.assertLess(self.v['rajada_quadro'], len(anim['sprites']) - 1)
-        js = ['\n'.join(e['inlineCode']) for e in todos(self.grupo['events']) if e['type'].endswith('JsCode')]
-        self.assertEqual(sum('pauseAnimation' in c for c in js), 1)
-        self.assertEqual(sum('resumeAnimation' in c for c in js), 2)                   # fim da rajada e morte no meio
+        texto = json.dumps(self.grupo)
+        self.assertEqual(texto.count('"AnimatableCapability::AnimatableBehavior::PauseAnimation"'), 1)
+        self.assertIn('"ChangeSprite"}, "parameters": ["demonio_chefe", "=", "demonio_chefe.rajada_quadro"]', texto)
+        self.assertEqual(texto.count('"AnimatableCapability::AnimatableBehavior::PlayAnimation"'), 2)   # fim da rajada e morte no meio
 
     def test_variaveis_existem(self):
         for v in re.findall(t69.D + r'\.([a-z_]+)\b(?!\()', json.dumps(self.grupo)):

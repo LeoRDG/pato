@@ -22,14 +22,13 @@ class MoedasNasPontes(unittest.TestCase):
         for dono in (t68.D, t68.M):
             for v in re.findall(dono + r'\.([a-z_0-9]+)\b(?!\()', texto):
                 self.assertIn(v, self.vars(dono), f'{dono}.{v}')
-        js = '\n'.join(next(e for e in self.grupo['events'][1]['events'] if e['type'].endswith('JsCode'))['inlineCode'])
-        for v in re.findall(r'(?<![a-z])v\.get\("([a-z_]+)"\)', js):
-            self.assertIn(v, self.vars(t68.M))
-        for v in re.findall(r'bv\.get\("([a-z_]+)"\)', js):
-            self.assertIn(v, self.vars(t68.D))
         cena = {v['name'] for v in next(l for l in self.d['layouts'] if l['name'] == 'Inferno')['variables']}
-        for v in re.findall(r'n\("([a-z_]+)"\)', js):
+        for v in re.findall(r'Variable\(([a-z_]+)\)', texto):
             self.assertIn(v, cena)
+        # cada moeda recém-criada sorteia uma ponte da zona e recebe o arco até ela
+        self.assertIn('"AjoutHasard"}, "parameters": ["", "tiles_inferno_ponte"]', texto)
+        self.assertIn('"CompareObjectTimer"}, "parameters": ["moeda", "\\"vida\\"", "<=", "0"]', texto)
+        self.assertNotIn('JsCode', texto)
 
     def test_so_na_fase2_e_depois_das_moedas_do_combate(self):
         texto = json.dumps(self.grupo)

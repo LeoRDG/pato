@@ -89,9 +89,11 @@ class Fase2Lava(unittest.TestCase):
         inicio = next(e for e in eventos(self.chefe) if any(a['parameters'][:4] == [t63.D, 'golpe', '=', '"grande"']
                                                            for a in e.get('actions', [])))
         self.assertIn('"em_furia", "True"', json.dumps(inicio['conditions']))
-        js = ['\n'.join(e['inlineCode']) for e in eventos(self.grupo['events']) if e['type'].endswith('JsCode')]
-        self.assertTrue(any('Infinity, 0)' in c for c in js))
-        self.assertEqual(sum('quebra_topo_linhas' in c and 'quebra(cx' in c for c in js), 2)
+        # cutelo e explosão quebram abaixo das quebra_topo_linhas; a explosão grande passa por todas as linhas (topo 0)
+        g = json.dumps(self.grupo)
+        self.assertEqual(g.count('"TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"'), 3)
+        self.assertEqual(g.count('+ Variable(quebra_topo_linhas)"'), 2)
+        self.assertEqual(g.count('Variable(quebra_y_min)) + 0"'), 1)
         g = json.dumps(self.grupo)
         self.assertIn('"SetBooleanVariable"}, "parameters": ["fase2", "True"', g)
         self.assertIn('"ActivateBehavior"}, "parameters": ["plataforma_movel", "Platform", "no"]', g)
@@ -106,12 +108,7 @@ class Fase2Lava(unittest.TestCase):
                 self.assertIn(v, nomes, f'{dono}.{v}')
         for v in re.findall(r'Variable\(([a-z_0-9]+)\)', g) + re.findall(r'n\("([a-z_0-9]+)"\)', g):
             self.assertIn(v, self.cv)
-        js = [e for e in eventos(self.grupo['events']) if e['type'].endswith('JsCode')]
-        for e in js:
-            c = '\n'.join(e['inlineCode'])
-            if 'destroco' in c:
-                for v in re.findall(r'num\("([a-z_]+)"\)', c.split('runtimeScene.createObject')[-1].split('};')[0]):
-                    self.assertIn(v, self.vars(t63.DES))
+        self.assertFalse([e for e in eventos(self.chefe) if e['type'].endswith('JsCode')], 'Chefe só com eventos, sem JS')
         pedacos = [s['image'] for a in self.objs[t63.DES]['animations'] for s in a['directions'][0]['sprites']]
         self.assertEqual(pedacos, t63.IMGS)
         for p in pedacos:
