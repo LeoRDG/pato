@@ -15861,6 +15861,30 @@
           "persistentUuid": "42091cb5-43d0-5344-a8a6-755537c081a2",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "alvo_ponte",
+          "persistentUuid": "3b407a06-832a-5485-b74e-e1f588c5b497",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ponte_y",
+          "persistentUuid": "6653635a-b090-50b9-9052-82c7975729e2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ponte_x0",
+          "persistentUuid": "b6966d2a-6495-5462-bf49-ac839e8ff05c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ponte_x1",
+          "persistentUuid": "87365550-8b3a-51df-a7fe-433a581e71cd",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -60548,6 +60572,24 @@
           "persistentUuid": "0d8d47d7-556e-5a07-ab77-40c904c85b68",
           "type": "number",
           "value": 60
+        },
+        {
+          "name": "moedas_ponte_tempo_min",
+          "persistentUuid": "47566627-c16d-59a1-9f16-e25116b99827",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "moedas_ponte_tempo_max",
+          "persistentUuid": "23fbd806-48fb-54a8-9034-827eeee8c75a",
+          "type": "number",
+          "value": 1.2
+        },
+        {
+          "name": "moedas_lancadas",
+          "persistentUuid": "a35accc7-f86b-5ef7-a0c7-a6b0d5950762",
+          "type": "boolean",
+          "value": false
         }
       ]
     },
@@ -94916,6 +94958,239 @@
                     "=",
                     "pato.camera_offset_normal",
                     ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 60,
+          "colorG": 60,
+          "colorR": 200,
+          "creationTime": 0,
+          "name": "Moedas do chefe",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Moedas do chefe: se ele morre na lava (fase 2), as moedas que solta voam para cima das pontes (moedas_ponte_tempo_min/max s de voo) e quicam lá em vez de cair na lava."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "fase2",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "morto",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "moedas_lancadas",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "demonio_chefe",
+                    "moedas_lancadas",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// relança as moedas que o demônio acabou de soltar (timer \"vida\" zerado neste quadro) para cima das pontes",
+                    "const cena = runtimeScene.getVariables();",
+                    "const n = (k) => cena.get(k).getAsNumber();",
+                    "const pontes = runtimeScene.getObjects(\"tiles_inferno_ponte\").filter(",
+                    "  (p) => p.getX() >= n(\"quebra_x_min\") && p.getX() + p.getWidth() <= n(\"quebra_x_max\"));",
+                    "if (pontes.length === 0) return;",
+                    "const sorteio = (a, b) => a + Math.random() * (b - a);",
+                    "for (const b of objects) {",
+                    "  const bv = b.getVariables();",
+                    "  const tmin = bv.get(\"moedas_ponte_tempo_min\").getAsNumber(), tmax = bv.get(\"moedas_ponte_tempo_max\").getAsNumber();",
+                    "  for (const m of runtimeScene.getObjects(\"moeda\")) {",
+                    "    if (m.getTimerElapsedTimeInSeconds(\"vida\") > 0) continue;",
+                    "    const v = m.getVariables();",
+                    "    const p = pontes[Math.floor(Math.random() * pontes.length)];",
+                    "    const tx = sorteio(p.getX(), p.getX() + p.getWidth() - m.getWidth());",
+                    "    const ty = p.getY() - m.getHeight();",
+                    "    const t = sorteio(tmin, tmax);",
+                    "    const g = v.get(\"gravidade\").getAsNumber();",
+                    "    v.get(\"vx\").setNumber((tx - m.getX()) / t);",
+                    "    v.get(\"vy\").setNumber((ty - m.getY()) / t - g * t / 2);",
+                    "    v.get(\"alvo_ponte\").setBoolean(true);",
+                    "    v.get(\"ponte_y\").setNumber(p.getY());",
+                    "    v.get(\"ponte_x0\").setNumber(p.getX());",
+                    "    v.get(\"ponte_x1\").setNumber(p.getX() + p.getWidth());",
+                    "  }",
+                    "}"
+                  ],
+                  "parameterObjects": "demonio_chefe",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "alvo_ponte",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "parada",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vy",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "moeda.Y() + moeda.Height()",
+                    ">=",
+                    "moeda.ponte_y"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "=",
+                    "moeda.ponte_y - moeda.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "=",
+                    "clamp(moeda.X(), moeda.ponte_x0, moeda.ponte_x1 - moeda.Width())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vy",
+                    "*",
+                    "-moeda.quique"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "moeda",
+                    "vx",
+                    "*",
+                    "moeda.atrito_x"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "vy",
+                        ">",
+                        "-moeda.parada_vy"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "parada",
+                        "True",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
