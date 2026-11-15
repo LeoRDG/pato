@@ -70546,6 +70546,85 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "laser_x",
+                                "=",
+                                "bocal_x + mira_lado * cos(mira_a) * pato.laser_alcance"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "laser_y",
+                                "=",
+                                "bocal_y + sin(mira_a) * pato.laser_alcance"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RaycastToPosition"
+                                  },
+                                  "parameters": [
+                                    "Terreno",
+                                    "bocal_x",
+                                    "bocal_y",
+                                    "laser_x",
+                                    "laser_y",
+                                    "laser_x",
+                                    "laser_y",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": []
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "GlobalVariable(upgrades.laser)",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PrimitiveDrawing::LineV2"
+                                  },
+                                  "parameters": [
+                                    "laser",
+                                    "bocal_x",
+                                    "bocal_y",
+                                    "laser_x",
+                                    "laser_y",
+                                    "1.5"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ],
                       "parameters": []

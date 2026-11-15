@@ -1,9 +1,10 @@
 """Laser da mira só com o upgrade "laser"; o alvo fica escondido (mas continua sendo o ponto de mira do tiro)."""
-import json, os
+import json, os, sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
-MIRA = next(e for e in next(x for x in JOGO['externalEvents'] if x['name'] == 'Jogador')['events'] if e.get('name') == 'Mira')
+# a mira vive em Jogador > Controle das Armas > Mira e posicionamento (antes era o grupo Mira); procura no Jogador todo
+MIRA = {'events': next(x for x in JOGO['externalEvents'] if x['name'] == 'Jogador')['events']}
 
 
 def anda(evs):
@@ -30,4 +31,13 @@ def test_laser_so_com_upgrade():
 
 def test_alvo_escondido():
     assert any(a['type']['value'] == 'Hide' and a['parameters'][0] == 'alvo' and not e.get('conditions')
-               for e in MIRA['events'] for a in e.get('actions') or [])
+               for e in anda(MIRA['events']) for a in e.get('actions') or [])
+
+
+def test_laser_e_o_mesmo_de_antes():
+    """O desenho do laser é o mesmo que existia antes da limpeza dos eventos (commit 92014eb)."""
+    sys.path.insert(0, os.path.join(RAIZ, 'tools'))
+    import t64_laser_volta as t64
+    novo = t64.evento()
+    achados = [e for e in anda(MIRA['events']) if e.get('actions') == novo['actions']]
+    assert len(achados) == 1 and achados[0]['events'] == novo['events']
