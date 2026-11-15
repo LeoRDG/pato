@@ -10556,6 +10556,14 @@
         "name": "assets/purgatorio_armadilhas/acido_03.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio_armadilhas/espinhos.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio_armadilhas/espinhos.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -62269,6 +62277,31 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 64,
+      "name": "espinhos",
+      "persistentUuid": "09657679-0ba0-5649-8421-1a3526571f0a",
+      "texture": "assets/purgatorio_armadilhas/espinhos.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 192,
+      "variables": [
+        {
+          "name": "dano",
+          "persistentUuid": "8559a9aa-0e32-59fe-9757-7886d401babd",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "empurrao",
+          "persistentUuid": "8e045ad7-2650-5c0c-8074-6fc2da4d7237",
+          "type": "number",
+          "value": 900
+        }
+      ],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -62682,6 +62715,9 @@
               },
               {
                 "objectName": "acido"
+              },
+              {
+                "objectName": "espinhos"
               }
             ]
           }
@@ -63166,6 +63202,9 @@
         },
         {
           "name": "tiles_purgatorio"
+        },
+        {
+          "name": "espinhos"
         }
       ]
     }
@@ -70311,6 +70350,13 @@
             "includeConfig": 0
           },
           "target": "Armadilhas"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Espinhos"
         },
         {
           "colorB": 228,
@@ -102984,6 +103030,130 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Purgatorio",
+      "name": "Espinhos",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Espinhos: não dá para ficar de pé (não são plataforma), encostar tira `dano` e joga o pato para o lado de fora a `empurrao` px/s. Estão no grupo Terreno, então socar dá o coice da parede."
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Espinhos",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "pato",
+                    "espinhos",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "-",
+                    "espinhos.dano"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "\"espinhos\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "coice_vx",
+                    "=",
+                    "sign(pato.CenterX() - espinhos.CenterX()) * espinhos.empurrao"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
