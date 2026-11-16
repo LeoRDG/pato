@@ -71656,316 +71656,6 @@
           ]
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Boneco de teste",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Boneco para testar as armas: leva dano de tudo e, depois de boneco.regen_espera s sem dano, volta à vida cheia. O DPS é o dano dos últimos boneco.dps_janela s dividido por dps_janela."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneJustBegins"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida_vista",
-                    "=",
-                    "boneco.vida"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "boneco_dps",
-                    "boneco.CenterX()",
-                    "boneco.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "boneco_dps",
-                    "=",
-                    "1100"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "dps_idx",
-                    "=",
-                    "mod(floor(TimeFromStart() / boneco.dps_passo), round(boneco.dps_janela / boneco.dps_passo))"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "dps_idx",
-                        "!=",
-                        "dps_idx_ant"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "dps_buf[dps_idx]",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "dps_idx_ant",
-                        "=",
-                        "dps_idx"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida",
-                    "<",
-                    "boneco.vida_vista"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "\"sem_dano\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "dps_buf[dps_idx]",
-                    "+",
-                    "boneco.vida_vista - boneco.vida"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida_vista",
-                    "=",
-                    "boneco.vida"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida",
-                    "<",
-                    "boneco.max_vida"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CompareObjectTimer"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "\"sem_dano\"",
-                    ">",
-                    "boneco.regen_espera"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida",
-                    "=",
-                    "boneco.max_vida"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "boneco",
-                    "vida_vista",
-                    "=",
-                    "boneco.max_vida"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "dps_soma",
-                    "=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "dps_i",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "round(boneco.dps_janela / boneco.dps_passo)",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "dps_soma",
-                        "+",
-                        "dps_buf[dps_i]"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "dps_i",
-                        "+",
-                        "1"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "boneco_dps",
-                    "Text",
-                    "=",
-                    "\"DPS \" + ToString(round(dps_soma / boneco.dps_janela))"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "boneco_dps",
-                    "=",
-                    "boneco.CenterX() - boneco_dps.Width() / 2",
-                    "=",
-                    "boneco.Y() - boneco.dps_altura"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
           "colorB": 200,
           "colorG": 120,
           "colorR": 160,
@@ -74848,7 +74538,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.13991234651576306,
+        "zoomFactor": 0.04530562045767551,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -85893,7 +85583,7 @@
       ]
     },
     {
-      "associatedLayout": "principal",
+      "associatedLayout": "Menu",
       "name": "Inimigos",
       "events": [
         {
@@ -86139,6 +85829,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Projéteis dos inimigos",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -87331,6 +87022,7 @@
           "colorG": 70,
           "colorR": 200,
           "creationTime": 0,
+          "folded": true,
           "name": "Inferno",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -93265,6 +92957,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Voadores (comum)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -93791,6 +93484,7 @@
           "colorG": 70,
           "colorR": 200,
           "creationTime": 0,
+          "folded": true,
           "name": "Inferno (voadores)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -97377,6 +97071,7 @@
           "colorG": 140,
           "colorR": 110,
           "creationTime": 0,
+          "folded": true,
           "name": "Purgatório",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -102429,6 +102124,7 @@
           "colorG": 210,
           "colorR": 230,
           "creationTime": 0,
+          "folded": true,
           "name": "Céu",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -106490,7 +106186,7 @@
       ]
     },
     {
-      "associatedLayout": "principal",
+      "associatedLayout": "Hub",
       "name": "Combate",
       "events": [
         {
@@ -107216,6 +106912,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Gravidade da granada",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -107291,6 +106988,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Explosão da granada",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -107700,6 +107398,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Dano da explosão",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -108375,6 +108074,7 @@
               "comment": "Bala em inimigo invulnerável (invulneravel = True) não machuca: ricocheteia com um ping; se ele tem reflete = True, volta como projétil inimigo no pato."
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "projetil",
               "conditions": [
@@ -108633,6 +108333,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "projetil",
               "conditions": [
@@ -109232,6 +108933,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Sons de dano",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -109630,23 +109332,6 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "boss",
-                        "vida",
-                        "<=",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": []
-                },
-                {
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "Inimigo",
                   "conditions": [],
@@ -109819,34 +109504,6 @@
                     "value": "BooleanObjectVariable"
                   },
                   "parameters": [
-                    "boss",
-                    "morto",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "boss",
-                    "TweenPathMovement",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
                     "Inimigo",
                     "morto",
                     "True",
@@ -109985,7 +109642,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Barra de Vida",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -110114,7 +109770,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Moeda",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -110258,7 +109913,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Física",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -110447,7 +110101,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Ímã e sumiço",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -110577,7 +110230,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Coleta",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -111291,182 +110943,7 @@
       ]
     },
     {
-      "associatedLayout": "principal",
-      "name": "Boss",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Ataques do boss, usados na cena Boss e no mapa de testes (principal)."
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Ataques do boss",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Pula na direção do pato quando ele chega perto, com 5 s de intervalo."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Distance"
-                  },
-                  "parameters": [
-                    "pato",
-                    "boss",
-                    "boss.pulo_dist",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "boss",
-                    "andando",
-                    "=",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "boss",
-                    "morto",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "CurvedMovement::DeletePath"
-                  },
-                  "parameters": [
-                    "",
-                    "\"pulo\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "boss",
-                    "andando",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "boss",
-                    "\"cooldown\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CurvedMovement::AddCubicCurve"
-                  },
-                  "parameters": [
-                    "",
-                    "\"pulo\"",
-                    "(pato.CenterX() - boss.CenterX()) * boss.pulo_x1",
-                    "RandomInRange(-boss.pulo_alt1_max, -boss.pulo_alt1_min)",
-                    "(pato.CenterX() - boss.CenterX()) * boss.pulo_x2",
-                    "RandomInRange(-boss.pulo_alt2_max, -boss.pulo_alt2_min)",
-                    "pato.CenterX() - boss.CenterX()",
-                    "pato.CenterY() - boss.CenterY()",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CurvedMovement::TweenPathMovement::MoveTo"
-                  },
-                  "parameters": [
-                    "boss",
-                    "TweenPathMovement",
-                    "\"pulo\"",
-                    "RandomInRange(boss.pulo_dur_min, boss.pulo_dur_max)",
-                    "RandomFloatInRange(boss.pulo_giro_min, boss.pulo_giro_max)",
-                    "\"bouncePast\"",
-                    "pato.X()",
-                    "pato.Y()-boss.Y()",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareObjectTimer"
-                  },
-                  "parameters": [
-                    "boss",
-                    "\"cooldown\"",
-                    ">",
-                    "boss.pulo_cooldown"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "boss",
-                    "andando",
-                    "False",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        }
-      ]
-    },
-    {
-      "associatedLayout": "principal",
+      "associatedLayout": "Menu",
       "name": "HUD",
       "events": [
         {
@@ -112569,201 +112046,6 @@
                         "Animation",
                         "=",
                         "\"lock\""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "folded": true,
-              "name": "Boss",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Barra de vida do boss quando o pato chega perto."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "pato",
-                        "boss",
-                        "1500",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "boss",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "hud_boss_trilho",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "hud_boss_rastro",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "hud_boss_fill",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Show"
-                      },
-                      "parameters": [
-                        "hud_boss_nome",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                      },
-                      "parameters": [
-                        "hud_boss_fill",
-                        "Resizable",
-                        "=",
-                        "720 * clamp(boss.vida / boss.max_vida, 0, 1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "hud_boss_fill",
-                        "=",
-                        "hud_boss_trilho.X()",
-                        "=",
-                        "hud_boss_trilho.Y()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "hud_boss_rastro",
-                        "=",
-                        "hud_boss_trilho.X()",
-                        "=",
-                        "hud_boss_trilho.Y()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "hud_boss_nome",
-                        "=",
-                        "hud_boss_trilho.X() + 360 - hud_boss_nome.Width() / 2",
-                        "=",
-                        "hud_boss_trilho.Y() - 30"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro.Width()",
-                            ">",
-                            "hud_boss_fill.Width()"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro",
-                            "Resizable",
-                            "-",
-                            "300 * TimeDelta()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro.Width()",
-                            "<",
-                            "hud_boss_fill.Width()"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro",
-                            "Resizable",
-                            "=",
-                            "hud_boss_fill.Width()"
-                          ]
-                        }
                       ]
                     }
                   ]
