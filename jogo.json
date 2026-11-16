@@ -12503,14 +12503,8 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "dist_min",
-          "persistentUuid": "26dbbc29-47de-5b48-ae8e-3b2e8319a459",
-          "type": "number",
-          "value": 60
-        },
-        {
-          "name": "d",
-          "persistentUuid": "49b561ad-965e-5b9e-944e-fcca2c80d907",
+          "name": "giro",
+          "persistentUuid": "6f161e86-51c6-5da4-a5bf-f59b39ff2157",
           "type": "number",
           "value": 0
         }
@@ -85094,9 +85088,9 @@
                               },
                               "parameters": [
                                 "alvo",
-                                "d",
+                                "giro",
                                 "=",
-                                "max(alvo.dist_min, (MouseX() - bocal_x) * mira_lado * cos(mira_a) + (MouseY() - bocal_y) * sin(mira_a))"
+                                "-mira_lado * ToRad(recuo)"
                               ]
                             },
                             {
@@ -85106,9 +85100,9 @@
                               "parameters": [
                                 "alvo",
                                 "=",
-                                "bocal_x + mira_lado * cos(mira_a) * alvo.d - alvo.Width() * .5",
+                                "pato.CenterX() + (MouseX() - pato.CenterX()) * cos(alvo.giro) - (MouseY() - (pato.Y() + pato.Height() * 0.68)) * sin(alvo.giro) - alvo.Width() * .5",
                                 "=",
-                                "bocal_y + sin(mira_a) * alvo.d - alvo.Height() * .5"
+                                "(pato.Y() + pato.Height() * 0.68) + (MouseX() - pato.CenterX()) * sin(alvo.giro) + (MouseY() - (pato.Y() + pato.Height() * 0.68)) * cos(alvo.giro) - alvo.Height() * .5"
                               ]
                             },
                             {
