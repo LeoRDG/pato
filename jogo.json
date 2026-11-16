@@ -10996,6 +10996,198 @@
         "name": "assets/moedas/x10_05.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/inferno_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/inferno_07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/purgatorio_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/purgatorio_07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/portais/paraiso_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/paraiso_07.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -68648,6 +68840,988 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "portal",
+      "persistentUuid": "0f59e67c-e504-5c2a-81f3-45f9a7387c90",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "cena",
+          "persistentUuid": "e942935e-cf86-5184-9147-9aa945249f4f",
+          "type": "string",
+          "value": "Inferno"
+        },
+        {
+          "name": "nome",
+          "persistentUuid": "ff5ef8da-e7f7-57bb-bf14-9c1ed8bbadf8",
+          "type": "string",
+          "value": "Inferno"
+        },
+        {
+          "name": "espera",
+          "persistentUuid": "215ca5d6-ff8c-58b8-b2df-4a316c35e83b",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "nome_altura",
+          "persistentUuid": "c28ace1f-d2bc-5c26-b176-94c19b70cb88",
+          "type": "number",
+          "value": 48
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Inferno",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/inferno_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purgatorio",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/purgatorio_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Paraiso",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/portais/paraiso_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 32
+                      },
+                      {
+                        "x": 136,
+                        "y": 208
+                      },
+                      {
+                        "x": 24,
+                        "y": 208
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "portal_nome",
+      "persistentUuid": "dfe04040-0a1d-5145-b13e-6ed554b02cd3",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "",
+      "font": "Name Smile.otf",
+      "textAlignment": "left",
+      "characterSize": 26,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "",
+        "font": "Name Smile.otf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 26,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -69256,6 +70430,12 @@
           },
           {
             "objectName": "safezone"
+          },
+          {
+            "objectName": "portal"
+          },
+          {
+            "objectName": "portal_nome"
           }
         ]
       },
@@ -70869,6 +72049,24 @@
           "persistentUuid": "17e30089-41c7-40a4-967c-edcf13ffff2a",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "queda_y",
+          "persistentUuid": "db46ab07-f1af-56f6-ab09-fb3c71ebbcb8",
+          "type": "number",
+          "value": 2510
+        },
+        {
+          "name": "volta_x",
+          "persistentUuid": "b9a52608-6e15-52fa-ad3e-4ff8376e29d7",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "volta_y",
+          "persistentUuid": "f09d4dfb-8814-5109-a6f6-674c84a60eef",
+          "type": "number",
+          "value": 748
         }
       ],
       "instances": [
@@ -71445,6 +72643,90 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 224,
+          "layer": "",
+          "name": "portal",
+          "persistentUuid": "12d47865-a923-56e0-824d-05acaf27b1b5",
+          "width": 160,
+          "x": 2000.0,
+          "y": 786,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "cena",
+              "persistentUuid": "4c0ee561-f527-53b9-89c0-9953d27a128a",
+              "type": "string",
+              "value": "Inferno"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "a60da3d6-5b90-5bfa-89c9-7bf3600db39d",
+              "type": "string",
+              "value": "Inferno"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 224,
+          "layer": "",
+          "name": "portal",
+          "persistentUuid": "6a7eeef2-4835-51e8-a755-dc86f5a61a22",
+          "width": 160,
+          "x": 2260.0,
+          "y": 786,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "cena",
+              "persistentUuid": "fdf2e5ff-0547-5c2b-a5f4-2902497d3e68",
+              "type": "string",
+              "value": "Purgatorio"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "d9522d0d-f351-5ec1-98f8-91a96f49c957",
+              "type": "string",
+              "value": "Purgatorio"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 224,
+          "layer": "",
+          "name": "portal",
+          "persistentUuid": "43890ef5-5fe9-571c-968f-3cd03e152556",
+          "width": 160,
+          "x": 2520.0,
+          "y": 786,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "cena",
+              "persistentUuid": "0dd93917-e465-51bf-ba07-8b655bc0de0d",
+              "type": "string",
+              "value": "Paraiso"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "c08cac14-47bc-5fbe-ade8-a603ffbc28a8",
+              "type": "string",
+              "value": "Paraiso"
+            }
+          ]
         }
       ],
       "objects": [
@@ -71529,7 +72811,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Provisório até a KAN-19/KAN-26: andar até a borda direita leva para a Fase 1 (Inferno)."
+              "comment": "Desativado: agora o Hub tem os portais (grupo Portais). Provisório até a KAN-19/KAN-26: andar até a borda direita leva para a Fase 1 (Inferno)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -71556,7 +72838,8 @@
                     ""
                   ]
                 }
-              ]
+              ],
+              "disabled": true
             }
           ],
           "parameters": []
@@ -71916,6 +73199,245 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 200,
+          "colorG": 120,
+          "colorR": 160,
+          "creationTime": 0,
+          "name": "Portais",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Um portal por fase. Cada instância tem cena (para onde leva; a animação tem o mesmo nome) e nome (o texto em cima). Ficando dentro por portal.espera s, o pato vai para portal.cena. Cair da borda (passar de queda_y) volta o pato para volta_x/volta_y.",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "portal",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "portal",
+                        "Animation",
+                        "=",
+                        "portal.cena"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "portal_nome",
+                        "portal.CenterX()",
+                        "portal.Y() - portal.nome_altura",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "portal_nome",
+                        "Text",
+                        "=",
+                        "portal.nome"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "portal_nome",
+                        "=",
+                        "portal.CenterX() - portal_nome.Width() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "portal_nome",
+                        "=",
+                        "portal.ZOrder() + 1"
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "portal",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP",
+                    "inverted": true
+                  },
+                  "parameters": [
+                    "pato",
+                    "portal",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "portal",
+                    "\"dentro\""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "portal",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "pato",
+                    "portal",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "portal",
+                    "\"dentro\"",
+                    ">",
+                    "portal.espera"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "portal.cena",
+                    ""
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y()",
+                    ">",
+                    "queda_y"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "pato",
+                    "=",
+                    "volta_x",
+                    "=",
+                    "volta_y"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Link",
