@@ -10852,6 +10852,150 @@
         "name": "assets/paraiso/bg_rosa.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x1_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x1_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x5_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x5_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/moedas/x10_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/moedas/x10_05.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -17224,6 +17368,36 @@
           "persistentUuid": "87365550-8b3a-51df-a7fe-433a581e71cd",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "mult",
+          "persistentUuid": "9d8df761-67a7-584d-a8b6-d75d3e52a747",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "01a49e55-a6bc-5caf-a23a-e905b6e0d26d",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "chance_x5",
+          "persistentUuid": "6b27cea4-0668-510f-8090-3e7ea129ece2",
+          "type": "number",
+          "value": 0.25
+        },
+        {
+          "name": "chance_x10",
+          "persistentUuid": "7189c409-d28f-51ad-9862-f382eb5808ae",
+          "type": "number",
+          "value": 0.08
+        },
+        {
+          "name": "sorteio",
+          "persistentUuid": "1b805809-087c-5458-bf77-4973dfc3b716",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -17244,16 +17418,16 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "x1",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.09,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "bitcoin.png",
+                  "image": "assets/moedas/x1_00.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -17269,20 +17443,656 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 878,
-                        "y": 43
+                        "x": 8.0,
+                        "y": 8.0
                       },
                       {
-                        "x": 2957,
-                        "y": 43
+                        "x": 56.0,
+                        "y": 8.0
                       },
                       {
-                        "x": 2957,
-                        "y": 2122
+                        "x": 56.0,
+                        "y": 56.0
                       },
                       {
-                        "x": 878,
-                        "y": 2122
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x1_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 56.0
+                      },
+                      {
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x1_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 56.0
+                      },
+                      {
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x1_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 56.0
+                      },
+                      {
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x1_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 56.0
+                      },
+                      {
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x1_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 8.0
+                      },
+                      {
+                        "x": 56.0,
+                        "y": 56.0
+                      },
+                      {
+                        "x": 8.0,
+                        "y": 56.0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "x5",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.09,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x5_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 4.0
+                      },
+                      {
+                        "x": 60.0,
+                        "y": 60.0
+                      },
+                      {
+                        "x": 4.0,
+                        "y": 60.0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "x10",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.09,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/moedas/x10_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 64.0,
+                        "y": 64.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 64.0
                       }
                     ]
                   ]
@@ -71329,16 +72139,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "757d57e4-9797-4a24-9b66-d7327188f35e",
-          "width": 103,
-          "x": 1407,
-          "y": 734,
+          "width": 64,
+          "x": 1426.5,
+          "y": 732.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -71346,16 +72156,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "30bc6b3c-bb0b-4490-928f-cfb180a4b2cf",
-          "width": 103,
-          "x": 1556,
-          "y": -169,
+          "width": 64,
+          "x": 1575.5,
+          "y": -171.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -71370,16 +72180,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "0ed0f285-0c9f-4cfe-a6d9-dbf74fdbdf7a",
-          "width": 103,
-          "x": 1731,
-          "y": 17,
+          "width": 64,
+          "x": 1750.5,
+          "y": 15.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -71394,16 +72204,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "24a45e8c-87c3-4636-9441-f885d70e83df",
-          "width": 103,
-          "x": 1614,
-          "y": -391,
+          "width": 64,
+          "x": 1633.5,
+          "y": -393.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -71418,16 +72228,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "2a57ce3c-e6e3-41e9-b43f-c4973ff0c49b",
-          "width": 103,
-          "x": 2055,
-          "y": -159,
+          "width": 64,
+          "x": 2074.5,
+          "y": -161.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -71442,16 +72252,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "b6a8d45e-493c-4fe8-b606-c83f8832394c",
-          "width": 103,
-          "x": 1866,
-          "y": -380,
+          "width": 64,
+          "x": 1885.5,
+          "y": -382.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73482,16 +74292,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "a1e9bbba-c9a4-5516-859d-18b874968923",
-          "width": 103,
-          "x": 1772,
-          "y": 194,
+          "width": 64,
+          "x": 1791.5,
+          "y": 192.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73506,16 +74316,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "ff976153-ab7e-5043-9af8-39acac88e1df",
-          "width": 103,
-          "x": 1516,
-          "y": -446,
+          "width": 64,
+          "x": 1535.5,
+          "y": -448.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73530,16 +74340,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "32f74df8-e5fd-54e6-aaa0-756311bef207",
-          "width": 103,
-          "x": 1900,
-          "y": -702,
+          "width": 64,
+          "x": 1919.5,
+          "y": -704.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73554,16 +74364,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "d725dc41-a3a1-59a1-a8d8-c36392227d97",
-          "width": 103,
-          "x": 2348,
-          "y": -1086,
+          "width": 64,
+          "x": 2367.5,
+          "y": -1088.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73578,16 +74388,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "3c8a7b90-f143-5def-ae29-86d754131a65",
-          "width": 103,
-          "x": 1516,
-          "y": -1406,
+          "width": 64,
+          "x": 1535.5,
+          "y": -1408.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73602,16 +74412,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "61a9df3c-a909-5c4c-8e71-2fa36c6fef5c",
-          "width": 103,
-          "x": 2284,
-          "y": -1726,
+          "width": 64,
+          "x": 2303.5,
+          "y": -1728.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73626,16 +74436,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "93f8f868-a1b5-5097-a6be-3859f9616f82",
-          "width": 103,
-          "x": 2668,
-          "y": -1982,
+          "width": 64,
+          "x": 2687.5,
+          "y": -1984.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73650,16 +74460,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "96a5574e-d56e-5f91-8809-c5b1ddbb3267",
-          "width": 103,
-          "x": 2220,
-          "y": -2238,
+          "width": 64,
+          "x": 2239.5,
+          "y": -2240.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73674,16 +74484,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "0b93c22c-a2fd-5b93-a4c4-994d55f3bae5",
-          "width": 103,
-          "x": 1772,
-          "y": -2430,
+          "width": 64,
+          "x": 1791.5,
+          "y": -2432.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73698,16 +74508,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "91318915-53da-546c-aa15-724745d3599f",
-          "width": 103,
-          "x": 1260,
-          "y": -2622,
+          "width": 64,
+          "x": 1279.5,
+          "y": -2624.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73722,16 +74532,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "35af3f59-bb79-5835-af27-50652b0f0aeb",
-          "width": 103,
-          "x": 1132,
-          "y": -3070,
+          "width": 64,
+          "x": 1151.5,
+          "y": -3072.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73746,16 +74556,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "0ca0d7f6-2024-52ea-b46a-5aa6a4f377c6",
-          "width": 103,
-          "x": 1452,
-          "y": -3454,
+          "width": 64,
+          "x": 1471.5,
+          "y": -3456.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73770,16 +74580,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "9940ec8a-8d21-5873-bde5-ef54fa3f5e07",
-          "width": 103,
-          "x": 1132,
-          "y": -3838,
+          "width": 64,
+          "x": 1151.5,
+          "y": -3840.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73794,16 +74604,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "58e00f15-1721-55de-89e2-7773b6623b8c",
-          "width": 103,
-          "x": 1452,
-          "y": -4222,
+          "width": 64,
+          "x": 1471.5,
+          "y": -4224.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73818,16 +74628,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "8f28a965-f3a8-580e-be1f-6ac02f03fe3a",
-          "width": 103,
-          "x": 1132,
-          "y": -4606,
+          "width": 64,
+          "x": 1151.5,
+          "y": -4608.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73842,16 +74652,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "b8099aef-2713-599a-a07d-25519914e792",
-          "width": 103,
-          "x": 1452,
-          "y": -4990,
+          "width": 64,
+          "x": 1471.5,
+          "y": -4992.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73866,16 +74676,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "4c4a85dc-7ee1-54c2-ba36-7ae6f610094e",
-          "width": 103,
-          "x": 2604,
-          "y": -5374,
+          "width": 64,
+          "x": 2623.5,
+          "y": -5376.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73890,16 +74700,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "40a61421-874f-594c-9dfe-e1cbe057af57",
-          "width": 103,
-          "x": 2924,
-          "y": -5822,
+          "width": 64,
+          "x": 2943.5,
+          "y": -5824.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73914,16 +74724,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "c263bb5b-2a5a-5bc0-9990-db6768dae867",
-          "width": 103,
-          "x": 2604,
-          "y": -6270,
+          "width": 64,
+          "x": 2623.5,
+          "y": -6272.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73938,16 +74748,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "41a4c355-f7a0-5eee-9bd3-a4b1c0b2ed1d",
-          "width": 103,
-          "x": 2284,
-          "y": -5822,
+          "width": 64,
+          "x": 2303.5,
+          "y": -5824.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73962,16 +74772,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "5164cc8d-1208-5937-8ef2-a70cfa36d1c2",
-          "width": 103,
-          "x": 2028,
-          "y": -6718,
+          "width": 64,
+          "x": 2047.5,
+          "y": -6720.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -73986,16 +74796,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "1631bc9b-112c-5603-8ab0-8a2c7455d42a",
-          "width": 103,
-          "x": 2412,
-          "y": -7294,
+          "width": 64,
+          "x": 2431.5,
+          "y": -7296.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74010,16 +74820,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "9dc50ebe-9784-58d4-a7b9-5ddac2ac693f",
-          "width": 103,
-          "x": 2732,
-          "y": -7614,
+          "width": 64,
+          "x": 2751.5,
+          "y": -7616.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74034,16 +74844,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "f53d9179-7fdf-5d57-a07a-cea9d11c0406",
-          "width": 103,
-          "x": 2092,
-          "y": -7742,
+          "width": 64,
+          "x": 2111.5,
+          "y": -7744.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74058,16 +74868,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "07837092-9bfd-5435-87a2-aba394a43a7f",
-          "width": 103,
-          "x": 2412,
-          "y": -7998,
+          "width": 64,
+          "x": 2431.5,
+          "y": -8000.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74082,16 +74892,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "4c4c1cb9-efaa-5431-a2e0-c6030419c958",
-          "width": 103,
-          "x": 1644,
-          "y": -8318,
+          "width": 64,
+          "x": 1663.5,
+          "y": -8320.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74106,16 +74916,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "86e293af-1d33-57ae-a285-46ff0e718add",
-          "width": 103,
-          "x": 1708,
-          "y": -8958,
+          "width": 64,
+          "x": 1727.5,
+          "y": -8960.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74130,16 +74940,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "6c4953d2-c89b-598d-a314-38f9999141f2",
-          "width": 103,
-          "x": 1836,
-          "y": -9278,
+          "width": 64,
+          "x": 1855.5,
+          "y": -9280.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74154,16 +74964,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "0285fb7a-177d-558b-9233-97d124c45b59",
-          "width": 103,
-          "x": 492,
-          "y": -9662,
+          "width": 64,
+          "x": 511.5,
+          "y": -9664.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74547,16 +75357,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "6f42851f-86e0-5666-bb94-c877521bbe72",
-          "width": 103,
-          "x": -724,
-          "y": -9790,
+          "width": 64,
+          "x": -704.5,
+          "y": -9792.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74571,16 +75381,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "bed87a1e-1101-5846-8704-4a7bf14b7409",
-          "width": 103,
-          "x": -1756,
-          "y": -10469,
+          "width": 64,
+          "x": -1736.5,
+          "y": -10471.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74595,16 +75405,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "726d4017-fa45-5325-80c9-32fa7e453549",
-          "width": 103,
-          "x": -1300,
-          "y": -11262,
+          "width": 64,
+          "x": -1280.5,
+          "y": -11264.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74619,16 +75429,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "5606d715-d7b3-5695-94fc-9b24c22bff5c",
-          "width": 103,
-          "x": -788,
-          "y": -11646,
+          "width": 64,
+          "x": -768.5,
+          "y": -11648.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74643,16 +75453,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "3ccfc7d4-c3e6-5674-9467-89b408785fd2",
-          "width": 103,
-          "x": -276,
-          "y": -11966,
+          "width": 64,
+          "x": -256.5,
+          "y": -11968.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74667,16 +75477,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "2fde60d2-8056-5c04-8b9f-ea9343e8f503",
-          "width": 103,
-          "x": -1748,
-          "y": -13118,
+          "width": 64,
+          "x": -1728.5,
+          "y": -13120.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74691,16 +75501,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "be1fee06-5f45-5bba-832f-9c20378631cf",
-          "width": 103,
-          "x": -1492,
-          "y": -13950,
+          "width": 64,
+          "x": -1472.5,
+          "y": -13952.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74715,16 +75525,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "3c3e9538-a260-5782-97f0-167c5f3709ea",
-          "width": 103,
-          "x": -724,
-          "y": -14462,
+          "width": 64,
+          "x": -704.5,
+          "y": -14464.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74739,16 +75549,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "depth": 1,
-          "height": 60,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "aa1ce689-d7a5-5293-8d6b-161806377ae5",
-          "width": 103,
-          "x": -20,
-          "y": -14910,
+          "width": 64,
+          "x": -0.5,
+          "y": -14912.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76423,15 +77233,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "03d13575-0583-5109-b067-bfaa109861ec",
-          "width": 103,
-          "x": 492,
-          "y": 578,
+          "width": 64,
+          "x": 511.5,
+          "y": 576.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76447,15 +77257,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "e13dc8e8-ad9c-534c-9c40-04f525c9468c",
-          "width": 103,
-          "x": 1324,
-          "y": 450,
+          "width": 64,
+          "x": 1343.5,
+          "y": 448.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76471,15 +77281,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "1bc78752-be57-5ad5-a821-04a3c7f19d44",
-          "width": 103,
-          "x": 1836,
-          "y": 258,
+          "width": 64,
+          "x": 1855.5,
+          "y": 256.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76495,15 +77305,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "5d6892b4-dc13-5902-b343-cb807a4c31ad",
-          "width": 103,
-          "x": 2412,
-          "y": 66,
+          "width": 64,
+          "x": 2431.5,
+          "y": 64.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76519,15 +77329,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "946322a6-4adb-5f0c-a6ff-b2ab317fb863",
-          "width": 103,
-          "x": 2988,
-          "y": -126,
+          "width": 64,
+          "x": 3007.5,
+          "y": -128.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76543,15 +77353,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "42c98787-0c50-5a47-a966-79969e5a0534",
-          "width": 103,
-          "x": 3564,
-          "y": -318,
+          "width": 64,
+          "x": 3583.5,
+          "y": -320.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76567,15 +77377,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "2c1af610-c08b-5378-a9bc-ee141075ee4b",
-          "width": 103,
-          "x": 3948,
-          "y": -574,
+          "width": 64,
+          "x": 3967.5,
+          "y": -576.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76591,15 +77401,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "d501aa7f-fbca-5327-86cd-6372099f1025",
-          "width": 103,
-          "x": 4588,
-          "y": -702,
+          "width": 64,
+          "x": 4607.5,
+          "y": -704.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76615,15 +77425,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "0e68b885-62c5-5338-9b98-9d85b6cdd41e",
-          "width": 103,
-          "x": 5228,
-          "y": -894,
+          "width": 64,
+          "x": 5247.5,
+          "y": -896.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76639,15 +77449,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "edc7d22a-e0ba-5176-bee7-5e638865ccf5",
-          "width": 103,
-          "x": 5228,
-          "y": -1278,
+          "width": 64,
+          "x": 5247.5,
+          "y": -1280.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76663,15 +77473,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "5219664b-3374-59b7-a89b-469f3199c080",
-          "width": 103,
-          "x": 5676,
-          "y": -1534,
+          "width": 64,
+          "x": 5695.5,
+          "y": -1536.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76687,15 +77497,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "9327d896-1c00-59c3-a0fd-f3d5d4dc06a5",
-          "width": 103,
-          "x": 6188,
-          "y": -1918,
+          "width": 64,
+          "x": 6207.5,
+          "y": -1920.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76711,15 +77521,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "d6e7d6d5-1bab-5b2f-ac3a-0639227d46db",
-          "width": 103,
-          "x": 6188,
-          "y": -2366,
+          "width": 64,
+          "x": 6207.5,
+          "y": -2368.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76735,15 +77545,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "2821d0e0-c718-5603-a86c-c682286b849a",
-          "width": 103,
-          "x": 6700,
-          "y": -2494,
+          "width": 64,
+          "x": 6719.5,
+          "y": -2496.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76759,15 +77569,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "e31581e1-7624-53c4-b137-92810725f085",
-          "width": 103,
-          "x": 7404,
-          "y": -2366,
+          "width": 64,
+          "x": 7423.5,
+          "y": -2368.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76783,15 +77593,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "f4b23a05-9f46-5b60-8cb6-7e633dc5d64c",
-          "width": 103,
-          "x": 7916,
-          "y": -2366,
+          "width": 64,
+          "x": 7935.5,
+          "y": -2368.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76807,15 +77617,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "aed7ee4f-38bb-5159-8d11-348a77aced65",
-          "width": 103,
-          "x": 8428,
-          "y": -2366,
+          "width": 64,
+          "x": 8447.5,
+          "y": -2368.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76831,15 +77641,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "67c9fe14-ecf4-5eda-a137-a7774713e995",
-          "width": 103,
-          "x": 8940,
-          "y": -2366,
+          "width": 64,
+          "x": 8959.5,
+          "y": -2368.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76855,15 +77665,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "7c89169c-192a-5cf9-8b25-acf064a78055",
-          "width": 103,
-          "x": 9324,
-          "y": -2686,
+          "width": 64,
+          "x": 9343.5,
+          "y": -2688.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76879,15 +77689,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "b5134b37-afd1-541b-b2e7-50ea09cc2bcf",
-          "width": 103,
-          "x": 9644,
-          "y": -3006,
+          "width": 64,
+          "x": 9663.5,
+          "y": -3008.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76903,15 +77713,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "cd50dbbc-0e69-5937-8d48-b5131493a7a2",
-          "width": 103,
-          "x": 10092,
-          "y": -3326,
+          "width": 64,
+          "x": 10111.5,
+          "y": -3328.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76927,15 +77737,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "d3d2fcc7-8b43-56fb-a902-63fef253849a",
-          "width": 103,
-          "x": 10412,
-          "y": -3582,
+          "width": 64,
+          "x": 10431.5,
+          "y": -3584.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76951,15 +77761,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "45269514-f0f3-5476-842f-2411ebf45467",
-          "width": 103,
-          "x": 10412,
-          "y": -3966,
+          "width": 64,
+          "x": 10431.5,
+          "y": -3968.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76975,15 +77785,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "6b163560-4fc4-5ee4-99cc-78b84e1d93f1",
-          "width": 103,
-          "x": 10860,
-          "y": -4286,
+          "width": 64,
+          "x": 10879.5,
+          "y": -4288.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76999,15 +77809,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 60,
+          "customSize": false,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "moeda",
           "persistentUuid": "688f3081-dce8-5930-a710-12146d0b8c42",
-          "width": 103,
-          "x": 11372,
-          "y": -4286,
+          "width": 64,
+          "x": 11391.5,
+          "y": -4288.0,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -107768,7 +108578,7 @@
                             "moeda",
                             "Scale",
                             "=",
-                            "0.02"
+                            "moeda.escala"
                           ]
                         },
                         {
@@ -107813,6 +108623,90 @@
                             "moeda",
                             "\"vida\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "moeda",
+                            "sorteio",
+                            "=",
+                            "RandomFloat(1)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "sorteio",
+                                "<",
+                                "moeda.chance_x10"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "mult",
+                                "=",
+                                "10"
+                              ]
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "sorteio",
+                                ">=",
+                                "moeda.chance_x10"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "sorteio",
+                                "<",
+                                "moeda.chance_x10 + moeda.chance_x5"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "moeda",
+                                "mult",
+                                "=",
+                                "5"
+                              ]
+                            }
+                          ],
+                          "events": []
                         }
                       ]
                     }
@@ -108139,6 +109033,132 @@
                 "textR": 0
               },
               "comment": "Moedas soltas pelos inimigos."
+            },
+            {
+              "colorB": 26,
+              "colorG": 147,
+              "colorR": 247,
+              "creationTime": 0,
+              "name": "Aparência",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "A moeda vale valor * mult. mult 10 (ou mais) é o Bitcoin (x10), 5 a 9 é o Ethereum (x5) e abaixo disso a moeda Doge (x1). Para pôr uma moeda 5x ou 10x na cena, mude a variável mult da instância.",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "mult",
+                        ">=",
+                        "10"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "Animation",
+                        "=",
+                        "\"x10\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "mult",
+                        ">=",
+                        "5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "mult",
+                        "<",
+                        "10"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "Animation",
+                        "=",
+                        "\"x5\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "mult",
+                        "<",
+                        "5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "moeda",
+                        "Animation",
+                        "=",
+                        "\"x1\""
+                      ]
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "colorB": 228,
@@ -108519,7 +109539,7 @@
                         "pato",
                         "moedas",
                         "+",
-                        "moeda.valor"
+                        "moeda.valor * moeda.mult"
                       ]
                     },
                     {
@@ -108529,7 +109549,7 @@
                       "parameters": [
                         "moedas_total",
                         "+",
-                        "moeda.valor"
+                        "moeda.valor * moeda.mult"
                       ]
                     },
                     {
@@ -108552,7 +109572,7 @@
                         "moeda_feedback",
                         "Text",
                         "=",
-                        "\"+\"+moeda.valor"
+                        "\"+\" + ToString(moeda.valor * moeda.mult)"
                       ]
                     },
                     {
@@ -108584,7 +109604,7 @@
                         "hud_moeda_pop",
                         "Text",
                         "=",
-                        "\"+\" + ToString(moeda.valor)"
+                        "\"+\" + ToString(moeda.valor * moeda.mult)"
                       ]
                     },
                     {
