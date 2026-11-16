@@ -12427,84 +12427,20 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "chao",
-      "persistentUuid": "680932e7-d861-49c2-8f58-d2dcdac41790",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior",
-          "canBeGrabbed": false,
-          "platformType": "NormalPlatform",
-          "yGrabOffset": 0
-        }
-      ],
-      "animations": [
-        {
-          "name": "chao",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "chao.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 2966,
-                        "y": 0
-                      },
-                      {
-                        "x": 2966,
-                        "y": 3312
-                      },
-                      {
-                        "x": 0,
-                        "y": 3312
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
       "name": "alvo",
       "persistentUuid": "388ce34f-08cb-4f81-b2b7-1a5d827d2f23",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "giro",
-          "persistentUuid": "6f161e86-51c6-5da4-a5bf-f59b39ff2157",
+          "name": "dist_min",
+          "persistentUuid": "26dbbc29-47de-5b48-ae8e-3b2e8319a459",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "d",
+          "persistentUuid": "49b561ad-965e-5b9e-944e-fcca2c80d907",
           "type": "number",
           "value": 0
         }
@@ -13973,67 +13909,6 @@
                     "y": 0
                   },
                   "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
-      "name": "bg",
-      "persistentUuid": "961596e3-e6fe-4ea5-9e32-a0a9f13e4989",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "bg.jpg",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 10000,
-                        "y": 0
-                      },
-                      {
-                        "x": 10000,
-                        "y": 2814
-                      },
-                      {
-                        "x": 0,
-                        "y": 2814
-                      }
-                    ]
-                  ]
                 }
               ]
             }
@@ -16538,555 +16413,6 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "boss",
-      "persistentUuid": "dbd7f2eb-e4c5-458f-8af3-c7ee3b247777",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "vida",
-          "persistentUuid": "2e8f5e85-2bcd-42de-8147-da8e32690f1d",
-          "type": "number",
-          "value": 10000
-        },
-        {
-          "name": "dano",
-          "persistentUuid": "2310ebf2-a652-4847-805e-2f9707879c54",
-          "type": "number",
-          "value": 20
-        },
-        {
-          "name": "tem_barra_de_vida",
-          "persistentUuid": "6e9d3a12-6e39-4ea0-b07e-3b7bf220ee93",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "max_vida",
-          "persistentUuid": "c3954756-b6bc-4850-9073-97a5a46a96a5",
-          "type": "number",
-          "value": 10000
-        },
-        {
-          "name": "vida_controle",
-          "persistentUuid": "22fa8c29-e4f5-42df-b9a2-6d67856def86",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "andando",
-          "persistentUuid": "966df828-a222-433c-952e-4a0c42565978",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "contador_pulo",
-          "persistentUuid": "5ef1685a-3853-4c88-b139-7dc2ba968c2c",
-          "type": "number",
-          "value": 3
-        },
-        {
-          "name": "velocidade",
-          "persistentUuid": "6d89cb25-c6be-4f2f-a90d-961afdc023b6",
-          "type": "number",
-          "value": 100
-        },
-        {
-          "name": "animacao_temp",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "morto",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "qtd_moedas",
-          "type": "number",
-          "value": 50
-        },
-        {
-          "name": "estado",
-          "type": "string",
-          "value": "patrulha"
-        },
-        {
-          "name": "base_x",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "base_y",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "direcao",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "escolha",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "tiros",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "kb_dir",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "acertado",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "quer_andar",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "sprite_esquerda",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "bala_serie",
-          "persistentUuid": "f7bb3ed0-3857-4052-9dfd-b30e6c94217e",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "sangue",
-          "persistentUuid": "51a3a0a3-ab51-4e43-887b-ddebf1367667",
-          "type": "string",
-          "value": "verde"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "be18244e-ff93-4229-aadd-d0f99387b867",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "f2de992a-440c-4645-b6be-dfe4f54a9871",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "pulo_dist",
-          "persistentUuid": "20320529-eb59-4093-88ef-97eef007c9d4",
-          "type": "number",
-          "value": 1200
-        },
-        {
-          "name": "pulo_cooldown",
-          "persistentUuid": "095d247f-998a-47ee-9536-ff1c5cbe6daa",
-          "type": "number",
-          "value": 5
-        },
-        {
-          "name": "pulo_x1",
-          "persistentUuid": "58332f18-3d8f-48ce-ad4c-727b290ffb44",
-          "type": "number",
-          "value": 0.25
-        },
-        {
-          "name": "pulo_x2",
-          "persistentUuid": "d5c326ec-11f1-43d4-acf8-cd9cdf094fc1",
-          "type": "number",
-          "value": 0.75
-        },
-        {
-          "name": "pulo_alt1_min",
-          "persistentUuid": "20dff37a-48a9-460b-8182-a4f745fdbbcb",
-          "type": "number",
-          "value": 300
-        },
-        {
-          "name": "pulo_alt1_max",
-          "persistentUuid": "2a8a1273-7854-4b09-98ce-8682e4fdacdf",
-          "type": "number",
-          "value": 400
-        },
-        {
-          "name": "pulo_alt2_min",
-          "persistentUuid": "b20b6be7-d6fa-4a02-937f-73fb07ad33d4",
-          "type": "number",
-          "value": 600
-        },
-        {
-          "name": "pulo_alt2_max",
-          "persistentUuid": "5dbe338e-115b-434d-8601-0538ba59951a",
-          "type": "number",
-          "value": 1000
-        },
-        {
-          "name": "pulo_dur_min",
-          "persistentUuid": "42c6d173-cedf-4209-89e4-c43ee7cb0729",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "pulo_dur_max",
-          "persistentUuid": "a6188fb0-43bd-4c63-8de5-22a985aa0d40",
-          "type": "number",
-          "value": 3
-        },
-        {
-          "name": "pulo_giro_min",
-          "persistentUuid": "b243a101-10ba-47a5-ac69-c807037d9fce",
-          "type": "number",
-          "value": 3
-        },
-        {
-          "name": "pulo_giro_max",
-          "persistentUuid": "230cd608-d780-4d7b-93cf-392feb619484",
-          "type": "number",
-          "value": 6
-        },
-        {
-          "name": "invulneravel",
-          "persistentUuid": "2d5b6ad2-1914-5d27-a294-64f00edf25ee",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "reflete",
-          "persistentUuid": "4bd00fce-29bc-5604-82f6-f93b1bd33847",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "reflete_vel",
-          "persistentUuid": "d1a07a32-ca6e-55a9-96c7-cd5f4ece46be",
-          "type": "number",
-          "value": 650
-        },
-        {
-          "name": "reflete_dano",
-          "persistentUuid": "0bfcec42-a3c6-5ab2-a5e1-e7284333f4a3",
-          "type": "number",
-          "value": 12
-        },
-        {
-          "name": "firme",
-          "persistentUuid": "0e939c7f-583c-53eb-9bb4-07b01519358a",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "morte_feita",
-          "persistentUuid": "e16030a9-f5a6-5781-b02c-884e5286ba2a",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "preparado",
-          "persistentUuid": "37ba82c8-3c16-53db-90e7-7fb69cee68b5",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "golpe",
-          "persistentUuid": "558feaa9-a21a-5e44-b287-a3f9db5baa28",
-          "type": "string",
-          "value": ""
-        },
-        {
-          "name": "vx",
-          "persistentUuid": "61e5b39e-e2c0-5fb1-b443-47e1bd046c51",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "vy",
-          "persistentUuid": "7b53f4c7-e732-5bb9-aada-4db7824320a8",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "dx",
-          "persistentUuid": "25eeef99-d0b3-57e8-9232-d64a7fa9d929",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "dy",
-          "persistentUuid": "c5fdd2ac-c78b-5f86-a283-a772854c414a",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ang",
-          "persistentUuid": "fc40e747-8607-51a0-a67a-5ed1689ff0b2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "rnd",
-          "persistentUuid": "e173ece6-44b9-5ee9-931a-a689abd1b59c",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "i",
-          "persistentUuid": "e9ca8f20-1597-582d-a490-201528e736b7",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "effects": [],
-      "behaviors": [
-        {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 200,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 600,
-          "rotateObject": false,
-          "smoothingMaxCellGap": 1
-        },
-        {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement",
-          "Flippable": "Flippable",
-          "Rotation": false,
-          "RotationOffset": 0,
-          "FlipXToGoBack": true,
-          "FlipYToGoBack": false,
-          "SpeedScale": 1,
-          "PathOriginX": 0,
-          "PathOriginY": 0,
-          "Target": 0,
-          "Origin": 0,
-          "PathName": "",
-          "Duration": 0,
-          "Easing": "",
-          "DrawingElementIndex": 0,
-          "X": 0,
-          "Y": 0,
-          "PathAngle": 0,
-          "PathScale": 0,
-          "RepetitionCount": 0,
-          "ShouldGoBack": false,
-          "ShouldLoop": false,
-          "RepetitionDoneCount": 0,
-          "IsGoingBack": false,
-          "PauseDurationBeforeGoingBack": 0,
-          "DrawingPathOriginX": 0,
-          "DrawingPathOriginY": 0,
-          "DebugLineStrokeWidth": 0,
-          "Viewpoint": "Top-Down"
-        }
-      ],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "shrek_PNG40.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 420,
-                        "y": 297
-                      },
-                      {
-                        "x": 398.5,
-                        "y": 214
-                      },
-                      {
-                        "x": 425,
-                        "y": 99.5
-                      },
-                      {
-                        "x": 474,
-                        "y": 37.5
-                      },
-                      {
-                        "x": 589.5,
-                        "y": 40
-                      },
-                      {
-                        "x": 632,
-                        "y": 182.5
-                      },
-                      {
-                        "x": 611,
-                        "y": 286.5
-                      },
-                      {
-                        "x": 543.5,
-                        "y": 348.5
-                      },
-                      {
-                        "x": 481.5,
-                        "y": 347
-                      }
-                    ],
-                    [
-                      {
-                        "x": 310.5,
-                        "y": 467
-                      },
-                      {
-                        "x": 351,
-                        "y": 149.5
-                      },
-                      {
-                        "x": 679.5,
-                        "y": 152
-                      },
-                      {
-                        "x": 692.5,
-                        "y": 521
-                      },
-                      {
-                        "x": 633,
-                        "y": 579
-                      },
-                      {
-                        "x": 504,
-                        "y": 616
-                      },
-                      {
-                        "x": 368.5,
-                        "y": 571
-                      },
-                      {
-                        "x": 323.5,
-                        "y": 523.5
-                      }
-                    ],
-                    [
-                      {
-                        "x": 318.5,
-                        "y": 531.5
-                      },
-                      {
-                        "x": 425,
-                        "y": 613.5
-                      },
-                      {
-                        "x": 260.5,
-                        "y": 873
-                      },
-                      {
-                        "x": 178.5,
-                        "y": 849
-                      }
-                    ],
-                    [
-                      {
-                        "x": 588.5,
-                        "y": 604
-                      },
-                      {
-                        "x": 684.5,
-                        "y": 546
-                      },
-                      {
-                        "x": 778,
-                        "y": 892.5
-                      },
-                      {
-                        "x": 695,
-                        "y": 871.5
-                      }
-                    ],
-                    [
-                      {
-                        "x": 37.5,
-                        "y": 252.5
-                      },
-                      {
-                        "x": 163,
-                        "y": 95.5
-                      },
-                      {
-                        "x": 327.5,
-                        "y": 185
-                      },
-                      {
-                        "x": 325,
-                        "y": 375
-                      },
-                      {
-                        "x": 181.5,
-                        "y": 406.5
-                      },
-                      {
-                        "x": 114,
-                        "y": 363
-                      }
-                    ],
-                    [
-                      {
-                        "x": 699,
-                        "y": 160
-                      },
-                      {
-                        "x": 940,
-                        "y": 112.5
-                      },
-                      {
-                        "x": 912.5,
-                        "y": 380
-                      },
-                      {
-                        "x": 696.5,
-                        "y": 348.5
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "doze",
@@ -17654,20 +16980,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17690,20 +17016,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17726,20 +17052,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17762,20 +17088,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17798,20 +17124,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17834,20 +17160,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8.0,
-                        "y": 8.0
+                        "x": 8,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 8.0
+                        "x": 56,
+                        "y": 8
                       },
                       {
-                        "x": 56.0,
-                        "y": 56.0
+                        "x": 56,
+                        "y": 56
                       },
                       {
-                        "x": 8.0,
-                        "y": 56.0
+                        "x": 8,
+                        "y": 56
                       }
                     ]
                   ]
@@ -17882,20 +17208,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -17918,20 +17244,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -17954,20 +17280,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -17990,20 +17316,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -18026,20 +17352,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -18062,20 +17388,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4.0,
-                        "y": 4.0
+                        "x": 4,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 4.0
+                        "x": 60,
+                        "y": 4
                       },
                       {
-                        "x": 60.0,
-                        "y": 60.0
+                        "x": 60,
+                        "y": 60
                       },
                       {
-                        "x": 4.0,
-                        "y": 60.0
+                        "x": 4,
+                        "y": 60
                       }
                     ]
                   ]
@@ -18110,20 +17436,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -18146,20 +17472,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -18182,20 +17508,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -18218,20 +17544,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -18254,20 +17580,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -18290,20 +17616,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 0.0
+                        "x": 64,
+                        "y": 0
                       },
                       {
-                        "x": 64.0,
-                        "y": 64.0
+                        "x": 64,
+                        "y": 64
                       },
                       {
-                        "x": 0.0,
-                        "y": 64.0
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -55969,485 +55295,6 @@
       }
     },
     {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "boneco",
-      "persistentUuid": "09e5d4ec-e601-4ae6-831c-24fde3e2fe2a",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "vida",
-          "persistentUuid": "43605317-c7ec-4643-aed4-25d0fe2cb843",
-          "type": "number",
-          "value": 100000
-        },
-        {
-          "name": "dano",
-          "persistentUuid": "22481866-5e02-4a9b-bdaa-739d844d6226",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "tem_barra_de_vida",
-          "persistentUuid": "61c4e124-8822-4863-927f-c9fb327b5f6f",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "max_vida",
-          "persistentUuid": "ed8004ce-22cb-4a2d-b0e2-e5ec95392a10",
-          "type": "number",
-          "value": 100000
-        },
-        {
-          "name": "vida_controle",
-          "persistentUuid": "6319ed38-52a7-4a89-aac3-691e153ceabb",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "velocidade",
-          "persistentUuid": "23a81191-cac7-46b0-a64d-20b4613e5cda",
-          "type": "number",
-          "value": 100
-        },
-        {
-          "name": "animacao_temp",
-          "persistentUuid": "8d88a807-892c-4946-8300-5746bdb126b6",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "morto",
-          "persistentUuid": "dd6f2458-f6bf-43e8-abd5-290925a6d4e1",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "qtd_moedas",
-          "persistentUuid": "04042dcc-2885-4cd5-ab00-0e4471e08009",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "estado",
-          "persistentUuid": "f185d540-a4b1-46a0-975d-e528a8d3d46a",
-          "type": "string",
-          "value": "calmo"
-        },
-        {
-          "name": "base_x",
-          "persistentUuid": "b90cb04b-9540-42df-8a67-d543a4f57e91",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "base_y",
-          "persistentUuid": "e642b2d9-1935-4c15-b572-78d6e68dfc0b",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "direcao",
-          "persistentUuid": "6f0d12be-9fc8-4b03-8e0a-939ba1c98750",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "escolha",
-          "persistentUuid": "5fb50ad5-5e60-4f26-90d2-a9ae72a2dd36",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "tiros",
-          "persistentUuid": "ad99ee2c-ec6a-4d48-af8b-b39571e647fb",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "kb_dir",
-          "persistentUuid": "36f70e9c-197c-4c5c-b18a-3fc6dcffa0be",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "acertado",
-          "persistentUuid": "f4426d05-2b05-4e97-a6ac-d793d173a412",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "quer_andar",
-          "persistentUuid": "9ac6f93b-a32a-4a43-bbb8-89d692b318ff",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "sprite_esquerda",
-          "persistentUuid": "51be7673-7bd9-4a19-8a0e-704fcd6aba98",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "bala_serie",
-          "persistentUuid": "738f88c7-8a58-44ea-b22b-2bd0e48155cb",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "sangue",
-          "persistentUuid": "6945bfb9-b08b-4396-a0e0-787526a42629",
-          "type": "string",
-          "value": "lasca"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "b8c28aef-d4ba-49b6-b203-861ff0bc7978",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "6e7bafcd-91c3-4973-857c-75b7fee23d36",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "empurrao_vel",
-          "persistentUuid": "5bdbfaf2-7157-4588-8adb-2dc2ec41ff8c",
-          "type": "number",
-          "value": 250
-        },
-        {
-          "name": "dano_duracao",
-          "persistentUuid": "e5f26a59-79bd-444b-81ad-00a0fcc4dadb",
-          "type": "number",
-          "value": 0.2
-        },
-        {
-          "name": "patrulha_fator",
-          "persistentUuid": "d6f26237-8ea2-474f-a674-6d10b07b1ca8",
-          "type": "number",
-          "value": 0.5
-        },
-        {
-          "name": "patrulha_raio",
-          "persistentUuid": "f1716897-198c-4aa5-a6f9-942df642f710",
-          "type": "number",
-          "value": 200
-        },
-        {
-          "name": "aggro_dist",
-          "persistentUuid": "5c5a7ac5-d1d4-49bd-b542-1a8ac33ff3d5",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "c8605957-bc5d-44e1-975e-3d6afa663d1d",
-          "type": "number",
-          "value": 1000
-        },
-        {
-          "name": "travado_tempo",
-          "persistentUuid": "b1bb5ad2-262a-4b27-8619-ae7141cb4f7c",
-          "type": "number",
-          "value": 0.3
-        },
-        {
-          "name": "parar_dist",
-          "persistentUuid": "a252f314-2fb1-4a44-95f8-2255da5ab5ac",
-          "type": "number",
-          "value": 40
-        },
-        {
-          "name": "ataque_espera",
-          "persistentUuid": "0728e006-fb66-45e4-a004-1351a7f28bde",
-          "type": "number",
-          "value": 2.5
-        },
-        {
-          "name": "ataque_alcance",
-          "persistentUuid": "ae756702-818b-4ee2-9f4a-a311c37534c6",
-          "type": "number",
-          "value": 150
-        },
-        {
-          "name": "aviso_tempo",
-          "persistentUuid": "1a999a73-b81a-434f-975f-2ca70f3760e9",
-          "type": "number",
-          "value": 0.45
-        },
-        {
-          "name": "investida_fator",
-          "persistentUuid": "9293d586-6cf5-4f25-9a0a-ca04f0da85cb",
-          "type": "number",
-          "value": 4
-        },
-        {
-          "name": "investida_tempo",
-          "persistentUuid": "e9007405-4d83-422c-9f6e-8ca0636433c5",
-          "type": "number",
-          "value": 0.35
-        },
-        {
-          "name": "regen_espera",
-          "persistentUuid": "c7675c51-0e31-4d06-9660-386678827e82",
-          "type": "number",
-          "value": 1.5
-        },
-        {
-          "name": "vida_vista",
-          "persistentUuid": "46515f4b-e91b-4ede-8a07-0295ec04d472",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "dps_altura",
-          "persistentUuid": "9e27610c-461c-4ff1-8657-843c9fb96552",
-          "type": "number",
-          "value": 36
-        },
-        {
-          "name": "dps_janela",
-          "persistentUuid": "466e5738-37e9-43a5-9ecd-fe9df5bbd41b",
-          "type": "number",
-          "value": 5
-        },
-        {
-          "name": "dps_passo",
-          "persistentUuid": "0c60a2ad-89ea-48ba-a919-f003e6c41548",
-          "type": "number",
-          "value": 0.1
-        },
-        {
-          "name": "invulneravel",
-          "persistentUuid": "c9cb00ab-11f7-550d-98e6-2ecd22e4df47",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "reflete",
-          "persistentUuid": "f9b510df-1e0c-5e61-a981-a56c396b7a8e",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "reflete_vel",
-          "persistentUuid": "2e8a2d79-120b-579f-8588-a2cd1e6a9d8a",
-          "type": "number",
-          "value": 650
-        },
-        {
-          "name": "reflete_dano",
-          "persistentUuid": "d8cc8b4a-8f05-5715-9b3d-b3d02433ddfd",
-          "type": "number",
-          "value": 12
-        },
-        {
-          "name": "firme",
-          "persistentUuid": "a672770d-ef12-5e17-8640-8f413b1dfbcc",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "morte_feita",
-          "persistentUuid": "3c007bab-b752-56fd-9eb4-72fcbfded4ea",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "preparado",
-          "persistentUuid": "589a342a-9a40-5e57-8851-4ddc78ff74f9",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "golpe",
-          "persistentUuid": "6fb1c20f-de18-5151-8289-9377b5f84f8b",
-          "type": "string",
-          "value": ""
-        },
-        {
-          "name": "vx",
-          "persistentUuid": "23522c14-8ff6-5db7-9230-1766d746443f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "vy",
-          "persistentUuid": "80737510-22f4-5a0e-9b7b-096862bf74c7",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "dx",
-          "persistentUuid": "a5222a23-4dad-52c9-a2a0-94ad1e4d4cc8",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "dy",
-          "persistentUuid": "5cca70e2-d0d9-5ce2-b365-ffb5f1f9f49a",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ang",
-          "persistentUuid": "9143e0cb-75eb-5cdc-9a3c-ae67d07ce596",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "rnd",
-          "persistentUuid": "1b2e0658-b730-58dc-895b-df6a00a87a76",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "i",
-          "persistentUuid": "6c15f8aa-70f5-56be-92d0-ba2cbf6cdd76",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "effects": [
-        {
-          "effectType": "Brightness",
-          "name": "Brilho",
-          "doubleParameters": {
-            "brightness": 1
-          },
-          "stringParameters": {},
-          "booleanParameters": {}
-        }
-      ],
-      "behaviors": [
-        {
-          "name": "PlatformerConfigurationStack",
-          "type": "AdvancedJump::PlatformerConfigurationStack",
-          "PlatformerCharacter": "PlatformerObject"
-        },
-        {
-          "name": "PlatformerObject",
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
-          "jumpSpeed": 600,
-          "jumpSustainTime": 0.2,
-          "acceleration": 1500,
-          "canGoDownFromJumpthru": true,
-          "canGrabPlatforms": false,
-          "canGrabWithoutMoving": true,
-          "deceleration": 1500,
-          "gravity": 1000,
-          "ignoreDefaultControls": true,
-          "ladderClimbingSpeed": 150,
-          "maxFallingSpeed": 700,
-          "maxSpeed": 250,
-          "slopeMaxAngle": 60,
-          "useLegacyTrajectory": false,
-          "useRepeatedJump": false,
-          "xGrabTolerance": 10,
-          "yGrabOffset": 0
-        }
-      ],
-      "animations": [
-        {
-          "name": "idle",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/gandalf_hell/estatua/idle_00.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 2,
-                        "y": 8
-                      },
-                      {
-                        "x": 92,
-                        "y": 8
-                      },
-                      {
-                        "x": 92,
-                        "y": 160
-                      },
-                      {
-                        "x": 2,
-                        "y": 160
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assetStoreId": "",
-      "bold": false,
-      "italic": false,
-      "name": "boneco_dps",
-      "persistentUuid": "8d8cf1d2-477f-4c3d-88c3-b0e871fb3857",
-      "smoothed": true,
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "DPS 0",
-      "font": "CantoraOne-Regular.ttf",
-      "textAlignment": "center",
-      "characterSize": 24,
-      "color": {
-        "b": 255,
-        "g": 255,
-        "r": 255
-      },
-      "content": {
-        "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": true,
-        "italic": false,
-        "outlineColor": "0;0;0",
-        "outlineThickness": 0,
-        "shadowAngle": 90,
-        "shadowBlurRadius": 4,
-        "shadowColor": "0;0;0",
-        "shadowDistance": 2,
-        "shadowOpacity": 110,
-        "smoothed": true,
-        "underlined": false,
-        "text": "DPS 0",
-        "font": "CantoraOne-Regular.ttf",
-        "textAlignment": "center",
-        "verticalTextAlignment": "top",
-        "characterSize": 24,
-        "lineHeight": 0,
-        "color": "255;255;255"
-      }
-    },
-    {
       "assetStoreId": "",
       "name": "eletro_raio",
       "persistentUuid": "de5b090f-b5a8-413f-9971-d74ef49ceab0",
@@ -69790,9 +68637,9 @@
       "textAlignment": "left",
       "characterSize": 26,
       "color": {
-        "r": 255,
+        "b": 255,
         "g": 255,
-        "b": 255
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -70041,14 +68888,6 @@
         ]
       },
       {
-        "folderName": "boss",
-        "children": [
-          {
-            "objectName": "boss"
-          }
-        ]
-      },
-      {
         "folderName": "npcs",
         "children": [
           {
@@ -70071,12 +68910,6 @@
       {
         "folderName": "cenario",
         "children": [
-          {
-            "objectName": "chao"
-          },
-          {
-            "objectName": "bg"
-          },
           {
             "folderName": "plataformas",
             "children": [
@@ -70397,26 +69230,6 @@
         ]
       },
       {
-        "folderName": "interface",
-        "children": [
-          {
-            "folderName": "dialogos"
-          },
-          {
-            "folderName": "menu"
-          },
-          {
-            "folderName": "pausa"
-          },
-          {
-            "folderName": "loja"
-          },
-          {
-            "folderName": "vitoria"
-          }
-        ]
-      },
-      {
         "folderName": "gatilhos",
         "children": [
           {
@@ -70446,12 +69259,6 @@
         "objectName": "loja_dica"
       },
       {
-        "objectName": "boneco"
-      },
-      {
-        "objectName": "boneco_dps"
-      },
-      {
         "objectName": "eletro_raio"
       }
     ]
@@ -70465,9 +69272,6 @@
         },
         {
           "name": "pigman"
-        },
-        {
-          "name": "boss"
         },
         {
           "name": "atirador"
@@ -70522,9 +69326,6 @@
         },
         {
           "name": "caveira_gigante"
-        },
-        {
-          "name": "boneco"
         },
         {
           "name": "demonio_chefe"
@@ -70559,9 +69360,6 @@
           "name": "atirador"
         },
         {
-          "name": "boss"
-        },
-        {
           "name": "cutulu"
         },
         {
@@ -70611,9 +69409,6 @@
         },
         {
           "name": "caveira_gigante"
-        },
-        {
-          "name": "boneco"
         },
         {
           "name": "demonio_chefe"
@@ -70707,9 +69502,6 @@
     {
       "name": "Terreno",
       "objects": [
-        {
-          "name": "chao"
-        },
         {
           "name": "tiles_inferno"
         },
@@ -71768,10 +70560,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     },
@@ -71797,7 +70585,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.01919460830754837,
+        "zoomFactor": 0.27253598967730847,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -72076,7 +70864,7 @@
           "width": 180,
           "x": 1,
           "y": 748,
-          "zOrder": 28,
+          "zOrder": 1061,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -72524,7 +71312,7 @@
           "layer": "",
           "name": "tiles_inferno_escuro_",
           "persistentUuid": "38c88e3e-1c21-42b5-bdb0-db14b7430662",
-          "width": 4060,
+          "width": 5600,
           "x": -1269,
           "y": -740,
           "zOrder": 1004,
@@ -72532,7 +71320,7 @@
           "stringProperties": [
             {
               "name": "tilemap",
-              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":58,\"dimY\":37,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144]]}]}"
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":80,\"dimY\":37,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,77,89,89,89,89,89,89,89,78,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,77,55,55,55,55,55,55,55,78,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,93,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144]]}]}"
             }
           ],
           "initialVariables": []
@@ -72607,23 +71395,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 240,
-          "keepRatio": true,
-          "layer": "",
-          "name": "boneco",
-          "persistentUuid": "4eb7b2d0-9eef-4f99-b325-7ff0f354b462",
-          "width": 144,
-          "x": 1700,
-          "y": 560,
-          "zOrder": 1002,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -72646,9 +71417,9 @@
           "name": "portal",
           "persistentUuid": "12d47865-a923-56e0-824d-05acaf27b1b5",
           "width": 160,
-          "x": 2000.0,
-          "y": 786,
-          "zOrder": 20,
+          "x": 2261,
+          "y": 787,
+          "zOrder": 1005,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": [
@@ -72674,9 +71445,9 @@
           "name": "portal",
           "persistentUuid": "6a7eeef2-4835-51e8-a755-dc86f5a61a22",
           "width": 160,
-          "x": 2260.0,
-          "y": 786,
-          "zOrder": 20,
+          "x": 2260,
+          "y": 506,
+          "zOrder": 1005,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": [
@@ -72702,9 +71473,9 @@
           "name": "portal",
           "persistentUuid": "43890ef5-5fe9-571c-968f-3cd03e152556",
           "width": 160,
-          "x": 2520.0,
-          "y": 786,
-          "zOrder": 20,
+          "x": 2257,
+          "y": 227,
+          "zOrder": 1005,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": [
@@ -72808,6 +71579,7 @@
               "comment": "Desativado: agora o Hub tem os portais (grupo Portais). Provisório até a KAN-19/KAN-26: andar até a borda direita leva para a Fase 1 (Inferno)."
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -72832,8 +71604,7 @@
                     ""
                   ]
                 }
-              ],
-              "disabled": true
+              ]
             }
           ],
           "parameters": []
@@ -73202,7 +71973,6 @@
           "name": "Portais",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "parameters": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -73214,8 +71984,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Um portal por fase. Cada instância tem cena (para onde leva; a animação tem o mesmo nome) e nome (o texto em cima). Ficando dentro por portal.espera s, o pato vai para portal.cena. Cair da borda (passar de queda_y) volta o pato para volta_x/volta_y.",
-              "comment2": ""
+              "comment": "Um portal por fase. Cada instância tem cena (para onde leva; a animação tem o mesmo nome) e nome (o texto em cima). Ficando dentro por portal.espera s, o pato vai para portal.cena. Cair da borda (passar de queda_y) volta o pato para volta_x/volta_y."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -73290,8 +72059,7 @@
                         "portal.ZOrder() + 1"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
@@ -73301,8 +72069,8 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "CollisionNP",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "CollisionNP"
                   },
                   "parameters": [
                     "pato",
@@ -73323,8 +72091,7 @@
                     "\"dentro\""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -73387,8 +72154,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -73428,10 +72194,10 @@
                     "0"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -73702,10 +72468,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     },
@@ -74540,7 +73302,7 @@
           "persistentUuid": "757d57e4-9797-4a24-9b66-d7327188f35e",
           "width": 64,
           "x": 1426.5,
-          "y": 732.0,
+          "y": 732,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74557,7 +73319,7 @@
           "persistentUuid": "30bc6b3c-bb0b-4490-928f-cfb180a4b2cf",
           "width": 64,
           "x": 1575.5,
-          "y": -171.0,
+          "y": -171,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74581,7 +73343,7 @@
           "persistentUuid": "0ed0f285-0c9f-4cfe-a6d9-dbf74fdbdf7a",
           "width": 64,
           "x": 1750.5,
-          "y": 15.0,
+          "y": 15,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74605,7 +73367,7 @@
           "persistentUuid": "24a45e8c-87c3-4636-9441-f885d70e83df",
           "width": 64,
           "x": 1633.5,
-          "y": -393.0,
+          "y": -393,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74629,7 +73391,7 @@
           "persistentUuid": "2a57ce3c-e6e3-41e9-b43f-c4973ff0c49b",
           "width": 64,
           "x": 2074.5,
-          "y": -161.0,
+          "y": -161,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -74653,7 +73415,7 @@
           "persistentUuid": "b6a8d45e-493c-4fe8-b606-c83f8832394c",
           "width": 64,
           "x": 1885.5,
-          "y": -382.0,
+          "y": -382,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76061,10 +74823,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     },
@@ -76090,7 +74848,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.01977314006615473,
+        "zoomFactor": 0.13991234651576306,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -76247,8 +75005,8 @@
           "name": "pato",
           "persistentUuid": "765006bb-0c74-5e37-b2be-ea21a3603d74",
           "width": 180,
-          "x": 1259.0,
-          "y": 624.0,
+          "x": -379,
+          "y": -9593,
           "zOrder": 2800,
           "numberProperties": [],
           "stringProperties": [],
@@ -76757,7 +75515,7 @@
           "persistentUuid": "a1e9bbba-c9a4-5516-859d-18b874968923",
           "width": 64,
           "x": 1791.5,
-          "y": 192.0,
+          "y": 192,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76781,7 +75539,7 @@
           "persistentUuid": "ff976153-ab7e-5043-9af8-39acac88e1df",
           "width": 64,
           "x": 1535.5,
-          "y": -448.0,
+          "y": -448,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76805,7 +75563,7 @@
           "persistentUuid": "32f74df8-e5fd-54e6-aaa0-756311bef207",
           "width": 64,
           "x": 1919.5,
-          "y": -704.0,
+          "y": -704,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76829,7 +75587,7 @@
           "persistentUuid": "d725dc41-a3a1-59a1-a8d8-c36392227d97",
           "width": 64,
           "x": 2367.5,
-          "y": -1088.0,
+          "y": -1088,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76853,7 +75611,7 @@
           "persistentUuid": "93f8f868-a1b5-5097-a6be-3859f9616f82",
           "width": 64,
           "x": 2687.5,
-          "y": -1984.0,
+          "y": -1984,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76877,7 +75635,7 @@
           "persistentUuid": "96a5574e-d56e-5f91-8809-c5b1ddbb3267",
           "width": 64,
           "x": 2239.5,
-          "y": -2240.0,
+          "y": -2240,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76901,7 +75659,7 @@
           "persistentUuid": "0b93c22c-a2fd-5b93-a4c4-994d55f3bae5",
           "width": 64,
           "x": 1791.5,
-          "y": -2432.0,
+          "y": -2432,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76925,7 +75683,7 @@
           "persistentUuid": "91318915-53da-546c-aa15-724745d3599f",
           "width": 64,
           "x": 1279.5,
-          "y": -2624.0,
+          "y": -2624,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76949,7 +75707,7 @@
           "persistentUuid": "35af3f59-bb79-5835-af27-50652b0f0aeb",
           "width": 64,
           "x": 1151.5,
-          "y": -3072.0,
+          "y": -3072,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76973,7 +75731,7 @@
           "persistentUuid": "0ca0d7f6-2024-52ea-b46a-5aa6a4f377c6",
           "width": 64,
           "x": 1471.5,
-          "y": -3456.0,
+          "y": -3456,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -76997,7 +75755,7 @@
           "persistentUuid": "9940ec8a-8d21-5873-bde5-ef54fa3f5e07",
           "width": 64,
           "x": 1151.5,
-          "y": -3840.0,
+          "y": -3840,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77021,7 +75779,7 @@
           "persistentUuid": "58e00f15-1721-55de-89e2-7773b6623b8c",
           "width": 64,
           "x": 1471.5,
-          "y": -4224.0,
+          "y": -4224,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77045,7 +75803,7 @@
           "persistentUuid": "8f28a965-f3a8-580e-be1f-6ac02f03fe3a",
           "width": 64,
           "x": 1151.5,
-          "y": -4608.0,
+          "y": -4608,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77069,7 +75827,7 @@
           "persistentUuid": "b8099aef-2713-599a-a07d-25519914e792",
           "width": 64,
           "x": 1471.5,
-          "y": -4992.0,
+          "y": -4992,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77093,7 +75851,7 @@
           "persistentUuid": "4c4a85dc-7ee1-54c2-ba36-7ae6f610094e",
           "width": 64,
           "x": 2623.5,
-          "y": -5376.0,
+          "y": -5376,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77117,7 +75875,7 @@
           "persistentUuid": "40a61421-874f-594c-9dfe-e1cbe057af57",
           "width": 64,
           "x": 2943.5,
-          "y": -5824.0,
+          "y": -5824,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77141,7 +75899,7 @@
           "persistentUuid": "c263bb5b-2a5a-5bc0-9990-db6768dae867",
           "width": 64,
           "x": 2623.5,
-          "y": -6272.0,
+          "y": -6272,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77165,7 +75923,7 @@
           "persistentUuid": "41a4c355-f7a0-5eee-9bd3-a4b1c0b2ed1d",
           "width": 64,
           "x": 2303.5,
-          "y": -5824.0,
+          "y": -5824,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77189,7 +75947,7 @@
           "persistentUuid": "5164cc8d-1208-5937-8ef2-a70cfa36d1c2",
           "width": 64,
           "x": 2047.5,
-          "y": -6720.0,
+          "y": -6720,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77213,7 +75971,7 @@
           "persistentUuid": "1631bc9b-112c-5603-8ab0-8a2c7455d42a",
           "width": 64,
           "x": 2431.5,
-          "y": -7296.0,
+          "y": -7296,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77237,7 +75995,7 @@
           "persistentUuid": "9dc50ebe-9784-58d4-a7b9-5ddac2ac693f",
           "width": 64,
           "x": 2751.5,
-          "y": -7616.0,
+          "y": -7616,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77261,7 +76019,7 @@
           "persistentUuid": "f53d9179-7fdf-5d57-a07a-cea9d11c0406",
           "width": 64,
           "x": 2111.5,
-          "y": -7744.0,
+          "y": -7744,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77285,7 +76043,7 @@
           "persistentUuid": "07837092-9bfd-5435-87a2-aba394a43a7f",
           "width": 64,
           "x": 2431.5,
-          "y": -8000.0,
+          "y": -8000,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77309,7 +76067,7 @@
           "persistentUuid": "4c4c1cb9-efaa-5431-a2e0-c6030419c958",
           "width": 64,
           "x": 1663.5,
-          "y": -8320.0,
+          "y": -8320,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77333,7 +76091,7 @@
           "persistentUuid": "86e293af-1d33-57ae-a285-46ff0e718add",
           "width": 64,
           "x": 1727.5,
-          "y": -8960.0,
+          "y": -8960,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77357,7 +76115,7 @@
           "persistentUuid": "6c4953d2-c89b-598d-a314-38f9999141f2",
           "width": 64,
           "x": 1855.5,
-          "y": -9280.0,
+          "y": -9280,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77381,7 +76139,7 @@
           "persistentUuid": "0285fb7a-177d-558b-9233-97d124c45b59",
           "width": 64,
           "x": 511.5,
-          "y": -9664.0,
+          "y": -9664,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77410,7 +76168,7 @@
           "stringProperties": [
             {
               "name": "tilemap",
-              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":78,\"dimY\":111,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[1,1,52,1,1,1,1,52,1,1,1,1,52,1,1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,34,35,35,35,35,86,8,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,4,4,28,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,126,126,126,126,126,126,126,126,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,4,4,42,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,40,4,4,28,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,34,35,86,35,35,35,35,86,35,35,36,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1,1,52,1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,40,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,42,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]}]}"
+              "value": "{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":78,\"dimY\":111,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[1,1,52,1,1,1,1,52,1,1,1,1,52,1,1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1,52,1,1,1,1,52,1,1,1,1,52,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,34,35,35,35,35,86,8,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,4,4,28,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,126,126,126,126,126,126,126,126,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,4,4,42,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,40,4,4,28,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,34,35,86,35,35,35,35,86,35,35,36,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1,1,52,1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,19,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,68,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,17,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,92,92,92,92,41,41,92,92,41,41,41,41,41,41,41,93,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]}]}"
             }
           ],
           "initialVariables": []
@@ -77618,8 +76376,8 @@
           "name": "acido",
           "persistentUuid": "31c54deb-827a-5abc-bea4-b16ff10e5c8b",
           "width": 0,
-          "x": -2304,
-          "y": -9152,
+          "x": -2296,
+          "y": -9346,
           "zOrder": 3000,
           "numberProperties": [],
           "stringProperties": [],
@@ -77635,8 +76393,8 @@
           "name": "acido",
           "persistentUuid": "12bb430c-6931-56e6-bcd2-c706071b6a7f",
           "width": 0,
-          "x": -1920,
-          "y": -9152,
+          "x": -1912,
+          "y": -9346,
           "zOrder": 3000,
           "numberProperties": [],
           "stringProperties": [],
@@ -77652,8 +76410,8 @@
           "name": "acido",
           "persistentUuid": "bb862bc1-443d-5c94-b9c8-ecccb675ed6c",
           "width": 0,
-          "x": -1536,
-          "y": -9152,
+          "x": -1528,
+          "y": -9346,
           "zOrder": 3000,
           "numberProperties": [],
           "stringProperties": [],
@@ -77669,8 +76427,8 @@
           "name": "acido",
           "persistentUuid": "f2d8f260-b6bc-50ed-9328-f6a4766c5a3d",
           "width": 0,
-          "x": -1152,
-          "y": -9152,
+          "x": -1144,
+          "y": -9346,
           "zOrder": 3000,
           "numberProperties": [],
           "stringProperties": [],
@@ -77686,8 +76444,8 @@
           "name": "acido",
           "persistentUuid": "047aa035-b9f6-56a0-ae93-e20269803b18",
           "width": 0,
-          "x": -768,
-          "y": -9152,
+          "x": -760,
+          "y": -9346,
           "zOrder": 3000,
           "numberProperties": [],
           "stringProperties": [],
@@ -77704,7 +76462,7 @@
           "persistentUuid": "6f42851f-86e0-5666-bb94-c877521bbe72",
           "width": 64,
           "x": -704.5,
-          "y": -9792.0,
+          "y": -9792,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77728,7 +76486,7 @@
           "persistentUuid": "bed87a1e-1101-5846-8704-4a7bf14b7409",
           "width": 64,
           "x": -1736.5,
-          "y": -10471.0,
+          "y": -10471,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77752,7 +76510,7 @@
           "persistentUuid": "726d4017-fa45-5325-80c9-32fa7e453549",
           "width": 64,
           "x": -1280.5,
-          "y": -11264.0,
+          "y": -11264,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77776,7 +76534,7 @@
           "persistentUuid": "5606d715-d7b3-5695-94fc-9b24c22bff5c",
           "width": 64,
           "x": -768.5,
-          "y": -11648.0,
+          "y": -11648,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77800,7 +76558,7 @@
           "persistentUuid": "3ccfc7d4-c3e6-5674-9467-89b408785fd2",
           "width": 64,
           "x": -256.5,
-          "y": -11968.0,
+          "y": -11968,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77824,7 +76582,7 @@
           "persistentUuid": "2fde60d2-8056-5c04-8b9f-ea9343e8f503",
           "width": 64,
           "x": -1728.5,
-          "y": -13120.0,
+          "y": -13120,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77848,7 +76606,7 @@
           "persistentUuid": "3c3e9538-a260-5782-97f0-167c5f3709ea",
           "width": 64,
           "x": -704.5,
-          "y": -14464.0,
+          "y": -14464,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -77872,7 +76630,7 @@
           "persistentUuid": "aa1ce689-d7a5-5293-8d6b-161806377ae5",
           "width": 64,
           "x": -0.5,
-          "y": -14912.0,
+          "y": -14912,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -78434,6 +77192,71 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "depth": 1,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_radial_eixo",
+          "persistentUuid": "8095f76c-0198-43ab-a173-b601d0b489db",
+          "width": 0,
+          "x": 2230,
+          "y": -8775,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "raio",
+              "persistentUuid": "1232b33c-41b8-56ef-b78f-d6996a481017",
+              "type": "number",
+              "value": 700
+            },
+            {
+              "name": "vel_ang",
+              "persistentUuid": "09d0db78-5abd-57dd-944e-a4de2d58a25b",
+              "type": "number",
+              "value": 40
+            },
+            {
+              "name": "quantidade",
+              "persistentUuid": "19d77b1a-3ca9-55da-af47-5f131318c3c4",
+              "type": "number",
+              "value": 6
+            },
+            {
+              "name": "angulo",
+              "persistentUuid": "2824e0db-156a-52dd-9c67-ac545ef0d2d0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "d943fbd0-ef26-5886-be8e-98410d4a5503",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "plataforma_some",
+          "persistentUuid": "175fdafd-4ee7-4171-a2a8-39a03c55f80f",
+          "width": 60,
+          "x": -1746,
+          "y": -10355,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -78799,10 +77622,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     },
@@ -79762,6 +78581,7 @@
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79769,7 +78589,7 @@
           "persistentUuid": "03d13575-0583-5109-b067-bfaa109861ec",
           "width": 64,
           "x": 511.5,
-          "y": 576.0,
+          "y": 576,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79780,12 +78600,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79793,7 +78613,7 @@
           "persistentUuid": "e13dc8e8-ad9c-534c-9c40-04f525c9468c",
           "width": 64,
           "x": 1343.5,
-          "y": 448.0,
+          "y": 448,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79804,12 +78624,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79817,7 +78637,7 @@
           "persistentUuid": "1bc78752-be57-5ad5-a821-04a3c7f19d44",
           "width": 64,
           "x": 1855.5,
-          "y": 256.0,
+          "y": 256,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79828,12 +78648,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79841,7 +78661,7 @@
           "persistentUuid": "5d6892b4-dc13-5902-b343-cb807a4c31ad",
           "width": 64,
           "x": 2431.5,
-          "y": 64.0,
+          "y": 64,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79852,12 +78672,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79865,7 +78685,7 @@
           "persistentUuid": "946322a6-4adb-5f0c-a6ff-b2ab317fb863",
           "width": 64,
           "x": 3007.5,
-          "y": -128.0,
+          "y": -128,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79876,12 +78696,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79889,7 +78709,7 @@
           "persistentUuid": "42c98787-0c50-5a47-a966-79969e5a0534",
           "width": 64,
           "x": 3583.5,
-          "y": -320.0,
+          "y": -320,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79900,12 +78720,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79913,7 +78733,7 @@
           "persistentUuid": "2c1af610-c08b-5378-a9bc-ee141075ee4b",
           "width": 64,
           "x": 3967.5,
-          "y": -576.0,
+          "y": -576,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79924,12 +78744,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79937,7 +78757,7 @@
           "persistentUuid": "d501aa7f-fbca-5327-86cd-6372099f1025",
           "width": 64,
           "x": 4607.5,
-          "y": -704.0,
+          "y": -704,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79948,12 +78768,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79961,7 +78781,7 @@
           "persistentUuid": "0e68b885-62c5-5338-9b98-9d85b6cdd41e",
           "width": 64,
           "x": 5247.5,
-          "y": -896.0,
+          "y": -896,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79972,12 +78792,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -79985,7 +78805,7 @@
           "persistentUuid": "edc7d22a-e0ba-5176-bee7-5e638865ccf5",
           "width": 64,
           "x": 5247.5,
-          "y": -1280.0,
+          "y": -1280,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -79996,12 +78816,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80009,7 +78829,7 @@
           "persistentUuid": "5219664b-3374-59b7-a89b-469f3199c080",
           "width": 64,
           "x": 5695.5,
-          "y": -1536.0,
+          "y": -1536,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80020,12 +78840,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80033,7 +78853,7 @@
           "persistentUuid": "9327d896-1c00-59c3-a0fd-f3d5d4dc06a5",
           "width": 64,
           "x": 6207.5,
-          "y": -1920.0,
+          "y": -1920,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80044,12 +78864,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80057,7 +78877,7 @@
           "persistentUuid": "d6e7d6d5-1bab-5b2f-ac3a-0639227d46db",
           "width": 64,
           "x": 6207.5,
-          "y": -2368.0,
+          "y": -2368,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80068,12 +78888,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80081,7 +78901,7 @@
           "persistentUuid": "2821d0e0-c718-5603-a86c-c682286b849a",
           "width": 64,
           "x": 6719.5,
-          "y": -2496.0,
+          "y": -2496,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80092,12 +78912,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80105,7 +78925,7 @@
           "persistentUuid": "e31581e1-7624-53c4-b137-92810725f085",
           "width": 64,
           "x": 7423.5,
-          "y": -2368.0,
+          "y": -2368,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80116,12 +78936,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80129,7 +78949,7 @@
           "persistentUuid": "f4b23a05-9f46-5b60-8cb6-7e633dc5d64c",
           "width": 64,
           "x": 7935.5,
-          "y": -2368.0,
+          "y": -2368,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80140,12 +78960,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80153,7 +78973,7 @@
           "persistentUuid": "aed7ee4f-38bb-5159-8d11-348a77aced65",
           "width": 64,
           "x": 8447.5,
-          "y": -2368.0,
+          "y": -2368,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80164,12 +78984,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80177,7 +78997,7 @@
           "persistentUuid": "67c9fe14-ecf4-5eda-a137-a7774713e995",
           "width": 64,
           "x": 8959.5,
-          "y": -2368.0,
+          "y": -2368,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80188,12 +79008,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80201,7 +79021,7 @@
           "persistentUuid": "7c89169c-192a-5cf9-8b25-acf064a78055",
           "width": 64,
           "x": 9343.5,
-          "y": -2688.0,
+          "y": -2688,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80212,12 +79032,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80225,7 +79045,7 @@
           "persistentUuid": "b5134b37-afd1-541b-b2e7-50ea09cc2bcf",
           "width": 64,
           "x": 9663.5,
-          "y": -3008.0,
+          "y": -3008,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80236,12 +79056,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80249,7 +79069,7 @@
           "persistentUuid": "cd50dbbc-0e69-5937-8d48-b5131493a7a2",
           "width": 64,
           "x": 10111.5,
-          "y": -3328.0,
+          "y": -3328,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80260,12 +79080,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80273,7 +79093,7 @@
           "persistentUuid": "d3d2fcc7-8b43-56fb-a902-63fef253849a",
           "width": 64,
           "x": 10431.5,
-          "y": -3584.0,
+          "y": -3584,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80284,12 +79104,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80297,7 +79117,7 @@
           "persistentUuid": "45269514-f0f3-5476-842f-2411ebf45467",
           "width": 64,
           "x": 10431.5,
-          "y": -3968.0,
+          "y": -3968,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80308,12 +79128,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80321,7 +79141,7 @@
           "persistentUuid": "6b163560-4fc4-5ee4-99cc-78b84e1d93f1",
           "width": 64,
           "x": 10879.5,
-          "y": -4288.0,
+          "y": -4288,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80332,12 +79152,12 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         },
         {
           "angle": 0,
           "customSize": false,
+          "depth": 1,
           "height": 64,
           "keepRatio": true,
           "layer": "",
@@ -80345,7 +79165,7 @@
           "persistentUuid": "688f3081-dce8-5930-a710-12146d0b8c42",
           "width": 64,
           "x": 11391.5,
-          "y": -4288.0,
+          "y": -4288,
           "zOrder": 1004,
           "numberProperties": [],
           "stringProperties": [],
@@ -80356,8 +79176,7 @@
               "type": "boolean",
               "value": false
             }
-          ],
-          "depth": 1
+          ]
         }
       ],
       "objects": [],
@@ -80375,8 +79194,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Paraíso: a subida pelas esferas até o Empíreo. Esfera da Lua (ilhas e nuvens, querubins), do Sol (correntes de luz sobre o abismo, serafins), das Estrelas (chão comprido com rodas e um ofanim, subida em nuvens) e o Empíreo (a última corrente até o templo). Na saída vai para proxima_cena.",
-          "comment2": ""
+          "comment": "Paraíso: a subida pelas esferas até o Empíreo. Esfera da Lua (ilhas e nuvens, querubins), do Sol (correntes de luz sobre o abismo, serafins), das Estrelas (chão comprido com rodas e um ofanim, subida em nuvens) e o Empíreo (a última corrente até o templo). Na saída vai para proxima_cena."
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -80457,8 +79275,7 @@
                     "0"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -80482,8 +79299,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Com o pato no chão (e vivo), guarda onde ele pisou. Passando de queda_y perde queda_dano e volta para lá. Inimigo que passa de queda_y some.",
-              "comment2": ""
+              "comment": "Com o pato no chão (e vivo), guarda onde ele pisou. Passando de queda_y perde queda_dano e volta para lá. Inimigo que passa de queda_y some."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -80530,8 +79346,7 @@
                     "pato.Y()"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -80614,8 +79429,7 @@
                     "1"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -80642,8 +79456,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -80713,8 +79526,7 @@
                     ""
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -80956,10 +79768,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     },
@@ -81163,10 +79971,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        },
-        {
-          "name": "TweenPathMovement",
-          "type": "CurvedMovement::TweenPathMovement"
         }
       ]
     }
@@ -85088,9 +83892,9 @@
                               },
                               "parameters": [
                                 "alvo",
-                                "giro",
+                                "d",
                                 "=",
-                                "-mira_lado * ToRad(recuo)"
+                                "max(alvo.dist_min, (MouseX() - bocal_x) * mira_lado * cos(mira_a) + (MouseY() - bocal_y) * sin(mira_a))"
                               ]
                             },
                             {
@@ -85100,9 +83904,9 @@
                               "parameters": [
                                 "alvo",
                                 "=",
-                                "pato.CenterX() + (MouseX() - pato.CenterX()) * cos(alvo.giro) - (MouseY() - (pato.Y() + pato.Height() * 0.68)) * sin(alvo.giro) - alvo.Width() * .5",
+                                "bocal_x + mira_lado * cos(mira_a) * alvo.d - alvo.Width() * .5",
                                 "=",
-                                "(pato.Y() + pato.Height() * 0.68) + (MouseX() - pato.CenterX()) * sin(alvo.giro) + (MouseY() - (pato.Y() + pato.Height() * 0.68)) * cos(alvo.giro) - alvo.Height() * .5"
+                                "bocal_y + sin(mira_a) * alvo.d - alvo.Height() * .5"
                               ]
                             },
                             {
@@ -107114,8 +105918,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Ao morrer (uma vez, morte_feita) o anjo solta um estouro de luz: anjo_morte_luz no centro, com morte_luz_raio de zona e morte_luz_qtd partículas. A animação morte só some dentro da silhueta.",
-                  "comment2": ""
+                  "comment": "Ao morrer (uma vez, morte_feita) o anjo solta um estouro de luz: anjo_morte_luz no centro, com morte_luz_raio de zona e morte_luz_qtd partículas. A animação morte só some dentro da silhueta."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -107188,8 +105991,7 @@
                         "querubim.morte_luz_qtd"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -107262,8 +106064,7 @@
                         "serafim.morte_luz_qtd"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -107336,8 +106137,7 @@
                         "ofanim.morte_luz_qtd"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -107410,8 +106210,7 @@
                         "roda_anjo.morte_luz_qtd"
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ],
               "parameters": []
@@ -110964,8 +109763,7 @@
                                 "10"
                               ]
                             }
-                          ],
-                          "events": []
+                          ]
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -111005,8 +109803,7 @@
                                 "5"
                               ]
                             }
-                          ],
-                          "events": []
+                          ]
                         }
                       ]
                     }
@@ -111342,7 +110139,6 @@
               "name": "Aparência",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "parameters": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -111354,8 +110150,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "A moeda vale valor * mult. mult 10 (ou mais) é o Bitcoin (x10), 5 a 9 é o Ethereum (x5) e abaixo disso a moeda Doge (x1). Para pôr uma moeda 5x ou 10x na cena, mude a variável mult da instância.",
-                  "comment2": ""
+                  "comment": "A moeda vale valor * mult. mult 10 (ou mais) é o Bitcoin (x10), 5 a 9 é o Ethereum (x5) e abaixo disso a moeda Doge (x1). Para pôr uma moeda 5x ou 10x na cena, mude a variável mult da instância."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -111384,8 +110179,7 @@
                         "\"x10\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -111425,8 +110219,7 @@
                         "\"x5\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -111455,10 +110248,10 @@
                         "\"x1\""
                       ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -126804,7 +125597,6 @@
     },
     {
       "associatedLayout": "Paraiso",
-      "lastChangeTimeStamp": 0,
       "name": "CorrentesDeLuz",
       "events": [
         {
@@ -126817,8 +125609,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Correntes de luz (corrente_luz): acesa por ligada s e apagada por desligada s, em ciclo (defasagem desencontra as colunas). Nos últimos aviso s acesa ela tremula. Acesa, ergue o pato a forca px/s enquanto ele está dentro (e zera a queda, para a gravidade não acumular); no topo ele flutua e sai para o lado.",
-          "comment2": ""
+          "comment": "Correntes de luz (corrente_luz): acesa por ligada s e apagada por desligada s, em ciclo (defasagem desencontra as colunas). Nos últimos aviso s acesa ela tremula. Acesa, ergue o pato a forca px/s enquanto ele está dentro (e zera a queda, para a gravidade não acumular); no topo ele flutua e sai para o lado."
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -126875,8 +125666,7 @@
                     "corrente_luz.opacidade_ligada"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -126915,8 +125705,7 @@
                     "corrente_luz.opacidade_desligada"
                   ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -126955,8 +125744,7 @@
                     "corrente_luz.opacidade_ligada * (0.55 + 0.45 * sin(TimeFromStart() * corrente_luz.pisca_vel))"
                   ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         },
@@ -127031,8 +125819,7 @@
                 "0"
               ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     }
