@@ -11739,6 +11739,18 @@
           "persistentUuid": "5a4e4d0b-2f67-5b3d-bea4-e5e0cdadf7d9",
           "type": "number",
           "value": -140
+        },
+        {
+          "name": "upg_pulo",
+          "persistentUuid": "5f77bcb7-ba90-59c7-b0d3-e37545cd3638",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "pulos_ar_base",
+          "persistentUuid": "47de556d-1eff-53e0-942c-087ade29ed4b",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -69638,6 +69650,12 @@
           "persistentUuid": "67867246-08ff-473b-81e9-30ddf65c39af",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "pulo",
+          "persistentUuid": "b4de2e80-273b-54cf-827b-f1c83869cda3",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -69942,6 +69960,60 @@
             {
               "name": "tipo",
               "persistentUuid": "0dddd0be-5b2d-462b-b14d-cebb85d29a73",
+              "type": "string",
+              "value": "upgrade"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "2499371c-862f-5f20-a414-0d21df7e56ef",
+          "type": "structure",
+          "children": [
+            {
+              "name": "descricao",
+              "persistentUuid": "21c14e39-5d8c-5ec9-970e-bec7efbe7ce3",
+              "type": "string",
+              "value": "+1 pulo no ar por nível"
+            },
+            {
+              "name": "id",
+              "persistentUuid": "1b91f791-326d-5eab-88c9-578882011a03",
+              "type": "string",
+              "value": "pulo"
+            },
+            {
+              "name": "nivel_max",
+              "persistentUuid": "d80aa2ca-85ff-5923-9a97-18f6233b9d3f",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "af55fc2e-3851-5adc-b012-0ad2b83aa673",
+              "type": "string",
+              "value": "Pulo"
+            },
+            {
+              "name": "preco_base",
+              "persistentUuid": "73289183-26d3-5385-b91b-104c3b9e58cf",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "preco_mult",
+              "persistentUuid": "9752f567-a3d4-5a82-ae12-20916b087dbf",
+              "type": "number",
+              "value": 1.6
+            },
+            {
+              "name": "requer",
+              "persistentUuid": "26a2b994-0a54-5556-86ab-31517c30e543",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "tipo",
+              "persistentUuid": "4ec42905-9457-531d-b67a-ffe0ce76d67f",
               "type": "string",
               "value": "upgrade"
             }
@@ -112159,7 +112231,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "No início da cena (depois de criar as armas): cadência -15% de cooldown por nível, recarga -20% de tempo, dano +20% (mult_dano), velocidade +10% e vida +25. Sempre a partir dos valores base, então reiniciar a cena não acumula. Custo de cada nível (loja, KAN-26): round(50 * pow(1.6, nivel)) → 50, 80, 128, 205, 328."
+              "comment": "No início da cena (depois de criar as armas): cadência -15% de cooldown por nível, recarga -20% de tempo, dano +20% (mult_dano), velocidade +10%, +1 pulo no ar (upg_pulo) e vida +25. Sempre a partir dos valores base, então reiniciar a cena não acumula. Custo de cada nível (loja, KAN-26): round(50 * pow(1.6, nivel)) → 50, 80, 128, 205, 328."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -112183,6 +112255,17 @@
                     "velocidade_base",
                     "=",
                     "pato.PlatformerObject::MaxSpeed()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "pulos_ar_base",
+                    "=",
+                    "pato.AdvancedJump::AirJumpsMax()"
                   ]
                 }
               ]
@@ -112259,6 +112342,17 @@
                     "PlatformerObject",
                     "=",
                     "pato.velocidade_base * (1 + pato.upg_velocidade * GlobalVariable(upgrades.velocidade))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AdvancedJump::AdvancedJump::SetAirJumpCountMaximum"
+                  },
+                  "parameters": [
+                    "pato",
+                    "AdvancedJump",
+                    "pato.pulos_ar_base + pato.upg_pulo * GlobalVariable(upgrades.pulo)",
+                    ""
                   ]
                 },
                 {
