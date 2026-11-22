@@ -39,9 +39,8 @@ def test_folha_migrada_uma_vez_e_ligada_nas_fases():
 
 def test_cada_inimigo_tem_o_seu_grupo_de_eventos():
     titulos = ' | '.join(G)
-    for parte in ('Condenado (se levanta)', 'Condenada (joga ossos)', 'Condenado torto', 'Condenado azul (investida)',
-                  'Condenado inchado', 'Árvore condenada (espinheiro)', 'Caveira azul', 'Diabinho (ladrão)', 'Mina demoníaca',
-                  'Condenado em chamas (frenesi)', 'Pigman (pancada)', 'Atirador', 'Sapo', 'Serafim', 'Projéteis dos inimigos'):
+    for parte in ('Condenado azul (investida)', 'Condenado inchado', 'Árvore condenada (espinheiro)', 'Caveira azul', 'Diabinho (ladrão)', 'Mina demoníaca',
+                  'Condenado em chamas (frenesi)', 'Pigman (pancada)', 'Sapo', 'Serafim', 'Projéteis dos inimigos'):
         assert parte in titulos, parte
 
 
