@@ -111986,16 +111986,6 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "fase2",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
