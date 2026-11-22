@@ -20634,18 +20634,6 @@
           "value": 0.5
         },
         {
-          "name": "investida_vel",
-          "persistentUuid": "53312882-3c48-40f8-b9f7-b172e6a44301",
-          "type": "number",
-          "value": 550
-        },
-        {
-          "name": "investida_tempo",
-          "persistentUuid": "12afd55c-fa70-4f70-9125-a586668e7eed",
-          "type": "number",
-          "value": 0.4
-        },
-        {
           "name": "voo_vel",
           "persistentUuid": "b41f23eb-ea4b-43bb-8ac8-393608898f82",
           "type": "number",
@@ -23475,12 +23463,6 @@
           "value": 700
         },
         {
-          "name": "atacar_tempo",
-          "persistentUuid": "081067e0-1720-4522-a735-7e986c482c40",
-          "type": "number",
-          "value": 0.4
-        },
-        {
           "name": "cura_intervalo",
           "persistentUuid": "d3264f4b-c5af-41f0-b959-afaf20b7e089",
           "type": "number",
@@ -23641,24 +23623,6 @@
           "persistentUuid": "2506f71b-13cd-5b95-97d4-fec0ff7ce0e7",
           "type": "number",
           "value": 6
-        },
-        {
-          "name": "cuspe_tempo",
-          "persistentUuid": "cc8e8506-3cbf-5c96-916a-099a92d1a8b6",
-          "type": "number",
-          "value": 0.8
-        },
-        {
-          "name": "cuspe_gravidade",
-          "persistentUuid": "acc14fd7-7a51-5f2e-b864-1dfe8bf2ff00",
-          "type": "number",
-          "value": 1300
-        },
-        {
-          "name": "cuspe_dano",
-          "persistentUuid": "da2e7dcc-a421-5905-9374-64118d5e8f67",
-          "type": "number",
-          "value": 12
         }
       ],
       "effects": [
@@ -32566,30 +32530,6 @@
           "value": 10
         },
         {
-          "name": "anel_cada",
-          "persistentUuid": "1b64c6c8-388b-55c6-8dab-b6ec4eb70c41",
-          "type": "number",
-          "value": 3
-        },
-        {
-          "name": "anel_qtd",
-          "persistentUuid": "e2ba1cae-08ea-59cb-9469-4aa79229c5e0",
-          "type": "number",
-          "value": 12
-        },
-        {
-          "name": "anel_vel",
-          "persistentUuid": "86e21153-975b-5ebf-ab06-748e13352caa",
-          "type": "number",
-          "value": 300
-        },
-        {
-          "name": "ataques",
-          "persistentUuid": "8a3ddf27-c645-5b27-ad8a-42f36692c497",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "tremor",
           "persistentUuid": "1bd152c8-1fa0-5f34-8df0-3cd79f0cd36f",
           "type": "number",
@@ -37542,46 +37482,10 @@
           "value": 0
         },
         {
-          "name": "orbita_raio",
-          "persistentUuid": "8e8cb62e-d8bb-5330-bb6b-1689b4438fb0",
-          "type": "number",
-          "value": 230
-        },
-        {
-          "name": "orbita_vel",
-          "persistentUuid": "ae0968d4-901f-5823-b87f-ce73a560f68a",
-          "type": "number",
-          "value": 2.2
-        },
-        {
           "name": "segue",
           "persistentUuid": "cfb6d6cd-0648-5876-8250-7556d2a001a3",
           "type": "number",
           "value": 4
-        },
-        {
-          "name": "bote_espera",
-          "persistentUuid": "4826cb5a-6b8f-5b3b-85c9-808bf530a3dc",
-          "type": "number",
-          "value": 2.6
-        },
-        {
-          "name": "bote_aviso",
-          "persistentUuid": "947d1616-0ed0-558a-bd86-838a49683051",
-          "type": "number",
-          "value": 0.35
-        },
-        {
-          "name": "bote_vel",
-          "persistentUuid": "519e1186-1cc9-5768-a41c-bcd76bc15901",
-          "type": "number",
-          "value": 700
-        },
-        {
-          "name": "bote_tempo",
-          "persistentUuid": "9faa5eef-c483-5ae7-a234-e57995aaed10",
-          "type": "number",
-          "value": 0.6
         },
         {
           "name": "roubo_max",
@@ -39096,12 +39000,6 @@
           "value": 2.5
         },
         {
-          "name": "ataque_espera_extra",
-          "persistentUuid": "6d779f5f-6af4-425d-ac91-2f9855aa060b",
-          "type": "number",
-          "value": 4
-        },
-        {
           "name": "ataque_alcance",
           "persistentUuid": "e46f0bb5-e350-44d7-a737-f2ddeaeb1f60",
           "type": "number",
@@ -39112,36 +39010,6 @@
           "persistentUuid": "4cb4fd24-12ef-4f56-841a-677775b06343",
           "type": "number",
           "value": 0.6
-        },
-        {
-          "name": "fogo_inicio",
-          "persistentUuid": "55facfe3-8ceb-4c7a-bf9a-4be622f3f72d",
-          "type": "number",
-          "value": 0.4
-        },
-        {
-          "name": "fogo_fim",
-          "persistentUuid": "2ecec64c-5133-4b72-9fcc-675bcad12a8a",
-          "type": "number",
-          "value": 1.4
-        },
-        {
-          "name": "fogo_raio",
-          "persistentUuid": "c8ff3e84-2617-46af-949f-e3ca7aa096c2",
-          "type": "number",
-          "value": 260
-        },
-        {
-          "name": "fogo_empurrao",
-          "persistentUuid": "a8f5fe81-cf2b-44f2-84d1-216172a7bd19",
-          "type": "number",
-          "value": 600
-        },
-        {
-          "name": "ataque_duracao",
-          "persistentUuid": "8fbbae8b-fc47-41fa-a0ee-96738e977b55",
-          "type": "number",
-          "value": 1.6
         },
         {
           "name": "invulneravel",
@@ -51680,36 +51548,6 @@
           "persistentUuid": "07ae8b40-7678-55b8-af96-a04540b17e73",
           "type": "number",
           "value": 1
-        },
-        {
-          "name": "espiral_bracos",
-          "persistentUuid": "1452b464-013a-579f-b483-b3942493faa5",
-          "type": "number",
-          "value": 4
-        },
-        {
-          "name": "espiral_giro",
-          "persistentUuid": "a9714ab0-5bfe-5417-a31b-3191a8193dc2",
-          "type": "number",
-          "value": 11
-        },
-        {
-          "name": "espiral_cadencia",
-          "persistentUuid": "fcf41a94-9dfa-542e-b206-33708b26f25f",
-          "type": "number",
-          "value": 0.1
-        },
-        {
-          "name": "espiral_duracao",
-          "persistentUuid": "b4432cf1-a421-52ad-9efb-872819b2db9e",
-          "type": "number",
-          "value": 2.4
-        },
-        {
-          "name": "espiral_vel",
-          "persistentUuid": "b4ff9448-f344-51af-9288-3fce29c2eed4",
-          "type": "number",
-          "value": 240
         },
         {
           "name": "anel_qtd",
@@ -82328,7 +82166,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Parada; machuca no contato. Com o pato a menos de aggro_dist: treme por aviso_tempo s e atira um leque de espinho_qtd espinhos; a cada anel_cada ataques, um anel de anel_qtd espinhos lentos."
+                  "comment": "Parada; machuca no contato. Com o pato a menos de aggro_dist: treme por aviso_tempo s e atira um leque de espinho_qtd espinhos na direção dele."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -82664,17 +82502,6 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "arvore_condenada",
-                        "ataques",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "PlaySound"
                       },
                       "parameters": [
@@ -82689,180 +82516,7 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "mod(arvore_condenada.ataques, max(1, arvore_condenada.anel_cada))",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "arvore_condenada",
-                                "i",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "arvore_condenada.anel_qtd",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "projetil_inimigo",
-                                "arvore_condenada.CenterX()",
-                                "arvore_condenada.CenterY()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Animation",
-                                "=",
-                                "\"espinho\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetXY"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "arvore_condenada.CenterX() - projetil_inimigo.Width() / 2",
-                                "=",
-                                "arvore_condenada.CenterY() - projetil_inimigo.Height() / 2"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "RandomFloat(30) + arvore_condenada.i * 360 / max(1, arvore_condenada.anel_qtd)",
-                                "arvore_condenada.anel_vel",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "RandomFloat(30) + arvore_condenada.i * 360 / max(1, arvore_condenada.anel_qtd)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "dano",
-                                "=",
-                                "arvore_condenada.espinho_dano"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "origem",
-                                "=",
-                                "\"arvore_condenada\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "tipo",
-                                "=",
-                                "\"espinho\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "\"vida\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "ttl",
-                                "=",
-                                "4"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "arvore_condenada",
-                                "i",
-                                "+",
-                                "1"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "mod(arvore_condenada.ataques, max(1, arvore_condenada.anel_cada))",
-                            "!=",
-                            "0"
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [],
                       "events": [
                         {
@@ -83035,7 +82689,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Mini-boss lento. A cada 4 s, se o pato está a menos de 350 px: avisa por 0,6 s e solta uma explosão de fogo em volta (1,6 s; machuca a menos de 260 px entre 0,4 s e 1,4 s)."
+                  "comment": "Mini-boss lento. De espiral_espera em espiral_espera s, com o pato a menos de espiral_alcance, para e gira uma espiral de bolas de fogo (espiral_bracos braços, espiral_giro graus por rajada) por espiral_duracao s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -83176,381 +82830,8 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"ataque\"",
-                            ">",
-                            "caveira_gigante.ataque_espera"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "pato",
-                            "caveira_gigante.ataque_alcance",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"ataque\"",
-                            ">",
-                            "caveira_gigante.ataque_espera_extra"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"preparar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "direcao",
-                            "=",
-                            "sign(pato.CenterX() - caveira_gigante.CenterX())"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "Animation",
-                            "=",
-                            "\"ataque_1\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_aviso_caveira.wav",
-                            "",
-                            "65",
-                            "RandomFloatInRange(0.95, 1.05)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "Animation",
-                            "=",
-                            "\"idle\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"preparar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\"",
-                            ">",
-                            "caveira_gigante.aviso_tempo"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "Animation",
-                            "=",
-                            "\"ataque\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_fogo_caveira.wav",
-                            "",
-                            "75",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\"",
-                            ">",
-                            "caveira_gigante.fogo_inicio"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\"",
-                            "<",
-                            "caveira_gigante.fogo_fim"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "pato",
-                            "caveira_gigante.fogo_raio",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "vida",
-                            "-",
-                            "caveira_gigante.dano"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"iframes\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "sign(pato.CenterX() - caveira_gigante.CenterX()) * caveira_gigante.fogo_empurrao"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\"",
-                            ">",
-                            "caveira_gigante.ataque_duracao"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "caveira_gigante",
-                            "\"ataque\""
-                          ]
-                        }
-                      ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Espiral: de espiral_espera em espiral_espera s, com o pato a menos de espiral_alcance, para e gira uma espiral de bolas de fogo (espiral_bracos braços, espiral_giro graus por rajada) por espiral_duracao s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -86123,7 +85404,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Rói o osso até ver o pato; aí orbita em volta dele (orbita_raio) e dá botes. Encostar rouba até roubo_max moedas e ele foge rindo; se não for morto em fuga_tempo s, some com elas. Morto, solta as moedas roubadas."
+                  "comment": "Rói o osso até ver o pato; aí voa direto até ele. Encostar rouba até roubo_max moedas e ele foge rindo; se não for morto em fuga_tempo s, some com elas. Morto, solta as moedas roubadas."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -86200,23 +85481,12 @@
                         },
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "ang",
-                            "+",
-                            "diabinho.orbita_vel * TimeDelta()"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetX"
                           },
                           "parameters": [
                             "diabinho",
                             "+",
-                            "((pato.CenterX() + cos(diabinho.ang) * diabinho.orbita_raio) - diabinho.CenterX()) * min(1, diabinho.segue * TimeDelta())"
+                            "cos(atan2(pato.CenterY() - diabinho.CenterY(), pato.CenterX() - diabinho.CenterX())) * diabinho.velocidade * TimeDelta()"
                           ]
                         },
                         {
@@ -86226,257 +85496,7 @@
                           "parameters": [
                             "diabinho",
                             "+",
-                            "((pato.CenterY() - 60 + sin(diabinho.ang) * diabinho.orbita_raio * 0.6) - diabinho.CenterY()) * min(1, diabinho.segue * TimeDelta())"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"ataque\"",
-                            ">",
-                            "diabinho.bote_espera"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"preparar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "Animation",
-                            "=",
-                            "\"loop\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_aviso_mergulhador.wav",
-                            "",
-                            "55",
-                            "1.5"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"preparar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"estado\"",
-                            ">",
-                            "diabinho.bote_aviso"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "Animation",
-                            "=",
-                            "\"voando\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "dx",
-                            "=",
-                            "ToDeg(atan2(pato.CenterY() - diabinho.CenterY(), pato.CenterX() - diabinho.CenterX()))"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetX"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "+",
-                            "cos(ToRad(diabinho.dx)) * diabinho.bote_vel * TimeDelta()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetY"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "+",
-                            "sin(ToRad(diabinho.dx)) * diabinho.bote_vel * TimeDelta()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"estado\"",
-                            ">",
-                            "diabinho.bote_tempo"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "\"ataque\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "diabinho",
-                            "ang",
-                            "=",
-                            "atan2(diabinho.CenterY() - pato.CenterY(), diabinho.CenterX() - pato.CenterX())"
+                            "sin(atan2(pato.CenterY() - diabinho.CenterY(), pato.CenterX() - diabinho.CenterX())) * diabinho.velocidade * TimeDelta()"
                           ]
                         }
                       ]
@@ -89625,7 +88645,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Sapo (cura, cuspe em arco e língua)",
+              "name": "Sapo (cura e língua)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -89639,7 +88659,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Fica a dist_min..dist_max e cospe uma bolha de bile em arco (cuspe_tempo s de voo). A cada cura_intervalo s cura os inimigos perto. Alinhado com o pato a menos de lingua_alcance (|dy| < lingua_alt) avisa por lingua_aviso s e dá a língua: machuca e puxa o pato para perto (lingua_puxao)."
+                  "comment": "Fica a dist_min..dist_max do pato. A cada cura_intervalo s cura os inimigos perto. Alinhado com ele a menos de lingua_alcance (|dy| < lingua_alt) avisa por lingua_aviso s e dá a língua: machuca e puxa o pato para perto (lingua_puxao)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -89898,158 +88918,6 @@
                             "Animation",
                             "=",
                             "\"andando\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "\"ataque\"",
-                            ">",
-                            "sapo.ataque_espera"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "pato",
-                            "sapo.ataque_alcance",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "estado",
-                            "=",
-                            "\"preparar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "direcao",
-                            "=",
-                            "sign(pato.CenterX() - sapo.CenterX())"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_aviso_sapo.wav",
-                            "",
-                            "65",
-                            "RandomFloatInRange(0.95, 1.05)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "Animation",
-                            "=",
-                            "\"spit\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "\"estado\"",
-                            ">",
-                            "sapo.atacar_tempo"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "sapo",
-                            "\"ataque\""
                           ]
                         }
                       ]
@@ -90468,221 +89336,6 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "sapo",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "sapo",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "sapo",
-                        "estado",
-                        "=",
-                        "\"preparar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "sapo",
-                        "\"estado\"",
-                        ">",
-                        "sapo.aviso_tempo"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "sapo",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "sapo",
-                        "\"estado\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "projetil_inimigo",
-                        "sapo.CenterX()",
-                        "sapo.CenterY()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "Animation",
-                        "=",
-                        "\"bile\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "=",
-                        "sapo.CenterX() - projetil_inimigo.Width() / 2",
-                        "=",
-                        "sapo.CenterY() - projetil_inimigo.Height() / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AddForceAL"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "0",
-                        "0",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "dano",
-                        "=",
-                        "sapo.cuspe_dano"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "origem",
-                        "=",
-                        "\"sapo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "tipo",
-                        "=",
-                        "\"bile\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "\"vida\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AddForceXY"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "(pato.CenterX() - sapo.CenterX()) / sapo.cuspe_tempo",
-                        "0",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "vy",
-                        "=",
-                        "(pato.CenterY() - sapo.CenterY()) / sapo.cuspe_tempo - sapo.cuspe_gravidade * sapo.cuspe_tempo / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "gravidade",
-                        "=",
-                        "sapo.cuspe_gravidade"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "projetil_inimigo",
-                        "ttl",
-                        "=",
-                        "4"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_cuspe.wav",
-                        "",
-                        "55",
-                        "RandomFloatInRange(0.93, 1.07)"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -91000,7 +89653,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Alterna investida e salto por cima do pato; o salto cai com um anel de anel_qtd bolhas. Abaixo de furia_abaixo da vida entra em fúria: espera entre ataques * furia_fator e cor furia_cor."
+                  "comment": "Salta por cima do pato e cai com um anel de anel_qtd bolhas. Abaixo de furia_abaixo da vida entra em fúria: espera entre ataques * furia_fator e cor furia_cor."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -91572,7 +90225,7 @@
                             "cutulu",
                             "escolha",
                             "=",
-                            "3 - cutulu.escolha"
+                            "2"
                           ]
                         }
                       ]
@@ -91666,35 +90319,6 @@
                         }
                       ],
                       "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "cutulu",
-                                "escolha",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::MaxSpeed"
-                              },
-                              "parameters": [
-                                "cutulu",
-                                "PlatformerObject",
-                                "=",
-                                "cutulu.investida_vel"
-                              ]
-                            }
-                          ]
-                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -91846,75 +90470,6 @@
                                 ""
                               ]
                             }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "escolha",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "\"estado\"",
-                            ">",
-                            "cutulu.investida_tempo"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "\"ataque\""
                           ]
                         }
                       ]
@@ -93321,7 +91876,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Paira altura_sobre_pato acima do pato. Descansa descanso s, avisa (aviso_tempo) e alterna: espiral (espiral_bracos braços girando espiral_giro graus a cada espiral_cadencia s, por espiral_duracao s) e `aneis` anéis de anel_qtd orbes com um buraco de 2*anel_buraco_meio+1 orbes perto da direção do pato (± anel_desvio). Só ataca com o pato a menos de luz_alcance."
+                  "comment": "Paira altura_sobre_pato acima do pato. Descansa descanso s, avisa (aviso_tempo) e solta `aneis` anéis de anel_qtd orbes com um buraco de 2*anel_buraco_meio+1 orbes perto da direção do pato (± anel_desvio). Só ataca com o pato a menos de luz_alcance."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -93501,7 +92056,7 @@
                             "serafim",
                             "padrao",
                             "=",
-                            "3 - serafim.padrao"
+                            "2"
                           ]
                         },
                         {
@@ -93631,75 +92186,6 @@
                             "serafim",
                             "padrao",
                             "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "\"estado\"",
-                            ">",
-                            "serafim.espiral_duracao"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "estado",
-                            "=",
-                            "\"perseguir\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "\"estado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "\"ataque\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "estado",
-                            "=",
-                            "\"atacar\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "padrao",
-                            "=",
                             "2"
                           ]
                         },
@@ -93743,224 +92229,6 @@
                           "parameters": [
                             "serafim",
                             "\"ataque\""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "serafim",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "padrao",
-                        "=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "\"tiro\"",
-                        ">",
-                        "serafim.espiral_cadencia"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "\"tiro\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "serafim",
-                        "ang",
-                        "+",
-                        "serafim.espiral_giro"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "i",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "serafim.espiral_bracos",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "projetil_inimigo",
-                            "serafim.CenterX()",
-                            "serafim.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "Animation",
-                            "=",
-                            "\"luz\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "=",
-                            "serafim.CenterX() - projetil_inimigo.Width() / 2",
-                            "=",
-                            "serafim.CenterY() - projetil_inimigo.Height() / 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AddForceAL"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "serafim.ang + serafim.i * 360 / max(1, serafim.espiral_bracos)",
-                            "serafim.espiral_vel",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "=",
-                            "serafim.ang + serafim.i * 360 / max(1, serafim.espiral_bracos)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "dano",
-                            "=",
-                            "serafim.luz_dano"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "origem",
-                            "=",
-                            "\"serafim\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "tipo",
-                            "=",
-                            "\"luz\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "\"vida\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "ttl",
-                            "=",
-                            "5"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "serafim",
-                            "i",
-                            "+",
-                            "1"
                           ]
                         }
                       ]
