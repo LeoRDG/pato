@@ -8,9 +8,9 @@ EXT = {e['name']: e['events'] for e in JOGO['externalEvents']}
 GRUPOS = {g['name']: [x['name'] for x in g['objects']] for g in JOGO['objectsGroups']}
 RECURSOS = {r['name']: r for r in JOGO['resources']['resources']}
 
-INIMIGOS = ['condenado', 'condenada', 'condenado_torto', 'condenado_azul', 'condenado_inchado', 'arvore_condenada',
+INIMIGOS = ['condenado_azul', 'condenado_inchado', 'arvore_condenada',
             'caveira_gigante', 'caveira_azul', 'cabeca_voadora', 'diabinho', 'moscas', 'olho_demoniaco', 'mina_demoniaca',
-            'condenado_em_chamas', 'pigman', 'atirador', 'sapo', 'cutulu', 'voador', 'querubim', 'serafim', 'ofanim', 'roda_anjo']
+            'condenado_em_chamas', 'pigman', 'sapo', 'cutulu', 'voador', 'querubim', 'serafim', 'ofanim', 'roda_anjo']
 
 
 def grupos_de_eventos(evs, saida=None):
