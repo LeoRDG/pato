@@ -30085,7 +30085,7 @@
           "name": "carga_alcance",
           "persistentUuid": "123c1fb9-93c2-5457-a44b-b8178567f9b1",
           "type": "number",
-          "value": 750
+          "value": 500
         },
         {
           "name": "carga_alt",
@@ -30140,6 +30140,36 @@
           "persistentUuid": "b6e3fb11-d545-5c2a-a85e-7039ce22e0be",
           "type": "number",
           "value": 6
+        },
+        {
+          "name": "carga_anim_vel",
+          "persistentUuid": "6d5e38fc-084c-5748-98a0-14c334264760",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "carga_passa",
+          "persistentUuid": "c88f62ba-6005-534a-a80a-9b9ee247c7f1",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "soco_alcance",
+          "persistentUuid": "5481078d-8c67-5688-85ae-78574e6c1c6e",
+          "type": "number",
+          "value": 170
+        },
+        {
+          "name": "soco_impacto",
+          "persistentUuid": "abd7e86c-4d81-5901-836f-fa2232acdf37",
+          "type": "number",
+          "value": 0.16
+        },
+        {
+          "name": "soco_feito",
+          "persistentUuid": "aaa89b73-0807-5268-84e8-428907b04bf0",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -80603,7 +80633,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Alinhado com o pato ruge e corre em linha reta até bater numa parede (fica tonto e inofensivo por atordoa_tempo s). Encostar durante a corrida tira carga_dano e joga longe."
+                  "comment": "Alinhado com o pato (a menos de carga_alcance) ruge por carga_aviso s e corre em linha reta (andando acelerado por carga_anim_vel). Chegando a soco_alcance px dele, para e dá o soco: em soco_impacto s acerta carga_dano e joga longe (carga_empurrao). Passou carga_passa px do pato ou durou carga_tempo_max s: volta a perseguir. Bateu numa parede: fica tonto e inofensivo por atordoa_tempo s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -80943,7 +80973,7 @@
                             "condenado_azul",
                             "Animation",
                             "=",
-                            "\"ataque\""
+                            "\"andando\""
                           ]
                         },
                         {
@@ -80953,6 +80983,17 @@
                           "parameters": [
                             "condenado_azul",
                             "\"parede\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "Animation",
+                            "=",
+                            "condenado_azul.carga_anim_vel"
                           ]
                         }
                       ]
@@ -81068,34 +81109,145 @@
                         },
                         {
                           "type": {
-                            "value": "CollisionNP"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "pato",
-                            "condenado_azul",
-                            "",
-                            "",
-                            ""
+                            "condenado_azul.direcao * (pato.CenterX() - condenado_azul.CenterX())",
+                            ">",
+                            "0"
                           ]
                         },
                         {
                           "type": {
-                            "value": "BooleanObjectVariable"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "pato",
-                            "invencivel",
+                            "condenado_azul.direcao * (pato.CenterX() - condenado_azul.CenterX())",
+                            "<",
+                            "condenado_azul.soco_alcance"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterY() - condenado_azul.CenterY())",
+                            "<",
+                            "condenado_azul.carga_alt"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"socar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "soco_feito",
                             "False",
                             ""
                           ]
                         },
                         {
                           "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "firme",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "PlatformerObject",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "Animation",
+                            "=",
+                            "\"ataque\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "Animation",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"socar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "\"estado\"",
+                            ">",
+                            "condenado_azul.soco_impacto"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "morto",
+                            "condenado_azul",
+                            "soco_feito",
                             "False",
                             ""
                           ]
@@ -81104,24 +81256,177 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
+                            "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "vida",
-                            "-",
-                            "condenado_azul.carga_dano"
+                            "condenado_azul",
+                            "soco_feito",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "condenado_azul.direcao * (pato.CenterX() - condenado_azul.CenterX())",
+                                ">",
+                                "-condenado_azul.Width() / 4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "condenado_azul.direcao * (pato.CenterX() - condenado_azul.CenterX())",
+                                "<",
+                                "condenado_azul.soco_alcance"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(pato.CenterY() - condenado_azul.CenterY())",
+                                "<",
+                                "condenado_azul.carga_alt"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "morto",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "vida",
+                                "-",
+                                "condenado_azul.carga_dano"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "pato",
+                                "\"iframes\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "ultimo_agressor",
+                                "=",
+                                "\"condenado_azul\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "coice_vx",
+                                "=",
+                                "condenado_azul.direcao * condenado_azul.carga_empurrao"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "som_impacto.wav",
+                                "",
+                                "70",
+                                "RandomFloatInRange(0.95, 1.05)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"socar\""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
                           },
                           "parameters": [
-                            "pato",
-                            "invencivel",
-                            "True",
-                            ""
+                            "condenado_azul",
+                            "Animation"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
                           ]
                         },
                         {
@@ -81129,30 +81434,28 @@
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "pato",
-                            "\"iframes\""
+                            "condenado_azul",
+                            "\"estado\""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetStringObjectVariable"
+                            "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "pato",
-                            "ultimo_agressor",
-                            "=",
-                            "\"condenado_azul\""
+                            "condenado_azul",
+                            "\"ataque\""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
+                            "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "coice_vx",
-                            "=",
-                            "sign(pato.CenterX() - condenado_azul.CenterX() + 0.001) * (condenado_azul.carga_empurrao)"
+                            "condenado_azul",
+                            "firme",
+                            "False",
+                            ""
                           ]
                         }
                       ]
@@ -81189,6 +81492,63 @@
                           "parameters": [
                             "condenado_azul",
                             "\"parede\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"atacar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "-condenado_azul.direcao * (pato.CenterX() - condenado_azul.CenterX())",
+                            ">",
+                            "condenado_azul.carga_passa"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "\"ataque\""
                           ]
                         }
                       ]
@@ -81457,6 +81817,54 @@
                             "\"ataque\""
                           ]
                         }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "estado",
+                            "!=",
+                            "\"atacar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_azul",
+                            "morto",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                      },
+                      "parameters": [
+                        "condenado_azul",
+                        "Animation",
+                        "=",
+                        "1"
                       ]
                     }
                   ]
