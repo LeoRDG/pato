@@ -8882,26 +8882,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/som_soco.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "som_soco.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": true,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/som_soco_acerto.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "som_soco_acerto.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": true,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
         "file": "assets/som_tiro_inimigo.wav",
         "kind": "audio",
         "metadata": "",
@@ -8929,46 +8909,6 @@
         "preloadAsMusic": false,
         "preloadAsSound": true,
         "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/soco_luva.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "soco_luva.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/soco_rastro_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "soco_rastro_1.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/soco_rastro_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "soco_rastro_2.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/soco_rastro_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "soco_rastro_3.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/soco_rastro_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "soco_rastro_4.png",
-        "smoothed": false,
         "userAdded": true
       },
       {
@@ -11273,100 +11213,16 @@
           "value": -999999
         },
         {
-          "name": "soco_lado",
-          "persistentUuid": "c1e78c5f-f79a-4e5c-851c-687a227e8520",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "rmb_antes",
-          "persistentUuid": "9a3828b3-ad86-46ba-9d1a-c3894f374dda",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "soco_acertou",
-          "persistentUuid": "700625fb-e1f8-427e-ba4e-540876f0b460",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "soco_ang",
-          "persistentUuid": "d8becf92-790f-4d68-af2d-94e2fc436d4b",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_cos",
-          "persistentUuid": "f9747504-f2ce-4e53-a436-ca4b69ddbac8",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_sin",
-          "persistentUuid": "6c92a738-d1c2-407c-95fa-3ece48bef669",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_vy",
-          "persistentUuid": "d30b0c62-fe53-4222-81df-ff8401fdbfd0",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "y_antes",
-          "persistentUuid": "d182307b-e979-4949-85ee-da88de4ef9a0",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "coice_y",
-          "persistentUuid": "7c9c102b-0715-4641-b49d-1c80f422b242",
-          "type": "number",
-          "value": 1200
-        },
-        {
-          "name": "coice_guarda",
-          "persistentUuid": "6b65c5e9-cafe-4ace-8c98-9739208acb10",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "coice_vx",
           "persistentUuid": "e773640d-a3a9-4562-901b-826dc41e5984",
           "type": "number",
           "value": 0
         },
         {
-          "name": "coice_parede_x",
-          "persistentUuid": "45a9b6ec-625e-408b-bcca-0d0a1aa40d9e",
-          "type": "number",
-          "value": 1500
-        },
-        {
-          "name": "coice_parede_y",
-          "persistentUuid": "00f9c242-9a40-4d79-9780-88733c0efd7f",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "coice_parede_freio",
           "persistentUuid": "ad358755-c319-48d8-8abb-a90d9eae72e2",
           "type": "number",
           "value": 1800
-        },
-        {
-          "name": "soco_bateu",
-          "persistentUuid": "25acf091-7d94-4205-aa37-76024993631c",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "soco_espera",
-          "persistentUuid": "43690be0-733c-4e72-b78a-242f409988cb",
-          "type": "number",
-          "value": 0.35
         },
         {
           "name": "upg_cadencia",
@@ -11481,72 +11337,6 @@
           "persistentUuid": "31d15970-3a57-4d15-a0de-48db177e2c40",
           "type": "number",
           "value": 0.56
-        },
-        {
-          "name": "soco_alcance_parede",
-          "persistentUuid": "67eaf3cb-0a5a-4029-9737-da9656a848f7",
-          "type": "number",
-          "value": 150
-        },
-        {
-          "name": "soco_dano",
-          "persistentUuid": "ad9e35b6-1633-48d5-88d9-44314b560146",
-          "type": "number",
-          "value": 12
-        },
-        {
-          "name": "soco_empurrao",
-          "persistentUuid": "b23154c0-5011-4dcc-b85e-02780c4b9514",
-          "type": "number",
-          "value": 4
-        },
-        {
-          "name": "soco_stun",
-          "persistentUuid": "f3488657-c40b-465b-bb0a-50b130eacad1",
-          "type": "number",
-          "value": 0.2
-        },
-        {
-          "name": "soco_vel_inimigo",
-          "persistentUuid": "780eb4f4-0abd-4a64-b780-8700fcc8650a",
-          "type": "number",
-          "value": 900
-        },
-        {
-          "name": "soco_duracao",
-          "persistentUuid": "6349c181-4910-4098-a3c3-b9533fe1f3c5",
-          "type": "number",
-          "value": 0.16
-        },
-        {
-          "name": "soco_alcance_ini",
-          "persistentUuid": "8353f5fb-7fb4-4c0e-b9a9-38ca3e70303b",
-          "type": "number",
-          "value": 35
-        },
-        {
-          "name": "soco_alcance_extra",
-          "persistentUuid": "bc42f789-8e76-4ae5-951b-fa958b771180",
-          "type": "number",
-          "value": 95
-        },
-        {
-          "name": "soco_rastro_dist",
-          "persistentUuid": "18ba117f-42d1-4bf6-8545-51f6cdcbee35",
-          "type": "number",
-          "value": 120
-        },
-        {
-          "name": "soco_hit_alcance",
-          "persistentUuid": "fdeee982-96e0-4773-bc20-e5a4ce93cdb3",
-          "type": "number",
-          "value": 150
-        },
-        {
-          "name": "soco_hit_folga",
-          "persistentUuid": "5116231f-74fb-43a1-b401-83ac09033b09",
-          "type": "number",
-          "value": 60
         },
         {
           "name": "recuo_decai",
@@ -13059,18 +12849,6 @@
           "value": "brasa"
         },
         {
-          "name": "socado",
-          "persistentUuid": "626aec49-3d77-43a0-ace2-de20461e28e2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "04104c2c-ff30-4933-bd79-7e0963fcaee4",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "dc6b4160-784e-4a22-8014-3f90c0a3d9c8",
           "type": "number",
@@ -14384,18 +14162,6 @@
           "value": "brasa"
         },
         {
-          "name": "socado",
-          "persistentUuid": "6bf4ffba-d0fa-4457-a6ff-3a13ff99fc89",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "f01014e9-fe90-43ba-a3df-60b5f8be4c23",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "11881f75-acae-431f-a0ef-e19d63f7df56",
           "type": "number",
@@ -15275,18 +15041,6 @@
           "persistentUuid": "eabbb73c-53e9-41fb-af51-66af36ff7fc7",
           "type": "string",
           "value": "vermelho"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "9c8cd271-0326-4916-97cc-b4f54601e238",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "e10d3663-4aa6-4a1d-939d-f57fc2565b06",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -18039,18 +17793,6 @@
           "persistentUuid": "0ababb62-f4f2-40ee-a6cb-cdd8472ebddc",
           "type": "string",
           "value": "vermelho"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "ef74d2a5-0cc8-4bc3-9ab0-acf282d59964",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "b8832237-5426-457e-aead-1cfbf8037d0f",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -21292,18 +21034,6 @@
           "value": "ciano"
         },
         {
-          "name": "socado",
-          "persistentUuid": "82424c70-5844-4ab1-8d72-2c633d6413ea",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "a9483171-b7a2-4887-9b92-43ef8cad632d",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "a7cf998a-b623-4d81-a476-419736c7dd45",
           "type": "number",
@@ -24125,18 +23855,6 @@
           "persistentUuid": "f58d6814-19bc-4b4f-84dc-0c757b1cddbc",
           "type": "string",
           "value": "verde"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "d4729fd2-56e7-4032-a378-d02cfea48252",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "f931a10b-290d-409e-a5af-885cb659519c",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -27019,18 +26737,6 @@
           "persistentUuid": "16961972-efbf-4dfc-a167-c9447dc1f52a",
           "type": "string",
           "value": "roxo"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "ca99634d-745b-4098-abf1-421dbbcebd5c",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "c5789d3a-3617-4a51-a566-d738731d98df",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "paciencia",
@@ -30710,18 +30416,6 @@
           "value": "vermelho"
         },
         {
-          "name": "socado",
-          "persistentUuid": "8a42cab1-7aa2-4a96-9249-f41496fffcdc",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "b01f7f74-a51f-4f28-8d59-14a08b24be78",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "c583687f-f49b-4460-b04f-0aa428b6b0e7",
           "type": "number",
@@ -32119,18 +31813,6 @@
           "value": "vermelho"
         },
         {
-          "name": "socado",
-          "persistentUuid": "5ba4f80d-9f0b-4268-9b47-cbd174c56d1c",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "3330aac4-e7f1-4be7-9ab0-b044d41ff897",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "ffe576fd-7278-4402-a136-25ed6d5d0b8a",
           "type": "number",
@@ -33518,18 +33200,6 @@
           "persistentUuid": "d33e1cb2-d11d-4196-9c03-1b25738acfb6",
           "type": "string",
           "value": "vermelho"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "0ac6de48-641b-452a-bc79-09158dce5dba",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "79e24332-62c4-44ee-bdb8-303f627da1bc",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -34951,18 +34621,6 @@
           "value": "azul"
         },
         {
-          "name": "socado",
-          "persistentUuid": "cf0d552d-0ccc-45e1-b9a2-7e857f8e0992",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "0531bf2f-e57a-40d9-b720-add9f1733c5f",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "ed026617-7c62-454d-8dd5-6a31dec0e0c0",
           "type": "number",
@@ -36352,18 +36010,6 @@
           "value": "vermelho"
         },
         {
-          "name": "socado",
-          "persistentUuid": "a0817407-a6cd-483b-b6f9-725ab88899d2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "3dcf93cb-e9cf-4e41-a1ad-1f59c8b899f1",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_vel",
           "persistentUuid": "4410a1fd-bb65-4845-91e5-d8d39c972c3b",
           "type": "number",
@@ -37459,18 +37105,6 @@
           "value": "lasca"
         },
         {
-          "name": "socado",
-          "persistentUuid": "9e99fea9-3de0-4dda-b44f-c28fea695af4",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "42b1c16a-e61e-44c9-9032-12cd40c5303d",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "invulneravel",
           "persistentUuid": "5606c399-b1ce-541e-9b1b-ded7a5328a5e",
           "type": "boolean",
@@ -38407,18 +38041,6 @@
           "value": "azul"
         },
         {
-          "name": "socado",
-          "persistentUuid": "ebd201ac-8c7b-4476-9be6-fea6461ec3af",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "85d54b72-5c53-4fbe-8456-f70cfb0aa775",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "28681c0d-3e62-4c5d-a16f-a9d2c8cd5326",
           "type": "number",
@@ -38506,7 +38128,7 @@
           "name": "invulneravel",
           "persistentUuid": "91ebc929-5cad-5638-bb19-7978a086c9d9",
           "type": "boolean",
-          "value": true
+          "value": false
         },
         {
           "name": "reflete",
@@ -39217,18 +38839,6 @@
           "value": "gosma"
         },
         {
-          "name": "socado",
-          "persistentUuid": "9cc0e479-da82-4600-9722-5a611285bb57",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "c480dea7-10a4-44d7-905e-7832dc0ecaa3",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "183ed409-4383-43f8-9c1e-3a6af9f5d231",
           "type": "number",
@@ -39881,18 +39491,6 @@
           "persistentUuid": "370057f7-fca3-46d0-af96-ad4bdea06a34",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "1400ac64-da7c-4309-a510-2171a2a485b7",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "a311f035-0b24-4dfc-a8a0-a710a9170e3e",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_x",
@@ -40815,18 +40413,6 @@
           "value": "brasa"
         },
         {
-          "name": "socado",
-          "persistentUuid": "a231f2e1-56d9-4076-af32-9479e7598d6d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "97d4c978-a58e-4831-bff4-bc0b93b95a4d",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "0f4fd98f-8f42-4229-a182-5ba665acbc6e",
           "type": "number",
@@ -41649,18 +41235,6 @@
           "value": "escuro"
         },
         {
-          "name": "socado",
-          "persistentUuid": "4d2ad5fa-c8be-4606-926f-da2fa47a0d0f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "9db411fd-d7db-4cc8-81a6-51df19191c31",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "955ee90a-e062-4290-b079-07ec2d135f3c",
           "type": "number",
@@ -42463,18 +42037,6 @@
           "persistentUuid": "eed16c3a-4552-470f-84ab-fbeb909768b7",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "e7b17a61-52ae-44a0-a32c-307d02c9612d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "682d169c-ec20-40f2-b168-1a87e534bb89",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_x",
@@ -44149,18 +43711,6 @@
           "persistentUuid": "a192c365-9ca9-4fa1-8956-4b5042b23794",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "297128f1-9162-4cb4-af2a-5541799c1795",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "80c5e956-ada0-49ed-af60-d660d09358f5",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -54899,250 +54449,6 @@
       "behaviors": []
     },
     {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "soco",
-      "persistentUuid": "7d5ad198-92a5-4901-b15f-1f6026c02fea",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "ang",
-          "persistentUuid": "3b1a2881-4620-49bd-8d47-6a8110e2595d",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "soco",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "soco_luva.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 15,
-                        "y": 0
-                      },
-                      {
-                        "x": 15,
-                        "y": 11
-                      },
-                      {
-                        "x": 0,
-                        "y": 11
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "soco_rastro",
-      "persistentUuid": "6adb39fe-8e56-49fd-814f-b6d4f9acfebc",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "ang",
-          "persistentUuid": "a4b2f48a-3d15-4c5c-832f-ed5886a56c6e",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "soco_rastro",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.04,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "soco_rastro_1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 34
-                      },
-                      {
-                        "x": 0,
-                        "y": 34
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "soco_rastro_2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 34
-                      },
-                      {
-                        "x": 0,
-                        "y": 34
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "soco_rastro_3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 34
-                      },
-                      {
-                        "x": 0,
-                        "y": 34
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "soco_rastro_4.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 34
-                      },
-                      {
-                        "x": 0,
-                        "y": 34
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "assetStoreId": "",
       "name": "loja_painel",
       "persistentUuid": "fe3f0233-f33d-4e70-b7b4-b3efdbdbbe42",
@@ -55545,18 +54851,6 @@
           "persistentUuid": "44b03903-db03-5e10-a594-f0c5e0ddf4bf",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "f261f953-f678-5317-a883-2d8e3ffbcc95",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "058d324c-4119-5068-8050-e50934422a33",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_x",
@@ -56871,18 +56165,6 @@
           "persistentUuid": "4dc1d0f2-b3e8-5a1f-9b88-e16ee78b2102",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "b1344de0-266c-57e7-97e3-75c732c51fb6",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "adc5015f-e898-5c55-bf90-d495d7ba5592",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_x",
@@ -58227,18 +57509,6 @@
           "persistentUuid": "b6600c1e-05ca-5648-8f33-df977bbe83d2",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "858a1001-4553-5781-a127-1cce652f7dbe",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "9dd40a4d-d721-56eb-9e5a-1ef6ca4a145f",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_x",
@@ -59987,18 +59257,6 @@
           "value": "escuro"
         },
         {
-          "name": "socado",
-          "persistentUuid": "0208f10b-9840-577f-a851-1379443e491d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "11be013f-d11a-5eb4-a24d-cbca4f6ffba1",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "d94ca20f-6a51-5cc6-9d28-73c7b0b2d936",
           "type": "number",
@@ -61666,18 +60924,6 @@
           "persistentUuid": "c73bec09-3008-5bb1-9e15-86152ee00179",
           "type": "string",
           "value": "escuro"
-        },
-        {
-          "name": "socado",
-          "persistentUuid": "40405cda-4875-5280-9ccb-b38bb3f0849a",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "12e6155a-bb82-543b-858d-f170279b0a1d",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "empurrao_vel",
@@ -66989,18 +66235,6 @@
           "value": "gosma"
         },
         {
-          "name": "socado",
-          "persistentUuid": "fb03637c-823e-4f38-98f9-f563324b4995",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_dir",
-          "persistentUuid": "8c846c19-5059-4a6d-a851-86a8dd222b33",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "empurrao_x",
           "persistentUuid": "ec2e5138-cde8-450a-a51f-29ca8f3fba91",
           "type": "number",
@@ -68736,12 +67970,6 @@
           },
           {
             "objectName": "sangue_roxo"
-          },
-          {
-            "objectName": "soco"
-          },
-          {
-            "objectName": "soco_rastro"
           }
         ]
       },
@@ -70683,18 +69911,6 @@
           "value": 0
         },
         {
-          "name": "soco_rx",
-          "persistentUuid": "088cf653-7d31-44a1-89d9-c0e24d236406",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_ry",
-          "persistentUuid": "80e4d894-d64d-4f6b-be3d-26a10cd36144",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "loja_aberta",
           "persistentUuid": "ec79c988-8d3d-4316-bfa0-388826f4eb40",
           "type": "boolean",
@@ -72277,18 +71493,6 @@
         {
           "name": "exp_d",
           "persistentUuid": "d520d703-1c15-4fdf-9c53-e2d44546d043",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_rx",
-          "persistentUuid": "9f9c8604-b939-40ca-8dab-248f85acdca5",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_ry",
-          "persistentUuid": "e3d86890-c106-4fc8-a9a0-1dd8cc3c98b7",
           "type": "number",
           "value": 0
         },
@@ -74632,18 +73836,6 @@
         {
           "name": "exp_d",
           "persistentUuid": "d520d703-1c15-4fdf-9c53-e2d44546d043",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_rx",
-          "persistentUuid": "9f9c8604-b939-40ca-8dab-248f85acdca5",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_ry",
-          "persistentUuid": "e3d86890-c106-4fc8-a9a0-1dd8cc3c98b7",
           "type": "number",
           "value": 0
         },
@@ -77435,18 +76627,6 @@
           "value": 0
         },
         {
-          "name": "soco_rx",
-          "persistentUuid": "9f9c8604-b939-40ca-8dab-248f85acdca5",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "soco_ry",
-          "persistentUuid": "e3d86890-c106-4fc8-a9a0-1dd8cc3c98b7",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "olho_rx",
           "persistentUuid": "e0054c30-ff06-5ae6-b7e2-1d796511aa0e",
           "type": "number",
@@ -80114,24 +79294,6 @@
                           },
                           "parameters": [
                             "",
-                            "som_soco.wav"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PreloadSound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_soco_acerto.wav"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PreloadSound"
-                          },
-                          "parameters": [
-                            "",
                             "som_tiro_inimigo.wav"
                           ]
                         },
@@ -82169,1294 +81331,98 @@
               "colorR": 74,
               "creationTime": 0,
               "folded": true,
-              "name": "Soco",
+              "name": "Empurrão no pato",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Início",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SceneJustBegins"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"soco\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "y_antes",
-                            "=",
-                            "pato.Y()"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "pato.coice_vx (px/s) empurra o pato de lado por SetX, fora do limite de velocidade, e some a pato.coice_parede_freio px/s². Quem põe valor: projéteis e inimigos que empurram, espinhos. O dash zera."
                 },
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Teto",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "pato.PlatformerObject::CurrentFallSpeed()",
-                            "<",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "pato.Y()",
-                            ">=",
-                            "pato.y_antes - 0.01"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject",
-                            "=",
-                            "0"
-                          ]
-                        }
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.coice_vx)",
+                        ">",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
                       ]
                     }
                   ],
-                  "parameters": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "pato",
+                        "+",
+                        "pato.coice_vx * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_vx",
+                        "=",
+                        "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Golpe",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Right\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "rmb_antes",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"soco\"",
-                            ">",
-                            "pato.soco_espera"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"soco\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_lado",
-                            "=",
-                            "sign(MouseX() - pato.CenterX() + 0.001)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_ang",
-                            "=",
-                            "ToDeg(atan2(MouseY() - pato.CenterY(), MouseX() - pato.CenterX()))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_cos",
-                            "=",
-                            "cos(ToRad(pato.soco_ang))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_sin",
-                            "=",
-                            "sin(ToRad(pato.soco_ang))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "soco_acertou",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_bateu",
-                                "False",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "RaycastToPosition"
-                              },
-                              "parameters": [
-                                "Terreno",
-                                "pato.CenterX() - pato.soco_sin * 0",
-                                "pato.CenterY() + pato.soco_cos * 0",
-                                "pato.CenterX() - pato.soco_sin * 0 + pato.soco_cos * pato.soco_alcance_parede",
-                                "pato.CenterY() + pato.soco_cos * 0 + pato.soco_sin * pato.soco_alcance_parede",
-                                "soco_rx",
-                                "soco_ry",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_bateu",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "RaycastToPosition"
-                              },
-                              "parameters": [
-                                "Terreno",
-                                "pato.CenterX() - pato.soco_sin * pato.Height() / 3",
-                                "pato.CenterY() + pato.soco_cos * pato.Height() / 3",
-                                "pato.CenterX() - pato.soco_sin * pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
-                                "pato.CenterY() + pato.soco_cos * pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
-                                "soco_rx",
-                                "soco_ry",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_bateu",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "RaycastToPosition"
-                              },
-                              "parameters": [
-                                "Terreno",
-                                "pato.CenterX() - pato.soco_sin * -pato.Height() / 3",
-                                "pato.CenterY() + pato.soco_cos * -pato.Height() / 3",
-                                "pato.CenterX() - pato.soco_sin * -pato.Height() / 3 + pato.soco_cos * pato.soco_alcance_parede",
-                                "pato.CenterY() + pato.soco_cos * -pato.Height() / 3 + pato.soco_sin * pato.soco_alcance_parede",
-                                "soco_rx",
-                                "soco_ry",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_bateu",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_bateu",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "AdvancedJump::HorizontalDash::IsDashing"
-                              },
-                              "parameters": [
-                                "pato",
-                                "HorizontalDash",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_acertou",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
-                              },
-                              "parameters": [
-                                "pato",
-                                "PlatformerObject",
-                                "=",
-                                "pato.PlatformerObject::CurrentSpeed() * (1 - abs(pato.soco_cos))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "coice_vx",
-                                "=",
-                                "-pato.soco_cos * pato.coice_parede_x * (1 - max(0, pato.soco_sin))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_vy",
-                                "=",
-                                "-pato.soco_sin * pato.coice_y - pato.coice_parede_y * (1 - abs(pato.soco_sin))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "poeira",
-                                "soco_rx",
-                                "soco_ry",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "poeira",
-                                "=",
-                                "pato.soco_ang"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "PlatformBehavior::IsOnFloor"
-                                  },
-                                  "parameters": [
-                                    "pato",
-                                    "PlatformerObject"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "pato",
-                                    "coice_guarda",
-                                    "True",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::JsCode",
-                              "inlineCode": [
-                                "const pato = runtimeScene.getObjects(\"pato\")[0];",
-                                "const b = pato && pato.getBehavior(\"PlatformerObject\");",
-                                "if (b && b._setFalling && b._falling) {",
-                                "  const alvo = pato.getVariables().get(\"soco_vy\").getAsNumber();   // px/s, negativo = para cima",
-                                "  const noChao = b._state === b._onFloor;",
-                                "  if (alvo < 0 || (alvo > 0 && !noChao)) {   // sempre sobrescreve: o mesmo soco dá sempre a mesma velocidade vertical",
-                                "    const podiaPular = b._canJump;",
-                                "    if (b._state !== b._falling) b._setFalling();",
-                                "    b._canJump = podiaPular;",
-                                "    b._currentFallSpeed = alvo;   // para baixo, o comportamento limita na queda máxima",
-                                "  }",
-                                "}"
-                              ],
-                              "parameterObjects": "",
-                              "useStrict": true,
-                              "eventsSheetExpanded": false
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "soco",
-                                "pato.CenterX()",
-                                "pato.CenterY()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "soco",
-                                "ang",
-                                "=",
-                                "pato.soco_ang"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "soco",
-                                "Scale",
-                                "=",
-                                "5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "soco",
-                                "=",
-                                "pato.soco_ang"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "soco",
-                                "\"t\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "soco_rastro",
-                                "pato.CenterX()",
-                                "pato.CenterY()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "soco_rastro",
-                                "ang",
-                                "=",
-                                "pato.soco_ang"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "soco_rastro",
-                                "Scale",
-                                "=",
-                                "5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "soco_rastro",
-                                "=",
-                                "pato.soco_ang"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "soco_rastro",
-                                "\"t\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "som_soco.wav",
-                                "",
-                                "55",
-                                "RandomFloatInRange(0.93, 1.07)"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "pato",
-                                    "soco_cos",
-                                    "<",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "FlippableCapability::FlippableBehavior::FlipY"
-                                  },
-                                  "parameters": [
-                                    "soco",
-                                    "Flippable",
-                                    "yes"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "FlippableCapability::FlippableBehavior::FlipY"
-                                  },
-                                  "parameters": [
-                                    "soco_rastro",
-                                    "Flippable",
-                                    "yes"
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::ForEach",
-                          "object": "Inimigo",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "morto",
-                                "False",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) + ((Inimigo.Width() + Inimigo.Height()) / 4)",
-                                ">",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "(pato.soco_cos * (Inimigo.CenterX() - pato.CenterX()) + pato.soco_sin * (Inimigo.CenterY() - pato.CenterY())) - ((Inimigo.Width() + Inimigo.Height()) / 4)",
-                                "<",
-                                "pato.soco_hit_alcance"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "abs(pato.soco_cos * (Inimigo.CenterY() - pato.CenterY()) - pato.soco_sin * (Inimigo.CenterX() - pato.CenterX()))",
-                                "<",
-                                "((Inimigo.Width() + Inimigo.Height()) / 4) + pato.soco_hit_folga"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "vida",
-                                "-",
-                                "max(1, round(pato.soco_dano * GlobalVariable(mult_dano)))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "acertado",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "kb_dir",
-                                "=",
-                                "pato.soco_lado * pato.soco_empurrao"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "soco_dir",
-                                "=",
-                                "pato.soco_lado"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Inimigo",
-                                "socado",
-                                "=",
-                                "pato.soco_stun"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_acertou",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pato",
-                                "soco_acertou",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "som_soco_acerto.wav",
-                                "",
-                                "65",
-                                "RandomFloatInRange(0.93, 1.07)"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Right\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_loja",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "rmb_antes",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Right\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "rmb_antes",
-                            "False",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "pato",
+                        "HorizontalDash",
+                        ""
                       ]
                     }
                   ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Luva e rastro",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "soco",
-                            "=",
-                            "pato.CenterX() + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * cos(ToRad(soco.ang)) - soco.Width() / 2",
-                            "=",
-                            "pato.CenterY() + 8 + (pato.soco_alcance_ini + pato.soco_alcance_extra * sin(ToRad(180 * min(1, soco.ObjectTimerElapsedTime(\"t\") / pato.soco_duracao)))) * sin(ToRad(soco.ang)) - soco.Height() / 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetZOrder"
-                          },
-                          "parameters": [
-                            "soco",
-                            "=",
-                            "pato.ZOrder() + 2"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "=",
-                            "pato.CenterX() + pato.soco_rastro_dist * cos(ToRad(soco_rastro.ang)) - soco_rastro.Width() / 2",
-                            "=",
-                            "pato.CenterY() + 8 + pato.soco_rastro_dist * sin(ToRad(soco_rastro.ang)) - soco_rastro.Height() / 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetZOrder"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "=",
-                            "pato.ZOrder() + 1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "soco",
-                            "\"t\"",
-                            ">",
-                            "pato.soco_duracao"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "soco",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            "\"t\"",
-                            ">",
-                            "pato.soco_duracao"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "soco_rastro",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "coice_vx",
+                        "=",
+                        "0"
                       ]
                     }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "KNOCKBACK",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "socado",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Terrestre",
-                            "socado",
-                            "-",
-                            "TimeDelta()"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "StringObjectVariable"
-                              },
-                              "parameters": [
-                                "Terrestre",
-                                "estado",
-                                "=",
-                                "\"dano\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Terrestre",
-                                "morto",
-                                "False",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::MaxSpeed"
-                              },
-                              "parameters": [
-                                "Terrestre",
-                                "PlatformerObject",
-                                "=",
-                                "pato.soco_vel_inimigo"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentSpeed"
-                              },
-                              "parameters": [
-                                "Terrestre",
-                                "PlatformerObject",
-                                "=",
-                                "Terrestre.soco_dir * pato.soco_vel_inimigo"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Coice na parede",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_guarda",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::IsFalling"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"__CoyoteTime_CoyoteJump\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_guarda",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "PlatformBehavior::IsFalling"
-                          },
-                          "parameters": [
-                            "pato",
-                            "PlatformerObject"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_guarda",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(pato.coice_vx)",
-                            ">",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "AdvancedJump::HorizontalDash::IsDashing"
-                          },
-                          "parameters": [
-                            "pato",
-                            "HorizontalDash",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetX"
-                          },
-                          "parameters": [
-                            "pato",
-                            "+",
-                            "pato.coice_vx * TimeDelta()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_vx",
-                            "=",
-                            "sign(pato.coice_vx) * max(0, abs(pato.coice_vx) - pato.coice_parede_freio * TimeDelta())"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AdvancedJump::HorizontalDash::IsDashing"
-                          },
-                          "parameters": [
-                            "pato",
-                            "HorizontalDash",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_vx",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Guarda a altura",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "y_antes",
-                            "=",
-                            "pato.Y()"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
+                  ]
                 }
               ],
               "parameters": []
@@ -85668,7 +83634,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Mecânicas dos inimigos (t78): cada inimigo tem um jeito próprio de lutar (ver o comentário de cada grupo e tools/t78_inimigos_mecanicas.py). Estados comuns dos que andam (grupo Terrestre) e dos que voam (grupo Voador); firme = não toma tranco; invulneravel = bala não machuca (só o soco); reflete = bala volta."
+          "comment": "Mecânicas dos inimigos (t78): cada inimigo tem um jeito próprio de lutar (ver o comentário de cada grupo e tools/t78_inimigos_mecanicas.py). Estados comuns dos que andam (grupo Terrestre) e dos que voam (grupo Voador); firme = não toma tranco; invulneravel = bala não machuca; reflete = bala volta."
         },
         {
           "colorB": 228,
@@ -93566,7 +91532,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Caveira azul (quica e só morre no soco)",
+              "name": "Caveira azul (quica)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -93580,7 +91546,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Quica pelo cenário em diagonal sem parar, ganha quique_ganho px/s a cada quique (até quique_max) e não sai de area_raio px de onde nasceu. invulneravel: bala ricocheteia, só o soco machuca."
+                  "comment": "Quica pelo cenário em diagonal sem parar, ganha quique_ganho px/s a cada quique (até quique_max) e não sai de area_raio px de onde nasceu."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -103807,7 +101773,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Vai devagar até acima do pato (segue, altura). Fechado por fechado_tempo s: gira e bala ricocheteia de volta no pato (invulneravel e reflete). Pisca aviso_abrir s antes de abrir. Aberto por aberto_tempo s: leva dano e solta um anel de anel_qtd olhos de luz a cada anel_intervalo s. O soco sempre machuca."
+                  "comment": "Vai devagar até acima do pato (segue, altura). Fechado por fechado_tempo s: gira e bala ricocheteia de volta no pato (invulneravel e reflete). Pisca aviso_abrir s antes de abrir. Aberto por aberto_tempo s: leva dano e solta um anel de anel_qtd olhos de luz a cada anel_intervalo s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -114169,7 +112135,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Calmo: cada vez que a vida do mercador cai (bala, explosão ou soco) conta um golpe. Quando os golpes chegam à paciência, ele fica hostil e fecha a loja."
+              "comment": "Calmo: cada vez que a vida do mercador cai (bala ou explosão) conta um golpe. Quando os golpes chegam à paciência, ele fica hostil e fecha a loja."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -124861,7 +122827,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Espinhos: não dá para ficar de pé (não são plataforma), encostar tira `dano` e joga o pato para o lado de fora a `empurrao` px/s. Estão no grupo Terreno, então socar dá o coice da parede."
+          "comment": "Espinhos: não dá para ficar de pé (não são plataforma), encostar tira `dano` e joga o pato para o lado de fora a `empurrao` px/s."
         },
         {
           "colorB": 228,
