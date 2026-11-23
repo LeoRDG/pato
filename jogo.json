@@ -12834,7 +12834,7 @@
           "name": "sprite_esquerda",
           "persistentUuid": "b2b730ca-0d7e-4431-8092-583fb9fdcf0e",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "bala_serie",
@@ -36661,7 +36661,7 @@
           "name": "sprite_esquerda",
           "persistentUuid": "30b505c2-1ae5-4450-a227-9810ece7b653",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "bala_serie",
@@ -37465,7 +37465,7 @@
           "name": "sprite_esquerda",
           "persistentUuid": "8cfb645e-b127-4b28-bc0a-dcc397af17b8",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "bala_serie",
@@ -108260,6 +108260,178 @@
                     }
                   ],
                   "parameters": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "trader",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "trader",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.CenterX()",
+                        ">",
+                        "trader.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Flippable",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "sprite_esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.CenterX()",
+                        "<",
+                        "trader.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "sprite_esquerda",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.CenterX()",
+                        "<",
+                        "trader.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Flippable",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "sprite_esquerda",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.CenterX()",
+                        ">",
+                        "trader.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "trader",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
                 }
               ]
             }
