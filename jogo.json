@@ -63304,6 +63304,12 @@
           "persistentUuid": "e85bf830-a82d-5af3-bed1-67a3e5736dcc",
           "type": "number",
           "value": 28
+        },
+        {
+          "name": "vel_textura",
+          "persistentUuid": "08a8c447-6d11-4ad1-a1a6-07740255fc5b",
+          "type": "number",
+          "value": 180
         }
       ],
       "effects": [],
@@ -120759,6 +120765,16 @@
                 "t",
                 "+",
                 "TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::YOffset"
+              },
+              "parameters": [
+                "corrente_luz",
+                "=",
+                "corrente_luz.t * corrente_luz.vel_textura"
               ]
             }
           ],
