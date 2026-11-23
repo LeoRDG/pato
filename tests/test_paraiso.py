@@ -36,7 +36,7 @@ class Paraiso(unittest.TestCase):
         nomes = [l['name'] for l in self.d['layouts']]
         self.assertEqual(nomes.index('Paraiso'), nomes.index('Purgatorio') + 1)
         links = [e['target'] for e in self.cena['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
-        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'CorrentesDeLuz'])
+        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'CorrentesDeLuz', 'Portais'])
         self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', '', 'HUD'])
         self.assertTrue(all(c['visibility'] for c in self.cena['layers']))
         presentes = {i['name'] for i in self.cena['instances']}

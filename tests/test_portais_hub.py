@@ -29,7 +29,10 @@ class PortaisHub(unittest.TestCase):
                 self.assertTrue(os.path.exists(os.path.join(RAIZ, rec[s['image']])))
 
     def test_eventos_usam_variaveis(self):
-        ev = json.dumps(self.hub['events'], ensure_ascii=False)
+        # os eventos dos portais ficam nos eventos externos Portais (t109), ligados no Hub
+        self.assertIn('Portais', [e.get('target') for e in self.hub['events']])
+        portais = next(x for x in self.d['externalEvents'] if x['name'] == 'Portais')
+        ev = json.dumps(self.hub['events'] + portais['events'], ensure_ascii=False)
         self.assertIn('"Scene", "parameters": ["", "portal.cena"', ev.replace('{"value": ', '').replace('}, "parameters"', ', "parameters"'))
         for v in ('portal.espera', 'portal.nome', 'portal.nome_altura', 'queda_y', 'volta_x', 'volta_y'):
             self.assertIn(v, ev)
