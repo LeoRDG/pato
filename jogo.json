@@ -84252,10 +84252,10 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (vendo o pato: na tela e sem parede no meio; desiste depois de perde_tempo s fora da tela) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Viram para o lado do pato (na investida mantêm o lado) (sprite_esquerda = desenhado olhando para a esquerda). Com firme = True (estados próprios, como caído, tonto ou frenesi) não toma tranco."
+              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (vendo o pato: na tela e sem parede no meio; desiste depois de perde_tempo s fora da tela) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Viram para o lado do pato (na investida mantêm o lado) (sprite_esquerda = desenhado olhando para a esquerda). Com firme = True (estados próprios, como caído, tonto ou frenesi) não toma tranco. Cada um decide sozinho (para cada)."
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
               "conditions": [
                 {
                   "type": {
@@ -84999,7 +84999,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "object": "Terrestre"
             }
           ],
           "parameters": []
@@ -85033,10 +85034,10 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Alinhado com o pato (a menos de carga_alcance) ruge por carga_aviso s e corre em linha reta (andando acelerado por carga_anim_vel). Chegando a soco_alcance px dele, para e dá o soco: em soco_impacto s acerta carga_dano e joga longe (carga_empurrao). Passou carga_passa px do pato ou durou carga_tempo_max s: volta a perseguir. Bateu numa parede: fica tonto e inofensivo por atordoa_tempo s."
+                  "comment": "Alinhado com o pato (a menos de carga_alcance) ruge por carga_aviso s e corre em linha reta (andando acelerado por carga_anim_vel). Chegando a soco_alcance px dele, para e dá o soco: em soco_impacto s acerta carga_dano e joga longe (carga_empurrao). Passou carga_passa px do pato ou durou carga_tempo_max s: volta a perseguir. Bateu numa parede: fica tonto e inofensivo por atordoa_tempo s. Cada um decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -86219,7 +86220,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "condenado_azul"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -86291,10 +86293,10 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Acelera quanto mais perto do pato (acelera); perto, pisca e explode (dano em explosao_raio). Morrer de qualquer jeito, inclusive a tiro, estoura bile_qtd bolhas em anel."
+                  "comment": "Acelera quanto mais perto do pato (acelera); perto, pisca e explode (dano em explosao_raio). Morrer de qualquer jeito, inclusive a tiro, estoura bile_qtd bolhas em anel. Cada um decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -86751,7 +86753,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "condenado_inchado"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -91395,7 +91398,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Aceleram até o pato (acel px/s²) até a velocidade, passam direto e fazem a curva, tremendo (tremor). Acertar uma acorda as outras a menos de alerta_raio."
+                  "comment": "Aceleram até o pato (acel px/s²) até a velocidade, passam direto e fazem a curva, tremendo (tremor). Acertar uma acorda as outras a menos de alerta_raio. Cada um decide sozinho (para cada)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -91648,7 +91651,7 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -91714,7 +91717,8 @@
                         "\"estado\""
                       ]
                     }
-                  ]
+                  ],
+                  "object": "moscas"
                 }
               ],
               "parameters": []
@@ -91738,7 +91742,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Fica altura_sobre_pato acima do pato, a dist_min..dist_max dele. Mira com uma linha fina que segue o pato devagar (mira_giro graus/s) por mira_tempo s, trava por trava_tempo s (a linha pisca) e dispara um raio de raio_largura px por raio_tempo s, que para na primeira parede."
+                  "comment": "Fica altura_sobre_pato acima do pato, a dist_min..dist_max dele. Mira com uma linha fina que segue o pato devagar (mira_giro graus/s) por mira_tempo s, trava por trava_tempo s (a linha pisca) e dispara um raio de raio_largura px por raio_tempo s, que para na primeira parede. Cada um decide sozinho (para cada)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -91781,7 +91785,7 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -92175,7 +92179,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "olho_demoniaco"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -93259,7 +93264,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Anda até o pato; a menos de salto_alcance avisa e salta em cima dele (salto_tempo s de voo, impulso salto_altura). Ao cair solta duas ondas de choque rente ao chão, uma para cada lado (onda_vel, onda_ttl s)."
+                  "comment": "Anda até o pato; a menos de salto_alcance avisa e salta em cima dele (salto_tempo s de voo, impulso salto_altura). Ao cair solta duas ondas de choque rente ao chão, uma para cada lado (onda_vel, onda_ttl s). Cada um decide sozinho (para cada)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -93288,7 +93293,7 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -93828,7 +93833,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "pigman"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -94218,10 +94224,10 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Fica a dist_min..dist_max do pato. A cada cura_intervalo s cura os inimigos perto. Alinhado com ele a menos de lingua_alcance (|dy| < lingua_alt) avisa por lingua_aviso s e dá a língua: machuca e puxa o pato para perto (lingua_puxao)."
+                  "comment": "Fica a dist_min..dist_max do pato. A cada cura_intervalo s cura os inimigos perto. Alinhado com ele a menos de lingua_alcance (|dy| < lingua_alt) avisa por lingua_aviso s e dá a língua: machuca e puxa o pato para perto (lingua_puxao). Cada um decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -94892,7 +94898,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "sapo"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -95212,7 +95219,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Salta por cima do pato e cai com um anel de anel_qtd bolhas. Abaixo de furia_abaixo da vida entra em fúria: espera entre ataques * furia_fator e cor furia_cor."
+                  "comment": "Salta por cima do pato e cai com um anel de anel_qtd bolhas. Abaixo de furia_abaixo da vida entra em fúria: espera entre ataques * furia_fator e cor furia_cor. Cada um decide sozinho (para cada)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -95434,7 +95441,7 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -95513,10 +95520,11 @@
                         "0.8"
                       ]
                     }
-                  ]
+                  ],
+                  "object": "cutulu"
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -96122,7 +96130,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "cutulu"
                 }
               ],
               "parameters": []
@@ -96146,10 +96155,10 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Passa de um lado para o outro altura_sobre_pato px acima do pato (vira passada_dist px depois dele) e, quando está a menos de bomba_alcance_x dele, solta bomba_qtd bombas a cada bomba_intervalo s."
+                  "comment": "Passa de um lado para o outro altura_sobre_pato px acima do pato (vira passada_dist px depois dele) e, quando está a menos de bomba_alcance_x dele, solta bomba_qtd bombas a cada bomba_intervalo s. Cada um decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -96408,7 +96417,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "voador"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -96762,10 +96772,10 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Fica a dist_min..dist_max do pato e altura_sobre_pato acima, e atira flechas rápidas mirando onde o pato VAI estar (flecha_lead = 1 é a previsão inteira). Abaixo de ferido_abaixo da vida atira voleio_qtd flechas, fica ferido_dist mais longe e atira mais rápido (ferido_ritmo)."
+                  "comment": "Fica a dist_min..dist_max do pato e altura_sobre_pato acima, e atira flechas rápidas mirando onde o pato VAI estar (flecha_lead = 1 é a previsão inteira). Abaixo de ferido_abaixo da vida atira voleio_qtd flechas, fica ferido_dist mais longe e atira mais rápido (ferido_ritmo). Cada um decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -97037,7 +97047,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "querubim"
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
@@ -98706,7 +98717,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Rola de um lado para o outro (rolagem_vel, patrulha_raio); vendo o pato rola até ele (perseguir_fator). Alinhada com ele (|dx| < investida_alcance, |dy| < investida_alt) gira no lugar por aviso_tempo s e dispara a investida_vel até bater na parede, onde quica para trás (quique_pulo) e fica atordoa_tempo s sem atacar."
+                  "comment": "Rola de um lado para o outro (rolagem_vel, patrulha_raio); vendo o pato rola até ele (perseguir_fator). Alinhada com ele (|dx| < investida_alcance, |dy| < investida_alt) gira no lugar por aviso_tempo s e dispara a investida_vel até bater na parede, onde quica para trás (quique_pulo) e fica atordoa_tempo s sem atacar. Cada um decide sozinho (para cada)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -98738,7 +98749,7 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
                       "type": {
@@ -99916,7 +99927,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "object": "roda_anjo"
                 }
               ],
               "parameters": []
@@ -116708,7 +116720,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Moedas do chefe: se ele morre na lava (fase 2), as moedas que solta voam para cima das pontes (moedas_ponte_tempo_min/max s de voo) e quicam lá em vez de cair na lava."
+              "comment": "Moedas do chefe: se ele morre na lava (fase 2), as moedas que solta voam para cima das pontes (moedas_ponte_tempo_min/max s de voo) e quicam lá em vez de cair na lava. Cada um decide sozinho (para cada)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -116918,7 +116930,7 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
               "conditions": [
                 {
                   "type": {
@@ -117038,7 +117050,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "object": "moeda"
             }
           ],
           "parameters": []
