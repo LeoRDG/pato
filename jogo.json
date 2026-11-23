@@ -88768,45 +88768,12 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Condenado em chamas: anda devagar até o pato. Abaixo de frenesi_abaixo da vida se inflama: firme (sem tranco), corre a frenesi_vel trocando de direção a cada frenesi_troca_min..max s (mais vezes para o pato) e pula à toa."
+                  "comment": "Condenado em chamas: anda devagar até o pato. Abaixo de frenesi_abaixo da vida se inflama: firme (sem tranco), corre a frenesi_vel trocando de direção a cada frenesi_troca_min..max s (mais vezes para o pato) e pula à toa. Cada condenado decide sozinho (para cada)."
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "estado",
-                        "=",
-                        "\"perseguir\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "frenesi",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "condenado_em_chamas",
+                  "conditions": [],
                   "actions": [],
                   "events": [
                     {
@@ -88814,12 +88781,35 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "abs(pato.CenterX() - condenado_em_chamas.CenterX())",
-                            ">",
-                            "condenado_em_chamas.parar_dist"
+                            "condenado_em_chamas",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "frenesi",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -88833,7 +88823,267 @@
                                 "value": "BuiltinCommonInstructions::CompareNumbers"
                               },
                               "parameters": [
-                                "pato.CenterX() - condenado_em_chamas.CenterX()",
+                                "abs(pato.CenterX() - condenado_em_chamas.CenterX())",
+                                ">",
+                                "condenado_em_chamas.parar_dist"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "pato.CenterX() - condenado_em_chamas.CenterX()",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::SimulateLeftKey"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "PlatformerObject"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "quer_andar",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "pato.CenterX() - condenado_em_chamas.CenterX()",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::SimulateRightKey"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "PlatformerObject"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "quer_andar",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "frenesi",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas.vida",
+                            "<",
+                            "condenado_em_chamas.max_vida * condenado_em_chamas.frenesi_abaixo"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "frenesi",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "firme",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "condenado_em_chamas.frenesi_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_espiral.wav",
+                            "",
+                            "75",
+                            "RandomFloatInRange(1.15, 1.3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "explosao_faiscas",
+                            "condenado_em_chamas.CenterX()",
+                            "condenado_em_chamas.CenterY()",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "frenesi",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "PlatformerObject",
+                            "=",
+                            "condenado_em_chamas.frenesi_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "condenado_em_chamas",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "condenado_em_chamas",
+                                "frenesi_dir",
                                 "<",
                                 "0"
                               ]
@@ -88867,10 +89117,11 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "pato.CenterX() - condenado_em_chamas.CenterX()",
+                                "condenado_em_chamas",
+                                "frenesi_dir",
                                 ">",
                                 "0"
                               ]
@@ -88898,316 +89149,43 @@
                               ]
                             }
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "frenesi",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas.vida",
-                        "<",
-                        "condenado_em_chamas.max_vida * condenado_em_chamas.frenesi_abaixo"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "frenesi",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "firme",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangeColor"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "condenado_em_chamas.frenesi_cor"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_espiral.wav",
-                        "",
-                        "75",
-                        "RandomFloatInRange(1.15, 1.3)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "estado",
-                        "=",
-                        "\"perseguir\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "\"estado\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "explosao_faiscas",
-                        "condenado_em_chamas.CenterX()",
-                        "condenado_em_chamas.CenterY()",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "frenesi",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::MaxSpeed"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "PlatformerObject",
-                        "=",
-                        "condenado_em_chamas.frenesi_vel"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_em_chamas",
-                        "estado",
-                        "=",
-                        "\"perseguir\""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "frenesi_dir",
-                            "<",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateLeftKey"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "PlatformerObject"
-                          ]
                         },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "frenesi_dir",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateRightKey"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "\"frenesi\"",
-                            ">",
-                            "condenado_em_chamas.frenesi_espera"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "\"frenesi\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "frenesi_espera",
-                            "=",
-                            "RandomFloatInRange(condenado_em_chamas.frenesi_troca_min, condenado_em_chamas.frenesi_troca_max)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_em_chamas",
-                            "frenesi_dir",
-                            "=",
-                            "sign(RandomFloatInRange(-1, 1) + 0.001)"
-                          ]
-                        }
-                      ],
-                      "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "CompareObjectTimer"
                               },
                               "parameters": [
-                                "RandomFloat(1)",
-                                "<",
-                                "0.65"
+                                "condenado_em_chamas",
+                                "\"frenesi\"",
+                                ">",
+                                "condenado_em_chamas.frenesi_espera"
                               ]
                             }
                           ],
                           "actions": [
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "condenado_em_chamas",
+                                "\"frenesi\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "condenado_em_chamas",
+                                "frenesi_espera",
+                                "=",
+                                "RandomFloatInRange(condenado_em_chamas.frenesi_troca_min, condenado_em_chamas.frenesi_troca_max)"
+                              ]
+                            },
                             {
                               "type": {
                                 "value": "SetNumberObjectVariable"
@@ -89216,42 +89194,72 @@
                                 "condenado_em_chamas",
                                 "frenesi_dir",
                                 "=",
-                                "sign(pato.CenterX() - condenado_em_chamas.CenterX() + 0.001)"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::IsOnFloor"
-                              },
-                              "parameters": [
-                                "condenado_em_chamas",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "RandomFloat(1)",
-                                "<",
-                                "condenado_em_chamas.frenesi_pulo_chance"
+                                "sign(RandomFloatInRange(-1, 1) + 0.001)"
                               ]
                             }
                           ],
-                          "actions": [
+                          "events": [
                             {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateJumpKey"
-                              },
-                              "parameters": [
-                                "condenado_em_chamas",
-                                "PlatformerObject"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "RandomFloat(1)",
+                                    "<",
+                                    "0.65"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "frenesi_dir",
+                                    "=",
+                                    "sign(pato.CenterX() - condenado_em_chamas.CenterX() + 0.001)"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::IsOnFloor"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "PlatformerObject"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "RandomFloat(1)",
+                                    "<",
+                                    "condenado_em_chamas.frenesi_pulo_chance"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::SimulateJumpKey"
+                                  },
+                                  "parameters": [
+                                    "condenado_em_chamas",
+                                    "PlatformerObject"
+                                  ]
+                                }
                               ]
                             }
                           ]
