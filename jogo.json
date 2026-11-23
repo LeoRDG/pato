@@ -69924,7 +69924,404 @@
       "persistentUuid": "7c02b8ed-28f9-5471-bd25-272a6ed21aef",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "vida",
+          "persistentUuid": "a13700a4-5a50-5865-9ea0-a2dfd2190c0c",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "max_vida",
+          "persistentUuid": "0331003e-e0d5-5d12-981b-d229d577fa61",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "qtd_moedas",
+          "persistentUuid": "222ee726-d923-5635-ae94-96c616670e12",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "f8719b16-34a1-592d-800a-94121bf4f197",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "estado",
+          "persistentUuid": "a6c3a96d-f964-50d0-8d29-58ca5e002ce4",
+          "type": "string",
+          "value": "calmo"
+        },
+        {
+          "name": "sangue",
+          "persistentUuid": "60b9f724-4eee-55d8-b7b3-c814d31a9834",
+          "type": "string",
+          "value": "azul"
+        },
+        {
+          "name": "tem_barra_de_vida",
+          "persistentUuid": "a3eb7205-b88c-5ab9-afc8-490ab45f1138",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "firme",
+          "persistentUuid": "d33c5ec5-2618-5451-ab10-64bd8d499f4b",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "chefe_final",
+          "persistentUuid": "d3fb3fe9-5e34-55d1-b14f-0ba248badf12",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "invulneravel",
+          "persistentUuid": "8c18bce3-d733-50e7-a793-5f414052500b",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "reflete",
+          "persistentUuid": "f893152f-e641-5f26-a14e-2c6aa8b9b572",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ang",
+          "persistentUuid": "f88938b0-d826-5b08-9bab-98e68d7b8e3e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vida_controle",
+          "persistentUuid": "8a93aa38-b513-5ff8-b9cf-56ea3aeb4889",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "velocidade",
+          "persistentUuid": "03a97862-4325-56d2-bce2-1bf1e67a54f3",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "animacao_temp",
+          "persistentUuid": "1d2a17c7-36de-5624-bd28-54f00e6c2b34",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "morto",
+          "persistentUuid": "c2670742-9842-5289-8c04-78aee0abaf56",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "base_x",
+          "persistentUuid": "2ceb7a31-29bd-50ea-a87f-e77794fe7ae2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "ac05d361-db0f-55eb-8f72-460f35431481",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "direcao",
+          "persistentUuid": "837387b4-bf42-52ff-ba24-4d6b870ad81d",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escolha",
+          "persistentUuid": "16a39d07-eb45-50b4-be4e-f86bbb3387ee",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "tiros",
+          "persistentUuid": "3ad07387-7c89-5859-b068-61b794943680",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kb_dir",
+          "persistentUuid": "a214c088-da07-5463-933e-8cf9ca24ed9f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "acertado",
+          "persistentUuid": "7809188d-0b57-5b9f-aecd-3f66518e44d0",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quer_andar",
+          "persistentUuid": "c4d14db6-e004-55c0-ad06-c824179088e4",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "sprite_esquerda",
+          "persistentUuid": "2cb3bdf8-70cc-5997-b069-816b56e4ee93",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "bala_serie",
+          "persistentUuid": "29885a4f-e1ca-55ae-acff-9f37bb44b5eb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "empurrao_x",
+          "persistentUuid": "628bd47b-6743-5280-8523-917bd370e87c",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "dano_duracao",
+          "persistentUuid": "7b9a3d14-686d-5d2d-8d11-2c2e583529d3",
+          "type": "number",
+          "value": 0.2
+        },
+        {
+          "name": "patrulha_vel",
+          "persistentUuid": "9169acf2-c5d2-55f8-a85d-541807796329",
+          "type": "number",
+          "value": 180
+        },
+        {
+          "name": "parar_dist",
+          "persistentUuid": "e63398d4-200b-5e16-952d-d39d9e8bcf5f",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "altura_sobre_pato",
+          "persistentUuid": "8781c00e-132a-58ea-a11a-bba95a974d2a",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "onda_amp",
+          "persistentUuid": "a8b311a7-75b6-58a8-ac7d-ec8e4e3c7c62",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "onda_suave",
+          "persistentUuid": "3722aead-c31b-57d6-92d9-f94bf2afdb83",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "ataque_espera",
+          "persistentUuid": "f02f7584-3940-5f64-b578-0760ee423df1",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "ataque_alcance",
+          "persistentUuid": "e011b5be-04b7-5bcb-bdbd-481bb5b5fd10",
+          "type": "number",
+          "value": 80
+        },
+        {
+          "name": "aviso_tempo",
+          "persistentUuid": "5fa6cd2b-4f90-5008-ae5f-fa81ed43c715",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "mergulho_vel",
+          "persistentUuid": "211d2522-b5b2-5feb-9b8e-8d962173a034",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "mergulho_tempo",
+          "persistentUuid": "c7bb434e-178a-51ce-ac74-c410174601fa",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "reflete_vel",
+          "persistentUuid": "053be06c-af4c-54da-85d8-8407ebece47e",
+          "type": "number",
+          "value": 650
+        },
+        {
+          "name": "reflete_dano",
+          "persistentUuid": "2d88ced0-fd1c-51d3-b6b8-6e7541bfcf20",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "morte_feita",
+          "persistentUuid": "19be7203-8e4f-5543-8226-412a5d95f6ed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "preparado",
+          "persistentUuid": "f39f0b1c-f521-5977-85b0-69a2a5530da6",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "golpe",
+          "persistentUuid": "d0a8d1cb-c372-57cc-80cf-0cc46744b402",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "vx",
+          "persistentUuid": "406e3520-5136-54e7-9510-6bf9a74d75df",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vy",
+          "persistentUuid": "cc15b107-065d-5846-9251-7fd199f9d3bb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dx",
+          "persistentUuid": "0cc32ab3-9974-5598-b63e-a77227a6732f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dy",
+          "persistentUuid": "5cd67746-f83f-51b3-a48c-34dccac273b1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "rnd",
+          "persistentUuid": "a4277b35-5383-5b62-acd0-e42016958db1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "i",
+          "persistentUuid": "a2d39b24-2ce4-5cc3-9e3b-05ff05dddce2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fechado_tempo",
+          "persistentUuid": "c460cd80-a596-5ff8-a2f0-07ef813abb5d",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "aberto_tempo",
+          "persistentUuid": "1c8d7331-b0b4-5d62-a5e8-124b8c9b9971",
+          "type": "number",
+          "value": 2.2
+        },
+        {
+          "name": "aberto",
+          "persistentUuid": "478c71b1-ce2c-5d01-9845-eb0acbcf0cf7",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "anel_qtd",
+          "persistentUuid": "063bbc49-d3ed-5ff0-9558-397389689a8a",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "anel_vel",
+          "persistentUuid": "355f4df6-411f-54b3-ab3d-59b85ce6a11f",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "anel_intervalo",
+          "persistentUuid": "854657cd-ad3a-5b19-9784-58cade8062db",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "anel_giro",
+          "persistentUuid": "8b1f32a1-a51f-59b6-a53b-f78ed6ac8a99",
+          "type": "number",
+          "value": 18
+        },
+        {
+          "name": "luz_dano",
+          "persistentUuid": "aefe74de-0fc8-584c-892c-58f9aeeebdd6",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "segue",
+          "persistentUuid": "90b4d90a-4ad8-5043-b3f7-0b57f81512c5",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "altura",
+          "persistentUuid": "99bdfde1-5bab-5f99-ae63-234002e580d0",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "giro_fechado",
+          "persistentUuid": "68acd4ac-ffbd-5ca8-b20e-d18fc609949b",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "giro_aberto",
+          "persistentUuid": "2a2e0593-0574-58ac-a432-086a114bebfb",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "aviso_abrir",
+          "persistentUuid": "09aaf9d8-07d8-52bb-8402-aed10508c73d",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "morte_luz_raio",
+          "persistentUuid": "9eb9a49d-c512-5718-8348-926013be9e40",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "morte_luz_qtd",
+          "persistentUuid": "192b2506-3a0a-584a-a651-5c73e3882a27",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "d5b5b21c-5336-56f2-a1e6-464e269e7331",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "53c5e76a-0c2b-59d8-a50a-ac0eb3093079",
+          "type": "number",
+          "value": 2
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -72135,6 +72532,138 @@
           "persistentUuid": "098d7d21-37d4-5811-aa24-f35f4609ca2b",
           "type": "string",
           "value": "255;255;255"
+        },
+        {
+          "name": "canal_vivos",
+          "persistentUuid": "0e4afe70-3aaf-5516-b66a-28aa308dabeb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "canal_qtd",
+          "persistentUuid": "c9a3b16d-5672-5fbe-8016-743bf1c0aebb",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "canal_qtd_3",
+          "persistentUuid": "b8e65935-9743-588a-8c49-8f35e1d647a5",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "canal_qtd_4",
+          "persistentUuid": "483c91c2-fbd1-5fab-8691-a5af6f85a79f",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "canal_qtd_extra",
+          "persistentUuid": "23bb1325-88f0-5a94-b031-72d36d57f024",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "canal_respawn",
+          "persistentUuid": "820352ca-f898-5a83-b392-30af74634065",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "canal_intervalo",
+          "persistentUuid": "e9dfae43-b4c4-5645-8821-d4505b7a6f50",
+          "type": "number",
+          "value": 1.1
+        },
+        {
+          "name": "canal_max",
+          "persistentUuid": "b81dd27a-a900-5a45-b7c1-7900f6ce083f",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "canal_orbita_raio",
+          "persistentUuid": "50be94ab-4cc8-5119-9a43-e74c195ba27b",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "canal_orbita_vel",
+          "persistentUuid": "8de1a00c-4068-5918-807e-e5f8c7626bdc",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "canal_passo",
+          "persistentUuid": "8d96016b-e854-5ec0-88e0-59cf01dfd538",
+          "type": "number",
+          "value": 2.1
+        },
+        {
+          "name": "canal_seq",
+          "persistentUuid": "d4e60d5c-cc17-5322-8a1f-669a66030c87",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "janela_amor",
+          "persistentUuid": "6df3deab-c671-56d7-a7bb-81cfff48e37d",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "laco_espessura",
+          "persistentUuid": "51aef895-2ab6-52d4-bf29-299d80f00f07",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "escudo_quebra_tom",
+          "persistentUuid": "db723977-a4f5-500f-9f94-ea8a331c85bf",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "juizo_tempo",
+          "persistentUuid": "72b83212-ebcc-5a1d-8175-badb60dfff44",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "juizo_graca",
+          "persistentUuid": "e561e68d-01c3-537c-b90e-4effc539b9d7",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "juizo_dano",
+          "persistentUuid": "011fd994-0112-54e8-bc57-bb9a929e1827",
+          "type": "number",
+          "value": 85
+        },
+        {
+          "name": "juizo_canal_qtd",
+          "persistentUuid": "7b6a1521-55fc-5ef1-b240-7b4ac0de5b18",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "juizo_flash",
+          "persistentUuid": "596566aa-083c-5d01-aec1-d61ae2591176",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "juizo_tom",
+          "persistentUuid": "5db20484-98bb-5e2d-8a0f-a91f77c6789a",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "juizo_falha_tom",
+          "persistentUuid": "77f308c4-e72f-55de-b3f1-e1c117962b56",
+          "type": "number",
+          "value": 1.6
         }
       ],
       "effects": [],
@@ -72856,6 +73385,45 @@
         "texture": "",
         "debugMode": false
       }
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 123,
+      "outlineSize": 1,
+      "outlineOpacity": 200,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 150,
+        "b": 185
+      },
+      "name": "laco_amor",
+      "persistentUuid": "6f6bb3d4-8857-5568-8269-9e72ffa23f04",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 3,
+            "outerStrength": 5
+          },
+          "stringParameters": {
+            "color": "255;120;170"
+          },
+          "booleanParameters": {}
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -73099,6 +73667,9 @@
               },
               {
                 "objectName": "luz_halo"
+              },
+              {
+                "objectName": "laco_amor"
               }
             ]
           }
@@ -73597,6 +74168,9 @@
         },
         {
           "name": "deus"
+        },
+        {
+          "name": "canalizador"
         }
       ]
     },
@@ -73671,6 +74245,9 @@
         },
         {
           "name": "deus"
+        },
+        {
+          "name": "canalizador"
         }
       ]
     },
@@ -134107,6 +134684,1597 @@
                         "Animation",
                         "=",
                         "\"idle\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Anel rosa: amor",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "canal_vivos",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "canal_vivos",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "object": "canalizador"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "canal_qtd",
+                        "=",
+                        "deus.canal_qtd_3"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "canal_qtd",
+                        "=",
+                        "deus.canal_qtd_4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "ang",
+                        "+",
+                        "deus.canal_orbita_vel * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "=",
+                        "deus.cx + cos(canalizador.ang) * deus.canal_orbita_raio - canalizador.Width() / 2",
+                        "=",
+                        "deus.cy + sin(canalizador.ang) * deus.canal_orbita_raio - canalizador.Height() / 2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "laco_amor",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "laco_amor",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        "=",
+                        "deus.z_base + 3"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::LineV2"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        "canalizador.CenterX()",
+                        "canalizador.CenterY()",
+                        "deus.cx",
+                        "deus.cy",
+                        "deus.laco_espessura"
+                      ]
+                    }
+                  ],
+                  "object": "canalizador"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "deus_escudo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vulneravel",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"janela\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Animation",
+                        "=",
+                        "\"contrai\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.escudo_quebra_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"janela\"",
+                        ">",
+                        "deus.aberto_tempo"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vulneravel",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        ">=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable",
+                        "inverted": true
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fase\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal\"",
+                        ">",
+                        "deus.canal_respawn"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "canalizador",
+                            "deus.cx",
+                            "deus.cy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "ang",
+                            "=",
+                            "deus.canal_seq * deus.canal_passo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "canal_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "=",
+                            "deus.z_base + 4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "Animation",
+                            "=",
+                            "\"canalizar\""
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.canal_qtd"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"amor\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "canalizador",
+                            "deus.cx",
+                            "deus.cy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "ang",
+                            "=",
+                            "deus.canal_seq * deus.canal_passo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "canal_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "=",
+                            "deus.z_base + 4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "Animation",
+                            "=",
+                            "\"canalizar\""
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.canal_qtd_extra"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal_juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.juizo_tom"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "canalizador",
+                            "deus.cx",
+                            "deus.cy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "ang",
+                            "=",
+                            "deus.canal_seq * deus.canal_passo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "canal_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "=",
+                            "deus.z_base + 4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "Animation",
+                            "=",
+                            "\"canalizar\""
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.juizo_canal_qtd"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"canal_juizo\"",
+                            ">",
+                            "deus.canal_intervalo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "deus.canal_vivos",
+                            "<",
+                            "deus.canal_max"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"canal_juizo\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "canalizador",
+                            "deus.cx",
+                            "deus.cy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "ang",
+                            "=",
+                            "deus.canal_seq * deus.canal_passo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "canal_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "=",
+                            "deus.z_base + 4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "Animation",
+                            "=",
+                            "\"canalizar\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "deus.canal_vivos",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\"",
+                            ">",
+                            "deus.juizo_graca"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "etapa",
+                            "=",
+                            "\"juizo_falha\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "deus_olho",
+                            "Animation",
+                            "=",
+                            "\"juizo_falha\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_luz.wav",
+                            "",
+                            "deus.som_volume",
+                            "deus.juizo_falha_tom"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "deus.canal_vivos",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\"",
+                            ">",
+                            "deus.juizo_tempo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida",
+                            "-",
+                            "deus.juizo_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "invencivel",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "pato",
+                            "\"iframes\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "ultimo_agressor",
+                            "=",
+                            "\"deus\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "etapa",
+                            "=",
+                            "\"juizo_clarao\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerAmbientLightColor"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Luz\"",
+                            "deus.luz_ambiente_flash"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_luz.wav",
+                            "",
+                            "deus.som_volume",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo_falha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo_clarao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.juizo_flash"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerAmbientLightColor"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Luz\"",
+                        "luz_ambiente_normal"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        ""
                       ]
                     }
                   ]
