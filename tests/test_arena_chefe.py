@@ -1,5 +1,8 @@
 """Sala do demônio chefe fecha quando ele vê o pato (tools/t61_arena_chefe.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -12,7 +15,7 @@ class ArenaChefe(unittest.TestCase):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
         cls.cena = next(l for l in cls.d['layouts'] if l['name'] == 'Inferno')
-        cls.arena = next(e for e in next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.arena = next(e for e in folha(cls.d, 'Chefe')
                          if e.get('name') == 'Arena')
 
     def test_portao_desenhado(self):
@@ -73,6 +76,7 @@ class ArenaChefe(unittest.TestCase):
         self.assertLessEqual({'chefe_trancado', 'chefe_aberto', 'chefe_fora'}, cena)
         self.assertNotIn('aparece_tempo', nomes)
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t61.migra(d)

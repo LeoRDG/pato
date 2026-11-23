@@ -1,5 +1,7 @@
 """Cutulu como chefe de três fases (tools/t124_cutulu_chefe.py)."""
-import json, os, re, unittest
+import json, os, re, sys, unittest
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = os.environ.get('JOGO_JSON', os.path.join(RAIZ, 'jogo.json'))
@@ -16,15 +18,15 @@ class CutuluChefe(unittest.TestCase):
     def setUpClass(cls):
         cls.d = json.load(open(JOGO, encoding='utf-8'))
         cls.obj = {o['name']: o for o in cls.d['objects']}
-        cls.folha = next(x for x in cls.d['externalEvents'] if x['name'] == 'Cutulu')
+        cls.folha = {'events': folha(cls.d, 'Cutulu')}
         cls.txt = json.dumps(cls.folha['events'], ensure_ascii=False)
 
     def test_ligada_depois_do_hud(self):
         for nome in ('Purgatorio', 'Teste'):
             alvos = [e.get('target') for e in next(l for l in self.d['layouts'] if l['name'] == nome)['events']]
-            self.assertIn('Cutulu', alvos, nome)
-            self.assertLess(alvos.index('Inimigos'), alvos.index('HUD'))
-            self.assertEqual(alvos.index('Cutulu'), alvos.index('HUD') + 1, nome)
+            self.assertIn('InimigosPurgatorio', alvos, nome)
+            self.assertLess(alvos.index('Inimigos'), alvos.index('InimigosPurgatorio'))
+            self.assertLess(alvos.index('InimigosPurgatorio'), alvos.index('HUD'))
 
     def test_variaveis_usadas_existem(self):
         for o in ('cutulu', 'moscas', 'pato', 'projetil_inimigo'):

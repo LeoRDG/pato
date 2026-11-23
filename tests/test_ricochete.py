@@ -24,6 +24,11 @@ def glob(nome):
 
 
 PROJ = next(e for e in next(x for x in JOGO['externalEvents'] if x['name'] == 'Combate')['events'] if e.get('name') == 'Projéteis')
+# t131 juntou os eventos soltos de Projéteis em grupos; aqui eles voltam a ficar em sequência, na mesma ordem
+_SOLTOS = {'Ricochete', 'Balas no terreno', 'Bala em inimigo invulnerável', 'Dano da bala'}
+PROJ = dict(PROJ, events=[x for e in PROJ['events']
+                          for x in (e['events'] if e.get('name') in _SOLTOS else [e])
+                          if not x['type'].endswith('Comment')])
 
 
 def test_upgrade_no_catalogo():
@@ -47,7 +52,7 @@ def test_queda_pelo_caminho_percorrido():
     assert 'projetil.ox, projetil.oy' not in texto
     assert texto.count('projetil.percorrido') >= 2
     assert 'max(1, projetil.queda_fim - projetil.queda_ini)' in texto
-    nasce = balas['events'][1]
+    nasce = balas['events'][0]
     assert any(a['parameters'][:4] == ['projetil', 'ricochetes', '=', 'GlobalVariable(upgrades.ricochete)'] for a in nasce['actions'])
     assert any(a['parameters'][:4] == ['projetil', 'queda_fim', '=', 'Arma.queda_fim'] for a in nasce['actions'])
 
@@ -113,7 +118,7 @@ def test_granada_perde_velocidade_ao_quicar():
     for arma in ('pistola', 'doze', 'minigun'):
         assert 0 < v(obj(arma), 'ricochete_vel')['value'] <= 1, arma
     balas = next(e for e in PROJ['events'] if e.get('name') == 'Balas (alcance, queda e perfuração)')
-    assert any(a['parameters'][:4] == ['projetil', 'ricochete_vel', '=', 'Arma.ricochete_vel'] for a in balas['events'][1]['actions'])
+    assert any(a['parameters'][:4] == ['projetil', 'ricochete_vel', '=', 'Arma.ricochete_vel'] for a in balas['events'][0]['actions'])
     ric = next(e for e in PROJ['events'] if e.get('type') == 'BuiltinCommonInstructions::ForEach'
                and any(c['parameters'][:3] == ['projetil', 'ricochetes', '>'] for c in e.get('conditions') or []))
     acts = [a['parameters'][:4] for a in ric['events'][-1]['actions']]

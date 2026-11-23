@@ -5,6 +5,8 @@ from PIL import Image
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import t59_demonio_chefe as t59
+sys.path.insert(0, os.path.join(RAIZ, 'tests'))
+from folhas import folha
 
 D = 'demonio_chefe'
 
@@ -22,7 +24,7 @@ class DemonioChefe(unittest.TestCase):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.obj = next(o for o in cls.d['objects'] if o['name'] == D)
         cls.vars = {v['name']: v['value'] for v in cls.obj['variables']}
-        cls.ext = next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')
+        cls.ext = {'events': folha(cls.d, 'Chefe')}
 
     def test_animacoes_e_imagens(self):
         recursos = {r['name'] for r in self.d['resources']['resources']}
@@ -42,7 +44,8 @@ class DemonioChefe(unittest.TestCase):
         self.assertNotIn(D, grupos.get('CorpoACorpo', set()))
         cena = next(l for l in self.d['layouts'] if l['name'] == 'Inferno')
         alvos = [e['target'] for e in cena['events'] if e['type'].endswith('::Link')]
-        self.assertGreater(alvos.index('Chefe'), max(alvos.index('Inimigos'), alvos.index('HUD')))
+        self.assertGreater(alvos.index('InimigosInferno'), alvos.index('Inimigos'))
+        self.assertGreater(alvos.index('CenarioInferno'), max(alvos.index('Combate'), alvos.index('HUD')))
 
     def test_variaveis_usadas_existem(self):
         texto = json.dumps(self.ext['events'])
@@ -66,6 +69,7 @@ class DemonioChefe(unittest.TestCase):
                 for n in re.findall(r'(?<![\w.])\d+(?:\.\d+)?(?![\w])', p):
                     self.assertIn(n, permitidos | {'30'}, f'{ins["type"]["value"]}: {p}')
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t59.migra(d)

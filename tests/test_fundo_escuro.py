@@ -1,12 +1,15 @@
+import sys
 import json, os, re
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
 OBJ = {o['name']: o for o in JOGO['objects']}
 CENA = next(l for l in JOGO['layouts'] if l['name'] == 'Inferno')
 VARS = {v['name']: v['value'] for v in CENA['variables']}
-EXT = next(x for x in JOGO['externalEvents'] if x['name'] == 'FundoEscuro')
+EXT = {'events': folha(JOGO, 'FundoEscuro')}
 TXT = json.dumps(EXT['events'])
 CAMADAS = ('ceu', 'fundo', 'meio', 'frente')
 
@@ -35,7 +38,7 @@ def test_variaveis_da_troca():
 
 
 def test_eventos_ligados_e_camadas_por_cima():
-    assert any(e['type'].endswith('::Link') and e.get('target') == 'FundoEscuro' for e in CENA['events'])
+    assert any(e['type'].endswith('::Link') and e.get('target') == 'CenarioInferno' for e in CENA['events'])
     for k, n in enumerate(CAMADAS):
         e = f'bg_inferno_noite_{n}'
         assert f'["", "{e}", "bg_inferno_{n}.X()", "bg_inferno_{n}.Y()", "\\"Fundo\\""]' in TXT

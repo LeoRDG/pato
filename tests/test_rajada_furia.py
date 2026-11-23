@@ -1,5 +1,8 @@
 """Rajada giratória de bolas de fogo do demônio chefe em fúria (tools/t69_rajada_furia.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -18,7 +21,7 @@ class RajadaFuria(unittest.TestCase):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.boss = next(o for o in cls.d['objects'] if o['name'] == t69.D)
         cls.v = {x['name']: x['value'] for x in cls.boss['variables']}
-        cls.grupo = next(e for e in next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.grupo = next(e for e in folha(cls.d, 'Chefe')
                          if e.get('name') == 'Rajada da fúria')
 
     def test_so_em_furia_na_explosao(self):
@@ -51,6 +54,7 @@ class RajadaFuria(unittest.TestCase):
         for v in re.findall(t69.D + r'\.([a-z_]+)\b(?!\()', json.dumps(self.grupo)):
             self.assertIn(v, self.v)
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t69.migra(d)

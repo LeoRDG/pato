@@ -1,5 +1,8 @@
 """Câmera mais baixa na luta contra o demônio chefe (tools/t67_camera_chefe.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -11,7 +14,7 @@ class CameraChefe(unittest.TestCase):
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
-        cls.grupo = next(e for e in next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.grupo = next(e for e in folha(cls.d, 'Chefe')
                          if e.get('name') == 'Câmera da luta')
 
     def vars(self, nome):
@@ -38,6 +41,7 @@ class CameraChefe(unittest.TestCase):
         offset_luta = (-384 / 2 + 155 / 2) * v['camera_mistura'] + v['camera_dy']
         self.assertGreater(offset_luta, self.vars('pato')['camera_offset_normal'])
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t67.migra(d)

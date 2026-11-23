@@ -1,5 +1,8 @@
 """Fase do Paraíso (tools/t83_paraiso.py): cena, correntes de luz, queda, anjos e um caminho do portão até o Empíreo."""
 import json, math, os, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 from collections import deque
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -36,7 +39,7 @@ class Paraiso(unittest.TestCase):
         nomes = [l['name'] for l in self.d['layouts']]
         self.assertEqual(nomes.index('Paraiso'), nomes.index('Purgatorio') + 1)
         links = [e['target'] for e in self.cena['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
-        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'CorrentesDeLuz', 'Portais'])
+        self.assertEqual(links, ['Jogador', 'Inimigos', 'InimigosParaiso', 'Combate', 'HUD', 'Portais'])
         self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', '', 'HUD'])
         self.assertTrue(all(c['visibility'] for c in self.cena['layers']))
         presentes = {i['name'] for i in self.cena['instances']}
@@ -54,7 +57,7 @@ class Paraiso(unittest.TestCase):
             self.assertIn(v, self.var)
             self.assertIn(v, txt)
         self.assertIn(self.var['proxima_cena'], [l['name'] for l in self.d['layouts']])
-        ev = json.dumps(next(e for e in self.d['externalEvents'] if e['name'] == 'CorrentesDeLuz')['events'])
+        ev = json.dumps(folha(self.d, 'CorrentesDeLuz'))
         for v in ('forca', 'ligada', 'desligada', 'aviso', 'defasagem', 'opacidade_ligada', 'opacidade_desligada', 'pisca_vel'):
             self.assertIn(f'corrente_luz.{v}', ev)
         self.assertIn('SetCurrentFallSpeed', ev)
@@ -138,7 +141,7 @@ class Paraiso(unittest.TestCase):
         """Sem as correntes não dá para atravessar o abismo do Sol nem subir ao Empíreo."""
         self.assertGreaterEqual(len(self.correntes), 3)
         self.assertEqual(self.obj['corrente_luz']['type'], 'TiledSpriteObject::TiledSprite')
-        ev = json.dumps(next(e for e in self.d['externalEvents'] if e['name'] == 'CorrentesDeLuz')['events'])
+        ev = json.dumps(folha(self.d, 'CorrentesDeLuz'))
         self.assertIn('"ativa", "True"', ev)
         self.assertIn('mod(corrente_luz.t + corrente_luz.defasagem, corrente_luz.ligada + corrente_luz.desligada)', ev)
 

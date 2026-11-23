@@ -1,5 +1,8 @@
 """Espinhos (tools/t76_espinhos.py): estão no Terreno mas não dá para pisar (não são plataforma)."""
 import json, os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 import numpy as np
 from PIL import Image
 
@@ -18,11 +21,11 @@ def test_objeto_no_terreno_e_nao_pisavel():
 
 
 def test_encostar_machuca_e_empurra():
-    ev = json.dumps(next(e for e in JOGO['externalEvents'] if e['name'] == 'Espinhos')['events'])
+    ev = json.dumps(folha(JOGO, 'Espinhos'))
     for trecho in ('"CollisionNP"}, "parameters": ["pato", "espinhos"', 'espinhos.dano', 'espinhos.empurrao', '"invencivel", "False"'):
         assert trecho in ev
     cena = next(l for l in JOGO['layouts'] if l['name'] == 'Purgatorio')
-    assert 'Espinhos' in [e.get('target') for e in cena['events']]
+    assert 'CenarioPurgatorio' in [e.get('target') for e in cena['events']]
 
 
 def test_imagem_emenda_na_horizontal():

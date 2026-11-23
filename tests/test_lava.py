@@ -1,12 +1,15 @@
+import sys
 import json, os, re
 import numpy as np
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
 OBJ = {o['name']: o for o in JOGO['objects']}
 RES = {r['name'] for r in JOGO['resources']['resources']}
-LAVA = next(x for x in JOGO['externalEvents'] if x['name'] == 'Lava')
+LAVA = {'events': folha(JOGO, 'Lava')}
 T = 32
 QUENTE = {(112, 3, 16), (145, 12, 7), (204, 44, 22), (251, 60, 35), (240, 126, 32), (229, 171, 33), (58, 3, 12), (84, 3, 12)}
 PALETA_LAVA = {tuple(p[:3]) for p in np.array(Image.open(os.path.join(RAIZ, 'assets/gandalf_hell/lava/idle_00.png')).convert('RGBA')).reshape(-1, 4) if p[3]}
@@ -78,7 +81,7 @@ def test_bolha_cresce_e_estoura():
 
 def test_eventos_da_lava_ligados_e_sem_numero_solto():
     cena = next(l for l in JOGO['layouts'] if l['name'] == 'Inferno')
-    assert any(e['type'].endswith('::Link') and e.get('target') == 'Lava' for e in cena['events'])
+    assert any(e['type'].endswith('::Link') and e.get('target') == 'CenarioInferno' for e in cena['events'])
     txt = json.dumps(LAVA['events'])
     for obj, var in set(re.findall(r'\b(lava)\.([a-z_]+)\b', txt)):
         assert var in variaveis(obj), (obj, var)                                # toda variável usada existe no objeto

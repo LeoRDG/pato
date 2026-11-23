@@ -22,7 +22,8 @@ def grupos_de_eventos(evs, saida=None):
     return saida
 
 
-G = grupos_de_eventos(EXT['Inimigos'])
+INI = EXT['Inimigos'] + EXT['InimigosInferno'] + EXT['InimigosPurgatorio'] + EXT['InimigosParaiso']
+G = grupos_de_eventos(INI)
 
 
 def variaveis(nome):
@@ -30,10 +31,10 @@ def variaveis(nome):
 
 
 def test_folha_migrada_uma_vez_e_ligada_nas_fases():
-    assert json.dumps(EXT['Inimigos'], ensure_ascii=False).count('Mecânicas dos inimigos (t78)') == 1
-    for cena in ('Inferno', 'Purgatorio'):
+    for cena, reino in (('Inferno', 'InimigosInferno'), ('Purgatorio', 'InimigosPurgatorio')):
         lay = next(l for l in JOGO['layouts'] if l['name'] == cena)
-        assert 'Inimigos' in [e.get('target') for e in lay['events']]
+        alvos = [e.get('target') for e in lay['events']]
+        assert alvos.index('Inimigos') + 1 == alvos.index(reino)
         assert {v['name'] for v in lay['variables']} >= {'olho_rx', 'olho_ry', 'moscas_alerta', 'moscas_alerta_x', 'moscas_alerta_y'}
 
 
@@ -47,7 +48,7 @@ def test_cada_inimigo_tem_o_seu_grupo_de_eventos():
 def test_variaveis_usadas_existem_no_objeto():
     # todo `objeto.variavel` usado no grupo de um inimigo precisa existir no objeto (valor ajustável no GDevelop)
     metodos = {'X', 'Y', 'CenterX', 'CenterY', 'Width', 'Height', 'Angle', 'ObjectTimerElapsedTime', 'PlatformerObject',
-               'Opacity', 'Animation', 'DistanceToPosition', 'Behavior', 'Variable', 'VariableString'}
+               'Opacity', 'Animation', 'DistanceToPosition', 'Behavior', 'Variable', 'VariableString', 'ZOrder'}
     for nome in INIMIGOS:
         texto = json.dumps([g for t, g in G.items() if nome.replace('_', ' ') in t.lower() or nome in json.dumps(g)])
         usados = set(re.findall(r'\b' + nome + r'\.([A-Za-z_]+)\b', texto)) - metodos
@@ -79,7 +80,7 @@ def test_projeteis_novos_e_sons_existem():
     anims = {a['name'] for a in OBJ['projetil_inimigo']['animations']}
     assert anims >= {'osso', 'espinho', 'bile', 'flecha', 'luz', 'olho', 'bomba', 'onda', 'fogo'}
     assert {'tipo', 'gravidade', 'vy', 'gira', 'ttl'} <= variaveis('projetil_inimigo')
-    texto = json.dumps(EXT['Inimigos']) + json.dumps(EXT['Combate'])
+    texto = json.dumps(INI) + json.dumps(EXT['Combate'])
     for som in set(re.findall(r'som_[a-z_]+\.wav', texto)):
         assert som in RECURSOS, som
     for a in OBJ['projetil_inimigo']['animations']:
@@ -108,4 +109,4 @@ def test_morte_dos_anjos_com_particulas():
     for anjo in ('querubim', 'serafim', 'ofanim', 'roda_anjo'):
         assert {'morte_luz_raio', 'morte_luz_qtd'} <= variaveis(anjo)
         assert f'"{anjo}.morte_luz_raio"' in grupo and f'"{anjo}.morte_luz_qtd"' in grupo
-    assert 'Condenado em chamas (frenesi)' in json.dumps([e.get('name') for e in G['Inferno']['events']], ensure_ascii=False)
+    assert 'Condenado em chamas (frenesi)' in json.dumps([e.get('name') for e in EXT['InimigosInferno']], ensure_ascii=False)

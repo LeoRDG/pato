@@ -1,12 +1,15 @@
+import sys
 import json, math, os, re
 import numpy as np
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
 OBJ = {o['name']: o for o in JOGO['objects']}
 RES = {r['name'] for r in JOGO['resources']['resources']}
-EXT = next(x for x in JOGO['externalEvents'] if x['name'] == 'Plataformas')
+EXT = {'events': folha(JOGO, 'Plataformas')}
 P = 'plataforma_movel'
 
 
@@ -47,7 +50,7 @@ def test_brasa_pulsa_em_ciclo_fechado_e_o_piso_nao_muda():
 
 def test_eventos_ligados_e_so_com_variaveis():
     cena = next(l for l in JOGO['layouts'] if l['name'] == 'Inferno')
-    assert any(e['type'].endswith('::Link') and e.get('target') == 'Plataformas' for e in cena['events'])
+    assert any(e['type'].endswith('::Link') and e.get('target') == 'CenarioInferno' for e in cena['events'])
     txt = json.dumps(EXT['events'])
     for var in set(re.findall(r'\bplataforma_movel\.([a-z_]+)\b', txt)):
         assert var in variaveis(), var

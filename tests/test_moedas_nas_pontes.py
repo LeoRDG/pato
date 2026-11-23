@@ -1,5 +1,8 @@
 """Moedas do demônio chefe morto na fase 2 caem nas pontes (tools/t68_moedas_nas_pontes.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -11,7 +14,7 @@ class MoedasNasPontes(unittest.TestCase):
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
-        cls.ext = next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.ext = folha(cls.d, 'Chefe')
         cls.grupo = next(e for e in cls.ext if e.get('name') == 'Moedas do chefe')
 
     def vars(self, nome):
@@ -37,7 +40,7 @@ class MoedasNasPontes(unittest.TestCase):
         # as moedas são criadas nos eventos do Combate, que vêm antes do Chefe no Inferno
         cena = next(l for l in self.d['layouts'] if l['name'] == 'Inferno')
         alvos = [e['target'] for e in cena['events'] if e['type'].endswith('::Link')]
-        self.assertLess(alvos.index('Combate'), alvos.index('Chefe'))
+        self.assertLess(alvos.index('Combate'), alvos.index('CenarioInferno'))
 
     def test_arco_chega_descendo(self):
         """Com o menor tempo de voo a moeda que sai da lava ainda chega descendo na ponte mais alta."""
@@ -53,6 +56,7 @@ class MoedasNasPontes(unittest.TestCase):
         t = v['moedas_ponte_tempo_min']
         self.assertGreater(g * t * t / 2, subida)
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t68.migra(d)

@@ -79,7 +79,8 @@ def test_objetos_loja_existem():
 # ------------------------------------------------------------------ Tarefa 2: reaplicar upgrades
 
 def _aplicar():
-    grupo = next(e for e in ext('AplicarUpgrades') if e.get('name') == 'Aplicar upgrades')
+    upg = next(e for e in ext('Jogador') if e.get('name') == 'Upgrades')
+    grupo = next(e for e in upg['events'] if e.get('name') == 'Aplicar upgrades')
     alvo = next(e for e in grupo['events'] if any(a['type']['value'] == 'PlatformBehavior::MaxSpeed' for a in e.get('actions') or []))
     return grupo, alvo
 
@@ -122,7 +123,7 @@ def test_toda_entrada_do_jogador_tem_trava():
 
 # ------------------------------------------------------------------ Tarefa 4: eventos da loja
 
-GRUPOS_LOJA = ['Dica', 'Abrir e fechar', 'Menu', 'Compra', 'Mercador', 'Barra do mercador']
+GRUPOS_LOJA = ['Dica', 'Abrir e fechar', 'Menu', 'Compra', 'Mercador']
 
 
 def _grupo_loja(nome):
@@ -237,7 +238,7 @@ def test_requer_aceita_arma():
 
 
 def test_barra_rastro_encolhe():
-    barra = list(anda([_grupo_loja('Barra do mercador')]))
+    barra = list(anda(ext('HUD')))
     assert any(a['type']['value'] == 'ResizableCapability::ResizableBehavior::SetWidth' and a['parameters'][0] == 'hud_boss_rastro'
                and a['parameters'][2] == '-' and 'trader.rastro_vel' in a['parameters'][3]
                for e in barra for a in e.get('actions') or [])

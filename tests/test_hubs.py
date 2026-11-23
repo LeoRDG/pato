@@ -54,7 +54,7 @@ class Hubs(unittest.TestCase):
 
     def test_saida_do_paraiso_vai_para_o_hub(self):
         g = next(e for e in self.cenas['Paraiso']['events'] if e.get('name') == 'Saída no Empíreo')
-        self.assertIn('"proxima_cena", "=", "hub"', json.dumps(g['events'][0]['actions']))
+        self.assertIn('"proxima_cena", "=", "hub"', json.dumps([e for e in g['events'] if 'actions' in e][0]['actions']))
         self.assertEqual(self.var('Paraiso', 'proxima_cena'), 'Hub')     # o valor do editor fica
 
     def test_hubs_novos_com_o_reino_certo(self):
@@ -72,7 +72,7 @@ class Hubs(unittest.TestCase):
                               for v in i['initialVariables'] if v['name'] == 'cena')
             self.assertEqual(destinos, ['Inferno', 'Paraiso', 'Purgatorio'])
             alvos = [e.get('target') for e in c['events'] if e.get('type', '').endswith('Link')]
-            for x in ('Jogador', 'AplicarUpgrades', 'Combate', 'HUD', 'Portais', 'Loja'):
+            for x in ('Jogador', 'Combate', 'HUD', 'Portais', 'Loja'):
                 self.assertIn(x, alvos)
             self.assertNotIn('bg_inferno_escuro', json.dumps(c['events']))
             self.assertIn('\\"fundo\\"', json.dumps(c['events']))

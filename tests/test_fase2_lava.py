@@ -1,5 +1,8 @@
 """Segunda fase do demônio chefe na lava embaixo da arena (tools/t63_fase2_lava.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -18,7 +21,7 @@ class Fase2Lava(unittest.TestCase):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
         cls.cena = next(l for l in cls.d['layouts'] if l['name'] == 'Inferno')
-        cls.chefe = next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.chefe = folha(cls.d, 'Chefe')
         cls.grupo = next(e for e in cls.chefe if e.get('name') == 'Fase 2')
         cls.cv = {v['name']: v['value'] for v in cls.cena['variables']}
 
@@ -114,6 +117,7 @@ class Fase2Lava(unittest.TestCase):
         for p in pedacos:
             self.assertTrue(os.path.exists(os.path.join(RAIZ, p)))
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t63.migra(d)

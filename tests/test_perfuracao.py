@@ -18,7 +18,7 @@ def test_upgrade_no_catalogo():
 
 
 def test_bala_soma_o_upgrade_aos_furos_da_arma():
-    nasce = next(e for e in PROJ['events'] if e.get('name') == 'Balas (alcance, queda e perfuração)')['events'][1]
+    nasce = next(e for e in PROJ['events'] if e.get('name') == 'Balas (alcance, queda e perfuração)')['events'][0]
     ps = [a['parameters'][:4] for a in nasce['actions']]
     base = ps.index(['projetil', 'furos', '=', 'Arma.furos'])
     assert ps.index(['projetil', 'furos', '+', 'GlobalVariable(upgrades.perfuracao)']) == base + 1

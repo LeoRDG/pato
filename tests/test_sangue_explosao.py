@@ -5,6 +5,8 @@ from PIL import Image
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import t60_sangue_e_explosao as t60
+sys.path.insert(0, os.path.join(RAIZ, 'tests'))
+from folhas import folha
 
 
 def instrucoes(evs):
@@ -19,7 +21,7 @@ class SangueExplosao(unittest.TestCase):
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
-        cls.ext = {x['name']: x for x in cls.d['externalEvents']}
+        cls.ext = {n: {'events': folha(cls.d, n)} for n in ('Sangue', 'Chefe')}
 
     def vars(self, nome):
         return {v['name']: v['value'] for v in self.objs[nome]['variables']}
@@ -65,9 +67,10 @@ class SangueExplosao(unittest.TestCase):
     def test_ligado_no_inferno(self):
         cena = next(l for l in self.d['layouts'] if l['name'] == 'Inferno')
         alvos = [e['target'] for e in cena['events'] if e['type'].endswith('::Link')]
-        self.assertIn('Sangue', alvos)
-        self.assertGreater(alvos.index('Sangue'), alvos.index('Jogador'))
+        self.assertIn('CenarioInferno', alvos)
+        self.assertGreater(alvos.index('CenarioInferno'), alvos.index('Jogador'))
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t60.migra(d)

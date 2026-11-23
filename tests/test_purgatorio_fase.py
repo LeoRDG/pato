@@ -1,5 +1,8 @@
 """Fase do Purgatório (tools/t72_purgatorio_fase.py): cena, eventos, variáveis e um caminho do começo até o cume."""
 import json, math, os, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 from collections import deque
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -61,7 +64,7 @@ class Purgatorio(unittest.TestCase):
         nomes = [l['name'] for l in self.d['layouts']]
         self.assertEqual(nomes.index('Purgatorio'), nomes.index('Inferno') + 1)
         links = [e['target'] for e in self.cena['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
-        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'Cutulu', 'PlataformasRadiais', 'Armadilhas', 'Espinhos', 'Portais'])
+        self.assertEqual(links, ['Jogador', 'Inimigos', 'InimigosPurgatorio', 'Combate', 'HUD', 'CenarioPurgatorio', 'Portais'])
         self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', '', 'HUD'])
         presentes = {i['name'] for i in self.cena['instances']}
         self.assertLessEqual({'pato', 'alvo', 'hud_vida_fill', 'hud_moeda', 'moedas', 'municao', 'hud_tempo'}, presentes)
@@ -163,7 +166,7 @@ class Purgatorio(unittest.TestCase):
                              {v['name'] for v in self.obj['plataforma_radial_eixo']['variables']})
         self.assertEqual(self.obj['plataforma_radial_corda']['type'], 'TiledSpriteObject::TiledSprite')
         self.assertNotIn('plataforma_radial', {i['name'] for i in self.cena['instances']})   # nascem da pedra
-        ev = json.dumps(next(e for e in self.d['externalEvents'] if e['name'] == 'PlataformasRadiais')['events'])
+        ev = json.dumps(folha(self.d, 'PlataformasRadiais'))
         for trecho in ('"repeatExpression": "plataforma_radial_eixo.quantidade"', 'plataforma_radial_eixo.vel_ang * TimeDelta()',
                        'plataforma_radial.indice * 360 / max(1, plataforma_radial_eixo.quantidade)', 'plataforma_radial_eixo.escala'):
             self.assertIn(trecho, ev)
@@ -183,7 +186,7 @@ class Purgatorio(unittest.TestCase):
 
     def test_escalada_final_com_armadilhas(self):
         """Depois do cume: lajes que somem, jatos de fogo purificador nas paredes, ácido no fundo e rodas pequenas e rápidas."""
-        ev = json.dumps(next(e for e in self.d['externalEvents'] if e['name'] == 'Armadilhas')['events'])
+        ev = json.dumps(folha(self.d, 'Armadilhas'))
         for trecho in ('ActivateBehavior', '"Platform", "no"', 'IsOnFloor', 'plataforma_some.sumida', 'plataforma_some.aviso',
                        'mod(jato_fogo.t, jato_fogo.espera + jato_fogo.aviso + jato_fogo.disparo)',
                        'jato_fogo_chama.dano', 'jato_fogo.alcance_aviso', 'jato_fogo.vel_chama', 'acido.margem', 'acido.dano', 'retorno_x', 'retorno_y'):

@@ -1,5 +1,8 @@
 """O salto com pancada do demônio na lava sempre cai numa ponte (tools/t70_pancada_na_ponte.py, em eventos pela t71)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -10,7 +13,7 @@ class PancadaNaPonte(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
-        chefe = next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        chefe = folha(cls.d, 'Chefe')
         cls.inicio = t70.inicio_do_salto(next(e for e in chefe if e.get('name') == 'Fase 2'))
         cls.v = {x['name']: x['value'] for x in next(o for o in cls.d['objects'] if o['name'] == t70.D)['variables']}
 
@@ -34,6 +37,7 @@ class PancadaNaPonte(unittest.TestCase):
         for k in re.findall(r'Variable\(([a-z_]+)\)', texto):
             self.assertIn(k, cena)
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t70.migra(d)

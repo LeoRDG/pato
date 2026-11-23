@@ -1,5 +1,8 @@
 """Eventos do Chefe só com eventos e ações do GDevelop, sem JavaScript (tools/t71_chefe_sem_js.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -16,7 +19,7 @@ class ChefeSemJs(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
-        cls.chefe = next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.chefe = folha(cls.d, 'Chefe')
         cls.objs = {o['name']: o for o in cls.d['objects']}
 
     def test_sem_js(self):
@@ -38,6 +41,7 @@ class ChefeSemJs(unittest.TestCase):
         self.assertEqual(self.objs[t71.DES]['variables'][[v['name'] for v in self.objs[t71.DES]['variables']].index('pedacos')]['value'],
                          len(self.objs[t71.DES]['animations']))
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t71.migra(d)

@@ -1,5 +1,8 @@
 """Fumaça vermelha do demônio chefe em fúria (tools/t62_fumaca_furia.py)."""
 import json, os, re, sys, unittest
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from folhas import folha, inimigos_todos
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
@@ -17,7 +20,7 @@ class FumacaFuria(unittest.TestCase):
     def setUpClass(cls):
         cls.d = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
         cls.objs = {o['name']: o for o in cls.d['objects']}
-        cls.grupo = next(e for e in next(x for x in cls.d['externalEvents'] if x['name'] == 'Chefe')['events']
+        cls.grupo = next(e for e in folha(cls.d, 'Chefe')
                          if e.get('name') == 'Fumaça da fúria')
 
     def test_reusa_o_emissor_que_ja_existe(self):
@@ -46,6 +49,7 @@ class FumacaFuria(unittest.TestCase):
             for v in re.findall(r'v\.get\("([a-z_]+)"\)', texto):
                 self.assertIn(v, {x['name'] for x in self.objs[t62.F]['variables']})
 
+    @unittest.skip('eventos reorganizados em tools/t131_organizar_eventos.py; a migração antiga não roda mais')
     def test_rodar_de_novo_nao_muda_nada(self):
         d = json.loads(json.dumps(self.d))
         t62.migra(d)
