@@ -21805,6 +21805,18 @@
           "type": "number",
           "value": 3,
           "persistentUuid": "a2b8c962-957b-5a14-b087-f6b37f9a4037"
+        },
+        {
+          "name": "ondas_soltar",
+          "persistentUuid": "84573ca9-352f-5577-a7bd-1ce5fdaef623",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "anel_soltar",
+          "persistentUuid": "825cdedd-45bb-593e-a63b-70a821381f10",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -32588,6 +32600,12 @@
           "persistentUuid": "5aafc74f-ffda-5d05-99bc-fc116590fbff",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "explodir",
+          "persistentUuid": "2ea1fb43-59ee-5166-a4fe-61aade73a627",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -37107,6 +37125,12 @@
         {
           "name": "chefe_final",
           "persistentUuid": "d229ae36-874f-5738-9e01-2fe5cfd85851",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "explodir",
+          "persistentUuid": "5f340341-874a-597b-be83-41730c5136dd",
           "type": "boolean",
           "value": false
         }
@@ -59126,6 +59150,36 @@
           "persistentUuid": "3e544163-f026-5bc0-bc34-cb7a9d6037e8",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "quebra_topo",
+          "persistentUuid": "bcddd201-97e2-59ee-be08-4c89adc35657",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_tudo",
+          "persistentUuid": "1aace0f0-6147-5017-ba61-bd3cd6750c7f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quebra_pedida",
+          "persistentUuid": "155ede0b-281d-549a-bd3e-98d5623f0cc9",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "quebra_n",
+          "persistentUuid": "f8eb0290-bb76-5896-9f04-c03b851d3abb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "quebra_i",
+          "persistentUuid": "079a6ed3-738d-5b58-84ba-6355f5f365a0",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -66989,6 +67043,62 @@
           "name": "cutulu"
         }
       ]
+    },
+    {
+      "name": "Perseguidores",
+      "objects": [
+        {
+          "name": "condenado_azul"
+        },
+        {
+          "name": "condenado_inchado"
+        },
+        {
+          "name": "pigman"
+        }
+      ]
+    },
+    {
+      "name": "Investida",
+      "objects": [
+        {
+          "name": "condenado_azul"
+        },
+        {
+          "name": "pigman"
+        },
+        {
+          "name": "roda_anjo"
+        }
+      ]
+    },
+    {
+      "name": "Anjos",
+      "objects": [
+        {
+          "name": "querubim"
+        },
+        {
+          "name": "serafim"
+        },
+        {
+          "name": "ofanim"
+        },
+        {
+          "name": "roda_anjo"
+        }
+      ]
+    },
+    {
+      "name": "Explosivos",
+      "objects": [
+        {
+          "name": "condenado_inchado"
+        },
+        {
+          "name": "mina_demoniaca"
+        }
+      ]
     }
   ],
   "variables": [
@@ -69190,46 +69300,6 @@
           "target": "HUD"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Saída",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "pato",
-                    ">",
-                    "2600"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Inferno\"",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
@@ -69295,56 +69365,11 @@
           "target": "Portais"
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Queda da borda",
-          "source": "",
-          "parameters": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "pato.Y()",
-                    ">",
-                    "queda_y"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "pato",
-                    "=",
-                    "volta_x",
-                    "=",
-                    "volta_y"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Hubs"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -70634,46 +70659,6 @@
           "target": "HUD"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Saída",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "pato",
-                    ">",
-                    "2600"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Inferno\"",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
@@ -70773,56 +70758,11 @@
           "target": "Portais"
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Queda da borda",
-          "source": "",
-          "parameters": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "pato.Y()",
-                    ">",
-                    "queda_y"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "pato",
-                    "=",
-                    "volta_x",
-                    "=",
-                    "volta_y"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Hubs"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -72096,46 +72036,6 @@
           "target": "HUD"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Saída",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "pato",
-                    ">",
-                    "2600"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Inferno\"",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
@@ -72185,56 +72085,11 @@
           "target": "Portais"
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Queda da borda",
-          "source": "",
-          "parameters": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "pato.Y()",
-                    ">",
-                    "queda_y"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "pato",
-                    "=",
-                    "volta_x",
-                    "=",
-                    "volta_y"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-                  },
-                  "parameters": [
-                    "pato",
-                    "PlatformerObject",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Hubs"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -87491,247 +87346,85 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "FireBullet::FireBullet::HasJustFired"
-                          },
-                          "parameters": [
-                            "pistola",
-                            "FireBullet",
-                            ""
-                          ]
-                        }
-                      ],
                       "actions": [
                         {
-                          "type": {
-                            "value": "Create"
-                          },
                           "parameters": [
                             "",
                             "flash_cano",
                             "bocal_x",
                             "bocal_y",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Animation",
-                            "=",
-                            "\"pistola\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "dur",
-                            "=",
-                            "pistola.flash_dur"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "\"ttl\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Scale",
-                            "=",
-                            "pistola.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "=",
-                            "mira_graus"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "FireBullet::FireBullet::HasJustFired"
-                          },
-                          "parameters": [
-                            "doze",
-                            "FireBullet",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
+                          ],
                           "type": {
                             "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "flash_cano",
-                            "bocal_x",
-                            "bocal_y",
-                            ""
-                          ]
+                          }
                         },
                         {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
                           "parameters": [
                             "flash_cano",
                             "Animation",
                             "=",
-                            "\"doze\""
-                          ]
+                            "Arma.ObjectName()"
+                          ],
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
                           "parameters": [
                             "flash_cano",
                             "dur",
                             "=",
-                            "doze.flash_dur"
-                          ]
+                            "Arma.flash_dur"
+                          ],
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
                           "parameters": [
                             "flash_cano",
                             "\"ttl\""
-                          ]
+                          ],
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
                           "parameters": [
                             "flash_cano",
                             "Scale",
                             "=",
-                            "doze.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                          ]
+                            "Arma.flash_escala * RandomFloatInRange(0.85, 1.2)"
+                          ],
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetAngle"
-                          },
                           "parameters": [
                             "flash_cano",
                             "=",
                             "mira_graus"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
+                          ],
                           "type": {
-                            "value": "FireBullet::FireBullet::HasJustFired"
-                          },
-                          "parameters": [
-                            "minigun",
-                            "FireBullet",
-                            ""
-                          ]
+                            "value": "SetAngle"
+                          }
                         }
                       ],
-                      "actions": [
+                      "conditions": [
                         {
-                          "type": {
-                            "value": "Create"
-                          },
                           "parameters": [
-                            "",
-                            "flash_cano",
-                            "bocal_x",
-                            "bocal_y",
+                            "Arma",
+                            "FireBullet",
                             ""
-                          ]
-                        },
-                        {
+                          ],
                           "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Animation",
-                            "=",
-                            "\"minigun\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "dur",
-                            "=",
-                            "minigun.flash_dur"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "\"ttl\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Scale",
-                            "=",
-                            "minigun.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "=",
-                            "mira_graus"
-                          ]
+                            "value": "FireBullet::FireBullet::HasJustFired"
+                          }
                         }
-                      ]
+                      ],
+                      "type": "BuiltinCommonInstructions::Standard"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -87749,90 +87442,26 @@
                       ],
                       "actions": [
                         {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "flash_cano",
-                            "bocal_x",
-                            "bocal_y",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Animation",
-                            "=",
-                            "\"lanca\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "dur",
-                            "=",
-                            "lanca.flash_dur"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "\"ttl\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "Scale",
-                            "=",
-                            "lanca.flash_escala * RandomFloatInRange(0.85, 1.2)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "flash_cano",
-                            "=",
-                            "mira_graus"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
                           "parameters": [
                             "",
                             "fogo_lanca",
                             "bocal_x",
                             "bocal_y",
                             ""
-                          ]
+                          ],
+                          "type": {
+                            "value": "Create"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetAngle"
-                          },
                           "parameters": [
                             "fogo_lanca",
                             "=",
                             "mira_graus"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetAngle"
+                          }
                         }
                       ]
                     }
@@ -90648,6 +90277,260 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Perseguir o pato",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Perseguidores",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Perseguidores",
+                    "estado",
+                    "=",
+                    "\"perseguir\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "object": "Perseguidores",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(pato.CenterX() - Perseguidores.CenterX())",
+                        ">",
+                        "Perseguidores.parar_dist"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.CenterX() - Perseguidores.CenterX()",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "Perseguidores",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Perseguidores",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.CenterX() - Perseguidores.CenterX()",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "Perseguidores",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Perseguidores",
+                            "quer_andar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Investida",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Investida",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Investida",
+                    "estado",
+                    "=",
+                    "\"atacar\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "object": "Investida",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "direcao",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateLeftKey"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "quer_andar",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "direcao",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateRightKey"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Investida",
+                        "quer_andar",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -91175,6 +91058,143 @@
       "associatedLayout": "Hub",
       "name": "Combate",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Explosão de inimigo",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Explosivos",
+                    "explodir",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Explosivos",
+                    "explodir",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "object": "Explosivos",
+              "events": [
+                {
+                  "actions": [
+                    {
+                      "parameters": [
+                        "pato",
+                        "vida",
+                        "-",
+                        "Explosivos.dano"
+                      ],
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "invencivel",
+                        "True",
+                        ""
+                      ],
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "\"iframes\""
+                      ],
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "ultimo_agressor",
+                        "=",
+                        "Explosivos.ObjectName()"
+                      ],
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "coice_vx",
+                        "=",
+                        "sign(pato.CenterX() - Explosivos.CenterX() + 0.001) * (Explosivos.explosao_empurrao)"
+                      ],
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      }
+                    }
+                  ],
+                  "conditions": [
+                    {
+                      "parameters": [
+                        "Explosivos",
+                        "pato",
+                        "Explosivos.explosao_raio",
+                        ""
+                      ],
+                      "type": {
+                        "value": "Distance"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "invencivel",
+                        "False",
+                        ""
+                      ],
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      }
+                    },
+                    {
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ],
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      }
+                    }
+                  ],
+                  "type": "BuiltinCommonInstructions::Standard"
+                }
+              ]
+            }
+          ]
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -101150,100 +101170,6 @@
                         "\"andando\""
                       ]
                     }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(pato.CenterX() - condenado_azul.CenterX())",
-                            ">",
-                            "condenado_azul.parar_dist"
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - condenado_azul.CenterX()",
-                                "<",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateLeftKey"
-                              },
-                              "parameters": [
-                                "condenado_azul",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "condenado_azul",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - condenado_azul.CenterX()",
-                                ">",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateRightKey"
-                              },
-                              "parameters": [
-                                "condenado_azul",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "condenado_azul",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
                   ]
                 },
                 {
@@ -101465,101 +101391,6 @@
                         "Animation",
                         "=",
                         "condenado_azul.carga_anim_vel"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "condenado_azul",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "direcao",
-                            "<",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateLeftKey"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "direcao",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateRightKey"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "condenado_azul",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
                       ]
                     }
                   ]
@@ -102408,100 +102239,6 @@
                         "condenado_inchado.velocidade * (1 + condenado_inchado.acelera * clamp(1 - DistanceBetweenPositions(pato.CenterX(), pato.CenterY(), condenado_inchado.CenterX(), condenado_inchado.CenterY()) / condenado_inchado.aggro_dist, 0, 1))"
                       ]
                     }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(pato.CenterX() - condenado_inchado.CenterX())",
-                            ">",
-                            "condenado_inchado.parar_dist"
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - condenado_inchado.CenterX()",
-                                "<",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateLeftKey"
-                              },
-                              "parameters": [
-                                "condenado_inchado",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "condenado_inchado",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - condenado_inchado.CenterX()",
-                                ">",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateRightKey"
-                              },
-                              "parameters": [
-                                "condenado_inchado",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "condenado_inchado",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
                   ]
                 },
                 {
@@ -102713,100 +102450,16 @@
                         "70",
                         "RandomFloatInRange(0.75, 0.85)"
                       ]
-                    }
-                  ],
-                  "events": [
+                    },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "condenado_inchado",
-                            "pato",
-                            "condenado_inchado.explosao_raio",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "vida",
-                            "-",
-                            "condenado_inchado.dano"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"iframes\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "ultimo_agressor",
-                            "=",
-                            "\"condenado_inchado\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "coice_vx",
-                            "=",
-                            "sign(pato.CenterX() - condenado_inchado.CenterX() + 0.001) * (condenado_inchado.explosao_empurrao)"
-                          ]
-                        }
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "condenado_inchado",
+                        "explodir",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -110266,100 +109919,6 @@
                         "\"caminhando\""
                       ]
                     }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(pato.CenterX() - pigman.CenterX())",
-                            ">",
-                            "pigman.parar_dist"
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - pigman.CenterX()",
-                                "<",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateLeftKey"
-                              },
-                              "parameters": [
-                                "pigman",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pigman",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "pato.CenterX() - pigman.CenterX()",
-                                ">",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlatformBehavior::SimulateRightKey"
-                              },
-                              "parameters": [
-                                "pigman",
-                                "PlatformerObject"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "pigman",
-                                "quer_andar",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
                   ]
                 },
                 {
@@ -110612,84 +110171,6 @@
                         "PlatformerObject",
                         "=",
                         "pigman.salto_vx"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "direcao",
-                            "<",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateLeftKey"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "direcao",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateRightKey"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pigman",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
                       ]
                     }
                   ]
@@ -112980,102 +112461,20 @@
                     "=",
                     "400"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "mina_demoniaca",
+                    "explodir",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "mina_demoniaca",
-                        "pato",
-                        "mina_demoniaca.explosao_raio",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "invencivel",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "vida",
-                        "-",
-                        "mina_demoniaca.dano"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "invencivel",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "pato",
-                        "\"iframes\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "ultimo_agressor",
-                        "=",
-                        "\"mina_demoniaca\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "pato",
-                        "coice_vx",
-                        "=",
-                        "sign(pato.CenterX() - mina_demoniaca.CenterX() + 0.001) * (mina_demoniaca.explosao_empurrao)"
-                      ]
-                    }
-                  ]
-                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
@@ -113646,151 +113045,16 @@
                         "70",
                         "1.2"
                       ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "i",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "cutulu.anel_qtd",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "projetil_inimigo",
-                            "cutulu.CenterX()",
-                            "cutulu.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "Animation",
-                            "=",
-                            "\"bile\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "=",
-                            "cutulu.CenterX() - projetil_inimigo.Width() / 2",
-                            "=",
-                            "cutulu.CenterY() - projetil_inimigo.Height() / 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AddForceAL"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "RandomFloat(36) + cutulu.i * 360 / max(1, cutulu.anel_qtd)",
-                            "cutulu.anel_vel",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "=",
-                            "RandomFloat(36) + cutulu.i * 360 / max(1, cutulu.anel_qtd)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "dano",
-                            "=",
-                            "cutulu.anel_dano"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "origem",
-                            "=",
-                            "\"cutulu\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "tipo",
-                            "=",
-                            "\"bile\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "\"vida\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "projetil_inimigo",
-                            "ttl",
-                            "=",
-                            "3"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "cutulu",
-                            "i",
-                            "+",
-                            "1"
-                          ]
-                        }
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "anel_soltar",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -115040,152 +114304,193 @@
                         "=",
                         "\"caminhando\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "anel_soltar",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "anel_soltar",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "anel_soltar",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "object": "cutulu",
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
                       "actions": [
                         {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
                           "parameters": [
                             "cutulu",
                             "i",
                             "=",
                             "0"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          }
                         }
-                      ]
+                      ],
+                      "conditions": [],
+                      "type": "BuiltinCommonInstructions::Standard"
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "cutulu.anel_qtd",
-                      "conditions": [],
                       "actions": [
                         {
-                          "type": {
-                            "value": "Create"
-                          },
                           "parameters": [
                             "",
                             "projetil_inimigo",
                             "cutulu.CenterX()",
                             "cutulu.CenterY()",
                             ""
-                          ]
+                          ],
+                          "type": {
+                            "value": "Create"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "Animation",
                             "=",
                             "\"bile\""
-                          ]
+                          ],
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetXY"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "=",
                             "cutulu.CenterX() - projetil_inimigo.Width() / 2",
                             "=",
                             "cutulu.CenterY() - projetil_inimigo.Height() / 2"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetXY"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "AddForceAL"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "RandomFloat(36) + cutulu.i * 360 / max(1, cutulu.anel_qtd)",
                             "cutulu.anel_vel",
                             "1"
-                          ]
+                          ],
+                          "type": {
+                            "value": "AddForceAL"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetAngle"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "=",
                             "RandomFloat(36) + cutulu.i * 360 / max(1, cutulu.anel_qtd)"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetAngle"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "dano",
                             "=",
                             "cutulu.anel_dano"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "origem",
                             "=",
                             "\"cutulu\""
-                          ]
-                        },
-                        {
+                          ],
                           "type": {
                             "value": "SetStringObjectVariable"
-                          },
+                          }
+                        },
+                        {
                           "parameters": [
                             "projetil_inimigo",
                             "tipo",
                             "=",
                             "\"bile\""
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "\"vida\""
-                          ]
+                          ],
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          }
                         },
                         {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
                           "parameters": [
                             "projetil_inimigo",
                             "ttl",
                             "=",
                             "3"
-                          ]
-                        },
-                        {
+                          ],
                           "type": {
                             "value": "SetNumberObjectVariable"
-                          },
+                          }
+                        },
+                        {
                           "parameters": [
                             "cutulu",
                             "i",
                             "+",
                             "1"
-                          ]
+                          ],
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          }
                         }
-                      ]
+                      ],
+                      "conditions": [],
+                      "repeatExpression": "cutulu.anel_qtd",
+                      "type": "BuiltinCommonInstructions::Repeat"
                     }
                   ]
                 }
@@ -117800,281 +117105,20 @@
                             "=",
                             "\"caminhando\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "cutulu",
+                            "ondas_soltar",
+                            "True",
+                            ""
+                          ]
                         }
                       ],
                       "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "projetil_inimigo",
-                                "cutulu.CenterX() + cutulu.ondas_afasta",
-                                "cutulu.Y() + cutulu.Height() * cutulu.pes_frac",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Animation",
-                                "=",
-                                "\"onda_abissal\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Scale",
-                                "=",
-                                "cutulu.ondas_escala"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetXY"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "cutulu.CenterX() + cutulu.ondas_afasta - projetil_inimigo.Width() / 2",
-                                "=",
-                                "cutulu.Y() + cutulu.Height() * cutulu.pes_frac - projetil_inimigo.Height() - 2"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "0",
-                                "cutulu.ondas_vel",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "FlippableCapability::FlippableBehavior::FlipX"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Flippable",
-                                "no"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "dano",
-                                "=",
-                                "cutulu.ondas_dano"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "origem",
-                                "=",
-                                "\"cutulu\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "tipo",
-                                "=",
-                                "\"onda\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "\"vida\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "ttl",
-                                "=",
-                                "cutulu.ondas_ttl"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "projetil_inimigo",
-                                "cutulu.CenterX() - cutulu.ondas_afasta",
-                                "cutulu.Y() + cutulu.Height() * cutulu.pes_frac",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Animation",
-                                "=",
-                                "\"onda_abissal\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Scale",
-                                "=",
-                                "cutulu.ondas_escala"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetXY"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "cutulu.CenterX() - cutulu.ondas_afasta - projetil_inimigo.Width() / 2",
-                                "=",
-                                "cutulu.Y() + cutulu.Height() * cutulu.pes_frac - projetil_inimigo.Height() - 2"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "180",
-                                "cutulu.ondas_vel",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "FlippableCapability::FlippableBehavior::FlipX"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "Flippable",
-                                "yes"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "dano",
-                                "=",
-                                "cutulu.ondas_dano"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "origem",
-                                "=",
-                                "\"cutulu\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "tipo",
-                                "=",
-                                "\"onda\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ResetObjectTimer"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "\"vida\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "projetil_inimigo",
-                                "ttl",
-                                "=",
-                                "cutulu.ondas_ttl"
-                              ]
-                            }
-                          ]
-                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -119550,8 +118594,49 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "ondas_soltar",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "ondas_soltar",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "cutulu",
+                        "ondas_soltar",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "object": "cutulu",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -123033,101 +122118,6 @@
                         "=",
                         "\"atacar\""
                       ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "direcao",
-                            "<",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateLeftKey"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "direcao",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::SimulateRightKey"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "roda_anjo",
-                            "quer_andar",
-                            "True",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "roda_anjo",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
                     },
                     {
                       "type": {
@@ -123540,296 +122530,77 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "querubim",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "querubim",
-                    "morto",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "querubim",
-                    "morte_feita",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
               "actions": [
                 {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
                   "parameters": [
-                    "querubim",
+                    "Anjos",
                     "morte_feita",
                     "True",
                     ""
-                  ]
+                  ],
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  }
                 },
                 {
-                  "type": {
-                    "value": "Create"
-                  },
                   "parameters": [
                     "",
                     "anjo_morte_luz",
-                    "querubim.CenterX()",
-                    "querubim.CenterY()",
+                    "Anjos.CenterX()",
+                    "Anjos.CenterY()",
                     ""
-                  ]
+                  ],
+                  "type": {
+                    "value": "Create"
+                  }
                 },
                 {
+                  "parameters": [
+                    "anjo_morte_luz",
+                    "=",
+                    "Anjos.morte_luz_raio"
+                  ],
                   "type": {
                     "value": "ParticleSystem::ZoneRadius"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "querubim.morte_luz_raio"
-                  ]
+                  }
                 },
                 {
-                  "type": {
-                    "value": "ParticleSystem::SetTank"
-                  },
                   "parameters": [
                     "anjo_morte_luz",
                     "=",
-                    "querubim.morte_luz_qtd"
-                  ]
+                    "Anjos.morte_luz_qtd"
+                  ],
+                  "type": {
+                    "value": "ParticleSystem::SetTank"
+                  }
                 }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "serafim",
+              ],
               "conditions": [
                 {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
                   "parameters": [
-                    "serafim",
+                    "Anjos",
                     "morto",
                     "True",
                     ""
-                  ]
-                },
-                {
+                  ],
                   "type": {
                     "value": "BooleanObjectVariable"
-                  },
+                  }
+                },
+                {
                   "parameters": [
-                    "serafim",
+                    "Anjos",
                     "morte_feita",
                     "False",
                     ""
-                  ]
+                  ],
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  }
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "serafim",
-                    "morte_feita",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "anjo_morte_luz",
-                    "serafim.CenterX()",
-                    "serafim.CenterY()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::ZoneRadius"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "serafim.morte_luz_raio"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::SetTank"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "serafim.morte_luz_qtd"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "ofanim",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "ofanim",
-                    "morto",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "ofanim",
-                    "morte_feita",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "ofanim",
-                    "morte_feita",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "anjo_morte_luz",
-                    "ofanim.CenterX()",
-                    "ofanim.CenterY()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::ZoneRadius"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "ofanim.morte_luz_raio"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::SetTank"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "ofanim.morte_luz_qtd"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "roda_anjo",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "roda_anjo",
-                    "morto",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "roda_anjo",
-                    "morte_feita",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "roda_anjo",
-                    "morte_feita",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "anjo_morte_luz",
-                    "roda_anjo.CenterX()",
-                    "roda_anjo.CenterY()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::ZoneRadius"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "roda_anjo.morte_luz_raio"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ParticleSystem::SetTank"
-                  },
-                  "parameters": [
-                    "anjo_morte_luz",
-                    "=",
-                    "roda_anjo.morte_luz_qtd"
-                  ]
-                }
-              ]
+              "object": "Anjos",
+              "type": "BuiltinCommonInstructions::ForEach"
             }
           ],
           "parameters": []
@@ -125697,301 +124468,71 @@
                         "demonio_chefe.quebra_som_volume",
                         "RandomFloatInRange(0.8, 0.9)"
                       ]
-                    }
-                  ],
-                  "events": [
+                    },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x0",
-                            "=",
-                            "max(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx - demonio_chefe.golpe_quebra_raio, Variable(quebra_x_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x1",
-                            "=",
-                            "min(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx + demonio_chefe.golpe_quebra_raio, Variable(quebra_x_max) - 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c0",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c1",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r0",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + Variable(quebra_topo_linhas)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r1",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_qtd",
-                            "=",
-                            "demonio_chefe.golpe_quebra_qtd"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_feitas",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "demonio_chefe.quebra_qtd * demonio_chefe.quebra_tentativas",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "demonio_chefe.quebra_x1",
-                                ">=",
-                                "demonio_chefe.quebra_x0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "demonio_chefe.quebra_r1",
-                                ">=",
-                                "demonio_chefe.quebra_r0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "demonio_chefe",
-                                "quebra_c",
-                                "=",
-                                "RandomInRange(demonio_chefe.quebra_c0, demonio_chefe.quebra_c1)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "demonio_chefe",
-                                "quebra_r",
-                                "=",
-                                "RandomInRange(demonio_chefe.quebra_r0, demonio_chefe.quebra_r1)"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "demonio_chefe.quebra_feitas",
-                                    "<",
-                                    "demonio_chefe.quebra_qtd"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                    ">=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
-                                  },
-                                  "parameters": [
-                                    "tiles_inferno",
-                                    "TileMap",
-                                    "demonio_chefe.quebra_c",
-                                    "demonio_chefe.quebra_r"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "demonio_chefe",
-                                    "quebra_feitas",
-                                    "+",
-                                    "1"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Repeat",
-                                  "repeatExpression": "Variable(destroco_por_tile)",
-                                  "conditions": [],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Create"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "destroco",
-                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "Animation",
-                                        "=",
-                                        "RandomInRange(0, destroco.pedacos - 1)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetXY"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
-                                        "=",
-                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetZOrder"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "destroco.z"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetAngle"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "RandomFloatInRange(0, 360)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "vx",
-                                        "=",
-                                        "RandomFloatInRange(-1, 1) * destroco.vel_x"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "vy",
-                                        "=",
-                                        "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "va",
-                                        "=",
-                                        "RandomFloatInRange(-1, 1) * destroco.giro"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "max(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx - demonio_chefe.golpe_quebra_raio, Variable(quebra_x_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "min(demonio_chefe.CenterX() + demonio_chefe.direcao * demonio_chefe.golpe_quebra_dx + demonio_chefe.golpe_quebra_raio, Variable(quebra_x_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_topo",
+                        "=",
+                        "Variable(quebra_topo_linhas)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_qtd",
+                        "=",
+                        "demonio_chefe.golpe_quebra_qtd"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_tudo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_pedida",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -126088,301 +124629,71 @@
                         "demonio_chefe.quebra_som_volume",
                         "RandomFloatInRange(0.8, 0.9)"
                       ]
-                    }
-                  ],
-                  "events": [
+                    },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x0",
-                            "=",
-                            "max(demonio_chefe.CenterX() + 0 - demonio_chefe.explosao_quebra_raio, Variable(quebra_x_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x1",
-                            "=",
-                            "min(demonio_chefe.CenterX() + 0 + demonio_chefe.explosao_quebra_raio, Variable(quebra_x_max) - 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c0",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c1",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r0",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + Variable(quebra_topo_linhas)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r1",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_qtd",
-                            "=",
-                            "demonio_chefe.explosao_quebra_qtd"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_feitas",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "demonio_chefe.quebra_qtd * demonio_chefe.quebra_tentativas",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "demonio_chefe.quebra_x1",
-                                ">=",
-                                "demonio_chefe.quebra_x0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "demonio_chefe.quebra_r1",
-                                ">=",
-                                "demonio_chefe.quebra_r0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "demonio_chefe",
-                                "quebra_c",
-                                "=",
-                                "RandomInRange(demonio_chefe.quebra_c0, demonio_chefe.quebra_c1)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "demonio_chefe",
-                                "quebra_r",
-                                "=",
-                                "RandomInRange(demonio_chefe.quebra_r0, demonio_chefe.quebra_r1)"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "demonio_chefe.quebra_feitas",
-                                    "<",
-                                    "demonio_chefe.quebra_qtd"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                    ">=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
-                                  },
-                                  "parameters": [
-                                    "tiles_inferno",
-                                    "TileMap",
-                                    "demonio_chefe.quebra_c",
-                                    "demonio_chefe.quebra_r"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "demonio_chefe",
-                                    "quebra_feitas",
-                                    "+",
-                                    "1"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Repeat",
-                                  "repeatExpression": "Variable(destroco_por_tile)",
-                                  "conditions": [],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Create"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "destroco",
-                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "Animation",
-                                        "=",
-                                        "RandomInRange(0, destroco.pedacos - 1)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetXY"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
-                                        "=",
-                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetZOrder"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "destroco.z"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetAngle"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "=",
-                                        "RandomFloatInRange(0, 360)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "vx",
-                                        "=",
-                                        "RandomFloatInRange(-1, 1) * destroco.vel_x"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "vy",
-                                        "=",
-                                        "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "destroco",
-                                        "va",
-                                        "=",
-                                        "RandomFloatInRange(-1, 1) * destroco.giro"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "max(demonio_chefe.CenterX() + 0 - demonio_chefe.explosao_quebra_raio, Variable(quebra_x_min))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "min(demonio_chefe.CenterX() + 0 + demonio_chefe.explosao_quebra_raio, Variable(quebra_x_max) - 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_topo",
+                        "=",
+                        "Variable(quebra_topo_linhas)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_qtd",
+                        "=",
+                        "demonio_chefe.explosao_quebra_qtd"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_tudo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_pedida",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -126506,6 +124817,61 @@
                         "demonio_chefe",
                         "\"queda_bola\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x0",
+                        "=",
+                        "Variable(quebra_x_min)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_x1",
+                        "=",
+                        "Variable(quebra_x_max) - 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_topo",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_tudo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "demonio_chefe",
+                        "quebra_pedida",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -126565,278 +124931,6 @@
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x0",
-                            "=",
-                            "Variable(quebra_x_min)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_x1",
-                            "=",
-                            "Variable(quebra_x_max) - 1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c0",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c1",
-                            "=",
-                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r0",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + 0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_r1",
-                            "=",
-                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "demonio_chefe",
-                            "quebra_c",
-                            "=",
-                            "demonio_chefe.quebra_c0"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "demonio_chefe.quebra_c1 - demonio_chefe.quebra_c0 + 1",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "demonio_chefe",
-                                "quebra_r",
-                                "=",
-                                "demonio_chefe.quebra_r0"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Repeat",
-                              "repeatExpression": "demonio_chefe.quebra_r1 - demonio_chefe.quebra_r0 + 1",
-                              "conditions": [],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                                      },
-                                      "parameters": [
-                                        "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                        ">=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
-                                      },
-                                      "parameters": [
-                                        "tiles_inferno",
-                                        "TileMap",
-                                        "demonio_chefe.quebra_c",
-                                        "demonio_chefe.quebra_r"
-                                      ]
-                                    }
-                                  ],
-                                  "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Repeat",
-                                      "repeatExpression": "Variable(destroco_por_tile)",
-                                      "conditions": [],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "Create"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "destroco",
-                                            "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                            "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "Animation",
-                                            "=",
-                                            "RandomInRange(0, destroco.pedacos - 1)"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetXY"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "=",
-                                            "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
-                                            "=",
-                                            "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetZOrder"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "=",
-                                            "destroco.z"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetAngle"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "=",
-                                            "RandomFloatInRange(0, 360)"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "vx",
-                                            "=",
-                                            "RandomFloatInRange(-1, 1) * destroco.vel_x"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "vy",
-                                            "=",
-                                            "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "destroco",
-                                            "va",
-                                            "=",
-                                            "RandomFloatInRange(-1, 1) * destroco.giro"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "demonio_chefe",
-                                        "quebra_r",
-                                        "+",
-                                        "1"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "demonio_chefe",
-                                    "quebra_c",
-                                    "+",
-                                    "1"
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
@@ -126887,6 +124981,456 @@
                           "parameters": [
                             "sangue",
                             ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Group",
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Quebrar o piso",
+                  "source": "",
+                  "parameters": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_pedida",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_pedida",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_c0",
+                            "=",
+                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x0, Variable(quebra_y_min))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_c1",
+                            "=",
+                            "tiles_inferno.TileMap::GridX(demonio_chefe.quebra_x1, Variable(quebra_y_min))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_r0",
+                            "=",
+                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_min)) + demonio_chefe.quebra_topo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_r1",
+                            "=",
+                            "tiles_inferno.TileMap::GridY(demonio_chefe.quebra_x0, Variable(quebra_y_max) - 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_feitas",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "demonio_chefe",
+                            "quebra_i",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_tudo",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_qtd",
+                                "=",
+                                "(demonio_chefe.quebra_c1 - demonio_chefe.quebra_c0 + 1) * (demonio_chefe.quebra_r1 - demonio_chefe.quebra_r0 + 1)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_n",
+                                "=",
+                                "demonio_chefe.quebra_qtd"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_tudo",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "demonio_chefe",
+                                "quebra_n",
+                                "=",
+                                "demonio_chefe.quebra_qtd * demonio_chefe.quebra_tentativas"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "demonio_chefe.quebra_x1",
+                                ">=",
+                                "demonio_chefe.quebra_x0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "demonio_chefe.quebra_r1",
+                                ">=",
+                                "demonio_chefe.quebra_r0"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "repeatExpression": "demonio_chefe.quebra_n",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_tudo",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_c",
+                                    "=",
+                                    "demonio_chefe.quebra_c0 + mod(demonio_chefe.quebra_i, (demonio_chefe.quebra_c1 - demonio_chefe.quebra_c0 + 1))"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_r",
+                                    "=",
+                                    "demonio_chefe.quebra_r0 + floor(demonio_chefe.quebra_i / (demonio_chefe.quebra_c1 - demonio_chefe.quebra_c0 + 1))"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_tudo",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_c",
+                                    "=",
+                                    "RandomInRange(demonio_chefe.quebra_c0, demonio_chefe.quebra_c1)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_r",
+                                    "=",
+                                    "RandomInRange(demonio_chefe.quebra_r0, demonio_chefe.quebra_r1)"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe.quebra_feitas",
+                                    "<",
+                                    "demonio_chefe.quebra_qtd"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "tiles_inferno.TileMap::TileIdAtGrid(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                    ">=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "TileMap::TileMapBehavior::RemoveTileAtGridCoordinates"
+                                  },
+                                  "parameters": [
+                                    "tiles_inferno",
+                                    "TileMap",
+                                    "demonio_chefe.quebra_c",
+                                    "demonio_chefe.quebra_r"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_feitas",
+                                    "+",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Repeat",
+                                  "repeatExpression": "Variable(destroco_por_tile)",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "destroco",
+                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r)",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "Animation",
+                                        "=",
+                                        "RandomInRange(0, destroco.pedacos - 1)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetXY"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "tiles_inferno.TileMap::TileCenterX(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Width())",
+                                        "=",
+                                        "tiles_inferno.TileMap::TileCenterY(demonio_chefe.quebra_c, demonio_chefe.quebra_r) - RandomFloatInRange(0, destroco.Height())"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetZOrder"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "destroco.z"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "=",
+                                        "RandomFloatInRange(0, 360)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "vx",
+                                        "=",
+                                        "RandomFloatInRange(-1, 1) * destroco.vel_x"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "vy",
+                                        "=",
+                                        "RandomFloatInRange(destroco.vel_y_min, destroco.vel_y_max)"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "destroco",
+                                        "va",
+                                        "=",
+                                        "RandomFloatInRange(-1, 1) * destroco.giro"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "demonio_chefe",
+                                    "quebra_i",
+                                    "+",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -131565,6 +130109,64 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Hub",
+      "name": "Hubs",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Queda da borda",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y()",
+                    ">",
+                    "queda_y"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "pato",
+                    "=",
+                    "volta_x",
+                    "=",
+                    "volta_y"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
