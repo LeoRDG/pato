@@ -69636,6 +69636,20 @@
           "booleanParameters": {
             "parallel": true
           }
+        },
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Brilho",
+          "doubleParameters": {
+            "threshold": 0.4,
+            "bloomScale": 1,
+            "brightness": 1,
+            "blur": 6,
+            "quality": 6,
+            "padding": 0
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
         }
       ],
       "behaviors": [],
@@ -72814,6 +72828,108 @@
           "persistentUuid": "e667ed61-2c0c-508b-af0d-f3003278223f",
           "type": "number",
           "value": 0.6
+        },
+        {
+          "name": "luz_fase",
+          "persistentUuid": "70edaecd-505d-55d5-bfb0-f99c3ecce42d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raios_gain_1",
+          "persistentUuid": "8fd33b0d-0dfd-5113-a36a-b6d7b1ac5d61",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "raios_gain_2",
+          "persistentUuid": "cf8a3b4d-b009-5391-b8ad-27a3e83d5d80",
+          "type": "number",
+          "value": 0.55
+        },
+        {
+          "name": "raios_gain_3",
+          "persistentUuid": "bf87dffd-09fa-5d19-a9eb-2545cb0b01bf",
+          "type": "number",
+          "value": 0.65
+        },
+        {
+          "name": "raios_gain_4",
+          "persistentUuid": "d4d0b345-862b-522a-a0c8-898c493688d2",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "raios_luz_1",
+          "persistentUuid": "f1015093-8086-5454-a3a7-24cb7cdfa06d",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "raios_luz_2",
+          "persistentUuid": "a5fed1f5-10a0-55ec-8e0b-7527216c9007",
+          "type": "number",
+          "value": 35
+        },
+        {
+          "name": "raios_luz_3",
+          "persistentUuid": "559080d6-d9a1-5d74-9445-e8f5f717b6e9",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "raios_luz_4",
+          "persistentUuid": "07d0e71d-6fa4-5fcd-a1c6-2cc37433ca32",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "bloom_1",
+          "persistentUuid": "e4ebb375-c3db-5ee3-a360-03334856376b",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "bloom_2",
+          "persistentUuid": "5a9f9ec3-e01b-58ae-b53d-2b1d89f58ecb",
+          "type": "number",
+          "value": 1.3
+        },
+        {
+          "name": "bloom_3",
+          "persistentUuid": "b9860709-ab3c-5832-8163-b9224e71cac7",
+          "type": "number",
+          "value": 1.6
+        },
+        {
+          "name": "bloom_4",
+          "persistentUuid": "5c5c0570-1ea7-5947-9d47-23d5c52d8922",
+          "type": "number",
+          "value": 2.1
+        },
+        {
+          "name": "aura_cor_1",
+          "persistentUuid": "21fbc7f5-2672-55dd-9512-796782f450aa",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "aura_cor_2",
+          "persistentUuid": "1b689bca-01c0-5130-be55-80a0c9bb4167",
+          "type": "string",
+          "value": "255;240;200"
+        },
+        {
+          "name": "aura_cor_3",
+          "persistentUuid": "becad8b1-c298-50fb-88b1-53cff156d8fe",
+          "type": "string",
+          "value": "255;215;235"
+        },
+        {
+          "name": "aura_cor_4",
+          "persistentUuid": "ec04f741-7044-59d9-96dd-3f70316d177f",
+          "type": "string",
+          "value": "255;190;160"
         }
       ],
       "effects": [],
@@ -132470,6 +132586,402 @@
                         "Animation",
                         "=",
                         "\"idle\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Luz por fase",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "!=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "gain",
+                        "deus.raios_gain_1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "light",
+                        "deus.raios_luz_1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Brilho",
+                        "bloomScale",
+                        "deus.bloom_1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "deus.aura_cor_1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "!=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "gain",
+                        "deus.raios_gain_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "light",
+                        "deus.raios_luz_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Brilho",
+                        "bloomScale",
+                        "deus.bloom_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "deus.aura_cor_2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "!=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "gain",
+                        "deus.raios_gain_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "light",
+                        "deus.raios_luz_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Brilho",
+                        "bloomScale",
+                        "deus.bloom_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "deus.aura_cor_3"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "!=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "luz_fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "gain",
+                        "deus.raios_gain_4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Raios",
+                        "light",
+                        "deus.raios_luz_4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Effect",
+                        "Brilho",
+                        "bloomScale",
+                        "deus.bloom_4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "deus.aura_cor_4"
                       ]
                     }
                   ]
