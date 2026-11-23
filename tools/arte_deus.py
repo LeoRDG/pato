@@ -125,8 +125,12 @@ def olho(aberto=1.0, pulso=0.0, branco=0.0, escuro=0.0, flash=0.0, raios=0.0):
     alt = max(1.5, ALT * aberto)
     if raios > 0:
         d, a = t.d(), t.ang()
-        m = (np.abs(np.sin(a * 8)) > 1 - 0.55 * raios) & (d < 40 + 70 * raios) & (d > 20)
-        t.camada(m, t.rampa(1 - d / (40 + 70 * raios) + 0.3, [C['creme'], C['pena4'], C['branco']]))
+        # raios finos que afinam até a ponta, sem contorno, com a ponta esmaecendo em xadrez
+        r0, comp = 24, 22 + 62 * raios
+        f = np.clip((d - r0) / comp, 0, 1)
+        m = (np.abs(np.sin(a * 6)) < 0.26 * (1 - f)) & (d > r0) & (d < r0 + comp)
+        m &= (f < 0.55) | t.xadrez()
+        t.camada(m, t.rampa(1.05 - f, [C['ouro2'], C['ouro4'], C['creme'], C['pena4']]), contorno=False)
     lid = amendoa(t, cx, cy, LARG + 14, alt + 9)
     dl = np.hypot(t.xx - cx, (t.yy - cy) * 1.6)
     v = 0.45 + 0.6 * (1 - dl / (LARG / 2 + 7)) + 0.25 * (cy - t.yy) / (alt + 9) + pulso - escuro
@@ -259,13 +263,37 @@ def anim_aura():
 
 
 def anim_escudo():
+    """redoma de luz: aro claro com contorno azul, borda com xadrez (a curva da bolha), treliça triangular que
+    cintila passando pela bolha e um brilho no alto à esquerda; o meio fica quase limpo para ver o olho."""
     q = []
+    R = 110
     for i in range(6):
         t = Tela(240)
         d, a = t.d(), t.ang()
-        m = (np.abs(d - 108) < 4) | ((np.abs(d - 100) < 1.5) & t.xadrez(i))
-        m |= (d < 104) & (np.sin(a * 18 + i) > 0.97) & (d > 80)
-        t.camada(m, t.rampa(0.4 + 0.6 * np.sin(a * 6 + i * math.pi / 3) ** 2, ROSA[1:]))
+        x, y = t.xx - t.cx, t.yy - t.cy
+        dentro = d < R - 2
+        # treliça: três famílias de linhas a 60 graus
+        linha = np.zeros_like(d, bool)
+        for th in (0, math.pi / 3, 2 * math.pi / 3):
+            u = (x * math.cos(th) + y * math.sin(th)) / 18.0
+            linha |= np.abs(u - np.round(u)) < 0.045
+        faixa = np.sin((x * 0.6 + y) / 26.0 - i * math.pi / 3) > 0.55
+        trelica = dentro & linha & (faixa | (d > R * 0.78))
+        t.pinta(trelica, t.rampa(0.3 + 0.7 * d / R, [C['azul1'], C['azul2'], C['ceu1']]))
+        # brilho de bolha (fresnel): pontilhado ordenado que adensa para a borda; o meio fica limpo
+        bayer = np.array([[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]) / 16.0
+        lim = bayer[t.yy.astype(int) % 4, t.xx.astype(int) % 4]
+        dens = np.clip((d / R - 0.5) / 0.5, 0, 1) ** 1.6 * 0.8
+        t.pinta(dentro & (lim < dens), t.rampa(d / R, [C['azul2'], C['ceu1']]))
+        # borda da bolha em xadrez
+        t.pinta(dentro & (d > R - 13) & t.xadrez(i % 2), C['azul2'])
+        t.pinta(dentro & (d > R - 6), C['ceu1'])
+        # aro e contorno
+        aro = (d >= R - 3) & (d < R + 1.5)
+        t.pinta(aro, t.rampa(0.5 + 0.5 * np.cos(a + 2.3), [C['azul2'], C['ceu1'], C['pena4']]))
+        t.pinta((d >= R + 1.5) & (d < R + 3), C['azul0'])
+        # brilho no alto à esquerda
+        t.pinta((d > R - 11) & (d < R - 7) & (a > -2.7) & (a < -1.7), C['branco'])
         q.append(t.img())
     salva_anim(q, os.path.join(D, 'escudo'), 'idle')
 
@@ -301,15 +329,49 @@ def anim_canalizador():
 
 # ---------------- peças do Empíreo ----------------
 def fragmento(n, semente):
+    """lasca de pedra do céu: polígono irregular em facetas planas (luz de cima à esquerda), contorno,
+    rachaduras e um veio dourado; sem ruído."""
     t = Tela(n)
     rng = np.random.RandomState(semente)
-    d, a = t.d(), t.ang()
-    borda = n * 0.42 * (1 + 0.18 * np.sin(a * 3 + rng.rand() * 6) + 0.1 * np.sin(a * 7 + rng.rand() * 6))
-    m = d <= borda
-    t.camada(m, t.rampa(0.3 + 0.5 * (t.cy - t.yy) / n + 0.4 * (1 - d / borda), PEDRA))
-    nuvem = m & (t.yy < t.cy - n * 0.12 + 3 * np.sin(t.xx * 0.5))
-    t.pinta(nuvem, t.rampa(0.5 + 0.5 * (t.cy - t.yy) / n, [C['pena3'], C['creme'], C['pena4']]))
-    t.pinta(m & (rng.rand(n, n) > 0.97), C['pena1'])
+    k = 7
+    angs = (np.arange(k) + 0.35 * rng.randn(k).clip(-1, 1)) * 2 * math.pi / k + rng.rand() * math.pi
+    raios = n * (0.30 + 0.14 * rng.rand(k))
+    vx, vy = t.cx + np.cos(angs) * raios, t.cy + np.sin(angs) * raios * 0.85
+    # ponto das facetas, um pouco para cima e à esquerda (o lado iluminado fica maior)
+    px, py = t.cx - n * 0.06 + rng.randn() * 1.5, t.cy - n * 0.08 + rng.randn() * 1.5
+    ang = np.arctan2(t.yy + 0.5 - py, t.xx + 0.5 - px)
+    dentro = np.ones((n, n), bool)
+    for i in range(k):
+        x0, y0, x1, y1 = vx[i], vy[i], vx[(i + 1) % k], vy[(i + 1) % k]
+        dentro &= (x1 - x0) * (t.yy + 0.5 - y0) - (y1 - y0) * (t.xx + 0.5 - x0) >= 0
+    luz = np.array([-0.6, -0.8])
+    tons = [C['pena0'], C['pena1'], C['pena2'], C['pena3']]
+    faceta = np.zeros((n, n), int)
+    a_v = np.arctan2(vy - py, vx - px)
+    for i in range(k):
+        a0, a1 = a_v[i], a_v[(i + 1) % k]
+        dentro_f = ((ang - a0) % (2 * math.pi)) < ((a1 - a0) % (2 * math.pi))
+        meio = (a0 + ((a1 - a0) % (2 * math.pi)) / 2)
+        brilho = np.dot([math.cos(meio), math.sin(meio)], luz)
+        faceta[dentro_f] = int(np.clip(round(1.5 + 1.6 * brilho), 0, 3))
+    cor = np.array(tons, np.uint8)[faceta]
+    t.camada(dentro, cor)
+    # arestas entre facetas, um tom abaixo
+    for i in range(k):
+        for f in np.linspace(0.15, 0.95, n):
+            x, y = int(px + (vx[i] - px) * f), int(py + (vy[i] - py) * f)
+            if 0 <= x < n and 0 <= y < n and dentro[y, x]:
+                t.rgb[y, x] = tons[max(0, faceta[y, x] - 1)]
+    # borda iluminada (em cima e à esquerda) mais clara
+    borda = dentro & ~np.roll(dentro, 1, 0) | dentro & ~np.roll(dentro, 1, 1)
+    t.pinta(borda & (faceta >= 2), C['pena4'])
+    # um veio dourado atravessando
+    a = rng.rand() * math.pi
+    for f in np.linspace(-0.3, 0.3, n * 2):
+        x = int(t.cx + math.cos(a) * f * n + math.sin(f * 9) * 1.2)
+        y = int(t.cy + math.sin(a) * f * n)
+        if 0 <= x < n and 0 <= y < n and dentro[y, x] and not borda[y, x]:
+            t.rgb[y, x] = C['ouro2']
     return t.img()
 
 

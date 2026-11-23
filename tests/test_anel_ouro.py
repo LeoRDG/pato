@@ -26,18 +26,21 @@ class AnelOuro(unittest.TestCase):
     def test_fragmentos_fazem_sombra(self):
         self.assertIn(g.COMP_SOMBRA, [b['type'] for b in self.o['fragmento']['behaviors']])
         f = tx(self.frag)
-        self.assertIn('"Create"}, "parameters": ["", "fragmento"', f)
+        self.assertIn('"Create"}, "parameters": ["", "fragmento"', tx(self.ouro), 'nascem no começo do olhar')
         self.assertIn('"Delete"}, "parameters": ["fragmento"', f)
         self.assertIn('["luta", "True", ""]', f)
 
     def test_queima_so_sem_sombra(self):
         (q,) = [e for e in m.todos(self.ouro['events']) if '"pato", "vida", "-"' in tx(e['actions'])]
         conds = q['conditions']
-        ray = [c for c in conds if c['type']['value'] == 'RaycastToPosition']
-        self.assertEqual(len(ray), 1)
-        self.assertTrue(ray[0]['type'].get('inverted'))
-        self.assertEqual(ray[0]['parameters'][:5], ['fragmento', 'deus.px', 'deus.py', 'pato.CenterX()', 'pato.CenterY()'])
+        self.assertFalse([c for c in conds if c['type']['value'] == 'RaycastToPosition'],
+                         'RaycastToPosition invertido só é verdadeiro quando ACERTA um fragmento')
         c = tx(conds)
+        self.assertIn('"pato", "na_sombra", "False"', c)
+        sombra = next(e for e in m.todos(self.ouro['events']) if '"pato", "na_sombra", "True"' in tx(e['actions']))
+        (ray,) = [x for x in sombra['conditions'] if x['type']['value'] == 'RaycastToPosition']
+        self.assertFalse(ray['type'].get('inverted'))
+        self.assertEqual(ray['parameters'][:5], ['fragmento', 'deus.px', 'deus.py', 'pato.CenterX()', 'pato.CenterY()'])
         self.assertIn('"pato", "invencivel", "False"', c)
         pai = next(e for e in m.todos(self.ouro['events']) if q in e.get('events', []))
         self.assertIn('\\"varre\\"', tx(pai['conditions']), 'só queima na varredura')
@@ -52,10 +55,9 @@ class AnelOuro(unittest.TestCase):
         self.assertIn('"deus", "estado", "=", "\\"fim_golpe\\""', o)
         self.assertIn(f'"{g.ACAO_RAIO_LUZ}"}}, "parameters": ["luz_olhar"', o)
 
-    def test_raios_na_aura(self):
-        ef = [e for e in self.o['deus_aura']['effects'] if e['effectType'] == 'Godray']
-        self.assertEqual(len(ef), 1)
-        self.assertLessEqual(set(ef[0]['doubleParameters']), set(g.EFEITOS['Godray']))
+    def test_sem_godray_na_aura(self):
+        """Godray soma a névoa em todo o retângulo do objeto (até no transparente): virava uma caixa em volta do olho."""
+        self.assertFalse([e for e in self.o['deus_aura']['effects'] if e['effectType'] == 'Godray'])
 
     def test_variaveis(self):
         texto = tx(self.ouro) + tx(self.frag)

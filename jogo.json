@@ -12704,6 +12704,14 @@
         "name": "assets/inimigos/ceu/deus/pupila/dano_01.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/halo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/halo.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -13199,6 +13207,18 @@
         {
           "name": "no_halo",
           "persistentUuid": "9f3f8623-8e3f-5831-b528-d21ac602e615",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "na_sombra",
+          "persistentUuid": "cb7d96ae-2000-57fd-9cfc-461eda5a82be",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "voando",
+          "persistentUuid": "fcd85e7f-7c51-5e55-a8e3-ba8cb1f53ef5",
           "type": "boolean",
           "value": false
         }
@@ -68246,7 +68266,7 @@
           "name": "parallax",
           "persistentUuid": "5a5754a4-c8d2-5d12-9dc0-81903f27e99d",
           "type": "number",
-          "value": 0.12
+          "value": 0.45
         },
         {
           "name": "opacidade_max",
@@ -68283,7 +68303,7 @@
           "name": "parallax",
           "persistentUuid": "2ddf5d29-e110-5eb4-abcc-61fc35229dbe",
           "type": "number",
-          "value": 0.12
+          "value": 0.45
         },
         {
           "name": "opacidade_max",
@@ -68323,7 +68343,14 @@
       "persistentUuid": "7b2eaec6-1b8d-54b6-b77b-a753e0557a24",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "morte_tempo",
+          "persistentUuid": "33ec3f69-990c-5a1c-8df0-b8a51ed71cc9",
+          "type": "number",
+          "value": 2.6
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -69620,24 +69647,6 @@
       "variables": [],
       "effects": [
         {
-          "effectType": "Godray",
-          "name": "Raios",
-          "doubleParameters": {
-            "lacunarity": 2.75,
-            "angle": 30,
-            "gain": 0.45,
-            "light": 30,
-            "x": 0,
-            "y": 0,
-            "animationSpeed": 1,
-            "padding": 0
-          },
-          "stringParameters": {},
-          "booleanParameters": {
-            "parallel": true
-          }
-        },
-        {
           "effectType": "AdvancedBloom",
           "name": "Brilho",
           "doubleParameters": {
@@ -69824,7 +69833,7 @@
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_00.png",
                   "points": [],
                   "originPoint": {
@@ -69838,10 +69847,77 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 },
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_01.png",
                   "points": [],
                   "originPoint": {
@@ -69855,10 +69931,77 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 },
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_02.png",
                   "points": [],
                   "originPoint": {
@@ -69872,10 +70015,77 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 },
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_03.png",
                   "points": [],
                   "originPoint": {
@@ -69889,10 +70099,77 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 },
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_04.png",
                   "points": [],
                   "originPoint": {
@@ -69906,10 +70183,77 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 },
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/inimigos/ceu/deus/escudo/idle_05.png",
                   "points": [],
                   "originPoint": {
@@ -69923,7 +70267,74 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 693.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 693.0
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 667.7
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 595.5
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 487.4
+                      },
+                      {
+                        "x": 27.0,
+                        "y": 360.0
+                      },
+                      {
+                        "x": 52.3,
+                        "y": 232.6
+                      },
+                      {
+                        "x": 124.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 232.6,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 360.0,
+                        "y": 27.0
+                      },
+                      {
+                        "x": 487.4,
+                        "y": 52.3
+                      },
+                      {
+                        "x": 595.5,
+                        "y": 124.5
+                      },
+                      {
+                        "x": 667.7,
+                        "y": 232.6
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -70749,7 +71160,7 @@
               "timeBetweenFrames": 0.1,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/paraiso/deus/fragmento_1.png",
                   "points": [],
                   "originPoint": {
@@ -70763,7 +71174,38 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 45
+                      },
+                      {
+                        "x": 44,
+                        "y": 15
+                      },
+                      {
+                        "x": 69,
+                        "y": 31
+                      },
+                      {
+                        "x": 81,
+                        "y": 54
+                      },
+                      {
+                        "x": 66,
+                        "y": 75
+                      },
+                      {
+                        "x": 43,
+                        "y": 78
+                      },
+                      {
+                        "x": 13,
+                        "y": 57
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -70778,7 +71220,7 @@
               "timeBetweenFrames": 0.1,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/paraiso/deus/fragmento_2.png",
                   "points": [],
                   "originPoint": {
@@ -70792,7 +71234,46 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 21,
+                        "y": 72
+                      },
+                      {
+                        "x": 27,
+                        "y": 33
+                      },
+                      {
+                        "x": 33,
+                        "y": 24
+                      },
+                      {
+                        "x": 86,
+                        "y": 36
+                      },
+                      {
+                        "x": 102,
+                        "y": 49
+                      },
+                      {
+                        "x": 99,
+                        "y": 72
+                      },
+                      {
+                        "x": 90,
+                        "y": 93
+                      },
+                      {
+                        "x": 40,
+                        "y": 102
+                      },
+                      {
+                        "x": 21,
+                        "y": 92
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -70807,7 +71288,7 @@
               "timeBetweenFrames": 0.1,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets/paraiso/deus/fragmento_3.png",
                   "points": [],
                   "originPoint": {
@@ -70821,7 +71302,46 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 21,
+                        "y": 81
+                      },
+                      {
+                        "x": 33,
+                        "y": 42
+                      },
+                      {
+                        "x": 72,
+                        "y": 30
+                      },
+                      {
+                        "x": 89,
+                        "y": 33
+                      },
+                      {
+                        "x": 132,
+                        "y": 61
+                      },
+                      {
+                        "x": 114,
+                        "y": 99
+                      },
+                      {
+                        "x": 75,
+                        "y": 129
+                      },
+                      {
+                        "x": 55,
+                        "y": 132
+                      },
+                      {
+                        "x": 39,
+                        "y": 113
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -71933,7 +72453,7 @@
           "name": "distancia_baixo",
           "persistentUuid": "10931d3b-4d47-53b2-83ab-01cd1c836749",
           "type": "number",
-          "value": 330
+          "value": 230
         },
         {
           "name": "segue_x",
@@ -71951,7 +72471,7 @@
           "name": "pupila_alcance",
           "persistentUuid": "857fd0d8-24c2-54bd-918a-eef7f005db87",
           "type": "number",
-          "value": 36
+          "value": 22
         },
         {
           "name": "pupila_suave",
@@ -72515,7 +73035,7 @@
           "name": "halo_raio_luz",
           "persistentUuid": "1d0f203b-4623-58c1-9319-c4be55f451b2",
           "type": "number",
-          "value": 190
+          "value": 300
         },
         {
           "name": "halo_vel",
@@ -72599,7 +73119,7 @@
           "name": "canal_orbita_raio",
           "persistentUuid": "50be94ab-4cc8-5119-9a43-e74c195ba27b",
           "type": "number",
-          "value": 400
+          "value": 200
         },
         {
           "name": "canal_orbita_vel",
@@ -72779,7 +73299,7 @@
           "name": "orbita_raio",
           "persistentUuid": "6d2a7805-538e-56dd-aeef-0072bcca7511",
           "type": "number",
-          "value": 260
+          "value": 170
         },
         {
           "name": "orbita_passo",
@@ -72836,54 +73356,6 @@
           "value": 0
         },
         {
-          "name": "raios_gain_1",
-          "persistentUuid": "8fd33b0d-0dfd-5113-a36a-b6d7b1ac5d61",
-          "type": "number",
-          "value": 0.45
-        },
-        {
-          "name": "raios_gain_2",
-          "persistentUuid": "cf8a3b4d-b009-5391-b8ad-27a3e83d5d80",
-          "type": "number",
-          "value": 0.55
-        },
-        {
-          "name": "raios_gain_3",
-          "persistentUuid": "bf87dffd-09fa-5d19-a9eb-2545cb0b01bf",
-          "type": "number",
-          "value": 0.65
-        },
-        {
-          "name": "raios_gain_4",
-          "persistentUuid": "d4d0b345-862b-522a-a0c8-898c493688d2",
-          "type": "number",
-          "value": 0.8
-        },
-        {
-          "name": "raios_luz_1",
-          "persistentUuid": "f1015093-8086-5454-a3a7-24cb7cdfa06d",
-          "type": "number",
-          "value": 30
-        },
-        {
-          "name": "raios_luz_2",
-          "persistentUuid": "a5fed1f5-10a0-55ec-8e0b-7527216c9007",
-          "type": "number",
-          "value": 35
-        },
-        {
-          "name": "raios_luz_3",
-          "persistentUuid": "559080d6-d9a1-5d74-9445-e8f5f717b6e9",
-          "type": "number",
-          "value": 40
-        },
-        {
-          "name": "raios_luz_4",
-          "persistentUuid": "07d0e71d-6fa4-5fcd-a1c6-2cc37433ca32",
-          "type": "number",
-          "value": 50
-        },
-        {
           "name": "bloom_1",
           "persistentUuid": "e4ebb375-c3db-5ee3-a360-03334856376b",
           "type": "number",
@@ -72930,9 +73402,149 @@
           "persistentUuid": "ec04f741-7044-59d9-96dd-3f70316d177f",
           "type": "string",
           "value": "255;190;160"
+        },
+        {
+          "name": "halo_seq",
+          "persistentUuid": "7102e98b-4b88-51af-b306-61a6dd20bbbe",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "halo_marca_opacidade",
+          "persistentUuid": "dd0d6c3e-5ac1-55bd-a8b9-1e26ef0c7f8f",
+          "type": "number",
+          "value": 210
+        },
+        {
+          "name": "aneis_escala",
+          "persistentUuid": "0d56b957-4e9a-5a9f-82ad-0dd280c1b833",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "corpo_escala",
+          "persistentUuid": "384dcfc7-12fb-50ae-a85b-ecd232fccfc1",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "cor_aberta",
+          "persistentUuid": "f06d9743-acc3-5d54-9ea0-5eb7b8216fac",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "cor_fechada",
+          "persistentUuid": "d4c13a56-41b6-5677-9bb0-7c5aa89f25f8",
+          "type": "string",
+          "value": "110;110;140"
+        },
+        {
+          "name": "barra_cor_aberta",
+          "persistentUuid": "51325ddf-840d-5abd-8aed-c884fa75abe0",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "barra_cor_fechada",
+          "persistentUuid": "f016fb7d-7065-5709-9fda-25e5d0522182",
+          "type": "string",
+          "value": "120;120;130"
+        },
+        {
+          "name": "brilho_forca",
+          "persistentUuid": "d198d4c5-c11e-576b-bc4c-486c4e0629ac",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "brilho_pulso",
+          "persistentUuid": "26efe377-6bb0-5c6a-84e2-104e6117dba2",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "fragmento_qtd",
+          "persistentUuid": "bb57d5fc-5957-5617-886e-5044dcb1e80a",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "fragmento_deriva",
+          "persistentUuid": "0b49901e-40d2-510c-bb02-0c746fc408a7",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "fragmento_queda",
+          "persistentUuid": "7f1276cf-d223-5f04-94b9-86162762d1dc",
+          "type": "number",
+          "value": 600
+        },
+        {
+          "name": "fragmento_baixo",
+          "persistentUuid": "261a3d3b-1712-5dc3-adfc-7004c6047a83",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "fragmento_fade",
+          "persistentUuid": "38d8e822-64e1-5bfa-9f29-87fc6585b303",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "escudo_visto",
+          "persistentUuid": "14d1ba16-0386-515e-84b6-9bb4fe47b4fd",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "escudo_escala",
+          "persistentUuid": "21885f68-f81b-5e2a-950d-8d59f06d9a58",
+          "type": "number",
+          "value": 0.75
+        },
+        {
+          "name": "escudo_opacidade",
+          "persistentUuid": "a25d8994-8796-504a-95de-d7f1f763cc33",
+          "type": "number",
+          "value": 235
+        },
+        {
+          "name": "escudo_pulso",
+          "persistentUuid": "bd2fa8b2-31c1-51d4-817b-fae587e5261e",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "escudo_pulso_forca",
+          "persistentUuid": "b7311ff9-ccf0-5f60-9915-25e80f496911",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "particula_z",
+          "persistentUuid": "3dcca386-afeb-53ec-a638-92f263a2cdff",
+          "type": "number",
+          "value": 2640
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Aberta",
+          "doubleParameters": {
+            "distance": 12,
+            "innerStrength": 1,
+            "outerStrength": 4
+          },
+          "stringParameters": {
+            "color": "255;220;120"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -73640,6 +74252,12 @@
           "persistentUuid": "525a0a6c-98a6-5ba6-8572-479277487120",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "id",
+          "persistentUuid": "5d20c836-f371-5f21-bacf-c67fdb4fd144",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -73690,6 +74308,243 @@
           "booleanParameters": {}
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "halo_marca",
+      "persistentUuid": "01faf777-f9ec-5874-972e-2310c7c018c6",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "persistentUuid": "2cc900ed-9e4a-5587-a8b6-cd3170ef67b8",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/paraiso/deus/halo.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 100,
+      "emitterForceMax": 420,
+      "emitterForceMin": 150,
+      "flow": 2000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "escudo_faisca",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "235;248;255",
+      "particleColor2": "90;160;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 248,
+      "particleGreen2": 160,
+      "particleLifeTimeMax": 0.45,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 235,
+      "particleRed2": 90,
+      "particleSize1": 100,
+      "particleSize2": 30,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 14,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 2,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 750,
+      "emitterForceMin": 300,
+      "flow": 6000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 90,
+      "name": "escudo_quebra",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "225;242;255",
+      "particleColor2": "80;140;255",
+      "particleGravityX": 0,
+      "particleGravityY": 300,
+      "particleGreen1": 242,
+      "particleGreen2": 140,
+      "particleLifeTimeMax": 0.9,
+      "particleLifeTimeMin": 0.4,
+      "particleRed1": 225,
+      "particleRed2": 80,
+      "particleSize1": 100,
+      "particleSize2": 40,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 18,
+      "rendererParam2": 3,
+      "rendererType": "Line",
+      "tank": 70,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 130,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 900,
+      "emitterForceMin": 200,
+      "flow": 4000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 200,
+      "name": "deus_morte_luz",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 220,
+      "particleBlue2": 60,
+      "particleColor1": "255;250;220",
+      "particleColor2": "255;190;60",
+      "particleGravityX": 0,
+      "particleGravityY": -100,
+      "particleGreen1": 250,
+      "particleGreen2": 190,
+      "particleLifeTimeMax": 1.8,
+      "particleLifeTimeMin": 0.8,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 120,
+      "particleSize2": 20,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 6,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 160,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 40,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 4,
+      "emitterForceMax": 1500,
+      "emitterForceMin": 900,
+      "flow": 60,
+      "jumpForwardInTimeOnCreation": 1,
+      "maxParticleNb": 140,
+      "name": "vento_subida",
+      "particleAlpha1": 60,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "190;215;255",
+      "particleGravityX": 0,
+      "particleGravityY": 60,
+      "particleGreen1": 255,
+      "particleGreen2": 215,
+      "particleLifeTimeMax": 1.3,
+      "particleLifeTimeMin": 0.8,
+      "particleRed1": 255,
+      "particleRed2": 190,
+      "particleSize1": 100,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 110,
+      "rendererParam2": 3,
+      "rendererType": "Line",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 760,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -73936,6 +74791,21 @@
               },
               {
                 "objectName": "laco_amor"
+              },
+              {
+                "objectName": "halo_marca"
+              },
+              {
+                "objectName": "escudo_faisca"
+              },
+              {
+                "objectName": "escudo_quebra"
+              },
+              {
+                "objectName": "deus_morte_luz"
+              },
+              {
+                "objectName": "vento_subida"
               }
             ]
           }
@@ -86833,6 +87703,18 @@
           "persistentUuid": "7dc9f686-0552-5d53-94c7-80945097f832",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "luta_parallax_y",
+          "persistentUuid": "044f3edb-afb8-546a-b268-4b39993b3423",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "vento_z",
+          "persistentUuid": "40c28329-2c4f-59b5-836f-b3033ab734d9",
+          "type": "number",
+          "value": 1
         }
       ],
       "instances": [
@@ -89534,6 +90416,17 @@
                     "pato.voo_som_volume",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voando",
+                    "True",
+                    ""
+                  ]
                 }
               ]
             }
@@ -90422,6 +91315,172 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "name": "Vento da subida",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraCenterY(\"Fundo\", 0) + (CameraCenterY(\"\", 0) - luta_y0) * (luta_parallax_y - fundo_parallax_y)",
+                    "\"Fundo\"",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_final_morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "vento_subida",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "vento_subida",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "vento_subida",
+                    "=",
+                    "90"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "vento_subida",
+                    "=",
+                    "vento_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "vento_subida",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_final_morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "vento_subida",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "name": "Céu para o espaço",
           "source": "",
           "parameters": [],
@@ -90677,6 +91736,26 @@
                     "Animation",
                     "=",
                     "\"idle\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voando",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "vento_subida",
+                    ""
                   ]
                 }
               ]
@@ -94066,6 +95145,17 @@
                             "",
                             "\"LShift\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -94109,6 +95199,17 @@
                           "parameters": [
                             "pato",
                             "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -94165,6 +95266,17 @@
                           "parameters": [
                             "pato",
                             "AdvancedJump",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
+                            "False",
                             ""
                           ]
                         }
@@ -94234,6 +95346,17 @@
                                 "AdvancedJump",
                                 ""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "voando",
+                                "False",
+                                ""
+                              ]
                             }
                           ],
                           "actions": [
@@ -94279,6 +95402,17 @@
                             "",
                             "\"Space\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -94312,6 +95446,17 @@
                         "value": "BuiltinCommonInstructions::Once"
                       },
                       "parameters": []
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voando",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -94369,6 +95514,17 @@
                       "parameters": [
                         "pato",
                         "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voando",
+                        "False",
+                        ""
                       ]
                     }
                   ],
@@ -94444,6 +95600,17 @@
                         "value": "BuiltinCommonInstructions::Once"
                       },
                       "parameters": []
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voando",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -94753,6 +95920,17 @@
                             "False",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -94848,6 +96026,17 @@
                           "parameters": [
                             "pato",
                             "morto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "voando",
                             "False",
                             ""
                           ]
@@ -131677,6 +132866,94 @@
                         "deus",
                         "\"morte_deus\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        "Scale",
+                        "=",
+                        "deus.corpo_escala * deus.escudo_escala"
+                      ]
                     }
                   ]
                 }
@@ -131863,7 +133140,19 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -132006,6 +133295,115 @@
                         "deus_anel_rosa",
                         "+",
                         "deus.anel_giro_rosa * TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Pupila fechada",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vulneravel",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"fecha\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vulneravel",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"escuro\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vulneravel",
+                        "False",
+                        ""
                       ]
                     }
                   ]
@@ -132165,6 +133563,505 @@
                         "Animation",
                         "=",
                         "\"idle\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Sinal de vulnerável",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "invulneravel",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Effect",
+                        "\"Aberta\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Effect",
+                        "\"Aberta\"",
+                        "\"outerStrength\"",
+                        "deus.brilho_forca * (1 + sin(TimeFromStart() * deus.brilho_pulso)) / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus",
+                        "deus.cor_aberta"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::SetColor"
+                      },
+                      "parameters": [
+                        "hud_boss_fill",
+                        "deus.barra_cor_aberta"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "invulneravel",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Effect",
+                        "\"Aberta\"",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus",
+                        "deus.cor_fechada"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::SetColor"
+                      },
+                      "parameters": [
+                        "hud_boss_fill",
+                        "deus.barra_cor_fechada"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "invulneravel",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        "Opacity",
+                        "=",
+                        "deus.escudo_opacidade - deus.escudo_pulso_forca * (1 + sin(TimeFromStart() * deus.escudo_pulso)) / 2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "invulneravel",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "deus_escudo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "escudo_quebra",
+                        "deus.cx",
+                        "deus.cy",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "escudo_quebra",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.escudo_quebra_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        "<=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "deus_escudo",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "escudo_faisca",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "escudo_faisca",
+                        "=",
+                        "projetil.Angle() + 180"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "escudo_faisca",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "projetil",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "escudo_visto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "deus_escudo",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "escudo_faisca",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "escudo_faisca",
+                        "=",
+                        "projetil.Angle() + 180"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "escudo_faisca",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "boom",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -132483,6 +134380,103 @@
                         "=",
                         "\"quebra\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "janela_amor",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerAmbientLightColor"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Luz\"",
+                        "luz_ambiente_normal"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_pato",
+                        "luz_pato_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_olhar",
+                        "deus.olhar_raio_idle"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "deus",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "luz_halo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "halo_marca",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "feixe_olhar",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "fragmento",
+                        "vy",
+                        "=",
+                        "deus.fragmento_queda"
+                      ]
                     }
                   ]
                 },
@@ -132658,32 +134652,8 @@
                       "parameters": [
                         "deus_aura",
                         "Effect",
-                        "Raios",
-                        "gain",
-                        "deus.raios_gain_1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Raios",
-                        "light",
-                        "deus.raios_luz_1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Brilho",
-                        "bloomScale",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
                         "deus.bloom_1"
                       ]
                     },
@@ -132754,32 +134724,8 @@
                       "parameters": [
                         "deus_aura",
                         "Effect",
-                        "Raios",
-                        "gain",
-                        "deus.raios_gain_2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Raios",
-                        "light",
-                        "deus.raios_luz_2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Brilho",
-                        "bloomScale",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
                         "deus.bloom_2"
                       ]
                     },
@@ -132850,32 +134796,8 @@
                       "parameters": [
                         "deus_aura",
                         "Effect",
-                        "Raios",
-                        "gain",
-                        "deus.raios_gain_3"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Raios",
-                        "light",
-                        "deus.raios_luz_3"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Brilho",
-                        "bloomScale",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
                         "deus.bloom_3"
                       ]
                     },
@@ -132946,32 +134868,8 @@
                       "parameters": [
                         "deus_aura",
                         "Effect",
-                        "Raios",
-                        "gain",
-                        "deus.raios_gain_4"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Raios",
-                        "light",
-                        "deus.raios_luz_4"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "deus_aura",
-                        "Effect",
-                        "Brilho",
-                        "bloomScale",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
                         "deus.bloom_4"
                       ]
                     },
@@ -133512,98 +135410,6 @@
                         "True",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "deus",
-                        "\"fragmento\"",
-                        ">",
-                        "deus.fragmento_intervalo"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "deus",
-                        "\"fragmento\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "fragmento",
-                        "RandomInRange(CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.fragmento_folga)",
-                        "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 - deus.fragmento_acima",
-                        "\"\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "fragmento",
-                        "Animation",
-                        "=",
-                        "\"f\" + ToString(RandomInRange(1, 3))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "fragmento",
-                        "vy",
-                        "=",
-                        "RandomInRange(deus.fragmento_vel_min, deus.fragmento_vel_max)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "fragmento",
-                        "=",
-                        "deus.fragmento_z"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "luta",
-                        "True",
-                        ""
-                      ]
                     }
                   ],
                   "actions": [
@@ -133651,6 +135457,34 @@
                       "parameters": [
                         "fragmento",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "luta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "fragmento",
+                        "Opacity",
+                        "=",
+                        "min(deus.opacidade_max, fragmento.Opacity() + deus.fragmento_fade * TimeDelta())"
                       ]
                     }
                   ]
@@ -133835,6 +135669,70 @@
                         "deus.som_volume",
                         "1"
                       ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "fragmento",
+                            "RandomInRange(CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.fragmento_folga)",
+                            "RandomInRange(CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.fragmento_baixo)",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "Animation",
+                            "=",
+                            "\"f\" + ToString(RandomInRange(1, 3))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "vy",
+                            "=",
+                            "deus.fragmento_deriva * RandomFloatInRange(-1, 1) - subida_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "Opacity",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "=",
+                            "deus.fragmento_z"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.fragmento_qtd"
                     }
                   ]
                 },
@@ -134336,6 +136234,58 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "na_sombra",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RaycastToPosition"
+                              },
+                              "parameters": [
+                                "fragmento",
+                                "deus.px",
+                                "deus.py",
+                                "pato.CenterX()",
+                                "pato.CenterY()",
+                                "olhar_rx",
+                                "olhar_ry",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "na_sombra",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
@@ -134381,17 +136331,12 @@
                         },
                         {
                           "type": {
-                            "value": "RaycastToPosition",
-                            "inverted": true
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "fragmento",
-                            "deus.px",
-                            "deus.py",
-                            "pato.CenterX()",
-                            "pato.CenterY()",
-                            "olhar_rx",
-                            "olhar_ry",
+                            "pato",
+                            "na_sombra",
+                            "False",
                             ""
                           ]
                         }
@@ -134528,6 +136473,17 @@
                             "Animation",
                             "=",
                             "\"idle\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "vy",
+                            "=",
+                            "deus.fragmento_queda"
                           ]
                         }
                       ]
@@ -134833,6 +136789,94 @@
                             "vy",
                             "=",
                             "deus.halo_vel * RandomFloatInRange(-1, 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "halo_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "id",
+                            "=",
+                            "deus.halo_seq"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "halo_marca",
+                            "luz_halo.X()",
+                            "luz_halo.Y()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "halo_marca",
+                            "id",
+                            "=",
+                            "deus.halo_seq"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                          },
+                          "parameters": [
+                            "halo_marca",
+                            "Resizable",
+                            "=",
+                            "deus.halo_raio * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                          },
+                          "parameters": [
+                            "halo_marca",
+                            "Resizable",
+                            "=",
+                            "deus.halo_raio * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "halo_marca",
+                            "Opacity",
+                            "=",
+                            "deus.halo_marca_opacidade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "halo_marca",
+                            "=",
+                            "deus.feixe_z"
                           ]
                         }
                       ],
@@ -135402,6 +137446,15 @@
                     },
                     {
                       "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "halo_marca",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
@@ -135412,6 +137465,37 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "luz_halo",
+                        "id",
+                        "=",
+                        "halo_marca.id"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "halo_marca",
+                        "=",
+                        "luz_halo.X() - halo_marca.Width() / 2",
+                        "=",
+                        "luz_halo.Y() - halo_marca.Height() / 2"
+                      ]
+                    }
+                  ],
+                  "object": "halo_marca"
                 }
               ]
             },
@@ -137286,6 +139370,17 @@
                         },
                         {
                           "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Scale",
+                            "=",
+                            "deus.aneis_escala"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
@@ -138193,6 +140288,17 @@
                         },
                         {
                           "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Scale",
+                            "=",
+                            "deus.aneis_escala"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
@@ -138438,6 +140544,17 @@
                         },
                         {
                           "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Scale",
+                            "=",
+                            "deus.aneis_escala"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
@@ -138679,6 +140796,17 @@
                             "deus_anel_rosa.CenterX()",
                             "deus_anel_rosa.CenterY()",
                             "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Scale",
+                            "=",
+                            "deus.aneis_escala"
                           ]
                         },
                         {
@@ -139183,6 +141311,15 @@
                         "value": "Delete"
                       },
                       "parameters": [
+                        "halo_marca",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
                         "fragmento",
                         ""
                       ]
@@ -139231,6 +141368,37 @@
                       "parameters": [
                         "luz_pato",
                         "luz_pato_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "\"morte_deus\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "deus_morte_luz",
+                        "deus.cx",
+                        "deus.cy",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "deus_morte_luz",
+                        "=",
+                        "deus.particula_z"
                       ]
                     }
                   ]
@@ -139322,6 +141490,100 @@
                       },
                       "parameters": [
                         "deus",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus_olho",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "\"morte_deus\"",
+                        ">",
+                        "deus_olho.morte_tempo"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_escudo",
                         ""
                       ]
                     }

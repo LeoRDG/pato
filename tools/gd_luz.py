@@ -46,8 +46,13 @@ def acao_param_efeito_camada(camada, efeito, param, valor):
     return _a(ACAO_PARAM_EFEITO_CAMADA, ['', camada, efeito, param, valor])
 
 
+def _texto(nome):
+    """nomes de efeito e de parâmetro são textos no GDevelop: precisam de aspas, senão viram vazio."""
+    return nome if nome.startswith('"') else f'"{nome}"'
+
+
 def acao_param_efeito_obj(obj, efeito, param, valor):
-    return _a(ACAO_PARAM_EFEITO_OBJ, [obj, 'Effect', efeito, param, valor])
+    return _a(ACAO_PARAM_EFEITO_OBJ, [obj, 'Effect', _texto(efeito), _texto(param), valor])
 
 
 def acao_mostra_camada(camada):

@@ -29,5 +29,13 @@ class GdLuz(unittest.TestCase):
         self.assertEqual(a['parameters'], ['', '""', '"Raios"', '"gain"', 'deus.raios_gain'])
 
 
+    def test_param_efeito_obj_com_nomes_entre_aspas(self):
+        """o nome do efeito e o do parâmetro são textos: sem aspas o GDevelop lê vazio e a ação não faz nada."""
+        a = g.acao_param_efeito_obj('deus_aura', 'Brilho', 'bloomScale', 'deus.bloom_1')
+        self.assertEqual(a['parameters'], ['deus_aura', 'Effect', '"Brilho"', '"bloomScale"', 'deus.bloom_1'])
+        a = g.acao_param_efeito_obj('deus_aura', '"Brilho"', '"bloomScale"', '1')
+        self.assertEqual(a['parameters'][2:4], ['"Brilho"', '"bloomScale"'])
+
+
 if __name__ == '__main__':
     unittest.main()
