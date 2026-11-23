@@ -11424,6 +11424,30 @@
         "name": "assets/paraiso/deus/feixe.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/queima_borda.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/queima_borda.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/bg_espaco.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/bg_espaco.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/bg_ceu_alto.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/bg_ceu_alto.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -11843,6 +11867,78 @@
           "persistentUuid": "6f46186f-5f61-55b0-9710-558cdde12c5f",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "voo_vel",
+          "persistentUuid": "e07df8fd-ab55-54dc-8ee7-6cbf24f9a301",
+          "type": "number",
+          "value": 900
+        },
+        {
+          "name": "voo_acel",
+          "persistentUuid": "b37f43d9-0dcd-57a5-ae8d-c16d8051aa42",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "voo_freio",
+          "persistentUuid": "f05b5d90-6750-5e7b-8a6b-e2eb2912e5e8",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "voo_dash_vel",
+          "persistentUuid": "3882f828-f8a7-5f18-a944-915c2803273c",
+          "type": "number",
+          "value": 2300
+        },
+        {
+          "name": "voo_dash_tempo",
+          "persistentUuid": "6317a056-531b-5a26-ab47-25c75af5548d",
+          "type": "number",
+          "value": 0.14
+        },
+        {
+          "name": "voo_dash_espera",
+          "persistentUuid": "95228c97-e661-5ddc-902d-a646d60954a0",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "voo_som_volume",
+          "persistentUuid": "07f2799e-3278-5804-981c-2cf18edab8d0",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "voo_vx",
+          "persistentUuid": "b4a6d634-d92c-5fcc-92aa-2c88c17b564c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_vy",
+          "persistentUuid": "283c01f5-6ea9-5080-8c9d-5d6bc9d2f60b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_ix",
+          "persistentUuid": "c39363cf-a88b-592a-a735-c976c4c30591",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_iy",
+          "persistentUuid": "0b5efccb-3fd2-52dd-9046-afa1e38976e0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_norm",
+          "persistentUuid": "776de0d8-5e34-5a18-aba4-c3d76f4bf685",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -66843,6 +66939,120 @@
           "yGrabOffset": 0
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 96,
+      "name": "queima_borda",
+      "persistentUuid": "14102764-401b-5b4d-8dff-98ec0d94c87e",
+      "texture": "assets/paraiso/deus/queima_borda.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 192,
+      "variables": [
+        {
+          "name": "z",
+          "persistentUuid": "487cf83f-e4fe-530b-87ee-69fe0506eb0d",
+          "type": "number",
+          "value": 5000
+        },
+        {
+          "name": "rolagem",
+          "persistentUuid": "025802b7-c0d2-5fd6-aac7-0f779348edae",
+          "type": "number",
+          "value": 120
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1026,
+      "name": "bg_ceu_alto",
+      "persistentUuid": "96cb0111-bbf1-5002-9e1f-3c8ce92ee64a",
+      "texture": "assets/paraiso/deus/bg_ceu_alto.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1026,
+      "variables": [
+        {
+          "name": "z",
+          "persistentUuid": "ac55815a-f4f4-5dc9-bc41-767ff2da8e13",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "parallax",
+          "persistentUuid": "5a5754a4-c8d2-5d12-9dc0-81903f27e99d",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "opacidade_max",
+          "persistentUuid": "fd1588b3-fbb1-599a-8f18-2e4ee7dcde75",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "ate",
+          "persistentUuid": "d90612bb-e31e-5f04-b822-650675546224",
+          "type": "number",
+          "value": 0.5
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1026,
+      "name": "bg_espaco",
+      "persistentUuid": "3e631091-ff78-5da3-89d0-aeafb3ed7779",
+      "texture": "assets/paraiso/deus/bg_espaco.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1026,
+      "variables": [
+        {
+          "name": "z",
+          "persistentUuid": "fba75543-0f01-5be5-b0d0-88a5ce00d076",
+          "type": "number",
+          "value": 11
+        },
+        {
+          "name": "parallax",
+          "persistentUuid": "2ddf5d29-e110-5eb4-abcc-61fc35229dbe",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "opacidade_max",
+          "persistentUuid": "6373c181-e753-5468-a462-e7b0640cea59",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "desde",
+          "persistentUuid": "d57ecad7-282b-51b3-9963-42b9a6267adb",
+          "type": "number",
+          "value": 0.4
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "name": "luz_pato",
+      "persistentUuid": "9a197c94-8769-5725-8e51-e0c5572f6907",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "assetStoreId": "",
+      "content": {
+        "radius": 260,
+        "color": "255;255;255",
+        "texture": "",
+        "debugMode": false
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -67233,6 +67443,12 @@
               },
               {
                 "objectName": "bg_paraiso_rosa"
+              },
+              {
+                "objectName": "bg_ceu_alto"
+              },
+              {
+                "objectName": "bg_espaco"
               }
             ]
           },
@@ -67310,6 +67526,12 @@
           },
           {
             "objectName": "inimigo_barra_fill"
+          },
+          {
+            "objectName": "queima_borda"
+          },
+          {
+            "objectName": "luz_pato"
           }
         ]
       },
@@ -79836,6 +80058,78 @@
           "persistentUuid": "330ae543-73f4-5f2f-8d63-8afafadf318c",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "luta",
+          "persistentUuid": "1f92d680-14c2-5b59-803f-6f4b3b756d94",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "deus_criar",
+          "persistentUuid": "cc0481fd-e9c9-519b-81bb-6e2b2f372a2e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "luta_y0",
+          "persistentUuid": "fcd3bfab-c8ab-54da-ab9b-dcebd2295ce9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "luta_x",
+          "persistentUuid": "f5641c9f-9b23-535b-bf4e-35eedfce6f25",
+          "type": "number",
+          "value": 11200.0
+        },
+        {
+          "name": "subida_vel",
+          "persistentUuid": "c47ceeee-56be-5b6c-9393-3e7e7872d7d0",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "borda_dano",
+          "persistentUuid": "f19a2098-0f78-504f-a3f5-14d64f91ae2f",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "borda_empurrao",
+          "persistentUuid": "3b0fdf1a-1267-5f9f-b2f4-93f2c36c7f88",
+          "type": "number",
+          "value": 1100
+        },
+        {
+          "name": "borda_altura",
+          "persistentUuid": "e63c440f-7935-513f-bd14-1e9e14c94aa1",
+          "type": "number",
+          "value": 96
+        },
+        {
+          "name": "luz_ambiente_normal",
+          "persistentUuid": "a073e4d5-0fbb-5d71-80a1-57d18fe30a78",
+          "type": "string",
+          "value": "175;175;205"
+        },
+        {
+          "name": "luz_ambiente_escuro",
+          "persistentUuid": "e5c4eae9-68dc-513e-9fbf-ec2ecd45d753",
+          "type": "string",
+          "value": "14;14;30"
+        },
+        {
+          "name": "luz_pato_raio",
+          "persistentUuid": "96f9ca02-4cd3-5f64-8cdc-d58978f5b25e",
+          "type": "number",
+          "value": 260
+        },
+        {
+          "name": "altura_espaco",
+          "persistentUuid": "dd4ea3d5-00e8-5fd8-b245-2b2b2bbe7e8a",
+          "type": "number",
+          "value": 9000
         }
       ],
       "instances": [
@@ -81598,6 +81892,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "PlatformBehavior::IsOnFloor"
                   },
                   "parameters": [
@@ -81643,6 +81947,16 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BuiltinCommonInstructions::CompareNumbers"
@@ -81727,6 +82041,16 @@
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Inimigo",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BuiltinCommonInstructions::CompareNumbers"
@@ -82180,6 +82504,1460 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Começo da luta",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "asas",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "guardiao_morto",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_final_morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.CenterX()",
+                    ">=",
+                    "saida_x_min"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.CenterX()",
+                    "<=",
+                    "saida_x_max"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    "<=",
+                    "saida_y"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "deus_criar",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "luta_y0",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothPlatformerCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vx",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"voo_dash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Luz\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerAmbientLightColor"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Luz\"",
+                    "luz_ambiente_normal"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "luz_pato",
+                    "pato.CenterX()",
+                    "pato.CenterY()",
+                    "\"Luz\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Lighting::SetRadius"
+                  },
+                  "parameters": [
+                    "luz_pato",
+                    "luz_pato_raio"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "queima_borda",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "queima_borda",
+                    "=",
+                    "queima_borda.z"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_ceu_alto",
+                    "CameraCenterX(\"Fundo\", 0)",
+                    "CameraCenterY(\"Fundo\", 0)",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "=",
+                    "bg_ceu_alto.z"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "bg_espaco",
+                    "CameraCenterX(\"Fundo\", 0)",
+                    "CameraCenterY(\"Fundo\", 0)",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "=",
+                    "bg_espaco.z"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "asas_pato",
+                    "Animation",
+                    "=",
+                    "\"bater\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_luz.wav",
+                    "",
+                    "pato.voo_som_volume",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Voo do pato",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_ix",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_iy",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"a\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_ix",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"d\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_ix",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"w\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_iy",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_iy",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"s\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_iy",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_norm",
+                        "=",
+                        "max(1, sqrt(pato.voo_ix * pato.voo_ix + pato.voo_iy * pato.voo_iy))"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"voo_dash\"",
+                    ">",
+                    "pato.voo_dash_tempo"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(pato.voo_ix) + abs(pato.voo_iy)",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vx",
+                    "+",
+                    "(pato.voo_ix * pato.voo_vel / pato.voo_norm - pato.voo_vx) * min(1, pato.voo_acel * TimeDelta())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "+",
+                    "(pato.voo_iy * pato.voo_vel / pato.voo_norm - pato.voo_vy) * min(1, pato.voo_acel * TimeDelta())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"voo_dash\"",
+                    ">",
+                    "pato.voo_dash_tempo"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(pato.voo_ix) + abs(pato.voo_iy)",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vx",
+                    "-",
+                    "pato.voo_vx * min(1, pato.voo_freio * TimeDelta())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "-",
+                    "pato.voo_vy * min(1, pato.voo_freio * TimeDelta())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"LShift\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"voo_dash\"",
+                    ">",
+                    "pato.voo_dash_espera"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(pato.voo_ix) + abs(pato.voo_iy)",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vx",
+                    "=",
+                    "pato.voo_ix * pato.voo_dash_vel / pato.voo_norm"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "=",
+                    "pato.voo_iy * pato.voo_dash_vel / pato.voo_norm"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"voo_dash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_dash.wav",
+                    "",
+                    "pato.voo_som_volume",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "pato",
+                    "+",
+                    "pato.voo_vx * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "pato",
+                    "+",
+                    "pato.voo_vy * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "pato",
+                    "=",
+                    "clamp(pato.X(), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - pato.Width())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "pato",
+                    "=",
+                    "max(pato.Y(), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "luz_pato",
+                    "=",
+                    "pato.CenterX()",
+                    "=",
+                    "pato.CenterY()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "em_dano",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "pato",
+                    "Animation",
+                    "=",
+                    "\"Pulo\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Câmera da subida",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_final_morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraCenterY(\"\", 0) - subida_vel * TimeDelta()",
+                    "\"\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "luta_x",
+                    "\"\"",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Borda queimando",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "queima_borda",
+                    "=",
+                    "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2",
+                    "=",
+                    "CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - queima_borda.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "queima_borda",
+                    "Resizable",
+                    "=",
+                    "CameraWidth(\"\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "queima_borda",
+                    "+",
+                    "queima_borda.rolagem * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    ">",
+                    "CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - borda_altura"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "=",
+                    "-borda_empurrao"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    ">",
+                    "CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - borda_altura"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "vida",
+                    "-",
+                    "borda_dano"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "invencivel",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "pato",
+                    "\"iframes\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "ultimo_agressor",
+                    "=",
+                    "\"deus\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "voo_vy",
+                    "=",
+                    "-borda_empurrao"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "som_pato_dano.wav",
+                    "",
+                    "pato.voo_som_volume",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Céu para o espaço",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "=",
+                    "CameraCenterX(\"Fundo\", 0) - CameraWidth(\"Fundo\", 0) / 2",
+                    "=",
+                    "CameraCenterY(\"Fundo\", 0) - CameraHeight(\"Fundo\", 0) / 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "Resizable",
+                    "=",
+                    "CameraWidth(\"Fundo\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "Resizable",
+                    "=",
+                    "CameraHeight(\"Fundo\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "=",
+                    "-(luta_y0 - CameraCenterY(\"\", 0)) * bg_ceu_alto.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "=",
+                    "CameraCenterX(\"Fundo\", 0) - CameraWidth(\"Fundo\", 0) / 2",
+                    "=",
+                    "CameraCenterY(\"Fundo\", 0) - CameraHeight(\"Fundo\", 0) / 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "Resizable",
+                    "=",
+                    "CameraWidth(\"Fundo\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "Resizable",
+                    "=",
+                    "CameraHeight(\"Fundo\", 0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "=",
+                    "-(luta_y0 - CameraCenterY(\"\", 0)) * bg_espaco.parallax"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_ceu_alto",
+                    "Opacity",
+                    "=",
+                    "clamp(clamp((luta_y0 - CameraCenterY(\"\", 0)) / altura_espaco, 0, 1) / bg_ceu_alto.ate, 0, 1) * bg_ceu_alto.opacidade_max"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bg_espaco",
+                    "Opacity",
+                    "=",
+                    "clamp((clamp((luta_y0 - CameraCenterY(\"\", 0)) / altura_espaco, 0, 1) - bg_espaco.desde) / (1 - bg_espaco.desde), 0, 1) * bg_espaco.opacidade_max"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Fim da luta",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "chefe_final_morto",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothCamera",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "pato",
+                    "SmoothPlatformerCamera",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Luz\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "luz_pato",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "queima_borda",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "asas_pato",
+                    "Animation",
+                    "=",
+                    "\"idle\""
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -82277,6 +84055,35 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 255,
+          "ambientLightColorG": 255,
+          "ambientLightColorR": 255,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": true,
+          "isLightingLayer": true,
+          "isLocked": false,
+          "name": "Luz",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
         },
         {
           "ambientLightColorB": 200,
@@ -82847,6 +84654,18 @@
         {
           "name": "guardiao_morto",
           "persistentUuid": "dc489db1-dd56-5087-a842-5daa841ccda8",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "luta",
+          "persistentUuid": "f95587b8-cfae-5a2d-8d09-4e05f05fd991",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "deus_criar",
+          "persistentUuid": "1e5076ae-e6c4-5e7f-8379-719cc422aedc",
           "type": "boolean",
           "value": false
         }
