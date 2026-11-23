@@ -33560,6 +33560,12 @@
           "persistentUuid": "4b6d74c6-265d-5da7-99a0-1d35cbc1ca24",
           "type": "number",
           "value": 2
+        },
+        {
+          "name": "quique_trava",
+          "persistentUuid": "eca64e4f-f5fc-50e7-a052-a53d84c3009d",
+          "type": "number",
+          "value": 0.5
         }
       ],
       "effects": [
@@ -79709,6 +79715,24 @@
                     "Inimigo",
                     "\"hit_som_cooldown\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "\"quique_x\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "\"quique_y\""
+                  ]
                 }
               ],
               "events": [
@@ -85957,7 +85981,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Vendo o pato, quica em diagonal sem parar em volta dele: passou area_raio px dele na horizontal ou area_alt px na vertical, volta na direção dele. Quica nas paredes e ganha quique_ganho px/s a cada quique (até quique_max). Machuca por encostar."
+                  "comment": "Vendo o pato, quica em diagonal sem parar em volta dele: passou area_raio px dele na horizontal ou area_alt px na vertical, volta na direção dele. Quica nas paredes e ganha quique_ganho px/s a cada quique (até quique_max). Machuca por encostar. Dentro do terreno (tranco de bala), é empurrada para fora; depois de bater numa parede, a caixa só puxa de volta naquele eixo depois de quique_trava s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -86096,19 +86120,53 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetX"
-                      },
-                      "parameters": [
-                        "caveira_azul",
-                        "+",
-                        "caveira_azul.vx * TimeDelta()"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "Terreno",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SeparateFromObjects"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "Terreno",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "+",
+                            "caveira_azul.vx * TimeDelta()"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -86168,6 +86226,15 @@
                             "",
                             "25",
                             "RandomFloatInRange(1.6, 1.8)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_x\""
                           ]
                         }
                       ]
@@ -86248,6 +86315,15 @@
                             "25",
                             "RandomFloatInRange(1.6, 1.8)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_y\""
+                          ]
                         }
                       ]
                     },
@@ -86262,6 +86338,17 @@
                             "caveira_azul.CenterX() - pato.CenterX()",
                             ">",
                             "caveira_azul.area_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_x\"",
+                            ">",
+                            "caveira_azul.quique_trava"
                           ]
                         }
                       ],
@@ -86291,6 +86378,17 @@
                             "<",
                             "-caveira_azul.area_raio"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_x\"",
+                            ">",
+                            "caveira_azul.quique_trava"
+                          ]
                         }
                       ],
                       "actions": [
@@ -86319,6 +86417,17 @@
                             ">",
                             "caveira_azul.area_alt"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_y\"",
+                            ">",
+                            "caveira_azul.quique_trava"
+                          ]
                         }
                       ],
                       "actions": [
@@ -86346,6 +86455,17 @@
                             "caveira_azul.CenterY() - pato.CenterY()",
                             "<",
                             "-caveira_azul.area_alt"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_azul",
+                            "\"quique_y\"",
+                            ">",
+                            "caveira_azul.quique_trava"
                           ]
                         }
                       ],
