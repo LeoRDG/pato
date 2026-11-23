@@ -64925,6 +64925,12 @@
       "persistentUuid": "a0310703-78ff-55ce-9fbd-52219233352a",
       "type": "number",
       "value": 2
+    },
+    {
+      "name": "mouse_sensibilidade",
+      "persistentUuid": "c70ee6d3-43ea-5e9b-bbe2-668e283fbce2",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -74651,6 +74657,76 @@
       "associatedLayout": "Hub",
       "name": "Jogador",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Mouse preso",
+          "source": "",
+          "creationTime": 0,
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "O primeiro clique trava o ponteiro no jogo; o mouse anda um cursor virtual preso na tela (MouseX()/MouseY()). Sensibilidade: variável global mouse_sensibilidade. Esc solta; clicar trava de novo. Em cena sem o Jogador o ponteiro é solto."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Mouse preso no jogo: pointer lock + cursor virtual dentro da tela (é o que MouseX()/MouseY() leem).",
+                "// Roda todo quadro só nas cenas com o Jogador; a sensibilidade é a variável global mouse_sensibilidade.",
+                "const jogo = runtimeScene.getGame();",
+                "const T = gdjs._mousePreso || (gdjs._mousePreso = {});",
+                "T.jogo = jogo;",
+                "T.cena = runtimeScene;",
+                "if (!T.instalado) {",
+                "  T.instalado = true;",
+                "  const canvas = jogo.getRenderer().getCanvas();",
+                "  const im = () => T.jogo.getInputManager();",
+                "  const travado = () => document.pointerLockElement === canvas;",
+                "  const ativo = () => T.jogo.getSceneStack().getCurrentScene() === T.cena;",
+                "  const sens = () => {",
+                "    const v = T.jogo.getVariables();",
+                "    return v.has(\"mouse_sensibilidade\") ? v.get(\"mouse_sensibilidade\").getAsNumber() : 1;",
+                "  };",
+                "  const aplica = () => { if (travado()) im().onMouseMove(T.x, T.y); };",
+                "  canvas.addEventListener(\"mousedown\", () => {",
+                "    if (ativo() && !travado()) {",
+                "      T.x = im().getCursorX();",
+                "      T.y = im().getCursorY();",
+                "      canvas.requestPointerLock();",
+                "    }",
+                "  });",
+                "  // na janela (depois do canvas): o jogo já leu a posição congelada do ponteiro; o cursor virtual passa por cima",
+                "  window.addEventListener(\"mousemove\", (e) => {",
+                "    if (!travado()) return;",
+                "    const r = canvas.getBoundingClientRect();",
+                "    const w = T.jogo.getGameResolutionWidth(), h = T.jogo.getGameResolutionHeight();",
+                "    T.x = Math.min(w, Math.max(0, T.x + e.movementX * sens() * w / r.width));",
+                "    T.y = Math.min(h, Math.max(0, T.y + e.movementY * sens() * h / r.height));",
+                "    aplica();",
+                "  });",
+                "  window.addEventListener(\"mousedown\", aplica);",
+                "  window.addEventListener(\"mouseup\", aplica);",
+                "  const quadro = () => {",
+                "    if (travado() && !ativo()) document.exitPointerLock();",
+                "    aplica();",
+                "    requestAnimationFrame(quadro);",
+                "  };",
+                "  requestAnimationFrame(quadro);",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        },
         {
           "colorB": 228,
           "colorG": 176,
