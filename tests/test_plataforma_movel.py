@@ -25,7 +25,7 @@ def test_objetos_da_plataforma_movel():
     assert [b['platformType'] for b in o['behaviors'] if b['type'] == 'PlatformBehavior::PlatformBehavior'] == ['Jumpthru']
     v = variaveis()
     assert v['velocidade'] > 0 and v['espera'] >= 0 and v['sentido'] == 1 and v['fase'] == 0
-    assert set(v) == {'ini_x', 'ini_y', 'fim_x', 'fim_y', 'velocidade', 'espera', 'fase', 'sentido'}
+    assert set(v) == {'ini_x', 'ini_y', 'fim_x', 'fim_y', 'velocidade', 'espera', 'fase', 'sentido', 'espera_pato', 'pisar_folga', 'sincronia'}
     assert 'plataforma_movel_fim' not in OBJ and not any('plataforma_movel/fim' in r for r in RES)      # uma peça só
     d = o['animations'][0]['directions'][0]
     assert d['looping'] and len(d['sprites']) == 6
