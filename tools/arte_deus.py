@@ -237,7 +237,7 @@ def anim_aneis():
     for nome in RAMPAS_ANEIS:
         pasta = os.path.join(D, nome)
         salva_anim([anel(nome)], pasta, 'idle')
-        salva_anim([anel(nome, brilho=0.25, k_brilho=i) for i in range(4)], pasta, 'brilho')
+        salva_anim([anel(nome, brilho=0.25, k_brilho=i) for i in range(4)], pasta, 'cintila')
         salva_anim([anel(nome, quebra=(i + 1) / 8) for i in range(8)], pasta, 'quebra')
 
 

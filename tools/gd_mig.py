@@ -118,7 +118,7 @@ def quadros(pasta, anim_, n):
 
 
 def sprite(ids, nome, anims, variaveis=(), mascara=None, efeitos=()):
-    """anims: [(nome, pasta, n_quadros, tempo, repete)]; mascara: [(x,y),...] em pixels da imagem."""
+    """anims: [(nome, pasta ou lista de imagens, n_quadros, tempo, repete)]; mascara: [(x,y),...] em pixels."""
     def quadro(img):
         q = {'hasCustomCollisionMask': mascara is not None, 'image': img, 'points': [],
              'originPoint': {'name': 'origine', 'x': 0, 'y': 0},
@@ -130,7 +130,8 @@ def sprite(ids, nome, anims, variaveis=(), mascara=None, efeitos=()):
             'type': 'Sprite', 'updateIfNotVisible': False, 'variables': list(variaveis), 'effects': list(efeitos),
             'behaviors': [], 'animations': [
                 {'name': a, 'useMultipleDirections': False, 'directions': [{
-                    'looping': loop, 'timeBetweenFrames': tempo, 'sprites': [quadro(i) for i in quadros(pasta, a, n)]}]}
+                    'looping': loop, 'timeBetweenFrames': tempo,
+                    'sprites': [quadro(i) for i in (pasta if isinstance(pasta, list) else quadros(pasta, a, n))]}]}
                 for a, pasta, n, tempo, loop in anims]}
 
 

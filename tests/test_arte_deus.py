@@ -12,9 +12,9 @@ ANIMS = {
     f'{D}/olho': (660, 660, {'idle': 8, 'piscar': 8, 'fechado': 1, 'carregar': 8, 'juizo': 12,
                              'juizo_falha': 6, 'dano': 2, 'fase': 10, 'morte': 14}),
     f'{D}/pupila': (180, 180, {'idle': 4, 'contrai': 6, 'dano': 2}),
-    f'{D}/anel_ouro': (660, 660, {'idle': 1, 'brilho': 4, 'quebra': 8}),
-    f'{D}/anel_azul': (660, 660, {'idle': 1, 'brilho': 4, 'quebra': 8}),
-    f'{D}/anel_rosa': (660, 660, {'idle': 1, 'brilho': 4, 'quebra': 8}),
+    f'{D}/anel_ouro': (660, 660, {'idle': 1, 'cintila': 4, 'quebra': 8}),
+    f'{D}/anel_azul': (660, 660, {'idle': 1, 'cintila': 4, 'quebra': 8}),
+    f'{D}/anel_rosa': (660, 660, {'idle': 1, 'cintila': 4, 'quebra': 8}),
     f'{D}/aura': (780, 780, {'idle': 8}),
     f'{D}/escudo': (720, 720, {'idle': 6}),
     'assets/inimigos/ceu/canalizador': (128, 128, {'idle': 6, 'canalizar': 6, 'morte': 8}),
@@ -27,8 +27,8 @@ SOLTAS = {f'{P}/fragmento_1.png': (96, 96), f'{P}/fragmento_2.png': (126, 126), 
 OPACAS = {f'{P}/bg_espaco.png', f'{P}/bg_ceu_alto.png', f'{P}/feixe.png'}
 # animações que mantêm o contorno escuro em todo quadro (os clarões de dano, fase e morte não)
 COM_CONTORNO = {f'{D}/olho': ('idle', 'piscar', 'carregar'), f'{D}/pupila': ('idle', 'contrai'),
-                f'{D}/anel_ouro': ('idle', 'brilho'), f'{D}/anel_azul': ('idle', 'brilho'),
-                f'{D}/anel_rosa': ('idle', 'brilho'), 'assets/inimigos/ceu/canalizador': ('idle', 'canalizar')}
+                f'{D}/anel_ouro': ('idle', 'cintila'), f'{D}/anel_azul': ('idle', 'cintila'),
+                f'{D}/anel_rosa': ('idle', 'cintila'), 'assets/inimigos/ceu/canalizador': ('idle', 'canalizar')}
 
 
 def quadros(pasta, anim, n):
