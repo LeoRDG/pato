@@ -12873,18 +12873,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "411afefc-cf71-4b68-90dd-a9fe2d3c7747",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "5846dd05-d23f-446b-9037-1ab89e6f2c9d",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "2e9d1688-082a-442c-bc37-0d35f417424d",
           "type": "number",
@@ -13039,6 +13027,18 @@
           "persistentUuid": "c9ed924e-9708-5d3c-a4da-134cff8b4bee",
           "type": "string",
           "value": "255;110;110"
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "c63ecf2c-88e2-5337-bcdc-2a70bac8632d",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "067adcff-1198-5ee8-9a80-b845437585a6",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -14193,18 +14193,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "d900b779-cfa3-43ec-9bce-077fe105408e",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "f6c21706-a24f-4ec3-9216-bb7d7ac3659f",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "ea32d25d-dc4b-404c-8875-ddbf7f4c5e01",
           "type": "number",
@@ -14401,6 +14389,18 @@
           "persistentUuid": "1a847538-c96c-55ca-aa4f-2a9fb358bf5c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "a653b26b-82d0-5597-84e4-8008b1ba2d85",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "44732aea-2ef9-5d1f-a0c6-e1e5f26a1055",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -17353,18 +17353,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "f19687fe-019b-4fd4-a09e-be610cdcbd48",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "fcb3198d-f720-4d1e-a9d7-9e9c48110edc",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "b7f97156-dcb2-4a93-a0cc-0b9acfbb4394",
           "type": "number",
@@ -17555,6 +17543,18 @@
           "persistentUuid": "23180b83-6dfd-507d-bd6c-abf26953c584",
           "type": "number",
           "value": 2.5
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "74f0210b-41f3-568c-9140-052bd3dfb31a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "2ab9dac3-2f9c-5d9b-a4d8-59ba4e5dd9d7",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -20592,18 +20592,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "e584408e-c24d-4cb4-b9b5-d3e59ac89df1",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "4403a972-40b6-4049-b7c9-a3a48c868d93",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "5db5bad3-0554-465d-a684-ea64cc977394",
           "type": "number",
@@ -20788,6 +20776,18 @@
           "persistentUuid": "0c1701bf-211d-5b5e-9bd6-dda536097407",
           "type": "string",
           "value": "170;255;255"
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "316eec6c-7b1c-53e6-af42-e792f9926b11",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "61ffd8ea-d902-5357-840f-b1ceca5204e4",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -23403,18 +23403,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "b4625ab2-b234-4432-8ca1-439ea108a960",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "4055c8bb-2403-48d0-93f7-b6f7d33d89d4",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "acd9759a-a8f9-4b8e-95ca-21dcf83d8e6e",
           "type": "number",
@@ -23623,6 +23611,18 @@
           "persistentUuid": "2506f71b-13cd-5b95-97d4-fec0ff7ce0e7",
           "type": "number",
           "value": 6
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "54b84c40-9312-598f-a195-996711b869c3",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "d2ec282f-f921-5d5b-8a9b-003a545a494a",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -26373,6 +26373,18 @@
           "persistentUuid": "d302574d-6470-5cff-8387-28426c83091e",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "93e43f81-19b3-5fd7-bf49-cf3d103a5628",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "90333321-2af1-5c84-b8b3-11b643fc101e",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [],
@@ -29938,18 +29950,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "1a51f364-cf21-47a1-9c81-baf50d34e1a5",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "0de50757-decf-464f-b0bb-576fe8b1474c",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "93ce7d37-c7d0-4a24-9653-ce16f8376147",
           "type": "number",
@@ -30170,6 +30170,18 @@
           "persistentUuid": "aaa89b73-0807-5268-84e8-428907b04bf0",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "fb509646-b5cc-592d-a1e1-84f35ecfcf49",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "1aa1f355-ad0d-5df9-aa30-7c5e4b19c6e1",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -31363,12 +31375,6 @@
           "value": 800
         },
         {
-          "name": "desiste_dist",
-          "persistentUuid": "7246bc8d-a2ae-433b-894b-5dbe7152967d",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "15f6b1be-9155-4c80-b0cc-df1bd744085d",
           "type": "number",
@@ -31529,6 +31535,18 @@
           "persistentUuid": "44be334f-493b-5336-a61c-699c5fc842eb",
           "type": "number",
           "value": 3
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "87ce9cc0-5c5e-5bec-8104-08fc6204ac28",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "f6debf46-e22a-5071-82ef-22be1bec736d",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -32518,12 +32536,6 @@
           "value": 0
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "e29b7cb3-7c3a-58e0-ab73-e7f39617c0ed",
-          "type": "number",
-          "value": 750
-        },
-        {
           "name": "ataque_espera",
           "persistentUuid": "668c3961-32d9-50ae-97f6-50a73763f998",
           "type": "number",
@@ -32564,6 +32576,18 @@
           "persistentUuid": "1bd152c8-1fa0-5f34-8df0-3cd79f0cd36f",
           "type": "number",
           "value": 4
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "e4c2d9c8-2c71-55d0-a279-1382d47e8b84",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "3cb445cb-c288-5548-b986-ac57163e517d",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -33358,18 +33382,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "3998d87c-a52a-4ea3-90c3-22ea58e48658",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "062b1d0a-0fb3-4560-b842-67e623a18055",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "16c6fe4e-e7c0-4677-8f1c-91a5edcdc98e",
           "type": "number",
@@ -33536,6 +33548,18 @@
           "persistentUuid": "3ead668e-4a9a-5787-b896-3139f9806875",
           "type": "number",
           "value": 350
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "403a2472-d548-53b2-9f02-4fd1b1ec4bc4",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "4b6d74c6-265d-5da7-99a0-1d35cbc1ca24",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -34156,18 +34180,6 @@
           "value": 0.2
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "e2c56814-673c-4bc9-ba1f-d9f812c44c59",
-          "type": "number",
-          "value": 700
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "f1e5bda0-c306-4e2d-bf01-9461d9464ca3",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "onda_amp",
           "persistentUuid": "87193884-177b-4aff-be42-53dd14d0f6fd",
           "type": "number",
@@ -34298,6 +34310,18 @@
           "persistentUuid": "af4c4d1d-d316-53c7-97b5-06796410317c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "6be0580a-0baa-51f7-b842-17d5d497da9a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "d69f30a6-9680-50f4-ad45-89b10689b9fe",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -34810,18 +34834,6 @@
           "value": 0.2
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "17d29898-49d1-4b46-87e2-af3a1bd3c642",
-          "type": "number",
-          "value": 700
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "4dec3d4b-b5ee-42b7-90b3-6e8ff1c184e0",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "onda_amp",
           "persistentUuid": "9a7a5f5c-d231-4d37-a74b-3a14dc0d63db",
           "type": "number",
@@ -35042,6 +35054,18 @@
           "persistentUuid": "49abae4f-0b06-5550-bf99-ff701b7956f1",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "c61fdf60-7319-5cfd-b9be-292faf4f41cc",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "7f934729-08e1-5e4e-a5b0-32c8f1061a63",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -35730,18 +35754,6 @@
           "value": 0.2
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "ca7a57cc-3c7e-474d-bec8-f21bf03a33c9",
-          "type": "number",
-          "value": 700
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "de85b1b8-aa11-425a-8593-a3c1948dff2a",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "onda_amp",
           "persistentUuid": "d9d2d3a3-77b0-4fd9-9bae-480f5a393ac9",
           "type": "number",
@@ -35752,12 +35764,6 @@
           "persistentUuid": "3dc2b5dc-8518-4ef6-8444-7cc55b475f5d",
           "type": "number",
           "value": 4
-        },
-        {
-          "name": "perseguir_dist",
-          "persistentUuid": "0102e038-d1cb-4c1c-8e46-28aba7cef212",
-          "type": "number",
-          "value": 400
         },
         {
           "name": "explodir_dist",
@@ -35896,6 +35902,18 @@
           "persistentUuid": "8853936e-7f39-5250-b5a8-002d0b2e0772",
           "type": "number",
           "value": 60
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "2db93cb6-1f82-531c-bf6e-f1900ade9296",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "265769f0-f76f-5bac-bb0e-4b341b5e3e18",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -36558,18 +36576,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "75c3457d-46c3-4534-971b-706a39608ec4",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "31b336be-c3c3-4db1-a1ed-db268a15e17f",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "227efcba-a1d6-481c-86e9-3c86e572a331",
           "type": "number",
@@ -36772,6 +36778,18 @@
           "persistentUuid": "6f44a64e-ca93-500a-b1f2-f529cd8a81d9",
           "type": "number",
           "value": 750
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "a7c268da-6d74-54a1-b9da-6b51a2443313",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "929f9ab7-0c80-5d69-b290-05d5ab4542bc",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -37362,18 +37380,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "77b3690d-c174-456d-b42d-d07a6c3f9e35",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "17fcbb09-4f40-46e1-8a7e-ea6df5e8d2ca",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "b9043cc9-40d2-457c-895d-f981d6a17e89",
           "type": "number",
@@ -37546,6 +37552,18 @@
           "persistentUuid": "6df4c2b7-dbeb-51ea-862a-8d4abd246076",
           "type": "number",
           "value": 5
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "92e02d94-ebfc-5bc1-9fb9-67d0ba06760d",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "232386d6-3d9e-51d8-b6d1-fbc4086feb2e",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -39006,18 +39024,6 @@
           "value": 200
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "c169c7ea-a33d-4a63-ab0d-4403cece6e69",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "094abadf-ef96-43b5-87c3-35854f725bfe",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "82e67359-b8a1-40b2-9858-1a85378ccb67",
           "type": "number",
@@ -39184,6 +39190,18 @@
           "persistentUuid": "666d6bd3-325f-55ba-8b62-aedd71a52765",
           "type": "number",
           "value": 12
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "5d76d687-2b47-5748-bb4d-a9d3071fb064",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "87d5c923-feeb-5a97-b7b7-cd803814dcb5",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -50104,18 +50122,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "ce2b5952-440d-5661-a175-f9657e731e1f",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "d9da2e4f-4876-5cd0-8d77-2977c71b1a59",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "587499ce-c06f-5436-9f7f-3c4a0441f0ba",
           "type": "number",
@@ -50348,6 +50354,18 @@
           "persistentUuid": "68e6455a-0d46-5852-9f50-2a5a523530e3",
           "type": "number",
           "value": 55
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "f7a945e6-d6b8-595d-9d6d-c3da57d98491",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "3069a7ff-a00b-55b1-b469-86324e8d693f",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -51418,18 +51436,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "91294b09-cf94-52d8-b662-d261d4ba78ee",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "b7d3cef6-d5bf-56de-abea-115bfcbf164e",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "975574e4-0b55-5a7c-85b0-8b6261530305",
           "type": "number",
@@ -51662,6 +51668,18 @@
           "persistentUuid": "c90551cf-7a3f-5176-be56-03cb71918725",
           "type": "number",
           "value": 55
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "58835265-b365-5500-aefa-f438fe734db0",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "0a72dd59-ad30-5e74-964b-c704c5175b84",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -52732,18 +52750,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "74aa14f1-179d-59a3-9e90-b4a7eeeb3ebe",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "f2a6092f-1701-53d1-9c72-375ee4852817",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "bfcef272-cabc-5ed7-bde6-face0a4d8ec0",
           "type": "number",
@@ -52976,6 +52982,18 @@
           "persistentUuid": "9a14034a-6a36-579c-b486-6b8e457240a5",
           "type": "number",
           "value": 150
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "5adce53c-d709-599a-97fc-fdf173faa858",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "01e1c158-1da1-5962-ae75-f8ddf715a0d1",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -54478,18 +54496,6 @@
           "value": 180
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "5dbc354e-e482-588c-83d5-0a6c4f09c1c1",
-          "type": "number",
-          "value": 800
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "1abbc947-aa3e-5fd8-a9f7-2d2a6b960349",
-          "type": "number",
-          "value": 1000
-        },
-        {
           "name": "parar_dist",
           "persistentUuid": "c01598f7-568e-57e7-8bf3-b23cfd0a2b22",
           "type": "number",
@@ -54710,6 +54716,18 @@
           "persistentUuid": "7fe07b67-da45-5611-88d7-4269ba88b82e",
           "type": "number",
           "value": 45
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "0bb364a3-e1e0-52cf-a96d-f2dad12172d7",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "4230650e-6cfd-597f-8568-0208d36be54b",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -56153,18 +56171,6 @@
           "value": 150
         },
         {
-          "name": "aggro_dist",
-          "persistentUuid": "328ec4be-afce-595c-b733-0b43bfeec9a6",
-          "type": "number",
-          "value": 1400
-        },
-        {
-          "name": "desiste_dist",
-          "persistentUuid": "ef4336ef-dbd8-51ed-9ee1-db135df86f0a",
-          "type": "number",
-          "value": 3000
-        },
-        {
           "name": "travado_tempo",
           "persistentUuid": "88ab74ff-35cc-5b94-a945-255ab9b1049f",
           "type": "number",
@@ -56925,6 +56931,18 @@
           "persistentUuid": "f834671a-9d8f-5372-a26a-52610775f715",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ve_pato",
+          "persistentUuid": "60f43398-24bc-5439-9e60-e671262ffd39",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "perde_tempo",
+          "persistentUuid": "16124719-af96-5aeb-98aa-bdd05edc4017",
+          "type": "number",
+          "value": 2
         }
       ],
       "effects": [
@@ -66806,6 +66824,18 @@
           "persistentUuid": "b5bacceb-cf67-5dfa-9e3a-ebec5546ee22",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "visao_rx",
+          "persistentUuid": "6241517e-817a-513c-8faa-5363a35e012f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "visao_ry",
+          "persistentUuid": "6c2892bc-37f3-5a3b-b6f2-5338a3efa98d",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -69499,6 +69529,18 @@
         {
           "name": "moscas_alerta_y",
           "persistentUuid": "d8153ba7-ee39-5937-b884-920a9ef818e3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "visao_rx",
+          "persistentUuid": "4f2ce7bc-468a-5871-a57f-4ef06bae1815",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "visao_ry",
+          "persistentUuid": "5d311af8-ee17-5139-949f-6f18fbffa129",
           "type": "number",
           "value": 0
         }
@@ -72288,6 +72330,18 @@
           "persistentUuid": "32cf3c45-a5e2-597a-988d-a5b56f5d2a42",
           "type": "number",
           "value": 613
+        },
+        {
+          "name": "visao_rx",
+          "persistentUuid": "62499343-b42f-5dc3-9464-a195057d1f3a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "visao_ry",
+          "persistentUuid": "efe02626-c8ad-5638-868a-6e53c4694d53",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -79418,6 +79472,160 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Visão",
+          "source": "",
+          "creationTime": 0,
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "ve_pato = o inimigo está na tela (centro dentro da câmera) e nenhum Terreno entre ele e o pato. Na tela, zera o cronômetro \"na_tela\" (quem fica perde_tempo s fora da tela desiste)."
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Inimigo",
+                    "ve_pato",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "object": "Inimigo",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "Inimigo.CenterX()",
+                        ">",
+                        "CameraBorderLeft(\"\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "Inimigo.CenterX()",
+                        "<",
+                        "CameraBorderRight(\"\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "Inimigo.CenterY()",
+                        ">",
+                        "CameraBorderTop(\"\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "Inimigo.CenterY()",
+                        "<",
+                        "CameraBorderBottom(\"\")"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "\"na_tela\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "ve_pato",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "RaycastToPosition"
+                          },
+                          "parameters": [
+                            "Terreno",
+                            "Inimigo.CenterX()",
+                            "Inimigo.CenterY()",
+                            "pato.CenterX()",
+                            "pato.CenterY()",
+                            "visao_rx",
+                            "visao_ry",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "ve_pato",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -79865,7 +80073,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (pato a menos de 800 px; desiste a mais de 1000) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Viram para o lado do pato (na investida mantêm o lado) (sprite_esquerda = desenhado olhando para a esquerda). Com firme = True (estados próprios, como caído, tonto ou frenesi) não toma tranco."
+              "comment": "Estados: patrulha (anda perto de onde nasceu) → perseguir (vendo o pato: na tela e sem parede no meio; desiste depois de perde_tempo s fora da tela) → preparar (aviso de 0,5 s: para, pisca e toca um som) → atacar → perseguir. Levar tiro fora de um ataque: dano por 0,2 s com recuo. Encostado numa parede no chão: pula (perseguindo) ou dá meia-volta (patrulhando). Viram para o lado do pato (na investida mantêm o lado) (sprite_esquerda = desenhado olhando para a esquerda). Com firme = True (estados próprios, como caído, tonto ou frenesi) não toma tranco."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -80233,12 +80441,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "Distance"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "Terrestre",
-                            "pato",
-                            "Terrestre.aggro_dist",
+                            "ve_pato",
+                            "True",
                             ""
                           ]
                         }
@@ -80302,14 +80510,13 @@
                       "conditions": [
                         {
                           "type": {
-                            "inverted": true,
-                            "value": "Distance"
+                            "value": "CompareObjectTimer"
                           },
                           "parameters": [
                             "Terrestre",
-                            "pato",
-                            "Terrestre.desiste_dist",
-                            ""
+                            "\"na_tela\"",
+                            ">",
+                            "Terrestre.perde_tempo"
                           ]
                         }
                       ],
@@ -82588,7 +82795,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Parada; machuca no contato. Com o pato a menos de aggro_dist: treme por aviso_tempo s e atira um leque de espinho_qtd espinhos na direção dele."
+                  "comment": "Parada; machuca no contato. Vendo o pato: treme por aviso_tempo s e atira um leque de espinho_qtd espinhos na direção dele."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -82736,12 +82943,12 @@
                     },
                     {
                       "type": {
-                        "value": "Distance"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "arvore_condenada",
-                        "pato",
-                        "arvore_condenada.aggro_dist",
+                        "ve_pato",
+                        "True",
                         ""
                       ]
                     }
@@ -84260,7 +84467,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Todos os que voam: levar tiro fora de um ataque (e sem firme) dá dano por dano_duracao s e empurra; perseguem a menos de aggro_dist e desistem a mais de desiste_dist; piscam avisando (preparar) e olham para o pato."
+              "comment": "Todos os que voam: levar tiro fora de um ataque (e sem firme) dá dano por dano_duracao s e empurra; perseguem vendo o pato (ve_pato) e desistem depois de perde_tempo s fora da tela; piscam avisando (preparar) e olham para o pato."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -84445,12 +84652,12 @@
                     },
                     {
                       "type": {
-                        "value": "Distance"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "Voador",
-                        "pato",
-                        "Voador.aggro_dist",
+                        "ve_pato",
+                        "True",
                         ""
                       ]
                     }
@@ -84494,14 +84701,13 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "Distance"
+                        "value": "CompareObjectTimer"
                       },
                       "parameters": [
                         "Voador",
-                        "pato",
-                        "Voador.desiste_dist",
-                        ""
+                        "\"na_tela\"",
+                        ">",
+                        "Voador.perde_tempo"
                       ]
                     }
                   ],
@@ -87509,7 +87715,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Flutua parada; com o pato a menos de perseguir_dist vai devagar até ele e, a menos de explodir_dist, pisca e explode. Morrer de qualquer jeito (tiro, explosão de outra mina) também explode: dano no pato a menos de explosao_raio, estilhaco_qtd estilhaços e dano_inimigos nos inimigos perto, então minas explodem em cadeia."
+                  "comment": "Flutua parada; vendo o pato vai devagar até ele e, a menos de explodir_dist, pisca e explode. Morrer de qualquer jeito (tiro, explosão de outra mina) também explode: dano no pato a menos de explosao_raio, estilhaco_qtd estilhaços e dano_inimigos nos inimigos perto, então minas explodem em cadeia."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -87566,12 +87772,12 @@
                         },
                         {
                           "type": {
-                            "value": "Distance"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "mina_demoniaca",
-                            "pato",
-                            "mina_demoniaca.perseguir_dist",
+                            "ve_pato",
+                            "True",
                             ""
                           ]
                         }
@@ -93814,12 +94020,12 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "Distance"
+                                "value": "BooleanObjectVariable"
                               },
                               "parameters": [
                                 "roda_anjo",
-                                "pato",
-                                "roda_anjo.aggro_dist",
+                                "ve_pato",
+                                "True",
                                 ""
                               ]
                             }
@@ -93983,14 +94189,13 @@
                         },
                         {
                           "type": {
-                            "inverted": true,
-                            "value": "Distance"
+                            "value": "CompareObjectTimer"
                           },
                           "parameters": [
                             "roda_anjo",
-                            "pato",
-                            "roda_anjo.desiste_dist",
-                            ""
+                            "\"na_tela\"",
+                            ">",
+                            "roda_anjo.perde_tempo"
                           ]
                         }
                       ],
