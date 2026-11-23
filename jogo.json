@@ -55759,6 +55759,24 @@
           "persistentUuid": "e2707750-a20e-586a-ba8b-2ab054a7d6ec",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "espera_pato",
+          "persistentUuid": "610de192-01ed-584f-aca3-b87be4edb5da",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pisar_folga",
+          "persistentUuid": "a9563753-f26b-5eef-bfe8-c806b21acf90",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "sincronia",
+          "persistentUuid": "f3f10487-ab8d-5d7f-8ee8-a1b0b00896b8",
+          "type": "string",
+          "value": ""
         }
       ],
       "effects": [],
@@ -66962,6 +66980,12 @@
           "persistentUuid": "6c2892bc-37f3-5a3b-b6f2-5338a3efa98d",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "plataforma_solta",
+          "persistentUuid": "6f03ac1f-e704-5c36-9fd4-6e3db371f50e",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -67833,6 +67857,18 @@
               "persistentUuid": "afa77213-cde9-5572-a19c-2b78909a7ad4",
               "type": "number",
               "value": 8567
+            },
+            {
+              "name": "espera_pato",
+              "persistentUuid": "a0ed1db8-5ac9-55b0-91f2-656cd1150c94",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "name": "sincronia",
+              "persistentUuid": "d2976cdb-2601-59d3-9d0a-6509bdb463a3",
+              "type": "string",
+              "value": "ponte_inferno"
             }
           ]
         },
@@ -67887,6 +67923,18 @@
               "persistentUuid": "afa77213-cde9-5572-a19c-2b78909a7ad4",
               "type": "number",
               "value": 7763
+            },
+            {
+              "name": "espera_pato",
+              "persistentUuid": "fc31be18-9a7c-5afc-8db3-61f988308195",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "name": "sincronia",
+              "persistentUuid": "849b84ea-2105-5f72-8747-07f48688a11b",
+              "type": "string",
+              "value": "ponte_inferno"
             }
           ]
         },
@@ -105163,7 +105211,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Plataformas móveis. Cada plataforma_movel vai e volta entre o começo (ini_x, ini_y) e o fim (fim_x, fim_y) escritos nas variáveis da instância. Um par deixado em 0, 0 vira, no começo da cena, a posição onde ela foi colocada. \"fase\" anda de 0 a 1 na velocidade dela, com espera em cada ponta, e a posição é o caminho entre começo e fim, acelerando e freando nas pontas."
+          "comment": "Plataformas móveis. Cada plataforma_movel vai e volta entre o começo (ini_x, ini_y) e o fim (fim_x, fim_y) escritos nas variáveis da instância. Um par deixado em 0, 0 vira, no começo da cena, a posição onde ela foi colocada. \"fase\" anda de 0 a 1 na velocidade dela, com espera em cada ponta, e a posição é o caminho entre começo e fim, acelerando e freando nas pontas. Com espera_pato ligada a plataforma fica parada no começo até o pato pisar nela pela primeira vez (no chão, em cima dela, com o pé entre pisar_folga px acima do topo e o meio dela); as que esperam com a mesma sincronia saem junto."
         },
         {
           "colorB": 228,
@@ -105325,8 +105373,177 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "plataforma_movel",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "espera_pato",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "pato",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    ">",
+                    "plataforma_movel.Y() - plataforma_movel.pisar_folga"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.Y() + pato.Height()",
+                    "<",
+                    "plataforma_movel.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.X() + pato.Width()",
+                    ">",
+                    "plataforma_movel.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "pato.X()",
+                    "<",
+                    "plataforma_movel.X() + plataforma_movel.Width()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "espera_pato",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "plataforma_solta",
+                    "=",
+                    "plataforma_movel.sincronia"
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "espera_pato",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sincronia",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "sincronia",
+                    "=",
+                    "VariableString(plataforma_solta)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "espera_pato",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "\"parada\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "plataforma_movel",
+                    "espera_pato",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "CompareObjectTimer"
