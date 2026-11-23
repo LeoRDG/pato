@@ -63304,6 +63304,18 @@
           "persistentUuid": "a8a725cf-7306-5d3d-b1d5-5674e0c91c4f",
           "type": "string",
           "value": "240;225;255"
+        },
+        {
+          "name": "final",
+          "persistentUuid": "6116016f-a3e0-5a29-9431-c9f029a043c9",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "armado",
+          "persistentUuid": "7a4e1d87-361f-5a16-91e0-a7e80f2baa65",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -66327,6 +66339,113 @@
       "persistentUuid": "c70ee6d3-43ea-5e9b-bbe2-668e283fbce2",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "waypoints",
+      "persistentUuid": "20947bc0-64e1-5096-8546-97f72a9bc431",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Inferno",
+          "persistentUuid": "4e92c7b0-0171-57fc-8f19-2ba121ddca4d",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativo",
+              "persistentUuid": "9b3da31f-f773-539a-9e09-ed502b06963b",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "x",
+              "persistentUuid": "09479b2e-b7bb-5e4c-b673-514fa7b663bd",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "55208e5b-eeda-5e2d-9c32-d447cf32be6a",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Purgatorio",
+          "persistentUuid": "50826ed6-8294-5d6c-8368-ce0345e07004",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativo",
+              "persistentUuid": "52c9e029-7987-5f5f-b68f-dcc78a479ff6",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "x",
+              "persistentUuid": "7857c41f-9ff4-5750-9601-c10314a5f98d",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "4f60a651-05b3-59fa-a880-33a89091b3ac",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Paraiso",
+          "persistentUuid": "0516133d-2b4c-542a-9834-3f5a32d5ac2f",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativo",
+              "persistentUuid": "de4ce5d0-d14c-57cb-bda0-29e1957686cf",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "x",
+              "persistentUuid": "155c543a-9a44-51a4-ae7e-b53b2b60d55f",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "37ccd792-0a72-5106-8a8c-0e08f537e984",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Teste",
+          "persistentUuid": "97bba123-4486-52c3-a3d2-ee6bd77599cb",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativo",
+              "persistentUuid": "157191da-df33-51cf-8e52-4959287d14de",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "x",
+              "persistentUuid": "03025f5f-9081-54f5-9f22-ff3f8ed48e45",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "fb5265e7-9e9a-5a56-8a8d-cacd234c73ec",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -119752,6 +119871,87 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Ponto de volta: entrar numa fase num portal para o Hub guarda o lugar em waypoints.<fase>; voltando para a fase (pelo Hub ou depois de morrer), o pato começa nele. Portal com final = True (o do fim da fase) apaga o lugar. Portal só funciona depois que o pato esteve fora dele (armado)."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "waypoints[CurrentSceneName()].ativo",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "pato",
+                "=",
+                "waypoints[CurrentSceneName()].x - pato.Width() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "pato",
+                "=",
+                "waypoints[CurrentSceneName()].y - pato.Height() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraCenterX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "pato.CenterX()",
+                "\"\"",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraCenterY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "pato.CenterY()",
+                "\"\"",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "portal",
           "conditions": [
@@ -119777,6 +119977,16 @@
               "parameters": [
                 "portal",
                 "\"dentro\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "portal",
+                "armado",
+                "True"
               ]
             }
           ]
@@ -119829,6 +120039,17 @@
                 "False",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "portal",
+                "armado",
+                "True",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -119840,6 +120061,105 @@
                 "",
                 "portal.cena",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "portal",
+                    "final",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "portal",
+                    "cena",
+                    "=",
+                    "\"Hub\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "CurrentSceneName()",
+                    "!=",
+                    "\"Hub\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "waypoints[CurrentSceneName()].ativo",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "waypoints[CurrentSceneName()].x",
+                    "=",
+                    "portal.CenterX()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "waypoints[CurrentSceneName()].y",
+                    "=",
+                    "portal.CenterY()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "portal",
+                    "final",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "waypoints[CurrentSceneName()].ativo",
+                    "False",
+                    ""
+                  ]
+                }
               ]
             }
           ]
