@@ -38985,7 +38985,7 @@
           "name": "sprite_esquerda",
           "persistentUuid": "20dfcf5a-7efc-4f31-811f-ad73e89ddc52",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "bala_serie",
@@ -39081,7 +39081,7 @@
           "name": "firme",
           "persistentUuid": "7d0e6204-b737-54d6-abf8-339531e7441b",
           "type": "boolean",
-          "value": false
+          "value": true
         },
         {
           "name": "morte_feita",
@@ -39202,6 +39202,120 @@
           "persistentUuid": "87d5c923-feeb-5a97-b7b7-cd803814dcb5",
           "type": "number",
           "value": 2
+        },
+        {
+          "name": "voo_t",
+          "persistentUuid": "1aba8adc-e23b-55bc-8d51-810971164fdb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_cx",
+          "persistentUuid": "ce93b594-fa8a-5981-92a9-8fc52c1aeab4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_cy",
+          "persistentUuid": "90103138-a135-5b0c-8d80-a11ed8cb928c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "voo_alt",
+          "persistentUuid": "c95cef68-5a31-5124-be24-355fcd1be274",
+          "type": "number",
+          "value": 450
+        },
+        {
+          "name": "voo_larg",
+          "persistentUuid": "3aaf0654-d741-5b22-ada7-18fcf70f2ef6",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "voo_amp",
+          "persistentUuid": "d41989db-3cf8-5b1b-a29f-9a71879603b1",
+          "type": "number",
+          "value": 130
+        },
+        {
+          "name": "voo_vel",
+          "persistentUuid": "70da4ff3-c2eb-5adf-aafc-0d506444c310",
+          "type": "number",
+          "value": 1.3
+        },
+        {
+          "name": "voo_seguir",
+          "persistentUuid": "b1fea849-1c7b-50e8-b812-0644673a77f5",
+          "type": "number",
+          "value": 1.5
+        },
+        {
+          "name": "voo_suave",
+          "persistentUuid": "eca05155-5443-5f25-8669-d6eff1f1b063",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "slam_janela",
+          "persistentUuid": "b227f8df-b498-5184-855c-f4018976f72f",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "slam_espera",
+          "persistentUuid": "12bb261a-2705-5dc7-9d13-f0873582075f",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "slam_aviso",
+          "persistentUuid": "85761a1c-d93e-525f-9111-27da95a2c7c2",
+          "type": "number",
+          "value": 0.4
+        },
+        {
+          "name": "slam_vel",
+          "persistentUuid": "756d5a97-834d-56bb-9b80-5565ab6860c8",
+          "type": "number",
+          "value": 1500
+        },
+        {
+          "name": "slam_busca",
+          "persistentUuid": "47bf082d-6ded-5c45-bad9-2dcc59c729be",
+          "type": "number",
+          "value": 1500
+        },
+        {
+          "name": "slam_tempo_max",
+          "persistentUuid": "8d0096dd-8982-5ac6-94c3-6a37bfec4c15",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "chao_y",
+          "persistentUuid": "0531a7bc-6dc9-5d3d-a6d7-3990d2640bfa",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "anel_qtd",
+          "persistentUuid": "f71bfad1-ab31-5cff-98be-e3093e397d93",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "anel_vel",
+          "persistentUuid": "7c8436f9-715e-5464-ad0d-384d30563762",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "anel_dano",
+          "persistentUuid": "671ba778-764d-5272-b237-82a876a0bdc4",
+          "type": "number",
+          "value": 12
         }
       ],
       "effects": [
@@ -83386,7 +83500,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Mini-boss lento. De espiral_espera em espiral_espera s, com o pato a menos de espiral_alcance, para e gira uma espiral de bolas de fogo (espiral_bracos braços, espiral_giro graus por rajada) por espiral_duracao s."
+                  "comment": "Mini-boss firme (sem tranco). Perseguindo, voa num oito (infinito) em volta de um ponto voo_alt px acima do pato (voo_larg, voo_amp, voo_vel, voo_seguir, voo_suave). Vendo o pato e passando em cima dele (slam_janela), a cada slam_espera s pisca por slam_aviso s e despenca a slam_vel até o chão: fogo embaixo e anel de anel_qtd bolas de fogo, e volta a voar. Patrulhando ou morta, cai no chão. De espiral_espera em espiral_espera s, com o pato a menos de espiral_alcance, para no ar e gira uma espiral de bolas de fogo por espiral_duracao s."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -83433,97 +83547,721 @@
                           ]
                         }
                       ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "object": "caveira_gigante",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "!=",
+                            "\"patrulha\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "PlatformerObject",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"patrulha\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "PlatformerObject",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_cx",
+                            "=",
+                            "caveira_gigante.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_cy",
+                            "=",
+                            "caveira_gigante.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_t",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_t",
+                            "+",
+                            "caveira_gigante.voo_vel * TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_cx",
+                            "=",
+                            "lerp(caveira_gigante.voo_cx, pato.CenterX(), (1 - exp(-caveira_gigante.voo_seguir * TimeDelta())))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "voo_cy",
+                            "=",
+                            "lerp(caveira_gigante.voo_cy, pato.CenterY() - caveira_gigante.voo_alt, (1 - exp(-caveira_gigante.voo_seguir * TimeDelta())))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "=",
+                            "lerp(caveira_gigante.X(), caveira_gigante.voo_cx + caveira_gigante.voo_larg * sin(caveira_gigante.voo_t) - caveira_gigante.Width() / 2, (1 - exp(-caveira_gigante.voo_suave * TimeDelta())))",
+                            "=",
+                            "lerp(caveira_gigante.Y(), caveira_gigante.voo_cy + caveira_gigante.voo_amp * sin(2 * caveira_gigante.voo_t) - caveira_gigante.Height() / 2, (1 - exp(-caveira_gigante.voo_suave * TimeDelta())))"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"ataque\"",
+                            ">",
+                            "caveira_gigante.slam_espera"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "ve_pato",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(pato.CenterX() - caveira_gigante.CenterX())",
+                            "<",
+                            "caveira_gigante.slam_janela"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "caveira_gigante.Y() + caveira_gigante.Height()",
+                            "<",
+                            "pato.Y()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"preparar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_aviso_caveira.wav",
+                            "",
+                            "70",
+                            "RandomFloatInRange(0.95, 1.05)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"preparar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"estado\"",
+                            ">",
+                            "caveira_gigante.slam_aviso"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"atacar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "chao_y",
+                            "=",
+                            "pato.Y() + pato.Height()"
+                          ]
+                        }
+                      ],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "RaycastToPosition"
                               },
                               "parameters": [
-                                "abs(pato.CenterX() - caveira_gigante.CenterX())",
-                                ">",
-                                "caveira_gigante.parar_dist"
+                                "Terreno",
+                                "pato.CenterX()",
+                                "pato.CenterY()",
+                                "pato.CenterX()",
+                                "pato.CenterY() + caveira_gigante.slam_busca",
+                                "visao_rx",
+                                "visao_ry",
+                                ""
                               ]
                             }
                           ],
-                          "actions": [],
-                          "events": [
+                          "actions": [
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "(pato.CenterX() - caveira_gigante.CenterX())",
-                                    "<",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PlatformBehavior::SimulateLeftKey"
-                                  },
-                                  "parameters": [
-                                    "caveira_gigante",
-                                    "PlatformerObject"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "caveira_gigante",
-                                    "quer_andar",
-                                    "True",
-                                    ""
-                                  ]
-                                }
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "chao_y",
+                                "=",
+                                "Variable(visao_ry)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"atacar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "+",
+                            "0",
+                            "+",
+                            "caveira_gigante.slam_vel * TimeDelta()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"atacar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "caveira_gigante.Y() + caveira_gigante.Height()",
+                                ">=",
+                                "caveira_gigante.chao_y"
                               ]
                             },
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "(pato.CenterX() - caveira_gigante.CenterX())",
-                                    ">",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PlatformBehavior::SimulateRightKey"
-                                  },
-                                  "parameters": [
-                                    "caveira_gigante",
-                                    "PlatformerObject"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "caveira_gigante",
-                                    "quer_andar",
-                                    "True",
-                                    ""
-                                  ]
-                                }
+                              "type": {
+                                "value": "CompareObjectTimer"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "\"estado\"",
+                                ">",
+                                "caveira_gigante.slam_tempo_max"
                               ]
                             }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"pouso\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "=",
+                            "caveira_gigante.X()",
+                            "=",
+                            "min(caveira_gigante.Y(), caveira_gigante.chao_y - caveira_gigante.Height())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "Animation",
+                            "=",
+                            "\"ataque\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_fogo_caveira.wav",
+                            "",
+                            "80",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_impacto.wav",
+                            "",
+                            "70",
+                            "RandomFloatInRange(0.6, 0.7)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "poeira",
+                            "caveira_gigante.CenterX()",
+                            "caveira_gigante.Y() + caveira_gigante.Height()",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "i",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "caveira_gigante.anel_qtd",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "projetil_inimigo",
+                                "caveira_gigante.CenterX()",
+                                "caveira_gigante.Y() + caveira_gigante.Height() * 0.8",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "Animation",
+                                "=",
+                                "\"fogo\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetXY"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "=",
+                                "caveira_gigante.CenterX() - projetil_inimigo.Width() / 2",
+                                "=",
+                                "caveira_gigante.Y() + caveira_gigante.Height() * 0.8 - projetil_inimigo.Height() / 2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "RandomFloat(30) + caveira_gigante.i * 360 / max(1, caveira_gigante.anel_qtd)",
+                                "caveira_gigante.anel_vel",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "=",
+                                "RandomFloat(30) + caveira_gigante.i * 360 / max(1, caveira_gigante.anel_qtd)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "dano",
+                                "=",
+                                "caveira_gigante.anel_dano"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "origem",
+                                "=",
+                                "\"caveira_gigante\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "tipo",
+                                "=",
+                                "\"fogo\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "\"vida\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "projetil_inimigo",
+                                "ttl",
+                                "=",
+                                "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "caveira_gigante",
+                                "i",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"pouso\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "Animation"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "estado",
+                            "=",
+                            "\"perseguir\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"estado\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "caveira_gigante",
+                            "\"ataque\""
                           ]
                         }
                       ]
@@ -83954,17 +84692,6 @@
                     },
                     {
                       "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "caveira_gigante",
-                        "firme",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -83991,6 +84718,34 @@
                       "parameters": [
                         "caveira_gigante",
                         "\"ataque\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "caveira_gigante",
+                        "PlatformerObject",
+                        "yes"
                       ]
                     }
                   ]
