@@ -63238,6 +63238,72 @@
           "persistentUuid": "c28ace1f-d2bc-5c26-b176-94c19b70cb88",
           "type": "number",
           "value": 48
+        },
+        {
+          "name": "raio_disco",
+          "persistentUuid": "b50ec0f3-d524-5d63-b8c1-7ad297f386ba",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "cfc52827-f1a5-59ca-ba96-9adaced96f8c",
+          "type": "number",
+          "value": 540
+        },
+        {
+          "name": "inclina",
+          "persistentUuid": "1f113e1c-a6ba-57f9-87fc-608205433b34",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "raio_braco",
+          "persistentUuid": "b63406e0-75f9-5595-b791-05edfa31c94b",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "giro_braco",
+          "persistentUuid": "acf2e0e9-8ecb-52a1-b62f-dea748dae8df",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "inclina_braco",
+          "persistentUuid": "b27da179-0a06-5b5c-a442-31905a198704",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "flutua_amp",
+          "persistentUuid": "88f35e9f-ab55-525e-a3da-54ea59aa7a4f",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "flutua_vel",
+          "persistentUuid": "300b5588-3199-5f1c-adbe-8055bf28cfed",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "eee92f27-59b1-5146-9917-1c8edf7956b4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "cor_borda",
+          "persistentUuid": "5d2e1fbc-2c2b-5dca-83d8-55fcf4fd57c7",
+          "type": "string",
+          "value": "210;60;20"
+        },
+        {
+          "name": "cor_centro",
+          "persistentUuid": "a8a725cf-7306-5d3d-b1d5-5674e0c91c4f",
+          "type": "string",
+          "value": "255;236;140"
         }
       ],
       "effects": [],
@@ -64239,6 +64305,315 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 20,
+      "emitterForceMax": 136,
+      "emitterForceMin": 112,
+      "flow": 60,
+      "jumpForwardInTimeOnCreation": 1,
+      "maxParticleNb": 140,
+      "name": "portal_espiral",
+      "particleAlpha1": 40,
+      "particleAlpha2": 255,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 20,
+      "particleBlue2": 140,
+      "particleColor1": "210;60;20",
+      "particleColor2": "255;236;140",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 60,
+      "particleGreen2": 236,
+      "particleLifeTimeMax": 0.81,
+      "particleLifeTimeMin": 0.81,
+      "particleRed1": 210,
+      "particleRed2": 255,
+      "particleSize1": 120,
+      "particleSize2": 30,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "6070fbed-0e4e-5535-9f84-42becd27019c",
+      "rendererParam1": 4,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 20,
+      "variables": [
+        {
+          "name": "base_x",
+          "persistentUuid": "09b5511f-2216-55ed-87c8-fa27433e8e55",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "3a03f044-3754-525d-8f22-1614dc29053e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "c2d7369b-5b1e-5b51-b790-3e8f3211cc00",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ang_orb",
+          "persistentUuid": "ba66bde5-d817-50b5-88ed-2b73d5693657",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "1d8185df-c3d0-509e-bfe9-060b1f518f4c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "inclina",
+          "persistentUuid": "38efff93-5d37-5a25-9065-577f29cf7830",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_amp",
+          "persistentUuid": "73e38c18-49b0-5e5d-b2e2-227961df819f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_vel",
+          "persistentUuid": "7e5ace4c-9064-5453-b7dd-76ccac49223c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "e8b75854-d104-5e3b-a59e-1421edcb99b8",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 6,
+      "emitterForceMax": 112,
+      "emitterForceMin": 100,
+      "flow": 55,
+      "jumpForwardInTimeOnCreation": 1,
+      "maxParticleNb": 100,
+      "name": "portal_braco",
+      "particleAlpha1": 60,
+      "particleAlpha2": 200,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 20,
+      "particleBlue2": 140,
+      "particleColor1": "210;60;20",
+      "particleColor2": "255;236;140",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 60,
+      "particleGreen2": 236,
+      "particleLifeTimeMax": 0.8,
+      "particleLifeTimeMin": 0.75,
+      "particleRed1": 210,
+      "particleRed2": 255,
+      "particleSize1": 120,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "799c8ac4-9288-5fbb-9c70-aee266ce2782",
+      "rendererParam1": 5,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [
+        {
+          "name": "base_x",
+          "persistentUuid": "6dcf5ce2-2d8e-5b86-8adb-1c08f2f291d9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "7ce18b85-22ce-5b9d-b9d2-ec98b09b603d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "1141a6ca-190d-555a-9dac-25041b80f955",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ang_orb",
+          "persistentUuid": "89980b14-cff2-53a0-b266-0559cafa49d9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "7758bfad-a650-5792-a8d1-f67a6f9dec2d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "inclina",
+          "persistentUuid": "6932e462-bb84-5a3d-88e1-275c45508e19",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_amp",
+          "persistentUuid": "e7615463-b5ab-5a00-bd18-7c8797bf4cdb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_vel",
+          "persistentUuid": "f5a456f1-75fa-57e6-9592-f626af02076b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "4c57aa9f-aead-528d-9867-5f7b4c7e18d7",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 12,
+      "emitterForceMin": 0,
+      "flow": 40,
+      "jumpForwardInTimeOnCreation": 1,
+      "maxParticleNb": 40,
+      "name": "portal_nucleo",
+      "particleAlpha1": 200,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 140,
+      "particleBlue2": 140,
+      "particleColor1": "255;236;140",
+      "particleColor2": "255;236;140",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 236,
+      "particleGreen2": 236,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.3,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 40,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "persistentUuid": "c329c823-a5be-5e19-8749-8a79281f493e",
+      "rendererParam1": 7,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 6,
+      "variables": [
+        {
+          "name": "base_x",
+          "persistentUuid": "e92e91e2-cb7c-5837-b486-7aaa9f25b016",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "beb6f5de-d7cf-5078-bb73-a9efd72b074e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "28a7cb11-dc38-5983-b770-90d48afb0a0e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ang_orb",
+          "persistentUuid": "86145e61-6e0c-5154-b88a-d466448bde13",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "2751d5a5-135f-56c4-8ab7-2d4de89efe9f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "inclina",
+          "persistentUuid": "5ff58703-8e39-52c9-b8c6-6a319c498549",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_amp",
+          "persistentUuid": "d3e94d67-4d04-54ce-9d33-caf92c34d848",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_vel",
+          "persistentUuid": "8a84dfb9-e526-53bd-bfa0-783b8112bf24",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "c995bc53-375a-5871-af36-63e0559d329c",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -64801,6 +65176,15 @@
           },
           {
             "objectName": "portal_nome"
+          },
+          {
+            "objectName": "portal_espiral"
+          },
+          {
+            "objectName": "portal_braco"
+          },
+          {
+            "objectName": "portal_nucleo"
           }
         ]
       },
@@ -65076,6 +65460,20 @@
         },
         {
           "name": "ofanim"
+        }
+      ]
+    },
+    {
+      "name": "PortalEfeito",
+      "objects": [
+        {
+          "name": "portal_espiral"
+        },
+        {
+          "name": "portal_braco"
+        },
+        {
+          "name": "portal_nucleo"
         }
       ]
     }
@@ -67019,6 +67417,18 @@
               "persistentUuid": "a60da3d6-5b90-5bfa-89c9-7bf3600db39d",
               "type": "string",
               "value": "Inferno"
+            },
+            {
+              "name": "cor_borda",
+              "persistentUuid": "b43558f1-4350-55fe-97aa-09cc9d792eab",
+              "type": "string",
+              "value": "210;60;20"
+            },
+            {
+              "name": "cor_centro",
+              "persistentUuid": "a752f0e0-bb60-59d5-8a7a-d932d4439f67",
+              "type": "string",
+              "value": "255;236;140"
             }
           ]
         },
@@ -67047,6 +67457,18 @@
               "persistentUuid": "d9522d0d-f351-5ec1-98f8-91a96f49c957",
               "type": "string",
               "value": "Purgatorio"
+            },
+            {
+              "name": "cor_borda",
+              "persistentUuid": "cc747795-2058-50a1-928e-f861849d3e14",
+              "type": "string",
+              "value": "40;130;115"
+            },
+            {
+              "name": "cor_centro",
+              "persistentUuid": "d032225e-8b12-5a29-9d1c-618b72bc5bb3",
+              "type": "string",
+              "value": "230;255;240"
             }
           ]
         },
@@ -67075,6 +67497,18 @@
               "persistentUuid": "c08cac14-47bc-5fbe-ade8-a603ffbc28a8",
               "type": "string",
               "value": "Paraiso"
+            },
+            {
+              "name": "cor_borda",
+              "persistentUuid": "46049690-9e64-583f-ab26-97eeb7a68526",
+              "type": "string",
+              "value": "90;140;230"
+            },
+            {
+              "name": "cor_centro",
+              "persistentUuid": "8626e0dc-36c4-5f73-a1ed-1b496f141cb4",
+              "type": "string",
+              "value": "255;250;215"
             }
           ]
         }
@@ -67467,6 +67901,982 @@
                     "PlatformerObject",
                     "=",
                     "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Portais de partículas: o sprite portal é só o gatilho (invisível no jogo). No começo, cada portal cria, pintados com cor_borda e cor_centro dele, três emissores que orbitam rápido a raio_disco (giro) atirando para dentro com inclina graus de desvio (partículas puxadas para o centro de todos os lados), dois braços girando (raio_braco, giro_braco, inclina_braco) e o brilho do meio. Tudo flutua (flutua_amp, flutua_vel). Partículas: propriedades dos emissores portal_*."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "portal",
+                        "Opacity",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal",
+                        "fase",
+                        "=",
+                        "RandomFloat(6.28)"
+                      ]
+                    }
+                  ],
+                  "object": "portal",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_espiral",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_borda"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "=",
+                            "portal.ZOrder() + 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "raio",
+                            "=",
+                            "portal.raio_disco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "ang_orb",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "giro",
+                            "=",
+                            "portal.giro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "inclina",
+                            "=",
+                            "portal.inclina"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_espiral",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_borda"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "=",
+                            "portal.ZOrder() + 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "raio",
+                            "=",
+                            "portal.raio_disco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "ang_orb",
+                            "=",
+                            "120"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "giro",
+                            "=",
+                            "portal.giro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "inclina",
+                            "=",
+                            "portal.inclina"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_espiral",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_borda"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "=",
+                            "portal.ZOrder() + 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "raio",
+                            "=",
+                            "portal.raio_disco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "ang_orb",
+                            "=",
+                            "240"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "giro",
+                            "=",
+                            "portal.giro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "inclina",
+                            "=",
+                            "portal.inclina"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_espiral",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_braco",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "portal.cor_borda"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "=",
+                            "portal.ZOrder() + 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "raio",
+                            "=",
+                            "portal.raio_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "ang_orb",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "giro",
+                            "=",
+                            "portal.giro_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "inclina",
+                            "=",
+                            "portal.inclina_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_braco",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "portal.cor_borda"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "=",
+                            "portal.ZOrder() + 1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "raio",
+                            "=",
+                            "portal.raio_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "ang_orb",
+                            "=",
+                            "180"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "giro",
+                            "=",
+                            "portal.giro_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "inclina",
+                            "=",
+                            "portal.inclina_braco"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_braco",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "portal_nucleo",
+                            "portal.CenterX()",
+                            "portal.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor1"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleColor2"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "portal.cor_centro"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "=",
+                            "portal.ZOrder() + 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "base_x",
+                            "=",
+                            "portal.CenterX()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "base_y",
+                            "=",
+                            "portal.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "raio",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "ang_orb",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "giro",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "inclina",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "flutua_amp",
+                            "=",
+                            "portal.flutua_amp"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "flutua_vel",
+                            "=",
+                            "portal.flutua_vel"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "portal_nucleo",
+                            "fase",
+                            "=",
+                            "portal.fase"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "PortalEfeito",
+                    "ang_orb",
+                    "+",
+                    "PortalEfeito.giro * TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "PortalEfeito",
+                    "=",
+                    "PortalEfeito.base_x + PortalEfeito.raio * cos(ToRad(PortalEfeito.ang_orb))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "PortalEfeito",
+                    "=",
+                    "PortalEfeito.base_y + PortalEfeito.raio * sin(ToRad(PortalEfeito.ang_orb)) + sin(TimeFromStart() * PortalEfeito.flutua_vel + PortalEfeito.fase) * PortalEfeito.flutua_amp"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "PortalEfeito",
+                    "=",
+                    "PortalEfeito.ang_orb + 180 + PortalEfeito.inclina"
                   ]
                 }
               ]
