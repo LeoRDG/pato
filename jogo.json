@@ -64457,7 +64457,7 @@
       }
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
@@ -64560,7 +64560,7 @@
       "behaviors": []
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
@@ -64663,7 +64663,7 @@
       "behaviors": []
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
