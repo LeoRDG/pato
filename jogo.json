@@ -15454,6 +15454,36 @@
           "persistentUuid": "f8be01c1-2f76-48ea-804e-f73ecf628367",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "barra_fator",
+          "persistentUuid": "232af4d1-cd95-502d-a682-668a6324bf10",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "barra_min",
+          "persistentUuid": "64584a61-8fca-57ae-8cc6-fb2c4c2a3990",
+          "type": "number",
+          "value": 36
+        },
+        {
+          "name": "barra_max",
+          "persistentUuid": "ef4115ce-26fa-5dd2-802f-38d7cb8a3e2e",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "barra_altura",
+          "persistentUuid": "3690126b-aca5-5a25-a9ee-3f6c3f78f0a6",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "barra_folga",
+          "persistentUuid": "2ffdd14f-ec07-5479-99ff-4272f73e398f",
+          "type": "number",
+          "value": 8
         }
       ],
       "effects": [],
@@ -64764,6 +64794,136 @@
       ],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "inimigo_barra_trilho",
+      "persistentUuid": "e0c52b7f-d2bf-5583-8262-eafe4f4bc1b5",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "hud/boss_trilho.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 8,
+      "name": "inimigo_barra_rastro",
+      "persistentUuid": "6069d90c-f28a-5945-8bb6-b28a20a1e742",
+      "texture": "hud/fill_branco.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 720,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": true
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 8,
+      "name": "inimigo_barra_fill",
+      "persistentUuid": "5741885c-e25c-5f76-b121-c3d4218f0c0e",
+      "texture": "hud/fill_vermelho.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 720,
+      "variables": [
+        {
+          "name": "barra_fator",
+          "persistentUuid": "61289dfb-b437-59de-926c-57aced9158aa",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "barra_min",
+          "persistentUuid": "b838cce9-84eb-5b3d-8f8b-b529ce48b59b",
+          "type": "number",
+          "value": 36
+        },
+        {
+          "name": "barra_max",
+          "persistentUuid": "7eb12eb4-53fc-5387-b02a-ef97f1780140",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "barra_altura",
+          "persistentUuid": "36ad1577-4498-517b-8bab-d49309c7fec2",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "barra_folga",
+          "persistentUuid": "3c4c2e9e-9959-5f45-a800-446465bd4859",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "barra_rastro_vel",
+          "persistentUuid": "7be2cab0-4645-5d0c-ae0e-f13230dd903c",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "larg",
+          "persistentUuid": "53960cd3-92cc-5572-8c4b-9cceba349597",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": true
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -65201,6 +65361,15 @@
           },
           {
             "objectName": "anjo_morte_luz"
+          },
+          {
+            "objectName": "inimigo_barra_trilho"
+          },
+          {
+            "objectName": "inimigo_barra_rastro"
+          },
+          {
+            "objectName": "inimigo_barra_fill"
           }
         ]
       },
@@ -104718,7 +104887,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Cria e atualiza a barrinha de vida em cima de cada inimigo. O pato não tem, a vida dele fica no HUD."
+              "comment": "Cria e atualiza a barrinha de vida em cima de cada inimigo, igual à do chefe: trilho, rastro e preenchimento (inimigo_barra_*), ligados ao inimigo. Largura pela caixa de colisão (barra_fator, barra_min, barra_max), altura barra_altura, barra_folga px acima; o rastro encolhe a barra_rastro_vel px/s. O pato não tem, a vida dele fica no HUD."
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -104739,28 +104908,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "barra_de_vida",
-                    "Personagem.X() - 20",
-                    "Personagem.Y() - 30",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "Personagem",
-                    "barra_de_vida"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetBooleanObjectVariable"
                   },
                   "parameters": [
@@ -104772,20 +104919,137 @@
                 },
                 {
                   "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "inimigo_barra_trilho",
+                    "Personagem.X()",
+                    "Personagem.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Personagem",
+                    "inimigo_barra_trilho"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Sticker::Sticker::Stick"
                   },
                   "parameters": [
-                    "barra_de_vida",
+                    "inimigo_barra_trilho",
                     "Sticker",
                     "Personagem",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "inimigo_barra_trilho",
+                    "=",
+                    "Personagem.ZOrder() + 1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "inimigo_barra_rastro",
+                    "Personagem.X()",
+                    "Personagem.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Personagem",
+                    "inimigo_barra_rastro"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::Sticker::Stick"
+                  },
+                  "parameters": [
+                    "inimigo_barra_rastro",
+                    "Sticker",
+                    "Personagem",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "inimigo_barra_rastro",
+                    "=",
+                    "Personagem.ZOrder() + 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "inimigo_barra_fill",
+                    "Personagem.X()",
+                    "Personagem.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Personagem",
+                    "inimigo_barra_fill"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::Sticker::Stick"
+                  },
+                  "parameters": [
+                    "inimigo_barra_fill",
+                    "Sticker",
+                    "Personagem",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "inimigo_barra_fill",
+                    "=",
+                    "Personagem.ZOrder() + 3"
                   ]
                 }
               ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
-              "object": "barra_de_vida",
               "conditions": [
                 {
                   "type": {
@@ -104793,8 +105057,30 @@
                   },
                   "parameters": [
                     "",
+                    "inimigo_barra_trilho",
                     "Personagem",
-                    "barra_de_vida",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "inimigo_barra_rastro",
+                    "Personagem",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "inimigo_barra_fill",
+                    "Personagem",
                     ""
                   ]
                 }
@@ -104802,24 +105088,174 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
-                    "barra_de_vida",
+                    "inimigo_barra_fill",
+                    "larg",
                     "=",
-                    "Personagem.max_vida",
-                    ""
+                    "clamp((Personagem.BoundingBoxRight() - Personagem.BoundingBoxLeft()) * inimigo_barra_fill.barra_fator, inimigo_barra_fill.barra_min, inimigo_barra_fill.barra_max)"
                   ]
                 },
                 {
                   "type": {
-                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
                   },
                   "parameters": [
-                    "barra_de_vida",
+                    "inimigo_barra_trilho",
+                    "Resizable",
                     "=",
-                    "Personagem.vida",
-                    ""
+                    "inimigo_barra_fill.larg"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "inimigo_barra_trilho",
+                    "Resizable",
+                    "=",
+                    "inimigo_barra_fill.barra_altura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "inimigo_barra_trilho",
+                    "=",
+                    "Personagem.BoundingBoxCenterX() - inimigo_barra_fill.larg / 2",
+                    "=",
+                    "Personagem.BoundingBoxTop() - inimigo_barra_fill.barra_folga - inimigo_barra_fill.barra_altura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "inimigo_barra_fill",
+                    "Resizable",
+                    "=",
+                    "inimigo_barra_fill.larg * clamp(Personagem.vida / Personagem.max_vida, 0, 1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "inimigo_barra_fill",
+                    "Resizable",
+                    "=",
+                    "inimigo_barra_fill.barra_altura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "inimigo_barra_fill",
+                    "=",
+                    "inimigo_barra_trilho.X()",
+                    "=",
+                    "inimigo_barra_trilho.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "inimigo_barra_rastro",
+                    "Resizable",
+                    "=",
+                    "min(inimigo_barra_rastro.Width(), inimigo_barra_fill.larg)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "inimigo_barra_rastro",
+                    "Resizable",
+                    "=",
+                    "inimigo_barra_fill.barra_altura"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "inimigo_barra_rastro",
+                    "=",
+                    "inimigo_barra_trilho.X()",
+                    "=",
+                    "inimigo_barra_trilho.Y()"
+                  ]
+                }
+              ],
+              "object": "Personagem",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "inimigo_barra_rastro.Width()",
+                        ">",
+                        "inimigo_barra_fill.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "inimigo_barra_rastro",
+                        "Resizable",
+                        "-",
+                        "inimigo_barra_fill.barra_rastro_vel * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "inimigo_barra_rastro.Width()",
+                        "<",
+                        "inimigo_barra_fill.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "inimigo_barra_rastro",
+                        "Resizable",
+                        "=",
+                        "inimigo_barra_fill.Width()"
+                      ]
+                    }
                   ]
                 }
               ]
