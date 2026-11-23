@@ -11128,6 +11128,30 @@
         "name": "assets/portais/paraiso_07.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio/fundo/longe.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio/fundo/longe.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio/fundo/pilares.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio/fundo/pilares.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio/fundo/nevoa.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio/fundo/nevoa.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -64930,6 +64954,63 @@
           "IsDestroyedWithParent": true
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 1024,
+      "name": "bg_purgatorio_longe",
+      "persistentUuid": "64bdfc59-b8e7-4774-858b-c2ec0735e8ad",
+      "texture": "assets/purgatorio/fundo/longe.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
+      "variables": [
+        {
+          "name": "parallax_extra",
+          "persistentUuid": "a2f3b61f-87f8-4c9a-8f6b-c5a7a2d95476",
+          "type": "number",
+          "value": -0.1
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1024,
+      "name": "bg_purgatorio_pilares",
+      "persistentUuid": "71da87c0-7fcc-45ec-b707-41a70005bb96",
+      "texture": "assets/purgatorio/fundo/pilares.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
+      "variables": [
+        {
+          "name": "parallax_extra",
+          "persistentUuid": "c2c1785d-b3f7-4c56-b6d6-71a5bcf466cf",
+          "type": "number",
+          "value": -0.05
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 1024,
+      "name": "bg_purgatorio_nevoa",
+      "persistentUuid": "0bd14d94-c1be-45b1-bedc-41575334879b",
+      "texture": "assets/purgatorio/fundo/nevoa.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
+      "variables": [
+        {
+          "name": "vel",
+          "persistentUuid": "3862763a-f399-47ca-8bb6-c508c31c1a24",
+          "type": "number",
+          "value": 14
+        }
+      ],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -65336,6 +65417,15 @@
                 "objectName": "espinhos"
               }
             ]
+          },
+          {
+            "objectName": "bg_purgatorio_longe"
+          },
+          {
+            "objectName": "bg_purgatorio_pilares"
+          },
+          {
+            "objectName": "bg_purgatorio_nevoa"
           }
         ]
       },
@@ -74598,6 +74688,54 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 4400,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_purgatorio_longe",
+          "persistentUuid": "7739c454-cd96-47f8-88db-87e501fdc01a",
+          "width": 4096,
+          "x": -2048,
+          "y": -3600,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 4400,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_purgatorio_pilares",
+          "persistentUuid": "c7d707ca-3da3-4a57-988e-7aa59c832899",
+          "width": 4096,
+          "x": -2048,
+          "y": -3600,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 4400,
+          "keepRatio": true,
+          "layer": "Fundo",
+          "name": "bg_purgatorio_nevoa",
+          "persistentUuid": "c68c2ae7-30f6-43fe-83f3-db01681c71d8",
+          "width": 4096,
+          "x": -2048,
+          "y": -3600,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -74715,6 +74853,56 @@
                     "CameraCenterY(\"\", 0) * fundo_parallax_y + fundo_dy",
                     "\"Fundo\"",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_longe",
+                    "=",
+                    "CameraCenterX(\"\", 0) * bg_purgatorio_longe.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_longe",
+                    "=",
+                    "CameraCenterY(\"\", 0) * bg_purgatorio_longe.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_pilares",
+                    "=",
+                    "CameraCenterX(\"\", 0) * bg_purgatorio_pilares.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_pilares",
+                    "=",
+                    "CameraCenterY(\"\", 0) * bg_purgatorio_pilares.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_nevoa",
+                    "=",
+                    "TimeFromStart() * bg_purgatorio_nevoa.vel"
                   ]
                 }
               ]
