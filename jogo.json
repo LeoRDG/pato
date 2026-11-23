@@ -13195,6 +13195,12 @@
           "persistentUuid": "776de0d8-5e34-5a18-aba4-c3d76f4bf685",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "no_halo",
+          "persistentUuid": "9f3f8623-8e3f-5831-b528-d21ac602e615",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -72039,6 +72045,96 @@
           "persistentUuid": "60a29859-aead-580e-877a-6e7dc7a7c6dc",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "piscar_fecha",
+          "persistentUuid": "efddcb46-3e5c-5c89-8993-3d490257e53e",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "piscar_fechado",
+          "persistentUuid": "d41c604a-add7-584c-b4c4-17e66a54b1cd",
+          "type": "number",
+          "value": 3.2
+        },
+        {
+          "name": "piscar_aviso",
+          "persistentUuid": "f3e56d58-23b6-519e-8a5b-aac2520c4dc5",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "piscar_aviso_tom",
+          "persistentUuid": "360b3e63-454c-58e6-ac36-b50bf85e14a7",
+          "type": "number",
+          "value": 1.4
+        },
+        {
+          "name": "piscar_flash",
+          "persistentUuid": "f773d388-e80f-568f-a230-8327bb00d6dd",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "piscar_dano",
+          "persistentUuid": "57b2f52b-002a-5049-b2b9-0d92a12fe6be",
+          "type": "number",
+          "value": 45
+        },
+        {
+          "name": "piscar_avisou",
+          "persistentUuid": "29de2ea5-f9d3-50f9-93fe-5e65217ae711",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "halo_qtd",
+          "persistentUuid": "31c771d1-77eb-5f97-a443-137a426be28f",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "halo_raio",
+          "persistentUuid": "4b37caca-14b5-51b0-800f-c0e6d0711b9e",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "halo_raio_luz",
+          "persistentUuid": "1d0f203b-4623-58c1-9319-c4be55f451b2",
+          "type": "number",
+          "value": 190
+        },
+        {
+          "name": "halo_vel",
+          "persistentUuid": "a0c0e9ca-e691-5132-aab3-c4c00a449cf7",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "halo_margem",
+          "persistentUuid": "72781887-0daf-5ab5-9685-975fb9eaec35",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "halo_cor",
+          "persistentUuid": "46bd20c7-3325-52c4-b659-ed0e00c09e89",
+          "type": "string",
+          "value": "170;215;255"
+        },
+        {
+          "name": "luz_pato_raio_escuro",
+          "persistentUuid": "2f8f92d8-0814-5d3f-984f-2ce0a2fb4509",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "luz_ambiente_flash",
+          "persistentUuid": "098d7d21-37d4-5811-aa24-f35f4609ca2b",
+          "type": "string",
+          "value": "255;255;255"
         }
       ],
       "effects": [],
@@ -72737,7 +72833,20 @@
       "name": "luz_halo",
       "persistentUuid": "d4e42268-c22c-5850-8856-7a7e5a4a798f",
       "type": "Lighting::LightObject",
-      "variables": [],
+      "variables": [
+        {
+          "name": "vx",
+          "persistentUuid": "bb572def-4da4-54d1-8d93-f68e9d2a57ac",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vy",
+          "persistentUuid": "525a0a6c-98a6-5ba6-8572-479277487120",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "assetStoreId": "",
@@ -90464,6 +90573,18 @@
           "persistentUuid": "5d24771d-8685-51ba-b941-388d9737ed4c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "luz_ambiente_escuro",
+          "persistentUuid": "7c370d70-8ca1-5d5b-b999-6d288a741184",
+          "type": "string",
+          "value": "14;14;30"
+        },
+        {
+          "name": "luz_pato_raio",
+          "persistentUuid": "503e547f-1c82-50a2-a1c1-d77665495638",
+          "type": "number",
+          "value": 260
         }
       ],
       "instances": [
@@ -133107,6 +133228,885 @@
                             "\"idle\""
                           ]
                         }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Anel azul: piscar",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"piscar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"fecha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"piscar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_olhar",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"piscar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"fecha\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.piscar_fecha"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"escuro\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"fechado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "deus"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerAmbientLightColor"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Luz\"",
+                        "luz_ambiente_escuro"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_pato",
+                        "deus.luz_pato_raio_escuro"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "piscar_avisou",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "luz_halo",
+                            "RandomInRange(CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.halo_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.halo_margem)",
+                            "RandomInRange(CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.halo_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.halo_margem)",
+                            "\"Luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Lighting::SetRadius"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "deus.halo_raio_luz"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Lighting::SetColor"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "deus.halo_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vx",
+                            "=",
+                            "deus.halo_vel * RandomFloatInRange(-1, 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vy",
+                            "=",
+                            "deus.halo_vel * RandomFloatInRange(-1, 1)"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.halo_qtd"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"piscar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"escuro\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "luz_halo",
+                        "+",
+                        "luz_halo.vx * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "luz_halo",
+                        "+",
+                        "luz_halo.vy * TimeDelta() - subida_vel * TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "<",
+                            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.halo_margem"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vx",
+                            "=",
+                            "abs(luz_halo.vx)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            ">",
+                            "CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.halo_margem"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vx",
+                            "=",
+                            "-abs(luz_halo.vx)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "<",
+                            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.halo_margem"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vy",
+                            "=",
+                            "abs(luz_halo.vy)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            ">",
+                            "CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.halo_margem"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "luz_halo",
+                            "vy",
+                            "=",
+                            "-abs(luz_halo.vy)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "piscar_avisou",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\"",
+                            ">",
+                            "deus.piscar_fechado - deus.piscar_aviso"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "piscar_avisou",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_luz.wav",
+                            "",
+                            "deus.som_volume",
+                            "deus.piscar_aviso_tom"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\"",
+                            ">",
+                            "deus.piscar_fechado"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "etapa",
+                            "=",
+                            "\"clarao\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "deus_olho",
+                            "Animation",
+                            "=",
+                            "\"idle\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "deus",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerAmbientLightColor"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Luz\"",
+                            "deus.luz_ambiente_flash"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "no_halo",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_luz.wav",
+                            "",
+                            "deus.som_volume",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "sqrt(pow(pato.CenterX() - luz_halo.X(), 2) + pow(pato.CenterY() - luz_halo.Y(), 2))",
+                                "<",
+                                "deus.halo_raio"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "no_halo",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "object": "luz_halo"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "no_halo",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "morto",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "vida",
+                                "-",
+                                "deus.piscar_dano"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "pato",
+                                "\"iframes\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "ultimo_agressor",
+                                "=",
+                                "\"deus\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"piscar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"clarao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.piscar_flash"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerAmbientLightColor"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Luz\"",
+                        "luz_ambiente_normal"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_pato",
+                        "luz_pato_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "luz_halo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Animation",
+                        "=",
+                        "\"idle\""
                       ]
                     }
                   ]
