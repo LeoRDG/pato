@@ -72664,6 +72664,156 @@
           "persistentUuid": "77f308c4-e72f-55de-b3f1-e1c117962b56",
           "type": "number",
           "value": 1.6
+        },
+        {
+          "name": "aneis_intervalo",
+          "persistentUuid": "4fd182b7-5365-571b-9b02-fd28cfa31956",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "aneis_rodadas",
+          "persistentUuid": "23a982b9-d955-56a6-bf85-01fffa44a05d",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "aneis_qtd",
+          "persistentUuid": "d87c0867-b3d3-5079-81e9-059a49a22a7b",
+          "type": "number",
+          "value": 22
+        },
+        {
+          "name": "aneis_buraco_meio",
+          "persistentUuid": "a1bc8bfb-3c14-5b68-bc27-044eb201b18a",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "aneis_vel",
+          "persistentUuid": "352b242f-895d-556c-b952-3ae6ad1d7129",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "aneis_desvio",
+          "persistentUuid": "d28935d6-1835-5829-86fc-0ff14aa520e0",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "aneis_dano",
+          "persistentUuid": "10256857-6263-5b8e-8f7a-2d82a1f6dc88",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "aneis_ttl",
+          "persistentUuid": "ba89e2d7-83f6-5e6c-8b13-2db3479c4f89",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "aneis_fim",
+          "persistentUuid": "a2bb2f48-8311-52aa-9abf-b0b2e9682bc0",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "aneis_feitos",
+          "persistentUuid": "55ff6842-c249-583c-bfcf-3df99d028a99",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "buraco_ang",
+          "persistentUuid": "1785f077-7ca9-5a82-a232-9342e43a4aba",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "puxao_forca",
+          "persistentUuid": "e9058359-c48e-5e18-a107-fe7aa828cac0",
+          "type": "number",
+          "value": 1400
+        },
+        {
+          "name": "puxao_tempo",
+          "persistentUuid": "73f13790-90e2-56d8-8233-f31aee75e215",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "puxao_tom",
+          "persistentUuid": "9948bbd7-30f5-50e6-b506-cc1470d737be",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "orbita_ang",
+          "persistentUuid": "9f4e5ce5-908c-5e03-a4fd-fcf9b6b4def9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "orbita_vel",
+          "persistentUuid": "eec0bf0c-6394-5d55-b9bf-274d0d1e02a9",
+          "type": "number",
+          "value": 0.9
+        },
+        {
+          "name": "orbita_raio",
+          "persistentUuid": "6d2a7805-538e-56dd-aeef-0072bcca7511",
+          "type": "number",
+          "value": 260
+        },
+        {
+          "name": "orbita_passo",
+          "persistentUuid": "2d094308-20f0-5f98-9799-a3f3baf90dc5",
+          "type": "number",
+          "value": 2.094
+        },
+        {
+          "name": "anel_giro_final",
+          "persistentUuid": "0b544297-48dc-5d15-a95a-b4d980773dc7",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "aneis_final_intervalo",
+          "persistentUuid": "7d86c00e-bbfb-5787-862d-56e7bac57814",
+          "type": "number",
+          "value": 1.2
+        },
+        {
+          "name": "anel_vez",
+          "persistentUuid": "88480057-f9d1-5bde-b4cf-5a0e1eec0c6c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "final_qtd",
+          "persistentUuid": "5b1b398c-ca14-5229-90b5-40a65df4f656",
+          "type": "number",
+          "value": 14
+        },
+        {
+          "name": "final_buraco_meio",
+          "persistentUuid": "847988d9-8b4a-5ae8-90f5-aaa872064923",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "final_iniciado",
+          "persistentUuid": "58b82cc4-53d2-5455-9d7d-24974b0b08fa",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "fase4_pausa_fator",
+          "persistentUuid": "e667ed61-2c0c-508b-af0d-f3003278223f",
+          "type": "number",
+          "value": 0.6
         }
       ],
       "effects": [],
@@ -131348,6 +131498,69 @@
                         "luz_olhar",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"canal_juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"fragmento\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"janela\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"morte_deus\""
+                      ]
                     }
                   ]
                 }
@@ -136276,6 +136489,1796 @@
                         "laco_amor",
                         ""
                       ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Três anéis",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "aneis_feitos",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"carregar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.aneis_intervalo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.aneis_feitos",
+                        "<",
+                        "deus.aneis_rodadas"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "aneis_feitos",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "buraco_ang",
+                        "=",
+                        "ToDeg(atan2(pato.CenterY() - deus.cy, pato.CenterX() - deus.cx)) + RandomFloatInRange(-deus.aneis_desvio, deus.aneis_desvio)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "deus.aneis_buraco_meio + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "projetil_inimigo",
+                            "deus.cx",
+                            "deus.cy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Animation",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus.cx - projetil_inimigo.Width() / 2",
+                            "=",
+                            "deus.cy - projetil_inimigo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "deus.buraco_ang + deus.i * 360 / deus.aneis_qtd",
+                            "deus.aneis_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus.buraco_ang + deus.i * 360 / deus.aneis_qtd"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "dano",
+                            "=",
+                            "deus.aneis_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "origem",
+                            "=",
+                            "\"deus\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "tipo",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "ttl",
+                            "=",
+                            "deus.aneis_ttl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.aneis_qtd - 2 * deus.aneis_buraco_meio - 1"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"aneis\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.aneis_feitos",
+                        ">=",
+                        "deus.aneis_rodadas"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.aneis_fim"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Puxão",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"carregar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Animation",
+                        "=",
+                        "\"contrai\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.puxao_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "luta",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_vx",
+                        "+",
+                        "cos(atan2(deus.cy - pato.CenterY(), deus.cx - pato.CenterX())) * deus.puxao_forca * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_vy",
+                        "+",
+                        "sin(atan2(deus.cy - pato.CenterY(), deus.cx - pato.CenterX())) * deus.puxao_forca * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"puxao\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.puxao_tempo"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"fim_golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Animation",
+                        "=",
+                        "\"idle\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Fase final",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "final_iniciado",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "final_iniciado",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "pausa_tempo",
+                        "*",
+                        "deus.fase4_pausa_fator"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "orbita_ang",
+                        "+",
+                        "deus.orbita_vel * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "=",
+                        "deus.cx + cos(deus.orbita_ang) * deus.orbita_raio - deus_anel_ouro.Width() / 2",
+                        "=",
+                        "deus.cy + sin(deus.orbita_ang) * deus.orbita_raio - deus_anel_ouro.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "+",
+                        "deus.anel_giro_final * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "=",
+                        "deus.cx + cos(deus.orbita_ang + 1 * deus.orbita_passo) * deus.orbita_raio - deus_anel_azul.Width() / 2",
+                        "=",
+                        "deus.cy + sin(deus.orbita_ang + 1 * deus.orbita_passo) * deus.orbita_raio - deus_anel_azul.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "+",
+                        "deus.anel_giro_final * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "=",
+                        "deus.cx + cos(deus.orbita_ang + 2 * deus.orbita_passo) * deus.orbita_raio - deus_anel_rosa.Width() / 2",
+                        "=",
+                        "deus.cy + sin(deus.orbita_ang + 2 * deus.orbita_passo) * deus.orbita_raio - deus_anel_rosa.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "+",
+                        "deus.anel_giro_final * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\"",
+                        ">",
+                        "deus.aneis_final_intervalo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_ouro",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "buraco_ang",
+                        "=",
+                        "ToDeg(atan2(pato.CenterY() - deus_anel_ouro.CenterY(), pato.CenterX() - deus_anel_ouro.CenterX())) + RandomFloatInRange(-deus.aneis_desvio, deus.aneis_desvio)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "deus.final_buraco_meio + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "projetil_inimigo",
+                            "deus_anel_ouro.CenterX()",
+                            "deus_anel_ouro.CenterY()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Animation",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus_anel_ouro.CenterX() - projetil_inimigo.Width() / 2",
+                            "=",
+                            "deus_anel_ouro.CenterY() - projetil_inimigo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd",
+                            "deus.aneis_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "dano",
+                            "=",
+                            "deus.aneis_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "origem",
+                            "=",
+                            "\"deus\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "tipo",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "ttl",
+                            "=",
+                            "deus.aneis_ttl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.final_qtd - 2 * deus.final_buraco_meio - 1"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\"",
+                        ">",
+                        "deus.aneis_final_intervalo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_azul",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "buraco_ang",
+                        "=",
+                        "ToDeg(atan2(pato.CenterY() - deus_anel_azul.CenterY(), pato.CenterX() - deus_anel_azul.CenterX())) + RandomFloatInRange(-deus.aneis_desvio, deus.aneis_desvio)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "deus.final_buraco_meio + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "projetil_inimigo",
+                            "deus_anel_azul.CenterX()",
+                            "deus_anel_azul.CenterY()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Animation",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus_anel_azul.CenterX() - projetil_inimigo.Width() / 2",
+                            "=",
+                            "deus_anel_azul.CenterY() - projetil_inimigo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd",
+                            "deus.aneis_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "dano",
+                            "=",
+                            "deus.aneis_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "origem",
+                            "=",
+                            "\"deus\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "tipo",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "ttl",
+                            "=",
+                            "deus.aneis_ttl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.final_qtd - 2 * deus.final_buraco_meio - 1"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\"",
+                        ">",
+                        "deus.aneis_final_intervalo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"anel_final\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "anel_vez",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_anel_rosa",
+                        "Animation",
+                        "=",
+                        "\"cintila\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "buraco_ang",
+                        "=",
+                        "ToDeg(atan2(pato.CenterY() - deus_anel_rosa.CenterY(), pato.CenterX() - deus_anel_rosa.CenterX())) + RandomFloatInRange(-deus.aneis_desvio, deus.aneis_desvio)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "deus.final_buraco_meio + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "projetil_inimigo",
+                            "deus_anel_rosa.CenterX()",
+                            "deus_anel_rosa.CenterY()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "Animation",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus_anel_rosa.CenterX() - projetil_inimigo.Width() / 2",
+                            "=",
+                            "deus_anel_rosa.CenterY() - projetil_inimigo.Height() / 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd",
+                            "deus.aneis_vel",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "=",
+                            "deus.buraco_ang + deus.i * 360 / deus.final_qtd"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "dano",
+                            "=",
+                            "deus.aneis_dano"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "origem",
+                            "=",
+                            "\"deus\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "tipo",
+                            "=",
+                            "\"luz\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "\"vida\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil_inimigo",
+                            "ttl",
+                            "=",
+                            "deus.aneis_ttl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.final_qtd - 2 * deus.final_buraco_meio - 1"
                     }
                   ]
                 }
