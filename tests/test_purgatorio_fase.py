@@ -61,7 +61,7 @@ class Purgatorio(unittest.TestCase):
         nomes = [l['name'] for l in self.d['layouts']]
         self.assertEqual(nomes.index('Purgatorio'), nomes.index('Inferno') + 1)
         links = [e['target'] for e in self.cena['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
-        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'PlataformasRadiais', 'Armadilhas', 'Espinhos', 'Portais'])
+        self.assertEqual(links, ['Jogador', 'AplicarUpgrades', 'Inimigos', 'Combate', 'HUD', 'Cutulu', 'PlataformasRadiais', 'Armadilhas', 'Espinhos', 'Portais'])
         self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', '', 'HUD'])
         presentes = {i['name'] for i in self.cena['instances']}
         self.assertLessEqual({'pato', 'alvo', 'hud_vida_fill', 'hud_moeda', 'moedas', 'municao', 'hud_tempo'}, presentes)
