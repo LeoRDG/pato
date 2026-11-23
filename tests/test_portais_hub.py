@@ -32,7 +32,9 @@ class PortaisHub(unittest.TestCase):
         # os eventos dos portais ficam nos eventos externos Portais (t109), ligados no Hub
         self.assertIn('Portais', [e.get('target') for e in self.hub['events']])
         portais = next(x for x in self.d['externalEvents'] if x['name'] == 'Portais')
-        ev = json.dumps(self.hub['events'] + portais['events'], ensure_ascii=False)
+        hubs = next(x for x in self.d['externalEvents'] if x['name'] == 'Hubs')
+        self.assertIn('Hubs', [e.get('target') for e in self.hub['events']])
+        ev = json.dumps(self.hub['events'] + portais['events'] + hubs['events'], ensure_ascii=False)
         self.assertIn('"Scene", "parameters": ["", "portal.cena"', ev.replace('{"value": ', '').replace('}, "parameters"', ', "parameters"'))
         for v in ('portal.espera', 'portal.nome', 'portal.nome_altura', 'queda_y', 'volta_x', 'volta_y'):
             self.assertIn(v, ev)
@@ -40,11 +42,10 @@ class PortaisHub(unittest.TestCase):
         self.assertLessEqual({'queda_y', 'volta_x', 'volta_y'}, nomes)
         self.assertLessEqual({'cena', 'nome', 'espera', 'nome_altura'}, {v['name'] for v in self.portal['variables']})
 
-    def test_saida_provisoria_desativada(self):
-        saida = next(e for e in self.hub['events'] if e.get('name') == 'Saída')
-        for s in saida['events']:
-            if any(a['type']['value'] == 'Scene' for a in s.get('actions') or []):
-                self.assertTrue(s.get('disabled'))
+    def test_saida_provisoria_removida(self):
+        # a saída provisória (desativada) saiu em t136; o Hub só sai pelos portais
+        self.assertNotIn('Saída', [e.get('name') for e in self.hub['events']])
+        self.assertNotIn('"Scene"', json.dumps(self.hub['events']))
 
 
 if __name__ == '__main__':

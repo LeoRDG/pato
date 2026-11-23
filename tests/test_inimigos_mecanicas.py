@@ -106,7 +106,8 @@ def test_morte_dos_anjos_com_particulas():
     em = OBJ['anjo_morte_luz']
     assert em['type'] == 'ParticleSystem::ParticleEmitter' and em['destroyWhenNoParticles']
     grupo = json.dumps(G['Morte dos anjos (partículas de luz)'])
-    for anjo in ('querubim', 'serafim', 'ofanim', 'roda_anjo'):
-        assert {'morte_luz_raio', 'morte_luz_qtd'} <= variaveis(anjo)
-        assert f'"{anjo}.morte_luz_raio"' in grupo and f'"{anjo}.morte_luz_qtd"' in grupo
+    assert set(GRUPOS['Anjos']) == {'querubim', 'serafim', 'ofanim', 'roda_anjo'}
+    for anjo in GRUPOS['Anjos']:
+        assert {'morto', 'morte_feita', 'morte_luz_raio', 'morte_luz_qtd'} <= variaveis(anjo)
+    assert '"Anjos.morte_luz_raio"' in grupo and '"Anjos.morte_luz_qtd"' in grupo
     assert 'Condenado em chamas (frenesi)' in json.dumps([e.get('name') for e in EXT['InimigosInferno']], ensure_ascii=False)
