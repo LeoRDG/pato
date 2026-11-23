@@ -64805,6 +64805,12 @@
       "persistentUuid": "951206f2-7cf2-4701-82e2-00d64f315537",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "vida_inimigos_mult",
+      "persistentUuid": "a0310703-78ff-55ce-9fbd-52219233352a",
+      "type": "number",
+      "value": 2
     }
   ],
   "layouts": [
@@ -79265,7 +79271,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Ao entrar na cena: zera os cronômetros e guarda a posição inicial de cada inimigo (centro da patrulha)."
+              "comment": "Ao entrar na cena: zera os cronômetros e guarda a posição inicial de cada inimigo (centro da patrulha). Ao preparar cada inimigo (menos o demônio chefe e o mercador), a vida é multiplicada por vida_inimigos_mult (global)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -79464,6 +79470,68 @@
                   "parameters": [
                     "Inimigo",
                     "\"hit_som_cooldown\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "Inimigo.ObjectName()",
+                        "!=",
+                        "\"demonio_chefe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "Inimigo.ObjectName()",
+                        "!=",
+                        "\"trader\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "max_vida",
+                        "*",
+                        "GlobalVariable(vida_inimigos_mult)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "vida",
+                        "=",
+                        "Inimigo.max_vida"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "vida_controle",
+                        "=",
+                        "Inimigo.vida"
+                      ]
+                    }
                   ]
                 }
               ]
