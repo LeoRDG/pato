@@ -117,7 +117,8 @@ class Deus(unittest.TestCase):
             for a in e.get('conditions', []) + e.get('actions', []):
                 for p in a['parameters']:
                     for n in re.findall(r'(?<![\w.])\d+(?:\.\d+)?(?![\w.])', re.sub(r'"[^"]*"', '', p)):
-                        self.assertIn(n, ('0', '1', '2', '3', '4', '5', '6'), f'{a["type"]["value"]} {a["parameters"]}')
+                        self.assertIn(n, ('0', '1', '2', '3', '4', '5', '6', '90'),  # 90: um quarto de volta
+                                       f'{a["type"]["value"]} {a["parameters"]}')
 
 
 if __name__ == '__main__':
