@@ -12712,6 +12712,14 @@
         "name": "assets/paraiso/deus/halo.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/parede.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/parede.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -75383,6 +75391,55 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "parede_tela",
+      "persistentUuid": "f4a41367-d1ac-5650-adef-bc8337a98839",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "lado",
+          "persistentUuid": "76756c71-4f82-5b0e-a4ea-66ff2492c990",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/paraiso/parede.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -75665,6 +75722,9 @@
               },
               {
                 "objectName": "investida_rastro"
+              },
+              {
+                "objectName": "parede_tela"
               }
             ]
           }
@@ -76326,6 +76386,9 @@
         },
         {
           "name": "barreira_empireo"
+        },
+        {
+          "name": "parede_tela"
         }
       ]
     },
@@ -88574,6 +88637,18 @@
           "persistentUuid": "40c28329-2c4f-59b5-836f-b3033ab734d9",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "parede_tamanho",
+          "persistentUuid": "e81c0f38-0c7b-5971-a18a-dd5761ad1d81",
+          "type": "number",
+          "value": 2000
+        },
+        {
+          "name": "parede_n",
+          "persistentUuid": "bb8ddeea-d602-5830-8ca5-2d1809af867a",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -91853,6 +91928,325 @@
                     "Animation",
                     "=",
                     "\"Pulo\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Paredes da tela",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "parede_tela",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "parede_n",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "parede_n",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "parede_tela",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "parede_tela",
+                        "lado",
+                        "=",
+                        "parede_n"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "parede_tela"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "parede_tela",
+                        "Resizable",
+                        "=",
+                        "parede_tamanho"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "parede_tela",
+                        "Resizable",
+                        "=",
+                        "parede_tamanho"
+                      ]
+                    }
+                  ],
+                  "repeatExpression": "4"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "lado",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "=",
+                    "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 - parede_tamanho",
+                    "=",
+                    "CameraCenterY(\"\", 0) - parede_tamanho / 2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "lado",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "=",
+                    "CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2",
+                    "=",
+                    "CameraCenterY(\"\", 0) - parede_tamanho / 2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "lado",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "=",
+                    "CameraCenterX(\"\", 0) - parede_tamanho / 2",
+                    "=",
+                    "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 - parede_tamanho"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "lado",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    "=",
+                    "CameraCenterX(\"\", 0) - parede_tamanho / 2",
+                    "=",
+                    "CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "luta",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "parede_tela",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "parede_tela",
+                    ""
                   ]
                 }
               ]
