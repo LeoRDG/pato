@@ -93697,18 +93697,6 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
-            },
-            {
-              "effectType": "BulgePinch",
-              "name": "Lente negra",
-              "doubleParameters": {
-                "centerX": 0.5,
-                "centerY": 0.5,
-                "radius": 260,
-                "strength": 0
-              },
-              "stringParameters": {},
-              "booleanParameters": {}
             }
           ]
         },
@@ -137057,18 +137045,6 @@
                         "\"strength\"",
                         "0"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetLayerEffectParameter"
-                      },
-                      "parameters": [
-                        "",
-                        "\"\"",
-                        "\"Lente negra\"",
-                        "\"strength\"",
-                        "0"
-                      ]
                     }
                   ]
                 },
@@ -143266,54 +143242,6 @@
                             "\"strength\"",
                             "deus.juizo_lente_negra"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetLayerEffectParameter"
-                          },
-                          "parameters": [
-                            "",
-                            "\"\"",
-                            "\"Lente negra\"",
-                            "\"centerX\"",
-                            "(CameraWidth(\"\", 0) / 2 + deus.juizo_negro_dx) / CameraWidth(\"\", 0)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetLayerEffectParameter"
-                          },
-                          "parameters": [
-                            "",
-                            "\"\"",
-                            "\"Lente negra\"",
-                            "\"centerY\"",
-                            "(CameraHeight(\"\", 0) / 2 + deus.juizo_negro_dy) / CameraHeight(\"\", 0)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetLayerEffectParameter"
-                          },
-                          "parameters": [
-                            "",
-                            "\"\"",
-                            "\"Lente negra\"",
-                            "\"radius\"",
-                            "deus.juizo_lente_raio"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetLayerEffectParameter"
-                          },
-                          "parameters": [
-                            "",
-                            "\"\"",
-                            "\"Lente negra\"",
-                            "\"strength\"",
-                            "deus.juizo_lente_negra"
-                          ]
                         }
                       ]
                     },
@@ -143430,18 +143358,6 @@
                       "parameters": [
                         "",
                         "\"Fundo\"",
-                        "\"Lente negra\"",
-                        "\"strength\"",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetLayerEffectParameter"
-                      },
-                      "parameters": [
-                        "",
-                        "\"\"",
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
@@ -143618,18 +143534,6 @@
                       "parameters": [
                         "",
                         "\"Fundo\"",
-                        "\"Lente negra\"",
-                        "\"strength\"",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetLayerEffectParameter"
-                      },
-                      "parameters": [
-                        "",
-                        "\"\"",
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
@@ -146921,18 +146825,6 @@
                       "parameters": [
                         "",
                         "\"Fundo\"",
-                        "\"Lente negra\"",
-                        "\"strength\"",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetLayerEffectParameter"
-                      },
-                      "parameters": [
-                        "",
-                        "\"\"",
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"

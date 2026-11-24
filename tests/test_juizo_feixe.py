@@ -140,7 +140,7 @@ class JuizoFeixe(unittest.TestCase):
         """o negro curva o espaço: um BulgePinch no fundo e na camada do jogo, seguindo o buraco. Só ele: no runtime as
         BulgePinch dividem o mesmo centro."""
         cena = m.cena(self.d, 'Paraiso')
-        for camada in ('Fundo', ''):
+        for camada in ('Fundo',):  # só no fundo desde a t165
             (l,) = [x for x in cena['layers'] if x['name'] == camada]
             ef = {e['name']: e for e in l['effects']}
             self.assertNotIn('Lente branca', ef)
@@ -148,7 +148,7 @@ class JuizoFeixe(unittest.TestCase):
                 self.assertEqual(ef[nome]['effectType'], 'BulgePinch', (camada, nome))
                 self.assertEqual(ef[nome]['doubleParameters']['strength'], 0, 'desligada fora do Juízo')
         t = tx(self.j)
-        for camada in ('\\"Fundo\\"', '\\"\\"'):
+        for camada in ('\\"Fundo\\"',):
             for nome, forca in (('Lente negra', 'deus.juizo_lente_negra'),):
                 self.assertIn(f'"SetLayerEffectParameter"}}, "parameters": ["", "{camada}", "\\"{nome}\\"", "\\"strength\\"", "{forca}"', t)
         self.assertIn('(CameraWidth(\\"\\", 0) / 2 + deus.juizo_negro_dx) / CameraWidth(\\"\\", 0)', t)
