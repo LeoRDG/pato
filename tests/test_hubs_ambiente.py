@@ -6,7 +6,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
-POR_CENA = {'Hub': ['hub_brasas'], 'HubPurgatorio': ['purg_nevoa', 'purg_cinza'], 'HubParaiso': ['hub_luzes']}
+POR_CENA = {'Hub': ['hub_brasas'], 'HubPurgatorio': ['purg_cinza'], 'HubParaiso': ['hub_luzes']}  # purg_nevoa saiu na t176
 
 
 def tx(e):

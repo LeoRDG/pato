@@ -76281,53 +76281,6 @@
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
       "emitterAngleB": 360,
-      "emitterForceMax": 45,
-      "emitterForceMin": 15,
-      "flow": 1.5,
-      "jumpForwardInTimeOnCreation": 10,
-      "maxParticleNb": 30,
-      "name": "purg_nevoa",
-      "particleAlpha1": 95,
-      "particleAlpha2": 0,
-      "particleAlphaRandomness1": 0,
-      "particleAlphaRandomness2": 0,
-      "particleAngle1": 0,
-      "particleAngle2": 0,
-      "particleAngleRandomness1": 0,
-      "particleAngleRandomness2": 0,
-      "particleBlue1": 235,
-      "particleBlue2": 215,
-      "particleColor1": "238;242;235",
-      "particleColor2": "215;225;215",
-      "particleGravityX": 6,
-      "particleGravityY": -2,
-      "particleGreen1": 242,
-      "particleGreen2": 225,
-      "particleLifeTimeMax": 12,
-      "particleLifeTimeMin": 8,
-      "particleRed1": 238,
-      "particleRed2": 215,
-      "particleSize1": 860,
-      "particleSize2": 1300,
-      "particleSizeRandomness1": 0,
-      "particleSizeRandomness2": 0,
-      "rendererParam1": 128,
-      "rendererParam2": 128,
-      "rendererType": "Quad",
-      "tank": -1,
-      "textureParticleName": "assets/particulas/particula_fumaca.png",
-      "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 1100,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "additive": false,
-      "assetStoreId": "",
-      "destroyWhenNoParticles": false,
-      "emitterAngleA": 0,
-      "emitterAngleB": 360,
       "emitterForceMax": 30,
       "emitterForceMin": 5,
       "flow": 14,
@@ -77086,9 +77039,6 @@
           {
             "folderName": "purgatorio",
             "children": [
-              {
-                "objectName": "purg_nevoa"
-              },
               {
                 "objectName": "purg_cinza"
               }
@@ -80610,12 +80560,6 @@
           "value": 0
         },
         {
-          "name": "purg_nevoa_z",
-          "persistentUuid": "8c6a7106-c7e6-5131-9cef-cf41a6eded63",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "purg_cinza_z",
           "persistentUuid": "41918384-dc28-5eea-8ab9-abb21f28e406",
           "type": "number",
@@ -81427,64 +81371,6 @@
           "source": "",
           "parameters": [],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "",
-                    "purg_nevoa",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "purg_nevoa",
-                    "CameraCenterX(\"fundo\", 0)",
-                    "CameraCenterY(\"fundo\", 0)",
-                    "\"fundo\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "purg_nevoa",
-                    "=",
-                    "purg_nevoa_z"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "purg_nevoa",
-                    "=",
-                    "CameraCenterX(\"fundo\", 0)",
-                    "=",
-                    "CameraCenterY(\"fundo\", 0)"
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -86542,12 +86428,6 @@
           "value": "HubPurgatorio"
         },
         {
-          "name": "purg_nevoa_z",
-          "persistentUuid": "7dcb3ba2-98d5-53ad-9a99-0c095f60b2d7",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "purg_cinza_z",
           "persistentUuid": "234266c1-858b-5f3b-b215-967336133a78",
           "type": "number",
@@ -89579,64 +89459,6 @@
           "source": "",
           "parameters": [],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "",
-                    "purg_nevoa",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "purg_nevoa",
-                    "CameraCenterX(\"Fundo\", 0)",
-                    "CameraCenterY(\"Fundo\", 0)",
-                    "\"Fundo\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "purg_nevoa",
-                    "=",
-                    "purg_nevoa_z"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetXY"
-                  },
-                  "parameters": [
-                    "purg_nevoa",
-                    "=",
-                    "CameraCenterX(\"Fundo\", 0)",
-                    "=",
-                    "CameraCenterY(\"Fundo\", 0)"
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
