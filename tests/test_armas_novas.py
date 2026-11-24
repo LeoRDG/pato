@@ -25,7 +25,7 @@ def test_raio_so_na_lanca():
 
 def test_explosao_e_troca_e_hud():
     txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
-    for pedaco in ('Explosão da granada', 'Num4', 'armas.lanca', 'hud_slot4', 'LANÇA-GRANADAS'):
+    for pedaco in ('Explosão da granada', 'Num4', 'armas.lanca', 'hud_slot4', 'LANCA-GRANADAS'):   # t187: sem acento
         assert pedaco in txt, pedaco
     for lay in JOGO['layouts']:
         nomes = {i['name'] for i in lay['instances']}

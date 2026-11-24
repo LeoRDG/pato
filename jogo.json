@@ -262,28 +262,6 @@
         }
       },
       {
-        "file": "assets/CantoraOne-Regular.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "CantoraOne-Regular.ttf",
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/05b0c1364a92b436b86ca819e66b63480d1bc2fb399f6c0cf8bffbf8199ccc2a_CantoraOne-Regular.ttf",
-          "name": "CantoraOne-Regular.ttf"
-        }
-      },
-      {
-        "file": "assets/NotoSansArabicUI-Black.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "assets\\NotoSansArabicUI-Black.ttf",
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Game over dialogs/58f64bcc48842f9a938582fee628aa6f6b2c229db5f8e4c82a09b3ab0b7ceed5_NotoSansArabicUI-Black.ttf",
-          "name": "NotoSansArabicUI-Black.ttf"
-        }
-      },
-      {
         "file": "assets/Grey Button With Shadow_Idle.png",
         "kind": "image",
         "metadata": "",
@@ -30207,7 +30185,7 @@
       "effects": [],
       "behaviors": [],
       "string": "BOSS",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 18,
       "color": {
@@ -30230,7 +30208,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "BOSS",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 18,
@@ -52241,7 +52219,7 @@
       "effects": [],
       "behaviors": [],
       "string": "",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 28,
       "color": {
@@ -52264,7 +52242,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 28,
@@ -52285,7 +52263,7 @@
       "effects": [],
       "behaviors": [],
       "string": "",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "left",
       "characterSize": 24,
       "color": {
@@ -52308,7 +52286,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 24,
@@ -52329,7 +52307,7 @@
       "effects": [],
       "behaviors": [],
       "string": "E",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "center",
       "characterSize": 28,
       "color": {
@@ -52352,7 +52330,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "E",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "center",
         "verticalTextAlignment": "top",
         "characterSize": 28,
@@ -55520,7 +55498,7 @@
           "name": "nome",
           "persistentUuid": "eb63b08f-ee23-5317-8dd7-585bd8744584",
           "type": "string",
-          "value": "OFANIM, O GUARDIÃO"
+          "value": "OFANIM, O GUARDIAO"
         },
         {
           "name": "barra_ativa",
@@ -58899,7 +58877,7 @@
           "name": "nome",
           "persistentUuid": "a1f69179-0b70-5d92-9018-f05f0f6a084e",
           "type": "string",
-          "value": "DEMÔNIO DO CUTELO"
+          "value": "DEMONIO DO CUTELO"
         },
         {
           "name": "barra_dist",
@@ -75703,7 +75681,7 @@
       "effects": [],
       "behaviors": [],
       "string": "E",
-      "font": "CantoraOne-Regular.ttf",
+      "font": "Name Smile.otf",
       "textAlignment": "center",
       "characterSize": 28,
       "color": {
@@ -75726,7 +75704,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "E",
-        "font": "CantoraOne-Regular.ttf",
+        "font": "Name Smile.otf",
         "textAlignment": "center",
         "verticalTextAlignment": "top",
         "characterSize": 28,
@@ -77071,7 +77049,7 @@
               "name": "descricao",
               "persistentUuid": "6a363ca8-10df-4818-a7b1-6c02ea0f5db7",
               "type": "string",
-              "value": "-15% de espera entre tiros por nível"
+              "value": "-15% de espera entre tiros por nivel"
             },
             {
               "name": "id",
@@ -77089,7 +77067,7 @@
               "name": "nome",
               "persistentUuid": "37a502ca-a2c8-4ac9-8900-f55ed86c5f30",
               "type": "string",
-              "value": "Cadência"
+              "value": "Cadencia"
             },
             {
               "name": "preco_base",
@@ -77125,7 +77103,7 @@
               "name": "descricao",
               "persistentUuid": "138539b1-7436-4a29-b737-154654f9c51b",
               "type": "string",
-              "value": "+20% de dano por nível"
+              "value": "+20% de dano por nivel"
             },
             {
               "name": "id",
@@ -77179,7 +77157,7 @@
               "name": "descricao",
               "persistentUuid": "e4a65292-6e6d-4de0-8625-e7b9faf51da3",
               "type": "string",
-              "value": "-20% no tempo de recarga por nível"
+              "value": "-20% no tempo de recarga por nivel"
             },
             {
               "name": "id",
@@ -77233,7 +77211,7 @@
               "name": "descricao",
               "persistentUuid": "8756111b-aa49-4867-ada0-a9f9913059e5",
               "type": "string",
-              "value": "+10% de velocidade por nível"
+              "value": "+10% de velocidade por nivel"
             },
             {
               "name": "id",
@@ -77287,7 +77265,7 @@
               "name": "descricao",
               "persistentUuid": "21c14e39-5d8c-5ec9-970e-bec7efbe7ce3",
               "type": "string",
-              "value": "+1 pulo no ar por nível"
+              "value": "+1 pulo no ar por nivel"
             },
             {
               "name": "id",
@@ -77341,7 +77319,7 @@
               "name": "descricao",
               "persistentUuid": "c661dc7a-3791-4324-bba6-cdbfa9992cc0",
               "type": "string",
-              "value": "+25 de vida máxima por nível"
+              "value": "+25 de vida maxima por nivel"
             },
             {
               "name": "id",
@@ -77395,7 +77373,7 @@
               "name": "descricao",
               "persistentUuid": "52bd3e7e-2e69-4e48-b319-f415ef49ad24",
               "type": "string",
-              "value": "+1 ricochete por nível; a bala perde dano a cada ricochete"
+              "value": "+1 ricochete por nivel; a bala perde dano a cada ricochete"
             },
             {
               "name": "id",
@@ -77449,7 +77427,7 @@
               "name": "descricao",
               "persistentUuid": "8e027f65-d694-4335-b9dc-3a2e288f3f64",
               "type": "string",
-              "value": "+1 inimigo atravessado por bala por nível"
+              "value": "+1 inimigo atravessado por bala por nivel"
             },
             {
               "name": "id",
@@ -77467,7 +77445,7 @@
               "name": "nome",
               "persistentUuid": "b1dcd0f7-f3eb-44f9-b137-b7dea6e53c5c",
               "type": "string",
-              "value": "Perfuração"
+              "value": "Perfuracao"
             },
             {
               "name": "preco_base",
@@ -77503,7 +77481,7 @@
               "name": "descricao",
               "persistentUuid": "453747e9-39dd-4ad1-a699-0ee497cfad1c",
               "type": "string",
-              "value": "Raios ligam as balas no ar e dão dano em quem encostar; +dano por nível"
+              "value": "Raios ligam as balas no ar e dao dano em quem encostar; +dano por nivel"
             },
             {
               "name": "id",
@@ -78395,6 +78373,12 @@
           "persistentUuid": "3453bfca-6cdb-5ae7-b8da-0fe8f2275014",
           "type": "number",
           "value": 1003
+        },
+        {
+          "name": "loja_desc_margem",
+          "persistentUuid": "a9948668-5a21-5705-b3e4-acfa10301dfb",
+          "type": "number",
+          "value": 24
         }
       ],
       "instances": [
@@ -79224,7 +79208,7 @@
               "name": "nome",
               "persistentUuid": "b71eb3c2-b54c-5263-bef0-0460a472c2f3",
               "type": "string",
-              "value": "LANÇA-GRANADAS"
+              "value": "LANCA-GRANADAS"
             },
             {
               "name": "escala",
@@ -80019,6 +80003,12 @@
           "persistentUuid": "41918384-dc28-5eea-8ab9-abb21f28e406",
           "type": "number",
           "value": 1070
+        },
+        {
+          "name": "loja_desc_margem",
+          "persistentUuid": "63b49a0b-eca8-5fe2-95cd-a5eacf585e43",
+          "type": "number",
+          "value": 24
         }
       ],
       "instances": [
@@ -80845,7 +80835,7 @@
               "name": "nome",
               "persistentUuid": "8bf4bf77-a054-5f54-8f9c-b039023e098b",
               "type": "string",
-              "value": "LANÇA-GRANADAS"
+              "value": "LANCA-GRANADAS"
             },
             {
               "name": "escala",
@@ -81656,6 +81646,12 @@
           "persistentUuid": "a8c33b45-6c25-5721-8048-51e5153f0507",
           "type": "number",
           "value": 1003
+        },
+        {
+          "name": "loja_desc_margem",
+          "persistentUuid": "ffdb8ded-d21d-5804-8381-cfc1921bb4b2",
+          "type": "number",
+          "value": 24
         }
       ],
       "instances": [
@@ -82466,7 +82462,7 @@
               "name": "nome",
               "persistentUuid": "8471c620-f148-510a-bab5-dd905c59368b",
               "type": "string",
-              "value": "LANÇA-GRANADAS"
+              "value": "LANCA-GRANADAS"
             },
             {
               "name": "escala",
@@ -96063,7 +96059,7 @@
               "name": "texto",
               "persistentUuid": "e98536cc-92b3-5be6-bd4d-7e15fef03679",
               "type": "string",
-              "value": "TESTE: um inimigo por sala. Vá para a direita."
+              "value": "TESTE: um inimigo por sala. Va para a direita."
             }
           ]
         },
@@ -96203,7 +96199,7 @@
               "name": "texto",
               "persistentUuid": "5c1fd004-e1da-5342-b332-03b1e54c746d",
               "type": "string",
-              "value": "4. Árvore condenada (leque)"
+              "value": "4. Arvore condenada (leque)"
             }
           ]
         },
@@ -96281,7 +96277,7 @@
               "name": "texto",
               "persistentUuid": "cfaca12e-600a-5812-9aa4-ffee45b647d4",
               "type": "string",
-              "value": "6. Sapo (língua e cura: machuque os condenados)"
+              "value": "6. Sapo (lingua e cura: machuque os condenados)"
             }
           ]
         },
@@ -96572,7 +96568,7 @@
               "name": "texto",
               "persistentUuid": "3f11d816-0022-55e4-9de7-87e45f5e6f44",
               "type": "string",
-              "value": "11. Olho demoníaco (raio)"
+              "value": "11. Olho demoniaco (raio)"
             }
           ]
         },
@@ -96611,7 +96607,7 @@
               "name": "texto",
               "persistentUuid": "9cab065d-7bad-51c2-b1a2-b570b02549c8",
               "type": "string",
-              "value": "12. Mina demoníaca (explode em cadeia)"
+              "value": "12. Mina demoniaca (explode em cadeia)"
             }
           ]
         },
@@ -96682,7 +96678,7 @@
               "name": "texto",
               "persistentUuid": "f65e375c-e99c-5fdb-9470-0fc9eb98680a",
               "type": "string",
-              "value": "13. Cabeça voadora (investida)"
+              "value": "13. Cabeca voadora (investida)"
             }
           ]
         },
@@ -96966,7 +96962,7 @@
               "name": "texto",
               "persistentUuid": "74007add-fe0f-5af8-b7a4-4ddff9f1bfbe",
               "type": "string",
-              "value": "17. Serafim (anéis)"
+              "value": "17. Serafim (aneis)"
             }
           ]
         },
@@ -110935,7 +110931,7 @@
                             "hud_arma_nome",
                             "Text",
                             "=",
-                            "\"LANÇA-GRANADAS\""
+                            "\"LANCA-GRANADAS\""
                           ]
                         }
                       ]
@@ -112129,6 +112125,25 @@
                     },
                     {
                       "type": {
+                        "value": "TextObject::SetWrapping"
+                      },
+                      "parameters": [
+                        "loja_desc",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::WrappingWidth"
+                      },
+                      "parameters": [
+                        "loja_desc",
+                        "=",
+                        "loja_largura - loja_desc_margem"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ChangePlan"
                       },
                       "parameters": [
@@ -112415,18 +112430,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PrimitiveDrawing::Rectangle"
-                  },
-                  "parameters": [
-                    "loja_painel",
-                    "CameraBorderLeft(\"HUD\") + loja_x - 24",
-                    "CameraBorderTop(\"HUD\") + loja_y - 24",
-                    "CameraBorderLeft(\"HUD\") + loja_x + loja_largura",
-                    "CameraBorderTop(\"HUD\") + loja_y + GlobalVariableChildCount(loja_catalogo) * loja_linha_alt + 72"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
@@ -112434,6 +112437,18 @@
                     "Text",
                     "=",
                     "GlobalVariableString(loja_catalogo[loja_sel].descricao)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::Rectangle"
+                  },
+                  "parameters": [
+                    "loja_painel",
+                    "CameraBorderLeft(\"HUD\") + loja_x - 24",
+                    "CameraBorderTop(\"HUD\") + loja_y - 24",
+                    "CameraBorderLeft(\"HUD\") + loja_x + loja_largura",
+                    "loja_desc.Y() + loja_desc.Height() + loja_desc_margem"
                   ]
                 }
               ]
@@ -112687,7 +112702,7 @@
                         "loja_linha",
                         "Text",
                         "=",
-                        "loja_texto + \"MÁX\""
+                        "loja_texto + \"MAX\""
                       ]
                     },
                     {
@@ -157936,7 +157951,7 @@
                     "arma_dica",
                     "Text",
                     "=",
-                    "\"E · \" + expositor_arma.nome"
+                    "\"E - \" + expositor_arma.nome"
                   ]
                 },
                 {
@@ -171077,7 +171092,7 @@
                 }
               ],
               "string": "2 / 3",
-              "font": "",
+              "font": "Name Smile.otf",
               "textAlignment": "center",
               "characterSize": 20,
               "color": {
@@ -171100,7 +171115,7 @@
                 "smoothed": true,
                 "underlined": false,
                 "text": "2 / 3",
-                "font": "",
+                "font": "Name Smile.otf",
                 "textAlignment": "center",
                 "verticalTextAlignment": "center",
                 "characterSize": 20,
@@ -173076,7 +173091,7 @@
                     }
                   ],
                   "string": "8 / 16",
-                  "font": "",
+                  "font": "Name Smile.otf",
                   "textAlignment": "center",
                   "characterSize": 16,
                   "color": {
@@ -173099,7 +173114,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "8 / 16",
-                    "font": "",
+                    "font": "Name Smile.otf",
                     "textAlignment": "center",
                     "verticalTextAlignment": "center",
                     "characterSize": 16,
@@ -190130,7 +190145,7 @@
               "effects": [],
               "behaviors": [],
               "string": "Score:",
-              "font": "",
+              "font": "Name Smile.otf",
               "textAlignment": "",
               "characterSize": 40,
               "color": {
@@ -190153,7 +190168,7 @@
                 "smoothed": true,
                 "underlined": false,
                 "text": "Score:",
-                "font": "",
+                "font": "Name Smile.otf",
                 "textAlignment": "",
                 "verticalTextAlignment": "top",
                 "characterSize": 40,
@@ -190303,7 +190318,7 @@
                 }
               ],
               "string": "Game over",
-              "font": "",
+              "font": "Name Smile.otf",
               "textAlignment": "center",
               "characterSize": 60,
               "color": {
@@ -190326,7 +190341,7 @@
                 "smoothed": true,
                 "underlined": false,
                 "text": "Game over",
-                "font": "",
+                "font": "Name Smile.otf",
                 "textAlignment": "center",
                 "verticalTextAlignment": "top",
                 "characterSize": 60,
@@ -190415,7 +190430,7 @@
               "effects": [],
               "behaviors": [],
               "string": "Best:",
-              "font": "",
+              "font": "Name Smile.otf",
               "textAlignment": "",
               "characterSize": 40,
               "color": {
@@ -190438,7 +190453,7 @@
                 "smoothed": true,
                 "underlined": false,
                 "text": "Best:",
-                "font": "",
+                "font": "Name Smile.otf",
                 "textAlignment": "",
                 "verticalTextAlignment": "top",
                 "characterSize": 40,
@@ -192281,7 +192296,7 @@
                   "effects": [],
                   "behaviors": [],
                   "string": "Score:",
-                  "font": "CantoraOne-Regular.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "",
                   "characterSize": 40,
                   "color": {
@@ -192304,7 +192319,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Score:",
-                    "font": "CantoraOne-Regular.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "",
                     "verticalTextAlignment": "top",
                     "characterSize": 40,
@@ -192454,7 +192469,7 @@
                     }
                   ],
                   "string": "Game over",
-                  "font": "assets\\NotoSansArabicUI-Black.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "center",
                   "characterSize": 60,
                   "color": {
@@ -192477,7 +192492,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Game over",
-                    "font": "assets\\NotoSansArabicUI-Black.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "center",
                     "verticalTextAlignment": "center",
                     "characterSize": 60,
@@ -192566,7 +192581,7 @@
                   "effects": [],
                   "behaviors": [],
                   "string": "Best:",
-                  "font": "",
+                  "font": "Name Smile.otf",
                   "textAlignment": "",
                   "characterSize": 40,
                   "color": {
@@ -192589,7 +192604,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Best:",
-                    "font": "",
+                    "font": "Name Smile.otf",
                     "textAlignment": "",
                     "verticalTextAlignment": "top",
                     "characterSize": 40,
@@ -193121,7 +193136,7 @@
                   "effects": [],
                   "behaviors": [],
                   "string": "Score:",
-                  "font": "CantoraOne-Regular.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "",
                   "characterSize": 40,
                   "color": {
@@ -193144,7 +193159,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Score:",
-                    "font": "CantoraOne-Regular.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "",
                     "verticalTextAlignment": "top",
                     "characterSize": 40,
@@ -193294,7 +193309,7 @@
                     }
                   ],
                   "string": "Game over",
-                  "font": "CantoraOne-Regular.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "center",
                   "characterSize": 80,
                   "color": {
@@ -193317,7 +193332,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Game over",
-                    "font": "CantoraOne-Regular.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "center",
                     "verticalTextAlignment": "top",
                     "characterSize": 80,
@@ -193406,7 +193421,7 @@
                   "effects": [],
                   "behaviors": [],
                   "string": "Best:",
-                  "font": "",
+                  "font": "Name Smile.otf",
                   "textAlignment": "",
                   "characterSize": 40,
                   "color": {
@@ -193429,7 +193444,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "Best:",
-                    "font": "",
+                    "font": "Name Smile.otf",
                     "textAlignment": "",
                     "verticalTextAlignment": "top",
                     "characterSize": 40,
@@ -196136,7 +196151,7 @@
                 }
               ],
               "string": "Text",
-              "font": "",
+              "font": "Name Smile.otf",
               "textAlignment": "center",
               "characterSize": 20,
               "color": {
@@ -196159,7 +196174,7 @@
                 "smoothed": true,
                 "underlined": false,
                 "text": "Text",
-                "font": "",
+                "font": "Name Smile.otf",
                 "textAlignment": "center",
                 "verticalTextAlignment": "center",
                 "characterSize": 20,
@@ -197834,7 +197849,7 @@
                     }
                   ],
                   "string": "BUTTON",
-                  "font": "assets\\NotoSansArabicUI-Black.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "center",
                   "characterSize": 44,
                   "color": {
@@ -197857,7 +197872,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "BUTTON",
-                    "font": "assets\\NotoSansArabicUI-Black.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "center",
                     "verticalTextAlignment": "center",
                     "characterSize": 44,
@@ -198187,7 +198202,7 @@
                     }
                   ],
                   "string": "BUTTON",
-                  "font": "CantoraOne-Regular.ttf",
+                  "font": "Name Smile.otf",
                   "textAlignment": "center",
                   "characterSize": 40,
                   "color": {
@@ -198210,7 +198225,7 @@
                     "smoothed": true,
                     "underlined": false,
                     "text": "BUTTON",
-                    "font": "CantoraOne-Regular.ttf",
+                    "font": "Name Smile.otf",
                     "textAlignment": "center",
                     "verticalTextAlignment": "center",
                     "characterSize": 40,

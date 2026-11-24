@@ -33,7 +33,7 @@ class GuardiaoCheckpoint(unittest.TestCase):
         self.assertEqual(len(marcados), 1)
         self.assertIs(self.v('ofanim')['guardiao'], False)
         self.assertIn('ofanim', self.grupos['Chefes'])
-        self.assertEqual(self.v('ofanim')['nome'], 'OFANIM, O GUARDIÃO')
+        self.assertEqual(self.v('ofanim')['nome'], 'OFANIM, O GUARDIAO')   # t187: sem acento
 
     def test_guardiao_preparado_uma_vez(self):
         g = tx(self.guard)
