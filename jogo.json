@@ -76274,6 +76274,100 @@
       "persistentUuid": "4a83e866-d4ee-582d-b984-5f05241ad3aa",
       "variables": [],
       "effects": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 45,
+      "emitterForceMin": 15,
+      "flow": 1.5,
+      "jumpForwardInTimeOnCreation": 10,
+      "maxParticleNb": 30,
+      "name": "purg_nevoa",
+      "particleAlpha1": 95,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 235,
+      "particleBlue2": 215,
+      "particleColor1": "238;242;235",
+      "particleColor2": "215;225;215",
+      "particleGravityX": 6,
+      "particleGravityY": -2,
+      "particleGreen1": 242,
+      "particleGreen2": 225,
+      "particleLifeTimeMax": 12,
+      "particleLifeTimeMin": 8,
+      "particleRed1": 238,
+      "particleRed2": 215,
+      "particleSize1": 860,
+      "particleSize2": 1300,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "assets/particulas/particula_fumaca.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1100,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 30,
+      "emitterForceMin": 5,
+      "flow": 14,
+      "jumpForwardInTimeOnCreation": 8,
+      "maxParticleNb": 140,
+      "name": "purg_cinza",
+      "particleAlpha1": 200,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 215,
+      "particleBlue2": 155,
+      "particleColor1": "225;225;215",
+      "particleColor2": "160;165;155",
+      "particleGravityX": 8,
+      "particleGravityY": 18,
+      "particleGreen1": 225,
+      "particleGreen2": 165,
+      "particleLifeTimeMax": 9,
+      "particleLifeTimeMin": 6,
+      "particleRed1": 225,
+      "particleRed2": 160,
+      "particleSize1": 100,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 2,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1100,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -76800,6 +76894,17 @@
           },
           {
             "objectName": "barreira_empireo"
+          },
+          {
+            "folderName": "purgatorio",
+            "children": [
+              {
+                "objectName": "purg_nevoa"
+              },
+              {
+                "objectName": "purg_cinza"
+              }
+            ]
           }
         ]
       },
@@ -85938,6 +86043,18 @@
           "persistentUuid": "346cb415-3c94-5f83-addc-c5f3751cdd1c",
           "type": "string",
           "value": "HubPurgatorio"
+        },
+        {
+          "name": "purg_nevoa_z",
+          "persistentUuid": "7dcb3ba2-98d5-53ad-9a99-0c095f60b2d7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "purg_cinza_z",
+          "persistentUuid": "234266c1-858b-5f3b-b215-967336133a78",
+          "type": "number",
+          "value": 3020
         }
       ],
       "instances": [
@@ -88954,6 +89071,134 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Névoa e cinzas",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_nevoa",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_nevoa",
+                    "CameraCenterX(\"Fundo\", 0)",
+                    "CameraCenterY(\"Fundo\", 0)",
+                    "\"Fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "purg_nevoa",
+                    "=",
+                    "purg_nevoa_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "purg_nevoa",
+                    "=",
+                    "CameraCenterX(\"Fundo\", 0)",
+                    "=",
+                    "CameraCenterY(\"Fundo\", 0)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_cinza",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_cinza",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "purg_cinza",
+                    "=",
+                    "purg_cinza_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "purg_cinza",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "colorB": 228,
