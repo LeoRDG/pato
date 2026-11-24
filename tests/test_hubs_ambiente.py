@@ -22,7 +22,7 @@ class HubsAmbiente(unittest.TestCase):
         for n in ('hub_brasas', 'hub_luzes'):
             o = m.objeto(self.d, n)
             self.assertEqual(o['tank'], -1, n)
-            self.assertTrue(o['additive'], n)
+            self.assertFalse(o['additive'], n)  # t178: aditivo esbranquiçava o hub
             self.assertLess(o['particleGravityY'], 0, n + ': sobe')
             self.assertGreater(o['jumpForwardInTimeOnCreation'], 0, n)
 
