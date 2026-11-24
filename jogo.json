@@ -74130,6 +74130,18 @@
           "persistentUuid": "6dc7d546-e3e6-5499-95fd-1419af127a94",
           "type": "number",
           "value": 1.2
+        },
+        {
+          "name": "teste_c",
+          "persistentUuid": "6390d9ba-5301-597c-a906-317703a98c36",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "teste_c_corte",
+          "persistentUuid": "b4b442ea-961b-551e-8197-fae65f9b1bfc",
+          "type": "number",
+          "value": 0.25
         }
       ],
       "effects": [
@@ -144565,6 +144577,78 @@
                       "parameters": [
                         "deus_aura_luz",
                         ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Teste: C tira vida",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"c\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "teste_c",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "vida",
+                        "-",
+                        "deus.max_vida * deus.teste_c_corte"
                       ]
                     }
                   ]
