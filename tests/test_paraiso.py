@@ -41,7 +41,7 @@ class Paraiso(unittest.TestCase):
         links = [e['target'] for e in self.cena['events'] if e['type'] == 'BuiltinCommonInstructions::Link']
         self.assertEqual(links, ['Jogador', 'Inimigos', 'InimigosParaiso', 'Combate', 'HUD', 'Portais'])
         # (t138) a camada de luz da luta com o chefe final fica escondida até a luta
-        self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', '', 'Luz', 'HUD'])
+        self.assertEqual([c['name'] for c in self.cena['layers']], ['Fundo', 'Estrelas', '', 'Luz', 'HUD'])  # Estrelas: t167
         self.assertTrue(all(c['visibility'] for c in self.cena['layers'] if c['name'] != 'Luz'))
         presentes = {i['name'] for i in self.cena['instances']}
         self.assertLessEqual({'pato', 'alvo', 'hud_vida_fill', 'hud_moeda', 'moedas', 'municao', 'hud_tempo',

@@ -165,7 +165,7 @@ class JuizoFeixe(unittest.TestCase):
         self.assertEqual(self.o['estrela_rastro']['type'], 'ParticleSystem::ParticleEmitter')
         cria = self.com('"Create"}, "parameters": ["", "estrela"', evs=list(m.todos(self.est['events'])))
         self.assertEqual(len(cria), 1)
-        self.assertIn('"\\"Fundo\\""', tx(cria[0]['actions']))
+        self.assertIn('"\\"Estrelas\\""', tx(cria[0]['actions']))  # camada própria desde a t167
 
     def test_estrelas_sugadas_e_devolvidas(self):
         evs = list(m.todos(self.est['events']))
