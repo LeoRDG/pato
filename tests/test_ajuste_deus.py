@@ -1,4 +1,4 @@
-"""Ajustes do chefe Deus depois de jogar: corpo menor, sinal claro de vulnerável e fragmentos só no olhar
+"""Ajustes do chefe Deus depois de jogar: corpo menor, sinal claro de vulnerável (os fragmentos do golpe agora estão em test_anel_ouro)
 (tools/t148_ajuste_deus.py, tools/arte_deus.py)."""
 import json, os, sys, unittest
 import numpy as np
@@ -53,19 +53,6 @@ class AjusteDeus(unittest.TestCase):
         self.assertIn('"TiledSpriteObject::SetColor"}, "parameters": ["hud_boss_fill", "deus.barra_cor_fechada"]', f)
         self.assertIn('"deus", "Effect", "\\"Aberta\\"", "\\"outerStrength\\""', a)
         for nome in ('cor_aberta', 'cor_fechada', 'barra_cor_aberta', 'barra_cor_fechada', 'brilho_forca', 'brilho_pulso'):
-            self.assertIn(nome, self.v('deus'))
-
-    def test_fragmentos_so_no_olhar(self):
-        ouro = self.g('Anel de ouro: o olhar')
-        cria = [e for e in m.todos(self.deus['events']) if '"Create"}, "parameters": ["", "fragmento"' in tx(e.get('actions', []))]
-        self.assertEqual(len(cria), 1)
-        self.assertEqual(cria[0].get('repeatExpression'), 'deus.fragmento_qtd')
-        self.assertIn(cria[0], list(m.todos(ouro['events'])))
-        self.assertIn('"fragmento", "vy", "=", "deus.fragmento_deriva * RandomFloatInRange(-1, 1) - subida_vel"', tx(cria[0]['actions']))
-        queda = [e for e in m.todos(self.deus['events']) if '"fragmento", "vy", "=", "deus.fragmento_queda"' in tx(e.get('actions', []))]
-        self.assertTrue(any('fim_golpe' in tx(e['actions']) and e in list(m.todos(ouro['events'])) for e in queda), 'caem ao fim do olhar')
-        self.assertTrue(any('"deus", "estado", "=", "\\"fase\\""' in tx(e['actions']) for e in queda), 'caem na troca de fase')
-        for nome in ('fragmento_qtd', 'fragmento_deriva', 'fragmento_queda', 'fragmento_baixo', 'fragmento_fade'):
             self.assertIn(nome, self.v('deus'))
 
     def test_mascara_dos_fragmentos_bate_com_a_arte(self):
