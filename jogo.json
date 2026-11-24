@@ -61,7 +61,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "splash/carregando.jpg",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
@@ -11450,6 +11450,14 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/particulas/particula_fumaca.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/splash/carregando.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "splash/carregando.jpg",
         "smoothed": true,
         "userAdded": true
       }
