@@ -60,8 +60,10 @@ class Deus(unittest.TestCase):
 
     def test_so_a_pupila_leva_dano(self):
         todos_ = list(m.todos(m.folha(self.d, 'InimigosParaiso')['events'])) + list(m.todos(self.cena['events']))
-        self.assertFalse([e for e in todos_ if '"deus", "vida", "-"' in tx(e.get('actions', []))],
-                         'o dano vem só de Combate (pupila no grupo Inimigo), respeitando invulneravel')
+        self.assertFalse([e for e in todos_ if '"deus", "vida", "-"' in tx(e.get('actions', []))
+                          and '"deus", "teste_c", "True"' not in tx(e.get('conditions', []))],
+                         'o dano vem só de Combate (pupila no grupo Inimigo), respeitando invulneravel '
+                         '(fora o atalho de teste da tecla C, desligável em deus.teste_c)')
         libera = [e for e in todos_ if '"deus", "invulneravel", "False"' in tx(e.get('actions', []))]
         self.assertEqual(len(libera), 1)
         self.assertIn('"deus", "vulneravel", "True"', tx(libera[0]['conditions']))
