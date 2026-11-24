@@ -73528,6 +73528,162 @@
           "persistentUuid": "3dcca386-afeb-53ec-a638-92f263a2cdff",
           "type": "number",
           "value": 2640
+        },
+        {
+          "name": "pulso_carga",
+          "persistentUuid": "8158e314-4678-5631-9cc1-65ef14eac44f",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "pulso_vel",
+          "persistentUuid": "35ab8566-797c-5ddf-8bf9-ab64208b7da0",
+          "type": "number",
+          "value": 1800
+        },
+        {
+          "name": "pulso_r",
+          "persistentUuid": "e1bdb979-66ef-5d53-ab4d-d42ce3c3ef6d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pulso_x",
+          "persistentUuid": "7c7a1370-24d5-52ab-b5ba-c12bffb531fb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pulso_y",
+          "persistentUuid": "fddc942c-dbdd-5ad5-a4db-3f44332a8a82",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pulso_acertou",
+          "persistentUuid": "28ebd5cd-cf76-556e-bae5-515ba382a95b",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulso_espessura",
+          "persistentUuid": "fcab3df4-004c-5ecb-8572-492daf0db49b",
+          "type": "number",
+          "value": 14
+        },
+        {
+          "name": "pulso_cor",
+          "persistentUuid": "73ffc731-ebe6-554b-bbee-38229e40edae",
+          "type": "string",
+          "value": "255;240;190"
+        },
+        {
+          "name": "pulso_rastro_cor",
+          "persistentUuid": "90415de3-d512-5cf7-886b-bd6b2aef8e48",
+          "type": "string",
+          "value": "255;190;80"
+        },
+        {
+          "name": "pulso_rastro_passo",
+          "persistentUuid": "1d5bf2b8-c9c0-52f1-83b6-ae444bd170cc",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "pulso_rastro_espessura",
+          "persistentUuid": "17e71ed2-7a72-5bb7-a8c2-3d1da7859301",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "pulso_opacidade",
+          "persistentUuid": "022ec1d1-8234-52b5-ac71-3456ce30792b",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "pulso_tom",
+          "persistentUuid": "f7aece3c-c243-55cd-8360-392a3576c2c9",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "pulso_luz_margem",
+          "persistentUuid": "61f4f983-a6a8-5d20-b8ef-485c0aebf8aa",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "pulso_luz_cor",
+          "persistentUuid": "865f6599-8f81-5ccf-a515-51ab6c212c85",
+          "type": "string",
+          "value": "255;250;225"
+        },
+        {
+          "name": "pulso_ambiente",
+          "persistentUuid": "b2b74969-2bc7-552d-8d0e-2af8ea2e3e88",
+          "type": "string",
+          "value": "235;225;200"
+        },
+        {
+          "name": "conv_qtd",
+          "persistentUuid": "2e755017-366d-5651-8020-7fca77e1e11b",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "conv_raio",
+          "persistentUuid": "4e3cd62b-591a-5dcd-9daf-3968128b19bf",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "conv_vel_min",
+          "persistentUuid": "d35330a3-f1b4-53c3-b65b-78c292573b95",
+          "type": "number",
+          "value": 140
+        },
+        {
+          "name": "conv_vel_max",
+          "persistentUuid": "6fff72a7-b652-5fdf-b54a-f8736aab1b54",
+          "type": "number",
+          "value": 1100
+        },
+        {
+          "name": "conv_vida_min",
+          "persistentUuid": "99e7fd8f-2298-53ad-b3eb-991627e14886",
+          "type": "number",
+          "value": 0.85
+        },
+        {
+          "name": "conv_fluxo_min",
+          "persistentUuid": "99ece12b-cda5-5356-8b23-1624c7db9a1d",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "conv_fluxo_max",
+          "persistentUuid": "746487e8-8846-5aa4-8568-c0df320f5769",
+          "type": "number",
+          "value": 45
+        },
+        {
+          "name": "conv_giro",
+          "persistentUuid": "550c7480-311d-5980-9014-40cdeff6d079",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "conv_ang",
+          "persistentUuid": "71996723-eb47-5d06-900c-66bc49b96232",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "conv_v",
+          "persistentUuid": "0a2539c8-8e84-53b9-9bae-a7f98000cdf5",
+          "type": "number",
+          "value": 140
         }
       ],
       "effects": [
@@ -74545,6 +74701,207 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 14,
+      "emitterForceMax": 140,
+      "emitterForceMin": 140,
+      "flow": 6,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 150,
+      "name": "conv_luz",
+      "particleAlpha1": 70,
+      "particleAlpha2": 255,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 170,
+      "particleBlue2": 255,
+      "particleColor1": "255;236;170",
+      "particleColor2": "255;255;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 236,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 3,
+      "particleLifeTimeMin": 2.5,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 70,
+      "particleSize2": 130,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 26,
+      "variables": [
+        {
+          "name": "k",
+          "persistentUuid": "726da8d9-709b-5b89-8a38-7fd0bb44662e",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 380,
+      "emitterForceMin": 120,
+      "flow": 3000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 40,
+      "name": "pedra_estilhaco",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 162,
+      "particleBlue2": 72,
+      "particleColor1": "194;181;162",
+      "particleColor2": "90;78;72",
+      "particleGravityX": 0,
+      "particleGravityY": 500,
+      "particleGreen1": 181,
+      "particleGreen2": 78,
+      "particleLifeTimeMax": 0.9,
+      "particleLifeTimeMin": 0.4,
+      "particleRed1": 194,
+      "particleRed2": 90,
+      "particleSize1": 100,
+      "particleSize2": 50,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 4,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 22,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 12,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 1100,
+      "emitterForceMin": 500,
+      "flow": 6000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 80,
+      "name": "pulso_brilho",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 220,
+      "particleBlue2": 60,
+      "particleColor1": "255;250;220",
+      "particleColor2": "255;190;60",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 250,
+      "particleGreen2": 190,
+      "particleLifeTimeMax": 0.7,
+      "particleLifeTimeMin": 0.3,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 110,
+      "particleSize2": 30,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 5,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 60,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 20,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 14,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 240,
+        "b": 190
+      },
+      "name": "pulso_anel",
+      "persistentUuid": "5390f0bf-4900-508b-8179-cea79f09b20a",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 30,
+            "innerStrength": 4,
+            "outerStrength": 12
+          },
+          "stringParameters": {
+            "color": "255;210;120"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Brilho",
+          "doubleParameters": {
+            "threshold": 0.2,
+            "bloomScale": 1.6,
+            "brightness": 1.3,
+            "blur": 10,
+            "quality": 6,
+            "padding": 80
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -74806,6 +75163,18 @@
               },
               {
                 "objectName": "vento_subida"
+              },
+              {
+                "objectName": "conv_luz"
+              },
+              {
+                "objectName": "pedra_estilhaco"
+              },
+              {
+                "objectName": "pulso_brilho"
+              },
+              {
+                "objectName": "pulso_anel"
               }
             ]
           }
@@ -134478,6 +134847,24 @@
                         "=",
                         "deus.fragmento_queda"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "conv_luz",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -135421,7 +135808,7 @@
                       "parameters": [
                         "fragmento",
                         "+",
-                        "fragmento.vy * TimeDelta()"
+                        "(fragmento.vy - subida_vel) * TimeDelta()"
                       ]
                     }
                   ]
@@ -135498,7 +135885,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Anel de ouro: o olhar",
+              "name": "Anel de ouro: o pulso",
               "source": "",
               "parameters": [],
               "events": [
@@ -135627,7 +136014,7 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"mira\""
+                        "\"carrega\""
                       ]
                     },
                     {
@@ -135637,6 +136024,26 @@
                       "parameters": [
                         "deus",
                         "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"fragmento\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "0"
                       ]
                     },
                     {
@@ -135661,6 +136068,17 @@
                     },
                     {
                       "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"carregar\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "PlaySound"
                       },
                       "parameters": [
@@ -135669,6 +136087,15 @@
                         "",
                         "deus.som_volume",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "conv_luz",
+                        ""
                       ]
                     }
                   ],
@@ -135685,7 +136112,7 @@
                             "",
                             "fragmento",
                             "RandomInRange(CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.fragmento_folga)",
-                            "RandomInRange(CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.fragmento_baixo)",
+                            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 - RandomInRange(0, deus.fragmento_acima)",
                             "\"\""
                           ]
                         },
@@ -135708,7 +136135,7 @@
                             "fragmento",
                             "vy",
                             "=",
-                            "deus.fragmento_deriva * RandomFloatInRange(-1, 1) - subida_vel"
+                            "RandomFloatInRange(deus.fragmento_vel_min, deus.fragmento_vel_max)"
                           ]
                         },
                         {
@@ -135734,6 +136161,57 @@
                         }
                       ],
                       "repeatExpression": "deus.fragmento_qtd"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "conv_luz",
+                            "deus.px",
+                            "deus.py",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "k",
+                            "=",
+                            "deus.i"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.particula_z"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.conv_qtd"
                     }
                   ]
                 },
@@ -135781,7 +136259,7 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"mira\""
+                        "\"carrega\""
                       ]
                     }
                   ],
@@ -135792,11 +136270,112 @@
                       },
                       "parameters": [
                         "luz_olhar",
-                        "deus.olhar_raio_idle + (deus.olhar_raio_luz - deus.olhar_raio_idle) * min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.olhar_mira)"
+                        "deus.olhar_raio_idle + (deus.olhar_raio_luz - deus.olhar_raio_idle) * min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "conv_ang",
+                        "+",
+                        "deus.conv_giro * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "conv_v",
+                        "=",
+                        "deus.conv_vel_min + (deus.conv_vel_max - deus.conv_vel_min) * pow(min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga), 2)"
                       ]
                     }
                   ],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.px + cos(deus.conv_ang + ToRad(conv_luz.k * 360 / deus.conv_qtd)) * deus.conv_raio",
+                            "=",
+                            "deus.py + sin(deus.conv_ang + ToRad(conv_luz.k * 360 / deus.conv_qtd)) * deus.conv_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "ToDeg(atan2(deus.py - deus.conv_raio * subida_vel / deus.conv_v - conv_luz.Y(), deus.px - conv_luz.X()))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMin"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.conv_v"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMax"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.conv_v"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleLifeTimeMin"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.conv_raio / deus.conv_v * deus.conv_vida_min"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::ParticleLifeTimeMax"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.conv_raio / deus.conv_v"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::SetFlow"
+                          },
+                          "parameters": [
+                            "conv_luz",
+                            "=",
+                            "deus.conv_fluxo_min + (deus.conv_fluxo_max - deus.conv_fluxo_min) * min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga)"
+                          ]
+                        }
+                      ],
+                      "object": "conv_luz"
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -135806,86 +136385,20 @@
                           },
                           "parameters": [
                             "deus",
-                            "\"golpe\"",
+                            "\"fragmento\"",
                             ">",
-                            "deus.olhar_mira"
+                            "deus.fragmento_intervalo"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "etapa",
-                            "=",
-                            "\"trava\""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
                             "deus",
-                            "\"golpe\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "olhar_fixo",
-                            "=",
-                            "deus.olhar_ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "olhar_dir",
-                            "=",
-                            "RandomInRange(0, 1) * 2 - 1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "olhar_a",
-                            "=",
-                            "deus.olhar_fixo - deus.olhar_dir * ToRad(deus.olhar_varre_ang) / 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "deus",
-                            "Animation",
-                            "=",
-                            "\"contrai\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "deus_olho",
-                            "Animation",
-                            "=",
-                            "\"carregar\""
+                            "\"fragmento\""
                           ]
                         },
                         {
@@ -135894,10 +136407,43 @@
                           },
                           "parameters": [
                             "",
-                            "feixe_olhar",
-                            "deus.px",
-                            "deus.py",
+                            "fragmento",
+                            "RandomInRange(CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.fragmento_folga, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.fragmento_folga)",
+                            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 - deus.fragmento_folga",
                             "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "Animation",
+                            "=",
+                            "\"f\" + ToString(RandomInRange(1, 3))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "vy",
+                            "=",
+                            "RandomFloatInRange(deus.fragmento_vel_min, deus.fragmento_vel_max)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            "Opacity",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -135905,64 +136451,9 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "feixe_olhar",
+                            "fragmento",
                             "=",
-                            "deus.feixe_z"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "OpacityCapability::OpacityBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "Opacity",
-                            "=",
-                            "deus.olhar_aviso_opacidade"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "=",
-                            "ToDeg(deus.olhar_a) - 90"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "Resizable",
-                            "=",
-                            "deus.olhar_largura * 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "Resizable",
-                            "=",
-                            "deus.olhar_alcance"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "=",
-                            "deus.px + cos(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Width() / 2",
-                            "=",
-                            "deus.py + sin(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Height() / 2"
+                            "deus.fragmento_z"
                           ]
                         }
                       ]
@@ -136013,222 +136504,179 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"trava\""
+                        "\"carrega\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.pulso_carga"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "feixe_olhar",
-                        "=",
-                        "ToDeg(deus.olhar_a) - 90"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                      },
-                      "parameters": [
-                        "feixe_olhar",
-                        "Resizable",
-                        "=",
-                        "deus.olhar_largura * 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                      },
-                      "parameters": [
-                        "feixe_olhar",
-                        "Resizable",
-                        "=",
-                        "deus.olhar_alcance"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "feixe_olhar",
-                        "=",
-                        "deus.px + cos(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Width() / 2",
-                        "=",
-                        "deus.py + sin(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Height() / 2"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"golpe\"",
-                            ">",
-                            "deus.olhar_trava"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "etapa",
-                            "=",
-                            "\"varre\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"golpe\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_luz.wav",
-                            "",
-                            "deus.som_volume",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "OpacityCapability::OpacityBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "feixe_olhar",
-                            "Opacity",
-                            "=",
-                            "deus.opacidade_max"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "golpe",
-                        "=",
-                        "\"olhar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
                         "deus",
                         "etapa",
                         "=",
-                        "\"varre\""
+                        "\"pulso\""
                       ]
-                    }
-                  ],
-                  "actions": [
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "olhar_a",
+                        "pulso_r",
                         "=",
-                        "deus.olhar_fixo + deus.olhar_dir * ToRad(deus.olhar_varre_ang) * (min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.olhar_varre) * 2 - 1) / 2"
+                        "0"
                       ]
                     },
                     {
                       "type": {
-                        "value": "SetAngle"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "feixe_olhar",
-                        "=",
-                        "ToDeg(deus.olhar_a) - 90"
+                        "deus",
+                        "pulso_acertou",
+                        "False",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "feixe_olhar",
-                        "Resizable",
+                        "deus",
+                        "pulso_x",
                         "=",
-                        "deus.olhar_largura * 2"
+                        "deus.px"
                       ]
                     },
                     {
                       "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "feixe_olhar",
-                        "Resizable",
+                        "deus",
+                        "pulso_y",
                         "=",
-                        "deus.olhar_alcance"
+                        "deus.py"
                       ]
                     },
                     {
                       "type": {
-                        "value": "SetXY"
+                        "value": "Delete"
                       },
                       "parameters": [
-                        "feixe_olhar",
+                        "conv_luz",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "pulso_anel",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "pulso_anel",
                         "=",
-                        "deus.px + cos(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Width() / 2",
+                        "deus.feixe_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "pulso_brilho",
+                        "deus.px",
+                        "deus.py",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "pulso_brilho",
                         "=",
-                        "deus.py + sin(deus.olhar_a) * deus.olhar_alcance / 2 - feixe_olhar.Height() / 2"
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetColor"
+                      },
+                      "parameters": [
+                        "luz_olhar",
+                        "deus.pulso_luz_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerAmbientLightColor"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Luz\"",
+                        "deus.pulso_ambiente"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus",
+                        "Animation",
+                        "=",
+                        "\"contrai\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.pulso_tom"
                       ]
                     }
                   ],
@@ -136259,8 +136707,8 @@
                               },
                               "parameters": [
                                 "fragmento",
-                                "deus.px",
-                                "deus.py",
+                                "deus.pulso_x",
+                                "deus.pulso_y",
                                 "pato.CenterX()",
                                 "pato.CenterY()",
                                 "olhar_rx",
@@ -136284,6 +136732,231 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"olhar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"pulso\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "pulso_x",
+                        "=",
+                        "deus.px"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "pulso_y",
+                        "=",
+                        "deus.py"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "pulso_r",
+                        "+",
+                        "deus.pulso_vel * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "luz_olhar",
+                        "deus.pulso_r + deus.pulso_luz_margem"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineOpacity"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "=",
+                        "deus.pulso_opacidade * max(0, 1 - deus.pulso_r / deus.olhar_alcance)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineColor"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "deus.pulso_rastro_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineSize"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "=",
+                        "deus.pulso_rastro_espessura"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "deus.pulso_x",
+                        "deus.pulso_y",
+                        "max(1, deus.pulso_r - deus.pulso_rastro_passo * 2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "deus.pulso_x",
+                        "deus.pulso_y",
+                        "max(1, deus.pulso_r - deus.pulso_rastro_passo)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineColor"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "deus.pulso_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineSize"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "=",
+                        "deus.pulso_espessura"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        "deus.pulso_x",
+                        "deus.pulso_y",
+                        "deus.pulso_r"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "sqrt(pow(fragmento.CenterX() - deus.pulso_x, 2) + pow(fragmento.CenterY() - deus.pulso_y, 2))",
+                            "<=",
+                            "deus.pulso_r"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "pedra_estilhaco",
+                            "fragmento.CenterX()",
+                            "fragmento.CenterY()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "pedra_estilhaco",
+                            "=",
+                            "deus.particula_z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "fragmento",
+                            ""
+                          ]
+                        }
+                      ],
+                      "object": "fragmento"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -136293,19 +136966,8 @@
                             "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "invencivel",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "morto",
+                            "deus",
+                            "pulso_acertou",
                             "False",
                             ""
                           ]
@@ -136315,74 +136977,106 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "(pato.CenterX() - deus.px) * cos(deus.olhar_a) + (pato.CenterY() - deus.py) * sin(deus.olhar_a)",
-                            ">",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs((pato.CenterY() - deus.py) * cos(deus.olhar_a) - (pato.CenterX() - deus.px) * sin(deus.olhar_a))",
-                            "<",
-                            "deus.olhar_largura"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "na_sombra",
-                            "False",
-                            ""
+                            "sqrt(pow(pato.CenterX() - deus.pulso_x, 2) + pow(pato.CenterY() - deus.pulso_y, 2))",
+                            "<=",
+                            "deus.pulso_r"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "vida",
-                            "-",
-                            "deus.olhar_dano"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "pato",
-                            "invencivel",
+                            "deus",
+                            "pulso_acertou",
                             "True",
                             ""
                           ]
-                        },
+                        }
+                      ],
+                      "events": [
                         {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"iframes\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "ultimo_agressor",
-                            "=",
-                            "\"deus\""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "na_sombra",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "morto",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "vida",
+                                "-",
+                                "deus.olhar_dano"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "invencivel",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "pato",
+                                "\"iframes\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "ultimo_agressor",
+                                "=",
+                                "\"deus\""
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -136392,13 +137086,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "CompareObjectTimer"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "deus",
-                            "\"golpe\"",
+                            "deus.pulso_r",
                             ">",
-                            "deus.olhar_varre"
+                            "deus.olhar_alcance"
                           ]
                         }
                       ],
@@ -136439,8 +137132,27 @@
                             "value": "Delete"
                           },
                           "parameters": [
-                            "feixe_olhar",
+                            "pulso_anel",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Lighting::SetColor"
+                          },
+                          "parameters": [
+                            "luz_olhar",
+                            "deus.olhar_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerAmbientLightColor"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Luz\"",
+                            "luz_ambiente_normal"
                           ]
                         },
                         {
@@ -136474,17 +137186,6 @@
                             "Animation",
                             "=",
                             "\"idle\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "fragmento",
-                            "vy",
-                            "=",
-                            "deus.fragmento_queda"
                           ]
                         }
                       ]
@@ -141400,6 +142101,24 @@
                         "deus_morte_luz",
                         "=",
                         "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "conv_luz",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "pulso_anel",
+                        ""
                       ]
                     }
                   ]
