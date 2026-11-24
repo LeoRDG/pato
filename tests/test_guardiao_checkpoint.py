@@ -74,7 +74,7 @@ class GuardiaoCheckpoint(unittest.TestCase):
         self.assertGreaterEqual(c['x'], 10624)
         apaga = [e for e in m.todos(self.cena['events']) if '"Delete"}, "parameters": ["barreira_empireo"' in tx(e.get('actions', []))]
         self.assertEqual(len(apaga), 1)
-        self.assertIn('["guardiao_morto", "True", ""]', tx(apaga[0]['conditions']))
+        self.assertNotIn('guardiao_morto', tx(apaga[0]['conditions']), 'a barreira some sem precisar matar o guardião (t150)')
         saida = m.acha(self.cena['events'], 'Saída no Empíreo')
         cena_ev = next(e for e in m.todos(saida['events']) if '"Scene"' in tx(e['actions']))
         self.assertIn('["chefe_final_morto", "True", ""]', tx(cena_ev['conditions']))
@@ -93,7 +93,7 @@ class GuardiaoCheckpoint(unittest.TestCase):
         self.assertIn({'guardiao': False}, [{c['name']: c['value']} for c in par['children']])
         self.assertIs(self.v('pato')['asas'], False)
         pega = next(e for e in m.todos(self.check['events']) if '"CollisionNP"' in tx(e['conditions']))
-        self.assertIn('["guardiao_morto", "True", ""]', tx(pega['conditions']))
+        self.assertNotIn('guardiao_morto', tx(pega['conditions']), 'o checkpoint vale sem matar o guardião (t150)')
 
     def test_variaveis_declaradas(self):
         g = tx(self.guard) + tx(self.check)

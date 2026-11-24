@@ -46,10 +46,16 @@ class ModoLuta(unittest.TestCase):
         self.assertIn('"luz_ambiente_normal"', c)
         self.assertIn(f'"{g.ACAO_ESCONDE_CAMADA}"}}, "parameters": ["", "\\"Luz\\""]', tx(self.g['Fim da luta']))
 
-    def test_comeco_exige_asas_guardiao_e_saida(self):
-        (e,) = [e for e in self.g['Começo da luta']['events'] if 'luta' in tx(e['actions'])]
+    def test_comeco_so_exige_saida_e_da_asas(self):
+        """o guardião não é mais obrigatório: chegar na saída começa a luta e o pato ganha as asas (t150)."""
+        (e,) = [e for e in self.g['Começo da luta']['events'] if 'deus_criar' in tx(e['actions'])]
         c = tx(e['conditions'])
-        for s in ('"pato", "asas", "True"', '["guardiao_morto", "True", ""]', '["luta", "False", ""]',
+        self.assertNotIn('guardiao_morto', c)
+        self.assertNotIn('"pato", "asas", "True"', c)
+        ganha = next(f for f in e.get('events', []) if '"pato", "asas", "False"' in tx(f['conditions']))
+        self.assertIn('"pato", "asas", "True"', tx(ganha['actions']))
+        self.assertIn('"Create"}, "parameters": ["", "asas_pato"', tx(ganha['actions']))
+        for s in ('["luta", "False", ""]',
                   '["chefe_final_morto", "False", ""]', '"saida_x_min"', '"saida_x_max"', '"saida_y"'):
             self.assertIn(s, c)
         a = tx(e['actions'])
