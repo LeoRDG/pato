@@ -21,7 +21,7 @@ class CorrentesSuaves(unittest.TestCase):
     def test_textura_lisa(self):
         a = np.array(Image.open(os.path.join(RAIZ, 'assets/paraiso/corrente_luz.png')).convert('RGBA')).astype(float)
         al = a[..., 3]
-        self.assertGreater(len(np.unique(al)), 60, 'degradê, sem degraus')
+        # t183: a textura virou uma cor lisa (o desenho vem do KawaseBlur e do Glow; test_correntes_efeitos)
         self.assertLess(np.abs(np.diff(al, axis=1)).max(), 25, 'sem salto de um pixel para o outro')
         self.assertLess(np.abs(np.diff(al, axis=0)).max(), 25, 'sem faísca de pixel')
         self.assertLess(np.abs(al[0] - al[-1]).max(), 25, 'emenda na vertical')
