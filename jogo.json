@@ -76509,6 +76509,53 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 25,
+      "emitterForceMin": 5,
+      "flow": 16,
+      "jumpForwardInTimeOnCreation": 8,
+      "maxParticleNb": 110,
+      "name": "inferno_brasas",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 120,
+      "particleBlue2": 20,
+      "particleColor1": "255;220;120",
+      "particleColor2": "230;70;20",
+      "particleGravityX": 0,
+      "particleGravityY": -40,
+      "particleGreen1": 220,
+      "particleGreen2": 70,
+      "particleLifeTimeMax": 7,
+      "particleLifeTimeMin": 4,
+      "particleRed1": 255,
+      "particleRed2": 230,
+      "particleSize1": 16,
+      "particleSize2": 5,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1100,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -77052,6 +77099,14 @@
               },
               {
                 "objectName": "hub_luzes"
+              }
+            ]
+          },
+          {
+            "folderName": "inferno",
+            "children": [
+              {
+                "objectName": "inferno_brasas"
               }
             ]
           }
@@ -83352,6 +83407,12 @@
           "persistentUuid": "1af11ed2-56a1-54f8-9f03-05f99e4d1661",
           "type": "string",
           "value": "Hub"
+        },
+        {
+          "name": "inferno_brasas_z",
+          "persistentUuid": "a9864cbd-f869-58f8-a072-cb79b6c20e7c",
+          "type": "number",
+          "value": 2000
         }
       ],
       "instances": [
@@ -85993,6 +86054,76 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Brasas no ar",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "inferno_brasas",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "inferno_brasas",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "inferno_brasas",
+                    "=",
+                    "inferno_brasas_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "inferno_brasas",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Link",
