@@ -52182,7 +52182,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "fillOpacity": 190,
+      "fillOpacity": 240,
       "outlineSize": 0,
       "outlineOpacity": 0,
       "absoluteCoordinates": true,
@@ -52290,7 +52290,7 @@
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 24,
-        "lineHeight": 0,
+        "lineHeight": 32,
         "color": "255;255;255"
       }
     },
@@ -75711,6 +75711,31 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "loja_faixa",
+      "persistentUuid": "0a532ec8-7180-5d91-8277-e3edb73dcac8",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 45,
+      "outlineSize": 0,
+      "outlineOpacity": 0,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 230,
+        "b": 120
+      },
+      "outlineColor": {
+        "r": 253,
+        "g": 65,
+        "b": 65
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -76493,6 +76518,9 @@
           },
           {
             "objectName": "arma_dica"
+          },
+          {
+            "objectName": "loja_faixa"
           }
         ]
       }
@@ -112047,6 +112075,28 @@
                 },
                 {
                   "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "loja_faixa",
+                    "0",
+                    "0",
+                    "\"HUD\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "loja_faixa",
+                    "=",
+                    "loja_painel.ZOrder() + 1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -112187,6 +112237,15 @@
                   },
                   "parameters": [
                     "loja_painel",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "loja_faixa",
                     ""
                   ]
                 },
@@ -112769,6 +112828,18 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Rectangle"
+                      },
+                      "parameters": [
+                        "loja_faixa",
+                        "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2 - 24",
+                        "loja_linha.Y() + loja_linha.Height() / 2 - loja_linha_alt / 2",
+                        "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2 + loja_largura",
+                        "loja_linha.Y() + loja_linha.Height() / 2 + loja_linha_alt / 2"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "TextObject::ChangeColor"
