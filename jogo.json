@@ -74518,6 +74518,18 @@
           "persistentUuid": "b1364bd4-3772-56aa-a4be-c1f27373567e",
           "type": "number",
           "value": 255
+        },
+        {
+          "name": "canal_vaivem_k",
+          "persistentUuid": "e1fcbad4-608f-5cad-bdf8-4b4ce659c137",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "canal_vaivem_recolhe",
+          "persistentUuid": "19e1404b-37a2-5042-b133-c1c379fb43fc",
+          "type": "number",
+          "value": 0.6
         }
       ],
       "effects": [
@@ -140936,6 +140948,86 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "canal_vaivem_k",
+                        "=",
+                        "max(0, deus.canal_vaivem_k - TimeDelta() / deus.canal_vaivem_recolhe)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "canal_vaivem_k",
+                        "=",
+                        "min(1, deus.canal_vaivem_k + TimeDelta() / deus.canal_vaivem_recolhe)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "value": "BooleanObjectVariable"
                       },
                       "parameters": [
@@ -140976,9 +141068,9 @@
                       "parameters": [
                         "canalizador",
                         "=",
-                        "clamp(deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
+                        "clamp(deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
                         "=",
-                        "clamp(deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
+                        "clamp(deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
                       ]
                     }
                   ]
@@ -141028,9 +141120,9 @@
                       "parameters": [
                         "canalizador",
                         "=",
-                        "deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
+                        "deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
                         "=",
-                        "deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
+                        "deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
                       ]
                     }
                   ]
