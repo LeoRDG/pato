@@ -76415,6 +76415,53 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 210,
+      "emitterForceMin": 60,
+      "flow": 3000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 14,
+      "name": "moeda_brilho",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 190,
+      "particleBlue2": 60,
+      "particleColor1": "255;246;190",
+      "particleColor2": "255;190;60",
+      "particleGravityX": 0,
+      "particleGravityY": -80,
+      "particleGreen1": 246,
+      "particleGreen2": 190,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.25,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 9,
+      "particleSize2": 2,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": 12,
+      "textureParticleName": "assets/particulas/particula_luz.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 6,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -77001,6 +77048,9 @@
           },
           {
             "objectName": "impacto_bala"
+          },
+          {
+            "objectName": "moeda_brilho"
           }
         ]
       },
@@ -108496,6 +108546,28 @@
                         "",
                         "25",
                         "RandomFloatInRange(0.97, 1.12)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "moeda_brilho",
+                        "moeda.CenterX()",
+                        "moeda.CenterY()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "moeda_brilho",
+                        "=",
+                        "moeda.ZOrder()"
                       ]
                     },
                     {
