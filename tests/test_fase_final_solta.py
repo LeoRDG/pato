@@ -62,7 +62,8 @@ class FaseFinalSolta(unittest.TestCase):
     def test_movimento_antes_da_pupila(self):
         """a pupila usa o cx/cy deste quadro; só a investida (que já põe a pupila) vem depois."""
         mov = [i for i, e in enumerate(self.corpo) if '"deus", "cx"' in tx(e['actions'])
-               and '"deus", "investindo", "True"' not in tx(e['conditions'])]
+               and '"deus", "investindo", "True"' not in tx(e['conditions'])
+               and '"deus", "juizo_ativo", "True"' not in tx(e['conditions'])]  # o Juízo (t164) tem o seu
         i_pup = next(i for i, e in enumerate(self.corpo) if '"deus", "pupila_ox", "+"' in tx(e['actions']))
         self.assertEqual(len(mov), 2)
         self.assertLess(max(mov), i_pup)

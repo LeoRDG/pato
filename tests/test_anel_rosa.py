@@ -61,16 +61,9 @@ class AnelRosa(unittest.TestCase):
         self.assertIn('"deus.canal_vivos", "=", "0"', c)
         self.assertIn('"deus", "janela_amor", "False"', c)
 
-    def test_juizo_interrompido(self):
-        j = tx(self.rosa)
-        self.assertIn('"deus", "golpe", "=", "\\"juizo\\""', j)
-        self.assertIn('"deus_olho", "Animation", "=", "\\"juizo\\""', j)
-        (falha,) = self.acoes('"deus_olho", "Animation", "=", "\\"juizo_falha\\""')
-        self.assertIn('"deus.canal_vivos", "=", "0"', tx(falha['conditions']))
-        (acerta,) = self.acoes('"pato", "vida", "-", "deus.juizo_dano"')
-        self.assertIn('deus.juizo_tempo', tx(acerta['conditions']))
-        self.assertIn('"deus.canal_vivos", ">", "0"', tx(acerta['conditions']))
-        self.assertIn('"deus", "estado", "=", "\\"fim_golpe\\""', j)
+    def test_juizo_saiu_do_anel_rosa(self):
+        """o Juízo virou o feixe (t164, test_juizo_feixe): o anel rosa só tem os canalizadores e o escudo."""
+        self.assertNotIn('\\"juizo\\"', tx(self.rosa))
 
     def test_lacos_desenhados(self):
         laco = next(e for e in self.evs if '"PrimitiveDrawing::LineV2"' in tx(e.get('actions', [])))

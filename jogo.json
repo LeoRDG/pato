@@ -12720,6 +12720,22 @@
         "name": "assets/paraiso/parede.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/estrela_p.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/estrela_p.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/paraiso/deus/estrela_g.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/paraiso/deus/estrela_g.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -74142,6 +74158,366 @@
           "persistentUuid": "b4b442ea-961b-551e-8197-fae65f9b1bfc",
           "type": "number",
           "value": 0.25
+        },
+        {
+          "name": "juizo_recarga",
+          "persistentUuid": "142a29fc-0621-5176-bc45-f142cd59b575",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "juizo_volta_em",
+          "persistentUuid": "276745ae-1420-5166-b0ce-de8a42c16b3f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_ativo",
+          "persistentUuid": "4c065e39-8b32-5485-9860-4298342965fd",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "juizo_baixo",
+          "persistentUuid": "bd3a12a3-5907-510e-b6f9-0f8826b1c4e5",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "juizo_ir_vel",
+          "persistentUuid": "0476dc3f-60e9-593c-9d7d-788d0bdf664f",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "juizo_ir",
+          "persistentUuid": "74d7b705-1055-5909-bf7f-63de2acfdc8c",
+          "type": "number",
+          "value": 1.2
+        },
+        {
+          "name": "juizo_sugar",
+          "persistentUuid": "36f3677d-eb0e-5469-a87b-69ae3b889f44",
+          "type": "number",
+          "value": 2.4
+        },
+        {
+          "name": "juizo_sugar_espalha",
+          "persistentUuid": "acd53ada-a8e3-566d-827b-151a206d0f13",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "juizo_sugar_acel",
+          "persistentUuid": "eeb1b17c-ec71-5017-92c9-5973c7913a4e",
+          "type": "number",
+          "value": 2600
+        },
+        {
+          "name": "juizo_sugar_chega",
+          "persistentUuid": "2c21ab43-93e0-5eb3-b4a2-8745a8a0dee9",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "juizo_varrer",
+          "persistentUuid": "fafe241a-80c9-54f2-b905-687c690c8a05",
+          "type": "number",
+          "value": 3.5
+        },
+        {
+          "name": "juizo_fecha",
+          "persistentUuid": "c808b23b-6a5d-5049-af61-43846ba262dc",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "juizo_ang",
+          "persistentUuid": "fdaca9bd-a026-5c59-a66d-175d6f84c6c7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_alcance",
+          "persistentUuid": "08a39aa7-0b53-5f0e-9181-c6823f604761",
+          "type": "number",
+          "value": 3000
+        },
+        {
+          "name": "juizo_largura",
+          "persistentUuid": "6526cfd0-516c-5bf0-9af5-d495eeaaa232",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "juizo_miolo",
+          "persistentUuid": "42c94be8-719a-56a6-b060-297bfc8e0589",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "juizo_folga",
+          "persistentUuid": "699397e2-52f9-5ad2-8526-05486d546d54",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "juizo_cor",
+          "persistentUuid": "8974cc5c-d5b4-561c-aded-9ec90ad7a636",
+          "type": "string",
+          "value": "255;230;170"
+        },
+        {
+          "name": "juizo_miolo_cor",
+          "persistentUuid": "ff6c5cef-8b00-57d9-b0a4-cd869c772348",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "juizo_feixe_op",
+          "persistentUuid": "4aa9d7ec-03a6-5be2-8003-37fb4f16a176",
+          "type": "number",
+          "value": 235
+        },
+        {
+          "name": "juizo_negro_dx",
+          "persistentUuid": "59b7b81b-116d-54dc-93ad-551e5193ad8b",
+          "type": "number",
+          "value": 700
+        },
+        {
+          "name": "juizo_negro_dy",
+          "persistentUuid": "b90189ff-d779-592d-9c50-ac70a7134818",
+          "type": "number",
+          "value": -180
+        },
+        {
+          "name": "juizo_branco_dx",
+          "persistentUuid": "f2d4ae9e-f4a0-5868-8231-49864990c828",
+          "type": "number",
+          "value": -700
+        },
+        {
+          "name": "juizo_branco_dy",
+          "persistentUuid": "906c90f4-0c9e-5ae1-a8db-0b9a031b864f",
+          "type": "number",
+          "value": -180
+        },
+        {
+          "name": "juizo_buraco_raio",
+          "persistentUuid": "26245bd2-f75f-5545-9635-a3a11bdce7ae",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "juizo_buraco_op",
+          "persistentUuid": "7edfa09b-8d0f-5b49-a832-2cb0488d50ee",
+          "type": "number",
+          "value": 235
+        },
+        {
+          "name": "juizo_branco_cor",
+          "persistentUuid": "0f4ec3a4-489d-5bcd-b6a9-af10b1d3a50c",
+          "type": "string",
+          "value": "255;255;255"
+        },
+        {
+          "name": "juizo_negro_cor",
+          "persistentUuid": "b4cf8785-79f6-5e68-b2b4-6a8fd288691f",
+          "type": "string",
+          "value": "0;0;0"
+        },
+        {
+          "name": "juizo_lente_negra",
+          "persistentUuid": "325f84b2-0b6a-5ea9-a5fb-ea55d6010bb9",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "juizo_lente_raio",
+          "persistentUuid": "2c2f8d18-f8a4-5587-b6a6-a5b4935b6e30",
+          "type": "number",
+          "value": 260
+        },
+        {
+          "name": "juizo_horizonte_cor",
+          "persistentUuid": "a5a26962-204c-5b37-8a38-cf0e2201ff2c",
+          "type": "string",
+          "value": "255;232;200"
+        },
+        {
+          "name": "juizo_horizonte_t",
+          "persistentUuid": "035efe70-d42c-5579-a44d-6e377b9aeaf6",
+          "type": "number",
+          "value": 1.6
+        },
+        {
+          "name": "juizo_horizonte_esp",
+          "persistentUuid": "6e8c5155-8458-5fea-9d5a-a60c3fd1ea4f",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "juizo_horizonte_tom",
+          "persistentUuid": "472162b9-3c5b-5504-8f49-9223ac0d9bd4",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "juizo_tele_tom",
+          "persistentUuid": "d54b5927-fe85-5614-abee-3225c27fbcdf",
+          "type": "number",
+          "value": 1.3
+        },
+        {
+          "name": "juizo_negro_vis",
+          "persistentUuid": "02900e28-aae3-5080-ad59-df1336b5caff",
+          "type": "number",
+          "value": 0.06
+        },
+        {
+          "name": "juizo_negro_resto",
+          "persistentUuid": "8e19e1df-f5e2-5ebe-b2f4-f230c4f34a14",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "juizo_revelado",
+          "persistentUuid": "56f03996-b6f9-5a37-a1ef-bffa69dd36fa",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "juizo_branco_ativo",
+          "persistentUuid": "539e7f76-4788-5ff4-b995-2782260d501d",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "juizo_negro_ang",
+          "persistentUuid": "df2577f5-56b1-5444-9cd5-b2cffc8ec1bf",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_branco_ang",
+          "persistentUuid": "228ae4cb-d778-5944-ac77-c24a645dddd7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_flare",
+          "persistentUuid": "756a76d1-c907-5e19-af6e-206a4bb1d635",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_negro_k",
+          "persistentUuid": "b3fdcd03-951e-5485-bf69-f7324308f7c4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_negro_livre",
+          "persistentUuid": "ab9c1ef3-6fc5-5b88-a3c0-4daa23e51722",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "estrela_ceu_min",
+          "persistentUuid": "94c433f8-f465-5948-8e20-2350d335885b",
+          "type": "number",
+          "value": 0.55
+        },
+        {
+          "name": "estrela_qtd",
+          "persistentUuid": "c752ac69-6d04-5eaa-ae2c-1a3f142fe640",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "estrela_seq",
+          "persistentUuid": "a6e3175d-1485-54b7-b559-70537f78c286",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "estrela_margem",
+          "persistentUuid": "3c3a4b86-aa74-50f2-bca6-e5d951b37cac",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "estrela_parallax",
+          "persistentUuid": "6d061ee4-064b-5046-a992-b56de089b4dc",
+          "type": "number",
+          "value": 0.45
+        },
+        {
+          "name": "estrela_pisca",
+          "persistentUuid": "c008ae2e-f384-50d5-b1d8-654976ba8044",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "estrela_pisca_vel",
+          "persistentUuid": "18cb590a-c2d1-5cdc-ab23-5cbeb93cad1a",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "estrela_ceu",
+          "persistentUuid": "060560ac-a448-5f19-ba2f-c54313dd6dc9",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "estrela_ceu_k",
+          "persistentUuid": "22b0ae25-fd34-5875-a82c-ef80bfede53d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "estrela_volta",
+          "persistentUuid": "1a1c88a2-2d52-5a08-a008-15e0d09cca25",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "estrela_z",
+          "persistentUuid": "ee59629b-21d0-5c96-9edc-a835ebe6a775",
+          "type": "number",
+          "value": 12
+        },
+        {
+          "name": "estrela_g_chance",
+          "persistentUuid": "3e462888-90a5-5b4d-88e4-02fd31ab5098",
+          "type": "number",
+          "value": 0.06
+        },
+        {
+          "name": "estrela_brilho_min",
+          "persistentUuid": "65769547-ef29-581d-8a37-9812770d7a8e",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "estrela_op_max",
+          "persistentUuid": "d2617003-a703-566a-9f87-6fc07b94c835",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "estrela_cor_min",
+          "persistentUuid": "e6b7430c-caf4-5637-84f7-355d6fde5414",
+          "type": "number",
+          "value": 190
+        },
+        {
+          "name": "estrela_cor_max",
+          "persistentUuid": "b1364bd4-3772-56aa-a4be-c1f27373567e",
+          "type": "number",
+          "value": 255
         }
       ],
       "effects": [
@@ -75548,6 +75924,328 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "estrela",
+      "persistentUuid": "f786fcca-c42f-5d0b-8f33-06ba3afcd551",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "hx",
+          "persistentUuid": "33959ff9-6a50-5966-b949-49e22a991246",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "hy",
+          "persistentUuid": "5dd40809-0b92-5b9a-a43a-ed4278a5d89b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "x_",
+          "persistentUuid": "818ac7df-ebc4-55bf-8f7a-2fe97500b887",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "y_",
+          "persistentUuid": "19acde02-5e1c-5d75-a103-512f834ff6c8",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "v",
+          "persistentUuid": "1d8d05fb-9e1d-518a-b673-c1ba70f17167",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "atraso",
+          "persistentUuid": "93a10e84-4b51-50eb-a0d7-dbfa75086fb5",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "40175824-5659-5bdb-94db-bc22c912ee19",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "brilho",
+          "persistentUuid": "c8019856-85a7-57e6-9770-31c01b3c3bc4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "est",
+          "persistentUuid": "cfd7cb3b-ecaf-5eb4-adee-f16dcfe3dc1d",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "op",
+          "persistentUuid": "321bb41e-11db-5126-8c15-ccd5e20d7aab",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "id",
+          "persistentUuid": "bc61aad5-f16a-5f91-b214-ccb7980039c5",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dist",
+          "persistentUuid": "d53445e3-877c-56e7-a34b-d726df07c64a",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "p",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/paraiso/deus/estrela_p.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "g",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/paraiso/deus/estrela_g.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 30,
+      "emitterForceMin": 0,
+      "flow": 90,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 60,
+      "name": "estrela_rastro",
+      "particleAlpha1": 230,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "170;150;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 150,
+      "particleLifeTimeMax": 0.45,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 255,
+      "particleRed2": 170,
+      "particleSize1": 100,
+      "particleSize2": 20,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 2,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 14,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 240,
+        "b": 190
+      },
+      "name": "juizo_feixe",
+      "persistentUuid": "213f7ee5-31af-58f2-bba3-d50bb909e903",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 30,
+            "innerStrength": 4,
+            "outerStrength": 10
+          },
+          "stringParameters": {
+            "color": "255;220;150"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Brilho",
+          "doubleParameters": {
+            "bloomScale": 1.6,
+            "blur": 10,
+            "brightness": 1.3,
+            "padding": 80,
+            "quality": 6,
+            "threshold": 0.2
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 14,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 240,
+        "b": 190
+      },
+      "name": "juizo_buracos",
+      "persistentUuid": "a8e20f6a-eba6-5fb5-9d1f-6d09333a1ff4",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 30,
+            "innerStrength": 3,
+            "outerStrength": 8
+          },
+          "stringParameters": {
+            "color": "255;250;235"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Brilho",
+          "doubleParameters": {
+            "bloomScale": 1.6,
+            "blur": 10,
+            "brightness": 1.4,
+            "padding": 80,
+            "quality": 6,
+            "threshold": 0.2
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 14,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 240,
+        "b": 190
+      },
+      "name": "juizo_negro",
+      "persistentUuid": "4a83e866-d4ee-582d-b984-5f05241ad3aa",
+      "variables": [],
+      "effects": []
     }
   ],
   "objectsFolderStructure": {
@@ -75833,6 +76531,21 @@
               },
               {
                 "objectName": "parede_tela"
+              },
+              {
+                "objectName": "estrela"
+              },
+              {
+                "objectName": "estrela_rastro"
+              },
+              {
+                "objectName": "juizo_feixe"
+              },
+              {
+                "objectName": "juizo_buracos"
+              },
+              {
+                "objectName": "juizo_negro"
               }
             ]
           }
@@ -92906,7 +93619,20 @@
               "width": 0
             }
           ],
-          "effects": []
+          "effects": [
+            {
+              "effectType": "BulgePinch",
+              "name": "Lente negra",
+              "doubleParameters": {
+                "centerX": 0.5,
+                "centerY": 0.5,
+                "radius": 260,
+                "strength": 0
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ]
         },
         {
           "ambientLightColorB": 200,
@@ -92971,6 +93697,18 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "BulgePinch",
+              "name": "Lente negra",
+              "doubleParameters": {
+                "centerX": 0.5,
+                "centerY": 0.5,
+                "radius": 260,
+                "strength": 0
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -134297,6 +135035,17 @@
                         "False",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -134331,6 +135080,90 @@
                         "oy",
                         "+",
                         "(clamp(pato.CenterY() + (deus.cy - pato.CenterY()) / deus.final_d * deus.final_distancia, CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.final_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.final_margem) - CameraCenterY(\"\", 0) - deus.oy) * min(1, deus.final_segue * TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "cx",
+                        "=",
+                        "CameraCenterX(\"\", 0) + deus.ox"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "cy",
+                        "=",
+                        "CameraCenterY(\"\", 0) + deus.oy"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "investindo",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "ox",
+                        "+",
+                        "(0 - deus.ox) * min(1, deus.juizo_ir_vel * TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "oy",
+                        "+",
+                        "(CameraHeight(\"\", 0) / 2 - deus.juizo_baixo - deus.oy) * min(1, deus.juizo_ir_vel * TimeDelta())"
                       ]
                     },
                     {
@@ -136154,6 +136987,88 @@
                         "investida_trilha",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_buracos",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_negro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "estrela_rastro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
+                      ]
                     }
                   ]
                 },
@@ -136931,6 +137846,45 @@
                           "parameters": [
                             "deus",
                             "\"estado\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "sorteio",
+                            "=",
+                            "4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "TimeFromStart()",
+                            "<",
+                            "deus.juizo_volta_em"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "sorteio",
+                            "=",
+                            "mod(deus.sorteio, deus.golpes_max) + 1"
                           ]
                         }
                       ]
@@ -140188,209 +141142,6 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "juizo_carga",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "golpe",
-                        "=",
-                        "\"juizo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "etapa",
-                        "=",
-                        "\"juizo\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "juizo_carga",
-                        "=",
-                        "min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.juizo_tempo)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
-                      },
-                      "parameters": [
-                        "laco_amor",
-                        "Effect",
-                        "\"Effect\"",
-                        "\"outerStrength\"",
-                        "deus.laco_brilho * (1 + deus.juizo_brilha * deus.juizo_carga)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "golpe",
-                        "=",
-                        "\"juizo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "etapa",
-                        "=",
-                        "\"juizo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "juizo_avisou",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "deus",
-                        "\"golpe\"",
-                        ">",
-                        "deus.juizo_tempo - deus.juizo_aviso"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "deus.canal_vivos",
-                        ">",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "juizo_avisou",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "som_luz.wav",
-                        "",
-                        "deus.som_volume",
-                        "deus.juizo_aviso_tom"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
@@ -140416,7 +141167,7 @@
                         "canalizador.CenterY()",
                         "deus.cx",
                         "deus.cy",
-                        "deus.laco_espessura * (1 + deus.juizo_engrossa * deus.juizo_carga)"
+                        "deus.laco_espessura"
                       ]
                     }
                   ],
@@ -141156,6 +141907,45 @@
                       "parameters": [
                         "deus",
                         "morto",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Juízo: o feixe",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
                         "False",
                         ""
                       ]
@@ -141203,7 +141993,7 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"juizo\""
+                        "\"vai\""
                       ]
                     },
                     {
@@ -141217,22 +142007,112 @@
                     },
                     {
                       "type": {
-                        "value": "ResetObjectTimer"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "\"canal_juizo\""
+                        "juizo_ativo",
+                        "True",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
-                        "deus_olho",
-                        "Animation",
+                        "deus",
+                        "ox",
                         "=",
-                        "\"juizo\""
+                        "deus.cx - CameraCenterX(\"\", 0)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "oy",
+                        "=",
+                        "deus.cy - CameraCenterY(\"\", 0)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_revelado",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ang",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "juizo_buracos",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "juizo_buracos",
+                        "=",
+                        "deus.feixe_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "juizo_negro",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "juizo_negro",
+                        "=",
+                        "deus.feixe_z"
                       ]
                     },
                     {
@@ -141257,103 +142137,6 @@
                         "deus.som_volume",
                         "deus.juizo_tom"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "juizo_avisou",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "canalizador",
-                            "deus.cx",
-                            "deus.cy",
-                            "\"\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "surgir",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "ang",
-                            "=",
-                            "deus.canal_seq * deus.canal_passo"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "vaivem_fase",
-                            "=",
-                            "canalizador.ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "canal_seq",
-                            "+",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "=",
-                            "deus.z_base + 4"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "Animation",
-                            "=",
-                            "\"canalizar\""
-                          ]
-                        }
-                      ],
-                      "repeatExpression": "deus.juizo_canal_qtd"
                     }
                   ]
                 },
@@ -141401,221 +142184,591 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"juizo\""
+                        "\"vai\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.juizo_ir"
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"suga\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "atraso",
+                        "=",
+                        "RandomFloatInRange(0, deus.juizo_sugar_espalha)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.juizo_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"suga\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.juizo_sugar"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"aviso\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "deus_olho",
+                        "Animation",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.juizo_aviso_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"aviso\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.juizo_aviso"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"feixe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ang",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "juizo_feixe",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "=",
+                        "deus.feixe_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sqrt(pow(pato.CenterX() - (CameraCenterX(\"\", 0) + deus.juizo_branco_dx), 2) + pow(pato.CenterY() - (CameraCenterY(\"\", 0) + deus.juizo_branco_dy), 2))",
+                        "<",
+                        "deus.juizo_buraco_raio"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "pato",
+                        "=",
+                        "CameraCenterX(\"\", 0) + deus.juizo_negro_dx - pato.Width() / 2",
+                        "=",
+                        "CameraCenterY(\"\", 0) + deus.juizo_negro_dy - pato.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_vx",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "voo_vy",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "escudo_quebra",
+                        "CameraCenterX(\"\", 0) + deus.juizo_branco_dx",
+                        "CameraCenterY(\"\", 0) + deus.juizo_branco_dy",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "escudo_quebra",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "escudo_quebra",
+                        "CameraCenterX(\"\", 0) + deus.juizo_negro_dx",
+                        "CameraCenterY(\"\", 0) + deus.juizo_negro_dy",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "escudo_quebra",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_dash.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.juizo_tele_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"feixe\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ang",
+                        "=",
+                        "-180 * min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.juizo_varrer)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_negro_ang",
+                        "=",
+                        "ToDeg(atan2(CameraCenterY(\"\", 0) + deus.juizo_negro_dy - deus.cy, CameraCenterX(\"\", 0) + deus.juizo_negro_dx - deus.cx))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ang",
+                        "=",
+                        "ToDeg(atan2(CameraCenterY(\"\", 0) + deus.juizo_branco_dy - deus.cy, CameraCenterX(\"\", 0) + deus.juizo_branco_dx - deus.cx))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_negro_livre",
+                        "=",
+                        "ToDeg(atan2(deus.juizo_largura / 2 + deus.juizo_folga + deus.juizo_buraco_raio, max(1, sqrt(pow(CameraCenterX(\"\", 0) + deus.juizo_negro_dx - deus.cx, 2) + pow(CameraCenterY(\"\", 0) + deus.juizo_negro_dy - deus.cy, 2)))))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineColor"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "deus.juizo_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineOpacity"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "=",
+                        "deus.juizo_feixe_op"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::LineV2"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "deus.cx",
+                        "deus.cy",
+                        "deus.cx + cos(ToRad(deus.juizo_ang)) * deus.juizo_alcance",
+                        "deus.cy + sin(ToRad(deus.juizo_ang)) * deus.juizo_alcance",
+                        "deus.juizo_largura"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineColor"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "deus.juizo_miolo_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::LineV2"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        "deus.cx",
+                        "deus.cy",
+                        "deus.cx + cos(ToRad(deus.juizo_ang)) * deus.juizo_alcance",
+                        "deus.cy + sin(ToRad(deus.juizo_ang)) * deus.juizo_alcance",
+                        "deus.juizo_largura * deus.juizo_miolo"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"canal_juizo\"",
-                            ">",
-                            "deus.canal_intervalo"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "deus.canal_vivos",
-                            "<",
-                            "deus.canal_max"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"canal_juizo\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "canalizador",
-                            "deus.cx",
-                            "deus.cy",
-                            "\"\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "surgir",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "ang",
-                            "=",
-                            "deus.canal_seq * deus.canal_passo"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "vaivem_fase",
-                            "=",
-                            "canalizador.ang"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "canal_seq",
-                            "+",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "=",
-                            "deus.z_base + 4"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "canalizador",
-                            "Animation",
-                            "=",
-                            "\"canalizar\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "deus.canal_vivos",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"golpe\"",
-                            ">",
-                            "deus.juizo_graca"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "deus",
-                            "etapa",
-                            "=",
-                            "\"juizo_falha\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"golpe\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "deus_olho",
-                            "Animation",
-                            "=",
-                            "\"juizo_falha\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_luz.wav",
-                            "",
-                            "deus.som_volume",
-                            "deus.juizo_falha_tom"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "deus.canal_vivos",
-                            ">",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareObjectTimer"
-                          },
-                          "parameters": [
-                            "deus",
-                            "\"golpe\"",
-                            ">",
-                            "deus.juizo_tempo"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "BooleanObjectVariable"
@@ -141625,6 +142778,26 @@
                             "morto",
                             "False",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "(pato.CenterX() - deus.cx) * cos(ToRad(deus.juizo_ang)) + (pato.CenterY() - deus.cy) * sin(ToRad(deus.juizo_ang))",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs((pato.CenterY() - deus.cy) * cos(ToRad(deus.juizo_ang)) - (pato.CenterX() - deus.cx) * sin(ToRad(deus.juizo_ang)))",
+                            "<",
+                            "deus.juizo_largura / 2 + deus.juizo_folga"
                           ]
                         }
                       ],
@@ -141636,28 +142809,8 @@
                           "parameters": [
                             "pato",
                             "vida",
-                            "-",
-                            "deus.juizo_dano"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "pato",
-                            "invencivel",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "pato",
-                            "\"iframes\""
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -141670,7 +142823,204 @@
                             "=",
                             "\"deus\""
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "morto",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "(canalizador.CenterX() - deus.cx) * cos(ToRad(deus.juizo_ang)) + (canalizador.CenterY() - deus.cy) * sin(ToRad(deus.juizo_ang))",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs((canalizador.CenterY() - deus.cy) * cos(ToRad(deus.juizo_ang)) - (canalizador.CenterX() - deus.cx) * sin(ToRad(deus.juizo_ang)))",
+                                "<",
+                                "deus.juizo_largura / 2 + deus.juizo_folga"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "canalizador",
+                                "vida",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "object": "canalizador"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_revelado",
+                            "False",
+                            ""
+                          ]
                         },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "deus.juizo_ang",
+                            "<",
+                            "deus.juizo_negro_ang - deus.juizo_negro_livre"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_revelado",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"horizonte\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_luz.wav",
+                            "",
+                            "deus.som_volume",
+                            "deus.juizo_horizonte_tom"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_branco_ativo",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "deus.juizo_ang",
+                            "<",
+                            "deus.juizo_branco_ang"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_branco_ativo",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "escudo_quebra",
+                            "CameraCenterX(\"\", 0) + deus.juizo_branco_dx",
+                            "CameraCenterY(\"\", 0) + deus.juizo_branco_dy",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "escudo_quebra",
+                            "=",
+                            "deus.particula_z"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"golpe\"",
+                            ">",
+                            "deus.juizo_varrer"
+                          ]
+                        }
+                      ],
+                      "actions": [
                         {
                           "type": {
                             "value": "SetStringObjectVariable"
@@ -141679,7 +143029,7 @@
                             "deus",
                             "etapa",
                             "=",
-                            "\"juizo_clarao\""
+                            "\"fecha\""
                           ]
                         },
                         {
@@ -141693,24 +143043,22 @@
                         },
                         {
                           "type": {
-                            "value": "SetLayerAmbientLightColor"
+                            "value": "Delete"
                           },
                           "parameters": [
-                            "",
-                            "\"Luz\"",
-                            "deus.luz_ambiente_flash"
+                            "juizo_feixe",
+                            ""
                           ]
                         },
                         {
                           "type": {
-                            "value": "PlaySound"
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "",
-                            "som_luz.wav",
-                            "",
-                            "deus.som_volume",
-                            "1"
+                            "deus_olho",
+                            "Animation",
+                            "=",
+                            "\"idle\""
                           ]
                         }
                       ]
@@ -141726,106 +143074,377 @@
                       },
                       "parameters": [
                         "deus",
-                        "morto",
-                        "False",
+                        "juizo_ativo",
+                        "True",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "StringObjectVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "estado",
-                        "=",
-                        "\"atacar\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "golpe",
-                        "=",
-                        "\"juizo\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "deus",
-                        "etapa",
-                        "=",
-                        "\"juizo_falha\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
-                      },
-                      "parameters": [
-                        "deus_olho",
-                        "Animation"
+                        "morto",
+                        "False",
+                        ""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringObjectVariable"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "etapa",
+                        "juizo_flare",
                         "=",
-                        "\"\""
+                        "0"
                       ]
                     },
                     {
                       "type": {
-                        "value": "SetStringObjectVariable"
+                        "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "estado",
+                        "juizo_negro_k",
                         "=",
-                        "\"fim_golpe\""
+                        "deus.juizo_negro_vis"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_revelado",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_flare",
+                            "=",
+                            "max(0, 1 - deus.ObjectTimerElapsedTime(\"horizonte\") / deus.juizo_horizonte_t)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_negro_k",
+                            "=",
+                            "max(deus.juizo_negro_resto, deus.juizo_flare)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::FillColor"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "deus.juizo_negro_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::FillOpacity"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "=",
+                            "deus.juizo_buraco_op * deus.juizo_negro_k"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineColor"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "deus.juizo_horizonte_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineOpacity"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "=",
+                            "deus.juizo_buraco_op * deus.juizo_negro_k"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineSize"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "=",
+                            "deus.juizo_horizonte_esp * (1 + deus.juizo_flare)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::Circle"
+                          },
+                          "parameters": [
+                            "juizo_negro",
+                            "CameraCenterX(\"\", 0) + deus.juizo_negro_dx",
+                            "CameraCenterY(\"\", 0) + deus.juizo_negro_dy",
+                            "deus.juizo_buraco_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Fundo\"",
+                            "\"Lente negra\"",
+                            "\"centerX\"",
+                            "(CameraWidth(\"\", 0) / 2 + deus.juizo_negro_dx) / CameraWidth(\"\", 0)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Fundo\"",
+                            "\"Lente negra\"",
+                            "\"centerY\"",
+                            "(CameraHeight(\"\", 0) / 2 + deus.juizo_negro_dy) / CameraHeight(\"\", 0)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Fundo\"",
+                            "\"Lente negra\"",
+                            "\"radius\"",
+                            "deus.juizo_lente_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Fundo\"",
+                            "\"Lente negra\"",
+                            "\"strength\"",
+                            "deus.juizo_lente_negra"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"\"",
+                            "\"Lente negra\"",
+                            "\"centerX\"",
+                            "(CameraWidth(\"\", 0) / 2 + deus.juizo_negro_dx) / CameraWidth(\"\", 0)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"\"",
+                            "\"Lente negra\"",
+                            "\"centerY\"",
+                            "(CameraHeight(\"\", 0) / 2 + deus.juizo_negro_dy) / CameraHeight(\"\", 0)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"\"",
+                            "\"Lente negra\"",
+                            "\"radius\"",
+                            "deus.juizo_lente_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetLayerEffectParameter"
+                          },
+                          "parameters": [
+                            "",
+                            "\"\"",
+                            "\"Lente negra\"",
+                            "\"strength\"",
+                            "deus.juizo_lente_negra"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "juizo_branco_ativo",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::FillColor"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "deus.juizo_branco_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::FillOpacity"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "=",
+                            "deus.juizo_buraco_op"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineColor"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "deus.juizo_horizonte_cor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineOpacity"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "=",
+                            "deus.juizo_buraco_op * deus.juizo_flare"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::OutlineSize"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "=",
+                            "deus.juizo_horizonte_esp * (1 + deus.juizo_flare)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::Circle"
+                          },
+                          "parameters": [
+                            "juizo_buracos",
+                            "CameraCenterX(\"\", 0) + deus.juizo_branco_dx",
+                            "CameraCenterY(\"\", 0) + deus.juizo_branco_dy",
+                            "deus.juizo_buraco_raio * (1 + deus.juizo_flare)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
                       ]
                     },
                     {
                       "type": {
-                        "value": "ResetObjectTimer"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "deus",
-                        "\"estado\""
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
                       ]
                     },
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                        "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
-                        "deus_olho",
-                        "Animation",
-                        "=",
-                        "\"idle\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "deus_anel_rosa",
-                        "Animation",
-                        "=",
-                        "\"idle\""
+                        "",
+                        "\"\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
                       ]
                     }
                   ]
@@ -141874,7 +143493,7 @@
                         "deus",
                         "etapa",
                         "=",
-                        "\"juizo_clarao\""
+                        "\"fecha\""
                       ]
                     },
                     {
@@ -141885,7 +143504,7 @@
                         "deus",
                         "\"golpe\"",
                         ">",
-                        "deus.juizo_flash"
+                        "deus.juizo_fecha"
                       ]
                     }
                   ],
@@ -141923,13 +143542,62 @@
                     },
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "deus_olho",
-                        "Animation",
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_volta_em",
                         "=",
-                        "\"idle\""
+                        "TimeFromStart() + deus.juizo_recarga"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_buracos",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_negro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "estrela_rastro",
+                        ""
                       ]
                     },
                     {
@@ -141945,12 +143613,252 @@
                     },
                     {
                       "type": {
-                        "value": "SetLayerAmbientLightColor"
+                        "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
                         "",
-                        "\"Luz\"",
-                        "luz_ambiente_normal"
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Estrelas",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "luta",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "estrela",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "estrela_seq",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "estrela",
+                            "0",
+                            "0",
+                            "\"Fundo\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "id",
+                            "=",
+                            "deus.estrela_seq"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "hx",
+                            "=",
+                            "RandomFloatInRange(-CameraWidth(\"\", 0) / 2, CameraWidth(\"\", 0) / 2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "hy",
+                            "=",
+                            "RandomFloatInRange(-CameraHeight(\"\", 0) / 2 - deus.estrela_margem, CameraHeight(\"\", 0) / 2 + deus.estrela_margem)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "fase",
+                            "=",
+                            "RandomFloatInRange(0, 6)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "brilho",
+                            "=",
+                            "RandomFloatInRange(deus.estrela_brilho_min, deus.estrela_op_max)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "op",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "=",
+                            "deus.estrela_z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "ToString(RandomInRange(deus.estrela_cor_min, deus.estrela_cor_max)) + \";\" + ToString(RandomInRange(deus.estrela_cor_min, deus.estrela_cor_max)) + \";\" + ToString(deus.estrela_cor_max)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "RandomFloat(1)",
+                                "<",
+                                "deus.estrela_g_chance"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "estrela",
+                                "Animation",
+                                "=",
+                                "\"g\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.estrela_qtd"
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estrela_ceu_k",
+                        "=",
+                        "max(deus.estrela_ceu_min, max(bg_espaco.Opacity(), bg_ceu_alto.Opacity() * deus.estrela_ceu) / deus.estrela_op_max)"
                       ]
                     }
                   ]
@@ -141960,24 +143868,597 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BooleanObjectVariable"
+                        "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "deus",
-                        "morto",
-                        "True",
-                        ""
+                        "estrela",
+                        "est",
+                        "!=",
+                        "\"vai\""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "x_",
+                        "=",
+                        "estrela.hx"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "y_",
+                        "=",
+                        "mod(estrela.hy + (luta_y0 - CameraCenterY(\"\", 0)) * deus.estrela_parallax + CameraHeight(\"\", 0) / 2 + deus.estrela_margem, CameraHeight(\"\", 0) + 2 * deus.estrela_margem) - CameraHeight(\"\", 0) / 2 - deus.estrela_margem"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"volta\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "op",
+                        "=",
+                        "min(1, estrela.op + TimeDelta() / deus.estrela_volta)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "op",
+                            ">=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "est",
+                            "=",
+                            "\"\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"some\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "op",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"suga\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "estrela.atraso"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"vai\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "v",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "estrela_rastro",
+                        "CameraCenterX(\"\", 0) + estrela.x_",
+                        "CameraCenterY(\"\", 0) + estrela.y_",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela_rastro",
+                        "id",
+                        "=",
+                        "estrela.id"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "estrela_rastro",
+                        "=",
+                        "deus.particula_z"
+                      ]
+                    }
+                  ],
+                  "object": "estrela"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"vai\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "v",
+                        "+",
+                        "deus.juizo_sugar_acel * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "dist",
+                        "=",
+                        "max(1, sqrt(pow((deus.cx - CameraCenterX(\"\", 0)) - estrela.x_, 2) + pow((deus.cy - CameraCenterY(\"\", 0)) - estrela.y_, 2)))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "x_",
+                        "+",
+                        "((deus.cx - CameraCenterX(\"\", 0)) - estrela.x_) / estrela.dist * min(estrela.dist, estrela.v * TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "y_",
+                        "+",
+                        "((deus.cy - CameraCenterY(\"\", 0)) - estrela.y_) / estrela.dist * min(estrela.dist, estrela.v * TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela_rastro",
+                            "id",
+                            "=",
+                            "estrela.id"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "estrela_rastro",
+                            "=",
+                            "CameraCenterX(\"\", 0) + estrela.x_",
+                            "=",
+                            "CameraCenterY(\"\", 0) + estrela.y_"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "dist",
+                            "<",
+                            "deus.juizo_sugar_chega"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "est",
+                            "=",
+                            "\"some\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "op",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "estrela_rastro",
+                                "id",
+                                "=",
+                                "estrela.id"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "estrela_rastro",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "object": "estrela"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"some\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"feixe\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "ToDeg(atan2(estrela.y_ - (deus.cy - CameraCenterY(\"\", 0)), estrela.x_ - (deus.cx - CameraCenterX(\"\", 0))))",
+                            ">",
+                            "deus.juizo_ang"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "estrela",
+                            "est",
+                            "=",
+                            "\"volta\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "object": "estrela"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"some\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"volta\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"vai\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "est",
+                        "=",
+                        "\"volta\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Delete"
                       },
                       "parameters": [
-                        "laco_amor",
+                        "estrela_rastro",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "=",
+                        "CameraCenterX(\"Fundo\", 0) + estrela.x_ - estrela.Width() / 2",
+                        "=",
+                        "CameraCenterY(\"Fundo\", 0) + estrela.y_ - estrela.Height() / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "estrela",
+                        "Opacity",
+                        "=",
+                        "estrela.brilho * estrela.op * (1 - deus.estrela_pisca * (1 + sin(TimeFromStart() * deus.estrela_pisca_vel + estrela.fase)) / 2) * deus.estrela_ceu_k"
                       ]
                     }
                   ]
@@ -144373,6 +146854,88 @@
                       "parameters": [
                         "investida_trilha",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_branco_ativo",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_feixe",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_buracos",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "juizo_negro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "estrela_rastro",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"\"",
+                        "\"Lente negra\"",
+                        "\"strength\"",
+                        "0"
                       ]
                     }
                   ]

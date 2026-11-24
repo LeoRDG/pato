@@ -40,7 +40,7 @@ class SoAnjosProtegem(unittest.TestCase):
         orbita = next(e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions']))  # a presa (a solta é da t160)
         self.assertIn('canalizador.vaivem_fase', tx(orbita['actions']))
         cria = [e for e in m.todos(self.deus['events']) if '"Create"}, "parameters": ["", "canalizador"' in tx(e.get('actions', []))]
-        self.assertEqual(len(cria), 4)
+        self.assertEqual(len(cria), 2, 'o Juízo não cria mais anjinhos (t164)')
         for e in cria:
             a = e['actions']
             k = next(i for i, x in enumerate(a) if x['parameters'][:2] == ['canalizador', 'ang'])

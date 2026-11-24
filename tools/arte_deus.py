@@ -431,21 +431,22 @@ def queima():
     return t.img()
 
 
-def bg(estrelas):
+def bg(estrelas, pontos=False):
+    """pontos: pinta as estrelas na imagem. Desde a t164 as estrelas são objetos (estrela), então o padrão é sem."""
     t = Tela(342)
     rng = random.Random(7 if estrelas else 3)
     if estrelas:
         t.pinta(np.ones((342, 342), bool), t.rampa(0.15 + 0.1 * np.sin(t.yy * 2 * math.pi / 342) ** 2, [C['noite0'], C['noite1']]))
-        for _ in range(260):
+        for _ in range(260 if pontos else 0):
             x, y = rng.randrange(342), rng.randrange(342)
             t.rgb[y, x] = rng.choice([C['pena4'], C['ceu1'], C['creme'], C['branco']])
-        for _ in range(14):
+        for _ in range(14 if pontos else 0):
             x, y = rng.randrange(1, 341), rng.randrange(1, 341)
             for dx, dy in ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1)):
                 t.rgb[y + dy, x + dx] = C['branco']
     else:
         t.pinta(np.ones((342, 342), bool), t.rampa(0.45 + 0.1 * np.sin(t.xx * 2 * math.pi / 342), [C['noite2'], C['azul0'], C['ceu0']]))
-        for _ in range(60):
+        for _ in range(60 if pontos else 0):
             x, y = rng.randrange(342), rng.randrange(342)
             t.rgb[y, x] = C['ceu1']
     return t.img()
