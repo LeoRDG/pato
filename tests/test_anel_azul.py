@@ -59,7 +59,8 @@ class AnelAzul(unittest.TestCase):
 
     def test_pupila_relativa_ao_centro(self):
         """suavizar a posição no mundo deixava a pupila para trás quando o corpo voltava rápido da investida."""
-        a = tx(m.acha(self.deus['events'], 'Corpo')['events'][0]['actions'])
+        corpo = m.acha(self.deus['events'], 'Corpo')['events']
+        a = tx(next(e['actions'] for e in corpo if '"deus", "pupila_ox", "+"' in tx(e['actions'])))
         self.assertIn('"deus", "pupila_ox", "+", "(cos(deus.olhar_ang) * deus.pupila_alcance - deus.pupila_ox) * min(1, deus.pupila_suave * TimeDelta())"', a)
         self.assertIn('"deus", "pupila_oy", "+", "(sin(deus.olhar_ang) * deus.pupila_alcance - deus.pupila_oy)', a)
         self.assertIn('"deus", "px", "=", "deus.cx + deus.pupila_ox"', a)

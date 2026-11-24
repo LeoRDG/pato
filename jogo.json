@@ -74040,6 +74040,42 @@
           "persistentUuid": "9a3a0480-b59c-5539-b9a1-1727c3b35677",
           "type": "number",
           "value": 90
+        },
+        {
+          "name": "final_distancia",
+          "persistentUuid": "1c95872e-927c-5322-a5e1-9e803727dd61",
+          "type": "number",
+          "value": 380
+        },
+        {
+          "name": "final_margem",
+          "persistentUuid": "e6aa0c8f-3221-5da0-a6be-2ebd1bc0210b",
+          "type": "number",
+          "value": 170
+        },
+        {
+          "name": "final_segue",
+          "persistentUuid": "7aaa924e-6971-544c-85a1-43c039b7ffb9",
+          "type": "number",
+          "value": 1.4
+        },
+        {
+          "name": "final_d",
+          "persistentUuid": "1443e088-ad79-5d7f-9327-055c87215b74",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "investida_longe",
+          "persistentUuid": "97162bb7-52cb-5d38-a502-8ef3c388ad9e",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "investida_pos",
+          "persistentUuid": "472672ab-1a8a-54a2-9bd5-58f4db620ef3",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -134122,6 +134158,17 @@
                         "False",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "<",
+                        "4"
+                      ]
                     }
                   ],
                   "actions": [
@@ -134146,7 +134193,120 @@
                         "+",
                         "(CameraCenterY(\"\", 0) + deus.distancia_baixo - deus.cy) * min(1, deus.subir_suave * TimeDelta())"
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
                     },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "investindo",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "final_d",
+                        "=",
+                        "max(1, sqrt(pow(deus.cx - pato.CenterX(), 2) + pow(deus.cy - pato.CenterY(), 2)))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "ox",
+                        "+",
+                        "(clamp(pato.CenterX() + (deus.cx - pato.CenterX()) / deus.final_d * deus.final_distancia, CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.final_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.final_margem) - CameraCenterX(\"\", 0) - deus.ox) * min(1, deus.final_segue * TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "oy",
+                        "+",
+                        "(clamp(pato.CenterY() + (deus.cy - pato.CenterY()) / deus.final_d * deus.final_distancia, CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.final_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.final_margem) - CameraCenterY(\"\", 0) - deus.oy) * min(1, deus.final_segue * TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "cx",
+                        "=",
+                        "CameraCenterX(\"\", 0) + deus.ox"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "cy",
+                        "=",
+                        "CameraCenterY(\"\", 0) + deus.oy"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
                         "value": "SetNumberObjectVariable"
@@ -138605,6 +138765,59 @@
                             "\"golpe\""
                           ]
                         }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "fase",
+                                "=",
+                                "4"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "investida_pos",
+                                "=",
+                                "ToRad(RandomFloatInRange(0, 360))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "ox",
+                                "=",
+                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "oy",
+                                "=",
+                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -139364,6 +139577,59 @@
                             "etapa",
                             "=",
                             "\"mira\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "fase",
+                                "=",
+                                "4"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "investida_pos",
+                                "=",
+                                "ToRad(RandomFloatInRange(0, 360))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "ox",
+                                "=",
+                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "oy",
+                                "=",
+                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -142241,6 +142507,28 @@
                         "pausa_tempo",
                         "*",
                         "deus.fase4_pausa_fator"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "ox",
+                        "=",
+                        "deus.cx - CameraCenterX(\"\", 0)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "oy",
+                        "=",
+                        "deus.cy - CameraCenterY(\"\", 0)"
                       ]
                     }
                   ]
