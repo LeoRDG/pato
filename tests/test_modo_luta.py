@@ -1,4 +1,4 @@
-"""Modo de luta no alto do Paraíso: voo, câmera subindo, borda queimando, camada de luz e céu virando espaço
+"""Modo de luta no alto do Paraíso: voo, câmera subindo, camada de luz e céu virando espaço
 (tools/t138_modo_luta.py)."""
 import json, os, re, sys, unittest
 
@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 import gd_luz as g
 
-GRUPOS = ('Começo da luta', 'Voo do pato', 'Câmera da subida', 'Borda queimando', 'Céu para o espaço', 'Fim da luta')
+GRUPOS = ('Começo da luta', 'Voo do pato', 'Câmera da subida', 'Céu para o espaço', 'Fim da luta')
 
 
 def tx(e):
@@ -70,7 +70,7 @@ class ModoLuta(unittest.TestCase):
             self.assertIn(['luta', 'False', ''], [c['parameters'] for c in e['conditions']])
 
     def test_voo_so_na_luta(self):
-        for n in ('Voo do pato', 'Câmera da subida', 'Borda queimando', 'Céu para o espaço'):
+        for n in ('Voo do pato', 'Câmera da subida', 'Céu para o espaço'):
             for e in self.g[n]['events']:
                 self.assertIn(['luta', 'True', ''], [c['parameters'] for c in e['conditions']], n)
         voo = tx(self.g['Voo do pato'])
@@ -86,23 +86,20 @@ class ModoLuta(unittest.TestCase):
         for b in ('PlatformerObject', 'SmoothCamera', 'SmoothPlatformerCamera'):
             self.assertIn(f'["pato", "{b}", "yes"]', f)
 
-    def test_borda_queima(self):
-        (e,) = [e for e in m.todos(self.g['Borda queimando']['events']) if '"vida", "-"' in tx(e['actions'])]
-        c, a = tx(e['conditions']), tx(e['actions'])
-        self.assertIn('"pato", "invencivel", "False"', c)
-        self.assertIn('"pato", "morto", "False"', c)
-        self.assertIn('- borda_altura"', c)
-        self.assertIn('"pato", "vida", "-", "borda_dano"', a)
-        self.assertIn('"pato", "invencivel", "True"', a)
-        self.assertIn('"pato", "\\"iframes\\""', a)
-        self.assertIn('borda_empurrao', a)
+    def test_sem_borda_queimando(self):
+        """a borda de fogo saiu (t152): o pato só fica preso dentro da tela, embaixo também."""
+        self.assertIsNone(m.acha(self.cena['events'], 'Borda queimando'))
+        self.assertNotIn('"Create"}, "parameters": ["", "queima_borda"', tx(self.g['Começo da luta']))
+        voo = tx(self.g['Voo do pato'])
+        self.assertIn('"SetY"}, "parameters": ["pato", "=", "clamp(pato.Y(), CameraCenterY(\\"\\", 0) - CameraHeight(\\"\\", 0) / 2, '
+                      'CameraCenterY(\\"\\", 0) + CameraHeight(\\"\\", 0) / 2 - pato.Height())"', voo)
 
     def test_variaveis_declaradas(self):
         texto = ''.join(tx(e) for e in self.g.values())
-        for nome in ('luta', 'luta_y0', 'luta_x', 'subida_vel', 'borda_dano', 'borda_empurrao', 'borda_altura',
+        for nome in ('luta', 'luta_y0', 'luta_x', 'subida_vel',
                      'luz_ambiente_normal', 'luz_ambiente_escuro', 'luz_pato_raio', 'altura_espaco', 'deus_criar'):
             self.assertIn(nome, self.cv, nome)
-        for obj in ('pato', 'queima_borda', 'bg_espaco', 'bg_ceu_alto'):
+        for obj in ('pato', 'bg_espaco', 'bg_ceu_alto'):
             for nome in re.findall(r'(?<![\w])' + obj + r'\.([a-z_0-9]+)\b(?!\()', texto):
                 self.assertIn(nome, self.v(obj), f'{obj}.{nome}')
         for nome in ('luta', 'deus_criar'):
