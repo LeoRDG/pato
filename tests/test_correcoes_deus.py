@@ -53,15 +53,13 @@ class CorrecoesDeus(unittest.TestCase):
         for obj in ('luz_halo', 'feixe_olhar'):
             self.assertIn(f'"Delete"}}, "parameters": ["{obj}"', a)
 
-    def test_pupila_fechada_com_escudo_ou_olho_fechado(self):
+    def test_pupila_fechada_com_escudo(self):
+        """o piscar (fecha/escuro) saiu; só os canalizadores fecham a pupila (t156, test_so_anjos_protegem)."""
         guarda = self.ev('Pupila fechada')
         self.assertLess(self.nomes.index('Pupila fechada'), self.nomes.index('Dano na pupila'))
         escudo = next(e for e in guarda['events'] if '"deus.canal_vivos", ">", "0"' in tx(e['conditions']))
         self.assertIn('"deus", "vulneravel", "False"', tx(escudo['actions']))
         self.assertIn('"deus", "janela_amor", "False"', tx(escudo['actions']))
-        for etapa in ('fecha', 'escuro'):
-            e = next(e for e in guarda['events'] if f'"deus", "etapa", "=", "\\"{etapa}\\""' in tx(e['conditions']))
-            self.assertIn('"deus", "vulneravel", "False"', tx(e['actions']))
 
 
 if __name__ == '__main__':
