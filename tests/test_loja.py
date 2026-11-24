@@ -223,13 +223,14 @@ def test_clique_so_compra_sobre_linha():
     assert 'BuiltinCommonInstructions::Or' not in tipos(principal)
     assert any(c['parameters'][:3] == ['loja_comprar', '=', '1'] for c in principal['conditions'])
     clique = next(e for e in compra if 'MouseButtonFromTextReleased' in tipos(e))
-    assert 'SourisSurObjet' in tipos(clique)
+    sobre = lambda e: any(c['parameters'][:3] == ['ui_mouse_lin', '>=', '0'] for c in e['conditions'])  # linha sob o cursor (t190)
+    assert sobre(clique)
     assert any(c['parameters'][:2] == ['loja_lmb_ok', 'True'] for c in clique['conditions'])
     assert any(a['parameters'][:3] == ['loja_comprar', '=', '1'] for a in clique['actions'])
     # o botão já segurado quando a loja abre não vale: só uma pressão nova (borda) sobre uma linha libera o clique
     libera = next(e for e in compra if any(a['parameters'][:2] == ['loja_lmb_ok', 'True'] for a in e.get('actions') or []))
     assert any(c['parameters'][:2] == ['loja_lmb_antes', 'False'] for c in libera['conditions'])
-    assert 'SourisSurObjet' in tipos(libera)
+    assert sobre(libera)
 
 
 def test_requer_aceita_arma():

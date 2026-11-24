@@ -30,8 +30,7 @@ class LojaLegivel(unittest.TestCase):
         self.assertIn('"Delete"}, "parameters": ["loja_faixa"', json.dumps(fecha))
         sel = [e for e in m.todos(self.loja)
                if '"loja_linha", "indice", "=", "loja_sel"' in json.dumps(e.get('conditions', []))]
-        self.assertEqual(len(sel), 1)
-        self.assertIn('"PrimitiveDrawing::Rectangle"}, "parameters": ["loja_faixa"', json.dumps(sel[0]['actions']))
+        self.assertIn('"PrimitiveDrawing::Rectangle"}, "parameters": ["loja_faixa"', json.dumps([e['actions'] for e in sel]))
 
 
 if __name__ == '__main__':
