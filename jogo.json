@@ -70765,6 +70765,12 @@
           "persistentUuid": "a9309a6a-bbcd-5683-9149-e52ccdd2ba0d",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "surgir",
+          "persistentUuid": "bb662628-1a5a-5ec7-8447-9c283e775f7d",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -74076,6 +74082,54 @@
           "persistentUuid": "472672ab-1a8a-54a2-9bd5-58f4db620ef3",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "juizo_carga",
+          "persistentUuid": "f6039a85-6998-5852-a646-49bb3ade252b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "juizo_engrossa",
+          "persistentUuid": "bf4757ec-0020-5b5c-8605-8f2c54556695",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "juizo_brilha",
+          "persistentUuid": "2479388c-9af9-5426-b0bb-cae70cd72f1f",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "laco_brilho",
+          "persistentUuid": "da3a4e7b-7a1d-5818-b3dd-14f5cd88a290",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "juizo_aviso",
+          "persistentUuid": "52d711e9-f61f-5f8f-911c-6d89ebb7b241",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "juizo_aviso_tom",
+          "persistentUuid": "38395a1b-4e39-5cbb-913d-0fad3908373b",
+          "type": "number",
+          "value": 1.4
+        },
+        {
+          "name": "juizo_avisou",
+          "persistentUuid": "f42c6c94-7506-52c4-b99b-8b4b535a3727",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "canal_surgir",
+          "persistentUuid": "6dc7d546-e3e6-5499-95fd-1419af127a94",
+          "type": "number",
+          "value": 1.2
         }
       ],
       "effects": [
@@ -139964,14 +140018,25 @@
                     },
                     {
                       "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "surgir",
+                        "=",
+                        "min(1, canalizador.surgir + TimeDelta() / deus.canal_surgir)"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetXY"
                       },
                       "parameters": [
                         "canalizador",
                         "=",
-                        "clamp(deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
+                        "clamp(deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
                         "=",
-                        "clamp(deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
+                        "clamp(deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
                       ]
                     }
                   ]
@@ -140021,9 +140086,9 @@
                       "parameters": [
                         "canalizador",
                         "=",
-                        "deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
+                        "deus.cx + cos(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
                         "=",
-                        "deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
+                        "deus.cy + sin(canalizador.ang) * canalizador.surgir * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
                       ]
                     }
                   ]
@@ -140111,6 +140176,209 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_carga",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_carga",
+                        "=",
+                        "min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.juizo_tempo)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        "Effect",
+                        "\"Effect\"",
+                        "\"outerStrength\"",
+                        "deus.laco_brilho * (1 + deus.juizo_brilha * deus.juizo_carga)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "estado",
+                        "=",
+                        "\"atacar\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "golpe",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "etapa",
+                        "=",
+                        "\"juizo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_avisou",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"golpe\"",
+                        ">",
+                        "deus.juizo_tempo - deus.juizo_aviso"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "deus.canal_vivos",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_avisou",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_luz.wav",
+                        "",
+                        "deus.som_volume",
+                        "deus.juizo_aviso_tom"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::ForEach",
                   "conditions": [
                     {
@@ -140136,7 +140404,7 @@
                         "canalizador.CenterY()",
                         "deus.cx",
                         "deus.cy",
-                        "deus.laco_espessura"
+                        "deus.laco_espessura * (1 + deus.juizo_engrossa * deus.juizo_carga)"
                       ]
                     }
                   ],
@@ -140634,6 +140902,17 @@
                           },
                           "parameters": [
                             "canalizador",
+                            "surgir",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
                             "ang",
                             "=",
                             "deus.canal_seq * deus.canal_passo"
@@ -140783,6 +141062,17 @@
                             "deus.cx",
                             "deus.cy",
                             "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "surgir",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -140955,6 +141245,17 @@
                         "deus.som_volume",
                         "deus.juizo_tom"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "juizo_avisou",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -140972,6 +141273,17 @@
                             "deus.cx",
                             "deus.cy",
                             "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "surgir",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -141128,6 +141440,17 @@
                             "deus.cx",
                             "deus.cy",
                             "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "canalizador",
+                            "surgir",
+                            "=",
+                            "0"
                           ]
                         },
                         {
