@@ -76417,7 +76417,7 @@
       "behaviors": []
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
@@ -76464,7 +76464,7 @@
       "behaviors": []
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
@@ -76511,7 +76511,7 @@
       "behaviors": []
     },
     {
-      "additive": true,
+      "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": false,
       "emitterAngleA": 0,
@@ -76542,15 +76542,15 @@
       "particleLifeTimeMin": 4,
       "particleRed1": 255,
       "particleRed2": 230,
-      "particleSize1": 16,
-      "particleSize2": 5,
+      "particleSize1": 10,
+      "particleSize2": 4,
       "particleSizeRandomness1": 0,
       "particleSizeRandomness2": 0,
       "rendererParam1": 128,
       "rendererParam2": 128,
       "rendererType": "Quad",
       "tank": -1,
-      "textureParticleName": "",
+      "textureParticleName": "assets/particulas/particula_luz.png",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 1100,
       "variables": [],
