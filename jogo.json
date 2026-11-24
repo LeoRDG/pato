@@ -10774,7 +10774,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/paraiso/corrente_luz.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": true
       },
       {
@@ -66003,6 +66003,24 @@
           "persistentUuid": "08a8c447-6d11-4ad1-a1a6-07740255fc5b",
           "type": "number",
           "value": 180
+        },
+        {
+          "name": "faisca_vel",
+          "persistentUuid": "34e5be22-75f3-5056-9072-ce0de9f40b8a",
+          "type": "number",
+          "value": 320
+        },
+        {
+          "name": "faisca_largura",
+          "persistentUuid": "4cb5f5c2-95fa-52d8-80da-f92095960acf",
+          "type": "number",
+          "value": 0.22
+        },
+        {
+          "name": "faisca_angulo",
+          "persistentUuid": "e467bf3e-c1fc-5ca3-9b58-0ddf41eb237c",
+          "type": "number",
+          "value": 270
         }
       ],
       "effects": [],
@@ -76556,6 +76574,61 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 1,
+      "emitterForceMax": 320,
+      "emitterForceMin": 320,
+      "flow": 12,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 160,
+      "name": "corrente_faisca",
+      "particleAlpha1": 255,
+      "particleAlpha2": 170,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 120,
+      "particleBlue2": 50,
+      "particleColor1": "255;222;120",
+      "particleColor2": "255;176;50",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 222,
+      "particleGreen2": 176,
+      "particleLifeTimeMax": 10,
+      "particleLifeTimeMin": 10,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 24,
+      "particleSize2": 14,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "assets/particulas/particula_luz.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 30,
+      "variables": [
+        {
+          "name": "cx",
+          "persistentUuid": "a4790cf8-4f68-55a0-8e01-a24599371596",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "updateIfNotVisible": true
     }
   ],
   "objectsFolderStructure": {
@@ -77107,6 +77180,14 @@
             "children": [
               {
                 "objectName": "inferno_brasas"
+              }
+            ]
+          },
+          {
+            "folderName": "paraiso",
+            "children": [
+              {
+                "objectName": "corrente_faisca"
               }
             ]
           }
@@ -91985,6 +92066,235 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "corrente_faisca",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "corrente_faisca",
+                        "corrente_luz.CenterX()",
+                        "corrente_luz.Y() + corrente_luz.Height()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.ZOrder()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "cx",
+                        "=",
+                        "corrente_luz.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.faisca_angulo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMin"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMax"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMin"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.Height() / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMax"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.Height() / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ZoneRadius"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "corrente_luz.Width() * corrente_luz.faisca_largura"
+                      ]
+                    }
+                  ],
+                  "object": "corrente_luz"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "cx",
+                        "=",
+                        "corrente_luz.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "min(corrente_luz.Y() + corrente_luz.Height(), CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMin"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "(corrente_faisca.Y() - corrente_luz.Y()) / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMax"
+                      },
+                      "parameters": [
+                        "corrente_faisca",
+                        "=",
+                        "(corrente_faisca.Y() - corrente_luz.Y()) / corrente_luz.faisca_vel"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "corrente_luz",
+                            "ativa",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParticleSystem::StartEmission"
+                          },
+                          "parameters": [
+                            "corrente_faisca"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "corrente_luz",
+                            "ativa",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParticleSystem::StopEmission"
+                          },
+                          "parameters": [
+                            "corrente_faisca"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "object": "corrente_luz"
             }
           ]
         },
