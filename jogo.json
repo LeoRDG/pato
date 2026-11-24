@@ -78147,18 +78147,6 @@
           "value": 0
         },
         {
-          "name": "loja_x",
-          "persistentUuid": "7af08c5d-3ada-439d-b129-bb5c6cf55ee2",
-          "type": "number",
-          "value": 80
-        },
-        {
-          "name": "loja_y",
-          "persistentUuid": "00983969-e380-4038-a66a-1cde9f3849a6",
-          "type": "number",
-          "value": 80
-        },
-        {
           "name": "loja_largura",
           "persistentUuid": "8b0a5fc3-9f6b-4154-9562-4004c4bd4a7e",
           "type": "number",
@@ -78379,6 +78367,12 @@
           "persistentUuid": "a9948668-5a21-5705-b3e4-acfa10301dfb",
           "type": "number",
           "value": 24
+        },
+        {
+          "name": "loja_desc_alt",
+          "persistentUuid": "fb5893e1-2c3c-5697-8d49-e6d733743605",
+          "type": "number",
+          "value": 60
         }
       ],
       "instances": [
@@ -79753,18 +79747,6 @@
           "value": 0
         },
         {
-          "name": "loja_x",
-          "persistentUuid": "69d35756-4972-5391-b5f3-7364f719dfcf",
-          "type": "number",
-          "value": 80
-        },
-        {
-          "name": "loja_y",
-          "persistentUuid": "a8e960fc-268f-5437-9acc-04b439553e2c",
-          "type": "number",
-          "value": 80
-        },
-        {
           "name": "loja_largura",
           "persistentUuid": "3ab1af59-b4f4-5f0a-8f9a-415c22faea96",
           "type": "number",
@@ -80009,6 +79991,12 @@
           "persistentUuid": "63b49a0b-eca8-5fe2-95cd-a5eacf585e43",
           "type": "number",
           "value": 24
+        },
+        {
+          "name": "loja_desc_alt",
+          "persistentUuid": "79117e57-9595-567a-bfe2-8b722a04c286",
+          "type": "number",
+          "value": 60
         }
       ],
       "instances": [
@@ -81396,18 +81384,6 @@
           "value": 0
         },
         {
-          "name": "loja_x",
-          "persistentUuid": "abfb4939-fdcb-53e9-a3e6-13812d8f13b8",
-          "type": "number",
-          "value": 80
-        },
-        {
-          "name": "loja_y",
-          "persistentUuid": "2d413a1b-b0b3-584b-9ab1-c48f3e69d35b",
-          "type": "number",
-          "value": 80
-        },
-        {
           "name": "loja_largura",
           "persistentUuid": "19a0d7bf-350e-54b4-8461-198f451b055c",
           "type": "number",
@@ -81652,6 +81628,12 @@
           "persistentUuid": "ffdb8ded-d21d-5804-8381-cfc1921bb4b2",
           "type": "number",
           "value": 24
+        },
+        {
+          "name": "loja_desc_alt",
+          "persistentUuid": "cc9c3c79-0c77-5a47-bb21-61ff1612910d",
+          "type": "number",
+          "value": 60
         }
       ],
       "instances": [
@@ -111770,13 +111752,22 @@
                 },
                 {
                   "type": {
-                    "value": "Distance"
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
                   },
                   "parameters": [
-                    "trader",
-                    "pato",
-                    "trader.loja_raio",
-                    ""
+                    "abs(trader.CenterX() - pato.CenterX())",
+                    "<=",
+                    "trader.loja_raio"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs(trader.Y() + trader.Height() - pato.Y() - pato.Height())",
+                    "<=",
+                    "trader.loja_raio"
                   ]
                 },
                 {
@@ -111905,13 +111896,22 @@
                     },
                     {
                       "type": {
-                        "value": "Distance"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "trader",
-                        "pato",
-                        "trader.loja_raio",
-                        ""
+                        "abs(trader.CenterX() - pato.CenterX())",
+                        "<=",
+                        "trader.loja_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(trader.Y() + trader.Height() - pato.Y() - pato.Height())",
+                        "<=",
+                        "trader.loja_raio"
                       ]
                     }
                   ],
@@ -112069,8 +112069,8 @@
                       "parameters": [
                         "",
                         "loja_linha",
-                        "CameraBorderLeft(\"HUD\") + loja_x",
-                        "CameraBorderTop(\"HUD\") + loja_y + loja_i * loja_linha_alt",
+                        "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2",
+                        "CameraBorderTop(\"HUD\") + (CameraHeight(\"HUD\") - GlobalVariableChildCount(loja_catalogo) * loja_linha_alt - loja_desc_alt) / 2 + loja_i * loja_linha_alt",
                         "\"HUD\""
                       ]
                     },
@@ -112118,8 +112118,8 @@
                       "parameters": [
                         "",
                         "loja_desc",
-                        "CameraBorderLeft(\"HUD\") + loja_x",
-                        "CameraBorderTop(\"HUD\") + loja_y + GlobalVariableChildCount(loja_catalogo) * loja_linha_alt + 16",
+                        "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2",
+                        "CameraBorderTop(\"HUD\") + (CameraHeight(\"HUD\") - GlobalVariableChildCount(loja_catalogo) * loja_linha_alt - loja_desc_alt) / 2 + GlobalVariableChildCount(loja_catalogo) * loja_linha_alt + 16",
                         "\"HUD\""
                       ]
                     },
@@ -112445,9 +112445,9 @@
                   },
                   "parameters": [
                     "loja_painel",
-                    "CameraBorderLeft(\"HUD\") + loja_x - 24",
-                    "CameraBorderTop(\"HUD\") + loja_y - 24",
-                    "CameraBorderLeft(\"HUD\") + loja_x + loja_largura",
+                    "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2 - 24",
+                    "CameraBorderTop(\"HUD\") + (CameraHeight(\"HUD\") - GlobalVariableChildCount(loja_catalogo) * loja_linha_alt - loja_desc_alt) / 2 - 24",
+                    "CameraBorderLeft(\"HUD\") + (CameraWidth(\"HUD\") - loja_largura + loja_desc_margem) / 2 + loja_largura",
                     "loja_desc.Y() + loja_desc.Height() + loja_desc_margem"
                   ]
                 }
