@@ -11460,6 +11460,14 @@
         "name": "splash/carregando.jpg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/hub/pedestal_arma.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/hub/pedestal_arma.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -11969,6 +11977,30 @@
           "persistentUuid": "fcd85e7f-7c51-5e55-a8e3-ba8cb1f53ef5",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "arma_raio",
+          "persistentUuid": "7a8d8617-31df-5282-8061-65327244d73b",
+          "type": "number",
+          "value": 75
+        },
+        {
+          "name": "arma_dica_y",
+          "persistentUuid": "e7f75752-9634-50b0-86ed-d6f453f93f0f",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "arma_som_volume",
+          "persistentUuid": "eea36ff3-94a9-560b-af15-839f048dbc66",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "arma_som_variacao",
+          "persistentUuid": "fd2d70fe-ce70-5fed-8c3f-20dc180e5156",
+          "type": "number",
+          "value": 0.05
         }
       ],
       "effects": [],
@@ -14411,7 +14443,7 @@
           "TotalBulletsCreated": 0,
           "StartingAmmo": 108,
           "TotalReloadsCompleted": 0,
-          "UnlimitedAmmo": false,
+          "UnlimitedAmmo": true,
           "ReloadInProgress": false,
           "HeatIncreasePerShot": 0,
           "HeatLevel": 0,
@@ -16402,7 +16434,7 @@
           "TotalBulletsCreated": 0,
           "StartingAmmo": 350,
           "TotalReloadsCompleted": 0,
-          "UnlimitedAmmo": false,
+          "UnlimitedAmmo": true,
           "ReloadInProgress": false,
           "HeatIncreasePerShot": 0,
           "HeatLevel": 0,
@@ -16655,7 +16687,7 @@
           "TotalBulletsCreated": 0,
           "StartingAmmo": 32,
           "TotalReloadsCompleted": 0,
-          "UnlimitedAmmo": false,
+          "UnlimitedAmmo": true,
           "ReloadInProgress": false,
           "HeatIncreasePerShot": 0,
           "HeatLevel": 0,
@@ -51199,7 +51231,7 @@
           "TotalBulletsCreated": 0,
           "StartingAmmo": 24,
           "TotalReloadsCompleted": 0,
-          "UnlimitedAmmo": false,
+          "UnlimitedAmmo": true,
           "ReloadInProgress": false,
           "HeatIncreasePerShot": 0,
           "HeatLevel": 0,
@@ -75418,6 +75450,289 @@
       "effects": [],
       "behaviors": [],
       "updateIfNotVisible": true
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "pedestal_arma",
+      "persistentUuid": "dc5cdba6-4e87-5fbe-8edd-a5794d897663",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "arma",
+          "persistentUuid": "623e35bc-8ae8-564b-b74b-ac52d32b866b",
+          "type": "string",
+          "value": "pistola"
+        },
+        {
+          "name": "nome",
+          "persistentUuid": "794980f6-933d-5328-a2eb-aabe29f23f72",
+          "type": "string",
+          "value": "PISTOLA"
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "6d00bb31-240e-5c71-ad5a-b56d9863263d",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "altura",
+          "persistentUuid": "2a243332-7f8f-586a-853e-556aed436c7d",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "d8c0f642-1766-5bb4-8156-dcd5dd490f68",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/hub/pedestal_arma.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "expositor_arma",
+      "persistentUuid": "47fcc1ea-b2a0-587d-9b6b-d086632b1d5b",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "arma",
+          "persistentUuid": "dd47890b-8d70-5da3-ab57-829e67119f30",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "nome",
+          "persistentUuid": "5b9ba9e7-01d3-5e5d-a269-77b04d9f96af",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "d7e13b19-fb78-5414-8d79-72f0811043a6",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "168bbb8b-1291-5a22-9290-fe826582a7cc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bob_alt",
+          "persistentUuid": "d3233ca8-a559-597f-a53b-8917665617a7",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "bob_vel",
+          "persistentUuid": "a4c1f3b9-f8de-5fb0-afcb-01afd10ce0e2",
+          "type": "number",
+          "value": 2.5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pistola",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "arma_pistola.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "doze",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "arma_doze.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "minigun",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "arma_minigun.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lanca",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "arma_lanca.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "arma_dica",
+      "persistentUuid": "9997f18a-23ae-5969-9fa9-8a73296eeaa3",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "E",
+      "font": "CantoraOne-Regular.ttf",
+      "textAlignment": "center",
+      "characterSize": 28,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 0,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 4,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 2,
+        "shadowOpacity": 110,
+        "smoothed": true,
+        "underlined": false,
+        "text": "E",
+        "font": "CantoraOne-Regular.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 28,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -76188,6 +76503,20 @@
       },
       {
         "objectName": "rotulo_teste"
+      },
+      {
+        "folderName": "hub",
+        "children": [
+          {
+            "objectName": "pedestal_arma"
+          },
+          {
+            "objectName": "expositor_arma"
+          },
+          {
+            "objectName": "arma_dica"
+          }
+        ]
       }
     ]
   },
@@ -77576,6 +77905,31 @@
               "actions": [
                 {
                   "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "arma_atual",
+                    "=",
+                    "\"pistola\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
@@ -78719,6 +79073,170 @@
               "persistentUuid": "8626e0dc-36c4-5f73-a1ed-1b496f141cb4",
               "type": "string",
               "value": "255;250;215"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "0070bbb0-3109-5c5b-9d00-ebac9cddf12c",
+          "width": 0,
+          "x": 190,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "da0990e1-c98c-531d-91fa-e3b7e96d353e",
+              "type": "string",
+              "value": "pistola"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "40eece01-2885-5123-8551-b51e891a2827",
+              "type": "string",
+              "value": "PISTOLA"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "5e3177bc-6eb5-5cb3-8af9-63444e228e81",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "73be4101-fe5d-5021-bcc2-fc80e77e515e",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "4a6e1901-a006-5461-aa3a-c47e84ee5e15",
+          "width": 0,
+          "x": 360,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "82c59266-7862-5eba-97a3-9219ee531008",
+              "type": "string",
+              "value": "doze"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "d5b492f1-bf54-5092-a82e-d9b815c5e034",
+              "type": "string",
+              "value": "DOZE"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "b074c481-4a0e-5a99-b50f-bceaba7a6c56",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "304c47bc-2d26-52ed-9990-3610339aaa15",
+              "type": "number",
+              "value": 1.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "a010f529-16da-56c8-bba8-d527e1d4fe53",
+          "width": 0,
+          "x": 530,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "308674c8-6628-537d-b8b4-36fcc08a2986",
+              "type": "string",
+              "value": "minigun"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "9bb23fd9-9bb0-5eb9-804f-aa909186484b",
+              "type": "string",
+              "value": "MINIGUN"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "8c7b0798-90e9-5d17-b467-4315a30143bd",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "874c3a84-416b-5a67-869d-c5fffbfe171c",
+              "type": "number",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "805a4010-91a4-5591-a3ce-8ffa2c9fbd1e",
+          "width": 0,
+          "x": 700,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "0de711fc-d6b3-57ce-94cb-5436cd550548",
+              "type": "string",
+              "value": "lanca"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "b71eb3c2-b54c-5263-bef0-0460a472c2f3",
+              "type": "string",
+              "value": "LANÇA-GRANADAS"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "adea792f-ccf3-50c7-9aea-42ae7b4a6dbf",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "c1d8a79e-ac1d-500b-97e8-56adf854deda",
+              "type": "number",
+              "value": 4.5
             }
           ]
         }
@@ -80178,6 +80696,170 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "9cf5f329-b35d-56f9-a9a8-91381a3a55cf",
+          "width": 0,
+          "x": 190,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "df701b79-7e8a-5906-b982-f5b891f5301a",
+              "type": "string",
+              "value": "pistola"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "f63a170a-798a-59c2-9cd0-4135b0b889cf",
+              "type": "string",
+              "value": "PISTOLA"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "26b7ee92-b2cb-529a-b356-4ac0ee4a0096",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "691ba1d0-1253-5ae2-b782-9dedf7422d1f",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "cff5fe9c-274b-5d21-9df4-e68cc71bd7b5",
+          "width": 0,
+          "x": 360,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "670a1ada-f6bc-57a7-a36a-9eec10fc6c7a",
+              "type": "string",
+              "value": "doze"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "a5f0db2b-e38c-59de-93df-72d572054686",
+              "type": "string",
+              "value": "DOZE"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "e7b653a3-9fe4-5473-87e9-13176370f2d5",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "a896b8da-b8de-5c5a-8dd1-d99232972dfb",
+              "type": "number",
+              "value": 1.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "346a735c-7860-5599-980e-c15d013242e1",
+          "width": 0,
+          "x": 530,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "95cab330-4a5e-5273-b008-4d823fc23e5f",
+              "type": "string",
+              "value": "minigun"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "7a310694-2889-561e-880b-5df0651d96c4",
+              "type": "string",
+              "value": "MINIGUN"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "7b44e872-aeea-5975-88bb-1aa75b15a4f5",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "3562035e-fa4d-5e91-9216-941b976230c3",
+              "type": "number",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "42c58299-4c37-5c54-894a-d7c627bca25a",
+          "width": 0,
+          "x": 700,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "09a9a6f0-88a0-54f5-824f-420e60785b02",
+              "type": "string",
+              "value": "lanca"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "8bf4bf77-a054-5f54-8f9c-b039023e098b",
+              "type": "string",
+              "value": "LANÇA-GRANADAS"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "993eb5fa-b483-5202-bde1-79a30b9bf6da",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "793fde18-6637-59f0-94a3-36716a6cf8a4",
+              "type": "number",
+              "value": 4.5
+            }
+          ]
         }
       ],
       "objects": [],
@@ -81635,6 +82317,170 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "bd62625a-bbe7-5359-9257-401af0331169",
+          "width": 0,
+          "x": 190,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "1e297a9b-7f06-5c78-9e7c-7482f9cf177f",
+              "type": "string",
+              "value": "pistola"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "f1cd78a9-0c60-5024-bc52-1614f257175c",
+              "type": "string",
+              "value": "PISTOLA"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "d70bc060-cfcb-57f7-83fd-46e84143dce4",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "8e90db03-fea9-575f-8889-f84ff62b0dad",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "1b4fbed5-4904-53b9-a235-7e1f8a51e242",
+          "width": 0,
+          "x": 360,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "a2e27912-227c-5954-8656-b0553e808868",
+              "type": "string",
+              "value": "doze"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "456cc588-6e89-58c9-bdaa-d85cf3d9a818",
+              "type": "string",
+              "value": "DOZE"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "bd2e6ae4-41f9-50b5-9f30-cb262a6281fc",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "29dd04f3-5672-5e50-901c-69eae5ace233",
+              "type": "number",
+              "value": 1.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "1bd2fe4d-96c4-5f23-a619-955ee20f32cf",
+          "width": 0,
+          "x": 530,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "b496f3fb-0473-5032-a224-03672c8d855f",
+              "type": "string",
+              "value": "minigun"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "eb6b4fde-3aff-5672-81ef-fb815564c773",
+              "type": "string",
+              "value": "MINIGUN"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "f1cb0710-0c8b-5563-860a-1235c452d476",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "5e63091e-f1a7-5d65-844d-7189399aa834",
+              "type": "number",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "aa692298-1818-5c46-9f18-4d3ecaad2279",
+          "width": 0,
+          "x": 700,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "4f0a7a7c-33b6-5e81-9599-db7230e704ac",
+              "type": "string",
+              "value": "lanca"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "8471c620-f148-510a-bab5-dd905c59368b",
+              "type": "string",
+              "value": "LANÇA-GRANADAS"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "4320a5ba-2da3-54f3-96aa-0c99afabe958",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "805bf04a-19a6-5b3a-9e1b-98daf0f39a9e",
+              "type": "number",
+              "value": 4.5
+            }
+          ]
         }
       ],
       "objects": [],
@@ -97229,6 +98075,117 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"doze\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "doze",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "doze",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"minigun\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "minigun",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "minigun",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"lanca\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "lanca",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "lanca",
+                                ""
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -99886,7 +100843,8 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ]
+                      ],
+                      "disabled": true
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -99973,7 +100931,8 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ]
+                      ],
+                      "disabled": true
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -100060,7 +101019,8 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ]
+                      ],
+                      "disabled": true
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -100148,7 +101108,8 @@
                             "RandomFloatInRange(0.95, 1.05)"
                           ]
                         }
-                      ]
+                      ],
+                      "disabled": true
                     }
                   ]
                 }
@@ -110670,6 +111631,52 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "max_municao"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "hud_slot1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "hud_slot2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "hud_slot3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "hud_slot4"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -156511,6 +157518,703 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Armas no hub",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "arma_dica",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "arma_dica"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "expositor_arma",
+                    "pedestal_arma.CenterX()",
+                    "pedestal_arma.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "arma",
+                    "=",
+                    "pedestal_arma.arma"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "nome",
+                    "=",
+                    "pedestal_arma.nome"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "Animation",
+                    "=",
+                    "pedestal_arma.arma"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "Scale",
+                    "=",
+                    "pedestal_arma.escala"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "=",
+                    "pedestal_arma.CenterX() - expositor_arma.Width() / 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "=",
+                    "pedestal_arma.Y() - pedestal_arma.altura - expositor_arma.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "base_y",
+                    "=",
+                    "expositor_arma.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "fase",
+                    "=",
+                    "pedestal_arma.fase"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "=",
+                    "pedestal_arma.ZOrder() + 1"
+                  ]
+                }
+              ],
+              "object": "pedestal_arma"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "arma",
+                        "=",
+                        "\"doze\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "armas.doze",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "arma",
+                        "=",
+                        "\"minigun\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "armas.minigun",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "arma",
+                        "=",
+                        "\"lanca\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "armas.lanca",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "=",
+                    "expositor_arma.base_y + sin(TimeFromStart() * expositor_arma.bob_vel + expositor_arma.fase) * expositor_arma.bob_alt"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "arma",
+                        "=",
+                        "GlobalVariableString(arma_atual)"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "expositor_arma"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "arma_dica"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "na_loja",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "expositor_arma"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "pato",
+                    "pato.arma_raio",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickNearest"
+                  },
+                  "parameters": [
+                    "expositor_arma",
+                    "pato.CenterX()",
+                    "pato.CenterY()",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "arma_dica",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "arma_dica",
+                    "Text",
+                    "=",
+                    "\"E · \" + expositor_arma.nome"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "arma_dica",
+                    "=",
+                    "expositor_arma.CenterX() - arma_dica.Width() / 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "arma_dica",
+                    "=",
+                    "expositor_arma.base_y - pato.arma_dica_y"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "arma_dica",
+                    "=",
+                    "expositor_arma.ZOrder() + 1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextJustPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"e\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Arma",
+                        "equipada",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "Arma"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_troca_arma.wav",
+                        "",
+                        "pato.arma_som_volume",
+                        "RandomFloatInRange(1 - pato.arma_som_variacao, 1 + pato.arma_som_variacao)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"pistola\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pistola",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "pistola",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"pistola\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"doze\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "doze",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "doze",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"doze\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "minigun",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "minigun",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"minigun\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "lanca",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "lanca",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"lanca\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
