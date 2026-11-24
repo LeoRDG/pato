@@ -66023,7 +66023,33 @@
           "value": 270
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "KawaseBlur",
+          "name": "Borda suave",
+          "doubleParameters": {
+            "blur": 14,
+            "quality": 4,
+            "pixelizeX": 1,
+            "pixelizeY": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Glow",
+          "name": "Brilho",
+          "doubleParameters": {
+            "distance": 24,
+            "innerStrength": 0,
+            "outerStrength": 1.5
+          },
+          "stringParameters": {
+            "color": "255;236;170"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": []
     },
     {
@@ -76629,6 +76655,61 @@
       "effects": [],
       "behaviors": [],
       "updateIfNotVisible": true
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 1,
+      "emitterForceMax": 320,
+      "emitterForceMin": 320,
+      "flow": 5,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 120,
+      "name": "corrente_nevoa",
+      "particleAlpha1": 110,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 225,
+      "particleBlue2": 150,
+      "particleColor1": "255;248;225",
+      "particleColor2": "255;220;150",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 248,
+      "particleGreen2": 220,
+      "particleLifeTimeMax": 10,
+      "particleLifeTimeMin": 10,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 95,
+      "particleSize2": 70,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "assets/particulas/particula_luz.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 8,
+      "variables": [
+        {
+          "name": "cx",
+          "persistentUuid": "d24f8944-df2a-5971-b107-ba896cb114ed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "updateIfNotVisible": true
     }
   ],
   "objectsFolderStructure": {
@@ -77188,6 +77269,9 @@
             "children": [
               {
                 "objectName": "corrente_faisca"
+              },
+              {
+                "objectName": "corrente_nevoa"
               }
             ]
           }
@@ -92107,7 +92191,7 @@
                       "parameters": [
                         "corrente_faisca",
                         "=",
-                        "corrente_luz.ZOrder()"
+                        "corrente_luz.ZOrder() + 1"
                       ]
                     },
                     {
@@ -92287,6 +92371,235 @@
                           },
                           "parameters": [
                             "corrente_faisca"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "object": "corrente_luz"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "corrente_nevoa",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "corrente_nevoa",
+                        "corrente_luz.CenterX()",
+                        "corrente_luz.Y() + corrente_luz.Height()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.ZOrder() + 1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "cx",
+                        "=",
+                        "corrente_luz.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.faisca_angulo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMin"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMax"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMin"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.Height() / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMax"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.Height() / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ZoneRadius"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "corrente_luz.Width() * corrente_luz.faisca_largura"
+                      ]
+                    }
+                  ],
+                  "object": "corrente_luz"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "cx",
+                        "=",
+                        "corrente_luz.CenterX()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "min(corrente_luz.Y() + corrente_luz.Height(), CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMin"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "(corrente_nevoa.Y() - corrente_luz.Y()) / corrente_luz.faisca_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::ParticleLifeTimeMax"
+                      },
+                      "parameters": [
+                        "corrente_nevoa",
+                        "=",
+                        "(corrente_nevoa.Y() - corrente_luz.Y()) / corrente_luz.faisca_vel"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "corrente_luz",
+                            "ativa",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParticleSystem::StartEmission"
+                          },
+                          "parameters": [
+                            "corrente_nevoa"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "corrente_luz",
+                            "ativa",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParticleSystem::StopEmission"
+                          },
+                          "parameters": [
+                            "corrente_nevoa"
                           ]
                         }
                       ]
