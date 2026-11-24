@@ -7,10 +7,11 @@ sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
 # nome: (lado pensado na t169/t170, particleSize1 e 2 de antes)
-ANTES = {'explosao_fogo': (104, 100, 30), 'fogo_lanca': (57, 100, 220), 'explosao_fumaca': (120, 80, 220),
+# a explosão (explosao_fogo/fumaca/faiscas) voltou ao visual antigo na t179
+ANTES = {'fogo_lanca': (57, 100, 220),
          'demonio_fumaca': (36, 100, 150), 'poeira': (26, 40, 80), 'pulso_brilho': (18, 110, 30),
          'investida_rastro': (14, 120, 30), 'estrela_rastro': (10, 100, 20), 'conv_luz': (10, 70, 130),
-         'escudo_faisca': (10, 100, 30), 'explosao_faiscas': (21, 100, 40)}
+         'escudo_faisca': (10, 100, 30)}
 
 
 class TamanhoParticulas(unittest.TestCase):

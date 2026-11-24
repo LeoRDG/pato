@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
 LUZES = ('pulso_brilho', 'investida_rastro', 'estrela_rastro', 'conv_luz',
-         'escudo_faisca', 'explosao_faiscas')
+         'escudo_faisca')  # explosao_faiscas voltou ao visual antigo na t179
 
 
 class LuzesSuaves(unittest.TestCase):

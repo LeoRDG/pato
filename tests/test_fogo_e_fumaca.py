@@ -8,8 +8,8 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
-FOGO = ('explosao_fogo', 'fogo_lanca')
-FUMACA = ('explosao_fumaca', 'demonio_fumaca', 'poeira')
+FOGO = ('fogo_lanca',)  # a explosão voltou ao visual antigo na t179 (test_explosao_original)
+FUMACA = ('demonio_fumaca', 'poeira')
 
 
 class FogoEFumaca(unittest.TestCase):
@@ -31,7 +31,6 @@ class FogoEFumaca(unittest.TestCase):
                 self.assertNotIn(o['rendererType'], ('Point', 'Line'), n)
                 self.assertEqual(recursos[o['textureParticleName']], f'assets/particulas/{tex}.png', n)
                 self.assertEqual(o['rendererParam1'], o['rendererParam2'], n)
-        self.assertTrue(m.objeto(self.d, 'explosao_fogo')['additive'])
 
 
 if __name__ == '__main__':
