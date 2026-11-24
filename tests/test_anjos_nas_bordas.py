@@ -24,7 +24,7 @@ class AnjosNasBordas(unittest.TestCase):
     def test_vao_para_fora_ate_a_borda(self):
         orbita = next(e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions']))  # a presa (a solta é da t160)
         (s,) = [a for a in orbita['actions'] if a['type']['value'] == 'SetXY']
-        raio = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
+        raio = '(deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
         self.assertEqual(s['parameters'][2],
                          f'clamp(deus.cx + cos(canalizador.ang) * canalizador.surgir * {raio}, {CX} - {CW} / 2 + deus.canal_margem, {CX} + {CW} / 2 - deus.canal_margem) - canalizador.Width() / 2')
         self.assertEqual(s['parameters'][4],

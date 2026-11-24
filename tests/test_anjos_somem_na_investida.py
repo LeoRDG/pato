@@ -26,7 +26,7 @@ class AnjosSomemNaInvestida(unittest.TestCase):
         a = tx(solta['actions'])
         self.assertNotIn('clamp(', a)
         self.assertNotIn('"canalizador", "ang", "+"', a, 'o giro já foi feito no evento de cima')
-        raio = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
+        raio = '(deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
         (s,) = [x for x in solta['actions'] if x['type']['value'] == 'SetXY']
         self.assertEqual(s['parameters'][2], f'deus.cx + cos(canalizador.ang) * canalizador.surgir * {raio} - canalizador.Width() / 2')
         self.assertEqual(s['parameters'][4], f'deus.cy + sin(canalizador.ang) * canalizador.surgir * {raio} - canalizador.Height() / 2')

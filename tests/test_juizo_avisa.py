@@ -6,7 +6,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
-RAIO = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
+RAIO = '(deus.canal_orbita_raio + deus.canal_vaivem * deus.canal_vaivem_k * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
 
 
 def tx(e):
