@@ -36,11 +36,9 @@ class SoAnjosProtegem(unittest.TestCase):
         self.assertLess(nomes.index('Pupila fechada'), nomes.index('Dano na pupila'))
 
     def test_vai_e_volta(self):
+        # o raio (para fora, até as bordas) é testado em test_anjos_nas_bordas (t158)
         (orbita,) = [e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions'])]
-        a = tx(orbita['actions'])
-        raio = '(deus.canal_orbita_raio - deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
-        self.assertIn(f'deus.cx + cos(canalizador.ang) * {raio}', a)
-        self.assertIn(f'deus.cy + sin(canalizador.ang) * {raio}', a)
+        self.assertIn('canalizador.vaivem_fase', tx(orbita['actions']))
         cria = [e for e in m.todos(self.deus['events']) if '"Create"}, "parameters": ["", "canalizador"' in tx(e.get('actions', []))]
         self.assertEqual(len(cria), 4)
         for e in cria:
@@ -48,7 +46,6 @@ class SoAnjosProtegem(unittest.TestCase):
             k = next(i for i, x in enumerate(a) if x['parameters'][:2] == ['canalizador', 'ang'])
             self.assertEqual(a[k + 1]['parameters'], ['canalizador', 'vaivem_fase', '=', 'canalizador.ang'])
         self.assertIn('vaivem_fase', {x['name'] for x in self.o['canalizador']['variables']})
-        self.assertLess(self.v['canal_vaivem'], self.v['canal_orbita_raio'])
 
     def test_laco_fere(self):
         (fere,) = [e for e in m.todos(self.deus['events']) if '"pato", "vida", "-", "deus.laco_dano"' in tx(e.get('actions', []))]

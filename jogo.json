@@ -74015,7 +74015,7 @@
           "name": "canal_vaivem",
           "persistentUuid": "7ce7e577-a97b-5371-a737-743f2f1deaf5",
           "type": "number",
-          "value": 90
+          "value": 650
         },
         {
           "name": "canal_vaivem_vel",
@@ -74034,6 +74034,12 @@
           "persistentUuid": "8adaa5e0-16d4-537b-a2dc-130065bea953",
           "type": "number",
           "value": 18
+        },
+        {
+          "name": "canal_margem",
+          "persistentUuid": "9a3a0480-b59c-5539-b9a1-1727c3b35677",
+          "type": "number",
+          "value": 90
         }
       ],
       "effects": [
@@ -139653,9 +139659,9 @@
                       "parameters": [
                         "canalizador",
                         "=",
-                        "deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio - deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
+                        "clamp(deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
                         "=",
-                        "deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio - deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
+                        "clamp(deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
                       ]
                     }
                   ]
@@ -139717,6 +139723,27 @@
                         "laco_amor",
                         "=",
                         "deus.z_base + 3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineColor"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        "deus.escudo_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectStringParameter"
+                      },
+                      "parameters": [
+                        "laco_amor",
+                        "Effect",
+                        "\"Effect\"",
+                        "\"color\"",
+                        "deus.escudo_cor"
                       ]
                     }
                   ]
