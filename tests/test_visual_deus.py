@@ -46,26 +46,9 @@ class VisualDeus(unittest.TestCase):
                 self.assertTrue(min(xs) > 0 or min(ys) > 0 or max(xs) < w or max(ys) < h, 'não é o retângulo inteiro')
                 self.assertTrue(0 <= min(xs) and max(xs) <= w and 0 <= min(ys) and max(ys) <= h)
 
-    def test_halo_visivel_marca_a_zona_segura(self):
-        self.assertIn('halo_marca', self.o)
-        nasce = next(e for e in self.evs if '"Create"}, "parameters": ["", "luz_halo"' in tx(e.get('actions', [])))
-        a = tx(nasce['actions'])
-        self.assertIn('"Create"}, "parameters": ["", "halo_marca"', a)
-        self.assertIn('SetWidth"}, "parameters": ["halo_marca", "Resizable", "=", "deus.halo_raio * 2"', a)
-        self.assertIn('SetHeight"}, "parameters": ["halo_marca", "Resizable", "=", "deus.halo_raio * 2"', a)
-        self.assertIn('"luz_halo", "id", "=", "deus.halo_seq"', a)
-        self.assertIn('"halo_marca", "id", "=", "deus.halo_seq"', a)
-        segue = next(e for e in self.evs if e.get('object') == 'halo_marca')
-        self.assertIn('"luz_halo", "id", "=", "halo_marca.id"', tx(segue['conditions']))
-        self.assertIn('"SetXY"}, "parameters": ["halo_marca"', tx(segue['actions']))
-        apaga = [e for e in self.evs if '"Delete"}, "parameters": ["luz_halo"' in tx(e.get('actions', []))]
-        self.assertGreaterEqual(len(apaga), 3, 'fim do piscar, troca de fase, morte')
-        for e in apaga:
-            self.assertIn('"Delete"}, "parameters": ["halo_marca"', tx(e['actions']))
-        for nome in ('halo_seq', 'halo_marca_opacidade'):
-            self.assertIn(nome, self.v('deus'))
-        self.assertIn('id', self.v('halo_marca'))
-        self.assertIn('id', self.v('luz_halo'))
+    def test_sem_halos(self):
+        """o piscar (e os halos) saiu: o anel azul agora é a investida (t155, test_anel_azul)."""
+        self.assertFalse([e for e in self.evs if '"Create"}, "parameters": ["", "luz_halo"' in tx(e.get('actions', []))])
 
     def test_aneis_de_luz_maiores(self):
         for g in ('Três anéis', 'Fase final'):

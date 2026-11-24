@@ -79,7 +79,7 @@ class Deus(unittest.TestCase):
         e = tx(self.ev('Escolha do golpe'))
         for k in (1, 2, 3, 4):
             self.assertIn(f'deus.golpes_{k}', e)
-        for golpe in ('olhar', 'piscar', 'amor', 'juizo', 'aneis', 'puxao'):
+        for golpe in ('olhar', 'investida', 'amor', 'juizo', 'aneis', 'puxao'):
             self.assertIn(f'"deus", "golpe", "=", "\\"{golpe}\\""', e)
         self.assertIn('deus.ultimo_golpe', e)
 

@@ -56,7 +56,8 @@ class AuraEfeitos(unittest.TestCase):
         self.assertIn('deus.aura_raios_base', r, 'largura da base do triângulo')
         self.assertIn('deus.aura_raios_ang', r)
         self.assertIn('mod(deus.i, 2)', r, 'raios longos e curtos alternados')
-        self.assertIn('"deus", "aura_raios_ang", "+", "deus.aura_giro * TimeDelta()"', tx(self.aura))
+        self.assertIn('"deus", "aura_raios_ang", "+", "deus.aura_giro * deus.aura_giro_mult * TimeDelta()"', tx(self.aura),
+                      'aura_giro_mult acelera os raios na investida (t155)')
 
     def test_luz_por_fase_e_limpeza(self):
         evs = list(m.todos(self.deus['events']))
