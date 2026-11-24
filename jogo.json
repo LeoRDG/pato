@@ -76436,18 +76436,18 @@
       "particleAngle2": 0,
       "particleAngleRandomness1": 0,
       "particleAngleRandomness2": 0,
-      "particleBlue1": 90,
-      "particleBlue2": 20,
-      "particleColor1": "255;200;90",
-      "particleColor2": "220;60;20",
+      "particleBlue1": 255,
+      "particleBlue2": 220,
+      "particleColor1": "170;210;255",
+      "particleColor2": "60;110;220",
       "particleGravityX": 6,
       "particleGravityY": -28,
-      "particleGreen1": 200,
-      "particleGreen2": 60,
+      "particleGreen1": 210,
+      "particleGreen2": 110,
       "particleLifeTimeMax": 7,
       "particleLifeTimeMin": 4,
-      "particleRed1": 255,
-      "particleRed2": 220,
+      "particleRed1": 170,
+      "particleRed2": 60,
       "particleSize1": 15,
       "particleSize2": 5,
       "particleSizeRandomness1": 0,
@@ -83413,6 +83413,78 @@
           "persistentUuid": "a9864cbd-f869-58f8-a072-cb79b6c20e7c",
           "type": "number",
           "value": 2000
+        },
+        {
+          "name": "brasas_cor1_r",
+          "persistentUuid": "2900bf19-324b-5488-bf6e-ba11a28a14ca",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "brasas_noite_cor1_r",
+          "persistentUuid": "873709a9-e745-545b-a19a-8faec92efbd9",
+          "type": "number",
+          "value": 170
+        },
+        {
+          "name": "brasas_cor1_g",
+          "persistentUuid": "28565e9a-1ca7-5206-ac8f-6f0fec8118a8",
+          "type": "number",
+          "value": 220
+        },
+        {
+          "name": "brasas_noite_cor1_g",
+          "persistentUuid": "23793c21-36a8-565b-a251-0bb1c5357cfb",
+          "type": "number",
+          "value": 210
+        },
+        {
+          "name": "brasas_cor1_b",
+          "persistentUuid": "c6a74e97-0b9c-53da-aa53-57b9e75c7252",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "brasas_noite_cor1_b",
+          "persistentUuid": "48b73935-ab63-5599-bc8f-2ac45bf7ca2c",
+          "type": "number",
+          "value": 255
+        },
+        {
+          "name": "brasas_cor2_r",
+          "persistentUuid": "ae7ae680-98c1-5aaa-bc5d-8252eb57a33d",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "brasas_noite_cor2_r",
+          "persistentUuid": "2b0c2246-9590-5109-b6fe-53104ceba600",
+          "type": "number",
+          "value": 60
+        },
+        {
+          "name": "brasas_cor2_g",
+          "persistentUuid": "69c039b4-ec72-51ed-bba7-d1cdc3cf3d0d",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "brasas_noite_cor2_g",
+          "persistentUuid": "f20a7b54-85c2-5f94-b8c5-352ee2e47953",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "brasas_cor2_b",
+          "persistentUuid": "132b27a5-261b-5e7e-bb64-a98ccad0ec67",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "brasas_noite_cor2_b",
+          "persistentUuid": "741d0612-7de0-5ea2-bbc1-0d355211d4ce",
+          "type": "number",
+          "value": 220
         }
       ],
       "instances": [
@@ -86119,6 +86191,30 @@
                     "CameraCenterX(\"\", 0)",
                     "=",
                     "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParticleSystem::ParticleColor1"
+                  },
+                  "parameters": [
+                    "inferno_brasas",
+                    "ToString(round(lerp(brasas_cor1_r, brasas_noite_cor1_r, fundo_mistura))) + \";\" + ToString(round(lerp(brasas_cor1_g, brasas_noite_cor1_g, fundo_mistura))) + \";\" + ToString(round(lerp(brasas_cor1_b, brasas_noite_cor1_b, fundo_mistura)))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParticleSystem::ParticleColor2"
+                  },
+                  "parameters": [
+                    "inferno_brasas",
+                    "ToString(round(lerp(brasas_cor2_r, brasas_noite_cor2_r, fundo_mistura))) + \";\" + ToString(round(lerp(brasas_cor2_g, brasas_noite_cor2_g, fundo_mistura))) + \";\" + ToString(round(lerp(brasas_cor2_b, brasas_noite_cor2_b, fundo_mistura)))"
                   ]
                 }
               ]
