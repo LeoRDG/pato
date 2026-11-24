@@ -73690,6 +73690,114 @@
           "persistentUuid": "daa43afc-4b78-562d-a126-eee4e2bc4a8d",
           "type": "string",
           "value": "190;130;255"
+        },
+        {
+          "name": "aura_raio",
+          "persistentUuid": "ba6670ed-361b-5655-bcaa-1c1cfe59d306",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "aura_cam_2",
+          "persistentUuid": "2a9f1e44-763b-576e-9244-df299f3c7203",
+          "type": "number",
+          "value": 0.75
+        },
+        {
+          "name": "aura_cam_3",
+          "persistentUuid": "d2713b78-c9bb-5d52-b882-292e71e62998",
+          "type": "number",
+          "value": 0.55
+        },
+        {
+          "name": "aura_op_1",
+          "persistentUuid": "389da32c-7925-5f7d-bdf7-cffc9ccdfb81",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "aura_op_2",
+          "persistentUuid": "8ca7f7bf-6c36-58d9-8d7f-41eb5f7156aa",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "aura_op_3",
+          "persistentUuid": "f4d8d5c3-e41c-505e-8d8e-3e9972509028",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "aura_pulso",
+          "persistentUuid": "aa5412b3-ec20-5fdd-8ef8-77aa265d98d7",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "aura_pulso_vel",
+          "persistentUuid": "5b25e594-ecf6-56d1-b207-80dfc025921f",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "aura_brilho_cor",
+          "persistentUuid": "8f3d34f7-50f3-584d-a6c6-b716a061d5b3",
+          "type": "string",
+          "value": "110;180;255"
+        },
+        {
+          "name": "aura_raios_qtd",
+          "persistentUuid": "18acafec-3a95-518e-89ef-8f686843da5b",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "aura_raios_ini",
+          "persistentUuid": "62cd8dd2-4aad-5cb6-aab9-32fab96a0b8b",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "aura_raios_fim",
+          "persistentUuid": "a49d095a-6d38-50bc-af64-a09f75902aa0",
+          "type": "number",
+          "value": 310
+        },
+        {
+          "name": "aura_raios_curto",
+          "persistentUuid": "77a22a12-45ee-55ce-9b3f-4419b42cf6f6",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "aura_raios_base",
+          "persistentUuid": "c936bb16-eed2-5a1b-9dcf-96a336102ca8",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "aura_raios_cor",
+          "persistentUuid": "2fb6e8a2-951d-59d5-b5e6-d1e92888f707",
+          "type": "string",
+          "value": "255;220;130"
+        },
+        {
+          "name": "aura_raios_opacidade",
+          "persistentUuid": "330d2022-ca63-5566-963d-78f66dc74018",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "aura_raios_ang",
+          "persistentUuid": "787c7d7f-b8d3-5e87-ac93-810f27557bf7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "aura_giro",
+          "persistentUuid": "f09d61fd-a750-55d0-b125-d01898106ce7",
+          "type": "number",
+          "value": 20
         }
       ],
       "effects": [
@@ -74908,6 +75016,59 @@
           "booleanParameters": {}
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "behaviors": [],
+      "fillOpacity": 0,
+      "outlineSize": 0,
+      "outlineOpacity": 200,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 150,
+        "b": 185
+      },
+      "name": "deus_aura_luz",
+      "persistentUuid": "6c3ed470-07c5-5973-ab1f-9eeffc72b768",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 0,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "130;190;255"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Brilho",
+          "doubleParameters": {
+            "threshold": 0.7,
+            "bloomScale": 1,
+            "brightness": 1,
+            "blur": 8,
+            "quality": 6,
+            "padding": 80
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -75181,6 +75342,9 @@
               },
               {
                 "objectName": "pulso_anel"
+              },
+              {
+                "objectName": "deus_aura_luz"
               }
             ]
           }
@@ -133083,6 +133247,37 @@
                         "=",
                         "deus.corpo_escala * deus.escudo_escala"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "deus_aura",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "deus_aura_luz",
+                        "0",
+                        "0",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "deus.z_base + 0"
+                      ]
                     }
                   ]
                 }
@@ -133425,6 +133620,225 @@
                         "+",
                         "deus.anel_giro_rosa * TimeDelta()"
                       ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Aura desenhada",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "deus",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "aura_raios_ang",
+                        "+",
+                        "deus.aura_giro * TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillColor"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "deus.aura_brilho_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::OutlineSize"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillOpacity"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "deus.aura_op_1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "deus.cx",
+                        "deus.cy",
+                        "deus.aura_raio + deus.aura_pulso * sin(TimeFromStart() * deus.aura_pulso_vel)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillOpacity"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "deus.aura_op_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "deus.cx",
+                        "deus.cy",
+                        "(deus.aura_raio + deus.aura_pulso * sin(TimeFromStart() * deus.aura_pulso_vel)) * deus.aura_cam_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillOpacity"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "deus.aura_op_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Circle"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "deus.cx",
+                        "deus.cy",
+                        "(deus.aura_raio + deus.aura_pulso * sin(TimeFromStart() * deus.aura_pulso_vel)) * deus.aura_cam_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillColor"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "deus.aura_raios_cor"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::FillOpacity"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "=",
+                        "deus.aura_raios_opacidade"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "i",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::BeginFillPath"
+                          },
+                          "parameters": [
+                            "deus_aura_luz",
+                            "deus.cx + cos(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd) - (deus.aura_raios_base / deus.aura_raios_ini)) * deus.aura_raios_ini",
+                            "deus.cy + sin(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd) - (deus.aura_raios_base / deus.aura_raios_ini)) * deus.aura_raios_ini"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::PathLineTo"
+                          },
+                          "parameters": [
+                            "deus_aura_luz",
+                            "deus.cx + cos(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd)) * (deus.aura_raios_fim - mod(deus.i, 2) * deus.aura_raios_curto)",
+                            "deus.cy + sin(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd)) * (deus.aura_raios_fim - mod(deus.i, 2) * deus.aura_raios_curto)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::PathLineTo"
+                          },
+                          "parameters": [
+                            "deus_aura_luz",
+                            "deus.cx + cos(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd) + (deus.aura_raios_base / deus.aura_raios_ini)) * deus.aura_raios_ini",
+                            "deus.cy + sin(ToRad(deus.aura_raios_ang + deus.i * 360 / deus.aura_raios_qtd) + (deus.aura_raios_base / deus.aura_raios_ini)) * deus.aura_raios_ini"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::closePath"
+                          },
+                          "parameters": [
+                            "deus_aura_luz"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::EndFillPath"
+                          },
+                          "parameters": [
+                            "deus_aura_luz"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "deus",
+                            "i",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "repeatExpression": "deus.aura_raios_qtd"
                     }
                   ]
                 }
@@ -134821,6 +135235,18 @@
                         "deus_aura",
                         "deus.aura_cor_1"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
+                        "deus.bloom_1"
+                      ]
                     }
                   ]
                 },
@@ -134892,6 +135318,18 @@
                       "parameters": [
                         "deus_aura",
                         "deus.aura_cor_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
+                        "deus.bloom_2"
                       ]
                     }
                   ]
@@ -134965,6 +135403,18 @@
                         "deus_aura",
                         "deus.aura_cor_3"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
+                        "deus.bloom_3"
+                      ]
                     }
                   ]
                 },
@@ -135036,6 +135486,18 @@
                       "parameters": [
                         "deus_aura",
                         "deus.aura_cor_4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        "Effect",
+                        "\"Brilho\"",
+                        "\"bloomScale\"",
+                        "deus.bloom_4"
                       ]
                     }
                   ]
@@ -141980,6 +142442,15 @@
                         "deus",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -142072,6 +142543,15 @@
                       },
                       "parameters": [
                         "deus_escudo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "deus_aura_luz",
                         ""
                       ]
                     }
