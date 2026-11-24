@@ -73684,6 +73684,12 @@
           "persistentUuid": "0a2539c8-8e84-53b9-9bae-a7f98000cdf5",
           "type": "number",
           "value": 140
+        },
+        {
+          "name": "escudo_cor",
+          "persistentUuid": "daa43afc-4b78-562d-a126-eee4e2bc4a8d",
+          "type": "string",
+          "value": "190;130;255"
         }
       ],
       "effects": [
@@ -133915,6 +133921,15 @@
                         "Opacity",
                         "=",
                         "deus.escudo_opacidade - deus.escudo_pulso_forca * (1 + sin(TimeFromStart() * deus.escudo_pulso)) / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "deus_escudo",
+                        "deus.escudo_cor"
                       ]
                     }
                   ]
