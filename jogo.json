@@ -76462,6 +76462,100 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 25,
+      "emitterForceMin": 5,
+      "flow": 14,
+      "jumpForwardInTimeOnCreation": 8,
+      "maxParticleNb": 90,
+      "name": "hub_brasas",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 90,
+      "particleBlue2": 20,
+      "particleColor1": "255;200;90",
+      "particleColor2": "220;60;20",
+      "particleGravityX": 6,
+      "particleGravityY": -28,
+      "particleGreen1": 200,
+      "particleGreen2": 60,
+      "particleLifeTimeMax": 7,
+      "particleLifeTimeMin": 4,
+      "particleRed1": 255,
+      "particleRed2": 220,
+      "particleSize1": 15,
+      "particleSize2": 5,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "assets/particulas/particula_luz.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1100,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 16,
+      "emitterForceMin": 4,
+      "flow": 6,
+      "jumpForwardInTimeOnCreation": 8,
+      "maxParticleNb": 60,
+      "name": "hub_luzes",
+      "particleAlpha1": 230,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 220,
+      "particleBlue2": 140,
+      "particleColor1": "255;250;220",
+      "particleColor2": "255;215;140",
+      "particleGravityX": 3,
+      "particleGravityY": -10,
+      "particleGreen1": 250,
+      "particleGreen2": 215,
+      "particleLifeTimeMax": 10,
+      "particleLifeTimeMin": 6,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 18,
+      "particleSize2": 7,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 128,
+      "rendererParam2": 128,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "assets/particulas/particula_luz.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1100,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -76997,6 +77091,17 @@
               },
               {
                 "objectName": "purg_cinza"
+              }
+            ]
+          },
+          {
+            "folderName": "hubs",
+            "children": [
+              {
+                "objectName": "hub_brasas"
+              },
+              {
+                "objectName": "hub_luzes"
               }
             ]
           }
@@ -79048,6 +79153,12 @@
           "persistentUuid": "0b04d9d5-6b8a-545d-9e5b-110e3e72815e",
           "type": "string",
           "value": "Hub"
+        },
+        {
+          "name": "hub_brasas_z",
+          "persistentUuid": "3453bfca-6cdb-5ae7-b8da-0fe8f2275014",
+          "type": "number",
+          "value": 1003
         }
       ],
       "instances": [
@@ -79832,6 +79943,76 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Ambiente",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "hub_brasas",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "hub_brasas",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "hub_brasas",
+                    "=",
+                    "hub_brasas_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "hub_brasas",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -80427,6 +80608,18 @@
           "persistentUuid": "f4a1d7c5-cf5a-5ae1-8fc3-d66bcb51ea00",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "purg_nevoa_z",
+          "persistentUuid": "8c6a7106-c7e6-5131-9cef-cf41a6eded63",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "purg_cinza_z",
+          "persistentUuid": "41918384-dc28-5eea-8ab9-abb21f28e406",
+          "type": "number",
+          "value": 1070
         }
       ],
       "instances": [
@@ -81225,6 +81418,134 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Ambiente",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_nevoa",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_nevoa",
+                    "CameraCenterX(\"fundo\", 0)",
+                    "CameraCenterY(\"fundo\", 0)",
+                    "\"fundo\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "purg_nevoa",
+                    "=",
+                    "purg_nevoa_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "purg_nevoa",
+                    "=",
+                    "CameraCenterX(\"fundo\", 0)",
+                    "=",
+                    "CameraCenterY(\"fundo\", 0)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_cinza",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "purg_cinza",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "purg_cinza",
+                    "=",
+                    "purg_cinza_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "purg_cinza",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -81820,6 +82141,12 @@
           "persistentUuid": "510b7c2c-23ab-546a-8f6b-ad121be383ed",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "hub_luzes_z",
+          "persistentUuid": "a8c33b45-6c25-5721-8048-51e5153f0507",
+          "type": "number",
+          "value": 1003
         }
       ],
       "instances": [
@@ -82545,6 +82872,76 @@
                     "CameraCenterY(\"\", 0) * fundo_parallax_y + fundo_dy",
                     "\"fundo\"",
                     "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Ambiente",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "hub_luzes",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "hub_luzes",
+                    "CameraCenterX(\"\", 0)",
+                    "CameraCenterY(\"\", 0)",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "hub_luzes",
+                    "=",
+                    "hub_luzes_z"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "hub_luzes",
+                    "=",
+                    "CameraCenterX(\"\", 0)",
+                    "=",
+                    "CameraCenterY(\"\", 0)"
                   ]
                 }
               ]
