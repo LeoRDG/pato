@@ -263,10 +263,11 @@ def anim_aura():
 
 
 def anim_escudo():
-    """redoma de luz: aro claro com contorno azul, borda com xadrez (a curva da bolha), treliça triangular que
+    """redoma de luz em tons de cinza (a cor vem do jogo, deus.escudo_cor): aro claro com contorno escuro, borda com xadrez (a curva da bolha), treliça triangular que
     cintila passando pela bolha e um brilho no alto à esquerda; o meio fica quase limpo para ver o olho."""
     q = []
     R = 110
+    g1, g2, g3, g4, g0 = (150, 150, 150), (195, 195, 195), (228, 228, 228), (250, 250, 250), (55, 55, 60)
     for i in range(6):
         t = Tela(240)
         d, a = t.d(), t.ang()
@@ -279,21 +280,21 @@ def anim_escudo():
             linha |= np.abs(u - np.round(u)) < 0.045
         faixa = np.sin((x * 0.6 + y) / 26.0 - i * math.pi / 3) > 0.55
         trelica = dentro & linha & (faixa | (d > R * 0.78))
-        t.pinta(trelica, t.rampa(0.3 + 0.7 * d / R, [C['azul1'], C['azul2'], C['ceu1']]))
+        t.pinta(trelica, t.rampa(0.3 + 0.7 * d / R, [g1, g2, g3]))
         # brilho de bolha (fresnel): pontilhado ordenado que adensa para a borda; o meio fica limpo
         bayer = np.array([[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]) / 16.0
         lim = bayer[t.yy.astype(int) % 4, t.xx.astype(int) % 4]
         dens = np.clip((d / R - 0.5) / 0.5, 0, 1) ** 1.6 * 0.8
-        t.pinta(dentro & (lim < dens), t.rampa(d / R, [C['azul2'], C['ceu1']]))
+        t.pinta(dentro & (lim < dens), t.rampa(d / R, [g2, g3]))
         # borda da bolha em xadrez
-        t.pinta(dentro & (d > R - 13) & t.xadrez(i % 2), C['azul2'])
-        t.pinta(dentro & (d > R - 6), C['ceu1'])
+        t.pinta(dentro & (d > R - 13) & t.xadrez(i % 2), g2)
+        t.pinta(dentro & (d > R - 6), g3)
         # aro e contorno
         aro = (d >= R - 3) & (d < R + 1.5)
-        t.pinta(aro, t.rampa(0.5 + 0.5 * np.cos(a + 2.3), [C['azul2'], C['ceu1'], C['pena4']]))
-        t.pinta((d >= R + 1.5) & (d < R + 3), C['azul0'])
+        t.pinta(aro, t.rampa(0.5 + 0.5 * np.cos(a + 2.3), [g2, g3, g4]))
+        t.pinta((d >= R + 1.5) & (d < R + 3), g0)
         # brilho no alto à esquerda
-        t.pinta((d > R - 11) & (d < R - 7) & (a > -2.7) & (a < -1.7), C['branco'])
+        t.pinta((d > R - 11) & (d < R - 7) & (a > -2.7) & (a < -1.7), (255, 255, 255))
         q.append(t.img())
     salva_anim(q, os.path.join(D, 'escudo'), 'idle')
 

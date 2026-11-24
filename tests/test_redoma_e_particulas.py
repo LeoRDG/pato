@@ -43,6 +43,15 @@ class RedomaEParticulas(unittest.TestCase):
         self.assertIn('"Create"}, "parameters": ["", "escudo_quebra"', a)
         self.assertIn('escudo_opacidade', tx(sinal))
 
+    def test_cor_da_redoma(self):
+        """a arte é neutra (cinzas) e a cor vem de deus.escudo_cor, que dá para trocar no GDevelop (t153)."""
+        self.assertIn('escudo_cor', self.v('deus'))
+        sinal = tx(m.acha(self.deus['events'], 'Sinal de vulnerável'))
+        self.assertIn('"ChangeColor"}, "parameters": ["deus_escudo", "deus.escudo_cor"]', sinal)
+        a = np.array(Image.open(os.path.join(RAIZ, 'assets/inimigos/ceu/deus/escudo/idle_00.png')).convert('RGBA'))
+        px = a[a[:, :, 3] > 0][:, :3].astype(int)
+        self.assertLessEqual(int((px.max(1) - px.min(1)).max()), 12, 'só tons de cinza, para o tingimento funcionar')
+
     def test_redoma_segura_as_balas(self):
         bloqueia = [e for e in self.evs if '"CollisionNP"}, "parameters": ["projetil", "deus_escudo"' in tx(e.get('conditions', []))]
         self.assertTrue(bloqueia)
