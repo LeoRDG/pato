@@ -22,7 +22,7 @@ class AnjosNasBordas(unittest.TestCase):
         cls.v = {x['name']: x['value'] for x in cls.o['deus']['variables']}
 
     def test_vao_para_fora_ate_a_borda(self):
-        (orbita,) = [e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions'])]
+        orbita = next(e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions']))  # a presa (a solta é da t160)
         (s,) = [a for a in orbita['actions'] if a['type']['value'] == 'SetXY']
         raio = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
         self.assertEqual(s['parameters'][2],

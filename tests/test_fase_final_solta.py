@@ -69,7 +69,8 @@ class FaseFinalSolta(unittest.TestCase):
         self.assertNotIn('"deus", "cx"', tx(self.corpo[i_pup]['actions']))
 
     def test_investida_parte_de_ponto_sorteado(self):
-        longe = f'(sqrt(pow({CW} / 2, 2) + pow({CH} / 2, 2)) + deus.investida_longe)'
+        # + alcance dos anjinhos: t160 (test_anjos_somem_na_investida)
+        longe = f'(sqrt(pow({CW} / 2, 2) + pow({CH} / 2, 2)) + deus.investida_longe + deus.canal_orbita_raio + deus.canal_vaivem)'
         evs = [e for e in m.todos(self.azul['events']) if '"deus", "etapa", "=", "\\"mira\\""' in tx(e.get('actions', []))]
         self.assertEqual(len(evs), 2, 'depois de sair por baixo e depois de cada corrida')
         for pai in evs:

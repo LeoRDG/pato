@@ -37,7 +37,7 @@ class SoAnjosProtegem(unittest.TestCase):
 
     def test_vai_e_volta(self):
         # o raio (para fora, até as bordas) é testado em test_anjos_nas_bordas (t158)
-        (orbita,) = [e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions'])]
+        orbita = next(e for e in self.rosa['events'] if '"SetXY"}, "parameters": ["canalizador"' in tx(e['actions']))  # a presa (a solta é da t160)
         self.assertIn('canalizador.vaivem_fase', tx(orbita['actions']))
         cria = [e for e in m.todos(self.deus['events']) if '"Create"}, "parameters": ["", "canalizador"' in tx(e.get('actions', []))]
         self.assertEqual(len(cria), 4)

@@ -138802,7 +138802,7 @@
                                 "deus",
                                 "ox",
                                 "=",
-                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe + deus.canal_orbita_raio + deus.canal_vaivem)"
                               ]
                             },
                             {
@@ -138813,7 +138813,29 @@
                                 "deus",
                                 "oy",
                                 "=",
-                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe + deus.canal_orbita_raio + deus.canal_vaivem)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "cx",
+                                "=",
+                                "CameraCenterX(\"\", 0) + deus.ox"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "cy",
+                                "=",
+                                "CameraCenterY(\"\", 0) + deus.oy"
                               ]
                             }
                           ]
@@ -139616,7 +139638,7 @@
                                 "deus",
                                 "ox",
                                 "=",
-                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                                "cos(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe + deus.canal_orbita_raio + deus.canal_vaivem)"
                               ]
                             },
                             {
@@ -139627,7 +139649,29 @@
                                 "deus",
                                 "oy",
                                 "=",
-                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe)"
+                                "sin(deus.investida_pos) * (sqrt(pow(CameraWidth(\"\", 0) / 2, 2) + pow(CameraHeight(\"\", 0) / 2, 2)) + deus.investida_longe + deus.canal_orbita_raio + deus.canal_vaivem)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "cx",
+                                "=",
+                                "CameraCenterX(\"\", 0) + deus.ox"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "deus",
+                                "cy",
+                                "=",
+                                "CameraCenterY(\"\", 0) + deus.oy"
                               ]
                             }
                           ]
@@ -139928,6 +139972,58 @@
                         "clamp(deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + deus.canal_margem, CameraCenterX(\"\", 0) + CameraWidth(\"\", 0) / 2 - deus.canal_margem) - canalizador.Width() / 2",
                         "=",
                         "clamp(deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2), CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + deus.canal_margem, CameraCenterY(\"\", 0) + CameraHeight(\"\", 0) / 2 - deus.canal_margem) - canalizador.Height() / 2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "fase",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "deus",
+                        "investindo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "canalizador",
+                        "=",
+                        "deus.cx + cos(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Width() / 2",
+                        "=",
+                        "deus.cy + sin(canalizador.ang) * (deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2) - canalizador.Height() / 2"
                       ]
                     }
                   ]
