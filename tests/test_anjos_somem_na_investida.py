@@ -28,8 +28,8 @@ class AnjosSomemNaInvestida(unittest.TestCase):
         self.assertNotIn('"canalizador", "ang", "+"', a, 'o giro já foi feito no evento de cima')
         raio = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
         (s,) = [x for x in solta['actions'] if x['type']['value'] == 'SetXY']
-        self.assertEqual(s['parameters'][2], f'deus.cx + cos(canalizador.ang) * {raio} - canalizador.Width() / 2')
-        self.assertEqual(s['parameters'][4], f'deus.cy + sin(canalizador.ang) * {raio} - canalizador.Height() / 2')
+        self.assertEqual(s['parameters'][2], f'deus.cx + cos(canalizador.ang) * canalizador.surgir * {raio} - canalizador.Width() / 2')
+        self.assertEqual(s['parameters'][4], f'deus.cy + sin(canalizador.ang) * canalizador.surgir * {raio} - canalizador.Height() / 2')
         # parte de longe o bastante para nem o anjinho na ponta da órbita aparecer
         azul = m.acha(m.acha(m.folha(d, 'InimigosParaiso')['events'], 'Deus')['events'], 'Anel azul: investida')
         poe = [a['parameters'][3] for e in m.todos(azul['events']) for a in e.get('actions', [])

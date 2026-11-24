@@ -26,9 +26,9 @@ class AnjosNasBordas(unittest.TestCase):
         (s,) = [a for a in orbita['actions'] if a['type']['value'] == 'SetXY']
         raio = '(deus.canal_orbita_raio + deus.canal_vaivem * (1 + sin(TimeFromStart() * deus.canal_vaivem_vel + canalizador.vaivem_fase)) / 2)'
         self.assertEqual(s['parameters'][2],
-                         f'clamp(deus.cx + cos(canalizador.ang) * {raio}, {CX} - {CW} / 2 + deus.canal_margem, {CX} + {CW} / 2 - deus.canal_margem) - canalizador.Width() / 2')
+                         f'clamp(deus.cx + cos(canalizador.ang) * canalizador.surgir * {raio}, {CX} - {CW} / 2 + deus.canal_margem, {CX} + {CW} / 2 - deus.canal_margem) - canalizador.Width() / 2')
         self.assertEqual(s['parameters'][4],
-                         f'clamp(deus.cy + sin(canalizador.ang) * {raio}, {CY} - {CH} / 2 + deus.canal_margem, {CY} + {CH} / 2 - deus.canal_margem) - canalizador.Height() / 2')
+                         f'clamp(deus.cy + sin(canalizador.ang) * canalizador.surgir * {raio}, {CY} - {CH} / 2 + deus.canal_margem, {CY} + {CH} / 2 - deus.canal_margem) - canalizador.Height() / 2')
         self.assertGreaterEqual(self.v['canal_vaivem'], 500, 'chega perto das bordas')
         self.assertIn('canal_margem', self.v)
 
