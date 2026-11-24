@@ -32,7 +32,7 @@ def test_atlas_do_ceu_bate_com_a_grade_e_nao_e_o_do_inferno_recolorido():
         w, h = Image.open(os.path.join(RAIZ, c['atlasImage'])).size
         assert (w, h) == (c['columnCount'] * c['tileSize'], c['rowCount'] * c['tileSize']) and c['tileSize'] == 64
         assert RES[c['atlasImage']]['smoothed'] is False
-    ceu, inferno = img('assets/ceu/tiles/tiles_ceu.png'), img('assets/gandalf_hell/tiles/tiles_inferno.png')
+    ceu, inferno = img('fontes/ceu/tiles/tiles_ceu.png'), img('fontes/gandalf_hell/tiles/tiles_inferno.png')
     assert ceu.shape == inferno.shape
     # um recolorido teria a mesma silhueta; nos enfeites (colunas 13-16) e na parede de fundo ela é outra
     dif = (ceu[..., 3] > 0) != (inferno[..., 3] > 0)
@@ -40,7 +40,7 @@ def test_atlas_do_ceu_bate_com_a_grade_e_nao_e_o_do_inferno_recolorido():
 
 
 def test_terreno_do_ceu_emenda_sem_costura():
-    a = img('assets/ceu/tiles/tiles_ceu.png')
+    a = img('fontes/ceu/tiles/tiles_ceu.png')
     def tile(i):
         return a[i // 17 * T:i // 17 * T + T, i % 17 * T:i % 17 * T + T]
     for o in (0, 51):                                   # as duas variantes do bloco de 9 fatias

@@ -2,7 +2,7 @@ import json, os, re, wave
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOGO = json.load(open(os.path.join(RAIZ, 'jogo.json'), encoding='utf-8'))
-FONTES = os.path.join(RAIZ, 'assets', 'fontes_cc0')
+FONTES = os.path.join(RAIZ, 'fontes', 'fontes_cc0')
 REG = json.load(open(os.path.join(FONTES, 'fontes.json'), encoding='utf-8'))
 TXT = open(os.path.join(FONTES, 'FONTES.txt'), encoding='utf-8').read()
 

@@ -22,7 +22,7 @@ ANIMS = {
     f'{P}/asas_pato': (60, 36, {'idle': 6, 'bater': 6}),
 }
 SOLTAS = {f'{P}/fragmento_1.png': (96, 96), f'{P}/fragmento_2.png': (126, 126), f'{P}/fragmento_3.png': (156, 156),
-          f'{P}/feixe.png': (66, 66), f'{P}/halo.png': (258, 258), f'{P}/anel_luz.png': (30, 30),
+          f'{P}/feixe.png': (66, 66), f'{P}/halo.png': (258, 258),
           f'{P}/queima_borda.png': (192, 96), f'{P}/bg_espaco.png': (1026, 1026), f'{P}/bg_ceu_alto.png': (1026, 1026)}
 OPACAS = {f'{P}/bg_espaco.png', f'{P}/bg_ceu_alto.png', f'{P}/feixe.png'}
 # animações que mantêm o contorno escuro em todo quadro (os clarões de dano, fase e morte não)

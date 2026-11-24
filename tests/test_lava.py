@@ -24,7 +24,7 @@ def tile(atlas, i, lado=T):
 
 
 def test_tiles_de_margem_puxam_a_cor_da_lava_so_do_lado_dela():
-    a = np.array(Image.open(os.path.join(RAIZ, 'assets/gandalf_hell/tiles/tiles_inferno.png')).convert('RGBA'))
+    a = np.array(Image.open(os.path.join(RAIZ, 'fontes/gandalf_hell/tiles/tiles_inferno.png')).convert('RGBA'))
     assert QUENTE <= PALETA_LAVA | QUENTE and len(QUENTE & PALETA_LAVA) >= 7     # as cores quentes são as da própria lava
     quente = lambda px: np.array([[tuple(p[:3]) in QUENTE and p[3] == 255 for p in linha] for linha in px])
     for dest, orig, perto, longe in ((134, 19, np.s_[:, 22:], np.s_[:, :14]), (135, 17, np.s_[:, :10], np.s_[:, 18:]),

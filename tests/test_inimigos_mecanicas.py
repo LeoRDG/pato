@@ -87,7 +87,7 @@ def test_projeteis_novos_e_sons_existem():
         for d in a['directions']:
             for s in d['sprites']:
                 assert os.path.exists(os.path.join(RAIZ, RECURSOS[s['image']]['file'])), s['image']
-    for som in ('som_arremesso', 'som_ping', 'som_laser', 'som_roubo', 'som_levanta'):
+    for som in ('som_ping', 'som_laser', 'som_roubo'):   # som_arremesso e som_levanta saíram na t184 (nada tocava)
         assert os.path.exists(os.path.join(RAIZ, RECURSOS[som + '.wav']['file']))
 
 

@@ -13,7 +13,7 @@ def img(rel):
     return np.array(Image.open(os.path.join(RAIZ, rel)).convert('RGBA')).astype(int)
 
 
-A = img('assets/purgatorio/tiles/tiles_purgatorio.png')
+A = img('fontes/purgatorio/tiles/tiles_purgatorio.png')
 
 
 def tile(i):
@@ -40,7 +40,7 @@ def test_objetos_de_tiles_do_purgatorio():
 def test_nao_e_o_inferno_nem_o_ceu_recolorido():
     """Silhueta diferente dos outros dois atlas nos enfeites, na parede de fundo e nas bordas do terreno."""
     assert A.shape == (288, 544, 4)
-    for outro in ('assets/gandalf_hell/tiles/tiles_inferno.png', 'assets/ceu/tiles/tiles_ceu.png'):
+    for outro in ('fontes/gandalf_hell/tiles/tiles_inferno.png', 'fontes/ceu/tiles/tiles_ceu.png'):
         dif = (A[..., 3] > 0) != (img(outro)[..., 3] > 0)
         assert dif[:, 13 * T:].mean() > 0.12 and dif[6 * T:, :6 * T].mean() > 0.07
     assert (tile(1)[0, :, 3] == 0).any() and (tile(1)[3, :, 3] > 0).all()       # capim irregular por cima
