@@ -285,3 +285,123 @@ som_pulo_ar.wav (pulo no ar: batida de asas; desde a t191 substitui a receita da
                                      https://freesound.org/people/brandondelehoy/sounds/494797/   [Creative Commons 0, baixado em 2026-11-25]
 
 --- fim: sons do pato, tools/t191_sons_pato.py ---
+
+--- início: sons do chefe final, tools/t192_sons_deus.py (gerado, não editar à mão) ---
+
+som_deus_carga.wav (Deus começa um golpe: carga com coro grave)
+  carga2_610562.wav                  "Charge up 2" por BrickDeveloper171 (1,2 s)
+                                     https://freesound.org/people/BrickDeveloper171/sounds/610562/   [Creative Commons 0, baixado em 2026-11-25]
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (tom -25%, por baixo)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_zumbido.wav (zumbido em laço enquanto o pulso carrega)
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (2,4 s a partir de 0,45 s, tom -40%)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+  boom_grave_268084.wav              "Bass Boom" por LordHannes (trecho do meio, só o grave)
+                                     https://freesound.org/people/LordHannes/sounds/268084/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_pulso.wav (pulso de luz sai do olho)
+  boom_cine_255111.wav               "Cinematic_Boom_Rhapsodize.wav" por rhapsodize (2,4 s)
+                                     https://freesound.org/people/rhapsodize/sounds/255111/   [Creative Commons 0, baixado em 2026-11-25]
+  trovao_188767.wav                  "Thunder (Kraków, Poland, 20.05.2013)" por vonz (estalo, 2 s)
+                                     https://freesound.org/people/vonz/sounds/188767/   [Creative Commons 0, baixado em 2026-11-25]
+  sino2_378799.wav                   "BELL.wav" por kgeshev (tom -20%)
+                                     https://freesound.org/people/kgeshev/sounds/378799/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_trava.wav (investida trava a mira)
+  sino2_378799.wav                   "BELL.wav" por kgeshev (tom +40%, 0,6 s)
+                                     https://freesound.org/people/kgeshev/sounds/378799/   [Creative Commons 0, baixado em 2026-11-25]
+  boom_jm_201571.wav                 "JM_FX_Boom 01a.wav" por Julien_Matthey (0,3 s, só o grave)
+                                     https://freesound.org/people/Julien_Matthey/sounds/201571/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_investida.wav (Deus dispara na investida)
+  woosh_fundo_245932.wav             "Deep wooshing.wav" por sophiehall3535 (0,9 s, tom -20%)
+                                     https://freesound.org/people/sophiehall3535/sounds/245932/   [Creative Commons 0, baixado em 2026-11-15]
+  boom_jm_201571.wav                 "JM_FX_Boom 01a.wav" por Julien_Matthey (0,4 s, só o grave)
+                                     https://freesound.org/people/Julien_Matthey/sounds/201571/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_escudo.wav (escudo de Deus quebra)
+  vidro2_244238.wav                  "Glass Smash.wav" por chewiesmissus (1,3 s a partir do estouro)
+                                     https://freesound.org/people/chewiesmissus/sounds/244238/   [Creative Commons 0, baixado em 2026-11-25]
+  golpe_dramatico_222517.wav         "Dramatic Hit" por qubodup (1,5 s)
+                                     https://freesound.org/people/qubodup/sounds/222517/   [Creative Commons 0, baixado em 2026-11-25]
+  sino2_378799.wav                   "BELL.wav" por kgeshev (tom -30%)
+                                     https://freesound.org/people/kgeshev/sounds/378799/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_juizo.wav (o Juízo começa)
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (2,5 s, tom -45%)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+  boom_grave_268084.wav              "Bass Boom" por LordHannes (2,5 s, só o grave)
+                                     https://freesound.org/people/LordHannes/sounds/268084/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_suga.wav (as estrelas são sugadas / o puxão)
+  inspira_181889.wav                 "Whosh - Reversed/Reverbed breath" por PrdiChlp (1,8 s a partir de 0,3 s)
+                                     https://freesound.org/people/PrdiChlp/sounds/181889/   [Creative Commons 0, baixado em 2026-11-25]
+  subida_685256.wav                  "Riser sound effect short.wav" por syntheffects (tom +10%, por baixo)
+                                     https://freesound.org/people/syntheffects/sounds/685256/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_aviso.wav (aviso: sobe até o clarão do Juízo)
+  subida_685256.wav                  "Riser sound effect short.wav" por syntheffects (o último 1,05 s)
+                                     https://freesound.org/people/syntheffects/sounds/685256/   [Creative Commons 0, baixado em 2026-11-25]
+  sino2_378799.wav                   "BELL.wav" por kgeshev (ao contrário, tom -10%)
+                                     https://freesound.org/people/kgeshev/sounds/378799/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_feixe.wav (o feixe do Juízo sai)
+  feixe_luz_362134.wav               "Sci Fi Light Beam" por Jofae (1,9 s)
+                                     https://freesound.org/people/Jofae/sounds/362134/   [Creative Commons 0, baixado em 2026-11-25]
+  boom_cine_255111.wav               "Cinematic_Boom_Rhapsodize.wav" por rhapsodize (2 s)
+                                     https://freesound.org/people/rhapsodize/sounds/255111/   [Creative Commons 0, baixado em 2026-11-25]
+  rajada_369516.wav                  "Energy Blast" por Kinoton (2,4 s)
+                                     https://freesound.org/people/Kinoton/sounds/369516/   [Creative Commons 0, baixado em 2026-11-25]
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (tom -20%, por baixo)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_tele.wav (o pato passa pelo buraco)
+  teleporte2_150950.wav              "teleport.mp3" por outroelison (inteiro, tom -10%)
+                                     https://freesound.org/people/outroelison/sounds/150950/   [Creative Commons 0, baixado em 2026-11-25]
+  boom_jm_201571.wav                 "JM_FX_Boom 01a.wav" por Julien_Matthey (0,3 s, só o grave)
+                                     https://freesound.org/people/Julien_Matthey/sounds/201571/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_horizonte.wav (o horizonte negro aparece)
+  sino_76405.wav                     "Old Church Bell.wav" por dsp9000 (3 s, tom -20%)
+                                     https://freesound.org/people/dsp9000/sounds/76405/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_anel.wav (leva de anéis de luz)
+  sino2_378799.wav                   "BELL.wav" por kgeshev (0,7 s, tom +20%)
+                                     https://freesound.org/people/kgeshev/sounds/378799/   [Creative Commons 0, baixado em 2026-11-25]
+  whoosh_60013.wav                   "Whoosh" por qubodup (tom -30%)
+                                     https://freesound.org/people/qubodup/sounds/60013/   [Creative Commons 0, baixado em 2026-11-12]
+  boom_jm_201571.wav                 "JM_FX_Boom 01a.wav" por Julien_Matthey (0,25 s, só o grave)
+                                     https://freesound.org/people/Julien_Matthey/sounds/201571/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_fase.wav (Deus muda de fase)
+  golpe_dramatico_222517.wav         "Dramatic Hit" por qubodup (3 s)
+                                     https://freesound.org/people/qubodup/sounds/222517/   [Creative Commons 0, baixado em 2026-11-25]
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (tom -30%)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+  sino_76405.wav                     "Old Church Bell.wav" por dsp9000 (tom -40%)
+                                     https://freesound.org/people/dsp9000/sounds/76405/   [Creative Commons 0, baixado em 2026-11-25]
+  trovao_188767.wav                  "Thunder (Kraków, Poland, 20.05.2013)" por vonz (2 s)
+                                     https://freesound.org/people/vonz/sounds/188767/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_morte.wav (Deus morre)
+  boom_grave_268084.wav              "Bass Boom" por LordHannes (5 s)
+                                     https://freesound.org/people/LordHannes/sounds/268084/   [Creative Commons 0, baixado em 2026-11-25]
+  trovao_188767.wav                  "Thunder (Kraków, Poland, 20.05.2013)" por vonz (inteiro)
+                                     https://freesound.org/people/vonz/sounds/188767/   [Creative Commons 0, baixado em 2026-11-25]
+  golpe_dramatico_222517.wav         "Dramatic Hit" por qubodup (4 s)
+                                     https://freesound.org/people/qubodup/sounds/222517/   [Creative Commons 0, baixado em 2026-11-25]
+  vidro2_244238.wav                  "Glass Smash.wav" por chewiesmissus (estouro)
+                                     https://freesound.org/people/chewiesmissus/sounds/244238/   [Creative Commons 0, baixado em 2026-11-25]
+  coro_274121.wav                    "Choir of Voices - Single Chord" por bone666138 (inteiro, entra a 0,4 s)
+                                     https://freesound.org/people/bone666138/sounds/274121/   [Creative Commons 0, baixado em 2026-11-25]
+  sino_76405.wav                     "Old Church Bell.wav" por dsp9000 (tom -30%, aos 1,2 s)
+                                     https://freesound.org/people/dsp9000/sounds/76405/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_deus_dano.wav (a pupila de Deus é acertada)
+  boom_jm_201571.wav                 "JM_FX_Boom 01a.wav" por Julien_Matthey (0,25 s, sem agudo)
+                                     https://freesound.org/people/Julien_Matthey/sounds/201571/   [Creative Commons 0, baixado em 2026-11-25]
+  vidro2_244238.wav                  "Glass Smash.wav" por chewiesmissus (um estalo, tom +30%)
+                                     https://freesound.org/people/chewiesmissus/sounds/244238/   [Creative Commons 0, baixado em 2026-11-25]
+
+--- fim: sons do chefe final, tools/t192_sons_deus.py ---

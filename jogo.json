@@ -11446,6 +11446,166 @@
         "name": "assets/hub/pedestal_arma.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_carga.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_carga.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_zumbido.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_zumbido.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_pulso.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_pulso.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_trava.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_trava.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_investida.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_investida.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_escudo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_escudo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_juizo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_juizo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_suga.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_suga.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_aviso.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_aviso.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_feixe.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_feixe.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_tele.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_tele.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_horizonte.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_horizonte.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_anel.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_anel.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_fase.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_fase.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_morte.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_morte.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/som_deus_dano.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "som_deus_dano.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -73338,6 +73498,54 @@
           "persistentUuid": "19e1404b-37a2-5042-b133-c1c379fb43fc",
           "type": "number",
           "value": 0.6
+        },
+        {
+          "name": "som_forte_volume",
+          "persistentUuid": "2f1f2e20-1464-5f27-9f78-77640c68db15",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "som_variacao",
+          "persistentUuid": "f47fc674-3e43-51eb-9bca-ea97a0a9450e",
+          "type": "number",
+          "value": 0.03
+        },
+        {
+          "name": "som_canal",
+          "persistentUuid": "d2fd983e-17fa-579f-b6ae-4e76cec377c5",
+          "type": "number",
+          "value": 7
+        },
+        {
+          "name": "zumbido_volume",
+          "persistentUuid": "10422c7d-6fbd-57e5-b9ff-d38853b51507",
+          "type": "number",
+          "value": 55
+        },
+        {
+          "name": "zumbido_tom_ini",
+          "persistentUuid": "177ba341-33fc-5ab4-bee6-7e3fd6e01ad0",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "zumbido_tom_fim",
+          "persistentUuid": "82e0c877-c921-5f01-970b-5c7e3b47d65d",
+          "type": "number",
+          "value": 1.25
+        },
+        {
+          "name": "dano_som_volume",
+          "persistentUuid": "2f64c6c8-ec59-541e-b58c-bcdc92e1166e",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "dano_som_espera",
+          "persistentUuid": "274eddca-d4e5-5360-9d81-53c94249b8a5",
+          "type": "number",
+          "value": 0.12
         }
       ],
       "effects": [
@@ -98876,6 +99084,150 @@
                           "parameters": [
                             "",
                             "som_bhop.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_carga.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_zumbido.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_pulso.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_trava.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_investida.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_escudo.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_juizo.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_suga.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_aviso.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_feixe.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_tele.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_horizonte.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_anel.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_fase.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_morte.wav"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PreloadSound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_dano.wav"
                           ]
                         }
                       ]
@@ -137656,6 +138008,15 @@
                         "=",
                         "deus.z_base + 0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "deus",
+                        "\"som_dano\""
+                      ]
                     }
                   ]
                 }
@@ -138788,6 +139149,47 @@
                         "\"dano\""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"som_dano\"",
+                            ">",
+                            "deus.dano_som_espera"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "som_deus_dano.wav",
+                            "",
+                            "deus.dano_som_volume",
+                            "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "deus",
+                            "\"som_dano\""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -139140,10 +139542,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_escudo.wav",
                         "",
                         "deus.som_volume",
-                        "deus.escudo_quebra_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -139886,6 +140288,27 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "deus.som_canal"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_deus_fase.wav",
+                        "",
+                        "deus.som_forte_volume",
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -141192,10 +141615,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_carga.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     },
                     {
@@ -141205,6 +141628,19 @@
                       "parameters": [
                         "conv_luz",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundOnChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "som_deus_zumbido.wav",
+                        "deus.som_canal",
+                        "yes",
+                        "0",
+                        "deus.zumbido_tom_ini"
                       ]
                     }
                   ],
@@ -141402,6 +141838,28 @@
                         "conv_v",
                         "=",
                         "deus.conv_vel_min + (deus.conv_vel_max - deus.conv_vel_min) * pow(min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga), 2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "deus.som_canal",
+                        "=",
+                        "deus.zumbido_volume * sqrt(min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSoundChannelPitch"
+                      },
+                      "parameters": [
+                        "",
+                        "deus.som_canal",
+                        "=",
+                        "deus.zumbido_tom_ini + (deus.zumbido_tom_fim - deus.zumbido_tom_ini) * min(1, deus.ObjectTimerElapsedTime(\"golpe\") / deus.pulso_carga)"
                       ]
                     }
                   ],
@@ -141782,10 +142240,19 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_pulso.wav",
                         "",
-                        "deus.som_volume",
-                        "deus.pulso_tom"
+                        "deus.som_forte_volume",
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "deus.som_canal"
                       ]
                     }
                   ],
@@ -142487,10 +142954,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_carga.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -142975,10 +143442,10 @@
                           },
                           "parameters": [
                             "",
-                            "som_luz.wav",
+                            "som_deus_trava.wav",
                             "",
                             "deus.som_volume",
-                            "deus.investida_tom"
+                            "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                           ]
                         }
                       ]
@@ -143176,10 +143643,10 @@
                           },
                           "parameters": [
                             "",
-                            "som_dash.wav",
+                            "som_deus_investida.wav",
                             "",
                             "deus.som_volume",
-                            "1"
+                            "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                           ]
                         }
                       ]
@@ -144358,10 +144825,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_escudo.wav",
                         "",
                         "deus.som_volume",
-                        "deus.escudo_quebra_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145030,10 +145497,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_juizo.wav",
                         "",
                         "deus.som_volume",
-                        "deus.juizo_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145146,10 +145613,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_suga.wav",
                         "",
                         "deus.som_volume",
-                        "deus.juizo_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145251,10 +145718,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_aviso.wav",
                         "",
                         "deus.som_volume",
-                        "deus.juizo_aviso_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145378,10 +145845,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_feixe.wav",
                         "",
-                        "deus.som_volume",
-                        "1"
+                        "deus.som_forte_volume",
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145507,10 +145974,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_dash.wav",
+                        "som_deus_tele.wav",
                         "",
                         "deus.som_volume",
-                        "deus.juizo_tele_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -145834,10 +146301,10 @@
                           },
                           "parameters": [
                             "",
-                            "som_luz.wav",
+                            "som_deus_horizonte.wav",
                             "",
                             "deus.som_volume",
-                            "deus.juizo_horizonte_tom"
+                            "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                           ]
                         }
                       ]
@@ -147617,10 +148084,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_anel.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ],
@@ -148021,10 +148488,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_suga.wav",
                         "",
                         "deus.som_volume",
-                        "deus.puxao_tom"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
@@ -148557,10 +149024,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_anel.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ],
@@ -148813,10 +149280,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_anel.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ],
@@ -149069,10 +149536,10 @@
                       },
                       "parameters": [
                         "",
-                        "som_luz.wav",
+                        "som_deus_anel.wav",
                         "",
                         "deus.som_volume",
-                        "1"
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ],
@@ -149834,6 +150301,27 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "deus.som_canal"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_deus_morte.wav",
+                        "",
+                        "deus.som_forte_volume",
+                        "RandomFloatInRange(1 - deus.som_variacao, 1 + deus.som_variacao)"
                       ]
                     }
                   ]
