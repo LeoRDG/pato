@@ -12169,6 +12169,30 @@
           "persistentUuid": "248cc82e-70eb-50c2-a299-3f19d5674988",
           "type": "number",
           "value": 55
+        },
+        {
+          "name": "pulo_ar_forca",
+          "persistentUuid": "e37ac9c4-b271-5d3d-a193-3ff1e540cbac",
+          "type": "number",
+          "value": 1.25
+        },
+        {
+          "name": "pulo_ar_salvo",
+          "persistentUuid": "f4c9d24d-75e5-51f2-9998-2c20cbac735a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pulo_ar_quadros",
+          "persistentUuid": "1caba294-a55b-54ab-ad7a-f8fc4ef23f21",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pulo_ar_ativo",
+          "persistentUuid": "8257ee92-9f0e-5502-a1cc-e912237b386d",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -99893,6 +99917,50 @@
                                 "pato.pulo_ar_som_volume",
                                 "RandomFloatInRange(1 - pato.pulo_som_variacao, 1 + pato.pulo_som_variacao)"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "pulo_ar_salvo",
+                                "=",
+                                "pato.PlatformerObject::JumpSpeed()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::JumpSpeed"
+                              },
+                              "parameters": [
+                                "pato",
+                                "PlatformerObject",
+                                "=",
+                                "pato.PlatformerObject::JumpSpeed() * pato.pulo_ar_forca"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "pulo_ar_quadros",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "pato",
+                                "pulo_ar_ativo",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         }
@@ -99986,6 +100054,77 @@
                         "pato",
                         "=",
                         "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "pulo_ar_ativo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "pulo_ar_quadros",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "pulo_ar_quadros",
+                            ">=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::JumpSpeed"
+                          },
+                          "parameters": [
+                            "pato",
+                            "PlatformerObject",
+                            "=",
+                            "pato.pulo_ar_salvo"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "pulo_ar_ativo",
+                            "False",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
