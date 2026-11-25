@@ -64,8 +64,16 @@ points = Σ kills (placar.pts_abate + enemy max HP × placar.pts_vida_inimigo)
 - **A corner hint** shows the current name, or asks the player to choose one. Players who never choose still get an automatic `Pato NNNN` on their first submission.
 - **The name is saved** right away with the progress.
 
+### Board in the hub (`tools/t206_placar_no_hub.py`)
+- **Portals:** the three hub portals sit side by side on the ground (Inferno, Purgatorio, Paraiso), and the ledges that held the upper two are gone.
+- **Entering:** standing on a hub portal no longer enters it; you press E. Portals inside levels still enter on their own.
+- **Boxes:** while the duck stands on a hub portal, two boxes appear above it: fastest times and highest points for that level.
+  - Each shows the top `hub_placar.top_n`, with the player's name in gold and the player's local record at the bottom.
+  - The boards are fetched when the duck steps on the portal, once per hub visit (or after `hub_placar.recarga` seconds).
+  - With the global board off or down, the boxes say so and still show the local record.
+- **Layout:** sizes in `hub_placar.*`; colors are the `ui_cor_*` variables.
+
 ### Still missing in the game
-- **Board in the hub:** show the board next to each level's portal.
 - **"Restart from the beginning" option at the hub portal:** it clears the level's return point. Today, a player who leaves a level midway can't do a valid run of it again until they clear it.
 
 ---
