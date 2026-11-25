@@ -1,4 +1,4 @@
-"""Loja do Hub (catálogo de upgrades) e mercador como inimigo secreto: estrutura no jogo.json."""
+"""Loja do Hub (catálogo de upgrades) e o mercador (que deixou de ser inimigo na t207): estrutura no jogo.json."""
 import json, os
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,11 +48,11 @@ def test_catalogo_tem_campos():
 
 def test_trader_variaveis():
     t = obj('trader')
-    assert ovar(t, 'estado')['value'] == 'calmo'
-    assert ovar(t, 'paciencia')['value'] == 1
-    assert ovar(t, 'multa')['value'] == 0.5
-    assert ovar(t, 'max_vida')['value'] > 10
-    assert glob('trader_morto')['value'] is False
+    assert ovar(t, 'loja_raio')['value'] > 0
+    # o mercador não é mais inimigo (t207): sem hostilidade, sem multa e sem trader_morto
+    for v in ('paciencia', 'multa', 'dano_hostil'):
+        assert not any(x['name'] == v for x in t['variables']), v
+    assert not any(v['name'] == 'trader_morto' for v in JOGO['variables'])
 
 
 def test_objetos_loja_existem():
@@ -184,12 +184,12 @@ def test_contato_ignora_calmo():
     assert any(a['parameters'][:4] == ['pato', 'ultimo_agressor', '=', 'projetil_inimigo.origem'] for a in bala['actions'])
 
 
-def test_hostil_fecha_loja():
-    merc = list(anda([_grupo_loja('Mercador')]))
-    vira = next(e for e in merc if any(a['parameters'][:4] == ['trader', 'estado', '=', '"hostil"'] for a in e.get('actions') or []))
-    sub = list(anda([vira]))
-    assert any(c['parameters'][:2] == ['loja_aberta', 'True'] for s in sub for c in s.get('conditions') or [])
-    assert any(a['parameters'][:3] == ['loja_acao', '=', '"fechar"'] for s in sub for a in s.get('actions') or [])
+def test_mercador_nao_e_inimigo():
+    for g in JOGO['objectsGroups']:
+        if g['name'] in ('Inimigo', 'Personagem'):
+            assert 'trader' not in [o['name'] for o in g['objects']], g['name']
+    merc = json.dumps(_grupo_loja('Mercador'))
+    assert '"hostil"' not in merc.replace('\\', '') and 'trader_morto' not in merc
     # quem fecha de fato (Abrir e fechar) destrava o pato
     fecha = next(e for e in anda([_grupo_loja('Abrir e fechar')])
                  if any(c['parameters'][:3] == ['loja_acao', '=', '"fechar"'] for c in e.get('conditions') or []))
@@ -197,22 +197,12 @@ def test_hostil_fecha_loja():
     assert any(a['parameters'][:2] == ['loja_aberta', 'False'] for a in fecha['actions'])
 
 
-def test_multa_nao_negativa():
+def test_sem_multa_do_mercador():
     morte = next(e for e in anda(ext('Jogador')) if e.get('name') == 'Morte do Pato')
-    multa = [e for e in anda([morte]) if any(c['parameters'][:4] == ['pato', 'ultimo_agressor', '=', '"trader"']
-                                             for c in e.get('conditions') or [])]
-    assert len(multa) == 1
-    acts = {a['parameters'][0] if a['type']['value'] == 'SetNumberVariable' else a['parameters'][1]: a['parameters'][-1]
-            for a in multa[0]['actions']}
-    assert 'trader.multa' in acts['moedas_perdidas']
-    assert acts['moedas_total'].replace(' ', '').startswith('max(0,')
-
-
-def test_ganchos_vazios():
+    assert not [e for e in anda([morte]) if any(c['parameters'][:4] == ['pato', 'ultimo_agressor', '=', '"trader"']
+                                                 for c in e.get('conditions') or [])]
     nomes = [e.get('name') for e in anda([_grupo_loja('Mercador')])]
-    assert 'Ataques do trader' in nomes and 'Quando o trader morre' in nomes
-    assert any(a['type']['value'] == 'SetBooleanVariable' and a['parameters'][:2] == ['trader_morto', 'True']
-               for e in anda([_grupo_loja('Mercador')]) for a in e.get('actions') or [])
+    assert 'Ataques do trader' not in nomes and 'Quando o trader morre' not in nomes
 
 
 # ------------------------------------------------------------------ Revisão final
@@ -236,13 +226,6 @@ def test_clique_so_compra_sobre_linha():
 def test_requer_aceita_arma():
     menu = json.dumps(_grupo_loja('Menu'))
     assert 'armas[loja_req]' in menu
-
-
-def test_barra_rastro_encolhe():
-    barra = list(anda(ext('HUD')))
-    assert any(a['type']['value'] == 'ResizableCapability::ResizableBehavior::SetWidth' and a['parameters'][0] == 'hud_boss_rastro'
-               and a['parameters'][2] == '-' and 'trader.rastro_vel' in a['parameters'][3]
-               for e in barra for a in e.get('actions') or [])
 
 
 # ------------------------------------------------------------------ Bug: Or com condição de objeto filtrava o pato

@@ -22,7 +22,7 @@ class BarraChefes(unittest.TestCase):
         cls.barras = acha(hud['events'], 'Barras de chefe')
 
     def test_um_subgrupo_para_os_chefes(self):
-        self.assertEqual([g['name'] for g in self.barras['events']], ['Chefes', 'Mercador'])
+        self.assertEqual([g['name'] for g in self.barras['events']], ['Chefes'])   # o mercador não é mais inimigo (t207)
         txt = json.dumps(self.barras['events'][0])
         self.assertNotIn('demonio_chefe', txt)
         self.assertNotIn('cutulu', txt)

@@ -27916,52 +27916,10 @@
           "value": "roxo"
         },
         {
-          "name": "paciencia",
-          "persistentUuid": "846121a6-da74-444f-8dba-afce66934bfb",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "golpes",
-          "persistentUuid": "3a21e4f9-6260-44c1-b0cd-5eeeb516b69c",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "vida_vista",
-          "persistentUuid": "88fa6837-6975-4e26-b7f7-37ee6feb587a",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "multa",
-          "persistentUuid": "57dad380-d7c4-469a-b0aa-7f20ebfc2590",
-          "type": "number",
-          "value": 0.5
-        },
-        {
-          "name": "dano_hostil",
-          "persistentUuid": "58647903-86d9-44c3-8dfe-d1be570e9185",
-          "type": "number",
-          "value": 20
-        },
-        {
           "name": "loja_raio",
           "persistentUuid": "6c0df8aa-3692-4efd-8ce3-c0211adad483",
           "type": "number",
           "value": 160
-        },
-        {
-          "name": "nome_barra",
-          "persistentUuid": "05bcabb1-e6b5-4c46-ae7b-a1bf8b66c6a7",
-          "type": "string",
-          "value": "Mercador"
-        },
-        {
-          "name": "rastro_vel",
-          "persistentUuid": "973b8e94-e04d-462f-8bc1-228ec9e6d48b",
-          "type": "number",
-          "value": 300
         },
         {
           "name": "invulneravel",
@@ -77305,9 +77263,6 @@
           "name": "voador"
         },
         {
-          "name": "trader"
-        },
-        {
           "name": "condenado_azul"
         },
         {
@@ -77377,9 +77332,6 @@
         },
         {
           "name": "sapo"
-        },
-        {
-          "name": "trader"
         },
         {
           "name": "pigman"
@@ -78500,12 +78452,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "trader_morto",
-      "persistentUuid": "3b84cda9-3222-489f-93ca-4630fb61ed15",
-      "type": "boolean",
-      "value": false
     },
     {
       "name": "reaplicar_upgrades",
@@ -80286,7 +80232,7 @@
                 "        if (x && typeof x === \"object\" && !Array.isArray(x)) { for (const k in x) poe(v.getChild(k), x[k]); }",
                 "        else v.fromJSObject(x);",
                 "      };",
-                "      for (const k of [\"moedas_total\", \"mortes\", \"trader_morto\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (k in s && k !== \"ultimo_hub\") poe(V.get(k), s[k]);",
+                "      for (const k of [\"moedas_total\", \"mortes\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (k in s && k !== \"ultimo_hub\") poe(V.get(k), s[k]);",
                 "      if (typeof s.ultimo_hub === \"string\" && jogo.hasScene(s.ultimo_hub)) V.get(\"ultimo_hub\").setString(s.ultimo_hub);",
                 "    }",
                 "  }",
@@ -106668,7 +106614,7 @@
                 "    S.salva = () => {",
                 "      try {",
                 "        const o = { versao: 1 };",
-                "        for (const k of [\"moedas_total\", \"mortes\", \"trader_morto\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (V.has(k)) o[k] = V.get(k).toJSObject();",
+                "        for (const k of [\"moedas_total\", \"mortes\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (V.has(k)) o[k] = V.get(k).toJSObject();",
                 "        localStorage.setItem(\"pato_save\", JSON.stringify(o));",
                 "      } catch (e) {}",
                 "    };",
@@ -116539,199 +116485,6 @@
                     }
                   ],
                   "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Mercador",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "trader",
-                            "estado",
-                            "=",
-                            "\"hostil\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "trader",
-                            "morto",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_boss_trilho",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_boss_fill",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Show"
-                          },
-                          "parameters": [
-                            "hud_boss_nome",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                          },
-                          "parameters": [
-                            "hud_boss_fill",
-                            "Resizable",
-                            "=",
-                            "hud_boss_trilho.Width() * clamp(trader.vida / trader.max_vida, 0, 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_boss_fill",
-                            "=",
-                            "hud_boss_trilho.X()",
-                            "=",
-                            "hud_boss_trilho.Y()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_boss_rastro",
-                            "=",
-                            "hud_boss_trilho.X()",
-                            "=",
-                            "hud_boss_trilho.Y()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "hud_boss_nome",
-                            "Text",
-                            "=",
-                            "trader.nome_barra"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetXY"
-                          },
-                          "parameters": [
-                            "hud_boss_nome",
-                            "=",
-                            "hud_boss_trilho.X() + hud_boss_trilho.Width() / 2 - hud_boss_nome.Width() / 2",
-                            "=",
-                            "hud_boss_trilho.Y() - 30"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "hud_boss_rastro.Width()",
-                                ">",
-                                "hud_boss_fill.Width()"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                              },
-                              "parameters": [
-                                "hud_boss_rastro",
-                                "Resizable",
-                                "-",
-                                "trader.rastro_vel * TimeDelta()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "hud_boss_rastro.Width()",
-                                "<",
-                                "hud_boss_fill.Width()"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                              },
-                              "parameters": [
-                                "hud_boss_rastro",
-                                "Resizable",
-                                "=",
-                                "hud_boss_fill.Width()"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
                 }
               ],
               "parameters": []
@@ -118711,232 +118464,6 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneJustBegins"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "vida_vista",
-                    "=",
-                    "trader.vida"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "estado",
-                    "=",
-                    "\"calmo\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "vida",
-                    "<",
-                    "trader.vida_vista"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "golpes",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "vida_vista",
-                    "=",
-                    "trader.vida"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "estado",
-                    "=",
-                    "\"calmo\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "golpes",
-                    ">=",
-                    "trader.paciencia"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "estado",
-                    "=",
-                    "\"hostil\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "dano",
-                    "=",
-                    "trader.dano_hostil"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "trader",
-                    "Animation",
-                    "=",
-                    "\"idle\""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "loja_aberta",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "loja_acao",
-                        "=",
-                        "\"fechar\""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Ataques do trader",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "trader",
-                    "morto",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "trader_morto",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Quando o trader morre",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [],
-                  "parameters": []
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "trader",
