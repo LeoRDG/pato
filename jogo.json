@@ -12193,6 +12193,12 @@
           "persistentUuid": "8257ee92-9f0e-5502-a1cc-e912237b386d",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "tiro_ombro_frac",
+          "persistentUuid": "efab62cb-af24-5572-9e4e-79c838bfc828",
+          "type": "number",
+          "value": 0.68
         }
       ],
       "effects": [],
@@ -13146,6 +13152,18 @@
           "persistentUuid": "4be9137c-4b09-4b24-96a8-5884cb7b6a8a",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "rcx",
+          "persistentUuid": "90a26ac8-137d-51a1-b17d-8d029a176848",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "rcy",
+          "persistentUuid": "f0fbe1e1-804f-5ce1-a161-7849e1b65971",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -79587,6 +79605,18 @@
           "persistentUuid": "fb5893e1-2c3c-5697-8d49-e6d733743605",
           "type": "number",
           "value": 60
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "000c3e92-64b0-5b6f-b876-f44789974c88",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "fda3b8c9-cb5b-5862-ae0f-2ddd8c34570c",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -81211,6 +81241,18 @@
           "persistentUuid": "79117e57-9595-567a-bfe2-8b722a04c286",
           "type": "number",
           "value": 60
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "aafed136-5dce-55d2-b032-6dd970a92468",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "274e79c2-3ef6-5ff8-b2a9-9cb91610f682",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -82848,6 +82890,18 @@
           "persistentUuid": "cc9c3c79-0c77-5a47-bb21-61ff1612910d",
           "type": "number",
           "value": 60
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "8d090950-c02f-5cfd-b589-1848a1f67aa2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "2320c055-6606-535a-83d6-14d31a94a5f4",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -84413,6 +84467,18 @@
           "persistentUuid": "741d0612-7de0-5ea2-bbc1-0d355211d4ce",
           "type": "number",
           "value": 220
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "92a54ff5-4698-563f-b703-64b60f4c6e23",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "ce342585-be40-5b39-ab3e-f4b3d0538f27",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -87704,6 +87770,18 @@
           "persistentUuid": "234266c1-858b-5f3b-b215-967336133a78",
           "type": "number",
           "value": 3020
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "eefc3921-2482-591d-9c39-4c0f94d30215",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "ad1f4c9d-cafb-5a81-938d-871576197b9f",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -91359,6 +91437,18 @@
         {
           "name": "parede_n",
           "persistentUuid": "bb8ddeea-d602-5830-8ca5-2d1809af867a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "5ace0e94-17bf-597d-9a98-93a6dc08bf93",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "5e26df90-1a17-5680-abd2-8cc91d020544",
           "type": "number",
           "value": 0
         }
@@ -96745,6 +96835,18 @@
           "persistentUuid": "503e547f-1c82-50a2-a1c1-d77665495638",
           "type": "number",
           "value": 260
+        },
+        {
+          "name": "tiro_hx",
+          "persistentUuid": "26eecdb1-bcd2-5967-8781-a3724ba6634b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tiro_hy",
+          "persistentUuid": "7c3b41d5-7b15-5bdd-a7ff-76cdacf0b509",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -107290,6 +107392,28 @@
                     },
                     {
                       "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "rcx",
+                        "=",
+                        "bocal_x - mira_lado * cos(mira_a) * max(0, (bocal_x - pato.CenterX()) * mira_lado * cos(mira_a) + (bocal_y - (pato.Y() + pato.Height() * pato.tiro_ombro_frac)) * sin(mira_a))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "rcy",
+                        "=",
+                        "bocal_y - sin(mira_a) * max(0, (bocal_x - pato.CenterX()) * mira_lado * cos(mira_a) + (bocal_y - (pato.Y() + pato.Height() * pato.tiro_ombro_frac)) * sin(mira_a))"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
@@ -107372,6 +107496,86 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Group",
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Varredura da bala (queima-roupa e bala rápida)",
+              "source": "",
+              "parameters": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "iniciado",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RaycastToPosition"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "projetil.rcx",
+                        "projetil.rcy",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        "tiro_hx",
+                        "tiro_hy",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Inimigo",
+                        "bala_serie",
+                        "!=",
+                        "projetil.serie"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "=",
+                        "tiro_hx - projetil.Width() / 2",
+                        "=",
+                        "tiro_hy - projetil.Height() / 2"
+                      ]
+                    }
+                  ],
+                  "object": "projetil"
+                }
+              ]
             },
             {
               "colorB": 228,
@@ -108476,6 +108680,28 @@
                         "py",
                         "=",
                         "projetil.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "rcx",
+                        "=",
+                        "projetil.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "rcy",
+                        "=",
+                        "projetil.CenterY()"
                       ]
                     }
                   ]
