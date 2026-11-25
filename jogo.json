@@ -11606,6 +11606,106 @@
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/musica/resultado.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_resultado",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/hub_inferno.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_hub_inferno",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/hub_purgatorio.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_hub_purgatorio",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/hub_paraiso.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_hub_paraiso",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/inferno.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_inferno",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/inferno_chefe.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_inferno_chefe",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/purgatorio.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_purgatorio",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/purgatorio_chefe.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_purgatorio_chefe",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/paraiso.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_paraiso",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/musica/paraiso_chefe.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "musica_paraiso_chefe",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ]
   },
@@ -80163,6 +80263,55 @@
           "value": 235
         }
       ]
+    },
+    {
+      "name": "musica",
+      "persistentUuid": "e175a427-10da-5f9d-b338-b366826a5cfa",
+      "type": "structure",
+      "children": [
+        {
+          "name": "volume",
+          "persistentUuid": "22018724-4da2-50e9-9747-2cc559543bda",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "ligada",
+          "persistentUuid": "551b8505-ed8a-5977-85a0-243d102d6a89",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "fade",
+          "persistentUuid": "801ad942-d157-5895-b622-cd3464178e7f",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "fade_chefe",
+          "persistentUuid": "b1dc2d2e-fc67-59d9-83ad-82f3f8070457",
+          "type": "number",
+          "value": 1.5
+        },
+        {
+          "name": "fade_volta",
+          "persistentUuid": "afd1ac58-95a9-54c0-90e1-cba17b98719f",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "espera_chefe",
+          "persistentUuid": "08a30ea3-40f3-5c17-ba21-8f4c2ab6fcd0",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "volume_chefe",
+          "persistentUuid": "91b9ccbf-d7b4-5a37-bf52-8445c57b87c4",
+          "type": "number",
+          "value": 100
+        }
+      ]
     }
   ],
   "layouts": [
@@ -80770,6 +80919,24 @@
           "persistentUuid": "fda3b8c9-cb5b-5862-ae0f-2ddd8c34570c",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "98a1926b-3a38-5a61-8bce-5ce284e07836",
+          "type": "string",
+          "value": "musica_hub_inferno"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "8de183f5-58f0-56c7-8b20-bd2c3e78bfbf",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "039430be-6030-5c1b-b2ae-f6c664ee9fdf",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -81822,6 +81989,13 @@
           "include": {
             "includeConfig": 0
           },
+          "target": "Musica"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "Loja"
         }
       ],
@@ -82421,6 +82595,24 @@
           "persistentUuid": "274e79c2-3ef6-5ff8-b2a9-9cb91610f682",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "d0833d8d-8948-5e4e-8657-a878880e1de6",
+          "type": "string",
+          "value": "musica_hub_purgatorio"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "4d706b22-8719-5044-ac31-c2b99a063019",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "ea944f6c-5467-5ba2-ab0d-d7d54322ce10",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -83486,6 +83678,13 @@
           "include": {
             "includeConfig": 0
           },
+          "target": "Musica"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "Loja"
         }
       ],
@@ -84085,6 +84284,24 @@
           "persistentUuid": "2320c055-6606-535a-83d6-14d31a94a5f4",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "045a3193-1895-58da-af1c-9cd467ee42b0",
+          "type": "string",
+          "value": "musica_hub_paraiso"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "e9540e08-41cf-5c8d-b866-3a1c01acc14b",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "d457f5c5-ce72-5b70-a1ca-63898491693c",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -85084,6 +85301,13 @@
           "include": {
             "includeConfig": 0
           },
+          "target": "Musica"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "Loja"
         }
       ],
@@ -85677,6 +85901,30 @@
           "persistentUuid": "ce342585-be40-5b39-ab3e-f4b3d0538f27",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "35a0eb07-b590-51f0-bbaf-40d86eabf282",
+          "type": "string",
+          "value": "musica_inferno"
+        },
+        {
+          "name": "musica_chefe",
+          "persistentUuid": "f31ef477-e391-5294-adbe-b06de63478fd",
+          "type": "string",
+          "value": "musica_inferno_chefe"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "f42835c2-bc08-51bc-a7cd-86dd40c00f46",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "2f01df37-2115-5c49-8f86-f8eaaa10b45f",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -88539,6 +88787,13 @@
             "includeConfig": 0
           },
           "target": "Portais"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Musica"
         }
       ],
       "layers": [
@@ -88980,6 +89235,30 @@
           "persistentUuid": "ad1f4c9d-cafb-5a81-938d-871576197b9f",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "6ae515da-d9d6-5139-af8d-fb8adabb33bd",
+          "type": "string",
+          "value": "musica_purgatorio"
+        },
+        {
+          "name": "musica_chefe",
+          "persistentUuid": "ee4c853f-1431-56af-80fb-6ee9b495e4a5",
+          "type": "string",
+          "value": "musica_purgatorio_chefe"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "ab482a68-1b13-510a-995b-91d323e875bc",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "e36b3e9e-7023-582f-8c78-03a46ec1182e",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -92100,6 +92379,13 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Musica"
         }
       ],
       "layers": [
@@ -92649,6 +92935,30 @@
           "persistentUuid": "5e26df90-1a17-5680-abd2-8cc91d020544",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "14a9c390-fa06-54cf-a884-dccd1f7ee169",
+          "type": "string",
+          "value": "musica_paraiso"
+        },
+        {
+          "name": "musica_chefe",
+          "persistentUuid": "9bdaebd4-ca1b-5850-af51-2c3f442ec794",
+          "type": "string",
+          "value": "musica_paraiso_chefe"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "f4e01eb5-1120-53e0-a8fc-bdb7f5cbef97",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "0506182c-4417-5769-b6d6-75953b21609a",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -97269,6 +97579,13 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Musica"
         }
       ],
       "layers": [
@@ -100033,6 +100350,24 @@
           "persistentUuid": "a117b4d1-7234-5877-bd31-8830ae858891",
           "type": "string",
           "value": "Hub"
+        },
+        {
+          "name": "musica",
+          "persistentUuid": "14126f33-fa13-50b6-952c-47d62ded9fc1",
+          "type": "string",
+          "value": "musica_resultado"
+        },
+        {
+          "name": "musica_volume",
+          "persistentUuid": "a5219a94-d12f-5056-98bb-edc259fea1ae",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "musica_chefe_ativo",
+          "persistentUuid": "8ac54514-b1e7-5abf-b912-ea6bd4e25fd4",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [],
@@ -100275,6 +100610,13 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Musica"
         }
       ],
       "layers": [
@@ -179520,6 +179862,205 @@
                 "  }",
                 "  for (const id in st.textos) if (!usados.has(id)) st.textos[id].hide(true);",
                 "} catch (e) { /* o placar do hub nunca trava o jogo */ }"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Inferno",
+      "name": "Musica",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Música",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "musica_chefe_ativo",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Chefes",
+                    "barra_ativa",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "pato",
+                    "Chefes",
+                    "Chefes.barra_dist",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Chefes",
+                    "morto",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "musica_chefe_ativo",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "try {",
+                "  // Música (t209): a faixa da cena (variável de cena musica) em loop; com musica_chefe_ativo ligada troca para a",
+                "  // de chefe (musica_chefe), no mesmo ponto da música. Números na variável global musica.*.",
+                "  const jogo = runtimeScene.getGame();",
+                "  const G = jogo.getVariables().get(\"musica\");",
+                "  const n = (k) => G.getChild(k).getAsNumber();",
+                "  const SV = runtimeScene.getVariables();",
+                "  const txt = (k) => (SV.has(k) ? SV.get(k).getAsString() : \"\");",
+                "  const M = gdjs._musica || (gdjs._musica = { faixas: {}, base: null, chefe: null, ultimaLuta: -1e9, geral: -1 });",
+                "  M.jogo = jogo;",
+                "  M.cena = runtimeScene;",
+                "  if (!M.ctx) {",
+                "    // contexto próprio: o \"parar sons ao começar\" das cenas (Howler.stop) não corta a música",
+                "    const C = window.AudioContext || window.webkitAudioContext;",
+                "    if (!C) return;",
+                "    M.ctx = new C();",
+                "    M.mestre = M.ctx.createGain();",
+                "    M.mestre.gain.value = 0;",
+                "    M.mestre.connect(M.ctx.destination);",
+                "    // o navegador só deixa tocar depois da primeira tecla/clique",
+                "    const destrava = () => { if (M.ctx.state !== \"running\") M.ctx.resume().catch(() => {}); };",
+                "    for (const e of [\"keydown\", \"pointerdown\", \"mousedown\", \"touchend\", \"click\"]) document.addEventListener(e, destrava, true);",
+                "    M.carrega = (nome) => {",
+                "      if (M.faixas[nome]) return M.faixas[nome];",
+                "      const f = (M.faixas[nome] = { nome, buf: null, erro: false });",
+                "      const rl = jogo.getResourceLoader();",
+                "      const r = rl.getResource(nome);",
+                "      if (!r) { f.erro = true; console.warn(\"musica: recurso não existe\", nome); return f; }",
+                "      fetch(rl.getFullUrl(r.file))",
+                "        .then((x) => x.arrayBuffer())",
+                "        .then((b) => M.ctx.decodeAudioData(b))",
+                "        .then((buf) => { f.buf = buf; })",
+                "        .catch((e) => { f.erro = true; console.warn(\"musica: não carregou\", nome, e); });",
+                "      return f;",
+                "    };",
+                "    // começa uma faixa em silêncio; com \"junto\" começa no mesmo ponto (proporcional) da outra",
+                "    M.toca = (f, junto) => {",
+                "      const g = M.ctx.createGain();",
+                "      g.gain.value = 0;",
+                "      g.connect(M.mestre);",
+                "      const src = M.ctx.createBufferSource();",
+                "      src.buffer = f.buf;",
+                "      src.loop = true;",
+                "      src.connect(g);",
+                "      let pos = 0;",
+                "      if (junto) {",
+                "        const d = junto.f.buf.duration;",
+                "        pos = ((((M.ctx.currentTime - junto.t0) % d) + d) % d) / d * f.buf.duration;",
+                "      }",
+                "      src.start(0, pos);",
+                "      return { f, nome: f.nome, g, src, t0: M.ctx.currentTime - pos, alvo: -1 };",
+                "    };",
+                "    M.rampa = (v, alvo, tempo) => {",
+                "      if (Math.abs(v.alvo - alvo) < 1e-4) return;",
+                "      const t = M.ctx.currentTime;",
+                "      v.g.gain.cancelScheduledValues(t);",
+                "      v.g.gain.setValueAtTime(v.alvo < 0 ? 0 : v.g.gain.value, t);",
+                "      v.g.gain.setTargetAtTime(alvo, t, Math.max(tempo, 0.01) / 4);",
+                "      v.alvo = alvo;",
+                "    };",
+                "    M.solta = (v, tempo) => {",
+                "      M.rampa(v, 0, tempo);",
+                "      try { v.src.stop(M.ctx.currentTime + Math.max(tempo, 0.05) * 1.5); } catch (e) {}",
+                "    };",
+                "    M.estado = () => ({",
+                "      contexto: M.ctx.state, geral: M.mestre.gain.value, luta: !!M.luta,",
+                "      base: M.base && { nome: M.base.nome, volume: M.base.g.gain.value, alvo: M.base.alvo },",
+                "      chefe: M.chefe && { nome: M.chefe.nome, volume: M.chefe.g.gain.value, alvo: M.chefe.alvo },",
+                "    });",
+                "  }",
+                "  // volume geral: musica.volume, musica.ligada e o volume global do GDevelop (Howler)",
+                "  const H = window.Howler;",
+                "  const geral = (H ? (H._muted ? 0 : H._volume) : 1) * (G.getChild(\"ligada\").getAsBoolean() ? 1 : 0) * n(\"volume\") / 100;",
+                "  if (Math.abs(M.geral - geral) > 1e-4) {",
+                "    M.geral = geral;",
+                "    M.mestre.gain.setTargetAtTime(geral, M.ctx.currentTime, 0.05);",
+                "  }",
+                "  const nomeBase = txt(\"musica\");",
+                "  const nomeChefe = txt(\"musica_chefe\");",
+                "  const volCena = SV.has(\"musica_volume\") ? SV.get(\"musica_volume\").getAsNumber() / 100 : 1;",
+                "  const agora = performance.now() / 1000;",
+                "  if (SV.has(\"musica_chefe_ativo\") && SV.get(\"musica_chefe_ativo\").getAsBoolean()) M.ultimaLuta = agora;",
+                "  // troca de faixa só quando a cena nova pede outra (a mesma faixa continua tocando)",
+                "  if (M.base && M.base.nome !== nomeBase) {",
+                "    M.solta(M.base, n(\"fade\"));",
+                "    M.base = null;",
+                "    if (M.chefe) { M.solta(M.chefe, n(\"fade\")); M.chefe = null; }",
+                "  }",
+                "  if (M.chefe && M.chefe.nome !== nomeChefe) { M.solta(M.chefe, n(\"fade_volta\")); M.chefe = null; }",
+                "  if (nomeBase && !M.base) {",
+                "    const f = M.carrega(nomeBase);",
+                "    if (f.buf) M.base = M.toca(f);",
+                "  }",
+                "  // a de chefe já começa (muda) junto com a da fase, para a troca ser no mesmo ponto da música",
+                "  if (nomeChefe && M.base && !M.chefe) {",
+                "    const f = M.carrega(nomeChefe);",
+                "    if (f.buf) M.chefe = M.toca(f, M.base);",
+                "  }",
+                "  M.luta = !!(M.chefe && agora - M.ultimaLuta < n(\"espera_chefe\"));",
+                "  const tempoLuta = M.luta ? n(\"fade_chefe\") : n(\"fade_volta\");",
+                "  if (M.base) M.rampa(M.base, (M.luta ? 0 : 1) * volCena, M.base.alvo < 0 ? n(\"fade\") : tempoLuta);",
+                "  if (M.chefe) M.rampa(M.chefe, (M.luta ? 1 : 0) * volCena * n(\"volume_chefe\") / 100, tempoLuta);",
+                "  // só as faixas desta cena ficam decodificadas na memória",
+                "  for (const k in M.faixas) if (k !== nomeBase && k !== nomeChefe) delete M.faixas[k];",
+                "} catch (e) {",
+                "  console.warn(\"musica:\", e);",
+                "}"
               ],
               "parameterObjects": "",
               "useStrict": true,
