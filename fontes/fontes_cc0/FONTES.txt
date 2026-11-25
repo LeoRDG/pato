@@ -271,3 +271,17 @@ som_levanta.wav (condenado se levanta)
                                      https://freesound.org/people/EricsSoundschmiede/sounds/463721/   [Creative Commons 0, baixado em 2026-11-12]
 
 --- fim: sons das mecânicas dos inimigos, tools/t77_sons_inimigos.py ---
+
+--- início: sons do pato, tools/t191_sons_pato.py (gerado, não editar à mão) ---
+
+som_pulo.wav (pulo do chão; desde a t191 substitui a receita da t31)
+  roupa_496188.wav                   "Whoosh (Clothing Drag)" por JonasTisell (0,2 s, tom +12%, sem grave e sem agudo)
+                                     https://freesound.org/people/JonasTisell/sounds/496188/   [Creative Commons 0, baixado em 2026-11-25]
+
+som_pulo_ar.wav (pulo no ar: batida de asas; desde a t191 substitui a receita da t31)
+  asa_389634.wav                     "Wing Flap 1.wav" por _stubb (0,34 s a partir de 0,1 s)
+                                     https://freesound.org/people/_stubb/sounds/389634/   [Creative Commons 0, baixado em 2026-11-25]
+  roupa2_494797.wav                  "Jacket/Cloth Rustle 9" por brandondelehoy (inteiro, por baixo)
+                                     https://freesound.org/people/brandondelehoy/sounds/494797/   [Creative Commons 0, baixado em 2026-11-25]
+
+--- fim: sons do pato, tools/t191_sons_pato.py ---

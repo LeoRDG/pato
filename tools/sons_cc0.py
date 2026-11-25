@@ -1,16 +1,16 @@
 """Ferramentas para os sons CC0 do jogo: baixar do Freesound (conferindo a licença), recortar/editar e registrar as fontes.
 
-Cada gravação baixada fica em assets/fontes_cc0/<apelido>_<id>.wav (mono, 44,1 kHz, prévia mp3 de alta qualidade do Freesound
+Cada gravação baixada fica em fontes/fontes_cc0/<apelido>_<id>.wav (mono, 44,1 kHz, prévia mp3 de alta qualidade do Freesound
 convertida com o ffmpeg). Antes de baixar, a página do som é lida e a licença tem que ser Creative Commons 0; senão o script para.
-O registro legível (autor, título, endereço, licença, que trecho foi usado) fica em assets/fontes_cc0/FONTES.txt, numa seção gerada
-entre marcadores; o registro completo (para scripts) fica em assets/fontes_cc0/fontes.json.
+O registro legível (autor, título, endereço, licença, que trecho foi usado) fica em fontes/fontes_cc0/FONTES.txt, numa seção gerada
+entre marcadores; o registro completo (para scripts) fica em fontes/fontes_cc0/fontes.json.
 """
 import json, os, re, subprocess, time, urllib.request, wave
 import numpy as np
 
 SR = 44100
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FONTES = os.path.join(ROOT, 'assets', 'fontes_cc0')
+FONTES = os.path.join(ROOT, 'fontes', 'fontes_cc0')
 UA = {'User-Agent': 'Mozilla/5.0 (jogo do pato; sons CC0)'}
 CC0 = 'Creative Commons 0'
 

@@ -11979,6 +11979,36 @@
           "persistentUuid": "fd2d70fe-ce70-5fed-8c3f-20dc180e5156",
           "type": "number",
           "value": 0.05
+        },
+        {
+          "name": "pulo_som_volume",
+          "persistentUuid": "daef58d3-34b4-5912-a556-a11383b66f5e",
+          "type": "number",
+          "value": 22
+        },
+        {
+          "name": "pulo_som_variacao",
+          "persistentUuid": "e64fecc4-7700-594b-9d33-8850384ebfea",
+          "type": "number",
+          "value": 0.08
+        },
+        {
+          "name": "pulo_ar_som_volume",
+          "persistentUuid": "bdf34ba7-d080-5712-83fe-17fb615d6768",
+          "type": "number",
+          "value": 38
+        },
+        {
+          "name": "pouso_som_min",
+          "persistentUuid": "ec42268a-9631-55f9-8c7e-6252e06ab978",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "pouso_som_extra",
+          "persistentUuid": "248cc82e-70eb-50c2-a299-3f19d5674988",
+          "type": "number",
+          "value": 55
         }
       ],
       "effects": [],
@@ -78731,6 +78761,48 @@
       "persistentUuid": "a497feaa-8ed0-5ec5-88b1-29cede91dd76",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "moeda_som_volume",
+      "persistentUuid": "2fdc8ff0-b55b-5188-bce8-c6e5a1c65967",
+      "type": "number",
+      "value": 22
+    },
+    {
+      "name": "moeda_som_passo",
+      "persistentUuid": "4a076db2-b3dd-5f1c-b29f-c7e0226a0bec",
+      "type": "number",
+      "value": 1.06
+    },
+    {
+      "name": "moeda_combo_max",
+      "persistentUuid": "c9559f07-875e-5e05-b0ce-5afe3de9d825",
+      "type": "number",
+      "value": 8
+    },
+    {
+      "name": "moeda_combo_janela",
+      "persistentUuid": "b440ae00-74d2-5379-bb67-cd96b024ccc4",
+      "type": "number",
+      "value": 0.6
+    },
+    {
+      "name": "moeda_combo",
+      "persistentUuid": "d345064f-93da-5204-ae7a-f97a87274a07",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "moeda_combo_t",
+      "persistentUuid": "34578cde-32da-52b5-aed9-23c20922be30",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "moeda_pegou",
+      "persistentUuid": "47ef098f-8007-513c-9756-2cad85c89573",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -99271,8 +99343,8 @@
                             "",
                             "som_pulo.wav",
                             "",
-                            "40",
-                            "RandomFloatInRange(0.95, 1.05)"
+                            "pato.pulo_som_volume",
+                            "RandomFloatInRange(1 - pato.pulo_som_variacao, 1 + pato.pulo_som_variacao)"
                           ]
                         }
                       ]
@@ -99339,8 +99411,8 @@
                             "",
                             "som_pulo.wav",
                             "",
-                            "40",
-                            "RandomFloatInRange(0.95, 1.05)"
+                            "pato.pulo_som_volume",
+                            "RandomFloatInRange(1 - pato.pulo_som_variacao, 1 + pato.pulo_som_variacao)"
                           ]
                         }
                       ]
@@ -99431,8 +99503,8 @@
                                 "",
                                 "som_pulo_ar.wav",
                                 "",
-                                "45",
-                                "RandomFloatInRange(0.95, 1.05)"
+                                "pato.pulo_ar_som_volume",
+                                "RandomFloatInRange(1 - pato.pulo_som_variacao, 1 + pato.pulo_som_variacao)"
                               ]
                             }
                           ]
@@ -100120,8 +100192,8 @@
                             "",
                             "som_pulo.wav",
                             "",
-                            "40",
-                            "RandomFloatInRange(0.95, 1.05)"
+                            "pato.pulo_som_volume",
+                            "RandomFloatInRange(1 - pato.pulo_som_variacao, 1 + pato.pulo_som_variacao)"
                           ]
                         }
                       ]
@@ -100167,7 +100239,7 @@
                             "",
                             "som_pouso.wav",
                             "",
-                            "35 + 45 * clamp((pato.queda_vy - pato.poeira_queda_min) / 450, 0, 1)",
+                            "pato.pouso_som_min + pato.pouso_som_extra * clamp((pato.queda_vy - pato.poeira_queda_min) / 450, 0, 1)",
                             "RandomFloatInRange(0.92, 1.05)"
                           ]
                         },
@@ -110321,14 +110393,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "",
-                        "som_moeda.wav",
-                        "",
-                        "25",
-                        "RandomFloatInRange(0.97, 1.12)"
+                        "moeda_pegou",
+                        "=",
+                        "1"
                       ]
                     },
                     {
@@ -110445,6 +110515,108 @@
                       "parameters": [
                         "moeda",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_combo_t",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "moeda_combo_t",
+                        ">",
+                        "moeda_combo_janela"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_combo",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_pegou",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "som_moeda.wav",
+                        "",
+                        "moeda_som_volume",
+                        "pow(moeda_som_passo, min(moeda_combo, moeda_combo_max)) * RandomFloatInRange(0.98, 1.02)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_combo",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_combo_t",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "moeda_pegou",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
