@@ -29,7 +29,7 @@ class PlacarToken(unittest.TestCase):
             self.assertTrue(linhas[-1].startswith('} catch (e)'))
             if any('fetch(' in l for l in linhas):
                 self.assertTrue(any('AbortSignal.timeout' in l for l in linhas))
-                self.assertTrue(any('.catch(() => {})' in l for l in linhas))
+                self.assertTrue(any('.catch(' in l for l in linhas))   # erro de rede nunca escapa
 
     def test_formula_do_servidor_igual_a_do_jogo(self):
         placar = {c['name']: c['value'] for v in self.d['variables'] if v['name'] == 'placar' for c in v['children']}

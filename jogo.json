@@ -79712,6 +79712,12 @@
               "persistentUuid": "0b323094-b5e8-51c8-b59c-bdca26da0a77",
               "type": "number",
               "value": 900
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "fdeaba18-20e1-5879-ae0a-93e6d673a9fb",
+              "type": "string",
+              "value": "INFERNO"
             }
           ]
         },
@@ -79725,6 +79731,12 @@
               "persistentUuid": "b3e61316-5e53-5346-b4b1-426da754b89a",
               "type": "number",
               "value": 900
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "3e150e65-911b-5ff7-90c5-89289e7c19e7",
+              "type": "string",
+              "value": "PURGATORIO"
             }
           ]
         },
@@ -79738,6 +79750,12 @@
               "persistentUuid": "80cbd801-3f19-5dcb-ac60-765a6f73bfab",
               "type": "number",
               "value": 600
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "4d7a6d0e-1c4a-5bff-b5ea-d9600b626697",
+              "type": "string",
+              "value": "PARAISO"
             }
           ]
         }
@@ -79916,6 +79934,18 @@
           "persistentUuid": "4b196a6f-2cfb-55ce-b110-cf53cb5a0275",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "envio",
+          "persistentUuid": "c57f50a9-162b-5b23-80b2-9e7064b3d5b8",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "envio_erro",
+          "persistentUuid": "f73b94d0-dcee-5f5f-9c69-9d855c5e1346",
+          "type": "string",
+          "value": ""
         }
       ]
     },
@@ -80064,6 +80094,157 @@
       "persistentUuid": "168665e2-d90e-54ef-8d51-139464b60cad",
       "type": "number",
       "value": 10
+    },
+    {
+      "name": "resultado_volta",
+      "persistentUuid": "935ed445-a427-5cb9-afd8-be3611225e2e",
+      "type": "string",
+      "value": "Hub"
+    },
+    {
+      "name": "fim_tela",
+      "persistentUuid": "80a11c47-9d53-5aa4-bc84-d17a75cdb4fe",
+      "type": "structure",
+      "children": [
+        {
+          "name": "ref_w",
+          "persistentUuid": "90a9a011-1658-504a-861e-e93473dbcc50",
+          "type": "number",
+          "value": 1920
+        },
+        {
+          "name": "top_n",
+          "persistentUuid": "e4d5f012-2690-579e-b52c-4ee1992221fb",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "espera",
+          "persistentUuid": "61d05eac-21f9-53d2-82dc-c4b690394e5f",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "y_titulo",
+          "persistentUuid": "895ceefc-4062-58f7-af6f-997679b48bb8",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "y_topo",
+          "persistentUuid": "f2fb651c-73d3-5c97-97a0-72cf68dd0d69",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "y_dica_base",
+          "persistentUuid": "3ae73856-f024-5251-94af-540eb70df879",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "col_esq",
+          "persistentUuid": "9d765197-8033-5bd9-8132-80cdb02d5263",
+          "type": "number",
+          "value": 0.07
+        },
+        {
+          "name": "col_esq_w",
+          "persistentUuid": "23a58d8e-0f4a-50bc-98f3-ed32b6b0d0cd",
+          "type": "number",
+          "value": 0.27
+        },
+        {
+          "name": "col_tempo",
+          "persistentUuid": "4ddb9d85-a00e-5384-a72e-843606c3a79c",
+          "type": "number",
+          "value": 0.42
+        },
+        {
+          "name": "col_pontos",
+          "persistentUuid": "9da1bf44-c35b-56f0-837c-850f4be25691",
+          "type": "number",
+          "value": 0.71
+        },
+        {
+          "name": "col_w",
+          "persistentUuid": "c5cc56aa-de45-5c80-8feb-ac38871f5734",
+          "type": "number",
+          "value": 0.24
+        },
+        {
+          "name": "col_nome_x",
+          "persistentUuid": "32e21e54-5280-5043-a909-96f74c69db08",
+          "type": "number",
+          "value": 64
+        },
+        {
+          "name": "tam_titulo",
+          "persistentUuid": "003007de-0dbd-5bf5-ace8-bc0eef5724ea",
+          "type": "number",
+          "value": 56
+        },
+        {
+          "name": "tam_grande",
+          "persistentUuid": "53ddc9bd-7a1a-5c81-8335-6571e59623dc",
+          "type": "number",
+          "value": 64
+        },
+        {
+          "name": "tam_rotulo",
+          "persistentUuid": "e699c737-a610-553e-b82a-6d57df5c554e",
+          "type": "number",
+          "value": 22
+        },
+        {
+          "name": "tam_linha",
+          "persistentUuid": "3286927f-dfca-5298-88fd-8d01686eaa2f",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "tam_dica",
+          "persistentUuid": "9a6ccbf5-d9b5-572e-977f-b90b8e163e04",
+          "type": "number",
+          "value": 22
+        },
+        {
+          "name": "gap_rotulo",
+          "persistentUuid": "c2e148d4-f736-5788-820d-181a61eb080c",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "gap_bloco",
+          "persistentUuid": "5662d800-99bf-5dff-bcae-7b536131bece",
+          "type": "number",
+          "value": 34
+        },
+        {
+          "name": "gap_tag",
+          "persistentUuid": "d1345302-a923-50ac-b524-62097a5d4b98",
+          "type": "number",
+          "value": 18
+        },
+        {
+          "name": "tag_dy",
+          "persistentUuid": "e7b2f476-2745-513e-8cd7-971659d30fd7",
+          "type": "number",
+          "value": 22
+        },
+        {
+          "name": "gap_tabela",
+          "persistentUuid": "7e0cfd46-b13e-56fd-b180-28bc9b3557fe",
+          "type": "number",
+          "value": 18
+        },
+        {
+          "name": "lin_h",
+          "persistentUuid": "c46fea9c-ee05-52a1-a782-008c75c50d0a",
+          "type": "number",
+          "value": 38
+        }
+      ]
     }
   ],
   "layouts": [
@@ -95342,6 +95523,26 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "resultado_volta",
+                        "=",
+                        "proxima_cena"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Resultado\"",
+                        ""
+                      ]
                     }
                   ]
                 }
@@ -99820,6 +100021,443 @@
         {
           "name": "Sticker",
           "type": "Sticker::Sticker"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TileMap",
+          "type": "TileMap::TileMapBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "b": 18,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Resultado",
+      "name": "Resultado",
+      "r": 14,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 14,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.4303403802207653,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "hub",
+          "persistentUuid": "a117b4d1-7234-5877-bd31-8830ae858891",
+          "type": "string",
+          "value": "Hub"
+        }
+      ],
+      "instances": [],
+      "objects": [],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 1,
+            "eventsGroup": "Corrida (placar)"
+          },
+          "target": "Jogador"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Tela de resultado",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "try {",
+                "  // Tela de resultado (t203): resultado da corrida (corrida_fim) e os placares da fase. Números em fim_tela.*, cores ui_cor_*.",
+                "  const jogo = runtimeScene.getGame();",
+                "  const V = jogo.getVariables();",
+                "  const T = V.get(\"fim_tela\");",
+                "  const W = jogo.getGameResolutionWidth();",
+                "  const H = jogo.getGameResolutionHeight();",
+                "  // janela estreita (o jogo adapta a resolução): tamanhos e distâncias em pixels encolhem junto; frações e contagens não",
+                "  const escala = Math.min(1, W / T.getChild(\"ref_w\").getAsNumber());",
+                "  const crus = [\"top_n\", \"espera\", \"ref_w\", \"col_esq\", \"col_esq_w\", \"col_tempo\", \"col_pontos\", \"col_w\"];",
+                "  const n = (k) => T.getChild(k).getAsNumber() * (crus.includes(k) ? 1 : escala);",
+                "  const cor = (k) => V.get(k).getAsString();",
+                "  const F = V.get(\"corrida_fim\").toJSObject();",
+                "  const P = V.get(\"placar\").toJSObject();",
+                "  const fase = V.get(\"placar_niveis\").getChild(F.nivel).toJSObject();",
+                "  const st = runtimeScene.__fim || (runtimeScene.__fim = { t: 0, textos: {}, placar: null, pedido: false });",
+                "  st.t += runtimeScene.getTimeManager().getElapsedTime() / 1000;",
+                "  const usados = new Set();",
+                "  const limpa = (s) => String(s).normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").toUpperCase();",
+                "  const txt = (id, s, x, y, tam, c, alinha) => {",
+                "    let o = st.textos[id];",
+                "    if (!o) { o = runtimeScene.createObject(\"ui_txt\"); st.textos[id] = o; }",
+                "    usados.add(id);",
+                "    o.setString(limpa(s));",
+                "    o.setCharacterSize(tam);",
+                "    o.setColor(c);",
+                "    o.hide(false);",
+                "    o.setX(alinha === \"dir\" ? x - o.getWidth() : alinha === \"meio\" ? x - o.getWidth() / 2 : x);",
+                "    o.setY(y);",
+                "    return o;",
+                "  };",
+                "  const tempo = (s) => { const m = Math.floor(s / 60); return String(m).padStart(2, \"0\") + \":\" + (s - m * 60).toFixed(2).padStart(5, \"0\"); };",
+                "  const pts = (v) => Math.round(v).toLocaleString(\"pt-BR\");",
+                "",
+                "  txt(\"titulo\", (fase.nome || F.nivel) + \" CONCLUIDO\", W / 2, n(\"y_titulo\"), n(\"tam_titulo\"), cor(\"ui_cor_ouro\"), \"meio\");",
+                "",
+                "  // coluna da esquerda: tempo, pontos e a conta",
+                "  const xe = W * n(\"col_esq\");",
+                "  let y = n(\"y_topo\");",
+                "  const grande = (id, rotulo, valor, recorde) => {",
+                "    txt(id + \"_r\", rotulo, xe, y, n(\"tam_rotulo\"), cor(\"ui_cor_rotulo\"));",
+                "    y += n(\"tam_rotulo\") + n(\"gap_rotulo\");",
+                "    const o = txt(id + \"_v\", valor, xe, y, n(\"tam_grande\"), cor(\"ui_cor_texto\"));",
+                "    if (recorde) txt(id + \"_novo\", \"NOVO RECORDE\", xe + o.getWidth() + n(\"gap_tag\"), y + n(\"tag_dy\"), n(\"tam_rotulo\"), cor(\"ui_cor_verde\"));",
+                "    y += n(\"tam_grande\") + n(\"gap_bloco\");",
+                "  };",
+                "  grande(\"tempo\", \"TEMPO\", tempo(F.tempo), F.recorde_tempo);",
+                "  grande(\"pontos\", \"PONTOS\", pts(F.pontos), F.recorde_pontos);",
+                "  const conta = [",
+                "    [\"ABATES (\" + F.abates + \")\", F.pts_abates],",
+                "    [\"FASE CONCLUIDA\", P.pts_conclusao],",
+                "    [\"BONUS DE TEMPO\", Math.max(0, (fase.tempo_ref || 0) - F.tempo) * P.pts_segundo],",
+                "    [\"DANO RECEBIDO (\" + F.dano + \")\", -F.dano * P.pts_dano],",
+                "    [\"MORTES (\" + F.mortes + \")\", -F.mortes * P.pts_morte],",
+                "  ];",
+                "  if (F.idas_hub > 0 && P.pts_ida_hub > 0) conta.push([\"IDAS AO HUB (\" + F.idas_hub + \")\", -F.idas_hub * P.pts_ida_hub]);",
+                "  conta.forEach(([rotulo, v], i) => {",
+                "    txt(\"conta_r\" + i, rotulo, xe, y, n(\"tam_linha\"), cor(\"ui_cor_rotulo\"));",
+                "    txt(\"conta_v\" + i, (v < 0 ? \"-\" : \"+\") + pts(Math.abs(v)), xe + W * n(\"col_esq_w\"), y, n(\"tam_linha\"),",
+                "      v < 0 ? cor(\"ui_cor_vermelho\") : cor(\"ui_cor_verde\"), \"dir\");",
+                "    y += n(\"lin_h\");",
+                "  });",
+                "  y += n(\"gap_bloco\");",
+                "",
+                "  // estado do envio para o placar global",
+                "  const url = V.get(\"placar_url\").getAsString();",
+                "  const estado = {",
+                "    enviando: [\"ENVIANDO PARA O PLACAR...\", \"ui_cor_dim\"],",
+                "    ok: [\"PLACAR GLOBAL: #\" + F.global_pos_tempo + \" NO TEMPO, #\" + F.global_pos_pontos + \" NOS PONTOS\", \"ui_cor_creme\"],",
+                "    erro: [\"NAO ENTROU NO PLACAR GLOBAL\" + (F.envio_erro ? \": \" + F.envio_erro : \"\"), \"ui_cor_vermelho\"],",
+                "    parcial: [\"SESSAO PARCIAL: NAO ENTRA NO PLACAR\", \"ui_cor_dim\"],",
+                "    sem_placar: [\"PLACAR GLOBAL DESLIGADO\", \"ui_cor_dim\"],",
+                "  }[F.envio];",
+                "  if (estado) txt(\"estado\", estado[0], xe, y, n(\"tam_linha\"), cor(estado[1]));",
+                "",
+                "  // placares da fase: pede quando o envio terminou (para esta corrida já aparecer)",
+                "  if (url && !st.pedido && F.envio !== \"enviando\") {",
+                "    st.pedido = true;",
+                "    const pede = (tipo) => {",
+                "      const lim = typeof AbortSignal !== \"undefined\" && AbortSignal.timeout ? { signal: AbortSignal.timeout(8000) } : {};",
+                "      return fetch(url + \"?nivel=\" + encodeURIComponent(F.nivel) + \"&tipo=\" + tipo + \"&n=\" + n(\"top_n\"), lim)",
+                "        .then((r) => r.json()).then((j) => (j && Array.isArray(j.linhas) ? j.linhas : null)).catch(() => null);",
+                "    };",
+                "    Promise.all([pede(\"tempo\"), pede(\"pontos\")]).then(([a, b]) => { st.placar = { tempo: a, pontos: b }; }).catch(() => { st.placar = {}; });",
+                "  }",
+                "  const nome = V.get(\"jogador_nome\").getAsString();",
+                "  const local = V.get(\"recordes\").getChild(F.nivel).toJSObject();",
+                "  const coluna = (id, x0, titulo, linhas, valor, minha, minhaPos, recordeLocal) => {",
+                "    let yy = n(\"y_topo\");",
+                "    const cw = W * n(\"col_w\");",
+                "    txt(id + \"_t\", titulo, x0, yy, n(\"tam_rotulo\"), cor(\"ui_cor_ouro\"));",
+                "    yy += n(\"tam_rotulo\") + n(\"gap_rotulo\") + n(\"gap_tabela\");",
+                "    const linha = (k, a, b, c, corLinha, corPos) => {",
+                "      txt(id + \"_p\" + k, a, x0, yy, n(\"tam_linha\"), corPos || corLinha);",
+                "      txt(id + \"_n\" + k, b, x0 + n(\"col_nome_x\"), yy, n(\"tam_linha\"), corLinha);",
+                "      txt(id + \"_v\" + k, c, x0 + cw, yy, n(\"tam_linha\"), corLinha, \"dir\");",
+                "      yy += n(\"lin_h\");",
+                "    };",
+                "    if (url && !st.placar) { txt(id + \"_m\", \"CARREGANDO...\", x0, yy, n(\"tam_linha\"), cor(\"ui_cor_dim\")); return; }",
+                "    if (!linhas) {",
+                "      linha(\"loc\", \"\", \"SEU RECORDE\", recordeLocal, cor(\"ui_cor_texto\"));",
+                "      return;",
+                "    }",
+                "    if (!linhas.length) txt(id + \"_m\", \"NINGUEM AINDA\", x0, yy, n(\"tam_linha\"), cor(\"ui_cor_dim\"));",
+                "    linhas.slice(0, n(\"top_n\")).forEach((l, i) => {",
+                "      const eu = l.nome === nome;",
+                "      linha(i, \"#\" + l.posicao, l.nome, valor(l), eu ? cor(\"ui_cor_ouro\") : cor(\"ui_cor_texto\"), eu ? cor(\"ui_cor_ouro\") : cor(\"ui_cor_dim\"));",
+                "    });",
+                "    if (minhaPos > 0) {",
+                "      yy += n(\"gap_tabela\");",
+                "      linha(\"eu\", \"#\" + minhaPos, \"ESTA CORRIDA\", minha, cor(\"ui_cor_ouro\"));",
+                "    }",
+                "  };",
+                "  const pl = st.placar || {};",
+                "  coluna(\"tab_tempo\", W * n(\"col_tempo\"), \"MAIS RAPIDOS\", pl.tempo, (l) => tempo(l.tempo), tempo(F.tempo), F.global_pos_tempo,",
+                "    local.tempo > 0 ? tempo(local.tempo) : \"-\");",
+                "  coluna(\"tab_pontos\", W * n(\"col_pontos\"), \"MAIS PONTOS\", pl.pontos, (l) => pts(l.pontos), pts(F.global_pontos || F.pontos),",
+                "    F.global_pos_pontos, local.pontos > 0 ? pts(local.pontos) : \"-\");",
+                "",
+                "  if (st.t >= n(\"espera\")) {",
+                "    txt(\"dica\", \"ESPACO, ENTER OU CLIQUE PARA CONTINUAR\", W / 2, H - n(\"y_dica_base\"), n(\"tam_dica\"), cor(\"ui_cor_dim\"), \"meio\");",
+                "  }",
+                "  for (const id in st.textos) if (!usados.has(id)) st.textos[id].hide(true);",
+                "} catch (e) { /* a tela falhou: a volta para o hub continua funcionando (evento seguinte) */ }"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Voltar para o hub",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "TimeFromStart()",
+                    ">=",
+                    "GlobalVariable(fim_tela.espera)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Return\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"e\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "GlobalVariableString(resultado_volta)",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "AdvancedJump",
+          "type": "AdvancedJump::AdvancedJump"
+        },
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "HorizontalDash",
+          "type": "AdvancedJump::HorizontalDash"
+        },
+        {
+          "name": "LinearMovement",
+          "type": "LinearMovement::LinearMovement"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "SmoothPlatformerCamera",
+          "type": "SmoothCamera::SmoothPlatformerCamera"
+        },
+        {
+          "name": "Sombra",
+          "type": "Lighting::LightObstacleBehavior"
+        },
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "Unnamed": 0
         },
         {
           "name": "Text",
@@ -105545,6 +106183,11 @@
                     "  const fim = V.get(\"corrida_fim\").toJSObject();",
                     "  for (const n of [\"global_pontos\", \"global_pos_tempo\", \"global_pos_pontos\"]) V.get(\"corrida_fim\").getChild(n).setNumber(0);",
                     "  const url = V.get(\"placar_url\").getAsString();",
+                    "  // estado do envio para a tela de resultado (t203); sem nome, o jogador ganha um \"Pato NNNN\"",
+                    "  const FE = V.get(\"corrida_fim\");",
+                    "  FE.getChild(\"envio_erro\").setString(\"\");",
+                    "  FE.getChild(\"envio\").setString(!fim.valida ? \"parcial\" : url ? \"enviando\" : \"sem_placar\");",
+                    "  if (url && !V.get(\"jogador_nome\").getAsString()) V.get(\"jogador_nome\").setString(\"Pato \" + (1000 + Math.floor(Math.random() * 9000)));",
                     "  if (url && fim.valida) {",
                     "    // a build (níveis de upgrade) vai junto: no placar dá para ver se a pontuação veio de habilidade ou de upgrades",
                     "    const corpo = Object.assign({ jogo: V.get(\"placar_jogo\").getAsString(), nome: V.get(\"jogador_nome\").getAsString(),",
@@ -105552,12 +106195,13 @@
                     "    const limite = typeof AbortSignal !== \"undefined\" && AbortSignal.timeout ? { signal: AbortSignal.timeout(8000) } : {};",
                     "    fetch(url, Object.assign({ method: \"POST\", headers: { \"Content-Type\": \"application/json\" }, body: JSON.stringify(corpo) }, limite))",
                     "      .then((r) => r.json()).then((j) => {",
-                    "        if (!j || j.ok !== true) return;",
+                    "        if (!j || j.ok !== true) { FE.getChild(\"envio\").setString(\"erro\"); FE.getChild(\"envio_erro\").setString(String((j && j.erro) || \"\")); return; }",
                     "        const F = V.get(\"corrida_fim\");",
                     "        F.getChild(\"global_pontos\").setNumber(Number(j.pontos) || 0);",
                     "        F.getChild(\"global_pos_tempo\").setNumber(Number(j.posicao_tempo) || 0);",
                     "        F.getChild(\"global_pos_pontos\").setNumber(Number(j.posicao_pontos) || 0);",
-                    "      }).catch(() => {});",
+                    "        F.getChild(\"envio\").setString(\"ok\");",
+                    "      }).catch(() => { FE.getChild(\"envio\").setString(\"erro\"); });",
                     "  }",
                     "} catch (e) { /* placar falhou: o jogo continua */ }"
                   ],
@@ -119932,6 +120576,26 @@
                           "parameters": [
                             "corrida.concluir",
                             "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "resultado_volta",
+                            "=",
+                            "portal.cena"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Resultado\"",
                             ""
                           ]
                         }

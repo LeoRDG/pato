@@ -47,9 +47,19 @@ points = Σ kills (placar.pts_abate + enemy max HP × placar.pts_vida_inimigo)
   ```
   The build (`upgrades`) goes with the score, so the board can show whether a score came from skill or from upgrades (see SCORE-4 in `revisao_design.md`).
 
+### Results screen (`tools/t203_tela_de_resultado.py`)
+- **When:** finishing a level session (final portal, or the Empíreo exit) goes to the `Resultado` scene instead of straight to the hub.
+- **What it shows:**
+  - the time and points, with the local new-record flags;
+  - the points breakdown line by line;
+  - the submission status, including the server's reason if it refused the run;
+  - the level's two global boards (top `fim_tela.top_n`), with the player's name highlighted and an "ESTA CORRIDA" line giving this run's rank on each.
+- **Fallback:** with the global board off, down, or for a partial session, the boards show the local record instead.
+- **Leaving:** Space, Enter, E or a click returns to the level's hub after `fim_tela.espera` seconds.
+- **Layout:** positions and sizes are in `fim_tela.*`; colors are the `ui_cor_*` variables. In windows narrower than `fim_tela.ref_w`, the layout scales down.
+
 ### Still missing in the game
-- **Name entry** (`jogador_nome`): ask once, before the first submission.
-- **End-of-level tally screen** (SCORE-2 in `revisao_design.md`) that shows `corrida_fim` and the new-record flags.
+- **Name entry** (`jogador_nome`): players get an automatic name like `Pato 3803` on their first submission. There's no way yet to choose one.
 - **Board in the hub:** show the board next to each level's portal.
 - **"Restart from the beginning" option at the hub portal:** it clears the level's return point. Today, a player who leaves a level midway can't do a valid run of it again until they clear it.
 
