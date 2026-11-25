@@ -11748,7 +11748,7 @@
           "name": "iframes_tempo",
           "persistentUuid": "d5c01132-648d-4778-b42a-072cb898be4a",
           "type": "number",
-          "value": 0.75
+          "value": 1
         },
         {
           "name": "pulo_buffer",
@@ -12199,6 +12199,18 @@
           "persistentUuid": "efab62cb-af24-5572-9e4e-79c838bfc828",
           "type": "number",
           "value": 0.68
+        },
+        {
+          "name": "vida_ref",
+          "persistentUuid": "05fef187-b942-56e0-be46-cd95a5ac36ce",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dano_empurrao_x",
+          "persistentUuid": "e77656fb-5497-500c-9eed-a6eab32451d4",
+          "type": "number",
+          "value": 900
         }
       ],
       "effects": [],
@@ -79053,6 +79065,12 @@
       "persistentUuid": "47ef098f-8007-513c-9756-2cad85c89573",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "dificuldade_dano",
+      "persistentUuid": "0beb53ad-dc24-56a1-9080-797db5b3f200",
+      "type": "number",
+      "value": 0.7
     }
   ],
   "layouts": [
@@ -100414,6 +100432,91 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.vida",
+                            "<",
+                            "pato.vida_ref"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida_ref",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida",
+                            "=",
+                            "pato.vida_ref - max(1, round((pato.vida_ref - pato.vida) * dificuldade_dano))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida_ref",
+                            "=",
+                            "pato.vida"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "pato.vida",
+                            ">",
+                            "pato.vida_ref"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida_ref",
+                            "=",
+                            "pato.vida"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -100561,6 +100664,17 @@
                         "vida",
                         "=",
                         "-10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida_ref",
+                        "=",
+                        "pato.vida"
                       ]
                     }
                   ]
@@ -106917,6 +107031,17 @@
                     "=",
                     "Inimigo.ObjectName()"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "pato",
+                    "coice_vx",
+                    "=",
+                    "sign(pato.CenterX() - Inimigo.CenterX() + 0.001) * pato.dano_empurrao_x"
+                  ]
                 }
               ]
             },
@@ -109658,6 +109783,91 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.vida",
+                        "<",
+                        "pato.vida_ref"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida_ref",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida",
+                        "=",
+                        "pato.vida_ref - max(1, round((pato.vida_ref - pato.vida) * dificuldade_dano))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida_ref",
+                        "=",
+                        "pato.vida"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "pato.vida",
+                        ">",
+                        "pato.vida_ref"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "vida_ref",
+                        "=",
+                        "pato.vida"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -146576,6 +146786,17 @@
                             "vida",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "pato",
+                            "vida_ref",
+                            "=",
+                            "pato.vida"
                           ]
                         },
                         {
