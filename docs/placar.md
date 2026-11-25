@@ -13,15 +13,17 @@ The in-game part is done (`tools/t199_placar.py`). What's missing is a server to
 - **End:** the run finishes at the level's final portal, or at the Empíreo exit in Paraiso.
 - **Result:** the finished run is copied to `corrida_fim`.
 
-### Hub portals and deaths
-- **Hub trip:** taking a mid-level portal to the hub doesn't end the run.
-  - The clock keeps running in the hub, so shopping costs time. Turn this off with `placar.tempo_no_hub`.
+### One session per level, paused outside it (`tools/t201_sessao_por_fase.py`)
+- **Session:** a level's session runs from when the duck enters the level to when it exits through that level's final portal. That exit saves the session to the leaderboard.
+- **Hub trip:** taking a mid-level portal to the hub pauses the clock (`placar.tempo_no_hub` is off).
+  - Coming back through the return point resumes the session with the time it had.
   - Each trip counts in `corrida.idas_hub`, with an optional penalty `placar.pts_ida_hub` (0 by default).
-- **Death:** dying doesn't end the run either. The duck comes back through the return point, the clock keeps running, and each death costs `placar.pts_morte`.
-- **Valid runs:** only a run that **started at the beginning of the level** is valid (`corrida.valida`).
-  - Entering from a return point with no run in progress is a partial run. That happens after a page reload, or after going to another level midway.
-  - Partial runs are never recorded or sent.
-- **Switching levels:** entering a different level abandons the current run.
+- **Death:** dying doesn't end the session either. The clock pauses while the duck is in the hub, it comes back through the return point, and each death costs `placar.pts_morte`.
+- **Switching levels:** each level keeps its own paused session in `corridas[level]`. Playing another level in between doesn't lose it; it resumes when the duck enters that level again.
+- **HUD clock:** while the duck is in a level with a session, the clock shows the session time (`tempo_hud`).
+- **Valid runs:** only a session that **started at the beginning of the level** is valid (`corrida.valida`).
+  - Return points aren't saved between page loads, so after a reload every level starts from the beginning anyway. In practice every session that reaches a final portal is valid.
+  - Partial sessions are never recorded or sent.
 
 ### Score (all numbers are variables in `placar` and `placar_niveis`)
 ```
@@ -76,7 +78,8 @@ The game already has the `LeaderboardDialog` extension. GDevelop hosts the board
 - **Pros:** no server or account to maintain; in-game board display included; dashboard to delete entries; optional GDevelop player accounts.
 - **Cons:** only one number per entry, so the build and stats can't be shown; validation is limited to min/max; depends on GDevelop's service.
 
-### Option B: Cloudflare Worker + D1 (recommended if the board needs control)
+### Option B: Cloudflare Worker + D1 (chosen, and implemented in `servidor/`)
+The game's domain already runs through Cloudflare, so the Worker answers on the same site under `/api/placar`. The game requests a run token when a run starts (`tools/t200_placar_token.py`). Deploy steps are in `servidor/README.md`.
 This uses the `placar_url` hook that's already there.
 
 - **Service:** one small Worker (JavaScript) with a D1 table (SQLite):

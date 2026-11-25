@@ -79693,7 +79693,7 @@
           "name": "tempo_no_hub",
           "persistentUuid": "6036a6c0-2b1c-5ae1-a638-a13e540bd89b",
           "type": "boolean",
-          "value": true
+          "value": false
         }
       ]
     },
@@ -79819,6 +79819,12 @@
           "persistentUuid": "9850cfc8-c24a-5d61-bb5e-9f1212d8f209",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "token",
+          "persistentUuid": "cf334b1d-ad8c-58e1-b06c-740e6cb85776",
+          "type": "string",
+          "value": ""
         }
       ]
     },
@@ -79890,6 +79896,24 @@
         {
           "name": "pontos",
           "persistentUuid": "17ed6caa-2dcf-5db7-95f5-41e5180a029c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "global_pontos",
+          "persistentUuid": "70713abd-bce1-52e2-9de2-5736e672420c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "global_pos_tempo",
+          "persistentUuid": "84a1222f-1ac5-5e54-9a64-729d34f4a098",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "global_pos_pontos",
+          "persistentUuid": "4b196a6f-2cfb-55ce-b110-cf53cb5a0275",
           "type": "number",
           "value": 0
         }
@@ -79976,6 +80000,58 @@
       "persistentUuid": "8adf14bd-eeb9-51ab-b121-877975346592",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "corridas",
+      "persistentUuid": "a5a399eb-3d7f-5cef-b1c0-356098e4eebe",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Inferno",
+          "persistentUuid": "5bc9e30d-2fcd-5e38-89d6-6c4bc5808724",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativa",
+              "persistentUuid": "8b727127-ab15-5ea0-a7fd-1af118324fd0",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Purgatorio",
+          "persistentUuid": "95f553c3-d9d3-5c73-8ee6-58d716418331",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativa",
+              "persistentUuid": "d683e19a-39e4-508f-9b95-716eb0111931",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Paraiso",
+          "persistentUuid": "614ee3af-86f2-58ce-8f78-1a3e7d4e8e5b",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ativa",
+              "persistentUuid": "a3c63152-7d1d-5659-98f8-dfc9391b31d1",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tempo_hud",
+      "persistentUuid": "db3aa9a4-6396-543c-a831-2402f16d3d57",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -105109,16 +105185,18 @@
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// Placar (t199): recordes locais salvos no navegador; carrega uma vez por jogo.",
-                "const jogo = runtimeScene.getGame();",
-                "if (!jogo.__recordesCarregados) {",
-                "  jogo.__recordesCarregados = true;",
-                "  try {",
-                "    const salvo = JSON.parse(localStorage.getItem(\"pato_recordes\") || \"{}\");",
-                "    const R = jogo.getVariables().get(\"recordes\");",
-                "    for (const fase in salvo) for (const k in salvo[fase]) R.getChild(fase).getChild(k).setNumber(Number(salvo[fase][k]) || 0);",
-                "  } catch (e) {}",
-                "}"
+                "try {",
+                "  // Placar (t199): recordes locais salvos no navegador; carrega uma vez por jogo.",
+                "  const jogo = runtimeScene.getGame();",
+                "  if (!jogo.__recordesCarregados) {",
+                "    jogo.__recordesCarregados = true;",
+                "    try {",
+                "      const salvo = JSON.parse(localStorage.getItem(\"pato_recordes\") || \"{}\");",
+                "      const R = jogo.getVariables().get(\"recordes\");",
+                "      for (const fase in salvo) for (const k in salvo[fase]) R.getChild(fase).getChild(k).setNumber(Number(salvo[fase][k]) || 0);",
+                "    } catch (e) {}",
+                "  }",
+                "} catch (e) { /* placar falhou: o jogo continua */ }"
               ],
               "parameterObjects": "",
               "useStrict": true,
@@ -105405,17 +105483,28 @@
                 {
                   "type": "BuiltinCommonInstructions::JsCode",
                   "inlineCode": [
-                    "// Placar (t199): salva os recordes locais e, se houver placar_url, envia a corrida para o placar global.",
-                    "const V = runtimeScene.getGame().getVariables();",
-                    "try { localStorage.setItem(\"pato_recordes\", JSON.stringify(V.get(\"recordes\").toJSObject())); } catch (e) {}",
-                    "const fim = V.get(\"corrida_fim\").toJSObject();",
-                    "const url = V.get(\"placar_url\").getAsString();",
-                    "if (url && fim.valida) {",
-                    "  // a build (níveis de upgrade) vai junto: no placar dá para ver se a pontuação veio de habilidade ou de upgrades",
-                    "  const corpo = Object.assign({ jogo: V.get(\"placar_jogo\").getAsString(), nome: V.get(\"jogador_nome\").getAsString(),",
-                    "    upgrades: V.get(\"upgrades\").toJSObject() }, fim);",
-                    "  fetch(url, { method: \"POST\", headers: { \"Content-Type\": \"application/json\" }, body: JSON.stringify(corpo) }).catch(() => {});",
-                    "}"
+                    "try {",
+                    "  // Placar (t199): salva os recordes locais e, se houver placar_url, envia a corrida para o placar global.",
+                    "  const V = runtimeScene.getGame().getVariables();",
+                    "  try { localStorage.setItem(\"pato_recordes\", JSON.stringify(V.get(\"recordes\").toJSObject())); } catch (e) {}",
+                    "  const fim = V.get(\"corrida_fim\").toJSObject();",
+                    "  for (const n of [\"global_pontos\", \"global_pos_tempo\", \"global_pos_pontos\"]) V.get(\"corrida_fim\").getChild(n).setNumber(0);",
+                    "  const url = V.get(\"placar_url\").getAsString();",
+                    "  if (url && fim.valida) {",
+                    "    // a build (níveis de upgrade) vai junto: no placar dá para ver se a pontuação veio de habilidade ou de upgrades",
+                    "    const corpo = Object.assign({ jogo: V.get(\"placar_jogo\").getAsString(), nome: V.get(\"jogador_nome\").getAsString(),",
+                    "      upgrades: V.get(\"upgrades\").toJSObject(), token: V.get(\"corrida\").getChild(\"token\").getAsString() }, fim);",
+                    "    const limite = typeof AbortSignal !== \"undefined\" && AbortSignal.timeout ? { signal: AbortSignal.timeout(8000) } : {};",
+                    "    fetch(url, Object.assign({ method: \"POST\", headers: { \"Content-Type\": \"application/json\" }, body: JSON.stringify(corpo) }, limite))",
+                    "      .then((r) => r.json()).then((j) => {",
+                    "        if (!j || j.ok !== true) return;",
+                    "        const F = V.get(\"corrida_fim\");",
+                    "        F.getChild(\"global_pontos\").setNumber(Number(j.pontos) || 0);",
+                    "        F.getChild(\"global_pos_tempo\").setNumber(Number(j.posicao_tempo) || 0);",
+                    "        F.getChild(\"global_pos_pontos\").setNumber(Number(j.posicao_pontos) || 0);",
+                    "      }).catch(() => {});",
+                    "  }",
+                    "} catch (e) { /* placar falhou: o jogo continua */ }"
                   ],
                   "parameterObjects": "",
                   "useStrict": true,
@@ -105486,6 +105575,31 @@
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "try {",
+                    "  // Sessão por fase (t201): a corrida da fase que o pato deixou fica guardada em corridas[fase] (pausada) e a da fase",
+                    "  // em que ele entra volta para corrida; se não houver, o evento seguinte começa uma nova.",
+                    "  const V = runtimeScene.getGame().getVariables();",
+                    "  const C = V.get(\"corrida\");",
+                    "  const T = V.get(\"corridas\");",
+                    "  const cena = runtimeScene.getName();",
+                    "  const antes = C.getChild(\"nivel\").getAsString();",
+                    "  if (C.getChild(\"ativa\").getAsBoolean() && antes !== cena) {",
+                    "    T.getChild(antes).fromJSObject(C.toJSObject());",
+                    "    C.getChild(\"ativa\").setBoolean(false);",
+                    "  }",
+                    "  if (T.hasChild(cena) && T.getChild(cena).getChild(\"ativa\").getAsBoolean()) {",
+                    "    C.fromJSObject(T.getChild(cena).toJSObject());",
+                    "    T.getChild(cena).getChild(\"ativa\").setBoolean(false);",
+                    "  }",
+                    "} catch (e) { /* placar falhou: o jogo continua */ }"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -105676,6 +105790,29 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "try {",
+                        "  // Placar global (t200): pede o token da corrida assim que ela começa (o servidor guarda a hora do começo).",
+                        "  const V = runtimeScene.getGame().getVariables();",
+                        "  const C = V.get(\"corrida\");",
+                        "  C.getChild(\"token\").setString(\"\");",
+                        "  const url = V.get(\"placar_url\").getAsString();",
+                        "  if (url) {",
+                        "    const nivel = C.getChild(\"nivel\").getAsString();",
+                        "    const limite = typeof AbortSignal !== \"undefined\" && AbortSignal.timeout ? { signal: AbortSignal.timeout(8000) } : {};",
+                        "    fetch(url + \"/comecar\", Object.assign({ method: \"POST\", headers: { \"Content-Type\": \"application/json\" }, body: JSON.stringify({ nivel }) }, limite))",
+                        "      .then((r) => r.json())",
+                        "      .then((j) => { if (j && typeof j.token === \"string\" && C.getChild(\"nivel\").getAsString() === nivel) C.getChild(\"token\").setString(j.token); })",
+                        "      .catch(() => {});",
+                        "  }",
+                        "} catch (e) { /* placar falhou: o jogo continua */ }"
+                      ],
+                      "parameterObjects": "",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
                     }
                   ]
                 }
@@ -115281,13 +115418,68 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "tempo_hud",
+                        "=",
+                        "TimerElapsedTime(\"tempo_cena\")"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida.ativa",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "corrida.nivel",
+                            "=",
+                            "CurrentSceneName()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "tempo_hud",
+                            "=",
+                            "GlobalVariable(corrida.tempo)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
                         "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
                         "hud_tempo",
                         "Text",
                         "=",
-                        "SubStr(ToString(100 + floor(TimerElapsedTime(\"tempo_cena\") / 60)), 1, 2) + \":\" + SubStr(ToString(100 + mod(floor(TimerElapsedTime(\"tempo_cena\")), 60)), 1, 2)"
+                        "SubStr(ToString(100 + floor(GlobalVariable(tempo_hud) / 60)), 1, 2) + \":\" + SubStr(ToString(100 + mod(floor(GlobalVariable(tempo_hud)), 60)), 1, 2)"
                       ]
                     },
                     {
