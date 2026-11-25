@@ -98685,6 +98685,41 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Giro do pulo so no desenho",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Giro do pulo só no desenho (t193): a máscara girada entrava na parede e a plataforma devolvia o pulo ao separar.",
+                "// Depois de desenhar, o pato volta a ângulo 0; o tween \"giroPulo\" põe o giro de volta depois da plataforma andar.",
+                "const cena = runtimeScene;",
+                "if (!cena.__giroSoNoDesenho) {",
+                "  cena.__giroSoNoDesenho = true;",
+                "  const desenha = cena.render.bind(cena);",
+                "  cena.render = function (...a) {",
+                "    const r = desenha(...a);",
+                "    for (const p of cena.getObjects(\"pato\")) {",
+                "      const tw = p.getBehavior(\"Tween\");",
+                "      if (tw && tw.exists(\"giroPulo\")) p.setAngle(0);",
+                "    }",
+                "    return r;",
+                "  };",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
