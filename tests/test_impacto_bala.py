@@ -27,7 +27,9 @@ class ImpactoBala(unittest.TestCase):
 
     def test_eventos(self):
         for bala in ('projetil', 'projetil_inimigo'):
-            (e,) = [e for e in self.g['events'] if f'"CollisionNP"}}, "parameters": ["{bala}", "Terreno"' in tx(e['conditions'])]
+            # a bala que some no terreno (a do jogador também tem o evento dos Estilhaços, que marca em vez de apagar: t205)
+            (e,) = [e for e in self.g['events'] if f'"CollisionNP"}}, "parameters": ["{bala}", "Terreno"' in tx(e['conditions'])
+                    and any(a['type']['value'] == 'Delete' for a in e['actions'])]
             tipos = [a['type']['value'] for a in e['actions']]
             self.assertLess(tipos.index('Create'), tipos.index('Delete'), bala)
             a = tx(e['actions'])

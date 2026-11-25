@@ -12219,52 +12219,52 @@
           "value": 4
         },
         {
-          "name": "upg_ima",
-          "persistentUuid": "6f04f737-acb0-516e-841c-a8c343693394",
+          "name": "estilhaco_qtd",
+          "persistentUuid": "7e0c5b82-1f9a-5197-aa69-27713e6d9f15",
           "type": "number",
-          "value": 1
+          "value": 5
         },
         {
-          "name": "queima_tempo",
-          "persistentUuid": "fa0a71b7-0370-5273-bc49-ada16c174d7e",
+          "name": "estilhaco_dano",
+          "persistentUuid": "050cad02-2921-588b-9ed4-51a80963eda1",
           "type": "number",
-          "value": 2
+          "value": 0.25
         },
         {
-          "name": "queima_intervalo",
-          "persistentUuid": "dec5fc27-5115-5eda-8589-66455523d0f8",
+          "name": "estilhaco_vel",
+          "persistentUuid": "4173884d-a406-580e-b3dc-1c2df8c7b2df",
           "type": "number",
-          "value": 0.5
+          "value": 0.8
         },
         {
-          "name": "queima_dano",
-          "persistentUuid": "3244d9ac-ea1d-539a-8922-26df771eae59",
+          "name": "estilhaco_alcance",
+          "persistentUuid": "aa247d72-9d74-57dc-8759-205fdafe3fbb",
           "type": "number",
-          "value": 4
+          "value": 260
         },
         {
-          "name": "cadaver_dano",
-          "persistentUuid": "a9bd2ae2-d806-5332-b52c-7f298189946b",
+          "name": "estilhaco_abertura",
+          "persistentUuid": "0a8b87b5-68e6-5998-9867-0d65456daccf",
           "type": "number",
-          "value": 30
+          "value": 360
         },
         {
-          "name": "cadaver_raio",
-          "persistentUuid": "3ed16701-05f8-5850-a43f-34ffe23d642d",
+          "name": "estilhaco_abertura_parede",
+          "persistentUuid": "db9bf64b-3e6f-5856-bcc7-3cd92f7394ac",
           "type": "number",
-          "value": 160
+          "value": 150
         },
         {
-          "name": "cadaver_repulsao",
-          "persistentUuid": "43e48f78-9eb7-54ef-87cf-c76883cf8bf9",
+          "name": "estilhaco_escala",
+          "persistentUuid": "9ef51f26-11e3-562a-b5a6-963e22473ec1",
           "type": "number",
-          "value": 500
+          "value": 0.6
         },
         {
-          "name": "cadaver_som_volume",
-          "persistentUuid": "3e496a16-16b0-5dac-82d9-ca48cd065a89",
+          "name": "estilhaco_repulsao",
+          "persistentUuid": "bcfd14cb-a89e-58c0-8fc2-2e926abbd488",
           "type": "number",
-          "value": 45
+          "value": 0.3
         }
       ],
       "effects": [],
@@ -13230,6 +13230,36 @@
           "persistentUuid": "f0fbe1e1-804f-5ce1-a161-7849e1b65971",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "fragmento",
+          "persistentUuid": "67c3bbfd-9ef5-5a3e-9c65-d1f22cf3d288",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "estilhacar",
+          "persistentUuid": "e1690c98-40e1-5502-bf25-f6121d65034f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "estilhaco_parede",
+          "persistentUuid": "cde6e9ff-d0ba-551b-a11c-cf757195491c",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "estilhacou",
+          "persistentUuid": "39272201-75da-591b-b480-3756b4b51cdb",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "estilhaco_some",
+          "persistentUuid": "7e5f92fc-d916-58b6-8d0e-311f09e96769",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -13781,18 +13811,6 @@
           "persistentUuid": "ba26cf53-0b43-51be-917d-4e53f077b6b9",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "c1a60e5e-8821-59af-aedf-cfb560d17bfc",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "8480a478-4c51-51a7-a342-a05af53d23a4",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -15161,18 +15179,6 @@
           "persistentUuid": "e1183004-e7b6-5802-b44f-9f0afc699c60",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "b4c4daaa-b065-5224-8285-75f49c280be9",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "699a893c-dd6f-55a0-937c-d92ecbfaa0f3",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -18646,18 +18652,6 @@
           "persistentUuid": "597a462d-0e7b-5caa-bfe9-a79f71349a41",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "7559dadf-43bb-5b17-bd27-f7bdd4c1f3dd",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "1e9bbf79-26c3-5841-a15b-58bc515f93df",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -22467,18 +22461,6 @@
           "persistentUuid": "bae87202-3f0e-510a-bace-c164a919a2a8",
           "type": "boolean",
           "value": true
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "e6a5349f-e4aa-58b1-8203-f20bf99804f3",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "934355dd-892b-56e4-9731-a115bf499c04",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -25320,18 +25302,6 @@
           "persistentUuid": "9501bacc-ce85-51e5-aab7-7a2f24c4eade",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "f69fc48e-ad57-5aef-9193-95819d29ddf1",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "09847829-8dd2-5392-8816-b8915e4a739d",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -28100,18 +28070,6 @@
           "persistentUuid": "42ebd9d1-900d-59c0-8e81-0464c6b2ebf9",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "b7989443-5353-5ace-a609-0d9dc2f406f6",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "7b0b5c39-4603-571f-b1a6-0a8e7d813f54",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [],
@@ -31915,18 +31873,6 @@
           "persistentUuid": "0e0bd74c-24cf-50cf-a2a7-d7f1df004efb",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "e448241f-3c7e-5431-a461-48b140595079",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "69a4c7b8-09f4-5b02-9164-fe4c0896cee8",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -33304,18 +33250,6 @@
           "persistentUuid": "2ea1fb43-59ee-5166-a4fe-61aade73a627",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "7a878dd8-0262-57fc-bac0-9d5cc2446e61",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "50c9199e-9218-5012-90a2-89cf9992dd5d",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -34363,18 +34297,6 @@
           "persistentUuid": "b3eabc8e-98e5-5b7e-9496-ba1f7bbe9aa6",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "af1e93eb-ccad-57f2-adea-765007193621",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "9bfef2a7-fdb2-5098-9c22-fd822cb6826e",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -35359,18 +35281,6 @@
           "persistentUuid": "322ed650-15d2-5ede-9c90-f145ec366e70",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "a2d2fcbe-1cf9-5a32-9d28-c97365e1ad30",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "de0c9079-b6d1-5abc-9214-c615df12ae00",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -36257,18 +36167,6 @@
           "persistentUuid": "5626615f-80d5-511a-94c7-6b5996f3f273",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "55d3eba5-0bad-5ae5-a14f-83dcf8e86491",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "efbaf364-8ad9-50b8-8359-b7692735180a",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -37019,18 +36917,6 @@
           "persistentUuid": "ee1cdad7-27ca-596c-b888-39fabcf75c1c",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "f435ccff-4f55-5665-9c06-d46c7027d7ed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "9e43ad5e-0d19-59b0-8121-08e041022baa",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -37891,18 +37777,6 @@
           "persistentUuid": "5f340341-874a-597b-be83-41730c5136dd",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "7163138d-9f09-54a4-a2fc-c12534ec4af5",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "7f949de3-2891-555a-8a67-2743753429c5",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -38785,18 +38659,6 @@
           "persistentUuid": "d8e7cff0-43a1-52a4-a89f-83707272fc8d",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "e25d255b-0c62-53f5-9e32-032deca47eee",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "292cc8c3-fa78-5c8e-a106-26cc5215ff23",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -39577,18 +39439,6 @@
           "persistentUuid": "436de716-eb6b-5801-a00b-4290b0ab9973",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "2b1dbac1-8f6d-5c77-ad0e-5868ee4858e7",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "e04d244c-c781-512f-9664-3118106c5217",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -41347,18 +41197,6 @@
           "persistentUuid": "35021016-3b03-556d-8224-8048f0da636c",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "7e1763a8-9906-514c-82b4-b144d6083dfa",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "8f43f06e-766c-5c8a-9813-82cf8af08228",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -53337,18 +53175,6 @@
           "persistentUuid": "508b3404-ff7c-5ae4-9bf9-ad9d747a4f9b",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "efc16dae-3e90-5ef8-b045-0a57550dafee",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "09db5afe-71ee-5d8a-8318-5527f9bf69a1",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -54669,18 +54495,6 @@
           "persistentUuid": "9f5ad02a-bddf-5279-8edc-f9475559c86f",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "4e185f2a-6f4b-5cd5-be75-d446408746fc",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "bde3eebe-2e9e-5098-bc80-2936498ebc13",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -56067,18 +55881,6 @@
           "persistentUuid": "dd234bf3-c4a4-5e3d-bc5f-04af09a05221",
           "type": "number",
           "value": 0.5
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "74dc6948-87ad-541a-9da0-c00df8917e55",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "d7f8d144-25d9-5297-83e9-52db77302356",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -57819,18 +57621,6 @@
           "persistentUuid": "58b22619-2fbd-59b7-af59-e614ea871287",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "1aaab8d0-68c6-5d30-a1ff-00b0606f4ea2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "1e92bdc1-dac9-587b-95f7-b9ec2e78b273",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -60106,18 +59896,6 @@
           "persistentUuid": "0f1785ec-6e98-5f0a-90ab-5ae6f1c003e7",
           "type": "boolean",
           "value": true
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "e37b62c3-523e-552c-b027-e1c551c353a5",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "88407454-40e4-57d9-af41-06d22aab9a2b",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -70115,18 +69893,6 @@
           "persistentUuid": "bb662628-1a5a-5ec7-8447-9c283e775f7d",
           "type": "number",
           "value": 0
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "2b996c08-3de7-521b-a67b-90d3586a4134",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "68ba1522-6532-5b96-8797-27bf4963a4c8",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [],
@@ -73918,18 +73684,6 @@
           "persistentUuid": "274eddca-d4e5-5360-9d81-53c94249b8a5",
           "type": "number",
           "value": 0.12
-        },
-        {
-          "name": "queima",
-          "persistentUuid": "cf1aebbd-48bc-50d5-818b-6220e6063af0",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "queima_tick",
-          "persistentUuid": "e69f9897-f258-576c-9989-2de83f3717aa",
-          "type": "number",
-          "value": 0
         }
       ],
       "effects": [
@@ -77839,7 +77593,7 @@
       "name": "moedas_total",
       "persistentUuid": "881d0113-93fb-4107-aa3a-dd4ffc0ac5a7",
       "type": "number",
-      "value": 0
+      "value": 300
     },
     {
       "name": "mortes",
@@ -77852,12 +77606,6 @@
       "persistentUuid": "23cab1eb-da1a-4e82-88e2-5c3c6b586e30",
       "type": "structure",
       "children": [
-        {
-          "name": "cadaver",
-          "persistentUuid": "26155a3f-49bd-5b27-9d61-876d01591c81",
-          "type": "number",
-          "value": 0
-        },
         {
           "name": "cadencia",
           "persistentUuid": "85f944de-6831-4f63-a060-8e38394a4cdb",
@@ -77877,14 +77625,8 @@
           "value": 0
         },
         {
-          "name": "ima",
-          "persistentUuid": "351646b3-e3cf-51ca-a27d-58f954d121db",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "incendiaria",
-          "persistentUuid": "be099b15-1cd8-53a2-8306-c670524ee21b",
+          "name": "estilhaco",
+          "persistentUuid": "4d782d97-39f0-5956-8212-937e99a41dce",
           "type": "number",
           "value": 0
         },
@@ -78060,13 +77802,13 @@
               "name": "preco_base",
               "persistentUuid": "417ab772-e225-41ce-91d9-416d7b804d6a",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "2cab4aef-adfb-47d3-9e9d-ef08847def1b",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78114,13 +77856,13 @@
               "name": "preco_base",
               "persistentUuid": "6675eea4-e96a-4902-b94c-908d19b61987",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "2d446a89-f58d-4cf2-8970-d1d85902e4a5",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78168,13 +77910,13 @@
               "name": "preco_base",
               "persistentUuid": "a2b1374a-9af4-47c0-a068-4195b2d48820",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "593eb033-d37d-4970-b516-8c0de4277ceb",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78222,13 +77964,13 @@
               "name": "preco_base",
               "persistentUuid": "21544974-880d-41df-95db-7e8d80522846",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "d2f19da1-6bb7-4b06-a196-0b539e632bce",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78276,13 +78018,13 @@
               "name": "preco_base",
               "persistentUuid": "73289183-26d3-5385-b91b-104c3b9e58cf",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "9752f567-a3d4-5a82-ae12-20916b087dbf",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78330,13 +78072,13 @@
               "name": "preco_base",
               "persistentUuid": "7d4b40c7-7b0c-4401-9d57-3d7f5fb0e175",
               "type": "number",
-              "value": 200
+              "value": 100
             },
             {
               "name": "preco_mult",
               "persistentUuid": "ec140ec3-236a-47e5-9ad2-9c76bec9d663",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78384,13 +78126,13 @@
               "name": "preco_base",
               "persistentUuid": "a12b3cf8-a975-4831-8573-2347d8654bb9",
               "type": "number",
-              "value": 350
+              "value": 200
             },
             {
               "name": "preco_mult",
               "persistentUuid": "b8eeda77-a052-4218-8e3d-e2b5e4a1e2e5",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78438,13 +78180,13 @@
               "name": "preco_base",
               "persistentUuid": "6de1aa23-ed39-4c5b-9846-bbb9694a3ef3",
               "type": "number",
-              "value": 350
+              "value": 200
             },
             {
               "name": "preco_mult",
               "persistentUuid": "eedd2fba-4ee2-4b85-9c4e-c97ff7bd311f",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78492,13 +78234,13 @@
               "name": "preco_base",
               "persistentUuid": "955686d3-1e50-4234-87bb-a88c932925e7",
               "type": "number",
-              "value": 350
+              "value": 200
             },
             {
               "name": "preco_mult",
               "persistentUuid": "e90fcc6f-7922-4df8-a21a-2e387aa1fc9e",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78546,13 +78288,13 @@
               "name": "preco_base",
               "persistentUuid": "a9f89724-b92e-42b3-9ca3-87734012c1bc",
               "type": "number",
-              "value": 1500
+              "value": 800
             },
             {
               "name": "preco_mult",
               "persistentUuid": "88cb0f56-cbf1-4d78-868d-467babb2b57c",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78600,13 +78342,13 @@
               "name": "preco_base",
               "persistentUuid": "9c828df6-1014-5162-9bb6-e0fb93fd7865",
               "type": "number",
-              "value": 350
+              "value": 200
             },
             {
               "name": "preco_mult",
               "persistentUuid": "ea87ce2d-f9b9-5b06-9c47-95178f4b0dba",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
@@ -78623,162 +78365,54 @@
           ]
         },
         {
-          "persistentUuid": "13c83cc0-83f0-5706-86a4-61e59b844cb7",
+          "persistentUuid": "15a5f8c1-e993-5a35-b3f5-8daa076413b2",
           "type": "structure",
           "children": [
             {
               "name": "descricao",
-              "persistentUuid": "fa421328-b6a3-5ae9-97df-1eed9ade7b92",
+              "persistentUuid": "420373dd-f5aa-526e-9610-ca1232990180",
               "type": "string",
-              "value": "As moedas vem de mais longe: +100% de alcance do ima por nivel"
+              "value": "A bala que acerta vira 5 estilhacos que voam em volta; +dano dos estilhacos por nivel"
             },
             {
               "name": "id",
-              "persistentUuid": "c5623623-2e6f-5058-9b73-71ea5387d063",
+              "persistentUuid": "e20c8bf4-cb20-5001-b73b-297faaf34df5",
               "type": "string",
-              "value": "ima"
+              "value": "estilhaco"
             },
             {
               "name": "nivel_max",
-              "persistentUuid": "0cbb6de1-7540-5997-a348-d1b0cbf7f474",
+              "persistentUuid": "62391935-50b5-51b5-8370-7d76e943de12",
               "type": "number",
               "value": 3
             },
             {
               "name": "nome",
-              "persistentUuid": "c8be114b-5128-59aa-a126-cfb58e95fb3a",
+              "persistentUuid": "a91fe73e-5a74-521c-88ec-167048a1da61",
               "type": "string",
-              "value": "Ima"
+              "value": "Estilhacos"
             },
             {
               "name": "preco_base",
-              "persistentUuid": "6d581301-aec3-532d-aae9-e4bcc17fe857",
+              "persistentUuid": "33a8f7c0-bbac-546e-9d8e-0f359c207a9f",
               "type": "number",
-              "value": 150
+              "value": 200
             },
             {
               "name": "preco_mult",
-              "persistentUuid": "d1d0de91-7cb6-5ec8-9f46-3f69560eae98",
+              "persistentUuid": "1754ef11-68e2-5a95-8d20-46561bb5ff94",
               "type": "number",
-              "value": 2
+              "value": 1.5
             },
             {
               "name": "requer",
-              "persistentUuid": "84ef5e31-4b4c-5753-ac3c-d6ba8cc640f1",
+              "persistentUuid": "8996d59e-737e-5f91-acb9-de56f4e2e952",
               "type": "string",
               "value": ""
             },
             {
               "name": "tipo",
-              "persistentUuid": "1e9ba046-83c7-5c6a-8c24-5b484c0e2e8e",
-              "type": "string",
-              "value": "upgrade"
-            }
-          ]
-        },
-        {
-          "persistentUuid": "332e2691-9e23-5364-86b8-586df38a6fe1",
-          "type": "structure",
-          "children": [
-            {
-              "name": "descricao",
-              "persistentUuid": "e0368167-3317-5630-b253-57922af65e7b",
-              "type": "string",
-              "value": "A bala poe fogo no inimigo: dano a cada meio segundo por 2 s; +dano por nivel"
-            },
-            {
-              "name": "id",
-              "persistentUuid": "98b92f71-e91f-5d7f-a317-df7d8d64488d",
-              "type": "string",
-              "value": "incendiaria"
-            },
-            {
-              "name": "nivel_max",
-              "persistentUuid": "c6e5e414-f8aa-5230-87ff-6448756bddfe",
-              "type": "number",
-              "value": 3
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "82e9c18a-da29-5022-91af-44d10050deb5",
-              "type": "string",
-              "value": "Incendiaria"
-            },
-            {
-              "name": "preco_base",
-              "persistentUuid": "f97d6493-7c8d-5530-af8d-a2b99fe2e893",
-              "type": "number",
-              "value": 350
-            },
-            {
-              "name": "preco_mult",
-              "persistentUuid": "0ee40bc2-95a0-5418-a523-03fff94afacf",
-              "type": "number",
-              "value": 2
-            },
-            {
-              "name": "requer",
-              "persistentUuid": "b8201633-3600-5923-8d0b-36cc876645d5",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "tipo",
-              "persistentUuid": "fe7c2558-74e0-5369-ba47-2eb94f1f55bd",
-              "type": "string",
-              "value": "upgrade"
-            }
-          ]
-        },
-        {
-          "persistentUuid": "eb6efc90-b686-5bdb-ac68-3a8ea35dd61a",
-          "type": "structure",
-          "children": [
-            {
-              "name": "descricao",
-              "persistentUuid": "abdecb45-3432-5094-974e-5fe06ef5f4ec",
-              "type": "string",
-              "value": "Inimigo morto explode e fere quem estiver perto; +dano por nivel"
-            },
-            {
-              "name": "id",
-              "persistentUuid": "8fe07fab-1056-5dd7-97a9-7be9ea7f86db",
-              "type": "string",
-              "value": "cadaver"
-            },
-            {
-              "name": "nivel_max",
-              "persistentUuid": "1955ee04-5c34-538d-8fcb-b9b25349e665",
-              "type": "number",
-              "value": 3
-            },
-            {
-              "name": "nome",
-              "persistentUuid": "859527cd-23da-5fb0-b678-d7ba6e784a7d",
-              "type": "string",
-              "value": "Cadaver Explosivo"
-            },
-            {
-              "name": "preco_base",
-              "persistentUuid": "c47cbb88-fa4e-5f00-bb18-d96bcbd629f2",
-              "type": "number",
-              "value": 350
-            },
-            {
-              "name": "preco_mult",
-              "persistentUuid": "54d21689-bb97-58db-ab99-234c2c74810b",
-              "type": "number",
-              "value": 2
-            },
-            {
-              "name": "requer",
-              "persistentUuid": "87b3e7e9-78a9-5473-8245-30b97136ed5a",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "tipo",
-              "persistentUuid": "1fcaad44-99b7-51a6-b38a-c90cf0147552",
+              "persistentUuid": "0bb1662a-414d-51f0-9b8e-1d5aa00f2e47",
               "type": "string",
               "value": "upgrade"
             }
@@ -79451,7 +79085,7 @@
       "name": "ui_m_h",
       "persistentUuid": "3dd84800-3c60-5a3c-8d06-837447ef1c47",
       "type": "number",
-      "value": 660
+      "value": 588
     },
     {
       "name": "ui_m_pad",
@@ -79565,7 +79199,7 @@
       "name": "ui_rod_y",
       "persistentUuid": "0b98339e-1d5d-5ea3-a9ed-e5f94b0389e5",
       "type": "number",
-      "value": 590
+      "value": 518
     },
     {
       "name": "ui_rod_h",
@@ -111450,6 +111084,155 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "GlobalVariable(upgrades.estilhaco)",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "fragmento",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "raio",
+                        "<=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhacou",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "impacto_bala",
+                        "projetil.CenterX()",
+                        "projetil.CenterY()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "impacto_bala",
+                        "=",
+                        "projetil.Angle() + 180"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "impacto_bala",
+                        "=",
+                        "projetil.ZOrder()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhacar",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhaco_parede",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhacou",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhaco_some",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "Terreno",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "projetil",
+                        "estilhacar",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -112003,34 +111786,6 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "GlobalVariable(upgrades.incendiaria)",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "queima",
-                            "=",
-                            "pato.queima_tempo"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
@@ -112430,6 +112185,78 @@
                       "conditions": [
                         {
                           "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "GlobalVariable(upgrades.estilhaco)",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "fragmento",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "raio",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhacou",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhacar",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhacou",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
@@ -112437,6 +112264,17 @@
                             "furos",
                             "<=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhacar",
+                            "False",
+                            ""
                           ]
                         }
                       ],
@@ -112447,6 +112285,46 @@
                           },
                           "parameters": [
                             "projetil",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "furos",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhacar",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "projetil",
+                            "estilhaco_some",
+                            "True",
                             ""
                           ]
                         }
@@ -112519,177 +112397,97 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Fogo da bala incendiária",
+              "name": "Estilhaços",
               "source": "",
               "parameters": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima",
-                        ">",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "morto",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "invulneravel",
-                        "False",
-                        ""
-                      ]
-                    }
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "try {",
+                    "  // Estilhaços (t205): cada bala marcada (estilhacar) solta pato.estilhaco_qtd estilhaços; some se estilhaco_some.",
+                    "  const lista = runtimeScene.getObjects(\"projetil\").filter((p) => p.getVariables().get(\"estilhacar\").getAsBoolean());",
+                    "  if (lista.length) {",
+                    "    const V = runtimeScene.getGame().getVariables();",
+                    "    const pato = runtimeScene.getObjects(\"pato\")[0];",
+                    "    const P = pato.getVariables();",
+                    "    const n = (k) => P.get(k).getAsNumber();",
+                    "    const nivel = V.get(\"upgrades\").getChild(\"estilhaco\").getAsNumber();",
+                    "    const SV = runtimeScene.getVariables().has(\"serie_bala\") ? runtimeScene.getVariables().get(\"serie_bala\") : V.get(\"serie_bala\");",
+                    "    // Inimigo é um grupo (getObjects não pega grupo): quem tem bala_serie é inimigo",
+                    "    const inimigos = runtimeScene.getAdhocListOfAllInstances().filter((e) => e.getVariables().has(\"bala_serie\"));",
+                    "    for (const p of lista) {",
+                    "      const pv = p.getVariables();",
+                    "      const g = (k) => pv.get(k).getAsNumber();",
+                    "      const parede = pv.get(\"estilhaco_parede\").getAsBoolean();",
+                    "      const f = p.getAverageForce();",
+                    "      const vel = Math.hypot(f.getX(), f.getY()) * n(\"estilhaco_vel\");",
+                    "      const rumo = Math.atan2(f.getY(), f.getX()) + (parede ? Math.PI : 0);",
+                    "      // na parede, sai de onde a bala estava antes de entrar nela",
+                    "      const cx = parede ? g(\"px\") + (p.getCenterXInScene() - p.getX()) : p.getCenterXInScene();",
+                    "      const cy = parede ? g(\"py\") + (p.getCenterYInScene() - p.getY()) : p.getCenterYInScene();",
+                    "      // o inimigo que a bala acertou (ele guarda a série dela): os estilhaços nascem fora dele",
+                    "      const alvo = parede ? null : inimigos.find((e) => e.getVariables().get(\"bala_serie\").getAsNumber() === g(\"serie\"));",
+                    "      const caixa = alvo ? alvo.getAABB() : null;",
+                    "      const qtd = Math.max(1, Math.round(n(\"estilhaco_qtd\")));",
+                    "      const abertura = Math.min(360, parede ? n(\"estilhaco_abertura_parede\") : n(\"estilhaco_abertura\")) * Math.PI / 180;",
+                    "      const passo = abertura / qtd;",
+                    "      const inicio = abertura >= 2 * Math.PI - 1e-6 ? rumo + Math.random() * passo : rumo - abertura / 2 + passo / 2;",
+                    "      for (let i = 0; i < qtd; i++) {",
+                    "        const a = inicio + passo * i;",
+                    "        const dx = Math.cos(a), dy = Math.sin(a);",
+                    "        const o = runtimeScene.createObject(\"projetil\");",
+                    "        o.setLayer(p.getLayer());",
+                    "        o.setZOrder(p.getZOrder());",
+                    "        o.setScaleX(p.getScaleX() * n(\"estilhaco_escala\"));",
+                    "        o.setScaleY(p.getScaleY() * n(\"estilhaco_escala\"));",
+                    "        let sx = cx, sy = cy;",
+                    "        if (caixa) {",
+                    "          // anda do ponto do acerto até sair da caixa do inimigo, na direção do estilhaço",
+                    "          const tx = dx > 0 ? (caixa.max[0] - cx) / dx : dx < 0 ? (caixa.min[0] - cx) / dx : Infinity;",
+                    "          const ty = dy > 0 ? (caixa.max[1] - cy) / dy : dy < 0 ? (caixa.min[1] - cy) / dy : Infinity;",
+                    "          // + metade do estilhaço: ele nasce sem encostar no inimigo",
+                    "          const t = Math.max(0, Math.min(tx, ty)) + Math.max(o.getWidth(), o.getHeight()) / 2 + 2;",
+                    "          sx = cx + dx * t;",
+                    "          sy = cy + dy * t;",
+                    "        }",
+                    "        o.setAngle(a * 180 / Math.PI);",
+                    "        o.setX(sx - (o.getCenterXInScene() - o.getX()));",
+                    "        o.setY(sy - (o.getCenterYInScene() - o.getY()));",
+                    "        o.addForce(dx * vel, dy * vel, 1);",
+                    "        const ov = o.getVariables();",
+                    "        SV.add(1);",
+                    "        ov.get(\"serie\").setNumber(SV.getAsNumber());",
+                    "        ov.get(\"dano\").setNumber(g(\"dano\") * g(\"fator\") * n(\"estilhaco_dano\") * nivel);",
+                    "        ov.get(\"dano_var\").setNumber(g(\"dano_var\"));",
+                    "        ov.get(\"dano_explosao\").setNumber(0);",
+                    "        ov.get(\"raio\").setNumber(0);",
+                    "        ov.get(\"furos\").setNumber(0);",
+                    "        ov.get(\"ricochetes\").setNumber(0);",
+                    "        ov.get(\"alcance\").setNumber(n(\"estilhaco_alcance\"));",
+                    "        ov.get(\"queda_min\").setNumber(1);",
+                    "        ov.get(\"fator\").setNumber(1);",
+                    "        ov.get(\"repulsao\").setNumber(g(\"repulsao\") * n(\"estilhaco_repulsao\"));",
+                    "        ov.get(\"percorrido\").setNumber(0);",
+                    "        ov.get(\"px\").setNumber(o.getX());",
+                    "        ov.get(\"py\").setNumber(o.getY());",
+                    "        ov.get(\"ox\").setNumber(sx);",
+                    "        ov.get(\"oy\").setNumber(sy);",
+                    "        ov.get(\"rcx\").setNumber(sx);",
+                    "        ov.get(\"rcy\").setNumber(sy);",
+                    "        ov.get(\"iniciado\").setBoolean(true);",
+                    "        ov.get(\"fragmento\").setBoolean(true);",
+                    "      }",
+                    "      // a bala que ainda atravessa segue (sem estilhaçar de novo); a outra vira os estilhaços",
+                    "      if (pv.get(\"estilhaco_some\").getAsBoolean()) p.deleteFromScene(runtimeScene);",
+                    "      else { pv.get(\"estilhacar\").setBoolean(false); pv.get(\"estilhaco_parede\").setBoolean(false); }",
+                    "    }",
+                    "  }",
+                    "} catch (e) { /* sem estilhaços neste quadro: o tiro segue normal */ }"
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima",
-                        "-",
-                        "TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima_tick",
-                        "+",
-                        "TimeDelta()"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "queima_tick",
-                            ">=",
-                            "pato.queima_intervalo"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "queima_tick",
-                            "-",
-                            "pato.queima_intervalo"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Inimigo",
-                            "vida",
-                            "-",
-                            "max(1, round(pato.queima_dano * GlobalVariable(upgrades.incendiaria) * GlobalVariable(mult_dano)))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "sangue_brasa",
-                            "Inimigo.CenterX() + RandomFloatInRange(-0.3, 0.3) * Inimigo.Width()",
-                            "Inimigo.CenterY() + RandomFloatInRange(-0.3, 0.3) * Inimigo.Height()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "sangue_brasa",
-                            "=",
-                            "-90"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "object": "Inimigo"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima",
-                        "<=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima_tick",
-                        ">",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Inimigo",
-                        "queima_tick",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "object": "Inimigo"
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             }
@@ -113361,104 +113159,6 @@
                             "vida",
                             "=",
                             "min(pato.max_vida, pato.vida + pato.vamp_cura * GlobalVariable(upgrades.vampirismo))"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "GlobalVariable(upgrades.cadaver)",
-                            ">",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "som_explosao.wav",
-                            "",
-                            "pato.cadaver_som_volume",
-                            "RandomFloatInRange(1.1, 1.3)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "explosao_fumaca",
-                            "Inimigo.CenterX()",
-                            "Inimigo.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "explosao_fogo",
-                            "Inimigo.CenterX()",
-                            "Inimigo.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "explosao_faiscas",
-                            "Inimigo.CenterX()",
-                            "Inimigo.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "explosao_fogo",
-                            "dano",
-                            "=",
-                            "pato.cadaver_dano * GlobalVariable(upgrades.cadaver)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "explosao_fogo",
-                            "raio",
-                            "=",
-                            "pato.cadaver_raio"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "explosao_fogo",
-                            "repulsao",
-                            "=",
-                            "pato.cadaver_repulsao"
                           ]
                         }
                       ]
@@ -114344,7 +114044,7 @@
                       "parameters": [
                         "moeda",
                         "pato",
-                        "moeda.iman_dist * (1 + pato.upg_ima * GlobalVariable(upgrades.ima))",
+                        "moeda.iman_dist",
                         ""
                       ]
                     }
