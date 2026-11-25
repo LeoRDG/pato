@@ -79641,6 +79641,341 @@
       "persistentUuid": "0beb53ad-dc24-56a1-9080-797db5b3f200",
       "type": "number",
       "value": 0.7
+    },
+    {
+      "name": "placar",
+      "persistentUuid": "c94c8729-f6f3-5b0f-9185-c4b5ae0f244f",
+      "type": "structure",
+      "children": [
+        {
+          "name": "pts_abate",
+          "persistentUuid": "2525788f-eabc-58cf-969b-6bb3b7959c42",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "pts_vida_inimigo",
+          "persistentUuid": "b382c311-8ba2-5416-b8a2-10cf59bb31ee",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "pts_conclusao",
+          "persistentUuid": "40b7946d-04ce-5598-bb17-0d0674b1c2f1",
+          "type": "number",
+          "value": 1000
+        },
+        {
+          "name": "pts_segundo",
+          "persistentUuid": "06dfbd92-2689-5eff-8779-dbfdf3fc9875",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "pts_dano",
+          "persistentUuid": "b6dc2d59-69e6-54cc-962e-6321d74ac0e9",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "pts_morte",
+          "persistentUuid": "5414bff6-e6a4-5a4a-8c11-e7018c4d22eb",
+          "type": "number",
+          "value": 500
+        },
+        {
+          "name": "pts_ida_hub",
+          "persistentUuid": "054b8d5c-8421-5021-bd12-6feefc571182",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "tempo_no_hub",
+          "persistentUuid": "6036a6c0-2b1c-5ae1-a638-a13e540bd89b",
+          "type": "boolean",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "placar_niveis",
+      "persistentUuid": "ca2eeabe-9fca-539e-9b12-ee963b115c0d",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Inferno",
+          "persistentUuid": "6f8d57be-eaa6-58c1-9a68-63eff1cbb692",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo_ref",
+              "persistentUuid": "0b323094-b5e8-51c8-b59c-bdca26da0a77",
+              "type": "number",
+              "value": 900
+            }
+          ]
+        },
+        {
+          "name": "Purgatorio",
+          "persistentUuid": "0e5c90d5-df10-5b94-ae4c-82bc4db20a58",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo_ref",
+              "persistentUuid": "b3e61316-5e53-5346-b4b1-426da754b89a",
+              "type": "number",
+              "value": 900
+            }
+          ]
+        },
+        {
+          "name": "Paraiso",
+          "persistentUuid": "2acd9deb-221c-5f3d-ba18-831d46d03d25",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo_ref",
+              "persistentUuid": "80cbd801-3f19-5dcb-ac60-765a6f73bfab",
+              "type": "number",
+              "value": 600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "corrida",
+      "persistentUuid": "8e6d801c-51e1-5ac8-a5f1-3deae22f6874",
+      "type": "structure",
+      "children": [
+        {
+          "name": "nivel",
+          "persistentUuid": "751f3c2c-9bb2-51df-a862-06e31802ede7",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "ativa",
+          "persistentUuid": "ecc5af9d-a723-53ba-9a91-36ac441b6e4c",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "valida",
+          "persistentUuid": "296a7f84-dead-578e-8e56-5d622fcdadaa",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "nova",
+          "persistentUuid": "6b9b1b0e-48ff-5a13-a3d5-67e4013eb84e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "concluir",
+          "persistentUuid": "4ab5b89f-c56a-5fe3-9a50-9b286d3d32b8",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "tempo",
+          "persistentUuid": "af98a941-5918-54f2-b6c9-10fc0c5ef889",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "abates",
+          "persistentUuid": "91180c6f-b247-5890-acc8-a0dd16f8a64f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pts_abates",
+          "persistentUuid": "0a6d8bdb-eb82-5a21-8a58-a34260011c4a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "fc2ad944-1247-5eb5-8e3e-1ef2f8908560",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mortes",
+          "persistentUuid": "43e957a4-a264-5132-92d1-fdd85e4340d2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "idas_hub",
+          "persistentUuid": "ce01ba52-481b-5bcb-b1ea-1a2b8a23f88e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pontos",
+          "persistentUuid": "9850cfc8-c24a-5d61-bb5e-9f1212d8f209",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "corrida_fim",
+      "persistentUuid": "14511d37-70ee-52a1-a58b-987d0b0accad",
+      "type": "structure",
+      "children": [
+        {
+          "name": "nivel",
+          "persistentUuid": "f4249b79-6530-5e6e-9d3a-64e1824d551f",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "valida",
+          "persistentUuid": "be9e5062-baf7-589c-9efd-8f262b20f8d4",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "recorde_tempo",
+          "persistentUuid": "7e4cc9da-2ae9-57a1-a6d4-3e996dafccba",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "recorde_pontos",
+          "persistentUuid": "f53c7477-60ee-5dee-85ad-1571686354ea",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "tempo",
+          "persistentUuid": "ec225a68-556e-5536-aa3e-c2c86cd9f8ea",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "abates",
+          "persistentUuid": "6cd96767-e238-54ee-a4d9-da1ac2da6248",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pts_abates",
+          "persistentUuid": "b2b32ac8-9c97-581d-990f-f3f7a5958550",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "1fab2ca0-ed91-5330-8761-adb457993fa3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mortes",
+          "persistentUuid": "53b9fb9e-5046-5e22-845e-6dcd3500a07b",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "idas_hub",
+          "persistentUuid": "0e03b9a6-b611-5661-87dc-54fc764e60e5",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "pontos",
+          "persistentUuid": "17ed6caa-2dcf-5db7-95f5-41e5180a029c",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "recordes",
+      "persistentUuid": "6467a4b3-ac8e-52a7-b7bf-cc809f35d4f6",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Inferno",
+          "persistentUuid": "267d8e25-fc69-5cce-8c08-371aba15e2a3",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo",
+              "persistentUuid": "7853253d-9139-55d3-8bcf-ba2af90f6270",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pontos",
+              "persistentUuid": "d4d5f9ed-1f00-5b11-a982-7d5bdd767ff4",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Purgatorio",
+          "persistentUuid": "5830f6d3-c8a1-5431-8c85-24e064cc5b56",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo",
+              "persistentUuid": "8d808985-a033-5c8c-97cd-7f4f153aea1e",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pontos",
+              "persistentUuid": "072ea484-3518-5adf-a0b6-4bed2964ee7a",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Paraiso",
+          "persistentUuid": "0a731406-7eab-50ab-bcd1-80070b588939",
+          "type": "structure",
+          "children": [
+            {
+              "name": "tempo",
+              "persistentUuid": "50ce9718-d7ab-588c-85b4-29bb2870f6c9",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pontos",
+              "persistentUuid": "804b4cfe-9385-5ebb-baa1-9bef9073d405",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "placar_url",
+      "persistentUuid": "c0198a1a-3c4e-5537-96d4-374a623a20b9",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "placar_jogo",
+      "persistentUuid": "84d99193-ee2b-5727-aed6-7fcb72b307a2",
+      "type": "string",
+      "value": "pato"
+    },
+    {
+      "name": "jogador_nome",
+      "persistentUuid": "8adf14bd-eeb9-51ab-b121-877975346592",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [
@@ -94840,6 +95175,45 @@
                     ""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.ativa",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "corrida.nivel",
+                        "=",
+                        "CurrentSceneName()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.concluir",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ],
@@ -101034,6 +101408,16 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "corrida.dano",
+                            "+",
+                            "max(1, round((pato.vida_ref - pato.vida) * dificuldade_dano))"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
@@ -101170,6 +101554,16 @@
                       },
                       "parameters": [
                         "mortes",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.mortes",
                         "+",
                         "1"
                       ]
@@ -104701,6 +105095,703 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Corrida (placar)",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Placar (t199): recordes locais salvos no navegador; carrega uma vez por jogo.",
+                "const jogo = runtimeScene.getGame();",
+                "if (!jogo.__recordesCarregados) {",
+                "  jogo.__recordesCarregados = true;",
+                "  try {",
+                "    const salvo = JSON.parse(localStorage.getItem(\"pato_recordes\") || \"{}\");",
+                "    const R = jogo.getVariables().get(\"recordes\");",
+                "    for (const fase in salvo) for (const k in salvo[fase]) R.getChild(fase).getChild(k).setNumber(Number(salvo[fase][k]) || 0);",
+                "  } catch (e) {}",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida.concluir",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida.concluir",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida.ativa",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida.pontos",
+                    "=",
+                    "max(0, round(GlobalVariable(corrida.pts_abates) + GlobalVariable(placar.pts_conclusao) + max(0, GlobalVariable(placar_niveis[GlobalVariableString(corrida.nivel)].tempo_ref) - GlobalVariable(corrida.tempo)) * GlobalVariable(placar.pts_segundo) - GlobalVariable(corrida.dano) * GlobalVariable(placar.pts_dano) - GlobalVariable(corrida.mortes) * GlobalVariable(placar.pts_morte) - GlobalVariable(corrida.idas_hub) * GlobalVariable(placar.pts_ida_hub)))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.nivel",
+                    "=",
+                    "GlobalVariableString(corrida.nivel)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.tempo",
+                    "=",
+                    "GlobalVariable(corrida.tempo)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.abates",
+                    "=",
+                    "GlobalVariable(corrida.abates)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.pts_abates",
+                    "=",
+                    "GlobalVariable(corrida.pts_abates)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.dano",
+                    "=",
+                    "GlobalVariable(corrida.dano)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.mortes",
+                    "=",
+                    "GlobalVariable(corrida.mortes)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.idas_hub",
+                    "=",
+                    "GlobalVariable(corrida.idas_hub)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.pontos",
+                    "=",
+                    "GlobalVariable(corrida.pontos)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.valida",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.recorde_tempo",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida_fim.recorde_pontos",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.valida",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida_fim.valida",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "recordes[GlobalVariableString(corrida.nivel)].tempo",
+                                "<=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "recordes[GlobalVariableString(corrida.nivel)].tempo",
+                                ">",
+                                "GlobalVariable(corrida.tempo)"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "recordes[GlobalVariableString(corrida.nivel)].tempo",
+                            "=",
+                            "GlobalVariable(corrida.tempo)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida_fim.recorde_tempo",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "recordes[GlobalVariableString(corrida.nivel)].pontos",
+                            "<",
+                            "GlobalVariable(corrida.pontos)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "recordes[GlobalVariableString(corrida.nivel)].pontos",
+                            "=",
+                            "GlobalVariable(corrida.pontos)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida_fim.recorde_pontos",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// Placar (t199): salva os recordes locais e, se houver placar_url, envia a corrida para o placar global.",
+                    "const V = runtimeScene.getGame().getVariables();",
+                    "try { localStorage.setItem(\"pato_recordes\", JSON.stringify(V.get(\"recordes\").toJSObject())); } catch (e) {}",
+                    "const fim = V.get(\"corrida_fim\").toJSObject();",
+                    "const url = V.get(\"placar_url\").getAsString();",
+                    "if (url && fim.valida) {",
+                    "  // a build (níveis de upgrade) vai junto: no placar dá para ver se a pontuação veio de habilidade ou de upgrades",
+                    "  const corpo = Object.assign({ jogo: V.get(\"placar_jogo\").getAsString(), nome: V.get(\"jogador_nome\").getAsString(),",
+                    "    upgrades: V.get(\"upgrades\").toJSObject() }, fim);",
+                    "  fetch(url, { method: \"POST\", headers: { \"Content-Type\": \"application/json\" }, body: JSON.stringify(corpo) }).catch(() => {});",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "CurrentSceneName()",
+                        "=",
+                        "\"Inferno\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "CurrentSceneName()",
+                        "=",
+                        "\"Purgatorio\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareStrings"
+                      },
+                      "parameters": [
+                        "CurrentSceneName()",
+                        "=",
+                        "\"Paraiso\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida.nova",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.ativa",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "corrida.nivel",
+                        "=",
+                        "CurrentSceneName()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.nova",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.nova",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "corrida.nivel",
+                        "=",
+                        "CurrentSceneName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.ativa",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.valida",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.concluir",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.tempo",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.abates",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.pts_abates",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.dano",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.mortes",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.idas_hub",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.pontos",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "waypoints[CurrentSceneName()].ativo",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida.valida",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "corrida.ativa",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "placar.tempo_no_hub",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.tempo",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "placar.tempo_no_hub",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "CurrentSceneName()",
+                            "=",
+                            "\"Inferno\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "CurrentSceneName()",
+                            "=",
+                            "\"Purgatorio\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "CurrentSceneName()",
+                            "=",
+                            "\"Paraiso\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.tempo",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -110594,6 +111685,16 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.dano",
+                        "+",
+                        "max(1, round((pato.vida_ref - pato.vida) * dificuldade_dano))"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetNumberObjectVariable"
                       },
                       "parameters": [
@@ -111306,6 +112407,44 @@
                             "pato.cadaver_repulsao"
                           ]
                         }
+                      ]
+                    }
+                  ],
+                  "object": "Inimigo"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "corrida.ativa",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.abates",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "corrida.pts_abates",
+                        "+",
+                        "GlobalVariable(placar.pts_abate) + Inimigo.max_vida * GlobalVariable(placar.pts_vida_inimigo)"
                       ]
                     }
                   ],
@@ -118409,6 +119548,35 @@
                         "portal.CenterY()"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida.ativa",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "corrida.idas_hub",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -118435,6 +119603,45 @@
                         "waypoints[CurrentSceneName()].ativo",
                         "False",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida.ativa",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "corrida.nivel",
+                            "=",
+                            "CurrentSceneName()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "corrida.concluir",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
