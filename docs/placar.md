@@ -22,7 +22,7 @@ The in-game part is done (`tools/t199_placar.py`). What's missing is a server to
 - **Switching levels:** each level keeps its own paused session in `corridas[level]`. Playing another level in between doesn't lose it; it resumes when the duck enters that level again.
 - **HUD clock:** while the duck is in a level with a session, the clock shows the session time (`tempo_hud`).
 - **Valid runs:** only a session that **started at the beginning of the level** is valid (`corrida.valida`).
-  - Return points aren't saved between page loads, so after a reload every level starts from the beginning anyway. In practice every session that reaches a final portal is valid.
+  - Progress, return points and paused sessions are saved in the browser (`tools/t202_salvar_progresso.py`), so a reload continues the same session. In practice every session that reaches a final portal is valid.
   - Partial sessions are never recorded or sent.
 
 ### Score (all numbers are variables in `placar` and `placar_niveis`)

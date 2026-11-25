@@ -80052,6 +80052,18 @@
       "persistentUuid": "db3aa9a4-6396-543c-a831-2402f16d3d57",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "ultimo_hub",
+      "persistentUuid": "8632d075-bbdb-527a-85a7-a67b01c5805e",
+      "type": "string",
+      "value": "Hub"
+    },
+    {
+      "name": "save_intervalo",
+      "persistentUuid": "168665e2-d90e-54ef-8d51-139464b60cad",
+      "type": "number",
+      "value": 10
     }
   ],
   "layouts": [
@@ -80090,6 +80102,49 @@
         "folderName": "__ROOT"
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Carregar progresso",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "try {",
+                "  // Salvar progresso (t202): carrega o save uma vez, antes do primeiro hub. ?novo no endereço começa um jogo novo.",
+                "  const jogo = runtimeScene.getGame();",
+                "  const V = jogo.getVariables();",
+                "  if (!jogo.__saveCarregado) {",
+                "    jogo.__saveCarregado = true;",
+                "    if (/[?&]novo(=|&|$)/.test(location.search)) {",
+                "      localStorage.removeItem(\"pato_save\");",
+                "      // tira o ?novo do endereço: recarregar a página depois não apaga o save de novo",
+                "      try { history.replaceState(null, \"\", location.pathname + location.hash); } catch (e) {}",
+                "    }",
+                "    const s = JSON.parse(localStorage.getItem(\"pato_save\") || \"null\");",
+                "    if (s && s.versao === 1) {",
+                "      // estruturas: só os filhos que estão no save; o resto fica com o valor do jogo",
+                "      const poe = (v, x) => {",
+                "        if (x && typeof x === \"object\" && !Array.isArray(x)) { for (const k in x) poe(v.getChild(k), x[k]); }",
+                "        else v.fromJSObject(x);",
+                "      };",
+                "      for (const k of [\"moedas_total\", \"mortes\", \"trader_morto\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (k in s && k !== \"ultimo_hub\") poe(V.get(k), s[k]);",
+                "      if (typeof s.ultimo_hub === \"string\" && jogo.hasScene(s.ultimo_hub)) V.get(\"ultimo_hub\").setString(s.ultimo_hub);",
+                "    }",
+                "  }",
+                "} catch (e) { /* save estragado ou armazenamento bloqueado: o jogo segue sem ele */ }"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -80143,7 +80198,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Hub\"",
+                    "GlobalVariableString(ultimo_hub)",
                     ""
                   ]
                 }
@@ -105927,6 +105982,52 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Salvar progresso",
+          "source": "",
+          "parameters": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "try {",
+                "  // Salvar progresso (t202): ao começar cada cena, a cada save_intervalo s e quando a aba é escondida ou fechada.",
+                "  const jogo = runtimeScene.getGame();",
+                "  const V = jogo.getVariables();",
+                "  const S = jogo.__save || (jogo.__save = { cena: null, t: 0 });",
+                "  if (!S.salva) {",
+                "    S.salva = () => {",
+                "      try {",
+                "        const o = { versao: 1 };",
+                "        for (const k of [\"moedas_total\", \"mortes\", \"trader_morto\", \"upgrades\", \"armas\", \"waypoints\", \"corrida\", \"corridas\", \"jogador_nome\", \"ultimo_hub\"]) if (V.has(k)) o[k] = V.get(k).toJSObject();",
+                "        localStorage.setItem(\"pato_save\", JSON.stringify(o));",
+                "      } catch (e) {}",
+                "    };",
+                "    document.addEventListener(\"visibilitychange\", () => { if (document.visibilityState === \"hidden\") S.salva(); });",
+                "    window.addEventListener(\"pagehide\", () => S.salva());",
+                "  }",
+                "  // o último hub: num hub, a variável de cena \"hub\" é o nome da própria cena",
+                "  const cv = runtimeScene.getVariables();",
+                "  if (cv.has(\"hub\") && cv.get(\"hub\").getAsString() === runtimeScene.getName()) V.get(\"ultimo_hub\").setString(runtimeScene.getName());",
+                "  S.t += runtimeScene.getTimeManager().getElapsedTime() / 1000;",
+                "  if (S.cena !== runtimeScene || S.t >= V.get(\"save_intervalo\").getAsNumber()) {",
+                "    S.cena = runtimeScene;",
+                "    S.t = 0;",
+                "    S.salva();",
+                "  }",
+                "} catch (e) { /* sem armazenamento: o jogo segue sem salvar */ }"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             }
           ]
         }
