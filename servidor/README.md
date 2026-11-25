@@ -41,14 +41,17 @@ Run these from this folder (`servidor/`):
    ```
    npx wrangler secret put PLACAR_SEGREDO
    ```
-5. In `wrangler.toml`, uncomment `routes` and fill in the game's domain. The game's domain is already on Cloudflare, so the Worker answers on the same site under `/api/placar`.
+5. Check `routes` and `ORIGENS` in `wrangler.toml`.
+   - The game (`pato.leorods.org`) is served by GitHub Pages without the Cloudflare proxy, so the leaderboard gets its own subdomain, `placar.leorods.org`.
+   - `deploy` creates that DNS record (type Worker) and its certificate. Don't create it by hand.
+   - `ORIGENS` lists the game's address, so the Worker accepts requests from it.
 6. Publish:
    ```
    npx wrangler deploy
    ```
-7. In GDevelop, set the global `placar_url` to `https://<game-domain>/api/placar`, then promote to `main` as usual.
+7. In GDevelop, set the global `placar_url` to `https://placar.leorods.org/api/placar`, then promote to `main` as usual.
 
-To check that it's working, open `https://<game-domain>/api/placar?nivel=Inferno` in the browser. It should return `{"nivel":"Inferno","tipo":"tempo","linhas":[]}`.
+To check that it's working, open `https://placar.leorods.org/api/placar?nivel=Inferno` in the browser. It should return `{"nivel":"Inferno","tipo":"tempo","linhas":[]}`.
 
 ## Tests and running locally
 - `npm test` runs the Worker against a local stand-in for D1 (Node's built-in SQLite, Node 22.5 or newer).

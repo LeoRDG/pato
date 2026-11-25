@@ -2,16 +2,16 @@ name = "pato-placar"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
 
-# O jogo já passa pela Cloudflare (CNAME): rodando o worker no mesmo domínio, o jogo chama /api/placar sem CORS.
-# Troque SEU_DOMINIO pelo domínio do jogo e SEU_DOMINIO_RAIZ pela zona dele na Cloudflare, e descomente:
-# routes = [{ pattern = "SEU_DOMINIO/api/placar*", zone_name = "SEU_DOMINIO_RAIZ" }]
+# O jogo (pato.leorods.org) fica no GitHub Pages sem proxy; o placar tem um subdomínio próprio.
+# O `wrangler deploy` cria sozinho o registro DNS (tipo Worker) e o certificado: não crie esse registro à mão.
+routes = [{ pattern = "placar.leorods.org", custom_domain = true }]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "pato-placar"
-database_id = "COLE_AQUI_O_ID"   # o id que o `npx wrangler d1 create pato-placar` mostra
+database_id = "3f5ee2b5-d4a8-4f4e-a081-157eeb7a5125"
 
 [vars]
-# outras origens que podem chamar o placar, separadas por vírgula (ex.: http://localhost:8765 para testar o export local)
-ORIGENS = ""
+# origens que podem chamar o placar, separadas por vírgula (para testar o export local, acrescente http://localhost:8765)
+ORIGENS = "https://pato.leorods.org"
 # o segredo dos tokens NÃO fica aqui: npx wrangler secret put PLACAR_SEGREDO
