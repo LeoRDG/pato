@@ -58,8 +58,13 @@ points = Σ kills (placar.pts_abate + enemy max HP × placar.pts_vida_inimigo)
 - **Leaving:** Space, Enter, E or a click returns to the level's hub after `fim_tela.espera` seconds.
 - **Layout:** positions and sizes are in `fim_tela.*`; colors are the `ui_cor_*` variables. In windows narrower than `fim_tela.ref_w`, the layout scales down.
 
+### Player name (`tools/t204_nome_no_hub.py`)
+- **In any hub,** `nome_tela.tecla` (N) opens a panel: type the name, Enter saves, Esc cancels. It's limited to `nome_tela.max` characters, with the server's rules (letters, digits, space, `_ - .`).
+- **While typing,** keys don't reach the game and the duck stands still, as in the shop.
+- **A corner hint** shows the current name, or asks the player to choose one. Players who never choose still get an automatic `Pato NNNN` on their first submission.
+- **The name is saved** right away with the progress.
+
 ### Still missing in the game
-- **Name entry** (`jogador_nome`): players get an automatic name like `Pato 3803` on their first submission. There's no way yet to choose one.
 - **Board in the hub:** show the board next to each level's portal.
 - **"Restart from the beginning" option at the hub portal:** it clears the level's return point. Today, a player who leaves a level midway can't do a valid run of it again until they clear it.
 

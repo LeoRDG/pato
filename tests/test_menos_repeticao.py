@@ -67,7 +67,7 @@ class MenosRepeticao(unittest.TestCase):
 
     def test_hubs(self):
         hubs = next(x for x in self.d['externalEvents'] if x['name'] == 'Hubs')
-        self.assertEqual([e['name'] for e in hubs['events']], ['Queda da borda', 'Armas no hub', 'Atributos'])   # t186, t190
+        self.assertEqual([e['name'] for e in hubs['events']], ['Queda da borda', 'Armas no hub', 'Atributos', 'Nome do jogador'])   # t186, t190, t204
         for l in self.d['layouts']:
             if l['name'].startswith('Hub'):
                 alvos = [e.get('target') for e in l['events']]
