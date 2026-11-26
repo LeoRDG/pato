@@ -11730,6 +11730,14 @@
         "name": "assets/purgatorio/fundo/serra.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/purgatorio/fundo/longe_hub.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/purgatorio/fundo/longe_hub.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -76947,6 +76955,25 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 1024,
+      "name": "bg_purgatorio_longe_hub",
+      "persistentUuid": "83c1f044-dd5a-5d59-b773-c983154ed053",
+      "texture": "assets/purgatorio/fundo/longe_hub.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1024,
+      "variables": [
+        {
+          "name": "parallax_extra",
+          "persistentUuid": "4d404763-59bb-5b7f-8e86-d55423a65399",
+          "type": "number",
+          "value": -0.1
+        }
+      ],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -77517,6 +77544,9 @@
           },
           {
             "objectName": "bg_purgatorio_serra"
+          },
+          {
+            "objectName": "bg_purgatorio_longe_hub"
           }
         ]
       },
@@ -83732,8 +83762,8 @@
           "height": 3000,
           "keepRatio": true,
           "layer": "fundo",
-          "name": "bg_purgatorio_longe",
-          "persistentUuid": "60fe2427-abb6-59ff-ab2b-54467f439f7e",
+          "name": "bg_purgatorio_longe_hub",
+          "persistentUuid": "c391b328-5cba-5057-80bd-1fb8cd7c39b4",
           "width": 4096,
           "x": -2048,
           "y": -1500,
@@ -83754,22 +83784,6 @@
           "x": -1280,
           "y": -704,
           "zOrder": -3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 3000,
-          "keepRatio": true,
-          "layer": "fundo",
-          "name": "bg_purgatorio_pilares",
-          "persistentUuid": "24fb1d3c-ae7c-5f6e-9208-25e414b2e31a",
-          "width": 4096,
-          "x": -2048,
-          "y": -1500,
-          "zOrder": -2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -84030,12 +84044,32 @@
                 },
                 {
                   "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_longe_hub",
+                    "=",
+                    "CameraCenterX(\"\", 0) * bg_purgatorio_longe_hub.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "TiledSpriteObject::YOffset"
                   },
                   "parameters": [
                     "bg_purgatorio_longe",
                     "=",
                     "CameraCenterY(\"\", 0) * bg_purgatorio_longe.parallax_extra"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::YOffset"
+                  },
+                  "parameters": [
+                    "bg_purgatorio_longe_hub",
+                    "=",
+                    "CameraCenterY(\"\", 0) * bg_purgatorio_longe_hub.parallax_extra"
                   ]
                 },
                 {

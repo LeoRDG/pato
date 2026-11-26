@@ -58,7 +58,7 @@ class Hubs(unittest.TestCase):
         self.assertEqual(self.var('Paraiso', 'proxima_cena'), 'Hub')     # o valor do editor fica
 
     def test_hubs_novos_com_o_reino_certo(self):
-        for nome, tiles, fundo, cor in [('HubPurgatorio', 'tiles_purgatorio', 'bg_purgatorio_longe', (128, 138, 128)),
+        for nome, tiles, fundo, cor in [('HubPurgatorio', 'tiles_purgatorio', 'bg_purgatorio_longe_hub', (128, 138, 128)),
                                         ('HubParaiso', 'tiles_ceu', 'bg_paraiso_nuvens', (172, 196, 232))]:
             c = self.cenas[nome]
             nomes = [i['name'] for i in c['instances']]
