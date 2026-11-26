@@ -11706,6 +11706,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/portais/fundo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/portais/fundo.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -65539,6 +65547,24 @@
           "persistentUuid": "740c1717-b185-55ea-a54f-cd226563b5e8",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "cor_fundo",
+          "persistentUuid": "401c0650-232e-591c-b35d-ef859c17c688",
+          "type": "string",
+          "value": "25;12;45"
+        },
+        {
+          "name": "fundo_raio",
+          "persistentUuid": "41d8b7cb-3d6f-5667-bafd-a56fd5cd0fe4",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "fundo_opacidade",
+          "persistentUuid": "574f9fef-13a6-58c1-97a9-a5ad95eccc21",
+          "type": "number",
+          "value": 170
         }
       ],
       "effects": [],
@@ -76724,6 +76750,103 @@
         "g": 65,
         "b": 65
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "portal_fundo",
+      "persistentUuid": "1e3937c3-d405-5db7-935c-3a2c1d781848",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "base_x",
+          "persistentUuid": "626d7cec-148f-528f-9b28-076bc68f3618",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "base_y",
+          "persistentUuid": "bb3d9d22-df66-5a89-b94c-a6deb2dd302c",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "5a2e7bf2-3f16-5264-b80c-1fe7579d84d8",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ang_orb",
+          "persistentUuid": "9d445581-d7ae-5d0c-8018-e4a5ef5910c1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "giro",
+          "persistentUuid": "c3991f81-679c-5fbe-ab7c-b0011750f6da",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "inclina",
+          "persistentUuid": "903a71df-9110-521c-8cd8-137180f17f34",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_amp",
+          "persistentUuid": "82a5a1dd-739e-5ceb-9792-d10b29f1d4f3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "flutua_vel",
+          "persistentUuid": "b55f8185-f972-5f55-bdfa-bbcfcb5e3fda",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "fase",
+          "persistentUuid": "72755d4c-3637-50c5-8586-fd260f84f292",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "fundo",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/portais/fundo.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 128.0,
+                    "y": 128.0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -77474,6 +77597,9 @@
           },
           {
             "objectName": "portal_nucleo"
+          },
+          {
+            "objectName": "portal_fundo"
           }
         ]
       },
@@ -77821,6 +77947,9 @@
         },
         {
           "name": "portal_nucleo"
+        },
+        {
+          "name": "portal_fundo"
         }
       ]
     },
@@ -81743,6 +81872,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "45;10;4"
             }
           ]
         },
@@ -81788,6 +81922,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "4;34;30"
             }
           ]
         },
@@ -81833,6 +81972,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "12;22;60"
             }
           ]
         },
@@ -83368,6 +83512,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "45;10;4"
             }
           ]
         },
@@ -83413,6 +83562,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "4;34;30"
             }
           ]
         },
@@ -83458,6 +83612,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "12;22;60"
             }
           ]
         },
@@ -85057,6 +85216,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "45;10;4"
             }
           ]
         },
@@ -85102,6 +85266,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "4;34;30"
             }
           ]
         },
@@ -85147,6 +85316,11 @@
               "name": "entrar_com_e",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "cor_fundo",
+              "type": "string",
+              "value": "12;22;60"
             }
           ]
         },
@@ -119565,6 +119739,164 @@
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "portal_fundo",
+                        "portal.CenterX()",
+                        "portal.CenterY()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "portal.cor_fundo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "Resizable",
+                        "portal.fundo_raio * 2",
+                        "portal.fundo_raio * 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "Opacity",
+                        "=",
+                        "portal.fundo_opacidade"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "=",
+                        "portal.ZOrder()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "base_x",
+                        "=",
+                        "portal.CenterX()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "base_y",
+                        "=",
+                        "portal.CenterY()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "raio",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "ang_orb",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "giro",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "inclina",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "flutua_amp",
+                        "=",
+                        "portal.flutua_amp"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "flutua_vel",
+                        "=",
+                        "portal.flutua_vel"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "portal_fundo",
+                        "fase",
+                        "=",
+                        "portal.fase"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
