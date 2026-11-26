@@ -51,7 +51,7 @@ def test_tiro_e_laser_saem_do_bocal_mira_livre_e_granada_cai():
 def test_coice_tremor_e_clarao_do_cano():
     txt = json.dumps(JOGO['externalEvents'], ensure_ascii=False)
     nomes = {a['name'] for a in OBJ['flash_cano']['animations']}
-    assert nomes == {'pistola', 'doze', 'minigun', 'lanca'}
+    assert nomes == {'pistola', 'doze', 'minigun', 'lanca', 'm4', 'mp5', 'sniper'}
     for n in ('pistola', 'doze', 'minigun', 'lanca'):
         assert os.path.exists(os.path.join(RAIZ, 'assets', f'flash_{n}.png')) and f'flash_{n}.png' in RES
         assert {v['name'] for v in OBJ[n]['variables']} >= {'kick', 'tremor', 'bocal_f'}

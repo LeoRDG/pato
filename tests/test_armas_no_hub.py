@@ -6,7 +6,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 import gd_mig as m
 
-ARMAS = ('pistola', 'doze', 'minigun', 'lanca')
+ARMAS = ('pistola', 'doze', 'minigun', 'lanca', 'm4', 'mp5', 'sniper')
 HUBS = ('Hub', 'HubPurgatorio', 'HubParaiso')
 
 
@@ -24,7 +24,7 @@ class ArmasNoHub(unittest.TestCase):
         return next(b for b in m.objeto(self.d, arma)['behaviors'] if b['type'] == 'FireBullet::FireBullet')
 
     def test_municao_infinita_mesmo_pente(self):
-        pentes = {'pistola': 12, 'doze': 6, 'minigun': 100, 'lanca': 4}
+        pentes = {'pistola': 12, 'doze': 6, 'minigun': 100, 'lanca': 4, 'm4': 30, 'mp5': 32, 'sniper': 5}
         for a in ARMAS:
             self.assertTrue(self.fb(a)['UnlimitedAmmo'], a)
             self.assertEqual(self.fb(a)['ShotsPerReload'], pentes[a], a)
