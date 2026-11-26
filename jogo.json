@@ -84475,15 +84475,15 @@
       ]
     },
     {
-      "b": 232,
+      "b": 222,
       "disableInputWhenNotFocused": true,
       "mangledName": "HubParaiso",
       "name": "HubParaiso",
-      "r": 172,
+      "r": 177,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 196,
+      "v": 195,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -85896,6 +85896,22 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "Adjustment",
+              "name": "Menos vibrante",
+              "doubleParameters": {
+                "gamma": 1,
+                "saturation": 0.75,
+                "contrast": 1,
+                "brightness": 1,
+                "red": 1,
+                "green": 1,
+                "blue": 1,
+                "alpha": 1
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -93161,15 +93177,15 @@
       ]
     },
     {
-      "b": 232,
+      "b": 222,
       "disableInputWhenNotFocused": true,
       "mangledName": "Paraiso",
       "name": "Paraiso",
-      "r": 172,
+      "r": 177,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 196,
+      "v": 195,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -98154,6 +98170,22 @@
                 "centerY": 0.5,
                 "radius": 260,
                 "strength": 0
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Adjustment",
+              "name": "Menos vibrante",
+              "doubleParameters": {
+                "gamma": 1,
+                "saturation": 0.75,
+                "contrast": 1,
+                "brightness": 1,
+                "red": 1,
+                "green": 1,
+                "blue": 1,
+                "alpha": 1
               },
               "stringParameters": {},
               "booleanParameters": {}
