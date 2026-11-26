@@ -12050,6 +12050,14 @@
         "name": "assets/toque/botao_usar.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/toque/base_mira.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/toque/base_mira.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -82042,6 +82050,35 @@
               ]
             }
           ]
+        },
+        {
+          "name": "mira",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/toque/base_mira.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 128,
+                    "y": 128
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -86101,18 +86138,6 @@
           "value": 235
         },
         {
-          "name": "mov_x",
-          "persistentUuid": "8baf779e-2836-5f72-b8d7-b5a669d7961f",
-          "type": "number",
-          "value": 0.12
-        },
-        {
-          "name": "mov_y",
-          "persistentUuid": "a7d7b771-db2a-564a-bdfa-a6c6dcb568c0",
-          "type": "number",
-          "value": 0.74
-        },
-        {
           "name": "mov_raio",
           "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
           "type": "number",
@@ -86137,18 +86162,6 @@
           "value": 0.6
         },
         {
-          "name": "mira_x",
-          "persistentUuid": "565ae8b4-4ec1-5baf-aa7c-cf873138bd62",
-          "type": "number",
-          "value": 0.78
-        },
-        {
-          "name": "mira_y",
-          "persistentUuid": "663763d9-5add-5796-92ef-abe4085531ad",
-          "type": "number",
-          "value": 0.4
-        },
-        {
           "name": "mira_raio",
           "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
           "type": "number",
@@ -86167,64 +86180,10 @@
           "value": 320
         },
         {
-          "name": "pulo_x",
-          "persistentUuid": "0c6d517d-61a1-5c32-b477-154bd7a2a292",
-          "type": "number",
-          "value": 0.68
-        },
-        {
-          "name": "pulo_y",
-          "persistentUuid": "15aac522-51ed-5c32-8eb8-0f0c354530a6",
-          "type": "number",
-          "value": 0.84
-        },
-        {
-          "name": "dash_x",
-          "persistentUuid": "70513021-6b65-571d-912c-2e71ee36ddc5",
-          "type": "number",
-          "value": 0.57
-        },
-        {
-          "name": "dash_y",
-          "persistentUuid": "e7146688-edd2-5c0c-bb53-14b33ecf6cdd",
-          "type": "number",
-          "value": 0.89
-        },
-        {
-          "name": "recarga_x",
-          "persistentUuid": "2eae579e-32cb-5c10-a1e9-14e1a26aaed0",
-          "type": "number",
-          "value": 0.93
-        },
-        {
-          "name": "recarga_y",
-          "persistentUuid": "6326c25a-1768-5a90-9302-2c3a8246acad",
-          "type": "number",
-          "value": 0.64
-        },
-        {
-          "name": "usar_x",
-          "persistentUuid": "5ed10a79-e052-5435-95d3-c5f554c57a26",
-          "type": "number",
-          "value": 0.84
-        },
-        {
-          "name": "usar_y",
-          "persistentUuid": "156805fa-f4e7-5398-bf09-34f4ce68fa30",
-          "type": "number",
-          "value": 0.64
-        },
-        {
           "name": "botao_raio",
           "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
           "type": "number",
           "value": 72
-        },
-        {
-          "name": "folga",
-          "persistentUuid": "bc0003e6-eb81-5454-9767-b22ae10439d5",
-          "type": "number",
-          "value": 1.2
         },
         {
           "name": "mov_id",
@@ -86435,6 +86394,198 @@
           "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "tela_cheia",
+          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "opacidade_repouso",
+          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "mov_esq",
+          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "mov_baixo",
+          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
+          "type": "number",
+          "value": 290
+        },
+        {
+          "name": "mov_zona",
+          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "segue",
+          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_no_analogico",
+          "persistentUuid": "ba7ba1eb-cb0f-58ee-9471-ac9698364fff",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_solta",
+          "persistentUuid": "151e0e59-31db-577e-8b4e-ef542c22b4be",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "mira_dir",
+          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
+          "type": "number",
+          "value": 760
+        },
+        {
+          "name": "mira_baixo",
+          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "mira_auto",
+          "persistentUuid": "5d116c95-dd58-5cda-8c56-9e9addab6d16",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "mira_auto_alcance",
+          "persistentUuid": "2d5aa83b-c51b-547d-b8dc-de9c63b56fcd",
+          "type": "number",
+          "value": 1100
+        },
+        {
+          "name": "mira_auto_espera",
+          "persistentUuid": "0949e795-dfc0-5e27-bb42-d476d6a41d81",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "mira_segue_andar",
+          "persistentUuid": "09319f84-3b56-54b8-9172-4cfd2fbbc02e",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_dir",
+          "persistentUuid": "1e238383-2cc5-5bc1-92fe-7d71c0de7d44",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "pulo_baixo",
+          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "type": "number",
+          "value": 330
+        },
+        {
+          "name": "pulo_raio",
+          "persistentUuid": "183d5534-db71-5eaf-8180-9dc1dbbc67d0",
+          "type": "number",
+          "value": 95
+        },
+        {
+          "name": "pulo_toque",
+          "persistentUuid": "b808e5d4-2239-5f23-a570-7064958a8dd2",
+          "type": "number",
+          "value": 165
+        },
+        {
+          "name": "dash_dir",
+          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
+          "type": "number",
+          "value": 480
+        },
+        {
+          "name": "dash_baixo",
+          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "recarga_dir",
+          "persistentUuid": "c05fbf2d-90a9-5323-be37-0b2727de02f1",
+          "type": "number",
+          "value": 430
+        },
+        {
+          "name": "recarga_baixo",
+          "persistentUuid": "4f9feb07-1cd0-5821-ba71-d5a9141811a8",
+          "type": "number",
+          "value": 530
+        },
+        {
+          "name": "usar_dir",
+          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "usar_baixo",
+          "persistentUuid": "62742393-73c4-5403-9a8b-14c139a97fe6",
+          "type": "number",
+          "value": 590
+        },
+        {
+          "name": "botao_toque",
+          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "pulo_analogico",
+          "persistentUuid": "55c8bae6-5f1c-53dd-aa2f-b3d8734a33b6",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "mira_parado",
+          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vx",
+          "persistentUuid": "47cc1a74-2e44-52f6-b0f8-793b7b00383d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vy",
+          "persistentUuid": "93f201a3-157b-5a74-aef7-95dbc8aaae50",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vd",
+          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "melhor",
+          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "qual",
+          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
+          "type": "string",
+          "value": ""
         }
       ]
     },
@@ -107204,7 +107355,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Controles de toque (t215): ligam no celular (ou com toque.forcar). Analógico esquerdo anda (para cima pula), direito mira e atira; botões pulo, dash, recarga e usar (E). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
+              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, recarga, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (para cima também pula), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -107247,6 +107398,26 @@
                     "toque.mira_id",
                     "=",
                     "-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "toque.pulo_analogico",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "toque.mira_parado",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -107371,8 +107542,8 @@
                           "parameters": [
                             "",
                             "toque_base",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107385,6 +107556,17 @@
                             "papel",
                             "=",
                             "\"mov\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "toque_base",
+                            "Animation",
+                            "=",
+                            "\"base\""
                           ]
                         },
                         {
@@ -107406,7 +107588,7 @@
                             "toque_base",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107431,8 +107613,8 @@
                           "parameters": [
                             "",
                             "toque_alavanca",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107466,7 +107648,7 @@
                             "toque_alavanca",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107491,8 +107673,8 @@
                           "parameters": [
                             "",
                             "toque_base",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107503,6 +107685,17 @@
                           "parameters": [
                             "toque_base",
                             "papel",
+                            "=",
+                            "\"mira\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "toque_base",
+                            "Animation",
                             "=",
                             "\"mira\""
                           ]
@@ -107526,7 +107719,7 @@
                             "toque_base",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107551,8 +107744,8 @@
                           "parameters": [
                             "",
                             "toque_alavanca",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107586,7 +107779,7 @@
                             "toque_alavanca",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107611,8 +107804,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107645,8 +107838,8 @@
                           "parameters": [
                             "toque_botao",
                             "Resizable",
-                            "toque.botao_raio * 2",
-                            "toque.botao_raio * 2"
+                            "toque.pulo_raio * 2",
+                            "toque.pulo_raio * 2"
                           ]
                         },
                         {
@@ -107682,8 +107875,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107753,8 +107946,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107824,8 +108017,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107885,6 +108078,67 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "toque.ativo",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// Tela cheia no celular (t216). O navegador só deixa pedir a tela cheia dentro de um gesto do usuário, e o",
+                    "// touchstart não conta (só o touchend): por isso o pedido sai do touchend, não de um evento do quadro.",
+                    "// Usa o setFullScreen do próprio GDevelop; a marca interna dele é acertada pelo estado real, para voltar à tela",
+                    "// cheia no próximo toque se o navegador sair dela (voltar, deslizar). Liga/desliga em toque.tela_cheia.",
+                    "// No iPhone o Safari não tem tela cheia para páginas: lá não acontece nada (Adicionar à Tela de Início).",
+                    "const S = gdjs._toqueTelaCheia || (gdjs._toqueTelaCheia = {});",
+                    "S.jogo = runtimeScene.getGame();",
+                    "if (!S.instalado) {",
+                    "  S.instalado = true;",
+                    "  const cheia = () => !!(document.fullscreenElement || document.webkitFullscreenElement);",
+                    "  const ligado = () => {",
+                    "    try {",
+                    "      const t = S.jogo.getVariables().get(\"toque\");",
+                    "      return t.getChild(\"ativo\").getAsBoolean() && t.getChild(\"tela_cheia\").getAsBoolean();",
+                    "    } catch (e) { return false; }",
+                    "  };",
+                    "  const pode = () => { const el = document.documentElement; return !!(el.requestFullscreen || el.webkitRequestFullScreen); };",
+                    "  const trava = () => {",
+                    "    try { if (cheia() && screen.orientation && screen.orientation.lock) screen.orientation.lock(\"landscape\").catch(() => {}); } catch (e) {}",
+                    "  };",
+                    "  const pede = () => {",
+                    "    if (!ligado() || cheia() || !pode()) return;",
+                    "    try {",
+                    "      const r = S.jogo.getRenderer();",
+                    "      r._isFullscreen = false;",
+                    "      r.setFullScreen(true);",
+                    "    } catch (e) {}",
+                    "  };",
+                    "  const mudou = () => { try { S.jogo.getRenderer()._isFullscreen = cheia(); } catch (e) {} trava(); };",
+                    "  document.addEventListener(\"touchend\", pede, true);",
+                    "  document.addEventListener(\"fullscreenchange\", mudou);",
+                    "  document.addEventListener(\"webkitfullscreenchange\", mudou);",
+                    "  // pedido recusado: a marca do GDevelop volta a dizer a verdade",
+                    "  document.addEventListener(\"fullscreenerror\", mudou);",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             },
@@ -108009,26 +108263,6 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_bx",
-                        "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mov_by",
-                        "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
                         "toque.mov_dx",
                         "=",
                         "0"
@@ -108078,26 +108312,6 @@
                         "toque.mira_id",
                         "=",
                         "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mira_bx",
-                        "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mira_by",
-                        "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)"
                       ]
                     },
                     {
@@ -108288,7 +108502,7 @@
                       "parameters": [
                         "toque.mov_bx",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)"
+                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq"
                       ]
                     },
                     {
@@ -108298,7 +108512,27 @@
                       "parameters": [
                         "toque.mov_by",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mov_dx",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
@@ -108325,7 +108559,7 @@
                       "parameters": [
                         "toque.mira_bx",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)"
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir"
                       ]
                     },
                     {
@@ -108335,7 +108569,27 @@
                       "parameters": [
                         "toque.mira_by",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_dx",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_dy",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
@@ -108404,6 +108658,26 @@
                             "True",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"\""
+                          ]
                         }
                       ]
                     },
@@ -108412,22 +108686,160 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo) / toque.pulo_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo) / toque.pulo_toque"
                           ]
                         },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"pulo\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"dash\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"recarga\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"usar\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"pulo\""
                           ]
                         }
                       ],
@@ -108459,22 +108871,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"dash\""
                           ]
                         }
                       ],
@@ -108506,22 +108908,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"recarga\""
                           ]
                         }
                       ],
@@ -108553,22 +108945,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"usar\""
                           ]
                         }
                       ],
@@ -108615,7 +108997,7 @@
                           "parameters": [
                             "toque.tx",
                             "<",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) / 2"
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) * toque.mov_zona"
                           ]
                         },
                         {
@@ -108692,7 +109074,7 @@
                           "parameters": [
                             "toque.tx",
                             ">=",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) / 2"
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) * toque.mov_zona"
                           ]
                         },
                         {
@@ -108735,6 +109117,16 @@
                             "toque.mira_by",
                             "=",
                             "toque.ty"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_parado",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -108788,9 +109180,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_dx",
+                        "toque.vx",
                         "=",
-                        "(TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (min(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), toque.mov_raio) / max(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), 0.001) / toque.mov_raio)"
+                        "TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx"
                       ]
                     },
                     {
@@ -108798,9 +109190,94 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_dy",
+                        "toque.vy",
                         "=",
-                        "(TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (min(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), toque.mov_raio) / max(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), 0.001) / toque.mov_raio)"
+                        "TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.vd",
+                        "=",
+                        "max(sqrt(toque.vx * toque.vx + toque.vy * toque.vy), 0.001)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.segue",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "toque.vd",
+                            ">",
+                            "toque.mov_raio"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_bx",
+                            "+",
+                            "toque.vx * (1 - toque.mov_raio / toque.vd)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_by",
+                            "+",
+                            "toque.vy * (1 - toque.mov_raio / toque.vd)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_dx",
+                            "=",
+                            "toque.vx * min(toque.vd, toque.mov_raio) / toque.vd / toque.mov_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_dy",
+                            "=",
+                            "toque.vy * min(toque.vd, toque.mov_raio) / toque.vd / toque.mov_raio"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -108825,9 +109302,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mira_dx",
+                        "toque.vx",
                         "=",
-                        "(TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (min(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), toque.mira_raio) / max(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), 0.001) / toque.mira_raio)"
+                        "TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx"
                       ]
                     },
                     {
@@ -108835,9 +109312,94 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mira_dy",
+                        "toque.vy",
                         "=",
-                        "(TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (min(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), toque.mira_raio) / max(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), 0.001) / toque.mira_raio)"
+                        "TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.vd",
+                        "=",
+                        "max(sqrt(toque.vx * toque.vx + toque.vy * toque.vy), 0.001)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.segue",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "toque.vd",
+                            ">",
+                            "toque.mira_raio"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_bx",
+                            "+",
+                            "toque.vx * (1 - toque.mira_raio / toque.vd)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_by",
+                            "+",
+                            "toque.vy * (1 - toque.mira_raio / toque.vd)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_dx",
+                            "=",
+                            "toque.vx * min(toque.vd, toque.mira_raio) / toque.vd / toque.mira_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_dy",
+                            "=",
+                            "toque.vy * min(toque.vd, toque.mira_raio) / toque.vd / toque.mira_raio"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -109016,16 +109578,6 @@
                         "True",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo",
-                        "True",
-                        ""
-                      ]
                     }
                   ]
                 },
@@ -109050,6 +109602,134 @@
                       },
                       "parameters": [
                         "toque.baixo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_no_analogico",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        "<",
+                        "-toque.pulo_limiar"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        ">",
+                        "-toque.pulo_solta"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_no_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo",
                         "True",
                         ""
                       ]
@@ -109486,6 +110166,16 @@
                         "=",
                         "atan2(toque.mira_dy, toque.mira_dx)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "=",
+                        "0"
+                      ]
                     }
                   ]
                 },
@@ -109531,6 +110221,281 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sqrt(toque.mira_dx * toque.mira_dx + toque.mira_dy * toque.mira_dy)",
+                        "<=",
+                        "toque.zona_morta"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sqrt(toque.mira_dx * toque.mira_dx + toque.mira_dy * toque.mira_dy)",
+                        "<=",
+                        "toque.zona_morta"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        ">=",
+                        "toque.mira_auto_espera"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.tiro",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_auto",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PickNearest"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "pato.CenterX()",
+                            "pato.Y() + pato.Height() * 0.68",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), pato.CenterX(), pato.Y() + pato.Height() * 0.68)",
+                            "<=",
+                            "toque.mira_auto_alcance"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_ang",
+                            "=",
+                            "atan2(Inimigo.CenterY() - (pato.Y() + pato.Height() * 0.68), Inimigo.CenterX() - pato.CenterX())"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_segue_andar",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "cos(toque.mira_ang)",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_ang",
+                        "=",
+                        "atan2(sin(toque.mira_ang), -cos(toque.mira_ang))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_segue_andar",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.direita",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "cos(toque.mira_ang)",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_ang",
+                        "=",
+                        "atan2(sin(toque.mira_ang), -cos(toque.mira_ang))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
@@ -109552,6 +110517,28 @@
                         "toque.mov_bx",
                         "=",
                         "toque.mov_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Resizable",
+                        "toque.mov_raio * 2",
+                        "toque.mov_raio * 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
                       ]
                     }
                   ]
@@ -109583,6 +110570,106 @@
                         "=",
                         "toque.mov_by + toque.mov_dy * toque.mov_raio"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Resizable",
+                        "toque.mov_raio",
+                        "toque.mov_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "papel",
+                        "=",
+                        "\"mov\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "papel",
+                        "=",
+                        "\"mov\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
                     }
                   ]
                 },
@@ -109613,6 +110700,28 @@
                         "=",
                         "toque.mira_by"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Resizable",
+                        "toque.mira_raio * 2",
+                        "toque.mira_raio * 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
                     }
                   ]
                 },
@@ -109642,6 +110751,106 @@
                         "toque.mira_bx + toque.mira_dx * toque.mira_raio",
                         "=",
                         "toque.mira_by + toque.mira_dy * toque.mira_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Resizable",
+                        "toque.mira_raio",
+                        "toque.mira_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "papel",
+                        "=",
+                        "\"mira\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "papel",
+                        "=",
+                        "\"mira\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
                       ]
                     }
                   ]
@@ -109686,9 +110895,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.pulo_raio * 2",
+                        "toque.pulo_raio * 2"
                       ]
                     }
                   ]
@@ -109755,9 +110975,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
@@ -109824,9 +111055,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
@@ -109893,9 +111135,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
