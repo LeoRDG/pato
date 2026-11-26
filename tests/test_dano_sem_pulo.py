@@ -33,7 +33,9 @@ class DanoSemPulo(unittest.TestCase):
 
     def test_pulo_do_jogador_e_da_lava_ficam(self):
         pulos = [e for e in self.eventos if any(t65.pulo(a) for a in e.get('actions') or [])]
-        self.assertTrue(any(any(c['parameters'][1:2] == ['"Space"'] for c in e.get('conditions') or []) for e in pulos))
+        # a tecla pode estar dentro de um "ou" com o toque (t215)
+        conds = lambda e: [s for c in e.get('conditions') or [] for s in [c] + (c.get('subInstructions') or [])]
+        self.assertTrue(any(any(c['parameters'][1:2] == ['"Space"'] for c in conds(e)) for e in pulos))
         self.assertTrue(any(t65.pulo_da_lava(e['actions']) for e in pulos))
 
     def test_rodar_de_novo_nao_muda_nada(self):

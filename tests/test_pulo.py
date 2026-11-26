@@ -21,7 +21,9 @@ def test_propulsor_segue_o_pato():
 def test_giro_em_todo_pulo_no_ar_e_volta_ao_pousar():
     giros = [e for e in eventos() if any(a['type']['value'].endswith('AddObjectAngleTween2') for a in e.get('actions', []))]
     assert len(giros) == 1
-    conds = {(c['type']['value'], bool(c['type'].get('inverted'))) for c in giros[0]['conditions']}
+    # a tecla pode estar dentro de um "ou" com o toque (t215)
+    conds = {(c['type']['value'], bool(c['type'].get('inverted')))
+             for k in giros[0]['conditions'] for c in [k] + (k.get('subInstructions') or [])}
     assert {('KeyFromTextJustPressed', False), ('PlatformBehavior::CanJump', False), ('PlatformBehavior::IsOnFloor', True),
             ('AdvancedJump::AdvancedJump::CanCoyoteJump', True)} <= conds
     assert giros[0]['actions'][0]['parameters'][3].startswith('360 * (round(pato.Angle() / 360) + ')   # sempre uma volta a mais
