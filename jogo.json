@@ -12036,14 +12036,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/toque/botao_recarga.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/toque/botao_recarga.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "assets/toque/botao_usar.png",
         "kind": "image",
         "metadata": "",
@@ -60730,6 +60722,12 @@
           "persistentUuid": "0f1785ec-6e98-5f0a-90ab-5ae6f1c003e7",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "66cdc1c2-5f91-5d8f-9cdf-1c81a77f5dc3",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -76520,7 +76518,14 @@
       "textureParticleName": "assets/particulas/particula_luz.png",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 2,
-      "variables": [],
+      "variables": [
+        {
+          "name": "id",
+          "persistentUuid": "411efb1e-3a0a-5f09-ba87-d6af2c486e3d",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -77485,6 +77490,30 @@
           "persistentUuid": "79cffdb6-3742-5cad-8e76-c9fa6333b795",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "cor_nova",
+          "persistentUuid": "244d7f23-2b63-5288-997d-e24ddd4c8dee",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "cor_atual",
+          "persistentUuid": "4e5a0c06-140c-50fc-bb5d-65841ece70a9",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "larg_nova",
+          "persistentUuid": "af378fb7-9ac7-5e83-8b8c-320ade103066",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "larg_atual",
+          "persistentUuid": "1cd53a91-025b-5685-ba12-6ad96e87227c",
+          "type": "number",
+          "value": -1
         }
       ],
       "effects": [],
@@ -77868,8 +77897,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 128.0,
-                    "y": 128.0
+                    "x": 128,
+                    "y": 128
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -82517,35 +82546,6 @@
           ]
         },
         {
-          "name": "recarga",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.1,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/toque/botao_recarga.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 128,
-                    "y": 128
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "usar",
           "useMultipleDirections": false,
           "directions": [
@@ -82604,15 +82604,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "57e75fb3-f05a-5cc1-a3e9-f1f9562bb14e",
           "type": "number",
-          "value": 0.11,
-          "persistentUuid": "57e75fb3-f05a-5cc1-a3e9-f1f9562bb14e"
+          "value": 0.11
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "07433740-1e8f-5df6-973c-648f0cfbdb95",
           "type": "number",
-          "value": 1.6,
-          "persistentUuid": "07433740-1e8f-5df6-973c-648f0cfbdb95"
+          "value": 1.6
         },
         {
           "name": "dano",
@@ -82871,15 +82871,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "74645373-8b7e-572e-820d-e475b115edb8",
           "type": "number",
-          "value": 0.065,
-          "persistentUuid": "74645373-8b7e-572e-820d-e475b115edb8"
+          "value": 0.065
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "26898e1a-9791-5e0b-892b-dea447084d1c",
           "type": "number",
-          "value": 1.2,
-          "persistentUuid": "26898e1a-9791-5e0b-892b-dea447084d1c"
+          "value": 1.2
         },
         {
           "name": "dano",
@@ -83138,15 +83138,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "24cc3cd5-dddf-5927-831f-12b2d160f150",
           "type": "number",
-          "value": 1.1,
-          "persistentUuid": "24cc3cd5-dddf-5927-831f-12b2d160f150"
+          "value": 1.1
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "8ff77f5a-ca39-56d9-b832-39c9a4a0f305",
           "type": "number",
-          "value": 2.6,
-          "persistentUuid": "8ff77f5a-ca39-56d9-b832-39c9a4a0f305"
+          "value": 2.6
         },
         {
           "name": "dano",
@@ -85788,28 +85788,28 @@
           "value": "LANCA-GRANADAS"
         },
         {
-          "name": "minigun",
-          "persistentUuid": "a4833792-4520-5c4e-b1dc-65e33a3837a3",
-          "type": "string",
-          "value": "MINIGUN"
-        },
-        {
-          "name": "pistola",
-          "persistentUuid": "65ccdf63-9212-5bfe-9a45-a3e2a3bcc464",
-          "type": "string",
-          "value": "PISTOLA"
-        },
-        {
           "name": "m4",
           "persistentUuid": "97e60c69-2ea8-5930-896c-186d03c4fbf2",
           "type": "string",
           "value": "M4"
         },
         {
+          "name": "minigun",
+          "persistentUuid": "a4833792-4520-5c4e-b1dc-65e33a3837a3",
+          "type": "string",
+          "value": "MINIGUN"
+        },
+        {
           "name": "mp5",
           "persistentUuid": "f08e9f62-1ada-54f1-9422-c2970a001c2a",
           "type": "string",
           "value": "MP5"
+        },
+        {
+          "name": "pistola",
+          "persistentUuid": "65ccdf63-9212-5bfe-9a45-a3e2a3bcc464",
+          "type": "string",
+          "value": "PISTOLA"
         },
         {
           "name": "sniper",
@@ -85829,19 +85829,1643 @@
       "name": "stats_pato",
       "persistentUuid": "13160d8a-c9dc-5e46-a8f5-a8d09a240e56",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "atual",
+          "persistentUuid": "efd1d52b-15f0-5a8c-9a34-44370c5ba74a",
+          "type": "structure",
+          "children": [
+            {
+              "name": "eletricidade",
+              "persistentUuid": "b2db6bb3-6277-53dc-bac4-3a68b0ab1f6b",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "laser",
+              "persistentUuid": "4a061eba-4c47-543a-8701-3bf7efed1798",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "perfuracao",
+              "persistentUuid": "941fbb53-bc0d-54ac-beb8-243705bdab3d",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pulos",
+              "persistentUuid": "716dafa8-3c02-5196-a045-e8c5ee69fade",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ricochete",
+              "persistentUuid": "9de11324-63ff-5442-b040-0b21f50598d8",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "9bb53ff5-6449-5e1c-b329-89b1d9d3e3bf",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vida",
+              "persistentUuid": "217cfd68-3189-50d3-8831-3456fb1b7c38",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "novo",
+          "persistentUuid": "afe7d70c-92e5-53b2-9125-b672ecbdbc34",
+          "type": "structure",
+          "children": [
+            {
+              "name": "eletricidade",
+              "persistentUuid": "f33931bb-40d2-575d-a10d-8ed04f024dc5",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "laser",
+              "persistentUuid": "4469fcc2-ce2a-5655-b043-4affc737bea6",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "perfuracao",
+              "persistentUuid": "80cad7fe-6b36-55b3-9b02-5299887a3cc9",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pulos",
+              "persistentUuid": "6aab47ac-a422-5799-9880-8f71f6b152f7",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ricochete",
+              "persistentUuid": "6f7de6f1-d77d-5575-980b-46ec13216b05",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "ff115bd5-f921-5e97-9d17-7483989f3afb",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vida",
+              "persistentUuid": "cb6378f4-5063-56cd-ad90-7508dbf2bcc1",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ui_card",
       "persistentUuid": "9f94d162-9b68-58b7-9c7c-20e8994a7b7d",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "arma",
+          "persistentUuid": "d2069050-9b0d-5e71-96a2-60ee80214c3c",
+          "type": "structure",
+          "children": [
+            {
+              "name": "acao",
+              "persistentUuid": "9108048f-27ca-5d77-b9ac-c13560117343",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "acao_cor",
+              "persistentUuid": "14322aff-3425-5517-8ca2-a304053398fe",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "h",
+              "persistentUuid": "7f95c3de-5202-5f8a-a5fd-239d9f0a4d77",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6f88fb76-f2bf-54c5-87b4-0b484c1991f3",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "54695ff6-578b-5b2f-9d83-2f9b96981450",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "sub",
+              "persistentUuid": "621f8686-e763-57b6-a820-7b3e569aa0d4",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "sub_cor",
+              "persistentUuid": "0ae556e8-2f43-5834-9c13-57d44a67ab6d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "tecla",
+              "persistentUuid": "9ad1095a-23f3-5ad6-9e82-1d233a1d6b9d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "tecla_cor",
+              "persistentUuid": "d7c7304b-9202-5618-bb38-b94e897af832",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "0e247a93-5277-5c43-9c94-623af3bcc3a1",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "7c5c2a5b-f5cf-5710-999d-c77bc6d7a618",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "642284e4-1261-5303-aa4f-66efca76de75",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "04f446f5-3b73-5ded-80c9-b507ff97e486",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "8def3ac6-51e3-56ff-9419-128394cf080c",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "90ca4093-69c2-526d-a780-b85039bc5356",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "1e9a1ca4-dc54-5574-af1d-9cc39382cc90",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "larma",
+          "persistentUuid": "7585bbf9-cbca-54e1-9051-dfac58ec292d",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "3701f433-26c1-57b5-84a1-ad2cfc0544d0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6f1aa563-eb7b-58a8-a452-84c596f141e4",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "adf07511-bf8b-5cf7-b074-8200975e0a81",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "sub",
+              "persistentUuid": "7deca0c4-4b51-58e6-b4fc-415fa9b25e9d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "sub_cor",
+              "persistentUuid": "a5a528fe-a66c-5632-a453-d73cc760a3b2",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "bff6dd39-b057-5870-94c4-94a280b67daf",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "c6948316-8b8e-56ad-8a2d-20585a59d5e5",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "6f4f1d42-7846-51b7-94ed-4a99914cf026",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "fe27821e-125a-5a51-9935-8f6a096d858e",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "90a43bdc-40e9-5132-a0c2-3bc37e0dfff7",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "17452228-eda1-5042-a154-e362892fd8ab",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "9d59c46f-2338-53b3-a412-b409abfde3ab",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "loja",
+          "persistentUuid": "57aa8679-39e0-533e-a8cb-b4996d15bf58",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "4ce7752b-981b-5f3b-b310-583b4565e50a",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6a94c108-c1d9-5bac-8d8c-4bb0776283b9",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "a3c6c87c-dbfa-5d45-9f73-97c73491f137",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "moedas",
+              "persistentUuid": "07301318-a398-5874-b61b-7f7a8e4795d9",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "moedas_cor",
+              "persistentUuid": "ba0706fc-6927-51ca-b676-3422a068fff3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "ff6fa74d-c7ef-5a32-937b-7645518fefb3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "38c53b4b-5e71-51cc-a0b8-a50174f93ce3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "cb219883-091b-59dc-9d41-e5366a8178c1",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "56744c08-7a30-5a7d-bbcc-f5b1a0ffc3e5",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "cb89c5ce-415c-5e7d-8b0e-14dc4ae2b825",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "e7bdcd83-2c0b-5331-8200-ab774127c41a",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "25f13834-0d89-575d-a49f-7ecf2bb38cff",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "lpato",
+          "persistentUuid": "d16455a3-e8df-512a-8087-75fc232bb6cc",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "55db564f-79d9-55ca-99bf-a1e2aaeec325",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "0abf970b-d310-5262-83fd-15cf54d5b1b0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "f620fbce-42ac-5472-804e-cffda5723876",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "94382d56-8cf9-5ee4-bbc4-f08c444db2bc",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "0b420643-ed5d-5dd7-a532-07d26271dff4",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "8703fa05-a549-506f-8e52-38b3fdd13755",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "b02a5349-7193-50b3-93c8-cc46fb539110",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "b814552f-361e-5168-9df8-5952a2bb022e",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "fef75457-760f-5baa-a0e9-62c559fdf1f4",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "cd442a06-e24b-5efd-812a-67fd6a6aa320",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "rodape",
+          "persistentUuid": "1f9041e0-0ec0-5803-ac26-7910f2b0c2fa",
+          "type": "structure",
+          "children": [
+            {
+              "name": "lin_h",
+              "persistentUuid": "21a4ab4a-adb9-5f0b-a5b6-a693b0fa3306",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "b21f7d8d-9ce4-5f05-802b-3cabe93c0652",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "53723dd3-22f6-512d-acf5-65c57d5ceb99",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "73f50b59-5d71-55f3-82ea-9a929db2dbb2",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "b2d98104-e7ad-58d9-8392-4dd4e78e5b85",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "13078bb9-ea43-51f9-8284-4e2197ad0a79",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "666b0ef6-c785-53e6-ada4-79f7d5b7857e",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ui_lin",
       "persistentUuid": "b69ec59a-b78f-55d0-9a17-b9a1bb329e22",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "arma",
+          "persistentUuid": "4e8c0193-4275-5466-ada9-49499101a565",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "55c16989-89d1-53ba-ba64-5b7abd4ac45c",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "57352801-7d8e-5f01-8774-9bcae1ab1e62",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "3cee24ec-eecb-541f-9c6b-86722a5977be",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "593b614d-1c15-5317-b1b8-b210341edc71",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "6a21772b-32da-5087-805f-e2c8a06e2a19",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "11e10a81-8c22-5996-9b65-b3fe838547ed",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "416e07a3-007f-5608-b713-e3d63dc8003d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "ebb05ddc-4229-500c-a5ca-8961e0be7255",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "387d6d22-170c-5c45-9c92-eeb9c8205c29",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "4c5a4ac1-4aac-5412-a948-41a295b7e031",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "a26fdd31-570b-5b03-8fea-eeb060b3b6cc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "7224d5df-8c21-5a3e-9b06-e0cebac84a78",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "38695fe5-c3e2-5302-8b50-f7e6c35c36f6",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "3a65137b-3e22-520e-847e-fc1a7eabc8ec",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "80ba9ae8-fe1d-55c6-ae51-9d314b15abed",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "4ea15ea6-3461-55c5-9a46-424341bf773e",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "1a9300c9-2ef6-50a1-9f07-0b67dcbf4347",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "b0514793-6b98-5c8e-8961-b936252304ef",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "17c74b19-b672-5cb3-b1e3-f87296f5e328",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "3ebcf35b-b2ff-59fd-b725-fca4216312da",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "dd40488a-72a3-53bb-9758-c83ea1b2095b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "bb189106-7ac9-53ca-8e35-bc0b93858049",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "be38d225-11a4-588f-bb26-31dc8aa2e396",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "4a8ffdc7-6e01-5a35-8205-d643a30d492d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "ea560b47-5786-548b-9652-281a04f7d99f",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "76fe0baf-9099-5203-9f40-89213a3697c9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "1eaeea3f-0820-5085-9188-282677f642d9",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "0dfd247d-e4a7-5545-aeb7-6823464cbbc3",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ead4be08-d374-5b2b-81cb-73b951732139",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "3bd60cb7-eee7-50dd-ad28-18468bb2cc8b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "95b66bc9-ad0d-554e-b1f9-7a567e61a6de",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "1309ad6a-72cf-5ae4-a21f-c703aec92599",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "1d5def7a-3219-51c4-8d03-4bfd14d6c6df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "75cbbc07-254d-5aed-98a7-9868a239dfd4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "f8281391-d8ec-5dc2-9601-053453c42c5a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "92d89bc7-b28a-5324-9d35-831bac0bf17c",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "3e6ed0af-c10f-525c-af2e-1dc8ec244695",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "96c62dc1-a311-5345-bb51-d2e43750f2aa",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "a2e92e1f-1beb-5150-969b-7b04e91e2dfe",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "2e862abe-b9e6-5a56-870b-861acfd1516c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "26560345-64f5-57a4-b8a6-9149eeebbac9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "eebcf9af-b23d-589d-a491-ad4eb9904e96",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "a250a134-5b13-5a00-a492-3c874a0c09ac",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "5a32ff90-92a0-5876-a289-e6dc292b9b6d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "a1a4ab05-7eb9-5cba-a32c-5b13333e6415",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "e6e6582f-1d0e-5822-80d8-52bb328091b9",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "2ffee124-4975-5500-957b-723d62d9c2b1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "045b23e8-82d2-5d40-960c-a550b082354a",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "4d0722f2-5610-58ea-830e-26cb52d7810a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "ba365f5c-8d98-5212-bc7f-1cf936afedd9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "069299b5-546d-507a-b722-46f4da7391c4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "0c0378cf-c26e-5303-bf8c-46a7ac7209b9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "042ebd1b-ceb1-555a-8d78-cb6fa51244d7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e758cc69-59eb-5d4b-a006-fa542e2a7c9e",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "larma",
+          "persistentUuid": "2adbf6e2-ea37-531c-b313-902106d6366c",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "b9d925c5-f90c-5b70-ba04-05beed6cf828",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ff85309e-b421-5179-89eb-0434335d23a4",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "912b2c0e-1e4f-5f15-90dc-e6f1b4d17b74",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "2fe8339b-e4f1-5808-8a0d-00affbcabfc9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "7e6da44f-937d-58e5-8efd-bb3163b43485",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "0d163694-ce83-531c-ae64-06db02b1a85a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "b0edad3c-ab33-57c8-8880-b4e0e5f75abb",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a96e1bd7-8caf-577b-8eb1-b4443383a7df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "f02a4933-21c1-523e-bcfd-8445d15da067",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "e475b4bc-a50f-53f3-8e28-aabd0ccd84e3",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "79302e41-bef1-5270-a977-ae3e0769e89e",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "be671f72-765c-578a-a38b-84e18fd3f33c",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "b1a6adb5-0064-5993-8a0e-511c3fac7376",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "113b64e1-5337-5cd6-aee1-531976f33b5d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "a8577ecc-b776-5455-ac44-7750bb007e07",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "e4113b72-4ea2-5326-8d67-8e6878cc8fbf",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a225c9ac-8469-5943-9875-efeff251f6c2",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "19d90362-fdfc-5302-b6e5-790aa9a216a8",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "e29aa12c-d9a0-5d03-a8d4-8813bb05bf35",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "7b28d9cc-ecdf-50a6-8520-a104fcd6c174",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "a47a8813-3efe-5938-9966-b6ed30962126",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "8bef6433-b653-56d8-b526-1e0d4135b541",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "fbdf0811-6d02-592f-aa64-cd36eae53d8e",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "3d13a609-1ffd-5636-bd1c-d05aef731de9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "137d8f35-ae42-5d58-a44c-e53678623d79",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "02e6731f-46a1-56b3-a19f-04d3e26b9743",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "feaee8bf-0547-5bbc-a3b5-a9b3acb7d647",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "73fe411f-3f7f-5079-96f7-9ccaf0c45d86",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "4dcf9786-a17a-5143-9656-d264596afe39",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "99b7cb9f-17dc-58ed-adf7-9846a6cd9794",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "e7dc0d8c-48cc-500e-8a4d-60d4c493269c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "9f39e65e-700f-5c01-bc34-08714d032676",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "1109603d-b389-53db-b745-7b035bd18bcd",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "7d3b5960-711c-5710-b841-87087e905191",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "1b893813-4bdd-5e27-a047-793107a90d9f",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "7e3758cb-9494-5a8d-a941-ae21d0faf33b",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "7ae1aa94-102a-5b41-baa0-7e564dcaa29b",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "a2d0809e-1a07-59eb-996d-be4959db4edb",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "0414e241-21b9-5afc-a298-7584b8dcf65e",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "afdd32b2-7012-5dbd-815f-1ec126e7985a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "f88918da-f247-5fa2-bb4e-af81a80d56d4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "757f291b-d56e-5cca-aa1f-ebd601c76445",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "d8564caf-814f-5e05-ac0e-03ea27e70b9c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "c8e8ccc9-d1aa-546c-8325-7ae8db009824",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "7128d5e1-8dd7-5ff8-8de0-f5aa2022c226",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "dc164411-ae90-55d6-bbb0-726935929de0",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "83e33448-e80c-5216-a91f-54b90216aede",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "1d40452c-b465-5dd9-b289-0e7f604e2f7b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "ee7a9ebb-bc1f-52cb-a1d6-c6b228dbaca7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "68c39ef0-b3ea-545b-8381-f67842d6f169",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "3ee8aa5c-fe14-5c75-b238-7dd1c4c44d7b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "bc37a220-b3cb-5f43-b637-79f029f1eb71",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "af0b65b0-2595-5b04-83b0-a238d10fad31",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "b2af490f-7f66-5a03-a9ad-1470c089a30a",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "loja",
+          "persistentUuid": "ff9d9a54-6a6d-53e6-9c15-aa2aae7f1596",
+          "type": "structure",
+          "children": []
+        },
+        {
+          "name": "lpato",
+          "persistentUuid": "7c04a63b-082b-5ce5-861c-2151c354f8fa",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "ea9f5bca-474a-5710-8e31-bf0b19ffa065",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "189f0f56-466f-50e5-b895-498d62ba5e68",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "4029af79-6b68-5f2a-b5e6-f3f4b7df1341",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "b99df481-2c2a-505c-ad19-fad1b67a9560",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "38ef564c-c3ba-531f-829d-4424d7c9e5fc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "24c68df9-4ae1-50ff-927e-566790caf884",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "4dd80722-5517-5b7f-8388-3c3b7ab5dc6a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "0e25bd6f-cf51-5877-ac68-af41bf76466a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "baf39fc2-fcb0-5e64-857a-b044d059f308",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "3af0e2ab-b15b-57d1-a738-054cae26f5ae",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "9ddd7732-cdfd-539d-9a12-5576463b37f5",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "ab8d4133-a083-5ec9-be7e-b46f29af3884",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "16852779-8545-5b18-8000-1f4ce9f7bba7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "61d55794-c73e-588b-a82d-9fda8859cdea",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "d1c0bd4a-0c6c-569d-ada1-562c9f35e4a9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "7eaeda5d-388d-563c-82f8-db9e12782838",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "97ca656d-ddfb-5c06-84e2-f9551f222100",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "2ea4dee3-9ae5-5ec5-aa20-2afdb456103f",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "2507d354-626d-5431-976f-4e34741a8bab",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "0437b19c-f8bf-5125-b0cc-bbd20b55b7fc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "2c169da1-38cb-5d70-b8d7-10c9bf434d40",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "f09af9af-b9c1-5b28-9d36-2cf9e8be73cc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "77ea7304-1b0a-5bcf-bbfe-7b4f3967feff",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "e211738c-1a84-5bef-ae16-dd976cf32abf",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "9eefba74-ef30-53a3-9f8b-cfec90bf3a4d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "7456960b-be1f-5f3c-a46b-09d06550ca7b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "9b901e57-757d-5427-82b0-751951f11f84",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "91c0fd4f-4fab-5a14-906f-5e31e57b2ef0",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "03d2a1ed-ab4f-5fe9-819a-0199096043e2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "e70ff4c6-0b7a-5be5-ba66-1ce95e6c4366",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "e2db8a20-1cdd-51ce-9ff1-99b0b5e8caba",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "b6c40584-cd30-5b75-b7d4-4d5a90e62aa8",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "7cbe2e37-2ce9-5c1c-bf4d-9221dabf31e0",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "2651b55f-2574-500d-a0ae-b990441b9e43",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "71cd4732-e0f9-537f-8d23-6bf8927517b9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e3ed38ea-15d9-557d-8483-5b0f6e5b4954",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "810f31c9-f0b6-502c-9980-4c69f1e85666",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "48295866-1cb2-5889-b56c-bd2a2b25f7ce",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "0286a93f-b375-5a51-bc4e-91d30f0f098f",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "c5df93b3-009c-5c1c-af1a-22ea8d76b0e5",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "63e46d0b-0289-5344-a896-69acebc96749",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "16295797-df58-5741-bc8e-11a1cf2194df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "413e2a85-2c8b-5aeb-97bc-ebc80bda5742",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a289bb37-dbf7-5d9b-a059-2a19f5161466",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "4ccede4f-4747-53b0-8549-324efd50d681",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "e98d27f9-4c58-5e88-aa6c-52a579727061",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "3e37f057-a282-5f1e-9ba1-37a4a8a54377",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "ae3fb28b-5d7c-5f0f-9f2e-d7a8b9003bdc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "7844dd7e-d328-58bd-bde4-061c8769bcc3",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "e9db7a90-4af6-5112-9934-cda0b0d73924",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "8c82e032-0881-52c8-a5cd-3f8880d1e845",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "f8f4cf32-14dc-56c8-bd8e-de4b9e763278",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "5bed10d4-b104-5148-959d-f56dff933ec6",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e36f3929-5ca7-5678-b1f9-0ed46cdbbd73",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l6",
+              "persistentUuid": "5e0e3a1b-c649-5e23-a698-f73dd1c1e815",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ed2a53ab-d2d4-5c54-9b68-6fb05d727ed0",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "d7ee8973-bb18-5678-85ce-8c73954f8e24",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "6fea9e1d-1837-547f-9be6-18e03e7b9d57",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "56afbab1-ef7c-57a8-b58d-81f54d31f200",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "d188d24c-6966-5258-bcb3-a28130613b0b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "5ef32e7a-5388-5876-a679-989838486f4c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "bb89c0f0-2db4-5fb3-9334-62cf34edaafc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "1f92e34c-c813-59d8-8b0f-5b845d2812a7",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rodape",
+          "persistentUuid": "b03be00f-9f45-5db5-b32b-5d5bf6c4618e",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "89ea8b0e-7baf-5fdb-86a1-b8e633a0d51f",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "acao",
+                  "persistentUuid": "b1e0c8e2-8225-5258-86b5-c41360b664fd",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "acao_cor",
+                  "persistentUuid": "df73799f-c034-5560-b0fb-8099b9fa1a61",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "desc",
+                  "persistentUuid": "132ee1c4-2c11-54f9-8a61-6238ee30e189",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "desc_cor",
+                  "persistentUuid": "30ed56fd-4e14-5df3-b14b-a27bfb72d435",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nivel",
+                  "persistentUuid": "78b02b31-8f14-55a2-9526-c1e6390d9ade",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nivel_cor",
+                  "persistentUuid": "277bd010-3cfe-5bce-99d2-f02406488c5b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nome",
+                  "persistentUuid": "9c554363-5cb0-5b68-a34a-9ae17f356e55",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nome_cor",
+                  "persistentUuid": "b7513b55-3bf7-5c30-8098-65a59a787e50",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "tecla",
+                  "persistentUuid": "86013074-7918-529d-b5a5-181e8d7cd433",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "tecla_cor",
+                  "persistentUuid": "83b57761-5ab4-55ae-b787-a8cd8332441e",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ui_upg_max",
@@ -87095,6 +88719,12 @@
           "value": 22
         },
         {
+          "name": "tam_dica_celular",
+          "persistentUuid": "754fae36-b489-5e50-ac93-1544152c7f71",
+          "type": "number",
+          "value": 40
+        },
+        {
           "name": "tam_nome",
           "persistentUuid": "abc1930e-9668-5a4c-a8a2-eb2844594d05",
           "type": "number",
@@ -87111,6 +88741,18 @@
           "persistentUuid": "5d59f814-e3b6-5fca-afb1-69541f7e9170",
           "type": "string",
           "value": "n"
+        },
+        {
+          "name": "toque_folga",
+          "persistentUuid": "d97a7ea8-7e9a-53c4-9422-1502e29c5229",
+          "type": "number",
+          "value": 40
+        },
+        {
+          "name": "y_celular",
+          "persistentUuid": "0f43215f-14b7-59d1-8bfe-70f7e8cee7f2",
+          "type": "number",
+          "value": 0.04
         }
       ]
     },
@@ -87254,218 +88896,8 @@
       "type": "structure",
       "children": [
         {
-          "name": "forcar",
-          "persistentUuid": "d91b3142-a110-5d76-b4d9-8087777d1451",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "ativo",
           "persistentUuid": "0b7e4128-8082-5685-8e23-7d6b513cc95b",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "cor",
-          "persistentUuid": "39ec6a43-62cf-518b-aeb0-ae005687e2e5",
-          "type": "string",
-          "value": "255;255;255"
-        },
-        {
-          "name": "opacidade",
-          "persistentUuid": "4326e1c0-4059-5354-855f-23ce6b50f37a",
-          "type": "number",
-          "value": 150
-        },
-        {
-          "name": "opacidade_ativa",
-          "persistentUuid": "8f59bd05-2db8-59a3-9f84-2be6bfa5e4f2",
-          "type": "number",
-          "value": 235
-        },
-        {
-          "name": "mov_raio",
-          "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
-          "type": "number",
-          "value": 130
-        },
-        {
-          "name": "zona_morta",
-          "persistentUuid": "e3c1da43-b687-5233-b377-ac926fe7c435",
-          "type": "number",
-          "value": 0.3
-        },
-        {
-          "name": "pulo_limiar",
-          "persistentUuid": "0e1e48fc-7289-52fa-baeb-992b351cfefa",
-          "type": "number",
-          "value": 0.6
-        },
-        {
-          "name": "baixo_limiar",
-          "persistentUuid": "11e88c7a-458e-588e-9756-db55b005cffc",
-          "type": "number",
-          "value": 0.6
-        },
-        {
-          "name": "mira_raio",
-          "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
-          "type": "number",
-          "value": 130
-        },
-        {
-          "name": "tiro_limiar",
-          "persistentUuid": "73fbfb8b-6192-5963-a9e3-70a5c7962dd6",
-          "type": "number",
-          "value": 0.35
-        },
-        {
-          "name": "mira_dist",
-          "persistentUuid": "6f61d723-06e3-5c67-9580-07a1494b5e2b",
-          "type": "number",
-          "value": 320
-        },
-        {
-          "name": "botao_raio",
-          "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
-          "type": "number",
-          "value": 72
-        },
-        {
-          "name": "mov_id",
-          "persistentUuid": "57e7e698-a639-5faa-8b20-b150ad230e33",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "mira_id",
-          "persistentUuid": "e86f2d7f-0f82-55ce-9ddd-9e6d8468ed30",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "pulo_id",
-          "persistentUuid": "f78f1058-cf23-5552-8413-139d39a99abc",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "dash_id",
-          "persistentUuid": "97d2be5e-178b-57ec-9330-c9b38fc984ab",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "recarga_id",
-          "persistentUuid": "118eba9c-0990-5f9d-9996-d067563ce0c2",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "usar_id",
-          "persistentUuid": "8ee744cf-2512-5206-a6ba-df366fe07de8",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "mov_bx",
-          "persistentUuid": "d19dbedc-c79a-5c42-91c5-8893eb4efaee",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_by",
-          "persistentUuid": "4c64c268-7175-5b4f-9318-692334b610b8",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_bx",
-          "persistentUuid": "2f68c80d-8a56-5c6e-95c0-bdb21a3628e3",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_by",
-          "persistentUuid": "434713aa-7c9c-519d-9cb4-507f345c2c6f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_dx",
-          "persistentUuid": "f43826e3-1d84-5add-84b2-d108ccae46fb",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_dy",
-          "persistentUuid": "eb612e51-6637-5ae1-a76f-e1bde1aae839",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_dx",
-          "persistentUuid": "e3d5c1ec-4f98-5ff9-9330-d2a49f9dd192",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_dy",
-          "persistentUuid": "f00ac33d-b2ce-5061-ac35-c31ae2665800",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_ang",
-          "persistentUuid": "2cfdd3d3-4fd8-57c5-a37d-ef603bb7b47d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "i",
-          "persistentUuid": "5f3a2010-ff23-586e-af10-b6a31f6f6b6d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "id",
-          "persistentUuid": "c48376cf-b208-5cab-b2ae-261ebac5ba19",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "tx",
-          "persistentUuid": "c87cadba-0568-52ce-94e6-3b4c8564b162",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ty",
-          "persistentUuid": "1e143b01-4cad-5a1e-a440-f1125a15f0ef",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "livre",
-          "persistentUuid": "4798d645-a544-506f-89cd-5b632477395d",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "esquerda",
-          "persistentUuid": "0bd56e2b-8991-579d-81ad-5c073ac9fde1",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "direita",
-          "persistentUuid": "356d5c2e-794c-5ba6-913c-c6b622821832",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "cima",
-          "persistentUuid": "1e0cbf14-1bf5-5bb8-8590-82e5dee361eb",
           "type": "boolean",
           "value": false
         },
@@ -87476,22 +88908,34 @@
           "value": false
         },
         {
-          "name": "pulo",
-          "persistentUuid": "9c4f42c7-7cb3-54cb-9a9d-806135506e56",
+          "name": "baixo_limiar",
+          "persistentUuid": "11e88c7a-458e-588e-9756-db55b005cffc",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "botao_raio",
+          "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
+          "type": "number",
+          "value": 72
+        },
+        {
+          "name": "botao_toque",
+          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "cima",
+          "persistentUuid": "1e0cbf14-1bf5-5bb8-8590-82e5dee361eb",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "pulo_agora",
-          "persistentUuid": "6a03ed1e-06e7-5855-b81b-30f4d79e6e31",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "pulo_antes",
-          "persistentUuid": "fee7a2f0-61f9-5814-8463-cf27ff097e4e",
-          "type": "boolean",
-          "value": false
+          "name": "cor",
+          "persistentUuid": "39ec6a43-62cf-518b-aeb0-ae005687e2e5",
+          "type": "string",
+          "value": "255;255;255"
         },
         {
           "name": "dash",
@@ -87512,94 +88956,70 @@
           "value": false
         },
         {
-          "name": "recarga",
-          "persistentUuid": "c20aa4dd-a540-5fa4-aa1c-4acf734cab1f",
+          "name": "dash_baixo",
+          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dash_dir",
+          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
+          "type": "number",
+          "value": 480
+        },
+        {
+          "name": "dash_id",
+          "persistentUuid": "97d2be5e-178b-57ec-9330-c9b38fc984ab",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "direita",
+          "persistentUuid": "356d5c2e-794c-5ba6-913c-c6b622821832",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar",
-          "persistentUuid": "c07c6e4a-5629-50b4-ac3b-b242233401ea",
+          "name": "esquerda",
+          "persistentUuid": "0bd56e2b-8991-579d-81ad-5c073ac9fde1",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar_agora",
-          "persistentUuid": "30e5dc5b-5e84-511d-877e-b332fa2a89ea",
+          "name": "forcar",
+          "persistentUuid": "d91b3142-a110-5d76-b4d9-8087777d1451",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar_antes",
-          "persistentUuid": "fd4e8f66-527e-5770-8029-d1628cca498e",
+          "name": "i",
+          "persistentUuid": "5f3a2010-ff23-586e-af10-b6a31f6f6b6d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "id",
+          "persistentUuid": "c48376cf-b208-5cab-b2ae-261ebac5ba19",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "livre",
+          "persistentUuid": "4798d645-a544-506f-89cd-5b632477395d",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "tiro",
-          "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "tela_cheia",
-          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "opacidade_repouso",
-          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "name": "melhor",
+          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
           "type": "number",
-          "value": 70
+          "value": 1
         },
         {
-          "name": "mov_esq",
-          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "name": "mira_ang",
+          "persistentUuid": "2cfdd3d3-4fd8-57c5-a37d-ef603bb7b47d",
           "type": "number",
-          "value": 300
-        },
-        {
-          "name": "mov_baixo",
-          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
-          "type": "number",
-          "value": 290
-        },
-        {
-          "name": "mov_zona",
-          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
-          "type": "number",
-          "value": 0.5
-        },
-        {
-          "name": "segue",
-          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "pulo_no_analogico",
-          "persistentUuid": "ba7ba1eb-cb0f-58ee-9471-ac9698364fff",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "pulo_solta",
-          "persistentUuid": "151e0e59-31db-577e-8b4e-ef542c22b4be",
-          "type": "number",
-          "value": 0.35
-        },
-        {
-          "name": "mira_dir",
-          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
-          "type": "number",
-          "value": 760
-        },
-        {
-          "name": "mira_baixo",
-          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
-          "type": "number",
-          "value": 420
+          "value": 0
         },
         {
           "name": "mira_auto",
@@ -87620,10 +89040,172 @@
           "value": 0.12
         },
         {
+          "name": "mira_baixo",
+          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "mira_bx",
+          "persistentUuid": "2f68c80d-8a56-5c6e-95c0-bdb21a3628e3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_by",
+          "persistentUuid": "434713aa-7c9c-519d-9cb4-507f345c2c6f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_dir",
+          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
+          "type": "number",
+          "value": 760
+        },
+        {
+          "name": "mira_dist",
+          "persistentUuid": "6f61d723-06e3-5c67-9580-07a1494b5e2b",
+          "type": "number",
+          "value": 320
+        },
+        {
+          "name": "mira_dx",
+          "persistentUuid": "e3d5c1ec-4f98-5ff9-9330-d2a49f9dd192",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_dy",
+          "persistentUuid": "f00ac33d-b2ce-5061-ac35-c31ae2665800",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_id",
+          "persistentUuid": "e86f2d7f-0f82-55ce-9ddd-9e6d8468ed30",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "mira_parado",
+          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_raio",
+          "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
+          "type": "number",
+          "value": 130
+        },
+        {
           "name": "mira_segue_andar",
           "persistentUuid": "09319f84-3b56-54b8-9172-4cfd2fbbc02e",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "mov_baixo",
+          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
+          "type": "number",
+          "value": 290
+        },
+        {
+          "name": "mov_bx",
+          "persistentUuid": "d19dbedc-c79a-5c42-91c5-8893eb4efaee",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_by",
+          "persistentUuid": "4c64c268-7175-5b4f-9318-692334b610b8",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_dx",
+          "persistentUuid": "f43826e3-1d84-5add-84b2-d108ccae46fb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_dy",
+          "persistentUuid": "eb612e51-6637-5ae1-a76f-e1bde1aae839",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_esq",
+          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "mov_id",
+          "persistentUuid": "57e7e698-a639-5faa-8b20-b150ad230e33",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "mov_raio",
+          "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
+          "type": "number",
+          "value": 130
+        },
+        {
+          "name": "mov_zona",
+          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "opacidade",
+          "persistentUuid": "4326e1c0-4059-5354-855f-23ce6b50f37a",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "opacidade_analogico",
+          "persistentUuid": "bbef010c-d758-5289-b0e7-c0a6527a9075",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "opacidade_ativa",
+          "persistentUuid": "8f59bd05-2db8-59a3-9f84-2be6bfa5e4f2",
+          "type": "number",
+          "value": 235
+        },
+        {
+          "name": "opacidade_repouso",
+          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "pulo",
+          "persistentUuid": "9c4f42c7-7cb3-54cb-9a9d-806135506e56",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_agora",
+          "persistentUuid": "6a03ed1e-06e7-5855-b81b-30f4d79e6e31",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_antes",
+          "persistentUuid": "fee7a2f0-61f9-5814-8463-cf27ff097e4e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_baixo",
+          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "type": "number",
+          "value": 330
         },
         {
           "name": "pulo_dir",
@@ -87632,10 +89214,16 @@
           "value": 230
         },
         {
-          "name": "pulo_baixo",
-          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "name": "pulo_id",
+          "persistentUuid": "f78f1058-cf23-5552-8413-139d39a99abc",
           "type": "number",
-          "value": 330
+          "value": -1
+        },
+        {
+          "name": "pulo_limiar",
+          "persistentUuid": "0e1e48fc-7289-52fa-baeb-992b351cfefa",
+          "type": "number",
+          "value": 0.6
         },
         {
           "name": "pulo_raio",
@@ -87650,34 +89238,70 @@
           "value": 165
         },
         {
-          "name": "dash_dir",
-          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
-          "type": "number",
-          "value": 480
+          "name": "qual",
+          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
+          "type": "string",
+          "value": ""
         },
         {
-          "name": "dash_baixo",
-          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
-          "type": "number",
-          "value": 250
+          "name": "recarga",
+          "persistentUuid": "c20aa4dd-a540-5fa4-aa1c-4acf734cab1f",
+          "type": "boolean",
+          "value": false
         },
         {
-          "name": "recarga_dir",
-          "persistentUuid": "c05fbf2d-90a9-5323-be37-0b2727de02f1",
-          "type": "number",
-          "value": 430
+          "name": "segue",
+          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
+          "type": "boolean",
+          "value": true
         },
         {
-          "name": "recarga_baixo",
-          "persistentUuid": "4f9feb07-1cd0-5821-ba71-d5a9141811a8",
-          "type": "number",
-          "value": 530
+          "name": "tela_cheia",
+          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
+          "type": "boolean",
+          "value": true
         },
         {
-          "name": "usar_dir",
-          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
+          "name": "tiro",
+          "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "tiro_limiar",
+          "persistentUuid": "73fbfb8b-6192-5963-a9e3-70a5c7962dd6",
           "type": "number",
-          "value": 200
+          "value": 0.35
+        },
+        {
+          "name": "tx",
+          "persistentUuid": "c87cadba-0568-52ce-94e6-3b4c8564b162",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ty",
+          "persistentUuid": "1e143b01-4cad-5a1e-a440-f1125a15f0ef",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "usar",
+          "persistentUuid": "c07c6e4a-5629-50b4-ac3b-b242233401ea",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "usar_agora",
+          "persistentUuid": "30e5dc5b-5e84-511d-877e-b332fa2a89ea",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "usar_antes",
+          "persistentUuid": "fd4e8f66-527e-5770-8029-d1628cca498e",
+          "type": "boolean",
+          "value": false
         },
         {
           "name": "usar_baixo",
@@ -87686,20 +89310,26 @@
           "value": 590
         },
         {
-          "name": "botao_toque",
-          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "name": "usar_dir",
+          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
           "type": "number",
-          "value": 120
+          "value": 200
         },
         {
-          "name": "pulo_analogico",
-          "persistentUuid": "55c8bae6-5f1c-53dd-aa2f-b3d8734a33b6",
+          "name": "usar_id",
+          "persistentUuid": "8ee744cf-2512-5206-a6ba-df366fe07de8",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "usar_pode",
+          "persistentUuid": "064b81eb-18a2-5177-a480-416772793fa7",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "mira_parado",
-          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "name": "vd",
+          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
           "type": "number",
           "value": 0
         },
@@ -87716,22 +89346,10 @@
           "value": 0
         },
         {
-          "name": "vd",
-          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
+          "name": "zona_morta",
+          "persistentUuid": "e3c1da43-b687-5233-b377-ac926fe7c435",
           "type": "number",
-          "value": 0
-        },
-        {
-          "name": "melhor",
-          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "qual",
-          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
-          "type": "string",
-          "value": ""
+          "value": 0.3
         }
       ]
     },
@@ -87746,6 +89364,61 @@
       "persistentUuid": "00b748f6-a85b-58c8-9921-719d7d8cffe0",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "desempenho",
+      "persistentUuid": "1dfef617-29dd-53b9-9eb2-778c4589c2e0",
+      "type": "structure",
+      "children": [
+        {
+          "name": "bolha_vida_max",
+          "persistentUuid": "20e6f6d5-7bc7-580d-92ff-bb1357efa688",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "forcar_celular",
+          "persistentUuid": "4ef24d19-3fd2-5e5a-a40b-fb8827dfd505",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "fps_max_celular",
+          "persistentUuid": "59dd84af-8d6b-5f36-86f4-8b48b2e5a18e",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "name": "fps_min_celular",
+          "persistentUuid": "9d91e9e8-f22b-5b40-9777-9ffc852c165b",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "fundo_corte",
+          "persistentUuid": "01341539-1d67-5392-84fa-dec45195737c",
+          "type": "number",
+          "value": 0.98
+        },
+        {
+          "name": "lava_margem",
+          "persistentUuid": "202a5d85-5692-5c15-9dc1-763febcd5145",
+          "type": "number",
+          "value": 400
+        },
+        {
+          "name": "resolucao_celular",
+          "persistentUuid": "89c38157-009a-5baf-8557-e78bf91006ea",
+          "type": "number",
+          "value": 0.7
+        },
+        {
+          "name": "sem_filtros_celular",
+          "persistentUuid": "d0710707-8eb0-55e8-a1f5-b54042a60741",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     }
   ],
   "layouts": [
@@ -93236,14 +94909,14 @@
               "effectType": "Adjustment",
               "name": "Menos vibrante",
               "doubleParameters": {
-                "gamma": 1,
-                "saturation": 0.75,
-                "contrast": 1,
-                "brightness": 1,
-                "red": 1,
-                "green": 1,
+                "alpha": 1,
                 "blue": 1,
-                "alpha": 1
+                "brightness": 1,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 0.75
               },
               "stringParameters": {},
               "booleanParameters": {}
@@ -96945,7 +98618,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.32057708828131315,
+        "zoomFactor": 0.038382812500007815,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -99508,54 +101181,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 160,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pigman",
-          "persistentUuid": "9f0bea04-1eac-5aab-a44c-8992b29f330b",
-          "width": 160,
-          "x": -1880,
-          "y": -8930,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 160,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pigman",
-          "persistentUuid": "ae174f63-a0be-5471-82ea-5caf9ff69a47",
-          "width": 160,
-          "x": -980,
-          "y": -8930,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 192,
-          "keepRatio": true,
-          "layer": "",
-          "name": "arvore_condenada",
-          "persistentUuid": "ce407545-8ad7-53f8-b138-6546f56dfba6",
-          "width": 192,
-          "x": -1440,
-          "y": -8962,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 256,
           "keepRatio": true,
           "layer": "",
@@ -100378,7 +102003,7 @@
           "isLocked": false,
           "name": "HUD",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -105621,14 +107246,14 @@
               "effectType": "Adjustment",
               "name": "Menos vibrante",
               "doubleParameters": {
-                "gamma": 1,
-                "saturation": 0.75,
-                "contrast": 1,
-                "brightness": 1,
-                "red": 1,
-                "green": 1,
+                "alpha": 1,
                 "blue": 1,
-                "alpha": 1
+                "brightness": 1,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 0.75
               },
               "stringParameters": {},
               "booleanParameters": {}
@@ -108851,14 +110476,13 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "name": "Toque (celular)",
           "source": "",
-          "parameters": [],
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -108870,7 +110494,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, recarga, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (para cima também pula), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
+              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (pulo só pelo botão, t218), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>. t218: E só aparece quando há o que usar (usar_pode); sem botão de recarga (recarrega sozinha)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108917,16 +110541,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "toque.pulo_analogico",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -108951,16 +110565,6 @@
                   },
                   "parameters": [
                     "toque.dash_id",
-                    "=",
-                    "-1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "toque.recarga_id",
                     "=",
                     "-1"
                   ]
@@ -109461,77 +111065,6 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
-                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo",
-                            "\"HUD\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "papel",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Animation",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetSize"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Resizable",
-                            "toque.botao_raio * 2",
-                            "toque.botao_raio * 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "OpacityCapability::OpacityBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Opacity",
-                            "=",
-                            "toque.opacidade"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangeColor"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "toque.cor"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "toque_botao",
                             "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
                             "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo",
                             "\"HUD\""
@@ -109685,6 +111218,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -109708,11 +111242,11 @@
                         "yes"
                       ]
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -109726,18 +111260,25 @@
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "TouchSimulateMouse"
-                      },
-                      "parameters": [
-                        "",
-                        "no"
-                      ]
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "// Desliga o toque simulando o mouse (fora da loja). Um toque que começou com a simulação ligada apertou o botão",
+                        "// esquerdo do mouse, e com ela desligada o touchend não o solta mais: o pato atiraria para sempre (t218).",
+                        "const im = runtimeScene.getGame().getInputManager();",
+                        "if (im.isSimulatingMouseWithTouch()) {",
+                        "  im.touchSimulateMouse(false);",
+                        "  const esq = gdjs.InputManager.MOUSE_LEFT_BUTTON;",
+                        "  if (im.isMouseButtonPressed(esq)) im.onMouseButtonReleased(esq);",
+                        "}"
+                      ],
+                      "parameterObjects": "",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -109931,42 +111472,6 @@
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "toque.recarga_id",
-                        "!=",
-                        "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "HasTouchEnded"
-                      },
-                      "parameters": [
-                        "",
-                        "toque.recarga_id"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga_id",
-                        "=",
-                        "-1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
                         "toque.usar_id",
                         "!=",
                         "-1"
@@ -110126,7 +111631,230 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "estado",
+                        "=",
+                        "\"calmo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(trader.CenterX() - pato.CenterX())",
+                        "<=",
+                        "trader.loja_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(trader.Y() + trader.Height() - pato.Y() - pato.Height())",
+                        "<=",
+                        "trader.loja_raio"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "pato",
+                        "portal",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "portal",
+                        "entrar_com_e",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "portal",
+                        "aberto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Visible"
+                      },
+                      "parameters": [
+                        "expositor_arma"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "pato",
+                        "pato.arma_raio",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "StartedTouchOrMouseCount()",
                   "conditions": [],
                   "actions": [],
                   "events": [
@@ -110278,46 +112006,19 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
                             "<",
                             "toque.melhor"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "toque.melhor",
-                            "=",
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetStringVariable"
+                            "value": "BooleanVariable"
                           },
                           "parameters": [
-                            "toque.qual",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
-                            "<",
-                            "toque.melhor"
+                            "toque.usar_pode",
+                            "True",
+                            ""
                           ]
                         }
                       ],
@@ -110402,43 +112103,6 @@
                           },
                           "parameters": [
                             "toque.dash_id",
-                            "=",
-                            "toque.id"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanVariable"
-                          },
-                          "parameters": [
-                            "toque.livre",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "toque.qual",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "toque.recarga_id",
                             "=",
                             "toque.id"
                           ]
@@ -110672,8 +112336,7 @@
                         }
                       ]
                     }
-                  ],
-                  "repeatExpression": "StartedTouchOrMouseCount()"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -111128,134 +112791,6 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_no_analogico",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_id",
-                        "!=",
-                        "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_dy",
-                        "<",
-                        "-toque.pulo_limiar"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_dy",
-                        ">",
-                        "-toque.pulo_solta"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_no_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
@@ -111299,33 +112834,6 @@
                       },
                       "parameters": [
                         "toque.dash",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.recarga_id",
-                        "!=",
-                        "-1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga",
                         "True",
                         ""
                       ]
@@ -112144,7 +113652,7 @@
                         "toque_base",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112183,7 +113691,7 @@
                         "toque_alavanca",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112326,7 +113834,7 @@
                         "toque_base",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112365,7 +113873,7 @@
                         "toque_alavanca",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112558,86 +114066,6 @@
                         "toque_botao",
                         "papel",
                         "=",
-                        "\"recarga\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "=",
-                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
-                        "=",
-                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetSize"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "Resizable",
-                        "toque.botao_raio * 2",
-                        "toque.botao_raio * 2"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "papel",
-                        "=",
-                        "\"recarga\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "Opacity",
-                        "=",
-                        "toque.opacidade_ativa"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "papel",
-                        "=",
                         "\"usar\""
                       ]
                     }
@@ -112709,6 +114137,7 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -112739,11 +114168,11 @@
                         "toque_alavanca"
                       ]
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -112774,8 +114203,79 @@
                         "toque_alavanca"
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "papel",
+                        "=",
+                        "\"usar\""
+                      ]
+                    }
                   ],
-                  "object": "pato"
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "toque_botao"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "papel",
+                        "=",
+                        "\"usar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "toque_botao"
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -112899,7 +114399,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -116618,6 +118119,16 @@
                               "conditions": [
                                 {
                                   "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "GlobalVariable(upgrades.laser)",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "RaycastToPosition"
                                   },
                                   "parameters": [
@@ -118570,8 +120081,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "m4",
@@ -118662,8 +120173,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "mp5",
@@ -118754,8 +120265,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "sniper",
@@ -121447,6 +122958,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Effect",
+                        "\"Brilho\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -121475,6 +122997,17 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Terrestre",
+                        "Effect",
+                        "\"Brilho\"",
+                        "no"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
@@ -122267,6 +123800,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Voador",
+                        "Effect",
+                        "\"Brilho\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -122295,6 +123839,17 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "Voador",
+                        "Effect",
+                        "\"Brilho\"",
+                        "no"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
@@ -122480,6 +124035,89 @@
       "associatedLayout": "Hub",
       "name": "Combate",
       "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Desempenho (celular)",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Desempenho (t220). No celular (ou com desempenho.forcar_celular): resolução do desenho (resolucao_celular), fps máximo/mínimo (fps_max_celular, fps_min_celular) e, com sem_filtros_celular, sem brilho das estrelas, \"Menos vibrante\", Glow da moeda e MotionBlur dos projéteis. Em todo lugar: a lente negra do Paraíso começa desligada e o \"Brilho\" dos inimigos só liga quando piscam."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Desempenho (t220): números em desempenho.*. Roda todo quadro; o que é caro só acontece uma vez.",
+                "const jogo = runtimeScene.getGame();",
+                "const D = jogo.getVariables().get(\"desempenho\");",
+                "const num = k => D.getChild(k).getAsNumber(), bol = k => D.getChild(k).getAsBoolean();",
+                "const cel = gdjs.evtTools.common.isMobile() || bol(\"forcar_celular\");",
+                "if (cel) {",
+                "  // resolução do desenho: o PIXI desenha num buffer menor e estica na tela (posições, câmera e toque iguais)",
+                "  const r = jogo.getRenderer().getPIXIRenderer();",
+                "  const res = num(\"resolucao_celular\");",
+                "  if (r && res > 0 && r.resolution !== res) {",
+                "    r.resolution = res;",
+                "    r.resize(jogo.getGameResolutionWidth(), jogo.getGameResolutionHeight());",
+                "  }",
+                "  // fps: máximo e mínimo do celular (abaixo do mínimo o jogo fica em câmera lenta)",
+                "  jogo.setMaximumFps(num(\"fps_max_celular\"));",
+                "  jogo._minFPS = num(\"fps_min_celular\");",
+                "}",
+                "const semFiltros = cel && bol(\"sem_filtros_celular\");",
+                "// uma vez por cena: filtros de camada",
+                "if (!runtimeScene._desempenhoCena) {",
+                "  runtimeScene._desempenhoCena = true;",
+                "  const desligaCamada = (camada, efeito) => {",
+                "    if (runtimeScene.hasLayer(camada)) {",
+                "      const l = runtimeScene.getLayer(camada);",
+                "      if (l.hasEffect(efeito)) l.enableEffect(efeito, false);",
+                "    }",
+                "  };",
+                "  // a lente negra só liga durante o juízo (InimigosParaiso)",
+                "  desligaCamada(\"Fundo\", \"Lente negra\");",
+                "  desligaCamada(\"Estrelas\", \"Lente negra\");",
+                "  if (semFiltros) {",
+                "    desligaCamada(\"Estrelas\", \"Brilho das estrelas\");",
+                "    desligaCamada(\"Fundo\", \"Menos vibrante\");",
+                "    desligaCamada(\"fundo\", \"Menos vibrante\");",
+                "  }",
+                "}",
+                "// uma vez por objeto criado: efeitos que começam ligados",
+                "const desliga = (nomes, efeito, marca) => {",
+                "  for (const nome of nomes) {",
+                "    const lista = runtimeScene.getObjects(nome);",
+                "    if (!lista) continue;",
+                "    for (const o of lista) {",
+                "      if (o[marca]) continue;",
+                "      o[marca] = true;",
+                "      if (o.hasEffect(efeito)) o.enableEffect(efeito, false);",
+                "    }",
+                "  }",
+                "};",
+                "// o \"Brilho\" dos inimigos só liga quando piscam (eventos dos inimigos)",
+                "desliga([\"condenado_em_chamas\", \"voador\", \"pigman\", \"cutulu\", \"sapo\", \"condenado_azul\", \"condenado_inchado\", \"arvore_condenada\", \"caveira_azul\", \"moscas\", \"olho_demoniaco\", \"mina_demoniaca\", \"cabeca_voadora\", \"diabinho\", \"caveira_gigante\", \"querubim\", \"serafim\", \"ofanim\", \"roda_anjo\", \"demonio_chefe\", \"moscas2\"], \"Brilho\", \"_brilhoIni\");",
+                "if (semFiltros) desliga([\"moeda\", \"projetil\", \"projetil_inimigo\"], \"Effect\", \"_efeitoIni\");"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -136388,6 +138026,17 @@
               "actions": [
                 {
                   "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "caveira_gigante",
+                    "Effect",
+                    "\"Brilho\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                   },
                   "parameters": [
@@ -136663,6 +138312,17 @@
                   "parameters": [
                     "caveira_gigante",
                     "\"estado\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "caveira_gigante",
+                    "Effect",
+                    "\"Brilho\"",
+                    "no"
                   ]
                 },
                 {
@@ -143819,6 +145479,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Effect",
+                        "\"Brilho\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -143876,6 +145547,17 @@
                       "parameters": [
                         "sapo",
                         "\"estado\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "sapo",
+                        "Effect",
+                        "\"Brilho\"",
+                        "no"
                       ]
                     },
                     {
@@ -144638,6 +146320,17 @@
                 },
                 {
                   "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "Effect",
+                    "\"Brilho\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                   },
                   "parameters": [
@@ -144717,6 +146410,17 @@
                     "arvore_condenada",
                     "=",
                     "arvore_condenada.base_x"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "arvore_condenada",
+                    "Effect",
+                    "\"Brilho\"",
+                    "no"
                   ]
                 },
                 {
@@ -153759,6 +155463,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "ofanim",
+                        "Effect",
+                        "\"Brilho\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -153851,6 +155566,17 @@
                         "Animation",
                         "=",
                         "\"ataque\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "ofanim",
+                        "Effect",
+                        "\"Brilho\"",
+                        "no"
                       ]
                     },
                     {
@@ -157250,6 +158976,17 @@
                     },
                     {
                       "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
@@ -157258,6 +158995,17 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Estrelas\"",
+                        "\"Lente negra\"",
+                        "no"
                       ]
                     },
                     {
@@ -163662,6 +165410,17 @@
                         },
                         {
                           "type": {
+                            "value": "EnableLayerEffect"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Fundo\"",
+                            "\"Lente negra\"",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetLayerEffectParameter"
                           },
                           "parameters": [
@@ -163670,6 +165429,17 @@
                             "\"Lente negra\"",
                             "\"strength\"",
                             "deus.juizo_lente_negra"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "EnableLayerEffect"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Estrelas\"",
+                            "\"Lente negra\"",
+                            "yes"
                           ]
                         }
                       ]
@@ -163794,6 +165564,17 @@
                     },
                     {
                       "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
@@ -163802,6 +165583,17 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Estrelas\"",
+                        "\"Lente negra\"",
+                        "no"
                       ]
                     }
                   ]
@@ -163982,6 +165774,17 @@
                     },
                     {
                       "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
@@ -163990,6 +165793,17 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Estrelas\"",
+                        "\"Lente negra\"",
+                        "no"
                       ]
                     }
                   ]
@@ -167285,6 +169099,17 @@
                     },
                     {
                       "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fundo\"",
+                        "\"Lente negra\"",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetLayerEffectParameter"
                       },
                       "parameters": [
@@ -167293,6 +169118,17 @@
                         "\"Lente negra\"",
                         "\"strength\"",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableLayerEffect"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Estrelas\"",
+                        "\"Lente negra\"",
+                        "no"
                       ]
                     },
                     {
@@ -168328,14 +170164,13 @@
               "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
               "name": "Quebra em luz e feridas",
               "source": "",
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -168347,8 +170182,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Quando os anéis quebram (troca de fase e morte pedem com deus.anel_luz_pedido), cada anel solta anel_luz_pontos leques de luz (deus_anel_luz) em volta do aro, na cor dele (anel_luz_cor_*). O aro fica a anel_luz_raio da largura do anel, com o centro deslocado anel_luz_desloc no ângulo anel_luz_ang_* (como na arte). Feridas: deus.ferida (0 a 4) pelo quanto de vida resta (ferida_N_abaixo); deus_feridas segue o olho quadro a quadro, tingida com ferida_cor_N.",
-                  "comment2": ""
+                  "comment": "Quando os anéis quebram (troca de fase e morte pedem com deus.anel_luz_pedido), cada anel solta anel_luz_pontos leques de luz (deus_anel_luz) em volta do aro, na cor dele (anel_luz_cor_*). O aro fica a anel_luz_raio da largura do anel, com o centro deslocado anel_luz_desloc no ângulo anel_luz_ang_* (como na arte). Feridas: deus.ferida (0 a 4) pelo quanto de vida resta (ferida_N_abaixo); deus_feridas segue o olho quadro a quadro, tingida com ferida_cor_N."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -168410,6 +170244,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -168553,8 +170388,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     },
@@ -168589,6 +170423,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -168732,8 +170567,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     },
@@ -168768,6 +170602,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -168911,8 +170746,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     }
@@ -169375,8 +171209,8 @@
                     },
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
                       },
                       "parameters": [
                         "deus_olho",
@@ -169573,7 +171407,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -170207,6 +172042,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "roda_anjo",
+                        "Effect",
+                        "\"Brilho\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
                       },
                       "parameters": [
@@ -170258,6 +172104,17 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "roda_anjo",
+                        "Effect",
+                        "\"Brilho\"",
+                        "no"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "EffectCapability::EffectBehavior::SetEffectDoubleParameter"
@@ -170962,7 +172819,48 @@
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "lava",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "lava.X() + lava.Width()",
+                    ">",
+                    "CameraBorderLeft(\"\", 0) - desempenho.lava_margem"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "lava.X()",
+                    "<",
+                    "CameraBorderRight(\"\", 0) + desempenho.lava_margem"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "lava.Y() + lava.Height()",
+                    ">",
+                    "CameraBorderTop(\"\", 0) - desempenho.lava_margem"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "lava.Y()",
+                    "<",
+                    "CameraBorderBottom(\"\", 0) + desempenho.lava_margem"
+                  ]
+                }
+              ],
               "actions": [],
               "events": [
                 {
@@ -171092,6 +172990,15 @@
                         "=",
                         "RandomFloatInRange(lava.bolha_espera_min, lava.bolha_espera_max)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "lava_bolha",
+                        "\"vida\""
+                      ]
                     }
                   ]
                 }
@@ -171107,6 +173014,33 @@
                   "parameters": [
                     "lava_bolha",
                     "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "lava_bolha",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "lava_bolha",
+                    "\"vida\"",
+                    ">",
+                    "desempenho.bolha_vida_max"
                   ]
                 }
               ],
@@ -172000,6 +173934,212 @@
                   "parameters": [
                     "",
                     "ToString(round(lerp(fundo_cor_r, fundo_noite_cor_r, fundo_mistura))) + \";\" + ToString(round(lerp(fundo_cor_g, fundo_noite_cor_g, fundo_mistura))) + \";\" + ToString(round(lerp(fundo_cor_b, fundo_noite_cor_b, fundo_mistura)))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "fundo_mistura",
+                        ">=",
+                        "desempenho.fundo_corte"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_ceu"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_fundo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_meio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_frente"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "fundo_mistura",
+                        "<",
+                        "desempenho.fundo_corte"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_ceu",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_fundo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_meio",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_frente",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "fundo_mistura",
+                        "<=",
+                        "1 - desempenho.fundo_corte"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_ceu"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_fundo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_meio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_frente"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "fundo_mistura",
+                        ">",
+                        "1 - desempenho.fundo_corte"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_ceu",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_fundo",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_meio",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "bg_inferno_noite_frente",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -194351,7 +196491,18 @@
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "ui_txt",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "GlobalVariable(ui_card[ui_txt.card].vis)",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
               "actions": [],
               "events": [
                 {
@@ -194383,11 +196534,53 @@
                     },
                     {
                       "type": {
-                        "value": "TextObject::ChangeColor"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
                         "ui_txt",
+                        "cor_nova",
+                        "=",
                         "GlobalVariableString(ui_lin[ui_txt.card][\"l\" + ToString(ui_txt.linha)][ui_txt.campo + \"_cor\"])"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "cor_nova",
+                            "!=",
+                            "ui_txt.cor_atual"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "ui_txt.cor_nova"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "cor_atual",
+                            "=",
+                            "ui_txt.cor_nova"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -194421,11 +196614,53 @@
                     },
                     {
                       "type": {
-                        "value": "TextObject::ChangeColor"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
                         "ui_txt",
+                        "cor_nova",
+                        "=",
                         "GlobalVariableString(ui_card[ui_txt.card][ui_txt.campo + \"_cor\"])"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "cor_nova",
+                            "!=",
+                            "ui_txt.cor_atual"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "ui_txt.cor_nova"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "ui_txt",
+                            "cor_atual",
+                            "=",
+                            "ui_txt.cor_nova"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -194735,12 +196970,54 @@
                 },
                 {
                   "type": {
-                    "value": "TextObject::WrappingWidth"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
                     "ui_txt",
+                    "larg_nova",
                     "=",
                     "GlobalVariable(ui_tmp_tecla) - GlobalVariable(ui_rod_gap_desc) - ui_txt.X()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ui_txt",
+                        "larg_nova",
+                        "!=",
+                        "ui_txt.larg_atual"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::WrappingWidth"
+                      },
+                      "parameters": [
+                        "ui_txt",
+                        "=",
+                        "ui_txt.larg_nova"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ui_txt",
+                        "larg_atual",
+                        "=",
+                        "ui_txt.larg_nova"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -195064,14 +197341,14 @@
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
                 "try {",
-                "  // Nome do jogador (t204): N abre o painel no hub, Enter salva, Esc cancela. Números em nome_tela.*, cores ui_cor_*.",
+                "  // Nome do jogador (t204): N abre o painel no hub, Enter salva, Esc cancela. No celular (t221), tocar na dica abre o teclado do aparelho. Números em nome_tela.*, cores ui_cor_*.",
                 "  const jogo = runtimeScene.getGame();",
                 "  const V = jogo.getVariables();",
                 "  const T = V.get(\"nome_tela\");",
                 "  const W = jogo.getGameResolutionWidth();",
                 "  const H = jogo.getGameResolutionHeight();",
                 "  const escala = Math.min(1, W / T.getChild(\"ref_w\").getAsNumber());",
-                "  const crus = [\"max\", \"ref_w\", \"dica_x\", \"dica_y\", \"painel_opacidade\", \"pisca\"];",
+                "  const crus = [\"max\", \"ref_w\", \"dica_x\", \"dica_y\", \"painel_opacidade\", \"pisca\", \"y_celular\"];",
                 "  const n = (k) => T.getChild(k).getAsNumber() * (crus.includes(k) ? 1 : escala);",
                 "  const cor = (k) => V.get(k).getAsString();",
                 "  const limpa = (s) => String(s).normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").toUpperCase();",
@@ -195083,6 +197360,9 @@
                 "  if (!N.instalado) {",
                 "    N.instalado = true;",
                 "    N.fecha = (salva) => {",
+                "      if (!N.aberto) return;",
+                "      N.aberto = false;",
+                "      try { if (N.campo && document.activeElement === N.campo) N.campo.blur(); } catch (e) {}",
                 "      try {",
                 "        if (salva) {",
                 "          const nome = N.texto.normalize(\"NFC\").replace(/\\s+/g, \" \").trim().slice(0, V.get(\"nome_tela\").getChild(\"max\").getAsNumber());",
@@ -195096,22 +197376,58 @@
                 "      } catch (e) {}",
                 "      N.aberto = false;",
                 "    };",
+                "    N.abre = () => {",
+                "      const p = pato();",
+                "      if (!p || p.getVariables().get(\"na_loja\").getAsBoolean() || p.getVariables().get(\"morto\").getAsBoolean()) return false;",
+                "      N.aberto = true;",
+                "      N.texto = V.get(\"jogador_nome\").getAsString();",
+                "      N.t = 0;",
+                "      N.loja_antes = false;",
+                "      p.getVariables().get(\"na_loja\").setBoolean(true);",
+                "      // teclas seguradas (andar) não ficam presas enquanto o painel está aberto",
+                "      jogo.getInputManager().clearAllPressedKeys();",
+                "      return true;",
+                "    };",
+                "    // celular (t221): um campo de texto invisível abre o teclado do aparelho; o que se digita vai para N.texto",
+                "    N.campoAbre = () => {",
+                "      let c = N.campo;",
+                "      if (!c) {",
+                "        c = N.campo = document.createElement(\"input\");",
+                "        c.type = \"text\";",
+                "        c.autocomplete = \"off\";",
+                "        c.autocapitalize = \"characters\";",
+                "        c.spellcheck = false;",
+                "        c.setAttribute(\"autocorrect\", \"off\");",
+                "        c.setAttribute(\"enterkeyhint\", \"done\");",
+                "        // 16px: o iPhone não dá zoom no campo",
+                "        c.style.cssText = \"position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;font-size:16px;border:0;padding:0;\";",
+                "        c.addEventListener(\"input\", () => {",
+                "          const max = V.get(\"nome_tela\").getChild(\"max\").getAsNumber();",
+                "          N.texto = Array.from(c.value).filter(valido).slice(0, max).join(\"\");",
+                "          if (c.value !== N.texto) c.value = N.texto;",
+                "        });",
+                "        // as teclas do campo não chegam ao jogo; OK/Enter salva",
+                "        c.addEventListener(\"keydown\", (ev) => {",
+                "          ev.stopPropagation();",
+                "          if (ev.key === \"Enter\") { ev.preventDefault(); N.fecha(true); }",
+                "        });",
+                "        c.addEventListener(\"keyup\", (ev) => ev.stopPropagation());",
+                "        c.addEventListener(\"blur\", () => { if (N.aberto) N.fecha(true); });",
+                "        document.body.appendChild(c);",
+                "      }",
+                "      c.maxLength = V.get(\"nome_tela\").getChild(\"max\").getAsNumber();",
+                "      c.value = N.texto;",
+                "      c.focus();",
+                "    };",
                 "    const noHub = () => jogo.getSceneStack().getCurrentScene() === N.cena && N.quadro === N.cena.getTimeManager().getTimeFromStart();",
                 "    window.addEventListener(\"keydown\", (ev) => {",
                 "      try {",
                 "        if (ev.ctrlKey || ev.metaKey || ev.altKey) return;",
+                "        if (N.campo && ev.target === N.campo) return;",
                 "        if (!N.aberto) {",
                 "          const tecla = V.get(\"nome_tela\").getChild(\"tecla\").getAsString().toLowerCase();",
                 "          if (ev.repeat || String(ev.key).toLowerCase() !== tecla || !noHub()) return;",
-                "          const p = pato();",
-                "          if (!p || p.getVariables().get(\"na_loja\").getAsBoolean() || p.getVariables().get(\"morto\").getAsBoolean()) return;",
-                "          N.aberto = true;",
-                "          N.texto = V.get(\"jogador_nome\").getAsString();",
-                "          N.t = 0;",
-                "          N.loja_antes = false;",
-                "          p.getVariables().get(\"na_loja\").setBoolean(true);",
-                "          // teclas seguradas (andar) não ficam presas enquanto o painel está aberto",
-                "          jogo.getInputManager().clearAllPressedKeys();",
+                "          if (!N.abre()) return;",
                 "        } else if (ev.key === \"Enter\") N.fecha(true);",
                 "        else if (ev.key === \"Escape\") N.fecha(false);",
                 "        else if (ev.key === \"Backspace\") N.texto = Array.from(N.texto).slice(0, -1).join(\"\");",
@@ -195120,6 +197436,21 @@
                 "        N.engolidas.add(ev.code);",
                 "        ev.preventDefault();",
                 "        ev.stopImmediatePropagation();",
+                "      } catch (e) {}",
+                "    }, true);",
+                "    document.addEventListener(\"touchend\", (ev) => {",
+                "      try {",
+                "        if (!V.get(\"toque\").getChild(\"ativo\").getAsBoolean() || !noHub()) return;",
+                "        const tq = ev.changedTouches && ev.changedTouches[0];",
+                "        if (!tq) return;",
+                "        const r = jogo.getRenderer().getCanvas().getBoundingClientRect();",
+                "        const gx = (tq.clientX - r.left) * jogo.getGameResolutionWidth() / r.width;",
+                "        const gy = (tq.clientY - r.top) * jogo.getGameResolutionHeight() / r.height;",
+                "        const dentro = (q) => q && gx >= q.x0 && gx <= q.x1 && gy >= q.y0 && gy <= q.y1;",
+                "        if (!N.aberto) {",
+                "          if (dentro(N.dicaRet) && N.abre()) N.campoAbre();",
+                "        } else if (dentro(N.painelRet)) N.campoAbre();",
+                "        else N.fecha(true);",
                 "      } catch (e) {}",
                 "    }, true);",
                 "    window.addEventListener(\"keyup\", (ev) => {",
@@ -195163,16 +197494,23 @@
                 "  };",
                 "  const tecla = V.get(\"nome_tela\").getChild(\"tecla\").getAsString().toUpperCase();",
                 "  const nome = V.get(\"jogador_nome\").getAsString();",
-                "  const dica = txt(\"dica\", tecla + \"  \" + (nome ? \"NOME: \" + nome : \"ESCOLHA SEU NOME PARA O PLACAR\"),",
-                "    W * n(\"dica_x\"), 0, n(\"tam_dica\"), nome ? cor(\"ui_cor_rotulo\") : cor(\"ui_cor_ouro\"));",
+                "  const toque = V.get(\"toque\").getChild(\"ativo\").getAsBoolean();",
+                "  const textoDica = toque ? (nome ? \"NOME: \" + nome + \" - TOQUE PARA TROCAR\" : \"TOQUE AQUI PARA ESCOLHER SEU NOME\")",
+                "    : tecla + \"  \" + (nome ? \"NOME: \" + nome : \"ESCOLHA SEU NOME PARA O PLACAR\");",
+                "  const dica = txt(\"dica\", textoDica, W * n(\"dica_x\"), 0, n(toque ? \"tam_dica_celular\" : \"tam_dica\"),",
+                "    nome ? cor(\"ui_cor_rotulo\") : cor(\"ui_cor_ouro\"));",
                 "  dica.setY(y0 + H * n(\"dica_y\") - dica.getHeight());",
+                "  const folga = n(\"toque_folga\");",
+                "  N.dicaRet = { x0: dica.getX() - x0 - folga, x1: dica.getX() - x0 + dica.getWidth() + folga,",
+                "    y0: dica.getY() - y0 - folga, y1: dica.getY() - y0 + dica.getHeight() + folga };",
                 "  dica.hide(N.aberto);",
                 "  const painel = obj(\"painel\", \"nome_painel\");",
                 "  painel.clear();",
                 "  for (const id of [\"titulo\", \"nome\", \"ajuda\"]) if (st[id]) st[id].hide(true);",
                 "  if (!N.aberto) return;",
                 "  const pw = n(\"painel_w\"), ph = n(\"painel_h\"), b = n(\"painel_borda\");",
-                "  const px = W / 2 - pw / 2, py = H / 2 - ph / 2;",
+                "  const px = W / 2 - pw / 2, py = toque ? H * n(\"y_celular\") : H / 2 - ph / 2;",
+                "  N.painelRet = { x0: px, x1: px + pw, y0: py, y1: py + ph };",
                 "  painel.setFillOpacity(n(\"painel_opacidade\"));",
                 "  painel.setOutlineSize(b);",
                 "  painel.setOutlineColor(cor(\"ui_cor_ouro\"));",
@@ -195182,7 +197520,7 @@
                 "  const cursor = Math.floor(N.t / n(\"pisca\")) % 2 === 0 ? \"_\" : \" \";",
                 "  const max = n(\"max\");",
                 "  const nm = txt(\"nome\", N.texto + cursor, W / 2, t.getY() - y0 + t.getHeight() + n(\"gap\"), n(\"tam_nome\"), cor(\"ui_cor_texto\"), \"meio\");",
-                "  txt(\"ajuda\", \"ENTER SALVA   ESC CANCELA   \" + Array.from(N.texto).length + \"/\" + max, W / 2,",
+                "  txt(\"ajuda\", (toque ? \"OK SALVA   TOQUE FORA PARA SAIR   \" : \"ENTER SALVA   ESC CANCELA   \") + Array.from(N.texto).length + \"/\" + max, W / 2,",
                 "    nm.getY() - y0 + nm.getHeight() + n(\"gap\"), n(\"tam_ajuda\"), cor(\"ui_cor_dim\"), \"meio\");",
                 "} catch (e) { /* o painel do nome nunca trava o jogo */ }"
               ],
