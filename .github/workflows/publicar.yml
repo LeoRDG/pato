@@ -1,0 +1,42 @@
+# A cada push na main, exporta o jogo para HTML5 e publica na Cloudflare (worker "pato", ci/wrangler.jsonc),
+# em https://pato.leorods.org, na mesma conta do placar.
+# Uma vez só, no GitHub: Settings > Secrets and variables > Actions, crie os segredos
+#   CLOUDFLARE_API_TOKEN  (token com a permissão "Workers Scripts: Edit" e, para o domínio, "Workers Routes: Edit"
+#                          e "DNS: Edit" na zona leorods.org; o modelo "Edit Cloudflare Workers" já tem tudo)
+#   CLOUDFLARE_ACCOUNT_ID (o Account ID que aparece no painel da Cloudflare ou em npx wrangler whoami)
+name: Publicar na Cloudflare
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publicar
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: cloudflare
+      url: https://pato.leorods.org
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar o núcleo do GDevelop e o wrangler
+        run: npm install --prefix ci --no-audit --no-fund
+      - name: Exportar o jogo
+        run: node ci/exporta.mjs jogo.json _site
+      - name: Cabeçalhos de cache
+        run: cp ci/_headers _site/_headers
+      - name: Publicar
+        run: ci/node_modules/.bin/wrangler deploy --config ci/wrangler.jsonc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

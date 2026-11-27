@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 // Quantas imagens/sons o jogo baixa ao mesmo tempo enquanto carrega. O GDevelop usa 20; com ~1200 imagens isso dá
-// ~60 rodadas de ida e volta ao servidor antes do menu. O GitHub Pages usa HTTP/2 (uma conexão só para tudo),
+// ~60 rodadas de ida e volta ao servidor antes do menu. A Cloudflare usa HTTP/2 e HTTP/3 (uma conexão só para tudo),
 // então dá para pedir bem mais de uma vez.
 const DOWNLOADS_SIMULTANEOS = Number(process.env.DOWNLOADS_SIMULTANEOS || 100);
 

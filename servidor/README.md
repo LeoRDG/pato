@@ -42,7 +42,7 @@ Run these from this folder (`servidor/`):
    npx wrangler secret put PLACAR_SEGREDO
    ```
 5. Check `routes` and `ORIGENS` in `wrangler.toml`.
-   - The game (`pato.leorods.org`) is served by GitHub Pages without the Cloudflare proxy, so the leaderboard gets its own subdomain, `placar.leorods.org`.
+   - The game (`pato.leorods.org`) is a separate static-assets Worker (`ci/wrangler.jsonc`, deployed on every push to `main`), so the leaderboard keeps its own subdomain, `placar.leorods.org`.
    - `deploy` creates that DNS record (type Worker) and its certificate. Don't create it by hand.
    - `ORIGENS` lists the game's address, so the Worker accepts requests from it.
 6. Publish:

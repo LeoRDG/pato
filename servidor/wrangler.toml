@@ -2,7 +2,7 @@ name = "pato-placar"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
 
-# O jogo (pato.leorods.org) fica no GitHub Pages sem proxy; o placar tem um subdomínio próprio.
+# O jogo (pato.leorods.org) é outro worker, só de arquivos estáticos (ci/wrangler.jsonc); o placar tem um subdomínio próprio.
 # O `wrangler deploy` cria sozinho o registro DNS (tipo Worker) e o certificado: não crie esse registro à mão.
 routes = [{ pattern = "placar.leorods.org", custom_domain = true }]
 

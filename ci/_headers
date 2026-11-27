@@ -1,0 +1,4 @@
+# Copiado para _site/_headers no deploy. Os arquivos do GDevelop não têm hash no nome, então o cache é curto
+# (o mesmo do GitHub Pages, 10 min): o navegador reaproveita as ~1300 imagens entre uma visita e outra sem pedir de novo.
+/*
+  Cache-Control: public, max-age=600
