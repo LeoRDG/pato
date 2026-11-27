@@ -12036,14 +12036,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/toque/botao_recarga.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/toque/botao_recarga.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "assets/toque/botao_usar.png",
         "kind": "image",
         "metadata": "",
@@ -82517,35 +82509,6 @@
           ]
         },
         {
-          "name": "recarga",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.1,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/toque/botao_recarga.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 128,
-                    "y": 128
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "usar",
           "useMultipleDirections": false,
           "directions": [
@@ -87356,12 +87319,6 @@
           "value": -1
         },
         {
-          "name": "recarga_id",
-          "persistentUuid": "118eba9c-0990-5f9d-9996-d067563ce0c2",
-          "type": "number",
-          "value": -1
-        },
-        {
           "name": "usar_id",
           "persistentUuid": "8ee744cf-2512-5206-a6ba-df366fe07de8",
           "type": "number",
@@ -87551,7 +87508,7 @@
           "name": "opacidade_repouso",
           "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
           "type": "number",
-          "value": 70
+          "value": 25
         },
         {
           "name": "mov_esq",
@@ -87576,18 +87533,6 @@
           "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
           "type": "boolean",
           "value": true
-        },
-        {
-          "name": "pulo_no_analogico",
-          "persistentUuid": "ba7ba1eb-cb0f-58ee-9471-ac9698364fff",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "pulo_solta",
-          "persistentUuid": "151e0e59-31db-577e-8b4e-ef542c22b4be",
-          "type": "number",
-          "value": 0.35
         },
         {
           "name": "mira_dir",
@@ -87662,18 +87607,6 @@
           "value": 250
         },
         {
-          "name": "recarga_dir",
-          "persistentUuid": "c05fbf2d-90a9-5323-be37-0b2727de02f1",
-          "type": "number",
-          "value": 430
-        },
-        {
-          "name": "recarga_baixo",
-          "persistentUuid": "4f9feb07-1cd0-5821-ba71-d5a9141811a8",
-          "type": "number",
-          "value": 530
-        },
-        {
           "name": "usar_dir",
           "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
           "type": "number",
@@ -87690,12 +87623,6 @@
           "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
           "type": "number",
           "value": 120
-        },
-        {
-          "name": "pulo_analogico",
-          "persistentUuid": "55c8bae6-5f1c-53dd-aa2f-b3d8734a33b6",
-          "type": "boolean",
-          "value": false
         },
         {
           "name": "mira_parado",
@@ -87732,6 +87659,18 @@
           "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "usar_pode",
+          "persistentUuid": "064b81eb-18a2-5177-a480-416772793fa7",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "opacidade_analogico",
+          "persistentUuid": "bbef010c-d758-5289-b0e7-c0a6527a9075",
+          "type": "number",
+          "value": 110
         }
       ]
     },
@@ -108870,7 +108809,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, recarga, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (para cima também pula), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
+              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (pulo só pelo botão, t218), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>. t218: E só aparece quando há o que usar (usar_pode); sem botão de recarga (recarrega sozinha)."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108917,16 +108856,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "toque.pulo_analogico",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -108951,16 +108880,6 @@
                   },
                   "parameters": [
                     "toque.dash_id",
-                    "=",
-                    "-1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "toque.recarga_id",
                     "=",
                     "-1"
                   ]
@@ -109461,77 +109380,6 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
-                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo",
-                            "\"HUD\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "papel",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Animation",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetSize"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Resizable",
-                            "toque.botao_raio * 2",
-                            "toque.botao_raio * 2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "OpacityCapability::OpacityBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "Opacity",
-                            "=",
-                            "toque.opacidade"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangeColor"
-                          },
-                          "parameters": [
-                            "toque_botao",
-                            "toque.cor"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "toque_botao",
                             "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
                             "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo",
                             "\"HUD\""
@@ -109726,18 +109574,26 @@
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "object": "pato",
+                  "events": [
                     {
-                      "type": {
-                        "value": "TouchSimulateMouse"
-                      },
-                      "parameters": [
-                        "",
-                        "no"
-                      ]
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "// Desliga o toque simulando o mouse (fora da loja). Um toque que começou com a simulação ligada apertou o botão",
+                        "// esquerdo do mouse, e com ela desligada o touchend não o solta mais: o pato atiraria para sempre (t218).",
+                        "const im = runtimeScene.getGame().getInputManager();",
+                        "if (im.isSimulatingMouseWithTouch()) {",
+                        "  im.touchSimulateMouse(false);",
+                        "  const esq = gdjs.InputManager.MOUSE_LEFT_BUTTON;",
+                        "  if (im.isMouseButtonPressed(esq)) im.onMouseButtonReleased(esq);",
+                        "}"
+                      ],
+                      "parameterObjects": "",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -109931,42 +109787,6 @@
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "toque.recarga_id",
-                        "!=",
-                        "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "HasTouchEnded"
-                      },
-                      "parameters": [
-                        "",
-                        "toque.recarga_id"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga_id",
-                        "=",
-                        "-1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
                         "toque.usar_id",
                         "!=",
                         "-1"
@@ -110126,6 +109946,228 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "loja_aberta",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "estado",
+                        "=",
+                        "\"calmo\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "trader",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(trader.CenterX() - pato.CenterX())",
+                        "<=",
+                        "trader.loja_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(trader.Y() + trader.Height() - pato.Y() - pato.Height())",
+                        "<=",
+                        "trader.loja_raio"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "pato",
+                        "portal",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "portal",
+                        "entrar_com_e",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "portal",
+                        "aberto",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "morto",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "pato",
+                        "na_loja",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Visible"
+                      },
+                      "parameters": [
+                        "expositor_arma"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "expositor_arma",
+                        "pato",
+                        "pato.arma_raio",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Repeat",
                   "conditions": [],
                   "actions": [],
@@ -110278,46 +110320,19 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
                             "<",
                             "toque.melhor"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "toque.melhor",
-                            "=",
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetStringVariable"
+                            "value": "BooleanVariable"
                           },
                           "parameters": [
-                            "toque.qual",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
-                            "<",
-                            "toque.melhor"
+                            "toque.usar_pode",
+                            "True",
+                            ""
                           ]
                         }
                       ],
@@ -110402,43 +110417,6 @@
                           },
                           "parameters": [
                             "toque.dash_id",
-                            "=",
-                            "toque.id"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanVariable"
-                          },
-                          "parameters": [
-                            "toque.livre",
-                            "False",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "toque.qual",
-                            "=",
-                            "\"recarga\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "toque.recarga_id",
                             "=",
                             "toque.id"
                           ]
@@ -111128,134 +111106,6 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_no_analogico",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_id",
-                        "!=",
-                        "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_dy",
-                        "<",
-                        "-toque.pulo_limiar"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.mov_dy",
-                        ">",
-                        "-toque.pulo_solta"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_no_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo_analogico",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
@@ -111299,33 +111149,6 @@
                       },
                       "parameters": [
                         "toque.dash",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "toque.recarga_id",
-                        "!=",
-                        "-1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga",
                         "True",
                         ""
                       ]
@@ -112144,7 +111967,7 @@
                         "toque_base",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112183,7 +112006,7 @@
                         "toque_alavanca",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112326,7 +112149,7 @@
                         "toque_base",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112365,7 +112188,7 @@
                         "toque_alavanca",
                         "Opacity",
                         "=",
-                        "toque.opacidade_ativa"
+                        "toque.opacidade_analogico"
                       ]
                     }
                   ]
@@ -112558,86 +112381,6 @@
                         "toque_botao",
                         "papel",
                         "=",
-                        "\"recarga\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetXY"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "=",
-                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
-                        "=",
-                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetSize"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "Resizable",
-                        "toque.botao_raio * 2",
-                        "toque.botao_raio * 2"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.recarga",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "papel",
-                        "=",
-                        "\"recarga\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "Opacity",
-                        "=",
-                        "toque.opacidade_ativa"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "toque_botao",
-                        "papel",
-                        "=",
                         "\"usar\""
                       ]
                     }
@@ -112776,6 +112519,78 @@
                     }
                   ],
                   "object": "pato"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "papel",
+                        "=",
+                        "\"usar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "toque_botao"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.usar_pode",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "papel",
+                        "=",
+                        "\"usar\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Show"
+                      },
+                      "parameters": [
+                        "toque_botao"
+                      ]
+                    }
+                  ]
                 }
               ]
             },
