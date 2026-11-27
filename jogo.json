@@ -12050,6 +12050,62 @@
         "name": "assets/toque/botao_usar.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/toque/base_mira.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/toque/base_mira.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_m4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/arma_m4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_mp5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/arma_mp5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/arma_sniper.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/arma_sniper.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/arma_m4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/hud/arma_m4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/arma_mp5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/hud/arma_mp5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud/arma_sniper.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/hud/arma_sniper.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -30835,6 +30891,93 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "hud/arma_lanca.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m4",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/hud/arma_m4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mp5",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/hud/arma_mp5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sniper",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/hud/arma_sniper.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -52490,6 +52633,93 @@
                     "name": "centre",
                     "x": 0,
                     "y": 16
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m4",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_minigun.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 5.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 5.5
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mp5",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_pistola.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 6.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 6.5
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sniper",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "flash_doze.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 15
                   },
                   "customCollisionMask": []
                 }
@@ -77051,6 +77281,93 @@
               ]
             }
           ]
+        },
+        {
+          "name": "m4",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/arma_m4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mp5",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/arma_mp5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sniper",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/arma_sniper.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -82042,6 +82359,35 @@
               ]
             }
           ]
+        },
+        {
+          "name": "mira",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/toque/base_mira.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 128,
+                    "y": 128
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -82229,6 +82575,807 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "m4",
+      "persistentUuid": "724f7560-2b96-550b-8518-87405948fe4f",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "valocidade_bala",
+          "persistentUuid": "8e77f355-11fe-56a6-b386-881a4a7f2642",
+          "type": "number",
+          "value": 2600
+        },
+        {
+          "name": "recuo",
+          "persistentUuid": "503da6fc-734b-5f3c-9188-00ba246a2f24",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "equipada",
+          "persistentUuid": "4aef377e-3679-502f-9e0d-b0f00ed55eb5",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.11,
+          "persistentUuid": "57e75fb3-f05a-5cc1-a3e9-f1f9562bb14e"
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 1.6,
+          "persistentUuid": "07433740-1e8f-5df6-973c-648f0cfbdb95"
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "30d65b5c-2dd4-5f32-aec6-5e2901ce123c",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "ca255829-a002-50f5-afab-70e6ef733819",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "106d7aae-164d-55a4-86c3-4f32cb613d27",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "1b742046-76fc-5c79-8a3d-de09ab2c8d63",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "adf0664b-141c-58b7-826d-28d6ba4e7ff4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "7ca5962f-e480-5719-a926-d67fb0b69404",
+          "type": "number",
+          "value": 0.8
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "eb36ed0c-c372-53be-a7b3-46f2e10c01e4",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "ad717fa3-73fe-5c21-951a-b3fa576b66ac",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "800c9b5b-7d0b-5321-b4c8-9e08d5db5448",
+          "type": "number",
+          "value": 0.92
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "fe32bc68-06bc-5a82-9347-c26da03622b1",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "c31ebfd6-dc3e-5b31-8a1f-3f2bba973536",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "b64ba651-8519-50fb-8a38-6052f1f7eecc",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "aafb23b3-8007-5350-998b-64868453655a",
+          "type": "number",
+          "value": -0.237
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "12c68e6e-79ed-5e50-a285-a19ac268bdbe",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "096d4ee2-0bc6-56cc-b368-fb59aafd9377",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "995fba96-12bf-5884-ba7b-58c970a2d3d2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "85ed77ed-5a88-592c-b21f-f5f0e71ff38d",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "7e6da0d8-cc86-5312-963c-6b29c34f8382",
+          "type": "number",
+          "value": 0.04
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "5c0eba4a-6ae8-5b18-9b2d-8708f7d6861b",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "queda_fim",
+          "persistentUuid": "e9d9d992-0816-584b-970b-d0fa679e33e6",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "ricochete_vel",
+          "persistentUuid": "9ac53185-6de2-52fc-b709-7883fa4f2b1c",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "258d9cfe-e246-5228-99c2-dfb042106570",
+          "type": "number",
+          "value": 1.3
+        },
+        {
+          "name": "som_vol",
+          "persistentUuid": "af92474f-9fe1-5b02-a307-043f233c8a8c",
+          "type": "number",
+          "value": 55
+        },
+        {
+          "name": "som_tom",
+          "persistentUuid": "c1ffa098-0a0c-51c5-b1b4-d41fa15d4997",
+          "type": "number",
+          "value": 0.85
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 0.11,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 2.5,
+          "BulletSpeedVariance": 0.54,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 30,
+          "ReloadDuration": 1.6,
+          "MaxAmmo": 300,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 300,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": false,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "arma",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/arma_m4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 159,
+                        "y": 0
+                      },
+                      {
+                        "x": 159,
+                        "y": 57
+                      },
+                      {
+                        "x": 0,
+                        "y": 57
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "mp5",
+      "persistentUuid": "88b66b07-ef65-56f7-8994-99eb2b6e596b",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "valocidade_bala",
+          "persistentUuid": "ee79093f-af85-5055-bd21-1c2bd8f75ce1",
+          "type": "number",
+          "value": 2000
+        },
+        {
+          "name": "recuo",
+          "persistentUuid": "0c51dce0-c929-501e-be8c-acca30dbb009",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "equipada",
+          "persistentUuid": "4e90f9b3-9ce8-5839-8c8d-84a8dbb86f8b",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 0.065,
+          "persistentUuid": "74645373-8b7e-572e-820d-e475b115edb8"
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 1.2,
+          "persistentUuid": "26898e1a-9791-5e0b-892b-dea447084d1c"
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "fbded296-0862-587f-a9f0-fc63c96620a2",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "23b01699-a7a6-5a38-9ad5-285da826e8f6",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "2660934d-f9d6-54d0-a226-227148dfc3d4",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "cd59ad92-0278-58d7-941f-493777cce0c7",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "758ba031-f657-54d3-96d6-0c104da22eea",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "83406c5f-bb56-52e7-8b90-b038445fe3ab",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "918769cc-ecca-57a0-ad28-082633259db6",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "cac6b9d8-0803-5052-afc0-726c8b87d2f1",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "43c49d78-3975-5d30-a98b-ea86e2a53b38",
+          "type": "number",
+          "value": 1.05
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "846cfac4-995e-5c3f-9e2d-fb1be99ad89e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "ebd0ccf4-b9ee-586d-af17-4d7019ab1f9b",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "d28d7c5d-b86c-5599-ab1b-7d9f384cd7e4",
+          "type": "number",
+          "value": 0.3
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "c021be0d-b7b9-5dde-b696-053bdde88fc8",
+          "type": "number",
+          "value": -0.226
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "c9412371-2360-5d6e-8f31-43f9232c75e9",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "c3a828ac-8bfb-5952-94bb-6b2752d20a63",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "5c41ac05-4aed-5c87-ab4e-7e0a72d1394a",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "9e6d5dc9-d78d-5aeb-a507-c55ea5098b0a",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "4af849db-9f35-5242-9410-3f41eff4604c",
+          "type": "number",
+          "value": 0.035
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "2b817073-0d35-59cc-a2c1-7dfbd22f64cf",
+          "type": "number",
+          "value": 2.2
+        },
+        {
+          "name": "queda_fim",
+          "persistentUuid": "63acded4-9b99-5e5e-a2e3-80758e0681d3",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "ricochete_vel",
+          "persistentUuid": "a93a2492-e31a-5ebf-91a4-d98b9114c9bd",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "e331bebd-7cf9-5649-a847-4dbdfd85d4d1",
+          "type": "number",
+          "value": 2.6
+        },
+        {
+          "name": "som_vol",
+          "persistentUuid": "929843e3-275d-5190-982c-a6df76478a41",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "som_tom",
+          "persistentUuid": "edd32efb-41d2-56a4-923c-7d1b4465afd3",
+          "type": "number",
+          "value": 1.25
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 0.065,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 6,
+          "BulletSpeedVariance": 0.54,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 32,
+          "ReloadDuration": 1.2,
+          "MaxAmmo": 320,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 320,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": false,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "arma",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/arma_mp5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 46,
+                        "y": 0
+                      },
+                      {
+                        "x": 46,
+                        "y": 31
+                      },
+                      {
+                        "x": 0,
+                        "y": 31
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "sniper",
+      "persistentUuid": "8bbd5e1e-f389-53e4-9a63-c5932d4b5a88",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "valocidade_bala",
+          "persistentUuid": "47d89710-4396-55ea-8ed7-5485577bb841",
+          "type": "number",
+          "value": 5000
+        },
+        {
+          "name": "recuo",
+          "persistentUuid": "7319a7a4-757a-52ca-bebe-cf9e991c53b9",
+          "type": "number",
+          "value": 18
+        },
+        {
+          "name": "equipada",
+          "persistentUuid": "e04c2205-f1cb-54b1-8eaf-adf7db8a2b25",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "cooldown_base",
+          "type": "number",
+          "value": 1.1,
+          "persistentUuid": "24cc3cd5-dddf-5927-831f-12b2d160f150"
+        },
+        {
+          "name": "recarga_base",
+          "type": "number",
+          "value": 2.6,
+          "persistentUuid": "8ff77f5a-ca39-56d9-b832-39c9a4a0f305"
+        },
+        {
+          "name": "dano",
+          "persistentUuid": "a87dd04d-5bda-5e41-9146-2bea5b78d0e8",
+          "type": "number",
+          "value": 95
+        },
+        {
+          "name": "alcance",
+          "persistentUuid": "55f062b1-04a4-5139-b381-c99aaa56bb47",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "queda_ini",
+          "persistentUuid": "e62c7311-3360-5dfb-96a8-6ab3a1784121",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "queda_min",
+          "persistentUuid": "76a307a3-ebac-553b-badc-5849845d2a41",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "furos",
+          "persistentUuid": "bee0cf9c-ec7f-54d7-8300-a113f26ace1f",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "repulsao",
+          "persistentUuid": "609f7c87-6dbd-5949-8400-cda821c74a34",
+          "type": "number",
+          "value": 3
+        },
+        {
+          "name": "disp_min",
+          "persistentUuid": "39626c5a-7ba0-5d26-a5fa-4a97969b48f2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_max",
+          "persistentUuid": "d04a8fa8-e515-55d3-88ab-08500c78a8c7",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vel_mov",
+          "persistentUuid": "685e39ed-3273-503e-9725-6d3ddf72f3ce",
+          "type": "number",
+          "value": 0.85
+        },
+        {
+          "name": "raio",
+          "persistentUuid": "99d59033-0538-5c97-9ab5-d08593049701",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kick",
+          "persistentUuid": "7615ecb5-bd77-50eb-93f3-7e0d25099e6a",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "tremor",
+          "persistentUuid": "d6c8d931-ef8e-535b-94c0-34b7d2a175cc",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "bocal_f",
+          "persistentUuid": "3fe7e5f2-8509-519c-bbb2-8c9a33998474",
+          "type": "number",
+          "value": -0.062
+        },
+        {
+          "name": "espera_giro",
+          "persistentUuid": "fde36c91-88b1-50c1-9cf7-65077a5b9d72",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "som_recarga",
+          "persistentUuid": "858f44f9-d417-563c-ab7e-f7d45422785c",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "dano_explosao",
+          "persistentUuid": "b1126c9f-d8a8-512c-9988-44f6240738d2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "disp_tempo",
+          "persistentUuid": "27ecb195-78c2-5bf0-88fb-635054fa6ced",
+          "type": "number",
+          "value": 2.5
+        },
+        {
+          "name": "flash_dur",
+          "persistentUuid": "164477cc-c705-53bd-8cc8-65fbf2712681",
+          "type": "number",
+          "value": 0.09
+        },
+        {
+          "name": "flash_escala",
+          "persistentUuid": "58fdf1fd-ba1c-590f-b3b5-ad002d8df33a",
+          "type": "number",
+          "value": 4.5
+        },
+        {
+          "name": "queda_fim",
+          "persistentUuid": "0b3aceb8-55f4-5b3e-bcab-b179aa7b6156",
+          "type": "number",
+          "value": 99999
+        },
+        {
+          "name": "ricochete_vel",
+          "persistentUuid": "5687c181-54a6-52ee-b9b0-dbe2522cf88e",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "escala",
+          "persistentUuid": "ac69df83-aa5c-53b2-9278-627428b75859",
+          "type": "number",
+          "value": 1.1
+        },
+        {
+          "name": "som_vol",
+          "persistentUuid": "35a56c6e-aa15-5478-9171-9a5677823984",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "som_tom",
+          "persistentUuid": "972fb38e-e662-5c54-b39d-46898f079092",
+          "type": "number",
+          "value": 0.6
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 1.1,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 0,
+          "BulletSpeedVariance": 0.54,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 5,
+          "ReloadDuration": 2.6,
+          "MaxAmmo": 60,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 60,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": false,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "arma",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/arma_sniper.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 224,
+                        "y": 0
+                      },
+                      {
+                        "x": 224,
+                        "y": 56
+                      },
+                      {
+                        "x": 0,
+                        "y": 56
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -82327,6 +83474,15 @@
           },
           {
             "objectName": "flash_cano"
+          },
+          {
+            "objectName": "m4"
+          },
+          {
+            "objectName": "mp5"
+          },
+          {
+            "objectName": "sniper"
           }
         ]
       },
@@ -83249,6 +84405,15 @@
         },
         {
           "name": "lanca"
+        },
+        {
+          "name": "m4"
+        },
+        {
+          "name": "mp5"
+        },
+        {
+          "name": "sniper"
         }
       ]
     },
@@ -84633,6 +85798,24 @@
           "persistentUuid": "65ccdf63-9212-5bfe-9a45-a3e2a3bcc464",
           "type": "string",
           "value": "PISTOLA"
+        },
+        {
+          "name": "m4",
+          "persistentUuid": "97e60c69-2ea8-5930-896c-186d03c4fbf2",
+          "type": "string",
+          "value": "M4"
+        },
+        {
+          "name": "mp5",
+          "persistentUuid": "f08e9f62-1ada-54f1-9422-c2970a001c2a",
+          "type": "string",
+          "value": "MP5"
+        },
+        {
+          "name": "sniper",
+          "persistentUuid": "b2f93302-7fe6-5027-983f-d5ebe94ab448",
+          "type": "string",
+          "value": "SNIPER"
         }
       ]
     },
@@ -86101,18 +87284,6 @@
           "value": 235
         },
         {
-          "name": "mov_x",
-          "persistentUuid": "8baf779e-2836-5f72-b8d7-b5a669d7961f",
-          "type": "number",
-          "value": 0.12
-        },
-        {
-          "name": "mov_y",
-          "persistentUuid": "a7d7b771-db2a-564a-bdfa-a6c6dcb568c0",
-          "type": "number",
-          "value": 0.74
-        },
-        {
           "name": "mov_raio",
           "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
           "type": "number",
@@ -86137,18 +87308,6 @@
           "value": 0.6
         },
         {
-          "name": "mira_x",
-          "persistentUuid": "565ae8b4-4ec1-5baf-aa7c-cf873138bd62",
-          "type": "number",
-          "value": 0.78
-        },
-        {
-          "name": "mira_y",
-          "persistentUuid": "663763d9-5add-5796-92ef-abe4085531ad",
-          "type": "number",
-          "value": 0.4
-        },
-        {
           "name": "mira_raio",
           "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
           "type": "number",
@@ -86167,64 +87326,10 @@
           "value": 320
         },
         {
-          "name": "pulo_x",
-          "persistentUuid": "0c6d517d-61a1-5c32-b477-154bd7a2a292",
-          "type": "number",
-          "value": 0.68
-        },
-        {
-          "name": "pulo_y",
-          "persistentUuid": "15aac522-51ed-5c32-8eb8-0f0c354530a6",
-          "type": "number",
-          "value": 0.84
-        },
-        {
-          "name": "dash_x",
-          "persistentUuid": "70513021-6b65-571d-912c-2e71ee36ddc5",
-          "type": "number",
-          "value": 0.57
-        },
-        {
-          "name": "dash_y",
-          "persistentUuid": "e7146688-edd2-5c0c-bb53-14b33ecf6cdd",
-          "type": "number",
-          "value": 0.89
-        },
-        {
-          "name": "recarga_x",
-          "persistentUuid": "2eae579e-32cb-5c10-a1e9-14e1a26aaed0",
-          "type": "number",
-          "value": 0.93
-        },
-        {
-          "name": "recarga_y",
-          "persistentUuid": "6326c25a-1768-5a90-9302-2c3a8246acad",
-          "type": "number",
-          "value": 0.64
-        },
-        {
-          "name": "usar_x",
-          "persistentUuid": "5ed10a79-e052-5435-95d3-c5f554c57a26",
-          "type": "number",
-          "value": 0.84
-        },
-        {
-          "name": "usar_y",
-          "persistentUuid": "156805fa-f4e7-5398-bf09-34f4ce68fa30",
-          "type": "number",
-          "value": 0.64
-        },
-        {
           "name": "botao_raio",
           "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
           "type": "number",
           "value": 72
-        },
-        {
-          "name": "folga",
-          "persistentUuid": "bc0003e6-eb81-5454-9767-b22ae10439d5",
-          "type": "number",
-          "value": 1.2
         },
         {
           "name": "mov_id",
@@ -86435,6 +87540,198 @@
           "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "tela_cheia",
+          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "opacidade_repouso",
+          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "type": "number",
+          "value": 70
+        },
+        {
+          "name": "mov_esq",
+          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "mov_baixo",
+          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
+          "type": "number",
+          "value": 290
+        },
+        {
+          "name": "mov_zona",
+          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "segue",
+          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_no_analogico",
+          "persistentUuid": "ba7ba1eb-cb0f-58ee-9471-ac9698364fff",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_solta",
+          "persistentUuid": "151e0e59-31db-577e-8b4e-ef542c22b4be",
+          "type": "number",
+          "value": 0.35
+        },
+        {
+          "name": "mira_dir",
+          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
+          "type": "number",
+          "value": 760
+        },
+        {
+          "name": "mira_baixo",
+          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "mira_auto",
+          "persistentUuid": "5d116c95-dd58-5cda-8c56-9e9addab6d16",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "mira_auto_alcance",
+          "persistentUuid": "2d5aa83b-c51b-547d-b8dc-de9c63b56fcd",
+          "type": "number",
+          "value": 1100
+        },
+        {
+          "name": "mira_auto_espera",
+          "persistentUuid": "0949e795-dfc0-5e27-bb42-d476d6a41d81",
+          "type": "number",
+          "value": 0.12
+        },
+        {
+          "name": "mira_segue_andar",
+          "persistentUuid": "09319f84-3b56-54b8-9172-4cfd2fbbc02e",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "pulo_dir",
+          "persistentUuid": "1e238383-2cc5-5bc1-92fe-7d71c0de7d44",
+          "type": "number",
+          "value": 230
+        },
+        {
+          "name": "pulo_baixo",
+          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "type": "number",
+          "value": 330
+        },
+        {
+          "name": "pulo_raio",
+          "persistentUuid": "183d5534-db71-5eaf-8180-9dc1dbbc67d0",
+          "type": "number",
+          "value": 95
+        },
+        {
+          "name": "pulo_toque",
+          "persistentUuid": "b808e5d4-2239-5f23-a570-7064958a8dd2",
+          "type": "number",
+          "value": 165
+        },
+        {
+          "name": "dash_dir",
+          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
+          "type": "number",
+          "value": 480
+        },
+        {
+          "name": "dash_baixo",
+          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "recarga_dir",
+          "persistentUuid": "c05fbf2d-90a9-5323-be37-0b2727de02f1",
+          "type": "number",
+          "value": 430
+        },
+        {
+          "name": "recarga_baixo",
+          "persistentUuid": "4f9feb07-1cd0-5821-ba71-d5a9141811a8",
+          "type": "number",
+          "value": 530
+        },
+        {
+          "name": "usar_dir",
+          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "usar_baixo",
+          "persistentUuid": "62742393-73c4-5403-9a8b-14c139a97fe6",
+          "type": "number",
+          "value": 590
+        },
+        {
+          "name": "botao_toque",
+          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "pulo_analogico",
+          "persistentUuid": "55c8bae6-5f1c-53dd-aa2f-b3d8734a33b6",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "mira_parado",
+          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vx",
+          "persistentUuid": "47cc1a74-2e44-52f6-b0f8-793b7b00383d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vy",
+          "persistentUuid": "93f201a3-157b-5a74-aef7-95dbc8aaae50",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vd",
+          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "melhor",
+          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "qual",
+          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
+          "type": "string",
+          "value": ""
         }
       ]
     },
@@ -87946,6 +89243,129 @@
               "persistentUuid": "c1d8a79e-ac1d-500b-97e8-56adf854deda",
               "type": "number",
               "value": 4.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "c0a8a8ae-d2dc-5185-b5c2-a70a1eb30ee4",
+          "width": 0,
+          "x": 20,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "61cf296b-9309-5676-b408-a91acefed422",
+              "type": "string",
+              "value": "m4"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "50387efe-7198-5f5e-a9bf-522c2dcb05af",
+              "type": "string",
+              "value": "M4"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "650f20ab-111e-58e3-94d6-e0dde30995af",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "c3e8460d-fabb-5279-90b4-de2a4c4434b6",
+              "type": "number",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "f2e8d2a0-732f-58b0-8984-04ccb1d0c1c9",
+          "width": 0,
+          "x": -140,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "d1133c73-0a93-5ccf-baab-13c3b43f17a3",
+              "type": "string",
+              "value": "mp5"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "5683d1da-aa91-5cb2-b7cc-fb635fb3e14c",
+              "type": "string",
+              "value": "MP5"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "d6af6f33-0c71-55f6-b0b6-af8636c04593",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "2995f531-3961-5835-9998-840b9e6ef8ab",
+              "type": "number",
+              "value": 7.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "1646834c-29c3-5706-af9a-f07cb76174c7",
+          "width": 0,
+          "x": -300,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "f33030c8-5ec6-5309-b615-de5d7c7fd186",
+              "type": "string",
+              "value": "sniper"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "0bdf0675-4d18-5505-b41c-eea4492748c7",
+              "type": "string",
+              "value": "SNIPER"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "fd94909f-0ddf-5584-ae65-fd88573e6839",
+              "type": "number",
+              "value": 0.8
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "22e8fa18-160e-5f30-b38f-9dfcf3abfd0e",
+              "type": "number",
+              "value": 9
             }
           ]
         }
@@ -89634,6 +91054,129 @@
               "persistentUuid": "793fde18-6637-59f0-94a3-36716a6cf8a4",
               "type": "number",
               "value": 4.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "25cd72ce-f28f-5172-8d5f-f4815dd7c579",
+          "width": 0,
+          "x": 20,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "067066b3-e89d-52be-8d43-af7c29799e3d",
+              "type": "string",
+              "value": "m4"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "718e5741-1d1a-5f36-bb0b-70eeba8b167e",
+              "type": "string",
+              "value": "M4"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "81506b6f-08c1-5404-9c19-c1fbfc9453f8",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "122786d8-cc63-5b11-bdcc-94f46549793e",
+              "type": "number",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "e119fdc4-f769-5f3d-92b5-f16a53b62f47",
+          "width": 0,
+          "x": -140,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "9d8391c7-078a-58f6-b6be-d560d5e0be6a",
+              "type": "string",
+              "value": "mp5"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "573d0ed2-ff42-5fdd-a125-4fa56956f440",
+              "type": "string",
+              "value": "MP5"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "ef34e33c-39f3-502a-80d4-f9bc35a4f651",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "7b274bed-d3cc-5dd3-b108-36cd39e82f27",
+              "type": "number",
+              "value": 7.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "446446be-ea2e-5a00-8932-3b4ef3fae691",
+          "width": 0,
+          "x": -300,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "ba62b30d-2cc4-5eba-af4a-e178948b3dd2",
+              "type": "string",
+              "value": "sniper"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "4f7e2b7e-6b8c-524b-9a1e-159fd5fb149c",
+              "type": "string",
+              "value": "SNIPER"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "8b33d874-d1b4-592c-a420-dd72f88f06cc",
+              "type": "number",
+              "value": 0.8
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "6926d092-f1b5-5b8e-9a00-65d051832f95",
+              "type": "number",
+              "value": 9
             }
           ]
         }
@@ -91342,6 +92885,129 @@
               "persistentUuid": "805bf04a-19a6-5b3a-9e1b-98daf0f39a9e",
               "type": "number",
               "value": 4.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "6eaa4933-d7b8-5d81-a72a-c88d3de564c5",
+          "width": 0,
+          "x": 20,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "acc1f93e-9660-5fef-b6ff-27695fd992a5",
+              "type": "string",
+              "value": "m4"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "f6ef15bd-bd68-5066-900e-d761e4b8ea15",
+              "type": "string",
+              "value": "M4"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "4563b54e-678b-5b79-9a46-4448dc464dc4",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "0f4ef799-7dd3-59d2-91c8-eb4c87cc7aeb",
+              "type": "number",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "336c7a4f-285b-569d-b537-f77baefd040b",
+          "width": 0,
+          "x": -140,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "f082794a-b30f-57f1-b1c6-65b6028076fe",
+              "type": "string",
+              "value": "mp5"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "37aa4d4c-aa17-5a62-9c69-1c14bba7b79e",
+              "type": "string",
+              "value": "MP5"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "ce80623a-5dd4-5359-9137-5fd5416bb7f0",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "a6c29f18-ae81-5c92-8549-6e605373e979",
+              "type": "number",
+              "value": 7.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pedestal_arma",
+          "persistentUuid": "5d1986af-b7c3-5df9-a527-de5f331ada4d",
+          "width": 0,
+          "x": -300,
+          "y": 950,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "arma",
+              "persistentUuid": "1e8ae0f4-3626-5e6f-b69e-5a00ad119e67",
+              "type": "string",
+              "value": "sniper"
+            },
+            {
+              "name": "nome",
+              "persistentUuid": "df33e67b-2766-5fe5-84b9-970d06a5195f",
+              "type": "string",
+              "value": "SNIPER"
+            },
+            {
+              "name": "escala",
+              "persistentUuid": "2e3862a3-ae48-5b26-8053-349b2aa6fa61",
+              "type": "number",
+              "value": 0.8
+            },
+            {
+              "name": "fase",
+              "persistentUuid": "49b54515-bec9-58c5-95af-01b67a10761c",
+              "type": "number",
+              "value": 9
             }
           ]
         }
@@ -107204,7 +108870,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Controles de toque (t215): ligam no celular (ou com toque.forcar). Analógico esquerdo anda (para cima pula), direito mira e atira; botões pulo, dash, recarga e usar (E). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
+              "comment": "Controles de toque (t215, reformados na t216): ligam no celular (ou com toque.forcar). Botões em arco no canto de baixo à direita (pulo grande, dash, recarga, E), ancorados na borda (*_dir, *_baixo em px da HUD), área de toque maior que o desenho. Analógico esquerdo anda (para cima também pula), direito mira e atira; segurar parado nele atira no inimigo mais perto (mira_auto). Tela cheia no primeiro toque (tela_cheia). Números em toque.*. As condições de tecla aceitam também toque.<ação>."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -107247,6 +108913,26 @@
                     "toque.mira_id",
                     "=",
                     "-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "toque.pulo_analogico",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "toque.mira_parado",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -107371,8 +109057,8 @@
                           "parameters": [
                             "",
                             "toque_base",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107385,6 +109071,17 @@
                             "papel",
                             "=",
                             "\"mov\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "toque_base",
+                            "Animation",
+                            "=",
+                            "\"base\""
                           ]
                         },
                         {
@@ -107406,7 +109103,7 @@
                             "toque_base",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107431,8 +109128,8 @@
                           "parameters": [
                             "",
                             "toque_alavanca",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107466,7 +109163,7 @@
                             "toque_alavanca",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107491,8 +109188,8 @@
                           "parameters": [
                             "",
                             "toque_base",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107503,6 +109200,17 @@
                           "parameters": [
                             "toque_base",
                             "papel",
+                            "=",
+                            "\"mira\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "toque_base",
+                            "Animation",
                             "=",
                             "\"mira\""
                           ]
@@ -107526,7 +109234,7 @@
                             "toque_base",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107551,8 +109259,8 @@
                           "parameters": [
                             "",
                             "toque_alavanca",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107586,7 +109294,7 @@
                             "toque_alavanca",
                             "Opacity",
                             "=",
-                            "toque.opacidade"
+                            "toque.opacidade_repouso"
                           ]
                         },
                         {
@@ -107611,8 +109319,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107645,8 +109353,8 @@
                           "parameters": [
                             "toque_botao",
                             "Resizable",
-                            "toque.botao_raio * 2",
-                            "toque.botao_raio * 2"
+                            "toque.pulo_raio * 2",
+                            "toque.pulo_raio * 2"
                           ]
                         },
                         {
@@ -107682,8 +109390,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107753,8 +109461,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107824,8 +109532,8 @@
                           "parameters": [
                             "",
                             "toque_botao",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0)",
-                            "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0)",
+                            "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
+                            "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo",
                             "\"HUD\""
                           ]
                         },
@@ -107885,6 +109593,67 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "toque.ativo",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "// Tela cheia no celular (t216). O navegador só deixa pedir a tela cheia dentro de um gesto do usuário, e o",
+                    "// touchstart não conta (só o touchend): por isso o pedido sai do touchend, não de um evento do quadro.",
+                    "// Usa o setFullScreen do próprio GDevelop; a marca interna dele é acertada pelo estado real, para voltar à tela",
+                    "// cheia no próximo toque se o navegador sair dela (voltar, deslizar). Liga/desliga em toque.tela_cheia.",
+                    "// No iPhone o Safari não tem tela cheia para páginas: lá não acontece nada (Adicionar à Tela de Início).",
+                    "const S = gdjs._toqueTelaCheia || (gdjs._toqueTelaCheia = {});",
+                    "S.jogo = runtimeScene.getGame();",
+                    "if (!S.instalado) {",
+                    "  S.instalado = true;",
+                    "  const cheia = () => !!(document.fullscreenElement || document.webkitFullscreenElement);",
+                    "  const ligado = () => {",
+                    "    try {",
+                    "      const t = S.jogo.getVariables().get(\"toque\");",
+                    "      return t.getChild(\"ativo\").getAsBoolean() && t.getChild(\"tela_cheia\").getAsBoolean();",
+                    "    } catch (e) { return false; }",
+                    "  };",
+                    "  const pode = () => { const el = document.documentElement; return !!(el.requestFullscreen || el.webkitRequestFullScreen); };",
+                    "  const trava = () => {",
+                    "    try { if (cheia() && screen.orientation && screen.orientation.lock) screen.orientation.lock(\"landscape\").catch(() => {}); } catch (e) {}",
+                    "  };",
+                    "  const pede = () => {",
+                    "    if (!ligado() || cheia() || !pode()) return;",
+                    "    try {",
+                    "      const r = S.jogo.getRenderer();",
+                    "      r._isFullscreen = false;",
+                    "      r.setFullScreen(true);",
+                    "    } catch (e) {}",
+                    "  };",
+                    "  const mudou = () => { try { S.jogo.getRenderer()._isFullscreen = cheia(); } catch (e) {} trava(); };",
+                    "  document.addEventListener(\"touchend\", pede, true);",
+                    "  document.addEventListener(\"fullscreenchange\", mudou);",
+                    "  document.addEventListener(\"webkitfullscreenchange\", mudou);",
+                    "  // pedido recusado: a marca do GDevelop volta a dizer a verdade",
+                    "  document.addEventListener(\"fullscreenerror\", mudou);",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             },
@@ -108009,26 +109778,6 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_bx",
-                        "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mov_by",
-                        "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
                         "toque.mov_dx",
                         "=",
                         "0"
@@ -108078,26 +109827,6 @@
                         "toque.mira_id",
                         "=",
                         "-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mira_bx",
-                        "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "toque.mira_by",
-                        "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)"
                       ]
                     },
                     {
@@ -108288,7 +110017,7 @@
                       "parameters": [
                         "toque.mov_bx",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_x * CameraWidth(\"HUD\", 0)"
+                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mov_esq"
                       ]
                     },
                     {
@@ -108298,7 +110027,27 @@
                       "parameters": [
                         "toque.mov_by",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mov_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mov_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mov_dx",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
@@ -108325,7 +110074,7 @@
                       "parameters": [
                         "toque.mira_bx",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.mira_x * CameraWidth(\"HUD\", 0)"
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.mira_dir"
                       ]
                     },
                     {
@@ -108335,7 +110084,27 @@
                       "parameters": [
                         "toque.mira_by",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.mira_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.mira_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_dx",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_dy",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
@@ -108404,6 +110173,26 @@
                             "True",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"\""
+                          ]
                         }
                       ]
                     },
@@ -108412,22 +110201,160 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo) / toque.pulo_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo) / toque.pulo_toque"
                           ]
                         },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"pulo\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"dash\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"recarga\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque",
+                            "<",
+                            "toque.melhor"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.melhor",
+                            "=",
+                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir, (CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo) / toque.botao_toque"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"usar\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "toque.qual",
+                            "=",
+                            "\"pulo\""
                           ]
                         }
                       ],
@@ -108459,22 +110386,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"dash\""
                           ]
                         }
                       ],
@@ -108506,22 +110423,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"recarga\""
                           ]
                         }
                       ],
@@ -108553,22 +110460,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanVariable"
+                            "value": "StringVariable"
                           },
                           "parameters": [
-                            "toque.livre",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DistanceBetweenPositions(toque.tx, toque.ty, (CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0), (CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0))",
-                            "<=",
-                            "toque.botao_raio * toque.folga"
+                            "toque.qual",
+                            "=",
+                            "\"usar\""
                           ]
                         }
                       ],
@@ -108615,7 +110512,7 @@
                           "parameters": [
                             "toque.tx",
                             "<",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) / 2"
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) * toque.mov_zona"
                           ]
                         },
                         {
@@ -108692,7 +110589,7 @@
                           "parameters": [
                             "toque.tx",
                             ">=",
-                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) / 2"
+                            "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + CameraWidth(\"HUD\", 0) * toque.mov_zona"
                           ]
                         },
                         {
@@ -108735,6 +110632,16 @@
                             "toque.mira_by",
                             "=",
                             "toque.ty"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_parado",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -108788,9 +110695,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_dx",
+                        "toque.vx",
                         "=",
-                        "(TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (min(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), toque.mov_raio) / max(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), 0.001) / toque.mov_raio)"
+                        "TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx"
                       ]
                     },
                     {
@@ -108798,9 +110705,94 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mov_dy",
+                        "toque.vy",
                         "=",
-                        "(TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (min(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), toque.mov_raio) / max(sqrt((TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) * (TouchX(toque.mov_id, \"HUD\", 0) - toque.mov_bx) + (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by) * (TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by)), 0.001) / toque.mov_raio)"
+                        "TouchY(toque.mov_id, \"HUD\", 0) - toque.mov_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.vd",
+                        "=",
+                        "max(sqrt(toque.vx * toque.vx + toque.vy * toque.vy), 0.001)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.segue",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "toque.vd",
+                            ">",
+                            "toque.mov_raio"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_bx",
+                            "+",
+                            "toque.vx * (1 - toque.mov_raio / toque.vd)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_by",
+                            "+",
+                            "toque.vy * (1 - toque.mov_raio / toque.vd)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_dx",
+                            "=",
+                            "toque.vx * min(toque.vd, toque.mov_raio) / toque.vd / toque.mov_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mov_dy",
+                            "=",
+                            "toque.vy * min(toque.vd, toque.mov_raio) / toque.vd / toque.mov_raio"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -108825,9 +110817,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mira_dx",
+                        "toque.vx",
                         "=",
-                        "(TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (min(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), toque.mira_raio) / max(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), 0.001) / toque.mira_raio)"
+                        "TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx"
                       ]
                     },
                     {
@@ -108835,9 +110827,94 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "toque.mira_dy",
+                        "toque.vy",
                         "=",
-                        "(TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (min(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), toque.mira_raio) / max(sqrt((TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) * (TouchX(toque.mira_id, \"HUD\", 0) - toque.mira_bx) + (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by) * (TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by)), 0.001) / toque.mira_raio)"
+                        "TouchY(toque.mira_id, \"HUD\", 0) - toque.mira_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.vd",
+                        "=",
+                        "max(sqrt(toque.vx * toque.vx + toque.vy * toque.vy), 0.001)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.segue",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "toque.vd",
+                            ">",
+                            "toque.mira_raio"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_bx",
+                            "+",
+                            "toque.vx * (1 - toque.mira_raio / toque.vd)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_by",
+                            "+",
+                            "toque.vy * (1 - toque.mira_raio / toque.vd)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_dx",
+                            "=",
+                            "toque.vx * min(toque.vd, toque.mira_raio) / toque.vd / toque.mira_raio"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_dy",
+                            "=",
+                            "toque.vy * min(toque.vd, toque.mira_raio) / toque.vd / toque.mira_raio"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -109016,16 +111093,6 @@
                         "True",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "toque.pulo",
-                        "True",
-                        ""
-                      ]
                     }
                   ]
                 },
@@ -109050,6 +111117,134 @@
                       },
                       "parameters": [
                         "toque.baixo",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_no_analogico",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        "<",
+                        "-toque.pulo_limiar"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_dy",
+                        ">",
+                        "-toque.pulo_solta"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_no_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo_analogico",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.pulo",
                         "True",
                         ""
                       ]
@@ -109486,6 +111681,16 @@
                         "=",
                         "atan2(toque.mira_dy, toque.mira_dx)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "=",
+                        "0"
+                      ]
                     }
                   ]
                 },
@@ -109531,6 +111736,281 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sqrt(toque.mira_dx * toque.mira_dx + toque.mira_dy * toque.mira_dy)",
+                        "<=",
+                        "toque.zona_morta"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "+",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sqrt(toque.mira_dx * toque.mira_dx + toque.mira_dy * toque.mira_dy)",
+                        "<=",
+                        "toque.zona_morta"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_parado",
+                        ">=",
+                        "toque.mira_auto_espera"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.tiro",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_auto",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PickNearest"
+                          },
+                          "parameters": [
+                            "Inimigo",
+                            "pato.CenterX()",
+                            "pato.Y() + pato.Height() * 0.68",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DistanceBetweenPositions(Inimigo.CenterX(), Inimigo.CenterY(), pato.CenterX(), pato.Y() + pato.Height() * 0.68)",
+                            "<=",
+                            "toque.mira_auto_alcance"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "toque.mira_ang",
+                            "=",
+                            "atan2(Inimigo.CenterY() - (pato.Y() + pato.Height() * 0.68), Inimigo.CenterX() - pato.CenterX())"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_segue_andar",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.esquerda",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "cos(toque.mira_ang)",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_ang",
+                        "=",
+                        "atan2(sin(toque.mira_ang), -cos(toque.mira_ang))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_segue_andar",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "toque.direita",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "cos(toque.mira_ang)",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "toque.mira_ang",
+                        "=",
+                        "atan2(sin(toque.mira_ang), -cos(toque.mira_ang))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
@@ -109552,6 +112032,28 @@
                         "toque.mov_bx",
                         "=",
                         "toque.mov_by"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Resizable",
+                        "toque.mov_raio * 2",
+                        "toque.mov_raio * 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
                       ]
                     }
                   ]
@@ -109583,6 +112085,106 @@
                         "=",
                         "toque.mov_by + toque.mov_dy * toque.mov_raio"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Resizable",
+                        "toque.mov_raio",
+                        "toque.mov_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "papel",
+                        "=",
+                        "\"mov\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mov_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "papel",
+                        "=",
+                        "\"mov\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
                     }
                   ]
                 },
@@ -109613,6 +112215,28 @@
                         "=",
                         "toque.mira_by"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Resizable",
+                        "toque.mira_raio * 2",
+                        "toque.mira_raio * 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
                     }
                   ]
                 },
@@ -109642,6 +112266,106 @@
                         "toque.mira_bx + toque.mira_dx * toque.mira_raio",
                         "=",
                         "toque.mira_by + toque.mira_dy * toque.mira_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Resizable",
+                        "toque.mira_raio",
+                        "toque.mira_raio"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_repouso"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "papel",
+                        "=",
+                        "\"mira\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_base",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "toque.mira_id",
+                        "!=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "papel",
+                        "=",
+                        "\"mira\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "toque_alavanca",
+                        "Opacity",
+                        "=",
+                        "toque.opacidade_ativa"
                       ]
                     }
                   ]
@@ -109686,9 +112410,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.pulo_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.pulo_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.pulo_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.pulo_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.pulo_raio * 2",
+                        "toque.pulo_raio * 2"
                       ]
                     }
                   ]
@@ -109755,9 +112490,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.dash_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.dash_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.dash_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.dash_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
@@ -109824,9 +112570,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.recarga_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.recarga_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.recarga_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.recarga_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
@@ -109893,9 +112650,20 @@
                       "parameters": [
                         "toque_botao",
                         "=",
-                        "(CameraX(\"HUD\", 0) - CameraWidth(\"HUD\", 0) / 2) + toque.usar_x * CameraWidth(\"HUD\", 0)",
+                        "(CameraX(\"HUD\", 0) + CameraWidth(\"HUD\", 0) / 2) - toque.usar_dir",
                         "=",
-                        "(CameraY(\"HUD\", 0) - CameraHeight(\"HUD\", 0) / 2) + toque.usar_y * CameraHeight(\"HUD\", 0)"
+                        "(CameraY(\"HUD\", 0) + CameraHeight(\"HUD\", 0) / 2) - toque.usar_baixo"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "toque_botao",
+                        "Resizable",
+                        "toque.botao_raio * 2",
+                        "toque.botao_raio * 2"
                       ]
                     }
                   ]
@@ -110827,6 +113595,75 @@
                         },
                         {
                           "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "m4",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "mp5",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "sniper",
+                            "pato.X()",
+                            "pato.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "m4",
+                            "Scale",
+                            "=",
+                            "m4.escala"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "mp5",
+                            "Scale",
+                            "=",
+                            "mp5.escala"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "sniper",
+                            "Scale",
+                            "=",
+                            "sniper.escala"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Hide"
                           },
                           "parameters": [
@@ -110978,6 +113815,117 @@
                               },
                               "parameters": [
                                 "lanca",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"m4\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "m4",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "m4",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"mp5\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "mp5",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "arma_atual",
+                                "=",
+                                "\"sniper\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sniper",
+                                "equipada",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Show"
+                              },
+                              "parameters": [
+                                "sniper",
                                 ""
                               ]
                             }
@@ -115049,6 +117997,129 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "m4",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_minigun.wav",
+                                "1",
+                                "80",
+                                "m4.som_vol",
+                                "m4.som_tom"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.96, 1.04)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_pistola.wav",
+                                "1",
+                                "80",
+                                "mp5.som_vol",
+                                "mp5.som_tom"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.96, 1.04)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::HasJustFired"
+                              },
+                              "parameters": [
+                                "sniper",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_doze.wav",
+                                "1",
+                                "80",
+                                "sniper.som_vol",
+                                "sniper.som_tom"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "*",
+                                "RandomFloatInRange(.96, 1.04)"
+                              ]
+                            }
+                          ]
                         }
                       ],
                       "parameters": []
@@ -115424,6 +118495,282 @@
                               },
                               "parameters": [
                                 "lanca",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "m4",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "m4",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "m4",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_minigun.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(m4.recarga_base / max(0.01, m4.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress",
+                                "inverted": true
+                              },
+                              "parameters": [
+                                "m4",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "m4",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_pistola.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(mp5.recarga_base / max(0.01, mp5.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress",
+                                "inverted": true
+                              },
+                              "parameters": [
+                                "mp5",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "mp5",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
+                              },
+                              "parameters": [
+                                "sniper",
+                                "FireBullet",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sniper",
+                                "som_recarga",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sniper",
+                                "som_recarga",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundOnChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "som_recarga_doze.wav",
+                                "6",
+                                "",
+                                "80",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetSoundChannelPitch"
+                              },
+                              "parameters": [
+                                "",
+                                "6",
+                                "=",
+                                "clamp(sniper.recarga_base / max(0.01, sniper.FireBullet::ReloadDuration()), 1, 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::IsReloadInProgress",
+                                "inverted": true
+                              },
+                              "parameters": [
+                                "sniper",
+                                "FireBullet",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "sniper",
                                 "som_recarga",
                                 "False",
                                 ""
@@ -125776,6 +129123,126 @@
                             "Text",
                             "=",
                             "\"LANCA-GRANADAS\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "m4",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "hud_arma_icone",
+                            "Animation",
+                            "=",
+                            "\"m4\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "hud_arma_nome",
+                            "Text",
+                            "=",
+                            "\"M4\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "mp5",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "hud_arma_icone",
+                            "Animation",
+                            "=",
+                            "\"mp5\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "hud_arma_nome",
+                            "Text",
+                            "=",
+                            "\"MP5\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "sniper",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "hud_arma_icone",
+                            "Animation",
+                            "=",
+                            "\"sniper\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "hud_arma_nome",
+                            "Text",
+                            "=",
+                            "\"SNIPER\""
                           ]
                         }
                       ]
@@ -175703,6 +179170,150 @@
                             "arma_atual",
                             "=",
                             "\"lanca\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"m4\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "m4",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "m4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"m4\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"mp5\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "mp5",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "mp5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"mp5\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "expositor_arma",
+                            "arma",
+                            "=",
+                            "\"sniper\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "sniper",
+                            "equipada",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Show"
+                          },
+                          "parameters": [
+                            "sniper",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "arma_atual",
+                            "=",
+                            "\"sniper\""
                           ]
                         }
                       ]

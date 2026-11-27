@@ -2,8 +2,9 @@
   "name": "exporta-jogo",
   "private": true,
   "type": "module",
-  "description": "Exporta o jogo (jogo.json) para HTML5 com o núcleo do GDevelop, para publicar no GitHub Pages.",
+  "description": "Exporta o jogo (jogo.json) para HTML5 com o núcleo do GDevelop e publica na Cloudflare (ci/wrangler.jsonc).",
   "dependencies": {
-    "gdcore-tools": "2.0.0-gd-v5.6.287-autobuild"
+    "gdcore-tools": "2.0.0-gd-v5.6.287-autobuild",
+    "wrangler": "4.168.0"
   }
 }

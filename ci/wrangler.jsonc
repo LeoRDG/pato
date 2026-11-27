@@ -1,0 +1,16 @@
+// O jogo exportado (pasta _site, feita por ci/exporta.mjs) publicado como Worker só de arquivos estáticos na Cloudflare,
+// na mesma conta do placar (worker pato-placar em placar.leorods.org). Pedidos a arquivos estáticos não contam no limite
+// de requisições do plano grátis.
+// Publicar à mão, da raiz do repositório: node ci/exporta.mjs jogo.json _site && npx wrangler deploy --config ci/wrangler.jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pato",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "../_site",
+    "not_found_handling": "none"
+  },
+  // o deploy cria sozinho o registro DNS (tipo Worker) e o certificado; antes, apague o CNAME antigo do GitHub Pages
+  "routes": [{ "pattern": "pato.leorods.org", "custom_domain": true }],
+  "workers_dev": true
+}
