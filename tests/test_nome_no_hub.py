@@ -39,3 +39,18 @@ class NomeNoHub(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+def test_nome_no_celular():
+    """t221: no celular a dica é para tocar e abre o teclado do aparelho (campo de texto invisível)."""
+    import json as _json
+    jogo = _json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'jogo.json'),
+                           encoding='utf-8'))
+    hubs = next(x for x in jogo['externalEvents'] if x['name'] == 'Hubs')
+    g = next(e for e in hubs['events'] if e.get('name') == 'Nome do jogador')
+    codigo = '\n'.join(next(e for e in g['events'] if e['type'].endswith('JsCode'))['inlineCode'])
+    for trecho in ('"touchend"', 'createElement("input")', 'c.focus()', 'TOQUE AQUI PARA ESCOLHER SEU NOME',
+                   'N.dicaRet', 'N.painelRet', '"y_celular"', 'tam_dica_celular', 'ev.target === N.campo'):
+        assert trecho in codigo, trecho
+    t = {c['name'] for v in jogo['variables'] if v['name'] == 'nome_tela' for c in v['children']}
+    assert {'toque_folga', 'y_celular', 'tam_dica_celular'} <= t
