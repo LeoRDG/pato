@@ -542,12 +542,31 @@ def master(x, rms_alvo_db, pico_db=-2.0):
     g = np.minimum(1, (e / (e.mean() * 1.6)) ** -0.35)
     y = y * g[:, None]
     y *= 10 ** (rms_alvo_db / 20) / np.sqrt(np.mean(y ** 2))
-    teto = 10 ** (pico_db / 20)
-    lim = 0.75 * teto
-    a = np.abs(y)
-    acima = a > lim
-    y[acima] = np.sign(y[acima]) * (lim + (teto - lim) * np.tanh((a[acima] - lim) / (teto - lim)))
-    return y
+    return limita(y, 10 ** (pico_db / 20))
+
+
+def limita(y, teto, bloco=0.004, solta=0.12):
+    """limitador de verdade (ganho, não forma de onda): o ganho desce um pouco antes de cada pico (olha um bloco à
+    frente) e volta devagar (solta, em s), em volta circular para o loop continuar contínuo. Antes era um tanh amostra
+    por amostra acima de 75% do teto, que é distorção (soava como áudio estourando nos picos das faixas de fase)."""
+    n = len(y)
+    B = max(1, int(bloco * SR))
+    nb = -(-n // B)
+    a = np.abs(np.concatenate([y, y[:nb * B - n]])).max(1).reshape(nb, B).max(1)   # pico de cada bloco
+    pede = np.minimum(1.0, teto / np.maximum(a, 1e-9))
+    # o ganho no centro de um bloco atende ele e os vizinhos: interpolando entre centros nunca passa do teto
+    v = np.minimum(pede, np.minimum(np.roll(pede, 1), np.roll(pede, -1)))
+    # soltura exponencial (sobe devagar), duas voltas para o começo já valer o fim do loop
+    k = np.exp(-B / SR / solta)
+    g = v.copy()
+    ant = 1.0
+    for _ in range(2):
+        for i in range(nb):
+            ant = min(v[i], 1 - (1 - ant) * k)
+            g[i] = ant
+    centros = np.arange(nb) * B + B / 2
+    ganho = np.interp(np.arange(n), centros, g, period=nb * B)
+    return y * ganho[:, None]
 
 
 # ---------------------------------------------------------------- helpers de composição
@@ -632,12 +651,16 @@ def _hub(nome, seed, prog, mel, cfg):
 
 
 def _crepita(n):
-    """fogueira: estalos esparsos e um ronco grave"""
+    """fogueira: um ronco grave e estalos macios. Antes eram 18 impulsos de uma amostra por segundo, filtrados em
+    1.5-7 kHz e multiplicados por 6: soavam como áudio estourando. Agora são poucos "tocs" arredondados (ataque e
+    queda de milissegundos), sem o agudo cortante."""
     y = lp(ruido(n), 180) * 0.6
-    k = rng.random(n) < 18 / SR
+    k = rng.random(n) < 5 / SR
     estalo = np.zeros(n)
     estalo[k] = rng.uniform(0.3, 1.0, k.sum()) * rng.choice([-1, 1], k.sum())
-    y += bp(estalo, 1500, 7000) * 6
+    t = tv(int(0.03 * SR))
+    toc = (1 - np.exp(-t / 0.0015)) * np.exp(-t / 0.006)
+    y += lp(convolve(estalo, toc)[:n], 2200) * 0.8
     return y
 
 
