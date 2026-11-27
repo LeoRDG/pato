@@ -77897,8 +77897,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 128.0,
-                    "y": 128.0
+                    "x": 128,
+                    "y": 128
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -82604,15 +82604,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "57e75fb3-f05a-5cc1-a3e9-f1f9562bb14e",
           "type": "number",
-          "value": 0.11,
-          "persistentUuid": "57e75fb3-f05a-5cc1-a3e9-f1f9562bb14e"
+          "value": 0.11
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "07433740-1e8f-5df6-973c-648f0cfbdb95",
           "type": "number",
-          "value": 1.6,
-          "persistentUuid": "07433740-1e8f-5df6-973c-648f0cfbdb95"
+          "value": 1.6
         },
         {
           "name": "dano",
@@ -82871,15 +82871,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "74645373-8b7e-572e-820d-e475b115edb8",
           "type": "number",
-          "value": 0.065,
-          "persistentUuid": "74645373-8b7e-572e-820d-e475b115edb8"
+          "value": 0.065
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "26898e1a-9791-5e0b-892b-dea447084d1c",
           "type": "number",
-          "value": 1.2,
-          "persistentUuid": "26898e1a-9791-5e0b-892b-dea447084d1c"
+          "value": 1.2
         },
         {
           "name": "dano",
@@ -83138,15 +83138,15 @@
         },
         {
           "name": "cooldown_base",
+          "persistentUuid": "24cc3cd5-dddf-5927-831f-12b2d160f150",
           "type": "number",
-          "value": 1.1,
-          "persistentUuid": "24cc3cd5-dddf-5927-831f-12b2d160f150"
+          "value": 1.1
         },
         {
           "name": "recarga_base",
+          "persistentUuid": "8ff77f5a-ca39-56d9-b832-39c9a4a0f305",
           "type": "number",
-          "value": 2.6,
-          "persistentUuid": "8ff77f5a-ca39-56d9-b832-39c9a4a0f305"
+          "value": 2.6
         },
         {
           "name": "dano",
@@ -85788,28 +85788,28 @@
           "value": "LANCA-GRANADAS"
         },
         {
-          "name": "minigun",
-          "persistentUuid": "a4833792-4520-5c4e-b1dc-65e33a3837a3",
-          "type": "string",
-          "value": "MINIGUN"
-        },
-        {
-          "name": "pistola",
-          "persistentUuid": "65ccdf63-9212-5bfe-9a45-a3e2a3bcc464",
-          "type": "string",
-          "value": "PISTOLA"
-        },
-        {
           "name": "m4",
           "persistentUuid": "97e60c69-2ea8-5930-896c-186d03c4fbf2",
           "type": "string",
           "value": "M4"
         },
         {
+          "name": "minigun",
+          "persistentUuid": "a4833792-4520-5c4e-b1dc-65e33a3837a3",
+          "type": "string",
+          "value": "MINIGUN"
+        },
+        {
           "name": "mp5",
           "persistentUuid": "f08e9f62-1ada-54f1-9422-c2970a001c2a",
           "type": "string",
           "value": "MP5"
+        },
+        {
+          "name": "pistola",
+          "persistentUuid": "65ccdf63-9212-5bfe-9a45-a3e2a3bcc464",
+          "type": "string",
+          "value": "PISTOLA"
         },
         {
           "name": "sniper",
@@ -86994,6 +86994,12 @@
           ]
         },
         {
+          "name": "loja",
+          "persistentUuid": "ff9d9a54-6a6d-53e6-9c15-aa2aae7f1596",
+          "type": "structure",
+          "children": []
+        },
+        {
           "name": "lpato",
           "persistentUuid": "7c04a63b-082b-5ce5-861c-2151c354f8fa",
           "type": "structure",
@@ -87458,12 +87464,6 @@
               ]
             }
           ]
-        },
-        {
-          "name": "loja",
-          "persistentUuid": "ff9d9a54-6a6d-53e6-9c15-aa2aae7f1596",
-          "type": "structure",
-          "children": []
         }
       ]
     },
@@ -88719,6 +88719,12 @@
           "value": 22
         },
         {
+          "name": "tam_dica_celular",
+          "persistentUuid": "754fae36-b489-5e50-ac93-1544152c7f71",
+          "type": "number",
+          "value": 40
+        },
+        {
           "name": "tam_nome",
           "persistentUuid": "abc1930e-9668-5a4c-a8a2-eb2844594d05",
           "type": "number",
@@ -88747,12 +88753,6 @@
           "persistentUuid": "0f43215f-14b7-59d1-8bfe-70f7e8cee7f2",
           "type": "number",
           "value": 0.04
-        },
-        {
-          "name": "tam_dica_celular",
-          "persistentUuid": "754fae36-b489-5e50-ac93-1544152c7f71",
-          "type": "number",
-          "value": 40
         }
       ]
     },
@@ -88896,212 +88896,8 @@
       "type": "structure",
       "children": [
         {
-          "name": "forcar",
-          "persistentUuid": "d91b3142-a110-5d76-b4d9-8087777d1451",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "ativo",
           "persistentUuid": "0b7e4128-8082-5685-8e23-7d6b513cc95b",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "cor",
-          "persistentUuid": "39ec6a43-62cf-518b-aeb0-ae005687e2e5",
-          "type": "string",
-          "value": "255;255;255"
-        },
-        {
-          "name": "opacidade",
-          "persistentUuid": "4326e1c0-4059-5354-855f-23ce6b50f37a",
-          "type": "number",
-          "value": 150
-        },
-        {
-          "name": "opacidade_ativa",
-          "persistentUuid": "8f59bd05-2db8-59a3-9f84-2be6bfa5e4f2",
-          "type": "number",
-          "value": 235
-        },
-        {
-          "name": "mov_raio",
-          "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
-          "type": "number",
-          "value": 130
-        },
-        {
-          "name": "zona_morta",
-          "persistentUuid": "e3c1da43-b687-5233-b377-ac926fe7c435",
-          "type": "number",
-          "value": 0.3
-        },
-        {
-          "name": "pulo_limiar",
-          "persistentUuid": "0e1e48fc-7289-52fa-baeb-992b351cfefa",
-          "type": "number",
-          "value": 0.6
-        },
-        {
-          "name": "baixo_limiar",
-          "persistentUuid": "11e88c7a-458e-588e-9756-db55b005cffc",
-          "type": "number",
-          "value": 0.6
-        },
-        {
-          "name": "mira_raio",
-          "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
-          "type": "number",
-          "value": 130
-        },
-        {
-          "name": "tiro_limiar",
-          "persistentUuid": "73fbfb8b-6192-5963-a9e3-70a5c7962dd6",
-          "type": "number",
-          "value": 0.35
-        },
-        {
-          "name": "mira_dist",
-          "persistentUuid": "6f61d723-06e3-5c67-9580-07a1494b5e2b",
-          "type": "number",
-          "value": 320
-        },
-        {
-          "name": "botao_raio",
-          "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
-          "type": "number",
-          "value": 72
-        },
-        {
-          "name": "mov_id",
-          "persistentUuid": "57e7e698-a639-5faa-8b20-b150ad230e33",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "mira_id",
-          "persistentUuid": "e86f2d7f-0f82-55ce-9ddd-9e6d8468ed30",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "pulo_id",
-          "persistentUuid": "f78f1058-cf23-5552-8413-139d39a99abc",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "dash_id",
-          "persistentUuid": "97d2be5e-178b-57ec-9330-c9b38fc984ab",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "usar_id",
-          "persistentUuid": "8ee744cf-2512-5206-a6ba-df366fe07de8",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "mov_bx",
-          "persistentUuid": "d19dbedc-c79a-5c42-91c5-8893eb4efaee",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_by",
-          "persistentUuid": "4c64c268-7175-5b4f-9318-692334b610b8",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_bx",
-          "persistentUuid": "2f68c80d-8a56-5c6e-95c0-bdb21a3628e3",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_by",
-          "persistentUuid": "434713aa-7c9c-519d-9cb4-507f345c2c6f",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_dx",
-          "persistentUuid": "f43826e3-1d84-5add-84b2-d108ccae46fb",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mov_dy",
-          "persistentUuid": "eb612e51-6637-5ae1-a76f-e1bde1aae839",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_dx",
-          "persistentUuid": "e3d5c1ec-4f98-5ff9-9330-d2a49f9dd192",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_dy",
-          "persistentUuid": "f00ac33d-b2ce-5061-ac35-c31ae2665800",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "mira_ang",
-          "persistentUuid": "2cfdd3d3-4fd8-57c5-a37d-ef603bb7b47d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "i",
-          "persistentUuid": "5f3a2010-ff23-586e-af10-b6a31f6f6b6d",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "id",
-          "persistentUuid": "c48376cf-b208-5cab-b2ae-261ebac5ba19",
-          "type": "number",
-          "value": -1
-        },
-        {
-          "name": "tx",
-          "persistentUuid": "c87cadba-0568-52ce-94e6-3b4c8564b162",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "ty",
-          "persistentUuid": "1e143b01-4cad-5a1e-a440-f1125a15f0ef",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "livre",
-          "persistentUuid": "4798d645-a544-506f-89cd-5b632477395d",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "esquerda",
-          "persistentUuid": "0bd56e2b-8991-579d-81ad-5c073ac9fde1",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "direita",
-          "persistentUuid": "356d5c2e-794c-5ba6-913c-c6b622821832",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "cima",
-          "persistentUuid": "1e0cbf14-1bf5-5bb8-8590-82e5dee361eb",
           "type": "boolean",
           "value": false
         },
@@ -89112,22 +88908,34 @@
           "value": false
         },
         {
-          "name": "pulo",
-          "persistentUuid": "9c4f42c7-7cb3-54cb-9a9d-806135506e56",
+          "name": "baixo_limiar",
+          "persistentUuid": "11e88c7a-458e-588e-9756-db55b005cffc",
+          "type": "number",
+          "value": 0.6
+        },
+        {
+          "name": "botao_raio",
+          "persistentUuid": "377e53f5-cfeb-5bda-b31b-a46eb20afec1",
+          "type": "number",
+          "value": 72
+        },
+        {
+          "name": "botao_toque",
+          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "cima",
+          "persistentUuid": "1e0cbf14-1bf5-5bb8-8590-82e5dee361eb",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "pulo_agora",
-          "persistentUuid": "6a03ed1e-06e7-5855-b81b-30f4d79e6e31",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "pulo_antes",
-          "persistentUuid": "fee7a2f0-61f9-5814-8463-cf27ff097e4e",
-          "type": "boolean",
-          "value": false
+          "name": "cor",
+          "persistentUuid": "39ec6a43-62cf-518b-aeb0-ae005687e2e5",
+          "type": "string",
+          "value": "255;255;255"
         },
         {
           "name": "dash",
@@ -89148,82 +88956,70 @@
           "value": false
         },
         {
-          "name": "recarga",
-          "persistentUuid": "c20aa4dd-a540-5fa4-aa1c-4acf734cab1f",
+          "name": "dash_baixo",
+          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "dash_dir",
+          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
+          "type": "number",
+          "value": 480
+        },
+        {
+          "name": "dash_id",
+          "persistentUuid": "97d2be5e-178b-57ec-9330-c9b38fc984ab",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "direita",
+          "persistentUuid": "356d5c2e-794c-5ba6-913c-c6b622821832",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar",
-          "persistentUuid": "c07c6e4a-5629-50b4-ac3b-b242233401ea",
+          "name": "esquerda",
+          "persistentUuid": "0bd56e2b-8991-579d-81ad-5c073ac9fde1",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar_agora",
-          "persistentUuid": "30e5dc5b-5e84-511d-877e-b332fa2a89ea",
+          "name": "forcar",
+          "persistentUuid": "d91b3142-a110-5d76-b4d9-8087777d1451",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "usar_antes",
-          "persistentUuid": "fd4e8f66-527e-5770-8029-d1628cca498e",
+          "name": "i",
+          "persistentUuid": "5f3a2010-ff23-586e-af10-b6a31f6f6b6d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "id",
+          "persistentUuid": "c48376cf-b208-5cab-b2ae-261ebac5ba19",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "livre",
+          "persistentUuid": "4798d645-a544-506f-89cd-5b632477395d",
           "type": "boolean",
           "value": false
         },
         {
-          "name": "tiro",
-          "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "tela_cheia",
-          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "opacidade_repouso",
-          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "name": "melhor",
+          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
           "type": "number",
-          "value": 25
+          "value": 1
         },
         {
-          "name": "mov_esq",
-          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "name": "mira_ang",
+          "persistentUuid": "2cfdd3d3-4fd8-57c5-a37d-ef603bb7b47d",
           "type": "number",
-          "value": 300
-        },
-        {
-          "name": "mov_baixo",
-          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
-          "type": "number",
-          "value": 290
-        },
-        {
-          "name": "mov_zona",
-          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
-          "type": "number",
-          "value": 0.5
-        },
-        {
-          "name": "segue",
-          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "mira_dir",
-          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
-          "type": "number",
-          "value": 760
-        },
-        {
-          "name": "mira_baixo",
-          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
-          "type": "number",
-          "value": 420
+          "value": 0
         },
         {
           "name": "mira_auto",
@@ -89244,10 +89040,172 @@
           "value": 0.12
         },
         {
+          "name": "mira_baixo",
+          "persistentUuid": "0f22cd7c-dfce-567a-983f-2c426466d9fc",
+          "type": "number",
+          "value": 420
+        },
+        {
+          "name": "mira_bx",
+          "persistentUuid": "2f68c80d-8a56-5c6e-95c0-bdb21a3628e3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_by",
+          "persistentUuid": "434713aa-7c9c-519d-9cb4-507f345c2c6f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_dir",
+          "persistentUuid": "03bc404c-771c-5f12-a265-ec9cd2e41252",
+          "type": "number",
+          "value": 760
+        },
+        {
+          "name": "mira_dist",
+          "persistentUuid": "6f61d723-06e3-5c67-9580-07a1494b5e2b",
+          "type": "number",
+          "value": 320
+        },
+        {
+          "name": "mira_dx",
+          "persistentUuid": "e3d5c1ec-4f98-5ff9-9330-d2a49f9dd192",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_dy",
+          "persistentUuid": "f00ac33d-b2ce-5061-ac35-c31ae2665800",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_id",
+          "persistentUuid": "e86f2d7f-0f82-55ce-9ddd-9e6d8468ed30",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "mira_parado",
+          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mira_raio",
+          "persistentUuid": "bc415750-1177-5093-945f-7d60290ec884",
+          "type": "number",
+          "value": 130
+        },
+        {
           "name": "mira_segue_andar",
           "persistentUuid": "09319f84-3b56-54b8-9172-4cfd2fbbc02e",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "mov_baixo",
+          "persistentUuid": "1fd6201d-98f7-555a-813d-29bbb62fde08",
+          "type": "number",
+          "value": 290
+        },
+        {
+          "name": "mov_bx",
+          "persistentUuid": "d19dbedc-c79a-5c42-91c5-8893eb4efaee",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_by",
+          "persistentUuid": "4c64c268-7175-5b4f-9318-692334b610b8",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_dx",
+          "persistentUuid": "f43826e3-1d84-5add-84b2-d108ccae46fb",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_dy",
+          "persistentUuid": "eb612e51-6637-5ae1-a76f-e1bde1aae839",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mov_esq",
+          "persistentUuid": "52c216ee-0499-5258-88a7-a0b89d793fea",
+          "type": "number",
+          "value": 300
+        },
+        {
+          "name": "mov_id",
+          "persistentUuid": "57e7e698-a639-5faa-8b20-b150ad230e33",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "mov_raio",
+          "persistentUuid": "19b5a145-9730-51d7-9347-cc874f5882c8",
+          "type": "number",
+          "value": 130
+        },
+        {
+          "name": "mov_zona",
+          "persistentUuid": "b91bdf31-c39a-5a2b-b733-5120027c2857",
+          "type": "number",
+          "value": 0.5
+        },
+        {
+          "name": "opacidade",
+          "persistentUuid": "4326e1c0-4059-5354-855f-23ce6b50f37a",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "name": "opacidade_analogico",
+          "persistentUuid": "bbef010c-d758-5289-b0e7-c0a6527a9075",
+          "type": "number",
+          "value": 110
+        },
+        {
+          "name": "opacidade_ativa",
+          "persistentUuid": "8f59bd05-2db8-59a3-9f84-2be6bfa5e4f2",
+          "type": "number",
+          "value": 235
+        },
+        {
+          "name": "opacidade_repouso",
+          "persistentUuid": "6c8ac6a3-5e8c-548b-a52f-eea534954834",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "name": "pulo",
+          "persistentUuid": "9c4f42c7-7cb3-54cb-9a9d-806135506e56",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_agora",
+          "persistentUuid": "6a03ed1e-06e7-5855-b81b-30f4d79e6e31",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_antes",
+          "persistentUuid": "fee7a2f0-61f9-5814-8463-cf27ff097e4e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "pulo_baixo",
+          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "type": "number",
+          "value": 330
         },
         {
           "name": "pulo_dir",
@@ -89256,10 +89214,16 @@
           "value": 230
         },
         {
-          "name": "pulo_baixo",
-          "persistentUuid": "f63b1b69-0caa-5f23-9a0b-0a2af2c16c3b",
+          "name": "pulo_id",
+          "persistentUuid": "f78f1058-cf23-5552-8413-139d39a99abc",
           "type": "number",
-          "value": 330
+          "value": -1
+        },
+        {
+          "name": "pulo_limiar",
+          "persistentUuid": "0e1e48fc-7289-52fa-baeb-992b351cfefa",
+          "type": "number",
+          "value": 0.6
         },
         {
           "name": "pulo_raio",
@@ -89274,22 +89238,70 @@
           "value": 165
         },
         {
-          "name": "dash_dir",
-          "persistentUuid": "e479273d-c2d4-5c69-8348-698a7f5cf29a",
-          "type": "number",
-          "value": 480
+          "name": "qual",
+          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
+          "type": "string",
+          "value": ""
         },
         {
-          "name": "dash_baixo",
-          "persistentUuid": "5247e7b4-1720-55c6-a7c3-df28e09d72d7",
-          "type": "number",
-          "value": 250
+          "name": "recarga",
+          "persistentUuid": "c20aa4dd-a540-5fa4-aa1c-4acf734cab1f",
+          "type": "boolean",
+          "value": false
         },
         {
-          "name": "usar_dir",
-          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
+          "name": "segue",
+          "persistentUuid": "fcd5e55e-aa85-5897-a552-92d38a642a67",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "tela_cheia",
+          "persistentUuid": "2836d4e6-2434-5b1a-95a5-7807c641a6d6",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "tiro",
+          "persistentUuid": "2a80deec-8e55-50ac-b7a4-9d2375e2cd51",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "tiro_limiar",
+          "persistentUuid": "73fbfb8b-6192-5963-a9e3-70a5c7962dd6",
           "type": "number",
-          "value": 200
+          "value": 0.35
+        },
+        {
+          "name": "tx",
+          "persistentUuid": "c87cadba-0568-52ce-94e6-3b4c8564b162",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ty",
+          "persistentUuid": "1e143b01-4cad-5a1e-a440-f1125a15f0ef",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "usar",
+          "persistentUuid": "c07c6e4a-5629-50b4-ac3b-b242233401ea",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "usar_agora",
+          "persistentUuid": "30e5dc5b-5e84-511d-877e-b332fa2a89ea",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "usar_antes",
+          "persistentUuid": "fd4e8f66-527e-5770-8029-d1628cca498e",
+          "type": "boolean",
+          "value": false
         },
         {
           "name": "usar_baixo",
@@ -89298,14 +89310,26 @@
           "value": 590
         },
         {
-          "name": "botao_toque",
-          "persistentUuid": "91b5c4a4-4fa7-5ec9-ac0d-98a0fa443e7b",
+          "name": "usar_dir",
+          "persistentUuid": "f683896d-089a-5292-86c4-23acf98c70aa",
           "type": "number",
-          "value": 120
+          "value": 200
         },
         {
-          "name": "mira_parado",
-          "persistentUuid": "d361a4f8-7d71-5519-a1c5-8c159eba8d7f",
+          "name": "usar_id",
+          "persistentUuid": "8ee744cf-2512-5206-a6ba-df366fe07de8",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "usar_pode",
+          "persistentUuid": "064b81eb-18a2-5177-a480-416772793fa7",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "vd",
+          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
           "type": "number",
           "value": 0
         },
@@ -89322,34 +89346,10 @@
           "value": 0
         },
         {
-          "name": "vd",
-          "persistentUuid": "405a5167-f57d-5e1f-a598-a5559c92082e",
+          "name": "zona_morta",
+          "persistentUuid": "e3c1da43-b687-5233-b377-ac926fe7c435",
           "type": "number",
-          "value": 0
-        },
-        {
-          "name": "melhor",
-          "persistentUuid": "5481e3df-7158-583a-804a-707326df25b0",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "qual",
-          "persistentUuid": "df514a0e-6007-5bf9-b2ed-d7c5bdcaed4d",
-          "type": "string",
-          "value": ""
-        },
-        {
-          "name": "usar_pode",
-          "persistentUuid": "064b81eb-18a2-5177-a480-416772793fa7",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "opacidade_analogico",
-          "persistentUuid": "bbef010c-d758-5289-b0e7-c0a6527a9075",
-          "type": "number",
-          "value": 110
+          "value": 0.3
         }
       ]
     },
@@ -89371,16 +89371,16 @@
       "type": "structure",
       "children": [
         {
+          "name": "bolha_vida_max",
+          "persistentUuid": "20e6f6d5-7bc7-580d-92ff-bb1357efa688",
+          "type": "number",
+          "value": 2
+        },
+        {
           "name": "forcar_celular",
           "persistentUuid": "4ef24d19-3fd2-5e5a-a40b-fb8827dfd505",
           "type": "boolean",
           "value": false
-        },
-        {
-          "name": "resolucao_celular",
-          "persistentUuid": "89c38157-009a-5baf-8557-e78bf91006ea",
-          "type": "number",
-          "value": 0.7
         },
         {
           "name": "fps_max_celular",
@@ -89395,12 +89395,6 @@
           "value": 20
         },
         {
-          "name": "sem_filtros_celular",
-          "persistentUuid": "d0710707-8eb0-55e8-a1f5-b54042a60741",
-          "type": "boolean",
-          "value": true
-        },
-        {
           "name": "fundo_corte",
           "persistentUuid": "01341539-1d67-5392-84fa-dec45195737c",
           "type": "number",
@@ -89413,10 +89407,16 @@
           "value": 400
         },
         {
-          "name": "bolha_vida_max",
-          "persistentUuid": "20e6f6d5-7bc7-580d-92ff-bb1357efa688",
+          "name": "resolucao_celular",
+          "persistentUuid": "89c38157-009a-5baf-8557-e78bf91006ea",
           "type": "number",
-          "value": 2
+          "value": 0.7
+        },
+        {
+          "name": "sem_filtros_celular",
+          "persistentUuid": "d0710707-8eb0-55e8-a1f5-b54042a60741",
+          "type": "boolean",
+          "value": true
         }
       ]
     }
@@ -94909,14 +94909,14 @@
               "effectType": "Adjustment",
               "name": "Menos vibrante",
               "doubleParameters": {
-                "gamma": 1,
-                "saturation": 0.75,
-                "contrast": 1,
-                "brightness": 1,
-                "red": 1,
-                "green": 1,
+                "alpha": 1,
                 "blue": 1,
-                "alpha": 1
+                "brightness": 1,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 0.75
               },
               "stringParameters": {},
               "booleanParameters": {}
@@ -98618,7 +98618,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.32057708828131315,
+        "zoomFactor": 0.038382812500007815,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -101181,54 +101181,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 160,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pigman",
-          "persistentUuid": "9f0bea04-1eac-5aab-a44c-8992b29f330b",
-          "width": 160,
-          "x": -1880,
-          "y": -8930,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 160,
-          "keepRatio": true,
-          "layer": "",
-          "name": "pigman",
-          "persistentUuid": "ae174f63-a0be-5471-82ea-5caf9ff69a47",
-          "width": 160,
-          "x": -980,
-          "y": -8930,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 192,
-          "keepRatio": true,
-          "layer": "",
-          "name": "arvore_condenada",
-          "persistentUuid": "ce407545-8ad7-53f8-b138-6546f56dfba6",
-          "width": 192,
-          "x": -1440,
-          "y": -8962,
-          "zOrder": 3010,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 256,
           "keepRatio": true,
           "layer": "",
@@ -102051,7 +102003,7 @@
           "isLocked": false,
           "name": "HUD",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -107294,14 +107246,14 @@
               "effectType": "Adjustment",
               "name": "Menos vibrante",
               "doubleParameters": {
-                "gamma": 1,
-                "saturation": 0.75,
-                "contrast": 1,
-                "brightness": 1,
-                "red": 1,
-                "green": 1,
+                "alpha": 1,
                 "blue": 1,
-                "alpha": 1
+                "brightness": 1,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 0.75
               },
               "stringParameters": {},
               "booleanParameters": {}
@@ -110524,14 +110476,13 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "name": "Toque (celular)",
           "source": "",
-          "parameters": [],
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -111267,6 +111218,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -111290,11 +111242,11 @@
                         "yes"
                       ]
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -111309,7 +111261,6 @@
                     }
                   ],
                   "actions": [],
-                  "object": "pato",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
@@ -111903,6 +111854,7 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "StartedTouchOrMouseCount()",
                   "conditions": [],
                   "actions": [],
                   "events": [
@@ -112384,8 +112336,7 @@
                         }
                       ]
                     }
-                  ],
-                  "repeatExpression": "StartedTouchOrMouseCount()"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -114186,6 +114137,7 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -114216,11 +114168,11 @@
                         "toque_alavanca"
                       ]
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "pato",
                   "conditions": [
                     {
                       "type": {
@@ -114251,8 +114203,7 @@
                         "toque_alavanca"
                       ]
                     }
-                  ],
-                  "object": "pato"
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -114448,7 +114399,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -120129,8 +120081,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "m4",
@@ -120221,8 +120173,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "mp5",
@@ -120313,8 +120265,8 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "FireBullet::FireBullet::IsReloadInProgress",
-                                "inverted": true
+                                "inverted": true,
+                                "value": "FireBullet::FireBullet::IsReloadInProgress"
                               },
                               "parameters": [
                                 "sniper",
@@ -121687,8 +121639,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -121891,8 +121842,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -121934,8 +121884,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 0,
@@ -122081,8 +122030,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -122498,8 +122446,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -123282,8 +123229,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -123418,8 +123364,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -123538,8 +123483,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -124083,8 +124027,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         }
       ]
     },
@@ -124093,14 +124036,13 @@
       "name": "Combate",
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Group",
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "name": "Desempenho (celular)",
           "source": "",
-          "parameters": [],
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -124173,7 +124115,8 @@
               "useStrict": true,
               "eventsSheetExpanded": false
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -136668,8 +136611,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -137163,8 +137105,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -138445,8 +138386,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -138956,8 +138896,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -139471,8 +139410,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -140060,8 +139998,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -140481,8 +140418,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -141371,8 +141307,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -141964,8 +141899,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -143323,8 +143257,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 60,
@@ -143483,8 +143416,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 60,
@@ -143858,8 +143790,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 60,
@@ -144358,12 +144289,10 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         }
       ]
     },
@@ -145145,8 +145074,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -146151,8 +146079,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -146685,8 +146612,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -147200,8 +147126,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -147533,8 +147458,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -148332,8 +148256,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -149075,8 +148998,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -149700,8 +149622,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -150340,8 +150261,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -151039,8 +150959,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -151810,8 +151729,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -152412,8 +152330,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -152749,8 +152666,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -153121,8 +153037,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -153705,8 +153620,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -154062,12 +153976,10 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         }
       ]
     },
@@ -154735,8 +154647,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -155351,8 +155262,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -156006,8 +155916,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -156259,8 +156168,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -156809,8 +156717,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -156906,8 +156813,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -157500,8 +157406,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -157720,8 +157625,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -157823,8 +157727,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -158024,8 +157927,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -158533,8 +158435,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -159246,8 +159147,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -159595,8 +159495,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -159668,8 +159567,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -160138,8 +160036,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -160242,8 +160139,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -161602,8 +161498,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -162944,8 +162839,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -164125,8 +164019,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -165916,8 +165809,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -166743,8 +166635,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -167295,8 +167186,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -167622,8 +167512,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -168602,8 +168491,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -168839,8 +168727,7 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -170274,18 +170161,16 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::Group",
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
               "name": "Quebra em luz e feridas",
               "source": "",
-              "parameters": [],
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -170297,9 +170182,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Quando os anéis quebram (troca de fase e morte pedem com deus.anel_luz_pedido), cada anel solta anel_luz_pontos leques de luz (deus_anel_luz) em volta do aro, na cor dele (anel_luz_cor_*). O aro fica a anel_luz_raio da largura do anel, com o centro deslocado anel_luz_desloc no ângulo anel_luz_ang_* (como na arte). Feridas: deus.ferida (0 a 4) pelo quanto de vida resta (ferida_N_abaixo); deus_feridas segue o olho quadro a quadro, tingida com ferida_cor_N.",
-                  "comment2": "",
-                  "actions": []
+                  "comment": "Quando os anéis quebram (troca de fase e morte pedem com deus.anel_luz_pedido), cada anel solta anel_luz_pontos leques de luz (deus_anel_luz) em volta do aro, na cor dele (anel_luz_cor_*). O aro fica a anel_luz_raio da largura do anel, com o centro deslocado anel_luz_desloc no ângulo anel_luz_ang_* (como na arte). Feridas: deus.ferida (0 a 4) pelo quanto de vida resta (ferida_N_abaixo); deus_feridas segue o olho quadro a quadro, tingida com ferida_cor_N."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -170361,6 +170244,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -170504,8 +170388,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     },
@@ -170540,6 +170423,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -170683,8 +170567,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     },
@@ -170719,6 +170602,7 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "deus.anel_luz_pontos",
                           "conditions": [],
                           "actions": [
                             {
@@ -170862,8 +170746,7 @@
                                 "1"
                               ]
                             }
-                          ],
-                          "repeatExpression": "deus.anel_luz_pontos"
+                          ]
                         }
                       ]
                     }
@@ -171326,8 +171209,8 @@
                     },
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name",
-                        "inverted": true
+                        "inverted": true,
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
                       },
                       "parameters": [
                         "deus_olho",
@@ -171525,7 +171408,7 @@
                   ]
                 }
               ],
-              "actions": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -171597,12 +171480,10 @@
                   ]
                 }
               ],
-              "parameters": [],
-              "actions": []
+              "parameters": []
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -172752,8 +172633,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -172838,8 +172718,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "actions": []
+          "parameters": []
         }
       ]
     },
