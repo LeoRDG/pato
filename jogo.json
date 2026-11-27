@@ -60722,6 +60722,12 @@
           "persistentUuid": "0f1785ec-6e98-5f0a-90ab-5ae6f1c003e7",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "socado",
+          "persistentUuid": "66cdc1c2-5f91-5d8f-9cdf-1c81a77f5dc3",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [
@@ -76512,7 +76518,14 @@
       "textureParticleName": "assets/particulas/particula_luz.png",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 2,
-      "variables": [],
+      "variables": [
+        {
+          "name": "id",
+          "persistentUuid": "411efb1e-3a0a-5f09-ba87-d6af2c486e3d",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -85792,19 +85805,1643 @@
       "name": "stats_pato",
       "persistentUuid": "13160d8a-c9dc-5e46-a8f5-a8d09a240e56",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "atual",
+          "persistentUuid": "efd1d52b-15f0-5a8c-9a34-44370c5ba74a",
+          "type": "structure",
+          "children": [
+            {
+              "name": "eletricidade",
+              "persistentUuid": "b2db6bb3-6277-53dc-bac4-3a68b0ab1f6b",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "laser",
+              "persistentUuid": "4a061eba-4c47-543a-8701-3bf7efed1798",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "perfuracao",
+              "persistentUuid": "941fbb53-bc0d-54ac-beb8-243705bdab3d",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pulos",
+              "persistentUuid": "716dafa8-3c02-5196-a045-e8c5ee69fade",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ricochete",
+              "persistentUuid": "9de11324-63ff-5442-b040-0b21f50598d8",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "9bb53ff5-6449-5e1c-b329-89b1d9d3e3bf",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vida",
+              "persistentUuid": "217cfd68-3189-50d3-8831-3456fb1b7c38",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "novo",
+          "persistentUuid": "afe7d70c-92e5-53b2-9125-b672ecbdbc34",
+          "type": "structure",
+          "children": [
+            {
+              "name": "eletricidade",
+              "persistentUuid": "f33931bb-40d2-575d-a10d-8ed04f024dc5",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "laser",
+              "persistentUuid": "4469fcc2-ce2a-5655-b043-4affc737bea6",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "perfuracao",
+              "persistentUuid": "80cad7fe-6b36-55b3-9b02-5299887a3cc9",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "pulos",
+              "persistentUuid": "6aab47ac-a422-5799-9880-8f71f6b152f7",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "ricochete",
+              "persistentUuid": "6f7de6f1-d77d-5575-980b-46ec13216b05",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "velocidade",
+              "persistentUuid": "ff115bd5-f921-5e97-9d17-7483989f3afb",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vida",
+              "persistentUuid": "cb6378f4-5063-56cd-ad90-7508dbf2bcc1",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ui_card",
       "persistentUuid": "9f94d162-9b68-58b7-9c7c-20e8994a7b7d",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "arma",
+          "persistentUuid": "d2069050-9b0d-5e71-96a2-60ee80214c3c",
+          "type": "structure",
+          "children": [
+            {
+              "name": "acao",
+              "persistentUuid": "9108048f-27ca-5d77-b9ac-c13560117343",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "acao_cor",
+              "persistentUuid": "14322aff-3425-5517-8ca2-a304053398fe",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "h",
+              "persistentUuid": "7f95c3de-5202-5f8a-a5fd-239d9f0a4d77",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6f88fb76-f2bf-54c5-87b4-0b484c1991f3",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "54695ff6-578b-5b2f-9d83-2f9b96981450",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "sub",
+              "persistentUuid": "621f8686-e763-57b6-a820-7b3e569aa0d4",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "sub_cor",
+              "persistentUuid": "0ae556e8-2f43-5834-9c13-57d44a67ab6d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "tecla",
+              "persistentUuid": "9ad1095a-23f3-5ad6-9e82-1d233a1d6b9d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "tecla_cor",
+              "persistentUuid": "d7c7304b-9202-5618-bb38-b94e897af832",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "0e247a93-5277-5c43-9c94-623af3bcc3a1",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "7c5c2a5b-f5cf-5710-999d-c77bc6d7a618",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "642284e4-1261-5303-aa4f-66efca76de75",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "04f446f5-3b73-5ded-80c9-b507ff97e486",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "8def3ac6-51e3-56ff-9419-128394cf080c",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "90ca4093-69c2-526d-a780-b85039bc5356",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "1e9a1ca4-dc54-5574-af1d-9cc39382cc90",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "larma",
+          "persistentUuid": "7585bbf9-cbca-54e1-9051-dfac58ec292d",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "3701f433-26c1-57b5-84a1-ad2cfc0544d0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6f1aa563-eb7b-58a8-a452-84c596f141e4",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "adf07511-bf8b-5cf7-b074-8200975e0a81",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "sub",
+              "persistentUuid": "7deca0c4-4b51-58e6-b4fc-415fa9b25e9d",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "sub_cor",
+              "persistentUuid": "a5a528fe-a66c-5632-a453-d73cc760a3b2",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "bff6dd39-b057-5870-94c4-94a280b67daf",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "c6948316-8b8e-56ad-8a2d-20585a59d5e5",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "6f4f1d42-7846-51b7-94ed-4a99914cf026",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "fe27821e-125a-5a51-9935-8f6a096d858e",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "90a43bdc-40e9-5132-a0c2-3bc37e0dfff7",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "17452228-eda1-5042-a154-e362892fd8ab",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "9d59c46f-2338-53b3-a412-b409abfde3ab",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "loja",
+          "persistentUuid": "57aa8679-39e0-533e-a8cb-b4996d15bf58",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "4ce7752b-981b-5f3b-b310-583b4565e50a",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "6a94c108-c1d9-5bac-8d8c-4bb0776283b9",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "a3c6c87c-dbfa-5d45-9f73-97c73491f137",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "moedas",
+              "persistentUuid": "07301318-a398-5874-b61b-7f7a8e4795d9",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "moedas_cor",
+              "persistentUuid": "ba0706fc-6927-51ca-b676-3422a068fff3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "ff6fa74d-c7ef-5a32-937b-7645518fefb3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "38c53b4b-5e71-51cc-a0b8-a50174f93ce3",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "cb219883-091b-59dc-9d41-e5366a8178c1",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "56744c08-7a30-5a7d-bbcc-f5b1a0ffc3e5",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "cb89c5ce-415c-5e7d-8b0e-14dc4ae2b825",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "e7bdcd83-2c0b-5331-8200-ab774127c41a",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "25f13834-0d89-575d-a49f-7ecf2bb38cff",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "lpato",
+          "persistentUuid": "d16455a3-e8df-512a-8087-75fc232bb6cc",
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "persistentUuid": "55db564f-79d9-55ca-99bf-a1e2aaeec325",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "lin_h",
+              "persistentUuid": "0abf970b-d310-5262-83fd-15cf54d5b1b0",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "f620fbce-42ac-5472-804e-cffda5723876",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "titulo",
+              "persistentUuid": "94382d56-8cf9-5ee4-bbc4-f08c444db2bc",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "titulo_cor",
+              "persistentUuid": "0b420643-ed5d-5dd7-a532-07d26271dff4",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "8703fa05-a549-506f-8e52-38b3fdd13755",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "b02a5349-7193-50b3-93c8-cc46fb539110",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "b814552f-361e-5168-9df8-5952a2bb022e",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "fef75457-760f-5baa-a0e9-62c559fdf1f4",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "cd442a06-e24b-5efd-812a-67fd6a6aa320",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "rodape",
+          "persistentUuid": "1f9041e0-0ec0-5803-ac26-7910f2b0c2fa",
+          "type": "structure",
+          "children": [
+            {
+              "name": "lin_h",
+              "persistentUuid": "21a4ab4a-adb9-5f0b-a5b6-a693b0fa3306",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "linhas",
+              "persistentUuid": "b21f7d8d-9ce4-5f05-802b-3cabe93c0652",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "topo",
+              "persistentUuid": "53723dd3-22f6-512d-acf5-65c57d5ceb99",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "vis",
+              "persistentUuid": "73f50b59-5d71-55f3-82ea-9a929db2dbb2",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "persistentUuid": "b2d98104-e7ad-58d9-8392-4dd4e78e5b85",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "persistentUuid": "13078bb9-ea43-51f9-8284-4e2197ad0a79",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "persistentUuid": "666b0ef6-c785-53e6-ada4-79f7d5b7857e",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ui_lin",
       "persistentUuid": "b69ec59a-b78f-55d0-9a17-b9a1bb329e22",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "arma",
+          "persistentUuid": "4e8c0193-4275-5466-ada9-49499101a565",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "55c16989-89d1-53ba-ba64-5b7abd4ac45c",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "57352801-7d8e-5f01-8774-9bcae1ab1e62",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "3cee24ec-eecb-541f-9c6b-86722a5977be",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "593b614d-1c15-5317-b1b8-b210341edc71",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "6a21772b-32da-5087-805f-e2c8a06e2a19",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "11e10a81-8c22-5996-9b65-b3fe838547ed",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "416e07a3-007f-5608-b713-e3d63dc8003d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "ebb05ddc-4229-500c-a5ca-8961e0be7255",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "387d6d22-170c-5c45-9c92-eeb9c8205c29",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "4c5a4ac1-4aac-5412-a948-41a295b7e031",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "a26fdd31-570b-5b03-8fea-eeb060b3b6cc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "7224d5df-8c21-5a3e-9b06-e0cebac84a78",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "38695fe5-c3e2-5302-8b50-f7e6c35c36f6",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "3a65137b-3e22-520e-847e-fc1a7eabc8ec",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "80ba9ae8-fe1d-55c6-ae51-9d314b15abed",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "4ea15ea6-3461-55c5-9a46-424341bf773e",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "1a9300c9-2ef6-50a1-9f07-0b67dcbf4347",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "b0514793-6b98-5c8e-8961-b936252304ef",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "17c74b19-b672-5cb3-b1e3-f87296f5e328",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "3ebcf35b-b2ff-59fd-b725-fca4216312da",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "dd40488a-72a3-53bb-9758-c83ea1b2095b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "bb189106-7ac9-53ca-8e35-bc0b93858049",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "be38d225-11a4-588f-bb26-31dc8aa2e396",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "4a8ffdc7-6e01-5a35-8205-d643a30d492d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "ea560b47-5786-548b-9652-281a04f7d99f",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "76fe0baf-9099-5203-9f40-89213a3697c9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "1eaeea3f-0820-5085-9188-282677f642d9",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "0dfd247d-e4a7-5545-aeb7-6823464cbbc3",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ead4be08-d374-5b2b-81cb-73b951732139",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "3bd60cb7-eee7-50dd-ad28-18468bb2cc8b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "95b66bc9-ad0d-554e-b1f9-7a567e61a6de",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "1309ad6a-72cf-5ae4-a21f-c703aec92599",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "1d5def7a-3219-51c4-8d03-4bfd14d6c6df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "75cbbc07-254d-5aed-98a7-9868a239dfd4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "f8281391-d8ec-5dc2-9601-053453c42c5a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "92d89bc7-b28a-5324-9d35-831bac0bf17c",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "3e6ed0af-c10f-525c-af2e-1dc8ec244695",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "96c62dc1-a311-5345-bb51-d2e43750f2aa",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "a2e92e1f-1beb-5150-969b-7b04e91e2dfe",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "2e862abe-b9e6-5a56-870b-861acfd1516c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "26560345-64f5-57a4-b8a6-9149eeebbac9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "eebcf9af-b23d-589d-a491-ad4eb9904e96",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "a250a134-5b13-5a00-a492-3c874a0c09ac",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "5a32ff90-92a0-5876-a289-e6dc292b9b6d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "a1a4ab05-7eb9-5cba-a32c-5b13333e6415",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "e6e6582f-1d0e-5822-80d8-52bb328091b9",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "2ffee124-4975-5500-957b-723d62d9c2b1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "045b23e8-82d2-5d40-960c-a550b082354a",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "4d0722f2-5610-58ea-830e-26cb52d7810a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "ba365f5c-8d98-5212-bc7f-1cf936afedd9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "069299b5-546d-507a-b722-46f4da7391c4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "0c0378cf-c26e-5303-bf8c-46a7ac7209b9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "042ebd1b-ceb1-555a-8d78-cb6fa51244d7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e758cc69-59eb-5d4b-a006-fa542e2a7c9e",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "larma",
+          "persistentUuid": "2adbf6e2-ea37-531c-b313-902106d6366c",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "b9d925c5-f90c-5b70-ba04-05beed6cf828",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ff85309e-b421-5179-89eb-0434335d23a4",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "912b2c0e-1e4f-5f15-90dc-e6f1b4d17b74",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "2fe8339b-e4f1-5808-8a0d-00affbcabfc9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "7e6da44f-937d-58e5-8efd-bb3163b43485",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "0d163694-ce83-531c-ae64-06db02b1a85a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "b0edad3c-ab33-57c8-8880-b4e0e5f75abb",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a96e1bd7-8caf-577b-8eb1-b4443383a7df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "f02a4933-21c1-523e-bcfd-8445d15da067",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "e475b4bc-a50f-53f3-8e28-aabd0ccd84e3",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "79302e41-bef1-5270-a977-ae3e0769e89e",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "be671f72-765c-578a-a38b-84e18fd3f33c",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "b1a6adb5-0064-5993-8a0e-511c3fac7376",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "113b64e1-5337-5cd6-aee1-531976f33b5d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "a8577ecc-b776-5455-ac44-7750bb007e07",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "e4113b72-4ea2-5326-8d67-8e6878cc8fbf",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a225c9ac-8469-5943-9875-efeff251f6c2",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "19d90362-fdfc-5302-b6e5-790aa9a216a8",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "e29aa12c-d9a0-5d03-a8d4-8813bb05bf35",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "7b28d9cc-ecdf-50a6-8520-a104fcd6c174",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "a47a8813-3efe-5938-9966-b6ed30962126",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "8bef6433-b653-56d8-b526-1e0d4135b541",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "fbdf0811-6d02-592f-aa64-cd36eae53d8e",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "3d13a609-1ffd-5636-bd1c-d05aef731de9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "137d8f35-ae42-5d58-a44c-e53678623d79",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "02e6731f-46a1-56b3-a19f-04d3e26b9743",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "feaee8bf-0547-5bbc-a3b5-a9b3acb7d647",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "73fe411f-3f7f-5079-96f7-9ccaf0c45d86",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "4dcf9786-a17a-5143-9656-d264596afe39",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "99b7cb9f-17dc-58ed-adf7-9846a6cd9794",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "e7dc0d8c-48cc-500e-8a4d-60d4c493269c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "9f39e65e-700f-5c01-bc34-08714d032676",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "1109603d-b389-53db-b745-7b035bd18bcd",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "7d3b5960-711c-5710-b841-87087e905191",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "1b893813-4bdd-5e27-a047-793107a90d9f",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "7e3758cb-9494-5a8d-a941-ae21d0faf33b",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "7ae1aa94-102a-5b41-baa0-7e564dcaa29b",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "a2d0809e-1a07-59eb-996d-be4959db4edb",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "0414e241-21b9-5afc-a298-7584b8dcf65e",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "afdd32b2-7012-5dbd-815f-1ec126e7985a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "f88918da-f247-5fa2-bb4e-af81a80d56d4",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "757f291b-d56e-5cca-aa1f-ebd601c76445",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "d8564caf-814f-5e05-ac0e-03ea27e70b9c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "c8e8ccc9-d1aa-546c-8325-7ae8db009824",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "7128d5e1-8dd7-5ff8-8de0-f5aa2022c226",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "dc164411-ae90-55d6-bbb0-726935929de0",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "83e33448-e80c-5216-a91f-54b90216aede",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "1d40452c-b465-5dd9-b289-0e7f604e2f7b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "ee7a9ebb-bc1f-52cb-a1d6-c6b228dbaca7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "68c39ef0-b3ea-545b-8381-f67842d6f169",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "3ee8aa5c-fe14-5c75-b238-7dd1c4c44d7b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "bc37a220-b3cb-5f43-b637-79f029f1eb71",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "af0b65b0-2595-5b04-83b0-a238d10fad31",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "b2af490f-7f66-5a03-a9ad-1470c089a30a",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lpato",
+          "persistentUuid": "7c04a63b-082b-5ce5-861c-2151c354f8fa",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "ea9f5bca-474a-5710-8e31-bf0b19ffa065",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "189f0f56-466f-50e5-b895-498d62ba5e68",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "4029af79-6b68-5f2a-b5e6-f3f4b7df1341",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "b99df481-2c2a-505c-ad19-fad1b67a9560",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "38ef564c-c3ba-531f-829d-4424d7c9e5fc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "24c68df9-4ae1-50ff-927e-566790caf884",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "4dd80722-5517-5b7f-8388-3c3b7ab5dc6a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "0e25bd6f-cf51-5877-ac68-af41bf76466a",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "baf39fc2-fcb0-5e64-857a-b044d059f308",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l1",
+              "persistentUuid": "3af0e2ab-b15b-57d1-a738-054cae26f5ae",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "9ddd7732-cdfd-539d-9a12-5576463b37f5",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "ab8d4133-a083-5ec9-be7e-b46f29af3884",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "16852779-8545-5b18-8000-1f4ce9f7bba7",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "61d55794-c73e-588b-a82d-9fda8859cdea",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "d1c0bd4a-0c6c-569d-ada1-562c9f35e4a9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "7eaeda5d-388d-563c-82f8-db9e12782838",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "97ca656d-ddfb-5c06-84e2-f9551f222100",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "2ea4dee3-9ae5-5ec5-aa20-2afdb456103f",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l2",
+              "persistentUuid": "2507d354-626d-5431-976f-4e34741a8bab",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "0437b19c-f8bf-5125-b0cc-bbd20b55b7fc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "2c169da1-38cb-5d70-b8d7-10c9bf434d40",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "f09af9af-b9c1-5b28-9d36-2cf9e8be73cc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "77ea7304-1b0a-5bcf-bbfe-7b4f3967feff",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "e211738c-1a84-5bef-ae16-dd976cf32abf",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "9eefba74-ef30-53a3-9f8b-cfec90bf3a4d",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "7456960b-be1f-5f3c-a46b-09d06550ca7b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "9b901e57-757d-5427-82b0-751951f11f84",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l3",
+              "persistentUuid": "91c0fd4f-4fab-5a14-906f-5e31e57b2ef0",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "03d2a1ed-ab4f-5fe9-819a-0199096043e2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "e70ff4c6-0b7a-5be5-ba66-1ce95e6c4366",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "e2db8a20-1cdd-51ce-9ff1-99b0b5e8caba",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "b6c40584-cd30-5b75-b7d4-4d5a90e62aa8",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "7cbe2e37-2ce9-5c1c-bf4d-9221dabf31e0",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "2651b55f-2574-500d-a0ae-b990441b9e43",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "71cd4732-e0f9-537f-8d23-6bf8927517b9",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e3ed38ea-15d9-557d-8483-5b0f6e5b4954",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l4",
+              "persistentUuid": "810f31c9-f0b6-502c-9980-4c69f1e85666",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "48295866-1cb2-5889-b56c-bd2a2b25f7ce",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "0286a93f-b375-5a51-bc4e-91d30f0f098f",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "c5df93b3-009c-5c1c-af1a-22ea8d76b0e5",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "63e46d0b-0289-5344-a896-69acebc96749",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "16295797-df58-5741-bc8e-11a1cf2194df",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "413e2a85-2c8b-5aeb-97bc-ebc80bda5742",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "a289bb37-dbf7-5d9b-a059-2a19f5161466",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "4ccede4f-4747-53b0-8549-324efd50d681",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l5",
+              "persistentUuid": "e98d27f9-4c58-5e88-aa6c-52a579727061",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "3e37f057-a282-5f1e-9ba1-37a4a8a54377",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "ae3fb28b-5d7c-5f0f-9f2e-d7a8b9003bdc",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "7844dd7e-d328-58bd-bde4-061c8769bcc3",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "e9db7a90-4af6-5112-9934-cda0b0d73924",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "8c82e032-0881-52c8-a5cd-3f8880d1e845",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "f8f4cf32-14dc-56c8-bd8e-de4b9e763278",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "5bed10d4-b104-5148-959d-f56dff933ec6",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "e36f3929-5ca7-5678-b1f9-0ed46cdbbd73",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "name": "l6",
+              "persistentUuid": "5e0e3a1b-c649-5e23-a698-f73dd1c1e815",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "a",
+                  "persistentUuid": "ed2a53ab-d2d4-5c54-9b68-6fb05d727ed0",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "b",
+                  "persistentUuid": "d7ee8973-bb18-5678-85ce-8c73954f8e24",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "delta",
+                  "persistentUuid": "6fea9e1d-1837-547f-9be6-18e03e7b9d57",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "delta_cor",
+                  "persistentUuid": "56afbab1-ef7c-57a8-b58d-81f54d31f200",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot",
+                  "persistentUuid": "d188d24c-6966-5258-bcb3-a28130613b0b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "rot_cor",
+                  "persistentUuid": "5ef32e7a-5388-5876-a679-989838486f4c",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val",
+                  "persistentUuid": "bb89c0f0-2db4-5fb3-9334-62cf34edaafc",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "val_cor",
+                  "persistentUuid": "1f92e34c-c813-59d8-8b0f-5b845d2812a7",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rodape",
+          "persistentUuid": "b03be00f-9f45-5db5-b32b-5d5bf6c4618e",
+          "type": "structure",
+          "children": [
+            {
+              "name": "l0",
+              "persistentUuid": "89ea8b0e-7baf-5fdb-86a1-b8e633a0d51f",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "acao",
+                  "persistentUuid": "b1e0c8e2-8225-5258-86b5-c41360b664fd",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "acao_cor",
+                  "persistentUuid": "df73799f-c034-5560-b0fb-8099b9fa1a61",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "desc",
+                  "persistentUuid": "132ee1c4-2c11-54f9-8a61-6238ee30e189",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "desc_cor",
+                  "persistentUuid": "30ed56fd-4e14-5df3-b14b-a27bfb72d435",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nivel",
+                  "persistentUuid": "78b02b31-8f14-55a2-9526-c1e6390d9ade",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nivel_cor",
+                  "persistentUuid": "277bd010-3cfe-5bce-99d2-f02406488c5b",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nome",
+                  "persistentUuid": "9c554363-5cb0-5b68-a34a-9ae17f356e55",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "nome_cor",
+                  "persistentUuid": "b7513b55-3bf7-5c30-8098-65a59a787e50",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "tecla",
+                  "persistentUuid": "86013074-7918-529d-b5a5-181e8d7cd433",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "tecla_cor",
+                  "persistentUuid": "83b57761-5ab4-55ae-b787-a8cd8332441e",
+                  "type": "string",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "loja",
+          "persistentUuid": "ff9d9a54-6a6d-53e6-9c15-aa2aae7f1596",
+          "type": "structure",
+          "children": []
+        }
+      ]
     },
     {
       "name": "ui_upg_max",
