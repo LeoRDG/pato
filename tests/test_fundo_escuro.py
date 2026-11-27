@@ -33,8 +33,9 @@ def test_camadas_escuras_no_tamanho_das_normais():
 def test_variaveis_da_troca():
     assert VARS['fundo_troca_y_alto'] < VARS['fundo_troca_y_baixo'] and VARS['fundo_troca_suave'] > 0 and VARS['fundo_mistura'] == 0
     assert (VARS['fundo_cor_r'], VARS['fundo_cor_g'], VARS['fundo_cor_b']) == (CENA['r'], CENA['v'], CENA['b'])
-    for nome in set(re.findall(r'\bfundo_[a-z_]*[a-z]\b(?!_)', TXT)):
+    for nome in set(re.findall(r'(?<![.\w])fundo_[a-z_]*[a-z]\b(?!_)', TXT)):
         assert nome in VARS, nome                                   # toda variável usada nos eventos existe na cena
+    # (desempenho.fundo_corte, global da t220, não é da cena)
 
 
 def test_eventos_ligados_e_camadas_por_cima():

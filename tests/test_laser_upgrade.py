@@ -40,4 +40,8 @@ def test_laser_e_o_mesmo_de_antes():
     import t64_laser_volta as t64
     novo = t64.evento()
     achados = [e for e in anda(MIRA['events']) if e.get('actions') == novo['actions']]
-    assert len(achados) == 1 and achados[0]['events'] == novo['events']
+    # t220: o raio só é calculado com o upgrade de laser (antes rodava todo quadro sem desenhar nada)
+    esperado = json.loads(json.dumps(novo['events']))
+    esperado[0]['conditions'].insert(0, {'type': {'value': 'BuiltinCommonInstructions::CompareNumbers'},
+                                         'parameters': ['GlobalVariable(upgrades.laser)', '>', '0']})
+    assert len(achados) == 1 and achados[0]['events'] == esperado
